@@ -1,0 +1,7 @@
+═══════════════════════════════════════════════
+  Replication Queue — 20260328_114917
+  Test timeout: 3600s (scale=1.0)
+═══════════════════════════════════════════════
+  Metal warmup...
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 88516.16it/s]
+Metal OK: <start_of_image>Hi!

@@ -1,0 +1,235 @@
+═══════════════════════════════════════════════
+  Phase Tests — 20260328_232426
+  Phase 3: Translated/multilingual
+  Phase 4: Cross-model (Qwen 7B)
+═══════════════════════════════════════════════
+  [warmup] Metal warmup...
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 90876.59it/s]
+Metal OK: <start_of_image>Hi!
+
+  [Phase 3] Starting translated/multilingual pipeline...
+23:24:42 INFO    insights.engine: Sleep prevention active (caffeinate -s)
+23:24:45 INFO    insights.engine: Sleep prevention active (caffeinate -s)
+23:24:45 INFO    insights.quick_analyzer: spaCy/en_core_web_sm not available — skipping NER
+23:24:45 INFO    httpx: HTTP Request: HEAD https://huggingface.co/SamLowe/roberta-base-go_emotions/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+23:24:45 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/SamLowe/roberta-base-go_emotions/58b6c5b44a7a12093f782442969019c7e2982299/config.json "HTTP/1.1 200 OK"
+
+════════════════════════════════════════════════════════════
+  Pipeline: Ethnic Studies (11), Period 3
+  Students: 6
+════════════════════════════════════════════════════════════
+
+[LLM Backend] mlx / mlx-community/gemma-3-12b-it-4bit (tier=lightweight)
+
+  Resuming interrupted run: 6a5ff72f-dd98-428a-85c1-ba7c3c9bd86f
+    4/6 students already coded
+  Resuming run — completed stages: data_fetch, preprocessing, quick_analysis
+  LLM backend: mlx (mlx-community/gemma-3-12b-it-4bit)
+  Cannot resume mid-coding — Canvas API not available. Re-open with Canvas connection to resume.
+  Resume failed — starting fresh run
+  Running Quick Analysis...
+  Running gibberish gate...
+  Computing submission statistics...
+  Analyzing word frequency...
+  Computing TF-IDF terms...
+  Extracting named entities...
+  Matching keyword patterns...
+  Computing emotional register...
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 9682.72it/s]
+[1mRobertaForSequenceClassification LOAD REPORT[0m from: SamLowe/roberta-base-go_emotions
+Key                             | Status     |  | 
+--------------------------------+------------+--+-
+roberta.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+23:24:46 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/SamLowe/roberta-base-go_emotions/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+23:24:46 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/SamLowe/roberta-base-go_emotions/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+23:24:46 INFO    insights.quick_analyzer: GoEmotions scorer loaded (SamLowe/roberta-base-go_emotions)
+23:24:47 INFO    sentence_transformers.SentenceTransformer: Use pytorch device_name: mps
+23:24:47 INFO    sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+23:24:47 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+23:24:47 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+23:24:47 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+23:24:47 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+23:24:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+23:24:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+23:24:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+23:24:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+23:24:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+23:24:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+23:24:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+23:24:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+23:24:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+23:24:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+23:24:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+23:24:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+  Clustering submissions...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 7942.01it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+23:24:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+23:24:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+23:24:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+23:24:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+23:24:49 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+23:24:49 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+23:24:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+23:24:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+23:24:50 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+23:24:50 INFO    sentence_transformers.SentenceTransformer: Use pytorch device_name: mps
+23:24:50 INFO    sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+23:24:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+23:24:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+23:24:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+23:24:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+23:24:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+23:24:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+23:24:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+23:24:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+23:24:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+23:24:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+23:24:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+23:24:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+23:24:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+23:24:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+23:24:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+  Computing pairwise similarity...
+  Detecting shared references...
+  Running signal matrix...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 9707.95it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+23:24:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+23:24:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+23:24:52 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+23:24:52 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+23:24:52 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+23:24:52 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+23:24:52 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+23:24:52 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+23:24:52 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+23:24:57 INFO    insights.class_reader: Class reading: 6 students, ~1377 prompt words, single pass
+23:24:57 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+  Detecting contradictions...
+  Extracting citations...
+  LLM backend: mlx (mlx-community/gemma-3-12b-it-4bit)
+  Reading class as a community...
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 326502.71it/s]
+23:28:02 INFO    insights.class_reader: Class reading complete: 837 words
+23:28:02 INFO    insights.engine: Class reading complete (6297 chars)
+23:29:17 INFO    insights.submission_coder: Reading-first P1 for Carmen Flores chunk 1/1: 1362 chars
+23:30:36 ERROR   insights.engine: Analysis pipeline failed: 1 validation error for SubmissionCodingRecord
+emotional_register
+  Input should be a valid string [type=string_type, input_value=['passionate', 'urgent', 'personal'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+Traceback (most recent call last):
+  File "/Users/june/Documents/GitHub/Autograder4Canvas/src/insights/engine.py", line 746, in run_from_submissions
+    record = code_submission_reading_first(
+        submission_text=body,
+    ...<6 lines>...
+        linguistic_context=_coding_ling_note,
+    )
+  File "/Users/june/Documents/GitHub/Autograder4Canvas/src/insights/submission_coder.py", line 685, in code_submission_reading_first
+    return SubmissionCodingRecord(
+        student_id=student_id,
+    ...<12 lines>...
+        confusion_or_questions=parsed.get("confusion_or_questions") or None,
+    )
+  File "/opt/homebrew/lib/python3.14/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for SubmissionCodingRecord
+emotional_register
+  Input should be a valid string [type=string_type, input_value=['passionate', 'urgent', 'personal'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+23:30:36 ERROR   generate_demo_insights: Pipeline failed for phase3_translated: Pipeline returned None — check logs for errors
+Traceback (most recent call last):
+  File "/Users/june/Documents/GitHub/Autograder4Canvas/scripts/generate_demo_insights.py", line 542, in main
+    timing = run_pipeline(
+        course_key,
+    ...<3 lines>...
+        tier_override=tier_override,
+    )
+  File "/Users/june/Documents/GitHub/Autograder4Canvas/scripts/generate_demo_insights.py", line 283, in run_pipeline
+    raise RuntimeError("Pipeline returned None — check logs for errors")
+RuntimeError: Pipeline returned None — check logs for errors
+  Class reading complete.
+  Coding submissions with LLM...
+  Reading student work (1/6): Carmen Flores...
+  Error: 1 validation error for SubmissionCodingRecord
+emotional_register
+  Input should be a valid string [type=string_type, input_value=['passionate', 'urgent', 'personal'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+
+════════════════════════════════════════════════════════════
+  Timing saved to /Users/june/Documents/GitHub/Autograder4Canvas/data/demo_source/pipeline_timing_gemma12b_mlx.json
+════════════════════════════════════════════════════════════
+  phase3_translated: FAILED — Pipeline returned None — check logs for errors
+  [Phase 3] DONE
+  [warmup] Metal warmup...
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 131705.20it/s]
+Metal OK: <start_of_image>Hi!
+
+  [Phase 4] Starting cross-model Test N on Qwen 7B...
+23:31:07 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/Qwen2.5-7B-Instruct-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['N']
+Model: mlx-community/Qwen2.5-7B-Instruct-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST N: 4-Axis Classification on Submissions (qwen7b)
+============================================================
+
+  --- Corpus students ---
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 78972.25it/s]
+23:38:09 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_qwen7b_2026-03-28_2338.json
+23:38:09 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+23:38:09 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              expect=BURNOUT  got=ENGAGED  conf=0.9 [MISMATCH]
+  S004 Priya Venkataraman   strong               expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S022 Destiny Williams     righteous_anger      expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S023 Yolanda Fuentes      lived_exp            expect=ENGAGED  got=CRISIS   conf=0.9 [MISMATCH]
+  S028 Imani Drayton        AAVE                 expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S029 Jordan Espinoza      neurodivergent       expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S031 Marcus Bell          minimal_effort       expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         ice_stress             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB02  Keisha Williams        burnout_caregiving     expect=BURNOUT  got=BURNOUT  conf=0.9 [OK]
+  WB03  Miguel Sandoval        housing_precarity      expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB04  Jasmine Torres         domestic_violence      expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB05  Tyler Reed             burnout_exhaustion     expect=BURNOUT  got=BURNOUT  conf=0.9 [OK]
+  WB06  Amira Hassan           food_insecurity        expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB07  Sofia Reyes            tonal_rupture_crisis   expect=CRISIS   got=CRISIS   conf=1.0 [OK]
+  WB08  Brandon Mitchell       grief_loss             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB09  Priya Sharma           control_analytical     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  WB10  DeAndre Washington     control_passionate     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+
+  === Key Comparisons ===
+  S029 (neurodivergent): ENGAGED (conf=0.9) — binary was FLAG 25/25; 4-axis says ENGAGED
+  S002 (burnout):        ENGAGED (conf=0.9) — binary was CLEAR 25/25; 4-axis says ENGAGED
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_qwen7b_2026-03-28_2338.json
+
+============================================================
+  ALL TESTS COMPLETE — 425.4s total
+============================================================
+  Test N: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [Phase 4 N-qwen] DONE
+
+═══════════════════════════════════════════════
+  Phase tests complete. Log: data/research/raw_outputs/phase_tests_20260328_232426.log
+═══════════════════════════════════════════════

@@ -1,0 +1,11 @@
+21:00:31 INFO    alt_hypothesis_tests: Subprocess for Test F: /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/june/Documents/GitHub/Autograder4Canvas/scripts/run_alt_hypothesis_tests.py --single-test F --model gemma12b --runs 20
+21:00:36 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+============================================================
+  TEST F: B/C Stability (gemma12b, 20 runs each)
+============================================================
+
+  --- Run 1/20 ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 85463.87it/s]
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-95292-h201kgi7'}
+  warnings.warn(

@@ -1,0 +1,26 @@
+{
+  "test": "WB06 minimized-disclosure",
+  "model": "google/gemma-3-27b-it",
+  "system_prompt_base": "WELLBEING_CLASSIFIER_SYSTEM (guard-v2)",
+  "generated_at": "2026-03-29T21:38:38.410252",
+  "results": [
+    {
+      "label": "W0_original_guardv2",
+      "axis": "BURNOUT",
+      "confidence": 0.9,
+      "raw_output": "{\"axis\": \"BURNOUT\", \"signal\": \"Student discloses family financial hardship ('dad's hours got cut', 'eating at the mosque more than at home') impacting material conditions, alongside engagement with course concepts.\", \"confidence\": 0.9}"
+    },
+    {
+      "label": "W1_no_resilience",
+      "axis": "CRISIS",
+      "confidence": 0.95,
+      "raw_output": "\n```json\n{\"axis\": \"CRISIS\", \"signal\": \"Student discloses food insecurity ('we dont have enough food at home') and expresses worry about their family's situation, indicating current instability.\", \"confidence\": 0.95}\n```"
+    },
+    {
+      "label": "W2_minimized_disclosure_guard",
+      "axis": "CRISIS",
+      "confidence": 0.95,
+      "raw_output": "```json\n{\"axis\": \"CRISIS\", \"signal\": \"Student discloses reduced family income and increased reliance on a mosque for food, framed with a 'we are strong' resilience register. This indicates food insecurity despite attempts to minimize it.\", \"confidence\": 0.95}\n```"
+    }
+  ]
+}

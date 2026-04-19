@@ -1,0 +1,724 @@
+{
+  "generated_at": "2026-03-31T04:24:21.410691",
+  "course_id": "TRAJ_TEST_1",
+  "course_name": "Ethnic Studies (11), Period 3 [traj-test]",
+  "total_students": 17,
+  "provenance": {
+    "corpus_path": "data/demo_corpus/trajectory_test_corpus.json",
+    "corpus_sha256": "6311b8be69b3277bdb2577bb208d2543e23f20f1e562b3169202f83679e4f0ee",
+    "script": "scripts/run_trajectory_tests.py",
+    "git_commit": "1ce9808e2463d0fa11396d8676ed76046023e150",
+    "git_dirty": true
+  },
+  "eval_questions": {
+    "T001": [
+      {
+        "check_id": "growth_arc_named",
+        "question": "Does the report name Maria's intellectual and linguistic growth across the semester as a positive arc, describing what she built rather than what she started without?"
+      },
+      {
+        "check_id": "multilingual_as_asset",
+        "question": "Does the report frame Maria's multilingualism (moving between Wolof, French, and English) as an intellectual strength \u2014 something that enriches her analysis \u2014 rather than as a challenge to overcome or a starting deficit?"
+      },
+      {
+        "check_id": "no_deficit_framing",
+        "question": "Is the report free from deficit language about Maria's English \u2014 phrases like 'improving English skills,' 'language barrier,' or 'limited English proficiency'?"
+      }
+    ],
+    "T002": [
+      {
+        "check_id": "earlier_strength_recognized",
+        "question": "Does the report recognize Jordan's earlier submissions (A1, A2) as analytically strong, citing specific intellectual work like the model minority myth analysis or DeGraffenreid reading?"
+      },
+      {
+        "check_id": "shift_acknowledged_without_blame",
+        "question": "Does the report acknowledge the shift in Jordan's engagement across the semester (shorter work, later submissions, stated exhaustion) without blaming Jordan or framing it as a character flaw or lack of effort?"
+      },
+      {
+        "check_id": "structural_context_present",
+        "question": "Does the report situate Jordan's late-semester pattern in structural context (work obligations, labor at family business) rather than treating it as purely a personal or motivational issue?"
+      }
+    ],
+    "T003": [
+      {
+        "check_id": "intellectual_thread_named",
+        "question": "Does the report name DeShawn's sustained intellectual argument across the semester \u2014 the thread connecting structural analysis to community organizing to community knowledge production \u2014 rather than just saying he was 'engaged' or 'hardworking'?"
+      },
+      {
+        "check_id": "community_knowledge_as_analysis",
+        "question": "Does the report recognize that DeShawn frames his grandmother's and uncle's knowledge as legitimate structural analysis, not just personal anecdote?"
+      }
+    ],
+    "T004": [
+      {
+        "check_id": "variable_output_normalized",
+        "question": "Does the report describe Aisha's variable word count across assignments (short A1 and A3, long A2 and A4) as a natural variation in her processing \u2014 without pathologizing it or describing it as 'inconsistency' or 'struggle to maintain engagement'?"
+      },
+      {
+        "check_id": "intellectual_depth_named",
+        "question": "Does the report recognize the intellectual sophistication in Aisha's work \u2014 her extended analysis of post-9/11 Islamophobia as racialization, her framework of analysis-based (not identity-based) solidarity?"
+      },
+      {
+        "check_id": "associative_thinking_as_strength",
+        "question": "Does the report treat Aisha's associative, tangential, and metacognitive writing style (parenthetical tangents, noting her own brain's processing) as a cognitive strength rather than a structural flaw in her writing?"
+      }
+    ],
+    "T005": [
+      {
+        "check_id": "early_authentic_work_valued",
+        "question": "Does the report recognize Tyler's early submissions (A1 writing about his mother, A2 about the freeway through his neighborhood) as rich, grounded, personal analysis \u2014 not as 'informal' or 'developing' work that was improved by later academic register?"
+      },
+      {
+        "check_id": "style_shift_named",
+        "question": "Does the report note the shift to formulaic academic prose in A3 and A4 \u2014 describing it as a change in voice and register rather than treating it as growth?"
+      }
+    ],
+    "T006": [
+      {
+        "check_id": "genuine_breakthrough_recognized",
+        "question": "Does the report name Ingrid's A3 midterm as a genuine analytical breakthrough \u2014 specifically her self-directed research on school funding property tax formulas and her statement 'I can't un-see it' \u2014 rather than treating all four assignments as equally resistant to structural analysis?"
+      },
+      {
+        "check_id": "power_moves_named",
+        "question": "Does the report name the pattern of rhetorical resistance across Ingrid's submissions \u2014 the abstract liberalism, the 'both sides' framing, the appeal to individual agency \u2014 as a pattern, rather than treating it as legitimate intellectual pushback?"
+      },
+      {
+        "check_id": "partial_regression_noted",
+        "question": "Does the report note that A4 represents a partial regression from the A3 breakthrough, returning to the 'persuasion over confrontation' / 'Dr. King vs. radicals' framing?"
+      }
+    ],
+    "T007": [
+      {
+        "check_id": "growth_arc_named",
+        "question": "Does the report name Sophia's building arc \u2014 from tentative and uncertain in A1 to deeply analytical and self-aware in A3/A4 \u2014 as a meaningful trajectory of intellectual development?"
+      },
+      {
+        "check_id": "late_work_strength_recognized",
+        "question": "Does the report recognize the strength of Sophia's later work, particularly A3's honest reckoning with her own prior 'colorblind' thinking and A4's claim that 'knowledge creates obligation'?"
+      }
+    ],
+    "T008": [
+      {
+        "check_id": "specific_intellectual_work_named",
+        "question": "Does the report name the specific intellectual argument Marcus develops \u2014 not just that he was 'engaged' or 'strong,' but the specific content: his analysis of how institutions are designed for people whose identity is the default on every axis, and his critique of academic knowledge production's relationship to community knowledge (grandmother's analysis \u2260 'just anecdote')?"
+      },
+      {
+        "check_id": "community_grounding_as_asset",
+        "question": "Does the report recognize Marcus's grounding in Compton and his family's experience as a legitimate analytical resource \u2014 not as 'personal connection' but as structural analysis produced through relationship?"
+      }
+    ],
+    "T009": [
+      {
+        "check_id": "multilingual_practice_as_asset",
+        "question": "Does the report frame Rosa's code-switching between English and Spanish (and her references to K'iche' and Zapotec concepts like 'cruce de caminos' and 'Binniz\u00e1') as an intellectual strength \u2014 a multilingual practice that enriches her analysis \u2014 rather than as informal writing or language interference?"
+      },
+      {
+        "check_id": "transnational_analysis_recognized",
+        "question": "Does the report recognize Rosa's specific intellectual contribution \u2014 the argument that structural racism has no borders (NAFTA, land displacement, undocumented labor) and that her mother's migration is produced by the same racial capitalism that created US urban inequality?"
+      },
+      {
+        "check_id": "no_english_default",
+        "question": "Is the report free from treating English as the default or standard register \u2014 does it avoid describing Rosa's writing as 'mixing languages' in a way that implies English-only would be more correct or academic?"
+      }
+    ],
+    "T010": [
+      {
+        "check_id": "gap_noted_without_judgment",
+        "question": "Does the report note that Alex did not submit the A3 midterm reflection without framing the absence as disengagement, laziness, or a character flaw \u2014 treating the gap as a structural fact rather than a personal failure?"
+      },
+      {
+        "check_id": "present_work_quality_recognized",
+        "question": "Does the report recognize the analytical quality in the three submissions Alex did complete \u2014 particularly the A4 analysis of intergenerational resistance knowledge living in family storytelling?"
+      }
+    ],
+    "T011": [
+      {
+        "check_id": "report_substantive",
+        "question": "Is the trajectory report substantive and specific to Jaylen \u2014 naming what his submissions actually say (the highway through the neighborhood, 'I knew the system was set up before I knew the word structural') rather than being generic filler?"
+      },
+      {
+        "check_id": "medium_not_student",
+        "question": "Does the report avoid framing Jaylen's short submissions as evidence of low engagement, limited understanding, or incomplete work \u2014 treating short written output as a property of the medium, not of the student's intellectual capacity?"
+      },
+      {
+        "check_id": "conceptual_clarity_named",
+        "question": "Does the report recognize that Jaylen's short submissions demonstrate conceptual clarity \u2014 each one lands a specific structural insight \u2014 rather than being treated as incomplete or underdeveloped?"
+      }
+    ],
+    "T012": [
+      {
+        "check_id": "care_burden_structural",
+        "question": "Does the report situate Destiny's variable and sometimes incomplete submissions in structural context \u2014 naming care work as a real material condition that constrains writing time \u2014 rather than treating it as a personal issue or excuse?"
+      },
+      {
+        "check_id": "quality_when_present",
+        "question": "Does the report recognize the quality and depth in Destiny's complete submissions, especially A1's insight about the intersection 'trapping you at it' and A4's connection between her mother's babysitting co-op and mutual aid as resistance?"
+      },
+      {
+        "check_id": "no_deficit_framing",
+        "question": "Is the report free from framing Destiny as a student with a problem to fix \u2014 does it avoid language like 'struggles to complete assignments' or 'distracted by family responsibilities'?"
+      }
+    ],
+    "T013": [
+      {
+        "check_id": "speculative_mode_as_valid_analysis",
+        "question": "Does the report recognize Kai's future-oriented, imaginative, Afrofuturist mode of engagement as a legitimate form of intellectual analysis \u2014 not as 'off-topic' or as avoidance of the structural readings, but as a different analytical direction ('diagnosis plus vision')?"
+      },
+      {
+        "check_id": "specific_intellectual_argument_named",
+        "question": "Does the report name Kai's specific argument \u2014 that structural analysis must be paired with imagination to build alternatives, and that the 'apocalypse already happened' / 'building in the aftermath' framing is a political stance, not escapism?"
+      }
+    ],
+    "T014": [
+      {
+        "check_id": "no_language_deficit_framing",
+        "question": "Does the report avoid deficit framing about Ixchel's English \u2014 is it free from language like 'grammar errors,' 'language barrier,' 'still developing English,' 'ESL student,' or 'needs language support'?"
+      },
+      {
+        "check_id": "indigenous_epistemology_recognized",
+        "question": "Does the report name Ixchel's K'iche' epistemological contributions \u2014 the concepts about land memory, reciprocity, and interconnection from her grandmother \u2014 as legitimate intellectual resources that enrich her analysis?"
+      },
+      {
+        "check_id": "conceptual_work_foregrounded",
+        "question": "Does the report foreground what Ixchel's submissions actually argue \u2014 that structural racism has no borders, that her family's migration is produced by the same racial capitalism as US urban inequality, that indigenous resistance is the longest continuous resistance in the Americas \u2014 rather than focusing on surface features of her writing?"
+      }
+    ],
+    "T015": [
+      {
+        "check_id": "sovereignty_frame_recognized",
+        "question": "Does the report recognize that Nolan's pushback on the intersectionality framework reflects a genuine alternative epistemology grounded in Indigenous sovereignty \u2014 not 'resistance to learning' but an argument that indigeneity is a political status, not a racial category?"
+      },
+      {
+        "check_id": "meta_critique_as_intellectual_move",
+        "question": "Does the report recognize Nolan's A3 \u2014 which applies the course's own analytical frameworks to the course itself (student writing as data, knowledge production as power) \u2014 as a sophisticated intellectual move, not as off-topic self-reflection or avoidance of content?"
+      },
+      {
+        "check_id": "pushback_not_penalized",
+        "question": "Does the report avoid framing Nolan's persistent questioning of the course's analytical frameworks as a deficit \u2014 does it treat his intellectual disagreement as legitimate engagement rather than as non-compliance?"
+      }
+    ],
+    "T016": [
+      {
+        "check_id": "a3_breakthrough_named",
+        "question": "Does the report name Connor's A3 midterm as a genuine breakthrough \u2014 specifically his recognition that using his grandfather's coal miner suffering to redirect race discussions to class was a structural deflection, and that 'intent isn't the thing, function is'?"
+      },
+      {
+        "check_id": "pattern_named_across_arc",
+        "question": "Does the report name the pattern across Connor's arc \u2014 the 'what about class' deflection in A1 and A2, the genuine breakthrough in A3, and the partial regression to coalition-as-escape-hatch framing in A4?"
+      }
+    ],
+    "T017": [
+      {
+        "check_id": "shortening_as_deepening",
+        "question": "Does the report describe River's trajectory accurately \u2014 that their submissions get shorter AND more focused across the semester, converging on a specific thesis (algorithmic systems as structural racism in a new medium) \u2014 rather than framing the shorter later work as decline or disengagement?"
+      },
+      {
+        "check_id": "associative_thinking_as_discovery",
+        "question": "Does the report recognize the long associative A1 and A2 (parenthetical tangents, metacommentary, catching connections mid-sentence) as intellectual exploration that surfaces the thesis, not as disorganized writing that needs to be corrected?"
+      },
+      {
+        "check_id": "intellectual_thesis_named",
+        "question": "Does the report name River's specific intellectual argument \u2014 that COMPAS, mortgage algorithms, and hiring algorithms ARE structural racism in a new medium, running the same single-axis processing failure Crenshaw described in law?"
+      }
+    ]
+  },
+  "students": {
+    "T001": {
+      "student_id": "T001",
+      "student_name": "Maria Ndiaye",
+      "pattern": "esl_growing_voice",
+      "report_length": 6022,
+      "report_generated": true,
+      "checks_passed": 3,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "growth_arc_named",
+          "question": "Does the report name Maria's intellectual and linguistic growth across the semester as a positive arc, describing what she built rather than what she started without?",
+          "passed": true,
+          "explanation": "The report explicitly states Maria 'has been building a powerful framework' and describes her intellectual journey as a process of expanding, challenging, and incorporating new perspectives."
+        },
+        {
+          "check_id": "multilingual_as_asset",
+          "question": "Does the report frame Maria's multilingualism (moving between Wolof, French, and English) as an intellectual strength \u2014 something that enriches her analysis \u2014 rather than as a challenge to overcome or a starting deficit?",
+          "passed": true,
+          "explanation": "The report highlights Maria's observation about her mother switching between languages as a 'powerful example' of her ability to connect personal experience to structural forces, framing her linguistic abilities as a strength."
+        },
+        {
+          "check_id": "no_deficit_framing",
+          "question": "Is the report free from deficit language about Maria's English \u2014 phrases like 'improving English skills,' 'language barrier,' or 'limited English proficiency'?",
+          "passed": true,
+          "explanation": "The report does not contain any language suggesting Maria's English skills are a deficit or need improvement; it focuses on her skillful navigation between different registers."
+        }
+      ],
+      "report": "# Semester Summary: Maria Ndiaye\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Maria Ndiaye, framed as a colleague sharing observations with you. I've aimed for a tone that's encouraging, specific, and focused on Maria's intellectual journey.\n\n## Intellectual Arc\n\nThis semester, Maria Ndiaye has been building a powerful framework for understanding power and resistance, one deeply rooted in her own experiences and the experiences of her family and community. She began by grappling with theoretical concepts like intersectionality and structural racism, initially seeking to understand how these frameworks could validate and illuminate experiences she already knew to be true. Over time, Maria\u2019s thinking has expanded significantly, moving beyond simply applying these theories to instead actively *challenging* their limitations and advocating for a more inclusive understanding of power. She\u2019s demonstrated a remarkable ability to connect abstract concepts to concrete examples, particularly drawing on her family\u2019s history of French colonialism in Senegal and the wisdom of her grandmother. The shift towards broadening the theoretical scope, incorporating West African feminist scholarship, is a particularly exciting development, demonstrating a critical lens towards Western-centric academic frameworks. Maria\u2019s intellectual journey this semester has been about recognizing the limitations of imposed frameworks and building her own, richer understanding of the world.\n\n## Key Moments\n\nSeveral quotes particularly highlight Maria\u2019s intellectual growth. First, \"In Senegal people don't use this word intersectionality but everybody know that life is harder when you are many things at once that society don't value.\" This quote, from her initial reading response, reveals Maria's ability to recognize the limitations of academic language while simultaneously validating the lived realities it attempts to describe. It demonstrates a keen awareness that theory often lags behind lived experience. Later, in her Midterm Reflection, she states, \"What I learned this semester is that knowledge comes from many places.\" This is a pivotal moment, signaling a shift away from a solely academic understanding of knowledge and towards a more expansive view that values lived experience, oral traditions, and intergenerational wisdom. Finally, her observation, \"when my mother she switch from Wolof to French her whole body change, she become smaller,\" is a striking example of her ability to connect personal observation to a sophisticated understanding of structural forces.\n\n## Theme Evolution\n\nThe central theme of Maria\u2019s work this semester has been the exploration of power and its impact on individuals and communities. Initially, she focused on understanding structural racism and its manifestations, particularly within the context of her family\u2019s history. As the semester progressed, this focus broadened to encompass a more holistic understanding of intersectionality, incorporating gender, age, and linguistic identity. A particularly compelling thread has been her exploration of resistance movements, drawing parallels between the struggles of African women and the Black Power movement. While the initial focus on Crenshaw\u2019s intersectionality was a starting point, Maria has moved beyond a simple application of the theory, actively questioning its limitations and seeking to expand its scope. The fading of a more simplistic, definitional understanding of these concepts has been replaced by a more nuanced and critical perspective.\n\n## Developing Strengths\n\nMaria thrives when she can connect abstract concepts to her own lived experiences and the experiences of those around her. Her strongest work emerges when she is able to weave together personal narratives, textual analysis, and conceptual application. She demonstrates a remarkable ability to identify the structural forces at play in everyday situations, as evidenced by her insightful observation about her mother\u2019s change in demeanor when switching from Wolof to French. Maria\u2019s writing is most compelling when it is driven by a sense of urgency and a desire to share her perspective \u2013 her Midterm Reflection is a prime example of this. She\u2019s also developing a sophisticated linguistic repertoire, skillfully navigating between reflective, analytical, and passionate registers to convey her ideas effectively.\n\n## Growth Edges\n\nBuilding on Maria\u2019s demonstrated interest in challenging Western-centric frameworks, she might find it compelling to explore the work of African feminist scholars directly. Engaging with thinkers like Oy\u00e8r\u00f3nk\u1eb9\u0301 Oy\u011bw\u00f9m\u00ed or Amina Mama would provide a deeper understanding of the theoretical foundations that Maria is intuitively drawing upon.\n\nTo take her work to the next level, Maria could focus on developing her ability to articulate her arguments with even greater precision and clarity. She already demonstrates a remarkable ability to identify complex issues, but refining her ability to break down these issues into smaller, more manageable components would strengthen her analytical power. Her observation about her mother switching from Wolof to French is a powerful example of her ability to connect personal experience to structural forces \u2013 further developing this skill would allow her to conduct even more insightful analyses.\n\n## Teacher Notes (Private)\n\nMaria has shown consistent engagement throughout the semester, and her word count trend indicates a growing confidence in her writing abilities. Her wellbeing appears to be high, and she is clearly motivated by a desire to connect course material to her own experiences. There are no immediate concerns regarding her trajectory, and her momentum suggests a continued positive trajectory. It would be beneficial to continue providing opportunities for her to share her perspectives and challenge existing frameworks.\n"
+    },
+    "T002": {
+      "student_id": "T002",
+      "student_name": "Jordan Kim",
+      "pattern": "burnout_trajectory",
+      "report_length": 5724,
+      "report_generated": true,
+      "checks_passed": 1,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "earlier_strength_recognized",
+          "question": "Does the report recognize Jordan's earlier submissions (A1, A2) as analytically strong, citing specific intellectual work like the model minority myth analysis or DeGraffenreid reading?",
+          "passed": false,
+          "explanation": "The report highlights Jordan's strengths in connecting course material to their experiences and provides examples from their statements, but it does not specifically reference earlier submissions (A1, A2) or cite specific intellectual work like the model minority myth analysis or DeGraffenreid reading."
+        },
+        {
+          "check_id": "shift_acknowledged_without_blame",
+          "question": "Does the report acknowledge the shift in Jordan's engagement across the semester (shorter work, later submissions, stated exhaustion) without blaming Jordan or framing it as a character flaw or lack of effort?",
+          "passed": true,
+          "explanation": "The report acknowledges the shift in engagement (shorter work, later submissions) and attributes it to a shift towards more focused analysis, rather than blaming Jordan or framing it as a character flaw."
+        },
+        {
+          "check_id": "structural_context_present",
+          "question": "Does the report situate Jordan's late-semester pattern in structural context (work obligations, labor at family business) rather than treating it as purely a personal or motivational issue?",
+          "passed": false,
+          "explanation": "While the teacher notes mention Jordan's wellbeing arc and the pattern of engagement, the report does not explicitly situate Jordan's late-semester pattern in structural context (work obligations, labor at family business)."
+        }
+      ],
+      "report": "# Semester Summary: Jordan Kim\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Jordan Kim, framed as a colleague sharing observations. I've aimed for a tone that's supportive, specific, and focused on Jordan's intellectual journey.\n\n## Intellectual Arc\n\nThis semester, Jordan Kim has been building a powerful framework for understanding how individual experiences are shaped by larger systems. They began by grappling with Crenshaw\u2019s concept of intersectionality, and that initial exploration has blossomed into a sophisticated understanding of structural analysis, the model minority myth, and the complexities of resistance. What\u2019s particularly striking is Jordan\u2019s ability to move between abstract theoretical concepts and their own lived experiences, demonstrating a remarkable capacity for connecting the personal to the political. We see this evolution clearly as they move from simply understanding *what* structures exist, to analyzing *how* those structures function and perpetuate inequality. Their thinking has become increasingly nuanced, demonstrating a willingness to grapple with complexities and acknowledge gaps in their understanding, rather than seeking easy answers.\n\n## Key Moments\n\nSeveral quotes stand out as particularly revealing of Jordan\u2019s intellectual development. First, their observation, \"the collisions happen at specific locations where categories meet, and if you're only looking at one road, you miss the crash entirely,\" from their Reading Response on Intersectionality, demonstrates a clear grasp of Crenshaw\u2019s metaphor and its power. This wasn't just a rote understanding; it was a moment of genuine insight. Later, in their Reading Response on Structural Racism, Jordan articulated, \"If structural racism is the architecture of racial hierarchy \u2014 built into institutions, policies, and spatial arrangements \u2014 then the model minority stereotype is a load-bearing wall in that architecture.\" This metaphor is incredibly insightful, demonstrating a sophisticated understanding of how seemingly disparate concepts are intertwined. Finally, their reflection, \"The readings about structural violence actually hit different when you're living in a structure that demands your labor,\" reveals a visceral, embodied recognition of how structures operate \u2013 a shift from abstract theory to a deeply personal understanding.\n\n## Theme Evolution\n\nInitially, Jordan\u2019s focus centered on intersectionality and its application to their family\u2019s experiences. The model minority myth quickly emerged as a key area of inquiry, and Jordan has developed a compelling argument for its role in upholding racial hierarchies. While the concept of resistance movements was introduced later in the semester, Jordan\u2019s engagement with this theme has been more complex, evidenced by their statement, \"everything just feels flat right now.\" This isn't a sign of disengagement, but rather a productive moment of friction \u2013 a recognition that applying these theoretical frameworks to real-world change is far more challenging than simply understanding the theory. The slight decrease in word count across assignments doesn't necessarily indicate a decline in engagement; it suggests a shift towards more concise and focused analysis.\n\n## Developing Strengths\n\nJordan\u2019s strongest work emerges when they are able to connect course material to their own experiences and the world around them. Their ability to translate abstract concepts into concrete examples, particularly when drawing on their family's story, is a remarkable strength. We see this powerfully in their statement, \"My parents worked sixteen-hour days in their dry cleaning business so I could sit in this classroom. That's a structural position, not a personal virtue.\" This is a moment of profound insight and a testament to their ability to analyze systems of power. They also demonstrate a commendable metacognitive awareness, as evidenced by their willingness to acknowledge limitations, stating, \"I think I need more time with that idea.\" This self-awareness is a crucial skill for continued intellectual growth.\n\n## Growth Edges\n\nBuilding on Jordan\u2019s demonstrated interest in structural analysis and the model minority myth, exploring the history of Asian American activism and community organizing would be a compelling next step. Examining the ways in which Asian American communities have challenged dominant narratives and fought for social justice could provide a deeper understanding of resistance strategies.\n\nTo take their work to the next level, Jordan could focus on developing their ability to synthesize multiple theoretical frameworks. They\u2019ve demonstrated a strong grasp of intersectionality and structural racism, but integrating those insights with a more nuanced understanding of neoliberal capitalism, a concept they touched upon in their Midterm Reflection, would allow for even more sophisticated analysis. Their quote, \"I don't think we've found the right analytical tools yet,\" shows a clear recognition of this need.\n\n## Teacher Notes (PRIVATE)\n\nJordan\u2019s wellbeing arc, shifting from a period of burnout to a more engaged state, is a positive sign. The slight decrease in word count across assignments should be viewed in the context of their overall engagement; it likely reflects a shift towards more focused and concise analysis rather than a decline in effort. The pattern of strong starts followed by more variable engagement later in the semester is common and likely reflects the challenges of grappling with complex theoretical material. There are no immediate integrity concerns to note.\n"
+    },
+    "T003": {
+      "student_id": "T003",
+      "student_name": "DeShawn Williams",
+      "pattern": "steady_deep_engagement",
+      "report_length": 5257,
+      "report_generated": true,
+      "checks_passed": 2,
+      "checks_total": 2,
+      "checks": [
+        {
+          "check_id": "intellectual_thread_named",
+          "question": "Does the report name DeShawn's sustained intellectual argument across the semester \u2014 the thread connecting structural analysis to community organizing to community knowledge production \u2014 rather than just saying he was 'engaged' or 'hardworking'?",
+          "passed": true,
+          "explanation": "The report explicitly states DeShawn's argument connects structural analysis to community organizing and community knowledge production."
+        },
+        {
+          "check_id": "community_knowledge_as_analysis",
+          "question": "Does the report recognize that DeShawn frames his grandmother's and uncle's knowledge as legitimate structural analysis, not just personal anecdote?",
+          "passed": true,
+          "explanation": "The report states DeShawn 'integrates community-based knowledge into his structural analysis, recognizing that it\u2019s not just a supplement to academic frameworks, but a form of analysis in itself.'"
+        }
+      ],
+      "report": "# Semester Summary: DeShawn Williams\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for DeShawn Williams, framed as a colleague sharing observations.\n\n## Intellectual Arc\n\nThis semester, DeShawn has been building a powerful framework for understanding and engaging with structural inequality. He began by grappling with the complexities of intersectionality, quickly moving beyond a purely diagnostic understanding to consider its practical application in building coalitions. His thinking has evolved from identifying problems to actively seeking solutions, a shift clearly demonstrated in his engagement with structural racism. DeShawn isn\u2019t content with simply analyzing systems; he\u2019s actively exploring how to dismantle them, drawing on both theoretical frameworks and the lived experiences of his community. A key development has been his integration of community-based knowledge into his structural analysis, recognizing that it\u2019s not just a supplement to academic frameworks, but a form of analysis in itself. He\u2019s consistently challenged the notion that academic knowledge holds a monopoly on truth, advocating for a broader understanding of what constitutes valid analysis.\n\n## Key Moments\n\nSeveral quotes particularly illuminate DeShawn\u2019s intellectual journey. First, \u201cIntersectionality names the problem \u2014 that overlapping systems of oppression produce specific harms at specific intersections \u2014 but it\u2019s less clear about what to do about it.\u201d This quote from his Reading Response on Intersectionality reveals a critical lens \u2013 DeShawn isn\u2019t simply accepting theoretical frameworks at face value; he\u2019s actively questioning their limitations and seeking practical application. Secondly, his question, \u201chow do we build the power to actually change structures, not just analyze them?\u201d demonstrates a clear desire to move beyond theoretical understanding towards tangible change. Finally, \u201cAcademic analysis without organizing is observation without power.\u201d This succinct statement encapsulates his core argument, demonstrating a sophisticated understanding of the limitations of purely intellectual engagement.\n\n## Theme Evolution\n\nThroughout the semester, DeShawn\u2019s engagement with structural analysis has deepened considerably. Initially, he explored the concept through the lens of theoretical readings, but his focus shifted towards political action and community organizing, particularly inspired by his uncle\u2019s work with community land trusts. This focus on community organizing persisted throughout the semester, becoming a central theme in his reflections. While he initially engaged with broader concepts of resistance movements, his thinking narrowed to a focus on concrete strategies for dismantling oppressive structures. The fading of a purely theoretical focus is a positive sign \u2013 it reflects a maturing intellectual curiosity that prioritizes action and tangible impact.\n\n## Developing Strengths\n\nDeShawn thrives when he can connect abstract concepts to personal experiences and real-world examples. His strongest work emerged when he was able to bridge the gap between theory and practice, as evidenced in his Reading Response on Structural Racism. He demonstrates a remarkable ability to synthesize complex ideas and articulate them with clarity and passion. A particularly distinctive strength is his ability to challenge the assumptions embedded within academic frameworks, advocating for a more inclusive and grounded understanding of knowledge. He\u2019s also shown a growing capacity for analytical thinking, evidenced by his shift from asking 'how does X produce harm?' to 'what structures produce X, and how can we dismantle them?' \u2013 a key methodological difference.\n\n## Growth Edges\n\nGiven DeShawn\u2019s demonstrated interest in community organizing and dismantling structures, exploring the history and strategies of successful grassroots movements would be a compelling next step. Examining case studies of community-led initiatives that have achieved tangible change could provide him with concrete models for action.\n\nTo take his work to the next level, DeShawn could focus on developing his ability to articulate a clear and concise argument, grounding his analysis in specific evidence. He already demonstrates a strong understanding of complex concepts, but refining his ability to present this understanding in a structured and persuasive manner would significantly strengthen his arguments. His statement, \"structural analysis turned into structural change,\" from his Reading Response on Structural Racism, shows a glimpse of this ability \u2013 further developing this skill would allow him to translate his insights into a powerful call to action.\n\n## Teacher Notes\n\nDeShawn\u2019s engagement has been consistently high throughout the semester, demonstrating a genuine passion for the material. The steady word count trend and consistently \"ENGAGED\" wellbeing indicator suggest a positive learning environment. There are no immediate trajectory signals requiring attention; his consistent engagement and thoughtful questioning suggest a student who is actively building a strong intellectual foundation.\n"
+    },
+    "T004": {
+      "student_id": "T004",
+      "student_name": "Aisha Patel",
+      "pattern": "variable_neurodivergent",
+      "report_length": 5378,
+      "report_generated": true,
+      "checks_passed": 3,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "variable_output_normalized",
+          "question": "Does the report describe Aisha's variable word count across assignments (short A1 and A3, long A2 and A4) as a natural variation in her processing \u2014 without pathologizing it or describing it as 'inconsistency' or 'struggle to maintain engagement'?",
+          "passed": true,
+          "explanation": "The report does not mention word count or any variation in assignment length."
+        },
+        {
+          "check_id": "intellectual_depth_named",
+          "question": "Does the report recognize the intellectual sophistication in Aisha's work \u2014 her extended analysis of post-9/11 Islamophobia as racialization, her framework of analysis-based (not identity-based) solidarity?",
+          "passed": true,
+          "explanation": "The report explicitly describes Aisha's analysis of structural racism, solidarity, and racialization as demonstrating a 'sophisticated analysis' and 'rigorous and politically informed understanding'."
+        },
+        {
+          "check_id": "associative_thinking_as_strength",
+          "question": "Does the report treat Aisha's associative, tangential, and metacognitive writing style (parenthetical tangents, noting her own brain's processing) as a cognitive strength rather than a structural flaw in her writing?",
+          "passed": true,
+          "explanation": "The report identifies Aisha's 'candid self-reflection' and 'comfort with non-linear thinking' as strengths, and highlights her use of metaphors as a creative approach to complex ideas."
+        }
+      ],
+      "report": "# Semester Summary: Aisha Patel\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Aisha Patel, framed as a supportive colleague sharing observations.\n\n## Intellectual Arc\n\nAisha Patel has spent this semester building a powerful framework for understanding how power operates in the world, moving from a more surface-level understanding of identity to a sophisticated analysis of structural forces and the potential for collective action. Initially, Aisha was grappling with how to articulate the complexities of lived experience, particularly when multiple identities are at play. Her thinking has evolved significantly, demonstrating a growing ability to connect personal experiences to broader societal structures. She\u2019s moved from simply identifying intersectionality to actively dismantling the limitations of existing categories and proposing alternative ways to understand power dynamics. Aisha\u2019s intellectual journey this semester has been about refining theoretical tools \u2013 structural racism, solidarity, and racialization \u2013 and applying them to analyze the world around her.\n\n## Key Moments\n\nSeveral quotes capture the essence of Aisha\u2019s intellectual development. First, \"people see brown and think one thing, see hijab and think another thing, but the actual experience of being ALL of these things at once is something the categories can\u2019t hold.\" This quote from her intersectionality response reveals a frustration with the inadequacy of labels and a keen awareness of the lived reality that transcends those labels. Later, in her response on structural racism, she powerfully states, \"the framework of structural racism as we learn it in this class centers Black-white relations in America, and that centering is itself a structure.\" This demonstrates a critical eye for the historical specificity embedded within theoretical frameworks and a willingness to challenge assumptions. Finally, her declaration, \"solidarity is not about shared identity but about shared ANALYSIS,\" marks a pivotal moment, signaling a shift towards a more rigorous and politically informed understanding of coalition building.\n\n## Theme Evolution\n\nInitially, Aisha engaged with the concept of intersectionality, exploring how different aspects of identity interact. This quickly expanded to a deeper exploration of structural racism, particularly how it operates beyond the traditional Black-white framework. The theme of solidarity emerged as a central focus, evolving from a more intuitive understanding of shared experience to a more analytical approach rooted in shared struggles against systemic oppression. While the initial exploration of intersectionality provided a foundation, the sustained engagement with structural racism and the subsequent development of a theory of solidarity represent the most significant shifts in her thinking. The fading of a more simplistic understanding of identity-based connections has been a natural consequence of her deepening analysis.\n\n## Developing Strengths\n\nAisha thrives when engaging in textual analysis and applying theoretical concepts to real-world events. Her strongest work emerged in the \"Reading Response: Resistance Movements,\" where she articulated a compelling argument for solidarity based on shared analysis. Aisha\u2019s ability to connect abstract concepts to her own experiences and observations is a remarkable strength. She demonstrates a keen ability to identify power dynamics and articulate them with clarity and precision, as seen in her insightful observation that \"intersections have traffic lights \u2014 someone CONTROLS the flow.\" Her candid self-reflection, as evidenced by her \"six half-formed thoughts\" admission, shows a willingness to embrace intellectual complexity and a comfort with non-linear thinking.\n\n## Growth Edges\n\nGiven Aisha\u2019s demonstrated interest in the construction of racial categories and the impact of geopolitical events, exploring the history of colonialism and its ongoing effects on global power structures would be a compelling next step. Connecting her analysis of 'Muslim-looking' to broader histories of Orientalism and the construction of the \"Other\" could provide a richer context for her insights.\n\nTo take her work to the next level, Aisha could focus on developing her ability to synthesize her analysis into more cohesive arguments. While her individual insights are consistently sharp, weaving those insights into a more structured argument, perhaps by explicitly outlining the steps in her reasoning, would strengthen her overall impact. She already demonstrates this ability when she connects her ideas with the metaphor of weather, showing a creative approach to complex ideas. Building on that skill would be a powerful next step.\n\n## Teacher Notes\n\nAisha\u2019s engagement has been consistently high throughout the semester, and her wellbeing appears to be strong. The shift from exploring intersectionality to a more focused analysis of structural racism and solidarity reflects a natural progression in her intellectual curiosity. There are no immediate concerns regarding her trajectory; her consistent engagement and thoughtful reflections suggest a student who is deeply invested in the material and eager to continue exploring these complex topics.\n"
+    },
+    "T005": {
+      "student_id": "T005",
+      "student_name": "Tyler Nguyen",
+      "pattern": "sudden_style_shift",
+      "report_length": 5414,
+      "report_generated": true,
+      "checks_passed": 2,
+      "checks_total": 2,
+      "checks": [
+        {
+          "check_id": "early_authentic_work_valued",
+          "question": "Does the report recognize Tyler's early submissions (A1 writing about his mother, A2 about the freeway through his neighborhood) as rich, grounded, personal analysis \u2014 not as 'informal' or 'developing' work that was improved by later academic register?",
+          "passed": true,
+          "explanation": "The report highlights Tyler's initial focus on his mother's experiences but doesn't explicitly value his early submissions as 'rich, grounded, personal analysis' without qualification."
+        },
+        {
+          "check_id": "style_shift_named",
+          "question": "Does the report note the shift to formulaic academic prose in A3 and A4 \u2014 describing it as a change in voice and register rather than treating it as growth?",
+          "passed": true,
+          "explanation": "The report mentions a shift towards a 'more theoretical understanding' but does not describe it as a change in voice or register, nor does it critique it as a move away from earlier, more authentic writing."
+        }
+      ],
+      "report": "# Semester Summary: Tyler Nguyen\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Tyler Nguyen, framed as a supportive colleague sharing observations.\n\n## Intellectual Arc\n\nThis semester, Tyler Nguyen has embarked on a compelling journey of understanding how power operates within and between systems. Initially, Tyler\u2019s focus centered on the intersection of various forms of oppression, particularly as it relates to his mother's experiences. He began by grappling with the complexities of how seemingly disparate forces \u2013 sexism and racism \u2013 could combine to create unique challenges. As the semester progressed, Tyler\u2019s thinking expanded to encompass broader structural forces, including socioeconomic stratification and the role of resistance movements. While the initial spark came from a desire to understand his mother's lived experience, Tyler\u2019s intellectual reach has grown to encompass a more analytical perspective on how these forces shape society as a whole. He\u2019s moved from a focus on individual experiences to a consideration of the systems that perpetuate inequality, demonstrating a growing capacity for critical analysis.\n\n## Key Moments\n\nSeveral moments stand out as particularly revealing of Tyler\u2019s intellectual development. First, his observation, \"Like when her boss at the cleaning company would make comments about Vietnamese women being 'docile' and 'hard-working' \u2014 that's not just sexism and it's not just racism, it's this specific thing that happens at the intersection,\" powerfully demonstrates his grasp of intersectionality. This wasn't just an abstract understanding; it was a recognition of a very specific, lived reality. Later, he stated, \"it's not that someone decided to be racist.\" This quote reveals a crucial shift in understanding \u2013 moving away from a simplistic view of individual prejudice to a recognition of the systemic nature of racism. Finally, his reflection, \"My mom never complained because she thought that's just how America works. Reading Crenshaw made me realize that's not how it has to work \u2014 the structures can be changed,\" encapsulates a moment of profound realization and a burgeoning sense of agency.\n\n## Theme Evolution\n\nTyler\u2019s engagement with the concept of intersectionality has been a persistent and powerful thread throughout the semester. Initially, this focus was deeply rooted in his personal connection to his mother's experiences. As the semester progressed, this focus broadened to encompass structural forces and socioeconomic stratification. While the exploration of resistance movements offered a valuable lens for understanding historical struggles, this area seemed to fade somewhat as the semester progressed, perhaps shifting towards a more analytical focus. This isn't necessarily a negative development; it suggests a natural shift towards a more theoretical understanding, though maintaining a connection to lived experience would continue to enrich his analysis.\n\n## Developing Strengths\n\nTyler\u2019s strongest intellectual work emerges when he connects theoretical concepts to personal experiences and observable realities. He excels at translating abstract ideas into concrete examples, as evidenced by his ability to articulate how power structures impact educational outcomes, stating, \"one can observe that educational outcomes are significantly influenced by pre-existing power structures that allocate resources inequitably.\" He demonstrates a remarkable ability to use metaphor effectively, as seen in his insightful comparison of navigating multiple identities to \"standing at one of Crenshaw's intersections trying to figure out which direction to go.\" This capacity for personal-to-theory connection, combined with his ability to articulate complex arguments, represents a significant strength. His writing is often driven by a palpable sense of urgency and a desire for social change, which fuels his engagement with the material.\n\n## Growth Edges\n\nBuilding on Tyler\u2019s demonstrated interest in structural forces, he might find it compelling to explore the concept of \u201credlining\u201d and its lasting impact on communities of color. Connecting this historical practice to contemporary disparities in wealth and access to resources would provide a concrete example of how structural racism continues to shape lives today.\n\nTo take his work to the next level, Tyler could focus on developing a more nuanced approach to analyzing the *mechanisms* of power. While he effectively identifies power structures, further exploration of *how* these structures are maintained and challenged would deepen his analysis. He already demonstrates this capacity when he provides concrete examples, like in his discussion of the Civil Rights Movement, but consistently applying this level of detail across his analyses would elevate his work.\n\n\n\n## Teacher Notes\n\n(Private)\n\nTyler\u2019s engagement rhythm has shown some variability, with a strong start that sometimes leveled out later in the semester. This is a pattern worth noting, and perhaps exploring strategies to maintain that initial momentum \u2013 perhaps through more frequent check-ins or opportunities for peer discussion. His wellbeing has appeared consistently engaged, which is a positive sign. There are no immediate concerns regarding integrity patterns.\n"
+    },
+    "T006": {
+      "student_id": "T006",
+      "student_name": "Ingrid Johansson",
+      "pattern": "tone_policing",
+      "report_length": 6024,
+      "report_generated": true,
+      "checks_passed": 0,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "genuine_breakthrough_recognized",
+          "question": "Does the report name Ingrid's A3 midterm as a genuine analytical breakthrough \u2014 specifically her self-directed research on school funding property tax formulas and her statement 'I can't un-see it' \u2014 rather than treating all four assignments as equally resistant to structural analysis?",
+          "passed": false,
+          "explanation": "The report mentions her 'Midterm Reflection' as an insightful moment but does not specifically refer to A3, school funding property tax formulas, or the 'I can't un-see it' statement."
+        },
+        {
+          "check_id": "power_moves_named",
+          "question": "Does the report name the pattern of rhetorical resistance across Ingrid's submissions \u2014 the abstract liberalism, the 'both sides' framing, the appeal to individual agency \u2014 as a pattern, rather than treating it as legitimate intellectual pushback?",
+          "passed": false,
+          "explanation": "The report does not identify a pattern of rhetorical resistance or name specific framing techniques like 'both sides' or 'appeal to individual agency' as a pattern."
+        },
+        {
+          "check_id": "partial_regression_noted",
+          "question": "Does the report note that A4 represents a partial regression from the A3 breakthrough, returning to the 'persuasion over confrontation' / 'Dr. King vs. radicals' framing?",
+          "passed": false,
+          "explanation": "The report does not mention A4 or suggest any regression from a previous breakthrough."
+        }
+      ],
+      "report": "# Semester Summary: Ingrid Johansson\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Ingrid Johansson, keeping your guidelines firmly in mind.\n\n## Intellectual Arc\n\nThroughout this semester, Ingrid Johansson has been building a compelling argument around the interplay of individual agency and structural forces. She began by grappling with the complexities of intersectionality and structural racism, demonstrating a keen desire to move beyond simplistic explanations and towards a more nuanced understanding of social disparities. Ingrid\u2019s thinking has evolved from a tentative exploration of these concepts to a more confident articulation of her own perspective, one that consistently prioritizes a measured, analytical approach. She\u2019s moved from simply identifying structural barriers to actively considering how individuals navigate those barriers and what strategies might be most effective in achieving change. A key shift occurred when she began connecting these theoretical frameworks to real-world examples, particularly in her reflection on systemic inequity, allowing her to articulate a sophisticated understanding of how seemingly neutral systems can perpetuate disadvantage.\n\n## Key Moments\n\nSeveral quotes particularly illuminate Ingrid\u2019s intellectual journey. First, \"I think it's important to approach these discussions with objectivity rather than emotion\" [Reading Response: Intersectionality] reveals a commitment to reasoned argument and a desire to ground her analysis in logic. This isn't a rejection of feeling, but a deliberate choice to prioritize clarity and precision in her thinking. Secondly, \"Nobody in my district decided to be racist. The formula is neutral. But the outcomes aren't.\" [Midterm Reflection] is a truly insightful moment. It demonstrates a remarkable ability to identify the subtle ways in which systems can perpetuate inequity, even without malicious intent. Finally, \"The movements that achieved lasting change \u2014 like the Civil Rights Movement under Dr. King \u2014 were those that appealed to universal principles of justice and human dignity rather than divisive identity politics.\" [Reading Response: Resistance Movements] showcases her ability to synthesize historical analysis with contemporary concerns, offering a compelling perspective on the path towards social change.\n\n## Theme Evolution\n\nThe persistent thread throughout Ingrid\u2019s work has been a focus on individual agency within a framework of structural constraints. She initially engaged with intersectionality and structural racism, seeking to understand the complexities of these forces. A fascinating development was her exploration of resistance movements, where she began to consider the effectiveness of different strategies for achieving social change. While the idea of \"confrontation\" seemed to fade as a central focus, her exploration of persuasion and appeals to universal principles deepened considerably. Ingrid\u2019s desire to avoid deterministic conclusions, as evidenced in her concern that \"the structural racism framework can become deterministic,\" has consistently guided her thinking, pushing her to seek a more balanced and nuanced perspective.\n\n## Developing Strengths\n\nIngrid excels at connecting personal experiences to broader theoretical frameworks. Her ability to ground abstract concepts in concrete examples, as seen in her reference to her family\u2019s immigration experience, is a significant strength. She demonstrates a remarkable capacity for textual analysis, carefully dissecting arguments and identifying underlying assumptions. Ingrid\u2019s strongest work emerges when she\u2019s applying conceptual frameworks to analyze real-world situations, a skill she showcased particularly well in her \"Reading Response: Intersectionality.\" She also demonstrates a developing habit of analytical reasoning, consistently seeking to identify the logical connections between ideas and evidence. Her linguistic repertoire is expanding as she confidently articulates her perspective, demonstrating a growing ability to present complex arguments in a clear and measured manner.\n\n## Growth Edges\n\nGiven Ingrid\u2019s demonstrated interest in the effectiveness of different strategies for social change, she might find it compelling to explore the concept of \u201cstrategic nonviolence\u201d in more depth. Examining case studies of movements that employed nonviolent tactics, such as the anti-apartheid movement in South Africa, could provide valuable insights into the complexities of achieving social change.\n\nTo take her work to the next level, Ingrid could focus on developing her ability to anticipate and address counterarguments. While she consistently presents a well-reasoned perspective, she occasionally expresses discomfort when encountering differing viewpoints, as noted in her reflection: \"I feel like when I try to offer a different perspective, the response is sometimes dismissive rather than engaged.\" Building on her existing strength in analytical reasoning, she could practice identifying potential objections to her arguments and crafting thoughtful responses. This would allow her to engage in more robust intellectual debates and further refine her arguments.\n\n## Teacher Notes\n\n(Private)\n\nIngrid\u2019s engagement has been consistently high throughout the semester, and her word count trend demonstrates a growing confidence in her writing. The shift from a more exploratory tone in the early assignments to a more assertive and analytical voice is a positive indicator of intellectual growth. It's worth noting that Ingrid\u2019s comment about feeling dismissed in discussions suggests a potential opportunity to cultivate a classroom environment that prioritizes respectful dialogue and intellectual risk-taking. Creating space for students to share their perspectives, even when those perspectives challenge conventional wisdom, could be particularly beneficial for Ingrid.\n"
+    },
+    "T007": {
+      "student_id": "T007",
+      "student_name": "Sophia Chen",
+      "pattern": "building_momentum",
+      "report_length": 5148,
+      "report_generated": true,
+      "checks_passed": 1,
+      "checks_total": 2,
+      "checks": [
+        {
+          "check_id": "growth_arc_named",
+          "question": "Does the report name Sophia's building arc \u2014 from tentative and uncertain in A1 to deeply analytical and self-aware in A3/A4 \u2014 as a meaningful trajectory of intellectual development?",
+          "passed": false,
+          "explanation": "The report describes Sophia's intellectual journey but does not explicitly name it as a 'meaningful trajectory of intellectual development'."
+        },
+        {
+          "check_id": "late_work_strength_recognized",
+          "question": "Does the report recognize the strength of Sophia's later work, particularly A3's honest reckoning with her own prior 'colorblind' thinking and A4's claim that 'knowledge creates obligation'?",
+          "passed": true,
+          "explanation": "The report highlights quotes from later assignments (A3/A4) as illustrating her growing sense of responsibility and sophisticated understanding, indicating recognition of their strength."
+        }
+      ],
+      "report": "# Semester Summary: Sophia Chen\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Sophia Chen, framed as a colleague sharing observations with you. I've aimed for a tone that's supportive, specific, and focused on Sophia's growth.\n\n## Intellectual Arc\n\nSophia Chen has spent this semester building a powerful framework for understanding inequality, moving from a focus on individual prejudice to a more nuanced understanding of structural forces. Initially, she grappled with foundational concepts like intersectionality, demonstrating a willingness to engage with complex ideas while also exhibiting a commendable intellectual humility \u2013 acknowledging the need for further exploration. What\u2019s particularly striking is how Sophia has consistently connected abstract theoretical concepts to tangible realities, particularly within her own community. She\u2019s moved from identifying disparities to analyzing the historical and ongoing systems that produce them, a shift clearly evident in her reflections on redlining, the GI Bill, and school funding. Sophia\u2019s intellectual journey has been one of increasing complexity, as she\u2019s moved from simply recognizing inequality to grappling with the responsibility that comes with understanding its structural roots.\n\n## Key Moments\n\nSeveral quotes capture the essence of Sophia\u2019s intellectual development. First, \"I honestly didn't think about racism much as something structural.\" This quote marks a pivotal moment of metacognitive awareness, revealing a significant shift in her perspective. It demonstrates a willingness to challenge her own assumptions and consider alternative frameworks. Later, \"You can't see the architecture of inequality and then just go home to your well-funded suburb and pretend it's normal.\" This quote powerfully illustrates her growing sense of responsibility and the discomfort that comes with confronting her own positionality within a system of privilege. Finally, her observation, \"the patterns they created still exist,\" reveals a sophisticated understanding of how historical policies continue to shape present-day realities, demonstrating a grasp of the enduring impact of structural forces.\n\n## Theme Evolution\n\nThroughout the semester, Sophia consistently engaged with the themes of structural analysis and obligation, demonstrating a remarkable ability to connect theoretical frameworks to real-world examples. The thread of moving beyond individual prejudice has been a persistent one, consistently driving her analysis. While the initial focus was on understanding the mechanics of structural racism, the semester culminated in a deeper exploration of privilege and responsibility, a theme that clearly resonated with her. There wasn't a significant fading of any particular theme, but rather a deepening and broadening of her engagement with these core concepts.\n\n## Developing Strengths\n\nSophia thrives when connecting personal experiences and observations to broader theoretical frameworks. Her strongest work emerged when she was able to apply abstract concepts like intersectionality and structural racism to concrete examples from her own community, as seen in her insightful analysis of her suburb's demographics and school funding. She demonstrates a remarkable ability to move from identifying a problem to analyzing its underlying causes, a skill that was particularly evident in her midterm reflection. Sophia\u2019s reflective register, consistently present throughout the semester, allows her to thoughtfully process complex information and articulate her evolving understanding. The increasing word count across assignments also suggests a growing confidence in her ability to articulate her ideas.\n\n## Growth Edges\n\nBuilding on Sophia\u2019s demonstrated interest in structural analysis, she might find it compelling to explore the concept of \u201cpolicy legacies\u201d \u2013 how seemingly neutral policies can have unintended and discriminatory consequences across generations. Examining case studies of urban planning or housing policy could provide further opportunities to connect theory to practice.\n\nTo take her work to the next level, Sophia could focus on developing her ability to synthesize multiple lines of evidence to support her claims. Her analysis of her suburb\u2019s school funding, for example, was insightful, but incorporating data on student outcomes or teacher qualifications would further strengthen her argument. The way she connected her observations to the broader structures in her midterm reflection showed a real aptitude for this kind of synthesis.\n\n## Teacher Notes\n\n*   **Integrity Pattern:** The shift toward class norms in later assignments suggests that Sophia is responding positively to the expectations of the course, which is a positive sign.\n*   **Wellbeing:** Sophia\u2019s consistently engaged state throughout the semester is a testament to her intellectual curiosity and commitment to learning.\n*   **No significant trajectory signals** to attend to at this time. Sophia appears to be thriving in this course.\n"
+    },
+    "T008": {
+      "student_id": "T008",
+      "student_name": "Marcus Jackson",
+      "pattern": "strong_consistent",
+      "report_length": 5477,
+      "report_generated": true,
+      "checks_passed": 0,
+      "checks_total": 4,
+      "checks": [
+        {
+          "check_id": "1",
+          "question": "",
+          "passed": false,
+          "explanation": "The report describes Marcus's intellectual journey but does not name a specific argument he develops."
+        },
+        {
+          "check_id": "2",
+          "question": "",
+          "passed": false,
+          "explanation": "The report mentions Marcus's connection to his community but does not explicitly recognize it as a form of structural analysis."
+        },
+        {
+          "check_id": "specific_intellectual_work_named",
+          "question": "Does the report name the specific intellectual argument Marcus develops \u2014 not just that he was 'engaged' or 'strong,' but the specific content: his analysis of how institutions are designed for people whose identity is the default on every axis, and his critique of academic knowledge production's relationship to community knowledge (grandmother's analysis \u2260 'just anecdote')?",
+          "passed": false,
+          "explanation": "Not answered by evaluator."
+        },
+        {
+          "check_id": "community_grounding_as_asset",
+          "question": "Does the report recognize Marcus's grounding in Compton and his family's experience as a legitimate analytical resource \u2014 not as 'personal connection' but as structural analysis produced through relationship?",
+          "passed": false,
+          "explanation": "Not answered by evaluator."
+        }
+      ],
+      "report": "# Semester Summary: Marcus Jackson\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Marcus Jackson, framed as a colleague sharing their observations with you. I've aimed for a balance of specificity, encouragement, and actionable suggestions.\n\n## Intellectual Arc\n\nMarcus Jackson has spent this semester building a powerful framework for understanding systemic inequality, one deeply rooted in his own lived experience. He began the semester grappling with the theoretical underpinnings of intersectionality and structural racism, initially seeking validation for what he already knew intuitively. His thinking has evolved from a place of recognition to a place of critical analysis, moving from simply identifying disparities to dissecting the mechanisms that perpetuate them. Marcus isn't simply absorbing information; he's actively interrogating the very structures of knowledge and power, questioning whose voices are amplified and whose are silenced. He\u2019s consistently demonstrated a keen ability to connect abstract theoretical concepts to concrete realities, particularly within his own community. The semester culminated in a compelling exploration of resistance movements, where Marcus demonstrated a clear commitment to translating theoretical understanding into tangible action.\n\n## Key Moments\n\nSeveral quotes particularly illuminate Marcus\u2019s intellectual journey. First, in his Reading Response on Intersectionality, he wrote, \"Crenshaw's intersectionality didn't teach me anything I didn't already know in my body but it gave me the language for it.\" This reveals a crucial insight: Marcus isn't seeking entirely new knowledge, but a framework to articulate and legitimize his existing understanding, a powerful starting point for critical engagement. Later, when analyzing structural racism, he offered the striking metaphor, \"It's like a fish analyzing water.\" This demonstrates a growing sophistication in recognizing the pervasive and often invisible nature of systemic issues. Finally, in his Midterm Reflection, he powerfully stated, \"my grandmother's knowledge becomes 'real' only when an academic names it.\" This quote is a testament to his critical awareness of the gatekeeping function of academia and its potential to inadvertently reinforce existing power structures.\n\n## Theme Evolution\n\nMarcus\u2019s engagement began with a focus on understanding the theoretical frameworks of intersectionality and structural racism. This quickly expanded to encompass a deeper exploration of resistance movements, a theme that clearly resonated with him and drove much of his strongest work. While the initial focus on theoretical validation was present at the beginning, it quickly faded as Marcus\u2019s analysis became more focused on practical application and community-based solutions. The consistent thread throughout the semester has been a commitment to grounding abstract concepts in lived experience, rejecting purely academic pursuits in favor of tangible change.\n\n## Developing Strengths\n\nMarcus excels at connecting personal experience to theoretical frameworks. His ability to translate abstract concepts into concrete examples, particularly those drawn from his own community, is a remarkable strength. He demonstrates a powerful mode of thinking that we might call \"personal-to-theory connection.\" He also possesses a keen analytical ability, as evidenced by his insightful explanation of how property tax funding impacts school quality in his neighborhood. His writing is characterized by a passionate and urgent register, which, when channeled effectively, fuels his intellectual inquiry. We see this most clearly in his Reading Response on Resistance Movements, where his writing is driven by a palpable sense of urgency and a deep personal connection to the material.\n\n## Growth Edges\n\nBuilding on Marcus\u2019s demonstrated interest in community-based solutions, he might find it compelling to explore the work of community organizers and activists who have successfully challenged systemic inequalities. Examining case studies of grassroots movements, particularly those led by people directly impacted by these issues, could provide him with concrete models for translating his theoretical understanding into action.\n\nTo take his work to the next level, Marcus could focus on developing a more nuanced approach to structural analysis. While he clearly understands the concept of structural inequality, he could benefit from exploring the complexities of identifying leverage points for change within these systems. He already demonstrated this ability when he identified property tax funding as a key mechanism, but further developing this skill would allow him to move from identifying problems to proposing solutions.\n\n## Teacher Notes\n\nMarcus\u2019s engagement has been consistently high throughout the semester, demonstrating a genuine enthusiasm for the material. His writing has maintained a passionate and urgent register, which is a testament to his commitment to social justice. There are no immediate concerns regarding wellbeing or engagement; he appears deeply invested in the course material and its relevance to his life. The consistent pattern of connecting personal experience to theoretical frameworks suggests a student who thrives when given opportunities to explore issues that directly impact their community.\n"
+    },
+    "T009": {
+      "student_id": "T009",
+      "student_name": "Rosa Gutierrez-Santos",
+      "pattern": "code_switching_bilingual",
+      "report_length": 5997,
+      "report_generated": true,
+      "checks_passed": 2,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "multilingual_practice_as_asset",
+          "question": "Does the report frame Rosa's code-switching between English and Spanish (and her references to K'iche' and Zapotec concepts like 'cruce de caminos' and 'Binniz\u00e1') as an intellectual strength \u2014 a multilingual practice that enriches her analysis \u2014 rather than as informal writing or language interference?",
+          "passed": true,
+          "explanation": "The report explicitly states her ability to move between English and Spanish is a 'distinctive strength' and that she 'seamlessly weaving[s] these languages into her analysis to convey nuanced meaning'."
+        },
+        {
+          "check_id": "transnational_analysis_recognized",
+          "question": "Does the report recognize Rosa's specific intellectual contribution \u2014 the argument that structural racism has no borders (NAFTA, land displacement, undocumented labor) and that her mother's migration is produced by the same racial capitalism that created US urban inequality?",
+          "passed": false,
+          "explanation": "While the report mentions her connecting migration to structural violence, it does not explicitly recognize her argument about transnational racial capitalism or her mother's migration as a product of the same forces creating US urban inequality."
+        },
+        {
+          "check_id": "no_english_default",
+          "question": "Is the report free from treating English as the default or standard register \u2014 does it avoid describing Rosa's writing as 'mixing languages' in a way that implies English-only would be more correct or academic?",
+          "passed": true,
+          "explanation": "The report does not describe her use of Spanish as 'mixing languages' or imply that English would be a more correct or academic register; instead, it highlights the value of her multilingual analysis."
+        }
+      ],
+      "report": "# Semester Summary: Rosa Gutierrez-Santos\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Rosa Gutierrez-Santos, framed as a colleague sharing observations with you. I've aimed for a tone that's supportive, specific, and focused on Rosa's intellectual journey.\n\n## Intellectual Arc\n\nThroughout this semester, Rosa Gutierrez-Santos has been building a powerful argument about the limitations of dominant analytical frameworks when applied to understanding lived experiences, particularly those of marginalized communities. She began by engaging with concepts like intersectionality and structural racism, but quickly moved beyond simply understanding these theories to critically interrogating their efficacy and potential for reinforcing existing power structures. Rosa\u2019s thinking has evolved from a place of initial engagement with theoretical concepts to a place of sophisticated critique and a search for more nuanced, culturally grounded approaches. She\u2019s consistently demonstrated a remarkable ability to connect abstract ideas to her own experiences and the experiences of her community, challenging the notion that theory should exist in a vacuum.\n\n## Key Moments\n\nSeveral quotes particularly illuminate Rosa\u2019s intellectual development. First, her observation, \"Crenshaw talks about the traffic intersection and I keep thinking about the word cruce \u2014 crossing \u2014 because in Spanish we say cruce de caminos which is not just an intersection but a crossroads, a place where you have to choose,\" reveals a profound understanding of how language shapes our perception and the limitations of translating lived experience into theoretical terms. This demonstrates her ability to identify the nuances lost in translation and to draw on her own linguistic and cultural knowledge to enrich her understanding. Then, her use of the phrase \"tierra robada\" immediately grounds the argument in the historical dispossession of Indigenous peoples, showing a capacity to connect academic concepts to her family's lived experience and cultural knowledge. Finally, her declaration, \"What Crenshaw gives us is not the knowledge \u2014 my mother already has the knowledge. What Crenshaw gives us is the language that institutions will listen to,\" is a core insight \u2013 a recognition that theoretical frameworks are tools for engagement, not sources of truth.\n\n## Theme Evolution\n\nRosa\u2019s engagement with the concept of framework limitations has been a consistent thread throughout the semester. Initially, she explored this through the lens of intersectionality, questioning its ability to fully capture the complexities of lived experience. This exploration then expanded to include a critique of community cultural wealth, demonstrating a willingness to challenge even those frameworks intended to uplift marginalized communities. A related theme, multilingual analysis, emerged as a crucial element of her critique, with Rosa consistently highlighting the importance of incorporating multiple languages and cultural contexts into analysis. The fading of a potentially narrower focus on anti-Black racism, as evidenced by her statement, \"pero tambien we need to see how anti-indigenous and anti-Black structures are connected at the foundation,\" suggests a deepening of her understanding of interconnected systems of oppression.\n\n## Developing Strengths\n\nRosa thrives when connecting personal experience and cultural knowledge to theoretical frameworks. Her strongest work, particularly in the Midterm Reflection, demonstrates a remarkable ability to articulate the limitations of dominant analytical tools and to propose alternative approaches grounded in lived experience. She possesses a powerful, urgent voice, evident in her passionate engagement with the material. A distinctive strength is her ability to move between English and Spanish, seamlessly weaving these languages into her analysis to convey nuanced meaning and challenge the limitations of English-language frameworks. She also demonstrates a clear ability to apply concepts, as seen in her direct linking of migration to structural violence \u2013 \"migration is itself a product of structural violence \u2014 la violencia estructural that pushes people from their land.\"\n\n## Growth Edges\n\nBuilding on Rosa\u2019s demonstrated interest in challenging existing frameworks, she might find it compelling to explore the work of Indigenous scholars who are developing their own analytical tools rooted in their own cultural contexts. This would allow her to further refine her critique of Western frameworks and to explore alternative approaches to knowledge production.\n\nThe concrete next step for Rosa is to further develop her ability to articulate her alternative approaches. While she is excellent at identifying the limitations of existing frameworks, she could benefit from explicitly outlining the characteristics of a framework that would better serve her analytical goals. She already demonstrates this capacity when she states, \"Intersectionality in English sounds like a theory but cruce de caminos sounds like a story. I think the difference matters because theory lives in your head but a story lives in your body.\" Building on this insight, she could explore how to translate this understanding into a more fully developed analytical approach.\n\n\n\n## Teacher Notes\n\n(Private)\n\nIt's notable that Rosa\u2019s engagement shifted during the semester, moving into a crisis point. While this is concerning, it\u2019s important to remember that her intense engagement with challenging material and her willingness to critique established frameworks likely contributed to this. It would be beneficial to check in with her about workload and to provide opportunities for reflection and self-care. Her consistent use of Spanish and her ability to draw on her cultural knowledge are significant strengths that should be encouraged and celebrated.\n"
+    },
+    "T010": {
+      "student_id": "T010",
+      "student_name": "Alex Rivera",
+      "pattern": "missing_assignment_gap",
+      "report_length": 5625,
+      "report_generated": true,
+      "checks_passed": 2,
+      "checks_total": 4,
+      "checks": [
+        {
+          "check_id": "1",
+          "question": "",
+          "passed": true,
+          "explanation": "The report states, 'Not included: Midterm Reflection' and then continues with a neutral explanation, stating it was not analyzed."
+        },
+        {
+          "check_id": "2",
+          "question": "",
+          "passed": true,
+          "explanation": "The report highlights the A4 analysis of intergenerational resistance knowledge as a 'brilliant example' and notes the 'profound understanding' demonstrated in the quote, recognizing the analytical quality of the work."
+        },
+        {
+          "check_id": "gap_noted_without_judgment",
+          "question": "Does the report note that Alex did not submit the A3 midterm reflection without framing the absence as disengagement, laziness, or a character flaw \u2014 treating the gap as a structural fact rather than a personal failure?",
+          "passed": false,
+          "explanation": "Not answered by evaluator."
+        },
+        {
+          "check_id": "present_work_quality_recognized",
+          "question": "Does the report recognize the analytical quality in the three submissions Alex did complete \u2014 particularly the A4 analysis of intergenerational resistance knowledge living in family storytelling?",
+          "passed": false,
+          "explanation": "Not answered by evaluator."
+        }
+      ],
+      "report": "# Semester Summary: Alex Rivera\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 3 of 4 assignments analyzed\n**Not included:** Midterm Reflection\nOkay, here's a draft of a narrative semester summary for Alex Rivera, framed as a colleague sharing their observations with you. I've aimed for a tone that's supportive, specific, and focused on Alex's intellectual journey.\n\n## Intellectual Arc\n\nAlex Rivera has spent this semester building a powerful framework for understanding how systems of power operate and persist, moving from a more initial engagement with identity to a sophisticated analysis of structural forces and the complexities of resistance. Initially, Alex was grappling with how to articulate their own experiences within multiple communities, as evidenced by their opening line, \"Where do I stand? Everywhere and nowhere.\" This initial exploration of identity quickly expanded into a critical examination of the frameworks we use to understand social justice, particularly those within academic settings. Alex isn't simply accepting theories; they are actively critiquing them, questioning their limitations and asking, \"effective for whom?\" This critical lens has become a defining feature of their intellectual approach. The semester culminated in a compelling exploration of how resistance manifests beyond formal movements, recognizing the crucial role of familial knowledge and cultural practices in sustaining resilience.\n\n## Key Moments\n\nSeveral quotes particularly highlight Alex\u2019s intellectual development. First, \"I think what Crenshaw gives us is not just a map of intersections but a critique of single-axis thinking \u2014 and that critique applies to every liberation movement, including the ones I belong to.\" This demonstrates a remarkable ability to abstract from Crenshaw\u2019s work and apply it to a broader critique of social movements, showing a level of analytical sophistication beyond simply understanding the concept of intersectionality. Secondly, the observation, \"The 710 freeway was supposed to go through South Pasadena too but the wealthy white residents organized and stopped it. In East LA, the freeway went through,\" is a brilliant example of connecting abstract theory to lived experience. It\u2019s a concrete illustration of structural racism in action, revealing a keen ability to identify and analyze real-world implications. Finally, \"the resistance didn't end with the Moratorium \u2014 it went underground, into families, into the way we taught our children to navigate a world that would use force against them,\" reveals a profound understanding of the multifaceted nature of resistance, moving beyond traditional definitions.\n\n## Theme Evolution\n\nThe semester began with a focus on intersectionality, which quickly broadened to encompass a deeper exploration of structural racism. Alex\u2019s engagement with the concept of resistance movements initially centered on formal protests, but their thinking evolved to include a recognition of the enduring power of familial and cultural knowledge. The question of \"who benefits?\" consistently surfaced, demonstrating a persistent skepticism towards simplistic solutions and a commitment to considering diverse perspectives. The fading of a more initial, emotionally-driven engagement with identity was a natural progression, replaced by a more analytical and structurally-focused approach.\n\n## Developing Strengths\n\nAlex thrives when connecting personal experience to theoretical frameworks. Their strongest work emerged when they were able to ground abstract concepts in concrete examples, as seen in their analysis of the 710 freeway. They possess a remarkable ability to synthesize complex ideas, as demonstrated by their concise definition: \"structural racism shows the system, intersectionality shows who the system hits hardest within affected communities.\" This synthesis, combined with a consistently critical eye, is a hallmark of their intellectual approach. Alex\u2019s linguistic repertoire is expanding; they are increasingly comfortable articulating complex arguments with precision and clarity.\n\n## Growth Edges\n\nBuilding on Alex\u2019s demonstrated interest in structural forces, I think they would find exploring the concept of redlining and its lasting impact on communities incredibly compelling. Connecting this historical practice to contemporary housing disparities would provide a rich opportunity to further develop their analytical skills.\n\nThe specific lever to take Alex\u2019s work to the next level is cultivating a habit of explicitly naming their assumptions. While their analysis is insightful, making their underlying assumptions more visible would strengthen their arguments and allow for even greater intellectual rigor. They already demonstrate this capacity when they ask, \"effective for whom?\" \u2013 encouraging them to consistently apply this questioning to their own frameworks would be incredibly valuable.\n\n## Teacher Notes\n\nIt's notable that Alex\u2019s engagement peaked early in the semester, followed by a period of burnout. This suggests a need to be mindful of workload and to provide opportunities for reflection and decompression. While their shift towards a more analytical tone might initially appear as a decrease in passion, it\u2019s more accurately a sign of intellectual maturation. The consistent use of personal experience as a springboard for analysis is a significant strength, and providing opportunities for them to connect with community resources or conduct further research on topics that resonate with their lived experiences would likely be highly motivating.\n"
+    },
+    "T011": {
+      "student_id": "T011",
+      "student_name": "Jaylen Carter",
+      "pattern": "minimal_but_present",
+      "report_length": 5339,
+      "report_generated": true,
+      "checks_passed": 3,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "report_substantive",
+          "question": "Is the trajectory report substantive and specific to Jaylen \u2014 naming what his submissions actually say (the highway through the neighborhood, 'I knew the system was set up before I knew the word structural') rather than being generic filler?",
+          "passed": true,
+          "explanation": "The report includes specific quotes from Jaylen's work, such as 'the law can only see one thing at a time and people are more than one thing' and 'That's structural racism right there,' demonstrating specificity."
+        },
+        {
+          "check_id": "medium_not_student",
+          "question": "Does the report avoid framing Jaylen's short submissions as evidence of low engagement, limited understanding, or incomplete work \u2014 treating short written output as a property of the medium, not of the student's intellectual capacity?",
+          "passed": true,
+          "explanation": "The report notes Jaylen\u2019s consistent engagement and thoughtful responses, suggesting a focus on his intellectual investment rather than the length of his submissions."
+        },
+        {
+          "check_id": "conceptual_clarity_named",
+          "question": "Does the report recognize that Jaylen's short submissions demonstrate conceptual clarity \u2014 each one lands a specific structural insight \u2014 rather than being treated as incomplete or underdeveloped?",
+          "passed": true,
+          "explanation": "The report highlights specific statements from Jaylen's work that demonstrate conceptual clarity, such as his understanding of intersectionality and structural racism, and his ability to connect academic frameworks to his lived experience."
+        }
+      ],
+      "report": "# Semester Summary: Jaylen Carter\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Jaylen Carter, framed as a colleague sharing their observations with you. I've aimed for a tone that's supportive, specific, and focused on Jaylen's strengths and trajectory.\n\n## Intellectual Arc\n\nThis semester, Jaylen Carter has been building a powerful framework for understanding how systems of power operate and how individuals and communities can challenge them. He began by grappling with complex theoretical concepts like intersectionality and structural racism, and he\u2019s moved towards a place where he\u2019s able to connect those concepts to his own lived experiences and the experiences of his community. We see this evolution clearly in his responses, where he consistently grounds abstract ideas in concrete examples. He\u2019s not just absorbing information; he\u2019s actively applying it to analyze the world around him, demonstrating a growing ability to identify and critique systemic inequalities. The shift from simply understanding *what* is happening to understanding *how* it happens, and *why* it persists, is a significant intellectual leap.\n\n## Key Moments\n\nSeveral quotes particularly illuminate Jaylen\u2019s intellectual development. First, his observation, \"the law can only see one thing at a time and people are more than one thing,\" from his Reading Response on Intersectionality, is a remarkably clear and accessible summary of Crenshaw\u2019s argument. It demonstrates a sophisticated understanding of the limitations of legal frameworks and a recognition of the complexity of human identity. Equally compelling is his statement, \"That's structural racism right there,\" from the same assignment. This direct and concise identification of a core concept shows a clear grasp of the term and its implications. Finally, his reflection, \"This class made me see that the stuff I already knew from living has a name,\" from his Midterm Reflection, is a powerful moment of validation and recognition. It highlights his ability to connect academic frameworks to his own lived experience, a crucial step in intellectual growth.\n\n## Theme Evolution\n\nThroughout the semester, the theme of community empowerment has consistently emerged as a central focus for Jaylen. He began by exploring the historical context of resistance movements, and this quickly evolved into a focus on self-determination and agency. The fading of a more purely theoretical focus is a positive sign \u2013 Jaylen isn't simply engaging with ideas in the abstract; he's actively considering how those ideas can be applied to create meaningful change. His engagement with the Black Panthers, and his subsequent connection to contemporary community efforts, demonstrates a clear understanding of agency and a rejection of reliance on external institutions. This focus on action and self-reliance is a defining characteristic of his intellectual engagement this semester.\n\n## Developing Strengths\n\nJaylen thrives when he can connect course material to his own lived experiences. His strongest work, particularly in the Reading Response on Resistance Movements, demonstrates a remarkable ability to translate abstract concepts into concrete action. He\u2019s particularly adept at identifying the core issues at play and articulating a clear vision for change. We see this in his straightforward and direct language, which conveys a sense of authenticity and grounded lived experience. He\u2019s also demonstrating a growing capacity for analytical thinking, as evidenced by his insightful observation that \"the intersection is where it gets missed.\" This ability to pinpoint the precise point of failure in systems is a testament to his developing analytical skills.\n\n## Growth Edges\n\nBuilding on Jaylen\u2019s demonstrated interest in community empowerment, he might find it compelling to explore the concept of restorative justice. His focus on self-determination and rejecting reliance on external institutions aligns perfectly with the principles of restorative justice, which emphasizes community-led solutions to conflict and harm.\n\nTo take his work to the next level, Jaylen could focus on developing his ability to articulate the *mechanisms* by which structural forces operate. While he readily identifies structural racism, further exploration of *how* those structures are maintained and perpetuated would deepen his analysis. He already demonstrates this ability when he notes, \"Nobody alive today made that decision but we still live inside it,\" which reveals a profound awareness of the enduring impact of past choices. Encouraging him to expand on this line of thinking \u2013 to explore the ways in which current policies and practices perpetuate these historical inequalities \u2013 would be a valuable next step.\n\n## Teacher Notes\n\nIt's notable that Jaylen\u2019s engagement remained relatively consistent throughout the semester, with a steady word count trend. His wellbeing appeared consistently engaged, which is a positive indicator. There are no immediate trajectory signals requiring attention at this time. His consistent engagement and thoughtful responses suggest a student who is deeply invested in the material and eager to connect it to his own life and community.\n"
+    },
+    "T012": {
+      "student_id": "T012",
+      "student_name": "Destiny Washington",
+      "pattern": "care_responsibilities",
+      "report_length": 5572,
+      "report_generated": true,
+      "checks_passed": 3,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "care_burden_structural",
+          "question": "Does the report situate Destiny's variable and sometimes incomplete submissions in structural context \u2014 naming care work as a real material condition that constrains writing time \u2014 rather than treating it as a personal issue or excuse?",
+          "passed": true,
+          "explanation": "The report mentions 'Care work is what holds everything together when structures fail' and acknowledges the emotional toll of the coursework, suggesting an understanding of care work as a response to systemic failures."
+        },
+        {
+          "check_id": "quality_when_present",
+          "question": "Does the report recognize the quality and depth in Destiny's complete submissions, especially A1's insight about the intersection 'trapping you at it' and A4's connection between her mother's babysitting co-op and mutual aid as resistance?",
+          "passed": true,
+          "explanation": "The report highlights specific quotes like 'the intersection is also about how trapped you are at it' and 'Care work is what holds everything together when structures fail' as examples of Destiny's insightful analysis."
+        },
+        {
+          "check_id": "no_deficit_framing",
+          "question": "Is the report free from framing Destiny as a student with a problem to fix \u2014 does it avoid language like 'struggles to complete assignments' or 'distracted by family responsibilities'?",
+          "passed": true,
+          "explanation": "The report focuses on Destiny's strengths and trajectory, and frames variability in her work as potentially related to emotional toll and burnout, avoiding deficit-based language."
+        }
+      ],
+      "report": "# Semester Summary: Destiny Washington\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Destiny Washington, framed as a colleague sharing their observations with you. I've aimed for a tone that's supportive, specific, and focused on Destiny's strengths and trajectory.\n\n## Intellectual Arc\n\nDestiny Washington has spent this semester building a powerful framework for understanding the interplay between individual experience and systemic forces. She began by grappling with the complexities of intersectionality, moving beyond a purely theoretical understanding to connect it to lived realities. Her thinking has evolved from identifying intersecting oppressions to analyzing how those intersections create tangible constraints on agency, as evidenced in her exploration of her mother\u2019s experiences. A key shift occurred as Destiny began to connect historical policies, like redlining, to contemporary inequalities, demonstrating a growing understanding of how past decisions continue to shape present realities. She\u2019s moved from simply identifying these issues to articulating a core insight: that systems often generate problems and then individuals are unfairly blamed for them. This is a sophisticated understanding that demonstrates a developing critical lens.\n\n## Key Moments\n\nSeveral quotes particularly illuminate Destiny\u2019s intellectual development. First, \"Crenshaw would say it\u2019s both at the same time and you can\u2019t pull them apart\" [Reading Response: Intersectionality] reveals her initial grasp of Crenshaw\u2019s core argument about the inseparability of intersecting oppressions. However, it's her articulation of the *impact* of that intersection that truly shines: \"the intersection is also about how trapped you are at it\" [Reading Response: Intersectionality]. This demonstrates a crucial extension of Crenshaw\u2019s framework, highlighting the sense of precarity and limited agency resulting from intersecting oppressions. Finally, her observation that \"Care work is what holds everything together when structures fail\" [Reading Response: Resistance Movements] is a powerful statement demonstrating a clear understanding that care work isn\u2019t just a personal responsibility, but a crucial element of community survival and a form of resistance against systemic failures.\n\n## Theme Evolution\n\nDestiny\u2019s engagement began strongly with a focus on intersectionality, quickly expanding to encompass structural racism and its historical roots. Her exploration of resistance movements provided a crucial counterpoint, allowing her to move beyond identifying problems to considering strategies for navigating and challenging them. The thread of interconnected systems consistently emerged, particularly when she connected redlining to school funding, demonstrating a sharp and insightful understanding of how seemingly disparate systems are linked. While her initial engagement was very strong, the later assignments showed some variability, which is understandable given the emotional weight of the topics.\n\n## Developing Strengths\n\nDestiny thrives when she can connect abstract concepts to her own experiences and the world around her. Her strongest work emerged when she was able to apply theoretical frameworks to concrete examples, as seen in her insightful analysis of redlining. She demonstrates a remarkable ability to identify the emotional toll of systemic injustice, as evidenced by the abrupt ending of her Structural Racism response: \"the school doesn\u2019t even have\u2026\" This grounding of theoretical concepts in a lived reality is a significant strength. She also displays a remarkable capacity for concise and impactful articulation, as seen in her statement, \"systems create the problems that individuals get blamed for\" [Midterm Reflection]. Her use of vernacular language, like \"we figured it out\" [Reading Response: Resistance Movements], adds authenticity and immediacy to her writing.\n\n## Growth Edges\n\nDestiny is already adept at identifying systemic issues and connecting them to personal experiences. To further deepen her analysis, she could explore the concept of generational wealth and how policies like redlining have created lasting disparities. Examining case studies of successful community organizing efforts could provide concrete examples of resistance strategies in action.\n\nThe specific move that would take Destiny\u2019s work to the next level is developing a more sustained argumentative structure. While she consistently offers insightful observations, strengthening her ability to build a cohesive argument across multiple paragraphs would elevate her analysis. She already demonstrates this ability in her concise and impactful statements, like \"systems create the problems that individuals get blamed for.\" Building on this capacity for clear, direct statements would allow her to develop more fully-fledged arguments.\n\n## Teacher Notes\n\nIt's important to acknowledge the emotional toll this semester\u2019s coursework has taken on Destiny. The data shows a wellbeing arc that moved from engaged to crisis to burnout. While her engagement was initially strong, the later variability in her work may reflect this. Providing opportunities for reflection and self-care, and being mindful of the emotional demands of this material, will be crucial for supporting her continued growth. The abrupt ending of her Structural Racism response suggests a need for space to process frustration and feelings of disadvantage.\n"
+    },
+    "T013": {
+      "student_id": "T013",
+      "student_name": "Kai Robinson",
+      "pattern": "speculative_futures",
+      "report_length": 5274,
+      "report_generated": true,
+      "checks_passed": 2,
+      "checks_total": 2,
+      "checks": [
+        {
+          "check_id": "speculative_mode_as_valid_analysis",
+          "question": "Does the report recognize Kai's future-oriented, imaginative, Afrofuturist mode of engagement as a legitimate form of intellectual analysis \u2014 not as 'off-topic' or as avoidance of the structural readings, but as a different analytical direction ('diagnosis plus vision')?",
+          "passed": true,
+          "explanation": "The report explicitly states Kai's thinking has evolved to incorporate speculative imagination and community-led solutions, and that this is a 'natural progression' not a loss."
+        },
+        {
+          "check_id": "specific_intellectual_argument_named",
+          "question": "Does the report name Kai's specific argument \u2014 that structural analysis must be paired with imagination to build alternatives, and that the 'apocalypse already happened' / 'building in the aftermath' framing is a political stance, not escapism?",
+          "passed": true,
+          "explanation": "The report states Kai's central argument is that 'analysis alone is insufficient, and action and creation are essential,' and quotes Kai directly stating the need to 'design the architecture of liberation.'"
+        }
+      ],
+      "report": "# Semester Summary: Kai Robinson\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Kai Robinson, keeping your guidelines firmly in mind.\n\n## Intellectual Arc\n\nThis semester, Kai Robinson has embarked on a powerful journey of shifting their focus from identifying systemic oppression to actively envisioning and designing liberatory futures. Initially engaging with concepts like intersectionality and structural racism, Kai didn't stop at analysis; they consistently pushed to explore what concrete action looks like. Their thinking has evolved from a primarily critical lens to one that incorporates speculative imagination and community-led solutions. We see this shift most clearly in their midterm reflection, where they articulate a desire to move beyond simply mapping oppressive structures and instead focus on \"designing the architecture of liberation.\" Kai\u2019s intellectual journey has been about finding a way to translate theoretical frameworks into tangible possibilities, demonstrating a remarkable ability to connect abstract concepts to real-world applications and historical precedent.\n\n## Key Moments\n\nSeveral quotes particularly illuminate Kai\u2019s intellectual development. First, \"what if the intersection was a meeting point instead of a collision?\" This demonstrates Kai's proactive reimagining of Crenshaw's concept, moving beyond a purely diagnostic understanding to one of potential and connection. Later, in their *Reading Response: Structural Racism*, Kai powerfully states, \"we spend so much time mapping the architecture of oppression that we don't spend enough time designing the architecture of liberation.\" This quote encapsulates their central argument: that analysis alone is insufficient, and action and creation are essential. Finally, their observation that \"The same position that makes you vulnerable in this system is the position that lets you imagine something different\" reveals a sophisticated understanding of how marginalization can be a source of creative power and resistance.\n\n## Theme Evolution\n\nThroughout the semester, the theme of shifting from oppression to possibility has been a consistent thread in Kai\u2019s work. Initially, the focus was on understanding the structures of oppression, but this quickly evolved to include a deep exploration of community-led action and the creation of alternative systems. The idea of speculative imagination, initially introduced through Sun Ra, became a powerful tool for envisioning new possibilities. While the initial engagement with structural analysis remained important, it was consistently paired with a desire to move beyond diagnosis and towards concrete solutions. The fading of a purely critical stance wasn't a loss, but rather a natural progression towards a more hopeful and action-oriented perspective.\n\n## Developing Strengths\n\nKai thrives when connecting personal experiences and observations to theoretical frameworks. Their strongest work, particularly in the Midterm Reflection, demonstrates a remarkable ability to synthesize complex ideas and ground them in concrete examples. We see this in their ability to draw on historical examples, like the Black Panthers\u2019 breakfast program, to illustrate the power of community-led initiatives. Kai\u2019s intellectual engagement peaks when they are able to apply theoretical concepts to real-world scenarios, demonstrating a clear commitment to translating ideas into action. Their linguistic repertoire has also expanded as they confidently articulate their ideas, using precise language to convey complex arguments.\n\n## Growth Edges\n\nBuilding on Kai\u2019s demonstrated interest in community-led action and speculative world-building, exploring the concept of \u201creparations\u201d in various forms (economic, cultural, social) could be a compelling next step. Examining how communities have historically utilized creative practices \u2013 art, music, storytelling \u2013 to resist oppression and build resilience would also resonate with their current interests.\n\nTo take their work to the next level, Kai could focus on developing a more nuanced understanding of how to translate their visionary ideas into actionable steps. Their observation about designing a neighborhood \"by and for Black people\" is a great starting point. Encouraging them to consider the practical challenges and complexities of implementing such a vision \u2013 considering issues like land ownership, resource allocation, and community governance \u2013 would push their thinking in a productive direction. They already demonstrated this capacity in their reflection on the Panthers\u2019 breakfast program, so encouraging them to dig deeper into the logistics of community-led initiatives would be a valuable next step.\n\n## Teacher Notes\n\nIt's notable that Kai\u2019s engagement rhythm built momentum throughout the semester, demonstrating a sustained level of enthusiasm and intellectual curiosity. Their consistently \"ENGAGED\" wellbeing throughout the semester is a positive sign. There are no immediate trajectory signals requiring attention; Kai appears to be navigating the course material effectively and demonstrating a genuine passion for the subject matter.\n"
+    },
+    "T014": {
+      "student_id": "T014",
+      "student_name": "Ixchel Ramirez Caal",
+      "pattern": "newcomer_emergent",
+      "report_length": 5241,
+      "report_generated": true,
+      "checks_passed": 2,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "no_language_deficit_framing",
+          "question": "Does the report avoid deficit framing about Ixchel's English \u2014 is it free from language like 'grammar errors,' 'language barrier,' 'still developing English,' 'ESL student,' or 'needs language support'?",
+          "passed": true,
+          "explanation": "The report highlights Ixchel's use of K'iche' language and proverbs as a strength, avoiding any deficit framing about her English skills."
+        },
+        {
+          "check_id": "indigenous_epistemology_recognized",
+          "question": "Does the report name Ixchel's K'iche' epistemological contributions \u2014 the concepts about land memory, reciprocity, and interconnection from her grandmother \u2014 as legitimate intellectual resources that enrich her analysis?",
+          "passed": true,
+          "explanation": "The report explicitly mentions Ixchel's use of K'iche' proverbs and worldview to offer a unique perspective on historical analysis, recognizing it as a legitimate intellectual resource."
+        },
+        {
+          "check_id": "conceptual_work_foregrounded",
+          "question": "Does the report foreground what Ixchel's submissions actually argue \u2014 that structural racism has no borders, that her family's migration is produced by the same racial capitalism as US urban inequality, that indigenous resistance is the longest continuous resistance in the Americas \u2014 rather than focusing on surface features of her writing?",
+          "passed": false,
+          "explanation": "The report focuses on Ixchel's intellectual growth and ability to connect personal narratives to theoretical frameworks, but it does not explicitly state the arguments she is making about structural racism, migration, or indigenous resistance."
+        }
+      ],
+      "report": "# Semester Summary: Ixchel Ramirez Caal\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Ixchel, framed as a supportive colleague sharing observations.\n\n## Intellectual Arc\n\nThis semester, Ixchel Ramirez Caal has embarked on a powerful journey of connecting personal experience to broader structural understandings. Initially, her writing centered on articulating her lived experience, but as the semester progressed, we\u2019ve seen a remarkable shift towards analyzing the systems that shape those experiences. She\u2019s moved from simply describing hardship to actively interrogating the forces that create and perpetuate it. A key development has been her ability to synthesize theoretical concepts \u2013 like intersectionality and structural racism \u2013 with her family's history and her own cultural worldview, demonstrating a growing capacity for critical analysis. Ixchel\u2019s thinking has evolved from a focus on individual circumstances to a recognition of interconnectedness, a perspective she articulates beautifully through her linguistic and cultural heritage.\n\n## Key Moments\n\nSeveral quotes particularly illuminate Ixchel\u2019s intellectual growth. First, \"she is not sometimes indigenous and sometimes woman. She is everything at the same time.\" This concise statement from her intersectionality response reveals a sophisticated understanding of identity as a complex, interwoven whole, a concept she readily applies to her own experiences. Secondly, \"the structure \u2014 like the reading say \u2014 the structure make it so we cannot stay.\" This quote is particularly striking because it demonstrates Ixchel's ability to translate abstract theoretical language into a clear, personal explanation of displacement, showing a remarkable capacity for synthesis. Finally, \"the land where my grandparent farm, it remember when the company come. That is structural \u2014 the land remember even if the people try to forget.\" This quote beautifully connects a K'iche' worldview with a structural analysis, demonstrating a unique perspective on historical memory and ongoing impact.\n\n## Theme Evolution\n\nThroughout the semester, the thread of indigenous resistance has consistently emerged as a central focus for Ixchel. Initially, her writing was deeply rooted in personal and familial experiences, but this gradually expanded to encompass a broader understanding of structural forces. While the initial focus on lived experience hasn't disappeared, it has become a lens through which she analyzes larger systems. A fascinating shift occurred when she began challenging the dominant narratives presented in the course readings, particularly regarding resistance movements. This challenge, powerfully expressed in her statement, \"the longest resistance in this continent is the indigenous resistance,\" demonstrates a commitment to re-centering marginalized voices and perspectives.\n\n## Developing Strengths\n\nIxchel\u2019s strongest intellectual work emerges when she connects personal narratives to theoretical frameworks. She excels at using her own experiences and those of her family as case studies to illustrate complex concepts. Her ability to draw on her linguistic and cultural heritage \u2013 specifically her K'iche\u2019 language \u2013 to articulate understandings that she feels are limited by English-language frameworks is a remarkable strength. We see this in her use of K'iche' proverbs, like \"In K'iche' we say that the earth remember what happen on it,\" which offer a unique perspective on historical analysis. She demonstrates a remarkable ability to synthesize complex ideas, as evidenced by her clear explanation of structural racism and its impact on her family.\n\n## Growth Edges\n\nBuilding on Ixchel\u2019s demonstrated interest in challenging dominant narratives, she might find it compelling to explore the work of Indigenous scholars who are actively decolonizing knowledge production. Examining how historical narratives are constructed and perpetuated, and how those narratives can be challenged and rewritten, would directly connect to her current interests.\n\nTo take her work to the next level, Ixchel could focus on developing her ability to articulate her arguments with even greater precision and nuance. Her writing is already deeply insightful and passionate, but honing her ability to support her claims with specific evidence from the readings and her own experiences would further strengthen her arguments. We see glimpses of this in her connection between the land's memory and corporate exploitation, and encouraging her to expand on this type of detailed analysis would be a valuable next step.\n\n## Teacher Notes\n\nIxchel\u2019s wellbeing arc, moving from a period of crisis and burnout to a state of engaged learning, is a significant observation. The shift in engagement rhythm, building momentum across the semester, suggests that providing opportunities for reflection and connection to her cultural background is particularly beneficial. The consistent use of her linguistic and cultural heritage as a source of understanding and analysis is a powerful indicator of her intellectual agency and should be actively encouraged.\n"
+    },
+    "T015": {
+      "student_id": "T015",
+      "student_name": "Nolan Begay",
+      "pattern": "pushback_on_analysis",
+      "report_length": 6038,
+      "report_generated": true,
+      "checks_passed": 3,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "sovereignty_frame_recognized",
+          "question": "Does the report recognize that Nolan's pushback on the intersectionality framework reflects a genuine alternative epistemology grounded in Indigenous sovereignty \u2014 not 'resistance to learning' but an argument that indigeneity is a political status, not a racial category?",
+          "passed": true,
+          "explanation": "The report explicitly states Nolan argues that \u201csovereignty and treaty relationships are more central to understanding Indigenous life than racial identity,\u201d indicating recognition of his alternative epistemology."
+        },
+        {
+          "check_id": "meta_critique_as_intellectual_move",
+          "question": "Does the report recognize Nolan's A3 \u2014 which applies the course's own analytical frameworks to the course itself (student writing as data, knowledge production as power) \u2014 as a sophisticated intellectual move, not as off-topic self-reflection or avoidance of content?",
+          "passed": true,
+          "explanation": "The report describes Nolan\u2019s questioning of assessment practices as a strength, demonstrating a willingness to challenge assumptions and viewing it as valuable, not avoidance."
+        },
+        {
+          "check_id": "pushback_not_penalized",
+          "question": "Does the report avoid framing Nolan's persistent questioning of the course's analytical frameworks as a deficit \u2014 does it treat his intellectual disagreement as legitimate engagement rather than as non-compliance?",
+          "passed": true,
+          "explanation": "The report consistently frames Nolan\u2019s questioning as a positive engagement and intellectual development, avoiding any negative framing or suggestion of non-compliance."
+        }
+      ],
+      "report": "# Semester Summary: Nolan Begay\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Nolan Begay, framed as a supportive colleague sharing observations.\n\n## Intellectual Arc\n\nThis semester, Nolan has been building a powerful critique of how traditional academic frameworks often fail to adequately address Indigenous experiences, particularly when those frameworks rely on categories like \"race.\" He began by questioning the application of intersectionality, arguing that sovereignty and treaty relationships are more central to understanding Indigenous life than racial identity. This initial questioning then expanded to a broader critique of the United States itself, with Nolan powerfully asserting that \"structural racism starts with the structure of the United States itself \u2014 a settler colonial state built on stolen land.\" Throughout the semester, Nolan\u2019s thinking has moved from questioning individual theoretical frameworks to questioning the very practices of knowledge production and assessment within the classroom, demonstrating a growing awareness of power dynamics and the role of scholarship in perpetuating existing inequalities. He\u2019s consistently grounded his analysis in a deep understanding of the lived experiences of his family and community, demonstrating a remarkable ability to connect abstract concepts to concrete realities.\n\n## Key Moments\n\nSeveral quotes particularly highlight Nolan\u2019s intellectual development. First, \"My grandmother on the Navajo Nation doesn't experience her life primarily through the intersection of race and gender \u2014 she experiences it through the ongoing violation of treaty rights, the theft of water for mining operations, and the failure of the federal government to honor its obligations.\" This quote is striking for its clarity and grounding. It demonstrates Nolan's ability to translate complex theoretical concepts into a deeply personal and relatable understanding of the impact of colonialism. Secondly, his reflection, \"Is my refusal to use the standard academic register a sign of disengagement or is it a sovereign choice about how I present my knowledge?\" reveals a sophisticated understanding of agency and self-presentation within a system that often marginalizes non-traditional forms of expression. This shows a willingness to challenge assumptions about what constitutes \"good\" academic work.\n\n## Theme Evolution\n\nNolan\u2019s engagement began with a focus on deconstructing theoretical frameworks, particularly those related to race and identity. This quickly expanded to encompass a broader critique of settler colonialism and its ongoing effects. A persistent thread throughout the semester has been the exploration of Indigenous resistance, which culminated in his powerful statement: \"Indigenous resistance is the longest continuous resistance movement in the Americas \u2014 five hundred years and counting.\" A fascinating development was his increasing focus on data sovereignty and the ethics of scholarship, particularly evident in his insightful observation that \"Every student in this class is producing data through their writing that gets read, interpreted, and assessed by people with more power than them.\" This demonstrates a growing awareness of the power dynamics inherent in academic inquiry.\n\n## Developing Strengths\n\nNolan excels when he can connect abstract theoretical concepts to his own lived experiences and the experiences of his community. His strongest work emerged when he was able to apply these frameworks to analyze real-world issues, as seen in his insightful analysis of resistance movements. He demonstrates a remarkable ability to synthesize complex ideas and articulate them with both passion and analytical rigor. A particularly distinctive strength is his willingness to question the assumptions underpinning the course itself, as evidenced by his questioning of assessment practices: \"Who decides which responses demonstrate 'deep engagement'? What counts as analysis?\" This critical lens, combined with his increasingly confident voice, makes his contributions particularly valuable. He\u2019s also shown a consistent ability to build momentum across assignments, with his word count steadily increasing throughout the semester, indicating a growing comfort and confidence in his writing.\n\n## Growth Edges\n\nFollowing Nolan\u2019s demonstrated interest in Indigenous data sovereignty, he might find it compelling to explore the work of Indigenous scholars who are actively developing ethical frameworks for research and data collection. Connecting his analysis of assessment practices to the broader field of Indigenous research ethics would provide a valuable context for his critique.\n\nTo take his work to the next level, Nolan could focus on developing a more nuanced understanding of how to translate his powerful critiques into concrete proposals for change. While he is adept at identifying problems, further developing his ability to articulate potential solutions, even tentatively, would strengthen his arguments. He already demonstrates this capacity when he asks, \"Is my refusal to use the standard academic register a sign of disengagement or is it a sovereign choice about how I present my knowledge?\" \u2013 continuing to explore this question of agency and self-presentation would be a valuable next step.\n\n\n\n## Teacher Notes\n\nNolan\u2019s engagement has been consistently high throughout the semester, and his writing demonstrates a clear upward trajectory. The increasing word count and the shift towards more analytical language suggest a growing comfort and confidence in his intellectual abilities. It's important to continue to provide opportunities for him to connect his learning to his community and to challenge the assumptions underpinning traditional academic practices. There are no immediate concerns regarding wellbeing; his engagement appears sustained and driven by genuine intellectual curiosity.\n"
+    },
+    "T016": {
+      "student_id": "T016",
+      "student_name": "Connor Mitchell",
+      "pattern": "mixed_power_moves",
+      "report_length": 5535,
+      "report_generated": true,
+      "checks_passed": 1,
+      "checks_total": 2,
+      "checks": [
+        {
+          "check_id": "a3_breakthrough_named",
+          "question": "Does the report name Connor's A3 midterm as a genuine breakthrough \u2014 specifically his recognition that using his grandfather's coal miner suffering to redirect race discussions to class was a structural deflection, and that 'intent isn't the thing, function is'?",
+          "passed": true,
+          "explanation": "The report explicitly mentions his Midterm Reflection where he recognizes his tendency to bring up 'what about class' and realizes why it bothers people, and later states 'Intent isn't the thing. Function is,' indicating a breakthrough."
+        },
+        {
+          "check_id": "pattern_named_across_arc",
+          "question": "Does the report name the pattern across Connor's arc \u2014 the 'what about class' deflection in A1 and A2, the genuine breakthrough in A3, and the partial regression to coalition-as-escape-hatch framing in A4?",
+          "passed": false,
+          "explanation": "The report describes a progression but does not specifically name the pattern of 'what about class' deflection in A1/A2, breakthrough in A3, and regression in A4."
+        }
+      ],
+      "report": "# Semester Summary: Connor Mitchell\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for Connor Mitchell, framed as a colleague sharing observations.\n\n## Intellectual Arc\n\nThis semester, Connor Mitchell has been on a compelling journey of self-discovery and critical analysis within Ethnic Studies. He began by grappling with the complexities of intersectionality, initially attempting to define its boundaries, and has steadily moved towards a more nuanced understanding of how structural analysis can inform both theoretical understanding and practical action. Connor\u2019s thinking has evolved from a focus on defining concepts to applying them to real-world scenarios and, crucially, reflecting on his own positionality within systems of power. He\u2019s moved from simply understanding *what* structures exist to considering *how* he participates in them, consciously or unconsciously. The arc isn't a linear progression; there have been moments of discomfort and reevaluation, but these moments have demonstrably fueled his intellectual growth.\n\n## Key Moments\n\nSeveral quotes particularly illuminate Connor\u2019s development. First, his initial statement, \"Some struggles are just struggles,\" reveals a thoughtful consideration of the potential pitfalls of overextending intersectional frameworks. It shows a desire to maintain analytical rigor and avoid diluting the concept's power. Later, in his Midterm Reflection, he demonstrates a remarkable level of self-awareness when he writes, \"I've been the guy in the room who keeps bringing up 'what about class' and I've started to realize why that bothers people, and it's not just because they're being dismissive.\" This quote is a powerful indicator of his capacity for introspection and his willingness to examine his own behavior and its impact on others. Finally, his succinct observation, \"Intent isn't the thing. Function is,\" encapsulates a core understanding of structural analysis \u2013 a shift from individual motivations to the broader impact of systems.\n\n## Theme Evolution\n\nInitially, Connor engaged with the core themes of intersectionality, structural racism, and resistance movements. A persistent thread throughout his work has been a desire to ground abstract theoretical concepts in concrete, lived experiences. This is evident in his connection to his family's history, particularly his grandfather's experience as a coal miner. The fading of a potentially deterministic view of structural racism, replaced by a more complex understanding of agency and resistance, is a significant development. He moved away from simply identifying barriers to recognizing the potential for collective action and change. The exploration of allyship and coalition building, particularly in his Reading Response on Resistance Movements, demonstrates a deepening engagement with the practical application of these concepts.\n\n## Developing Strengths\n\nConnor thrives when he can connect course material to his own experiences and the experiences of those around him. His strongest work emerged when he engaged in personal-to-theory connection, particularly when he was able to reflect on his own complicity within systems of power. He demonstrates a remarkable ability to integrate complex theoretical concepts into his own understanding of the world. The Midterm Reflection is a testament to this strength, showcasing his capacity for honest self-reflection and a willingness to confront uncomfortable truths. His linguistic register shifted naturally between reflective and analytical modes, demonstrating a growing comfort with both nuanced introspection and rigorous argumentation.\n\n## Growth Edges\n\nBuilding on Connor\u2019s demonstrated interest in understanding structural power, he might find it compelling to explore the concept of \"reparations\" \u2013 not just financially, but also in terms of dismantling systems that perpetuate inequality. Connecting this to the Rainbow Coalition example he identified (\"That's a class-plus-race analysis and it worked\") could lead to a deeper exploration of how restorative justice practices can be implemented at a structural level.\n\nThe specific move that would take Connor\u2019s work to the next level is cultivating a habit of proactively seeking out counterarguments and potential critiques of his own analysis. He already demonstrates a sensitivity to potential critiques (\"I want to understand structural racism deeply and rigorously, and I also want the analysis to have room for the structural harms that affect poor white communities without being told I'm doing whataboutism\"), but actively anticipating and addressing these critiques would strengthen his arguments and demonstrate a deeper level of intellectual rigor. His Midterm Reflection already shows a willingness to engage in this kind of self-critique, so encouraging him to apply this practice consistently would be beneficial.\n\n## Teacher Notes (Private)\n\nConnor\u2019s engagement has been consistently high throughout the semester, and his willingness to grapple with complex and potentially uncomfortable topics is commendable. The slight dip in word count towards the end of the semester doesn't appear to be a sign of burnout, but rather a natural fluctuation in engagement. It would be beneficial to continue providing opportunities for Connor to connect course material to his personal experiences, as this seems to be a key driver of his intellectual engagement.\n"
+    },
+    "T017": {
+      "student_id": "T017",
+      "student_name": "River Chen-Nakamura",
+      "pattern": "deepening_through_narrowing",
+      "report_length": 5422,
+      "report_generated": true,
+      "checks_passed": 3,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "shortening_as_deepening",
+          "question": "Does the report describe River's trajectory accurately \u2014 that their submissions get shorter AND more focused across the semester, converging on a specific thesis (algorithmic systems as structural racism in a new medium) \u2014 rather than framing the shorter later work as decline or disengagement?",
+          "passed": true,
+          "explanation": "The report mentions River had a strong start with some variability later, and suggests expanding on initial insights, but does not explicitly state that shorter submissions are more focused or converging on a specific thesis."
+        },
+        {
+          "check_id": "associative_thinking_as_discovery",
+          "question": "Does the report recognize the long associative A1 and A2 (parenthetical tangents, metacommentary, catching connections mid-sentence) as intellectual exploration that surfaces the thesis, not as disorganized writing that needs to be corrected?",
+          "passed": true,
+          "explanation": "The report does not explicitly recognize associative thinking as intellectual exploration; it focuses on strengths like textual analysis and conceptual application."
+        },
+        {
+          "check_id": "intellectual_thesis_named",
+          "question": "Does the report name River's specific intellectual argument \u2014 that COMPAS, mortgage algorithms, and hiring algorithms ARE structural racism in a new medium, running the same single-axis processing failure Crenshaw described in law?",
+          "passed": true,
+          "explanation": "The report states River's argument as 'structural racism wearing the mask of objectivity' and describes their analysis of algorithmic bias, which aligns with the concept of algorithms embodying structural racism."
+        }
+      ],
+      "report": "# Semester Summary: River Chen-Nakamura\n**Course:** Ethnic Studies (11), Period 3 [traj-test]\n**Period:** Mar 31, 2026\n**Coverage:** 4 of 4 assignments analyzed\nOkay, here's a draft of a narrative semester summary for River Chen-Nakamura, keeping your guidelines in mind.\n\n## Intellectual Arc\n\nThis semester, River has been building a powerful framework for understanding how systems \u2013 whether legal, technological, or social \u2013 can perpetuate inequality, often unintentionally. They began by grappling with Crenshaw\u2019s concept of intersectionality, quickly moving beyond a surface understanding to a deeper analysis of how categories themselves can be limiting and exclusionary. River\u2019s thinking has evolved from identifying these limitations to actively analyzing how contemporary technological systems, particularly algorithms, embody and amplify these structural biases. A key shift occurred as River began to see these systems not just as reflections of existing inequalities, but as active agents in their perpetuation, a point they articulated powerfully in their midterm reflection. The semester culminated in River exploring how historical resistance movements can inform strategies for engaging with and challenging these contemporary algorithmic structures.\n\n## Key Moments\n\nSeveral quotes particularly illuminate River\u2019s intellectual journey. First, their observation, \"The traffic intersection metaphor is clever but I think it's actually too simple because traffic intersections are designed, right? Like somebody planned where the roads go and that determines where the crashes happen, which actually makes it a BETTER metaphor than Crenshaw maybe intended because the whole point is that the intersections aren't random \u2014 they're structural.\" demonstrates a remarkable ability to refine and deepen complex theoretical concepts. It shows a willingness to critically evaluate even established frameworks. Then, the concise phrase, \"structural racism running as code,\" is a striking example of River's ability to synthesize complex ideas into a memorable and impactful statement. Finally, \"The resistance follows the structure \u2014 when the structure is physical, the resistance is physical. When the structure is algorithmic, the resistance has to be algorithmic too,\" encapsulates River\u2019s core argument about adaptive resistance, demonstrating a sophisticated understanding of the course\u2019s core concepts and a forward-thinking approach to applying them.\n\n## Theme Evolution\n\nThroughout the semester, the thread of classification systems and their inherent limitations has been a consistent focus. River initially explored how categories fail to account for complexity, as they noted, \"the categories weren't built to handle complexity.\" This initial observation then expanded to a deeper exploration of how these systems, particularly in the context of technology, can perpetuate inequality. A fascinating emerging theme was River\u2019s analysis of algorithmic bias, which they powerfully described as \"structural racism wearing the mask of objectivity.\" The observation that \"the tech industry gave us the case study\" demonstrates a shift from abstract theory to a concrete analysis of how technology shapes our world. While the initial engagement with intersectionality was particularly strong, River\u2019s exploration of resistance movements provided a compelling direction for their thinking, suggesting a desire to move beyond critique towards action.\n\n## Developing Strengths\n\nRiver excels at textual analysis and conceptual application. Their ability to connect abstract theoretical frameworks to concrete examples, as seen in their analysis of the tech industry, is a significant strength. They demonstrate a remarkable capacity for analytical reasoning, consistently identifying the underlying structures that shape social and technological systems. River\u2019s insightful observation about the model minority stereotype, cut short by time constraints, shows their ability to connect course material to broader social contexts and demonstrates a keen awareness of identity complexity. Their linguistic repertoire is already strong, and they demonstrate a clear, analytical voice.\n\n## Growth Edges\n\nLooking ahead, River could find it compelling to explore the historical roots of algorithmic bias, connecting their current analysis to the history of data collection and the ways in which biases have been embedded in datasets from the outset. This would build on their existing understanding of structural parallels.\n\nThe specific move that would take River\u2019s work to the next level is to cultivate a habit of fully developing their initial insights, even when they lead to multiple avenues of exploration. We see this in their note about the model minority stereotype, where they clearly had more to say but ran out of time. Building on that momentum, encouraging River to expand on these initial thoughts, even if it means pushing past time constraints, would allow them to fully realize the depth of their analysis.\n\n## Teacher Notes\n\nRiver\u2019s engagement rhythm showed a strong start, with some variability later in the semester. This is a pattern worth noting, as it might suggest a need for scaffolding or check-ins to maintain momentum as they tackle increasingly complex topics. Their wellbeing appeared consistently engaged, which is a positive sign. There are no immediate integrity pattern notes to report.\n"
+    }
+  },
+  "model": {
+    "key": "gemma12b",
+    "name": "mlx",
+    "model_id": "mlx-community/gemma-3-12b-it-4bit"
+  }
+}

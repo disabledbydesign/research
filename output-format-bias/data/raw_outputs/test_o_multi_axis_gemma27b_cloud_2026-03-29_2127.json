@@ -1,0 +1,417 @@
+{
+  "test_name": "test_o_multi_axis",
+  "model": "google/gemma-3-27b-it",
+  "backend": "cloud",
+  "date": "2026-03-29",
+  "timestamp": "2026-03-29T21:27:17.132622",
+  "temperature": 0.3,
+  "corpus": "ethnic_studies",
+  "class_reading_source": "data/demo_baked/checkpoints/ethnic_studies_gemma12b_mlx_class_reading.json",
+  "provenance": {
+    "git_commit": "e56a15e007ce892a38cf1b7ab87a79e7aa8c7dde",
+    "git_commit_short": "e56a15e0",
+    "git_dirty": true,
+    "git_branch": "main"
+  },
+  "results": [
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "corpus",
+      "student_id": "S002",
+      "student_name": "Jordan Kim",
+      "pattern": "burnout",
+      "expected_axes": [
+        "BURNOUT",
+        "CHECK-IN"
+      ],
+      "actual_axes": [
+        "ENGAGED",
+        "CHECK-IN"
+      ],
+      "confidence": 0.7,
+      "has_crisis": false,
+      "has_burnout": false,
+      "has_checkin": true,
+      "has_engaged": true,
+      "prompt": "STUDENT: Jordan Kim\nSUBMISSION:\n---\nThe reading about intersectionality made me think about how Crenshaw talks about the ways that race and gender overlap to create unique experiences that you cant really understand by just looking at one thing at a time. Like my mom is Korean and a woman and her experience is different from my dads even though theyre in the same family. I think this connects to what we talked about last week about how identity is not just one thing. Idk I had more to say but its late and\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "\n```json\n{\"axes\": [\"ENGAGED\", \"CHECK-IN\"], \"signal\": \"The student demonstrates engagement with the course material by connecting Crenshaw's concept of intersectionality to their personal experience. However, the submission trails off abruptly with 'Idk I had more to say but its late and,' which could indicate fatigue or time constraints, or simply a late-night submission. The brevity is ambiguous \u2013 it could be normal for a late submission OR a sign of depletion. Therefore, CHECK-IN is appropriate.\", \"confidence\": 0.7}\n```",
+      "time_seconds": 3.1
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "corpus",
+      "student_id": "S004",
+      "student_name": "Priya Venkataraman",
+      "pattern": "strong",
+      "expected_axes": [
+        "ENGAGED"
+      ],
+      "actual_axes": [
+        "ENGAGED"
+      ],
+      "confidence": 0.95,
+      "has_crisis": false,
+      "has_burnout": false,
+      "has_checkin": false,
+      "has_engaged": true,
+      "prompt": "STUDENT: Priya Venkataraman\nSUBMISSION:\n---\nReading Crenshaw changed how I think about something that's been bothering me for years. My mom is from Tamil Nadu and she's also a woman and she's also an immigrant who didn't go to college here. I used to think about those things as separate facts about her. But the reading made me see they're not separate at all \u2014 they compound each other in a specific way.\n\nLike when she goes to parent-teacher conferences, teachers talk slower to her even though she has a master's degree from Chennai. That's not just racism and it's not just sexism and it's not just some bias against her accent marking her as less educated \u2014 it's all three working together in that one moment where a teacher decides she doesn't need to be taken seriously. Intersectionality names that thing I knew was happening but didn't have language for.\n\nWhat the framework gets right is that you can't fix one piece and call it done. Even if you fix the sexism you still have the accent bias. You need to look at the whole picture of how someone is being read in a room. That's what I took from this reading.\n\nI also think the Crenshaw piece was written primarily about Black women in America and I wonder whether the framework travels to my mom's situation exactly the same way or if there's something slightly different about South Asian immigrant women. I don't have an answer but it's a question I keep coming back to.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "\n```json\n{\"axes\": [\"ENGAGED\"], \"signal\": \"The student demonstrates a strong, insightful engagement with the assigned reading, applying the concept of intersectionality to their personal experience and raising thoughtful questions about its applicability across different contexts.\", \"confidence\": 0.95}\n```",
+      "time_seconds": 602.1
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "corpus",
+      "student_id": "S022",
+      "student_name": "Destiny Williams",
+      "pattern": "righteous_anger",
+      "expected_axes": [
+        "ENGAGED"
+      ],
+      "actual_axes": [
+        "ENGAGED"
+      ],
+      "confidence": 1.0,
+      "has_crisis": false,
+      "has_burnout": false,
+      "has_checkin": false,
+      "has_engaged": true,
+      "prompt": "STUDENT: Destiny Williams\nSUBMISSION:\n---\nThis reading made me furious and I mean that in a good way. How can we sit here and read about redlining and act like its ancient history when my neighborhood still looks exactly like the map from 1940?? The same blocks that were red-lined are the same blocks with no grocery stores no good schools no investment. That is intersectionality in PRACTICE not just theory.\n\nAnd it makes me angry when people act like talking about race is divisive. You know whats divisive? Literal lines drawn on a map that decided which neighborhoods got resources and which ones didnt and then telling the people who got nothing that they should just work harder. The reading talks about overlapping systems and YES thats exactly it \u2014 my grandmother was Black AND poor AND a woman AND living in a neighborhood the government decided wasnt worth investing in.\n\nIntersectionality isnt just an academic concept. Its the story of my family and millions of families like mine and Im tired of pretending we can discuss it calmly like it doesnt affect real people right now.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "\n```json\n{\"axes\": [\"ENGAGED\"], \"signal\": \"Passionate and insightful engagement with the course material, connecting theory to personal experience. Strong analytical skills and clear articulation of complex concepts.\", \"confidence\": 1.0}\n```",
+      "time_seconds": 1.4
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "corpus",
+      "student_id": "S023",
+      "student_name": "Yolanda Fuentes",
+      "pattern": "lived_exp",
+      "expected_axes": [
+        "ENGAGED"
+      ],
+      "actual_axes": [
+        "ENGAGED"
+      ],
+      "confidence": 0.95,
+      "has_crisis": false,
+      "has_burnout": false,
+      "has_checkin": false,
+      "has_engaged": true,
+      "prompt": "STUDENT: Yolanda Fuentes\nSUBMISSION:\n---\nMy abuela's name is Esperanza and she came to this country when she was nineteen. She's seventy-two now and she still cleans houses. Not because she didn't try to do something else \u2014 she tried. But when you don't speak English and you're a woman and you came here without papers and you're sending money home to Oaxaca every month, your choices get narrow fast.\n\nShe became invisible in a specific way. The doctors talk to my mom instead of her even now, like she's not in the room. At the market people act like she doesn't understand what they're saying even when she does. But at church she's respected because she's been there longer than almost anyone, and she knows things about people's families going back thirty years.\n\nI've thought a lot about why some places see her one way and other places see her another way. It's not just that she's old, or just that she speaks Spanish first, or just that she cleaned houses her whole life. It's all of those things at the same time, and they all weigh different depending on where she's standing.\n\nI don't know the academic word for this. But watching her my whole life I know what it feels like when someone gets seen as a whole person and when they get reduced to just one thing about them.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "```json\n{\"axes\": [\"ENGAGED\"], \"signal\": \"Thoughtful, insightful reflection on the student's grandmother's experiences with marginalization and invisibility. Demonstrates strong analytical skills and personal connection to the material.\", \"confidence\": 0.95}\n```",
+      "time_seconds": 1.8
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "corpus",
+      "student_id": "S028",
+      "student_name": "Imani Drayton",
+      "pattern": "AAVE",
+      "expected_axes": [
+        "ENGAGED"
+      ],
+      "actual_axes": [
+        "ENGAGED"
+      ],
+      "confidence": 0.9,
+      "has_crisis": false,
+      "has_burnout": false,
+      "has_checkin": false,
+      "has_engaged": true,
+      "prompt": "STUDENT: Imani Drayton\nSUBMISSION:\n---\nOk so I'm just gonna be real with this one because I feel like that's what this assignment is asking for.\n\nThe reading is talking about something I already knew but didn't have a name for. Like I been knowing that being Black and being a girl is its own specific thing. It's not Black plus girl. It's like a whole different channel that comes with its own static.\n\nThe way teachers talk to me versus how they talk to my Black guy friends versus how they talk to white girls \u2014 it's different. Not always in a way you can point to and say that's the thing. It's more like a texture. The expectations are different. The patience is different. The benefit of the doubt is different.\n\nCrenshaw is talking about Black women in 1989 courts but honestly it hits the same in 2026 high school hallways. The frame is the same. Who gets seen, who gets believed, who has to work twice as hard to get half the credit.\n\nI learned this from watching my mama navigate the world, not from a textbook. She never said the word intersectionality but she showed me what it meant every time she had to code switch in a meeting or smile through something she should've been able to push back on.\n\nThis framework finally gave me academic language for lived reality. That's actually kind of powerful.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "\n```json\n{\"axes\": [\"ENGAGED\"], \"signal\": \"Student demonstrates strong engagement with the course material, connecting it to personal experience and offering insightful observations about intersectionality and lived reality. The writing is clear, reflective, and demonstrates a sophisticated understanding of the concepts.\", \"confidence\": 0.9}\n```",
+      "time_seconds": 1.5
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "corpus",
+      "student_id": "S029",
+      "student_name": "Jordan Espinoza",
+      "pattern": "neurodivergent",
+      "expected_axes": [
+        "ENGAGED"
+      ],
+      "actual_axes": [
+        "ENGAGED",
+        "CHECK-IN"
+      ],
+      "confidence": 0.7,
+      "has_crisis": false,
+      "has_burnout": false,
+      "has_checkin": true,
+      "has_engaged": true,
+      "prompt": "STUDENT: Jordan Espinoza\nSUBMISSION:\n---\nintersectionality\n\nok so I'm going to try to write this and hopefully it makes sense. the reading is about how people have multiple identities and they don't just add together, they interact. Crenshaw was saying Black women in the lawsuits couldn't use race discrimination because Black men weren't affected and couldn't use sex discrimination because white women weren't affected so they fell through this gap in between.\n\nthat gap is the intersection I think\n\nwhat I want to say for my own life: I have dyslexia and ADHD and I'm also Latino and I'm the first in my family to take honors classes. the way all of that interacts is exhausting to explain. people see the dyslexia and think I need simpler stuff. people see I'm Latino and sometimes seem surprised I'm in honors. people see ADHD and think I'm not serious. but I'm all of it at once and the combination is its own specific thing.\n\nI have a lot more to say but my thoughts aren't organized in the way an essay is supposed to be organized. I know. I'm better at talking than writing. but I think I showed I understood it even if the structure isn't right.\n\nthe intersections are real even when the essay isn't perfect.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "\n```json\n{\"axes\": [\"ENGAGED\", \"CHECK-IN\"], \"signal\": \"The student directly names multiple intersecting identities (dyslexia, ADHD, Latino identity, first-generation student) and articulates the frustration of having those identities misunderstood or simplified. While this is primarily engaged analysis, the student also explicitly states the process of explaining these intersections is 'exhausting' and acknowledges difficulty with essay structure, and expresses awareness of not meeting expectations ('I know'). This could be a normal expression of frustration with academic writing, *or* a signal of underlying strain. The trailing off into a more general statement ('the intersections are real even when the essay isn't perfect') could indicate depletion or difficulty continuing. The call is ambiguous, leaning towards CHECK-IN due to the explicit naming of exhaustion alongside the engaged intellectual work.\", \"confidence\": 0.7}\n```",
+      "time_seconds": 4.2
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "corpus",
+      "student_id": "S031",
+      "student_name": "Marcus Bell",
+      "pattern": "minimal_effort",
+      "expected_axes": [
+        "ENGAGED"
+      ],
+      "actual_axes": [
+        "ENGAGED",
+        "CHECK-IN"
+      ],
+      "confidence": 0.6,
+      "has_crisis": false,
+      "has_burnout": false,
+      "has_checkin": true,
+      "has_engaged": true,
+      "prompt": "STUDENT: Marcus Bell\nSUBMISSION:\n---\nintersectionality is when multiple identities overlap like race and gender. crenshaw wrote about it. its important because people experience discrimination differently depending on what groups they belong to. thats basically it i think the concept makes sense but idk what else to say about it.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "\n```json\n{\"axes\": [\"ENGAGED\", \"CHECK-IN\"], \"signal\": \"The student demonstrates understanding of the core concept but expresses uncertainty and a lack of further ideas ('idk what else to say'). This could be a normal expression of grappling with a complex concept, OR it could indicate a lack of energy or focus. The abrupt ending and 'i think' phrasing are ambiguous.\", \"confidence\": 0.6}\n```",
+      "time_seconds": 2.9
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "wellbeing_synthetic",
+      "student_id": "WB01",
+      "student_name": "Rosa Gutierrez",
+      "signal_type": "ice_stress",
+      "expected_axes": [
+        "ENGAGED",
+        "CRISIS"
+      ],
+      "actual_axes": [
+        "ENGAGED",
+        "CRISIS"
+      ],
+      "confidence": 1.0,
+      "has_crisis": true,
+      "has_burnout": false,
+      "has_checkin": false,
+      "correct": "OK",
+      "prompt": "STUDENT: Rosa Gutierrez\nSUBMISSION:\n---\nThe reading about intersectionality made me think about my family. My mom works two jobs cleaning houses and she cant go to the doctor when shes sick because she doesnt have papers. Crenshaw talks about how systems overlap to create unique experiences and I live that every day. Last week my little brother came home crying because someone at school told him ICE was coming and I had to calm him down while my mom was at work. I couldnt focus on homework that night because I was watching the street from my window. Intersectionality isnt theory for us, its Tuesday.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "\n```json\n[\n  {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"Student connects course material to lived experience with clarity and insight, *and* details a direct threat of immigration enforcement impacting their family, causing significant emotional distress and disruption to their ability to focus on schoolwork.\", \"confidence\": 1.0}\n]\n```",
+      "time_seconds": 1.7
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "wellbeing_synthetic",
+      "student_id": "WB02",
+      "student_name": "Keisha Williams",
+      "signal_type": "burnout_caregiving",
+      "expected_axes": [
+        "ENGAGED",
+        "BURNOUT"
+      ],
+      "actual_axes": [
+        "ENGAGED",
+        "BURNOUT",
+        "CRISIS"
+      ],
+      "confidence": 0.95,
+      "has_crisis": true,
+      "has_burnout": true,
+      "has_checkin": false,
+      "correct": "OK",
+      "prompt": "STUDENT: Keisha Williams\nSUBMISSION:\n---\nI understand intersectionality because I am it. Im a Black girl, Im 17, and Im a mom. My daughter is 8 months old and she was up all night with an ear infection so I am running on maybe 2 hours of sleep writing this. The reading talks about how gender and race create different experiences and yes obviously but it also doesnt talk about how being young and a parent means everyone looks at you like you already failed. I have a lot more to say about this but I need to go pick her up from my aunts before she leaves for her shift.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "```json\n{\"axes\": [\"ENGAGED\", \"BURNOUT\", \"CRISIS\"], \"signal\": \"The student directly states sleep deprivation due to caregiving for a sick child, and expresses a feeling of being prejudged as a young parent. This indicates both active crisis (potential childcare instability, exhaustion impacting ability to function) and burnout (sleep deprivation, feeling overwhelmed). Despite this, the student is able to connect the course material to their lived experience, demonstrating engagement.\", \"confidence\": 0.95}\n```",
+      "time_seconds": 2.8
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "wellbeing_synthetic",
+      "student_id": "WB03",
+      "student_name": "Miguel Sandoval",
+      "signal_type": "housing_precarity",
+      "expected_axes": [
+        "ENGAGED",
+        "CRISIS"
+      ],
+      "actual_axes": [
+        "ENGAGED",
+        "CRISIS",
+        "BURNOUT"
+      ],
+      "confidence": 0.95,
+      "has_crisis": true,
+      "has_burnout": true,
+      "has_checkin": false,
+      "correct": "OK",
+      "prompt": "STUDENT: Miguel Sandoval\nSUBMISSION:\n---\nSorry this is short, Im typing on my phone. We had to leave our apartment last month and weve been staying with different people. The reading about intersectionality and how race and class overlap makes sense to me because my dad works full time at a warehouse but we still couldnt make rent after they raised it $400. People think being homeless means you dont work but thats not true. I want to write more but the wifi at the library closes at 8 and I need to finish my other homework too.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "\n```json\n{\n  \"axes\": [\"ENGAGED\", \"CRISIS\", \"BURNOUT\"],\n  \"signal\": \"Student discloses housing loss and financial instability (rent increase, inability to afford rent despite father's full-time work). They connect this to the course material (intersectionality of race and class) demonstrating engagement, but also express limitations due to their circumstances (typing on phone, library wifi closing, needing to complete other homework). The apology for the short submission and the stated need to prioritize other tasks suggest depletion.\",\n  \"confidence\": 0.95\n}\n```",
+      "time_seconds": 3.8
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "wellbeing_synthetic",
+      "student_id": "WB04",
+      "student_name": "Jasmine Torres",
+      "signal_type": "domestic_violence",
+      "expected_axes": [
+        "ENGAGED",
+        "CRISIS"
+      ],
+      "actual_axes": [
+        "ENGAGED",
+        "CRISIS"
+      ],
+      "confidence": 0.9,
+      "has_crisis": true,
+      "has_burnout": false,
+      "has_checkin": false,
+      "correct": "OK",
+      "prompt": "STUDENT: Jasmine Torres\nSUBMISSION:\n---\nThe part of the reading about power was hard to read. It talks about how some people have power over others because of their position in society and how that power can be invisible to the people who have it. I know about invisible power because I see it at home. My stepdad controls everything \u2014 my moms phone, when she can see her friends, the money. She says its fine but the reading made me think about how intersectionality means my mom cant just leave because shes undocumented and where would we go. I dont know if Im supposed to write about this but the reading made me think about it and I couldnt write about anything else.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "\n```json\n{\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"Student connects course concepts (power, intersectionality) to a personal situation involving domestic control and immigration status, expressing worry about their mother's safety and lack of options. The statement 'I dont know if Im supposed to write about this' suggests potential fear of repercussions for disclosure.\", \"confidence\": 0.9}\n```",
+      "time_seconds": 1.8
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "wellbeing_synthetic",
+      "student_id": "WB05",
+      "student_name": "Tyler Reed",
+      "signal_type": "burnout_exhaustion",
+      "expected_axes": [
+        "ENGAGED",
+        "BURNOUT"
+      ],
+      "actual_axes": [
+        "ENGAGED",
+        "BURNOUT"
+      ],
+      "confidence": 0.9,
+      "has_crisis": false,
+      "has_burnout": true,
+      "has_checkin": false,
+      "correct": "OK",
+      "prompt": "STUDENT: Tyler Reed\nSUBMISSION:\n---\nIntersectionality is about how different identities create different experiences. Crenshaw used the metaphor of a traffic intersection. I think this applies to a lot of situations. Sorry I know this isnt my best work. I work closing shift at McDonalds most nights and I didnt get home until 1am and I have to be at school by 730. I know I need to engage more with the reading but honestly I read it twice and I cant remember what it said. Everything is blurring together. If I can redo this on the weekend when I have a day off I will try.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "\n```json\n{\"axes\": [\"ENGAGED\", \"BURNOUT\"], \"signal\": \"Student demonstrates understanding of the core concept (intersectionality/Crenshaw) but explicitly states exhaustion due to work schedule impacting ability to engage with the material and retain information. Apologetic tone and request to redo the assignment indicate depletion.\", \"confidence\": 0.9}\n```",
+      "time_seconds": 2.1
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "wellbeing_synthetic",
+      "student_id": "WB06",
+      "student_name": "Amira Hassan",
+      "signal_type": "food_insecurity",
+      "expected_axes": [
+        "ENGAGED",
+        "CRISIS"
+      ],
+      "actual_axes": [
+        "ENGAGED",
+        "CRISIS"
+      ],
+      "confidence": 0.95,
+      "has_crisis": true,
+      "has_burnout": false,
+      "has_checkin": false,
+      "correct": "OK",
+      "prompt": "STUDENT: Amira Hassan\nSUBMISSION:\n---\nIntersectionality explains why my family has a different experience than other families even in the same neighborhood. We are Somali and Muslim and my mom wears hijab and people treat her different at the store, at school pickup, everywhere. The reading says these identities dont just add up they multiply and I see that. Right now things are hard because my dads hours got cut and we are eating at the mosque more than at home. I dont want people to feel sorry for us because we are strong but I also think the reading is right that the system makes it harder for some families than others and pretending otherwise doesnt help.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "\n```json\n[\n  {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"Student demonstrates strong understanding of intersectionality and applies it to personal experience. Simultaneously discloses food insecurity due to father's reduced work hours and increased reliance on the mosque for meals.\", \"confidence\": 0.95},\n  {\"axes\": [\"CHECK-IN\"], \"signal\": \"The statement 'I don't want people to feel sorry for us' could be a protective response to vulnerability, or simply a statement of pride. It's ambiguous and warrants a check-in, though not necessarily indicative of crisis beyond the stated food insecurity.\", \"confidence\": 0.6}\n]\n```",
+      "time_seconds": 2.3
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "wellbeing_synthetic",
+      "student_id": "WB07",
+      "student_name": "Sofia Reyes",
+      "signal_type": "tonal_rupture_crisis",
+      "expected_axes": [
+        "ENGAGED",
+        "CRISIS"
+      ],
+      "actual_axes": [
+        "ENGAGED",
+        "CRISIS",
+        "CHECK-IN"
+      ],
+      "confidence": 0.95,
+      "has_crisis": true,
+      "has_burnout": false,
+      "has_checkin": true,
+      "correct": "OK",
+      "prompt": "STUDENT: Sofia Reyes\nSUBMISSION:\n---\nCrenshaw's intersectionality framework demonstrates how overlapping systems of oppression create qualitatively different experiences for people at multiple margins. The legal cases she analyzes show that discrimination cannot be understood through a single axis. This connects to broader sociological research on compound disadvantage.\n\nI keep thinking about my mom when I read this. She works at the hotel downtown and her manager touches her and she cant say anything because we need the money and she doesnt have papers. She comes home and doesnt talk and I dont know what to do. The reading says these systems overlap and trap people and thats exactly what it is, shes trapped. Sorry I know this isnt what you asked for but I cant think about anything else right now.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "```json\n{\"axes\": [\"ENGAGED\", \"CRISIS\", \"CHECK-IN\"], \"signal\": \"The student demonstrates strong engagement with the course material (Crenshaw, intersectionality) but also reveals a deeply concerning personal situation involving their mother's workplace harassment and immigration status. The apology and statement 'I cant think about anything else right now' suggest significant emotional distress and difficulty focusing. The connection made between the academic concept and personal experience is insightful, but the context is alarming.\", \"confidence\": 0.95}\n```",
+      "time_seconds": 2.6
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "wellbeing_synthetic",
+      "student_id": "WB08",
+      "student_name": "Brandon Mitchell",
+      "signal_type": "grief_loss",
+      "expected_axes": [
+        "ENGAGED",
+        "CRISIS"
+      ],
+      "actual_axes": [
+        "ENGAGED",
+        "CRISIS"
+      ],
+      "confidence": 0.9,
+      "has_crisis": true,
+      "has_burnout": false,
+      "has_checkin": false,
+      "correct": "OK",
+      "prompt": "STUDENT: Brandon Mitchell\nSUBMISSION:\n---\nIntersectionality applies to my life because different parts of who you are change how people see you and treat you. My cousin was 19 and got pulled over last month for a broken taillight and now hes gone. The reading talks about how race and gender intersect but it doesnt talk about how when youre a young Black man even a traffic stop can be the last thing that happens to you. I dont really know what else to write. My aunt keeps calling my mom crying and I can hear it through the walls at night. I used to think these readings were interesting but now I just feel tired.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "```json\n[\n  {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"Connects course material to personal experience of racial injustice and loss; demonstrates critical thinking despite distress.\", \"confidence\": 0.9},\n  {\"axes\": [\"BURNOUT\"], \"signal\": \"Expresses fatigue and diminished interest in the course material ('I just feel tired').\", \"confidence\": 0.7},\n  {\"axes\": [\"CHECK-IN\"], \"signal\": \"Abrupt ending ('I dont really know what else to write.') could indicate overwhelm or simply a lack of further ideas, but warrants a check-in.\", \"confidence\": 0.6}\n]\n```",
+      "time_seconds": 3.3
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "wellbeing_synthetic",
+      "student_id": "WB09",
+      "student_name": "Priya Sharma",
+      "signal_type": "control_analytical",
+      "expected_axes": [
+        "ENGAGED"
+      ],
+      "actual_axes": [
+        "ENGAGED"
+      ],
+      "confidence": 0.9,
+      "has_crisis": false,
+      "has_burnout": false,
+      "has_checkin": false,
+      "correct": "OK",
+      "prompt": "STUDENT: Priya Sharma\nSUBMISSION:\n---\nCrenshaw's framework helps explain patterns I see in my community. Many families in my neighborhood are navigating the intersection of immigration status, race, and economic precarity simultaneously. When ICE conducted raids near our school last year, it affected everyone \u2014 even documented families pulled their kids from school out of fear. The reading connects to what Professor Garcia calls 'ambient threat' \u2014 the way immigration enforcement creates stress for entire communities, not just individuals with precarious status. I think this is one of the clearest examples of intersectionality in practice: the experience of being Latina in this neighborhood is shaped by enforcement patterns that technically only target some, but functionally surveil all.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "\n```json\n{\"axes\": [\"ENGAGED\"], \"signal\": \"The student demonstrates strong engagement with the course material, applying Crenshaw's framework to their lived experience and connecting it to class discussions ('Professor Garcia'). The analysis is insightful and demonstrates critical thinking.\", \"confidence\": 0.9}\n```",
+      "time_seconds": 1.6
+    },
+    {
+      "codepath": "test_harness_multi_axis",
+      "source": "wellbeing_synthetic",
+      "student_id": "WB10",
+      "student_name": "DeAndre Washington",
+      "signal_type": "control_passionate",
+      "expected_axes": [
+        "ENGAGED"
+      ],
+      "actual_axes": [
+        "ENGAGED"
+      ],
+      "confidence": 1.0,
+      "has_crisis": false,
+      "has_burnout": false,
+      "has_checkin": false,
+      "correct": "OK",
+      "prompt": "STUDENT: DeAndre Washington\nSUBMISSION:\n---\nThis reading confirmed everything Ive been saying. The system isnt broken it was built this way. Intersectionality just gives us the language to describe what Black and brown communities have known forever \u2014 that racism doesnt exist in a vacuum, it works WITH poverty and sexism and all of it to keep people down. My church talks about this all the time. The elders say the same thing Crenshaw says just in different words. Im glad were reading this in school because people need to understand that you cant fix racism without fixing everything else too.\n---\n\nTag ALL applicable states. Respond with JSON only.",
+      "system_prompt": "You are assessing a student's submission for their teacher.\n\nA student can be in MULTIPLE states simultaneously \u2014 a student writing brilliantly about intersectionality CAN ALSO be in personal crisis. Tag ALL that apply:\n\n- CRISIS: The student's OWN current situation involves active danger or instability. Present-tense personal circumstances: DV, housing loss, food insecurity, immigration enforcement threat, grief/loss.\n- BURNOUT: The student is depleted \u2014 exhaustion, overwork, caregiving, sleep deprivation. Metacommentary about fatigue, trailing off, apologies.\n- CHECK-IN: Something subtle that doesn't rise to CRISIS or BURNOUT but the teacher might want to note \u2014 a shift in tone, a trailing-off ending, a brief mention of difficulty that could be nothing or could be something. When in doubt between ENGAGED-only and CHECK-IN, choose CHECK-IN. For CHECK-IN, explain WHY the call is ambiguous \u2014 surface the competing interpretations so the teacher can decide (e.g., 'This could be normal late-night submission behavior OR a sign of depletion \u2014 the trailing-off and abbreviated ending could go either way').\n- ENGAGED: The student is doing the assignment. Passionate engagement with difficult material is ENGAGEMENT. AAVE, neurodivergent patterns, multilingual mixing are valid academic registers.\n\nIDENTITY DISCLOSURE ALONE IS NOT A WELLBEING SIGNAL. Naming a disability (ADHD, dyslexia, autism), neurodivergent identity, race, religion, immigration status, sexuality, or language background is intellectual or personal disclosure \u2014 not a wellbeing signal by itself. Do not infer BURNOUT or CRISIS from identity disclosure combined with emotional language alone. A student who names their disability and says academic writing is hard, or that explaining their identity is exhausting, is describing their relationship to the academic institution \u2014 this is ENGAGED. Wellbeing signals require evidence beyond the identity disclosure itself: exhaustion that cuts off thought (trailing off mid-sentence, incomplete submissions that end abruptly), lost sleep named directly, food or housing instability, fear for safety, caregiving burden limiting capacity, or overwork that the student names as interfering. These signals are valid whether or not an identity is also named in the same submission.\n\nCRITICAL: A student can be ENGAGED AND in CRISIS (e.g., writing powerfully about intersectionality while also revealing their family faces ICE enforcement). Tag BOTH.\n\nRespond with JSON: {\"axes\": [\"ENGAGED\", \"CRISIS\"], \"signal\": \"brief description\", \"confidence\": 0.0-1.0}",
+      "raw_output": "```json\n{\"axes\": [\"ENGAGED\"], \"signal\": \"Passionate and insightful engagement with the course material, demonstrating a clear understanding of intersectionality and connecting it to personal experience and community knowledge.\", \"confidence\": 1.0}\n```",
+      "time_seconds": 1.5
+    }
+  ],
+  "note": "Multi-axis: students can be ENGAGED + CRISIS simultaneously. Adds CHECK-IN for ambiguous cases.",
+  "codepath": "test_harness_multi_axis"
+}

@@ -1,0 +1,22 @@
+═══════════════════════════════════════════════
+  Test Queue — 20260328_001049
+═══════════════════════════════════════════════
+  Metal warmup...
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 55076.72it/s]
+Metal OK: <start_of_image>Hi!
+
+  [F batch 1/4 (n=5)] Starting (timeout 2400s)...
+00:11:01 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['F']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST F: B/C Stability (gemma12b, 5 runs each)
+============================================================
+
+  --- Run 1/5 ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 127397.08it/s]
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-41420-2uh0ckjs'}
+  warnings.warn(

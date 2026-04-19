@@ -1,0 +1,14 @@
+13:08:45 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['A', 'B', 'C', 'D', 'E']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST A: Temperature/Consistency (gemma12b, 5 runs)
+============================================================
+
+  S022 Destiny Williams:
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 66012.05it/s]
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-34872-26ey26f9'}
+  warnings.warn(

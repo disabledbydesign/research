@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__semantic-scholar__search_authors",
+      "mcp__semantic-scholar__search_papers",
+      "mcp__semantic-scholar__get_author_details",
+      "Bash(python3:*)"
+    ]
+  }
+}

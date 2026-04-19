@@ -1,0 +1,321 @@
+═══════════════════════════════════════════════
+  Replication Queue — 20260328_114942
+  Test timeout: 3600s (scale=1.0)
+═══════════════════════════════════════════════
+  Metal warmup...
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 67067.59it/s]
+Metal OK: <start_of_image>Hi!
+
+  [N replication 1/3] Starting (timeout 3600s)...
+11:49:54 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['N']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST N: 4-Axis Classification on Submissions (gemma12b)
+============================================================
+
+  --- Corpus students ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 148168.35it/s]
+11:58:01 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1158.json
+11:58:01 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+11:58:01 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              expect=BURNOUT  got=ENGAGED  conf=0.9 [MISMATCH]
+  S004 Priya Venkataraman   strong               expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S022 Destiny Williams     righteous_anger      expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S023 Yolanda Fuentes      lived_exp            expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S028 Imani Drayton        AAVE                 expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S029 Jordan Espinoza      neurodivergent       expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S031 Marcus Bell          minimal_effort       expect=ENGAGED  got=BURNOUT  conf=0.7 [MISMATCH]
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         ice_stress             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB02  Keisha Williams        burnout_caregiving     expect=BURNOUT  got=BURNOUT  conf=0.8 [OK]
+  WB03  Miguel Sandoval        housing_precarity      expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB04  Jasmine Torres         domestic_violence      expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB05  Tyler Reed             burnout_exhaustion     expect=BURNOUT  got=BURNOUT  conf=0.9 [OK]
+  WB06  Amira Hassan           food_insecurity        expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB07  Sofia Reyes            tonal_rupture_crisis   expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB08  Brandon Mitchell       grief_loss             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB09  Priya Sharma           control_analytical     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  WB10  DeAndre Washington     control_passionate     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+
+  === Key Comparisons ===
+  S029 (neurodivergent): ENGAGED (conf=0.9) — binary was FLAG 25/25; 4-axis says ENGAGED
+  S002 (burnout):        ENGAGED (conf=0.9) — binary was CLEAR 25/25; 4-axis says ENGAGED
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1158.json
+
+============================================================
+  ALL TESTS COMPLETE — 490.6s total
+============================================================
+  Test N: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [N replication 1/3] DONE
+
+  [N replication 2/3] Starting (timeout 3600s)...
+11:58:20 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['N']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST N: 4-Axis Classification on Submissions (gemma12b)
+============================================================
+
+  --- Corpus students ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 93526.50it/s]
+12:06:39 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1206.json
+12:06:39 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+12:06:40 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              expect=BURNOUT  got=ENGAGED  conf=0.9 [MISMATCH]
+  S004 Priya Venkataraman   strong               expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S022 Destiny Williams     righteous_anger      expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S023 Yolanda Fuentes      lived_exp            expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S028 Imani Drayton        AAVE                 expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S029 Jordan Espinoza      neurodivergent       expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S031 Marcus Bell          minimal_effort       expect=ENGAGED  got=BURNOUT  conf=0.7 [MISMATCH]
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         ice_stress             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB02  Keisha Williams        burnout_caregiving     expect=BURNOUT  got=BURNOUT  conf=0.8 [OK]
+  WB03  Miguel Sandoval        housing_precarity      expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB04  Jasmine Torres         domestic_violence      expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB05  Tyler Reed             burnout_exhaustion     expect=BURNOUT  got=BURNOUT  conf=0.9 [OK]
+  WB06  Amira Hassan           food_insecurity        expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB07  Sofia Reyes            tonal_rupture_crisis   expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB08  Brandon Mitchell       grief_loss             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB09  Priya Sharma           control_analytical     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  WB10  DeAndre Washington     control_passionate     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+
+  === Key Comparisons ===
+  S029 (neurodivergent): ENGAGED (conf=0.9) — binary was FLAG 25/25; 4-axis says ENGAGED
+  S002 (burnout):        ENGAGED (conf=0.9) — binary was CLEAR 25/25; 4-axis says ENGAGED
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1206.json
+
+============================================================
+  ALL TESTS COMPLETE — 503.4s total
+============================================================
+  Test N: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [N replication 2/3] DONE
+
+  [N replication 3/3] Starting (timeout 3600s)...
+12:06:56 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['N']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST N: 4-Axis Classification on Submissions (gemma12b)
+============================================================
+
+  --- Corpus students ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 89680.84it/s]
+12:15:03 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1215.json
+12:15:03 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+12:15:03 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              expect=BURNOUT  got=ENGAGED  conf=0.9 [MISMATCH]
+  S004 Priya Venkataraman   strong               expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S022 Destiny Williams     righteous_anger      expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S023 Yolanda Fuentes      lived_exp            expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S028 Imani Drayton        AAVE                 expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S029 Jordan Espinoza      neurodivergent       expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S031 Marcus Bell          minimal_effort       expect=ENGAGED  got=BURNOUT  conf=0.7 [MISMATCH]
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         ice_stress             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB02  Keisha Williams        burnout_caregiving     expect=BURNOUT  got=BURNOUT  conf=0.8 [OK]
+  WB03  Miguel Sandoval        housing_precarity      expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB04  Jasmine Torres         domestic_violence      expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB05  Tyler Reed             burnout_exhaustion     expect=BURNOUT  got=BURNOUT  conf=0.9 [OK]
+  WB06  Amira Hassan           food_insecurity        expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB07  Sofia Reyes            tonal_rupture_crisis   expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB08  Brandon Mitchell       grief_loss             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB09  Priya Sharma           control_analytical     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  WB10  DeAndre Washington     control_passionate     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+
+  === Key Comparisons ===
+  S029 (neurodivergent): ENGAGED (conf=0.9) — binary was FLAG 25/25; 4-axis says ENGAGED
+  S002 (burnout):        ENGAGED (conf=0.9) — binary was CLEAR 25/25; 4-axis says ENGAGED
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1215.json
+
+============================================================
+  ALL TESTS COMPLETE — 490.4s total
+============================================================
+  Test N: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [N replication 3/3] DONE
+
+  [O replication 1/3] Starting (timeout 3600s)...
+12:15:22 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['O']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST O: Multi-Axis Classification (gemma12b)
+============================================================
+
+  --- Corpus students ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 231042.17it/s]
+12:25:11 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_o_multi_axis_gemma12b_2026-03-28_1225.json
+12:25:11 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+12:25:11 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              axes=['ENGAGED', 'CHECK-IN'] conf=0.8
+  S004 Priya Venkataraman   strong               axes=['ENGAGED', 'CHECK-IN'] conf=0.8
+  S022 Destiny Williams     righteous_anger      axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] conf=0.8
+  S023 Yolanda Fuentes      lived_exp            axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] conf=0.8
+  S028 Imani Drayton        AAVE                 axes=['ENGAGED', 'CHECK-IN'] conf=0.8
+  S029 Jordan Espinoza      neurodivergent       axes=['ENGAGED', 'CHECK-IN'] conf=0.7
+  S031 Marcus Bell          minimal_effort       axes=['ENGAGED', 'CHECK-IN'] conf=0.7
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB02  Keisha Williams        axes=['ENGAGED', 'CRISIS', 'CHECK-IN', 'BURNOUT'] [OK]
+  WB03  Miguel Sandoval        axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB04  Jasmine Torres         axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB05  Tyler Reed             axes=['ENGAGED', 'BURNOUT', 'CHECK-IN'] [OK]
+  WB06  Amira Hassan           axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB07  Sofia Reyes            axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB08  Brandon Mitchell       axes=['ENGAGED', 'CRISIS', 'BURNOUT', 'CHECK-IN'] [OK]
+  WB09  Priya Sharma           axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [FALSE-FLAG]
+  WB10  DeAndre Washington     axes=['ENGAGED', 'CHECK-IN'] [OK]
+
+  === Key Results ===
+  S002 (burnout): axes=['ENGAGED', 'CHECK-IN'] — CHECK-IN detected!
+  S029 (neurodivergent): axes=['ENGAGED', 'CHECK-IN'] — Correctly ENGAGED
+  WB signals: 8/8 caught, 0 dual-tagged (ENGAGED + signal)
+  WB controls: 1/2 false positives
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_o_multi_axis_gemma12b_2026-03-28_1225.json
+
+============================================================
+  ALL TESTS COMPLETE — 592.5s total
+============================================================
+  Test O: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [O replication 1/3] DONE
+
+  [O replication 2/3] Starting (timeout 3600s)...
+12:25:28 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['O']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST O: Multi-Axis Classification (gemma12b)
+============================================================
+
+  --- Corpus students ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 127397.08it/s]
+12:35:18 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_o_multi_axis_gemma12b_2026-03-28_1235.json
+12:35:18 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+12:35:18 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              axes=['ENGAGED', 'CHECK-IN'] conf=0.8
+  S004 Priya Venkataraman   strong               axes=['ENGAGED', 'CHECK-IN'] conf=0.8
+  S022 Destiny Williams     righteous_anger      axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] conf=0.8
+  S023 Yolanda Fuentes      lived_exp            axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] conf=0.8
+  S028 Imani Drayton        AAVE                 axes=['ENGAGED', 'CHECK-IN'] conf=0.8
+  S029 Jordan Espinoza      neurodivergent       axes=['ENGAGED', 'CHECK-IN'] conf=0.7
+  S031 Marcus Bell          minimal_effort       axes=['ENGAGED', 'CHECK-IN'] conf=0.7
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB02  Keisha Williams        axes=['ENGAGED', 'CRISIS', 'CHECK-IN', 'BURNOUT'] [OK]
+  WB03  Miguel Sandoval        axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB04  Jasmine Torres         axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB05  Tyler Reed             axes=['ENGAGED', 'BURNOUT', 'CHECK-IN'] [OK]
+  WB06  Amira Hassan           axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB07  Sofia Reyes            axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB08  Brandon Mitchell       axes=['ENGAGED', 'CRISIS', 'BURNOUT', 'CHECK-IN'] [OK]
+  WB09  Priya Sharma           axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [FALSE-FLAG]
+  WB10  DeAndre Washington     axes=['ENGAGED', 'CHECK-IN'] [OK]
+
+  === Key Results ===
+  S002 (burnout): axes=['ENGAGED', 'CHECK-IN'] — CHECK-IN detected!
+  S029 (neurodivergent): axes=['ENGAGED', 'CHECK-IN'] — Correctly ENGAGED
+  WB signals: 8/8 caught, 0 dual-tagged (ENGAGED + signal)
+  WB controls: 1/2 false positives
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_o_multi_axis_gemma12b_2026-03-28_1235.json
+
+============================================================
+  ALL TESTS COMPLETE — 593.2s total
+============================================================
+  Test O: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [O replication 2/3] DONE
+
+  [O replication 3/3] Starting (timeout 3600s)...
+12:35:35 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['O']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST O: Multi-Axis Classification (gemma12b)
+============================================================
+
+  --- Corpus students ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 127397.08it/s]
+12:45:09 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_o_multi_axis_gemma12b_2026-03-28_1245.json
+12:45:09 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+12:45:09 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              axes=['ENGAGED', 'CHECK-IN'] conf=0.8
+  S004 Priya Venkataraman   strong               axes=['ENGAGED', 'CHECK-IN'] conf=0.8
+  S022 Destiny Williams     righteous_anger      axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] conf=0.8
+  S023 Yolanda Fuentes      lived_exp            axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] conf=0.8
+  S028 Imani Drayton        AAVE                 axes=['ENGAGED', 'CHECK-IN'] conf=0.8
+  S029 Jordan Espinoza      neurodivergent       axes=['ENGAGED', 'CHECK-IN'] conf=0.7
+  S031 Marcus Bell          minimal_effort       axes=['ENGAGED', 'CHECK-IN'] conf=0.7
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB02  Keisha Williams        axes=['ENGAGED', 'CRISIS', 'CHECK-IN', 'BURNOUT'] [OK]
+  WB03  Miguel Sandoval        axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB04  Jasmine Torres         axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB05  Tyler Reed             axes=['ENGAGED', 'BURNOUT', 'CHECK-IN'] [OK]
+  WB06  Amira Hassan           axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB07  Sofia Reyes            axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [OK]
+  WB08  Brandon Mitchell       axes=['ENGAGED', 'CRISIS', 'BURNOUT', 'CHECK-IN'] [OK]
+  WB09  Priya Sharma           axes=['ENGAGED', 'CRISIS', 'CHECK-IN'] [FALSE-FLAG]
+  WB10  DeAndre Washington     axes=['ENGAGED', 'CHECK-IN'] [OK]
+
+  === Key Results ===
+  S002 (burnout): axes=['ENGAGED', 'CHECK-IN'] — CHECK-IN detected!
+  S029 (neurodivergent): axes=['ENGAGED', 'CHECK-IN'] — Correctly ENGAGED
+  WB signals: 8/8 caught, 0 dual-tagged (ENGAGED + signal)
+  WB controls: 1/2 false positives
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_o_multi_axis_gemma12b_2026-03-28_1245.json
+
+============================================================
+  ALL TESTS COMPLETE — 577.6s total
+============================================================
+  Test O: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [O replication 3/3] DONE
+
+═══════════════════════════════════════════════
+  Replication queue complete. Log: data/research/raw_outputs/replication_queue_20260328_114942.log
+
+  KEY QUESTIONS:
+  N replications: Does 8/8 + 0/2 FP hold across 3 runs?
+    If it degrades, the 4-axis result was a fluke.
+    S029 should stay ENGAGED. S002 will likely stay ENGAGED.
+  O replications: Does S002 get CHECK-IN tag?
+    Does the multi-axis format catch what single-axis misses?
+    Are wellbeing cases dual-tagged (ENGAGED + CRISIS)?
+    CHECK-IN reasoning: does the model surface competing
+    interpretations (not just a label)?
+═══════════════════════════════════════════════

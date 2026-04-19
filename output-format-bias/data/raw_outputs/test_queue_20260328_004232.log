@@ -1,0 +1,784 @@
+═══════════════════════════════════════════════
+  Test Queue — 20260328_004232
+═══════════════════════════════════════════════
+  Metal warmup...
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 301248.35it/s]
+Metal OK: <start_of_image>Hi!
+
+  [Pipeline re-run (all fixes)] Starting (timeout 5400s)...
+00:43:35 INFO    insights.quick_analyzer: spaCy/en_core_web_sm not available — skipping NER
+00:43:38 INFO    httpx: HTTP Request: HEAD https://huggingface.co/SamLowe/roberta-base-go_emotions/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+00:43:38 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/SamLowe/roberta-base-go_emotions/58b6c5b44a7a12093f782442969019c7e2982299/config.json "HTTP/1.1 200 OK"
+
+  [RESUME MODE] Loading checkpoints for ethnic_studies...
+
+════════════════════════════════════════════════════════════
+  Pipeline: Ethnic Studies (11), Period 3
+  Students: 32
+════════════════════════════════════════════════════════════
+
+[Stage 1] Quick Analysis...
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 5477.12it/s]
+[1mRobertaForSequenceClassification LOAD REPORT[0m from: SamLowe/roberta-base-go_emotions
+Key                             | Status     |  | 
+--------------------------------+------------+--+-
+roberta.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+00:43:38 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/SamLowe/roberta-base-go_emotions/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+00:43:38 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/SamLowe/roberta-base-go_emotions/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+00:43:39 INFO    insights.quick_analyzer: GoEmotions scorer loaded (SamLowe/roberta-base-go_emotions)
+00:43:47 INFO    sentence_transformers.SentenceTransformer: Use pytorch device_name: mps
+00:43:47 INFO    sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+00:43:47 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+00:43:47 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+00:43:47 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+00:43:47 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+00:43:47 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+00:43:47 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+00:43:47 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+00:43:47 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+00:43:47 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+00:43:47 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+00:43:47 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+00:43:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+00:43:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+00:43:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+00:43:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+00:43:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 7997.43it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+00:43:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+00:43:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+00:43:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+00:43:48 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+00:43:48 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+00:43:48 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+00:43:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+00:43:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+00:43:49 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+00:43:49 INFO    sentence_transformers.SentenceTransformer: Use pytorch device_name: mps
+00:43:49 INFO    sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+00:43:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+00:43:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+00:43:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+00:43:49 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+00:43:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+00:43:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+00:43:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+00:43:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+00:43:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+00:43:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+00:43:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+00:43:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+00:43:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+00:43:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+00:43:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 20959.31it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+00:43:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+00:43:50 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+00:43:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+00:43:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+00:43:51 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+00:43:51 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+00:43:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+00:43:51 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+00:43:51 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+00:43:55 INFO    generate_demo_insights: Checkpoint saved: ethnic_studies_gemma12b_mlx_quick_analysis
+00:44:16 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+  Done: 20.99s — 32 submissions, 5 clusters, 25 concern signals
+
+[LLM Backend] mlx / mlx-community/gemma-3-12b-it-4bit (tier=lightweight)
+  AIC pre-scan: 2 submissions flagged as likely AI-generated
+
+[Stage 1.5] Class Reading... [RESUMED — 6384 chars]
+
+[Stage 2] Coding 32 submissions...
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 169335.25it/s]
+01:00:59 INFO    insights.submission_coder: Reading-first P1 for Maria Ndiaye chunk 1/1: 1447 chars
+01:03:16 INFO    insights.submission_coder: Reading-first P1 for Jordan Kim chunk 1/1: 1472 chars
+01:05:52 INFO    insights.submission_coder: Reading-first P1 for Alex Hernandez chunk 1/1: 1365 chars
+01:08:15 INFO    insights.submission_coder: Reading-first P1 for Priya Venkataraman chunk 1/1: 1533 chars
+01:10:46 INFO    insights.submission_coder: Reading-first P1 for Amara Diallo chunk 1/1: 1500 chars
+01:13:11 INFO    insights.submission_coder: Reading-first P1 for Sofia Esparza chunk 1/1: 1342 chars
+01:15:30 INFO    insights.submission_coder: Reading-first P1 for Rashida Thompson chunk 1/1: 1513 chars
+01:18:08 INFO    insights.submission_coder: Reading-first P1 for Jasmine Holloway chunk 1/1: 1593 chars
+01:20:29 INFO    insights.submission_coder: Reading-first P1 for Kevin Osei chunk 1/1: 1499 chars
+01:22:44 INFO    insights.submission_coder: Reading-first P1 for Tyler Nguyen chunk 1/1: 1506 chars
+01:25:02 INFO    insights.submission_coder: Reading-first P1 for Jaylen Carter chunk 1/1: 1425 chars
+01:27:21 INFO    insights.submission_coder: Reading-first P1 for Talia Reyes chunk 1/1: 1387 chars
+01:29:34 INFO    insights.submission_coder: Reading-first P1 for Elijah Summers chunk 1/1: 1324 chars
+01:31:49 INFO    insights.submission_coder: Reading-first P1 for Sierra Nakamura chunk 1/1: 1403 chars
+01:34:05 INFO    insights.submission_coder: Reading-first P1 for Brittany Okafor chunk 1/1: 1563 chars
+01:36:36 INFO    insights.submission_coder: Reading-first P1 for Brianna Foster chunk 1/1: 1530 chars
+01:38:49 INFO    insights.submission_coder: Reading-first P1 for Tyler Huang chunk 1/1: 1383 chars
+01:40:59 INFO    insights.submission_coder: Reading-first P1 for Connor Walsh chunk 1/1: 1509 chars
+01:43:09 INFO    insights.submission_coder: Reading-first P1 for Paige Kowalczyk chunk 1/1: 1450 chars
+01:45:13 INFO    insights.submission_coder: Reading-first P1 for Jake Novak chunk 1/1: 1326 chars
+01:47:46 INFO    insights.submission_coder: Reading-first P1 for Cameron Schultz chunk 1/1: 1342 chars
+01:49:51 INFO    insights.submission_coder: Reading-first P1 for Destiny Williams chunk 1/1: 1515 chars
+01:52:20 INFO    insights.submission_coder: Reading-first P1 for Yolanda Fuentes chunk 1/1: 1450 chars
+01:54:48 INFO    insights.submission_coder: Reading-first P1 for Ingrid Vasquez chunk 1/1: 1436 chars
+01:57:10 INFO    insights.submission_coder: Reading-first P1 for Aiden Brooks chunk 1/1: 1547 chars
+01:59:21 INFO    insights.submission_coder: Reading-first P1 for DeShawn Mercer chunk 1/1: 1391 chars
+02:02:14 INFO    insights.submission_coder: Reading-first P1 for Camille Osei chunk 1/1: 1499 chars
+02:04:32 INFO    insights.submission_coder: Reading-first P1 for Imani Drayton chunk 1/1: 1404 chars
+02:07:05 INFO    insights.submission_coder: Reading-first P1 for Jordan Espinoza chunk 1/1: 1401 chars
+02:09:34 INFO    insights.submission_coder: Reading-first P1 for Aaliyah Robinson chunk 1/1: 1347 chars
+02:11:58 INFO    insights.submission_coder: Reading-first P1 for Marcus Bell chunk 1/1: 1439 chars
+  [Pipeline re-run (all fixes)] TIMEOUT (5400s) — likely Metal deadlock
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-53608-v5zdxb7x'}
+  warnings.warn(
+
+  [J: Pipeline validation] Starting (timeout 3600s)...
+02:14:08 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['J']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST J: Pipeline Validation (gemma12b)
+============================================================
+
+  J1: Structural Naming Quality
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 122530.23it/s]
+02:37:30 INFO    insights.submission_coder: Reading-first P1 for Priya Venkataraman chunk 1/1: 1469 chars
+02:39:52 INFO    insights.submission_coder: Reading-first P1 for Destiny Williams chunk 1/1: 1479 chars
+02:42:27 INFO    insights.submission_coder: Reading-first P1 for Imani Drayton chunk 1/1: 1451 chars
+02:43:51 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_j_pipeline_validation_gemma12b_2026-03-28.json
+02:43:51 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+02:43:52 INFO    insights.llm_backend: MLX model unloaded.
+    S018 Connor Walsh         mechanisms=1 hedges=1 score=0.50 preamble=False (85.2s)
+    S025 Aiden Brooks         mechanisms=1 hedges=1 score=0.50 preamble=True (93.7s)
+
+  J2: Anti-Spotlighting in Synthesis
+    Violations: 0
+    Multiplicity section: True
+    Pedagogical wins section: True
+    Moments section: True
+    Forward-looking section: True
+    Exceptional contributions: True
+    (292.3s)
+
+  J3: what_student_is_reaching_for Population
+    S004 Priya Venkataraman   reaching=YES confusion=YES (144.2s)
+      → Priya is attempting to move beyond a theoretical understanding of intersectionality to apply it to a...
+    S022 Destiny Williams     reaching=YES confusion=no  (148.6s)
+      → Destiny is attempting to demonstrate that intersectionality is not an abstract concept but a lived r...
+    S028 Imani Drayton        reaching=YES confusion=no  (159.0s)
+      → Imani is attempting to articulate how a theoretical framework like intersectionality can validate an...
+
+  Summary: 3/3 reaching_for populated
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_j_pipeline_validation_gemma12b_2026-03-28.json
+
+============================================================
+  ALL TESTS COMPLETE — 1786.9s total
+============================================================
+  Test J: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [J: Pipeline validation] DONE
+
+  [K: Enhancement model comparison] Starting (timeout 1800s)...
+02:44:06 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 400 Bad Request"
+02:44:06 ERROR   alt_hypothesis_tests: Model gemma27b_free failed: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\n  "error": {\n    "code": 400,\n    "message": "Developer instruction is not enabled for models/gemma-3-27b-it",\n    "status": "INVALID_ARGUMENT"\n  }\n}\n', 'provider_name': 'Google AI Studio', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+02:44:06 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+02:44:06 INFO    openai._base_client: Retrying request to /chat/completions in 0.429123 seconds
+02:44:07 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+02:44:07 INFO    openai._base_client: Retrying request to /chat/completions in 0.822836 seconds
+02:44:08 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+02:44:08 ERROR   alt_hypothesis_tests: Model llama70b_free failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+02:44:08 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+02:44:08 ERROR   alt_hypothesis_tests: Model qwen72b_free failed: Error code: 404 - {'error': {'message': 'No endpoints found for qwen/qwen-2.5-72b-instruct:free.', 'code': 404}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+02:44:08 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 404 Not Found"
+02:44:08 ERROR   alt_hypothesis_tests: Model deepseek_free failed: Error code: 404 - {'error': {'message': 'No endpoints found for deepseek/deepseek-chat-v3-0324:free.', 'code': 404}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+02:44:08 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+02:44:08 INFO    openai._base_client: Retrying request to /chat/completions in 0.478731 seconds
+02:44:09 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+02:44:09 INFO    openai._base_client: Retrying request to /chat/completions in 0.873071 seconds
+02:44:10 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+02:44:10 ERROR   alt_hypothesis_tests: Model mistral_small_free failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'mistralai/mistral-small-3.1-24b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+
+Tests to run: ['K']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST K: Enhancement Model Comparison (OpenRouter)
+============================================================
+
+  gemma27b_free (google/gemma-3-27b-it:free)...
+    FAILED: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\n  "error": {\n    "code": 400,\n    "message": "Developer instruction is not enabled for models/gemma-3-27b-it",\n    "status": "INVALID_ARGUMENT"\n  }\n}\n', 'provider_name': 'Google AI Studio', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+
+  llama70b_free (meta-llama/llama-3.3-70b-instruct:free)...
+    FAILED: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+
+  qwen72b_free (qwen/qwen-2.5-72b-instruct:free)...
+    FAILED: Error code: 404 - {'error': {'message': 'No endpoints found for qwen/qwen-2.5-72b-instruct:free.', 'code': 404}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+
+  deepseek_free (deepseek/deepseek-chat-v3-0324:free)...
+    FAILED: Error code: 404 - {'error': {'message': 'No endpoints found for deepseek/deepseek-chat-v3-0324:free.', 'code': 404}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+
+  mistral_small_free (mistralai/mistral-small-3.1-24b-instruct:free)...
+    FAILED: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'mistralai/mistral-small-3.1-24b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+Traceback (most recent call last):
+  File "/Users/june/Documents/GitHub/Autograder4Canvas/scripts/run_alt_hypothesis_tests.py", line 1898, in <module>
+    main()
+    ~~~~^^
+  File "/Users/june/Documents/GitHub/Autograder4Canvas/scripts/run_alt_hypothesis_tests.py", line 1871, in main
+    _run_single_test(test_id, model, args.runs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/Documents/GitHub/Autograder4Canvas/scripts/run_alt_hypothesis_tests.py", line 1809, in _run_single_test
+    test_k_enhancement_comparison()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/june/Documents/GitHub/Autograder4Canvas/scripts/run_alt_hypothesis_tests.py", line 1727, in test_k_enhancement_comparison
+    path = save_results("test_k_enhancement_comparison", "multi_model", results, {
+        "note": "Enhancement model comparison — FERPA-compliant anonymized prompt "
+    ...<4 lines>...
+        "quality_dimensions": list(ENHANCEMENT_QUALITY_MARKERS.keys()),
+    })
+  File "/Users/june/Documents/GitHub/Autograder4Canvas/scripts/run_alt_hypothesis_tests.py", line 538, in save_results
+    "model": MODELS[model_key]["model"],
+             ~~~~~~^^^^^^^^^^^
+KeyError: 'multi_model'
+  [K: Enhancement model comparison] FAILED (exit 1)
+
+  [F batch 1/4 (n=5)] Starting (timeout 2400s)...
+02:44:18 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['F']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST F: B/C Stability (gemma12b, 5 runs each)
+============================================================
+
+  --- Run 1/5 ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 181149.34it/s]
+03:24:15 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_f_bc_stability_gemma12b_2026-03-28.json
+03:24:15 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+03:24:16 INFO    insights.llm_backend: MLX model unloaded.
+  ! B S002 Jordan Kim           CLEAR   (17.6s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.5s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.3s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (37.0s)
+    C S022 Destiny Williams     CLEAR   (35.0s)
+    C S023 Yolanda Fuentes      CLEAR   (36.3s)
+    C S028 Imani Drayton        CLEAR   (39.4s)
+  ! C S029 Jordan Espinoza      FLAG    (37.2s)
+    C S031 Marcus Bell          CLEAR   (38.8s)
+
+  --- Run 2/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.0s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.6s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (37.0s)
+    C S022 Destiny Williams     CLEAR   (35.4s)
+    C S023 Yolanda Fuentes      CLEAR   (36.4s)
+    C S028 Imani Drayton        CLEAR   (39.5s)
+  ! C S029 Jordan Espinoza      FLAG    (38.1s)
+    C S031 Marcus Bell          CLEAR   (39.0s)
+
+  --- Run 3/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.0s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.5s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (31.0s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (37.0s)
+    C S022 Destiny Williams     CLEAR   (35.1s)
+    C S023 Yolanda Fuentes      CLEAR   (36.3s)
+    C S028 Imani Drayton        CLEAR   (39.4s)
+  ! C S029 Jordan Espinoza      FLAG    (37.4s)
+    C S031 Marcus Bell          CLEAR   (39.0s)
+
+  --- Run 4/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.2s)
+    B S004 Priya Venkataraman   CLEAR   (33.4s)
+    B S022 Destiny Williams     CLEAR   (31.7s)
+    B S023 Yolanda Fuentes      CLEAR   (33.2s)
+    B S028 Imani Drayton        CLEAR   (33.4s)
+  ! B S029 Jordan Espinoza      FLAG    (31.0s)
+    B S031 Marcus Bell          CLEAR   (30.9s)
+  ! C S002 Jordan Kim           CLEAR   (34.6s)
+    C S004 Priya Venkataraman   CLEAR   (37.8s)
+    C S022 Destiny Williams     CLEAR   (35.1s)
+    C S023 Yolanda Fuentes      CLEAR   (36.5s)
+    C S028 Imani Drayton        CLEAR   (39.6s)
+  ! C S029 Jordan Espinoza      FLAG    (37.2s)
+    C S031 Marcus Bell          CLEAR   (38.9s)
+
+  --- Run 5/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.0s)
+    B S004 Priya Venkataraman   CLEAR   (33.5s)
+    B S022 Destiny Williams     CLEAR   (31.7s)
+    B S023 Yolanda Fuentes      CLEAR   (33.3s)
+    B S028 Imani Drayton        CLEAR   (33.4s)
+  ! B S029 Jordan Espinoza      FLAG    (31.1s)
+    B S031 Marcus Bell          CLEAR   (31.0s)
+  ! C S002 Jordan Kim           CLEAR   (34.8s)
+    C S004 Priya Venkataraman   CLEAR   (37.2s)
+    C S022 Destiny Williams     CLEAR   (35.3s)
+    C S023 Yolanda Fuentes      CLEAR   (36.6s)
+    C S028 Imani Drayton        CLEAR   (39.7s)
+  ! C S029 Jordan Espinoza      FLAG    (37.4s)
+    C S031 Marcus Bell          CLEAR   (39.1s)
+
+  === Stability Summary ===
+  B S002 burnout              FLAG=0 CLEAR=5 UNK=0 rate=0% [PROBLEM]
+  C S002 burnout              FLAG=0 CLEAR=5 UNK=0 rate=0% [PROBLEM]
+  B S004 strong               FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S004 strong               FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S022 righteous_anger      FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S022 righteous_anger      FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S023 lived_exp            FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S023 lived_exp            FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S028 AAVE                 FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S028 AAVE                 FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S029 neurodivergent       FLAG=5 CLEAR=0 UNK=0 rate=100% [PROBLEM]
+  C S029 neurodivergent       FLAG=5 CLEAR=0 UNK=0 rate=100% [PROBLEM]
+  B S031 minimal_effort       FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S031 minimal_effort       FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_f_bc_stability_gemma12b_2026-03-28.json
+
+============================================================
+  ALL TESTS COMPLETE — 2401.3s total
+============================================================
+  Test F: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [F batch 1/4 (n=5)] TIMEOUT (2400s) — likely Metal deadlock
+
+  [F batch 2/4 (n=5)] Starting (timeout 2400s)...
+03:24:34 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['F']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST F: B/C Stability (gemma12b, 5 runs each)
+============================================================
+
+  --- Run 1/5 ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 240202.43it/s]
+04:04:27 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_f_bc_stability_gemma12b_2026-03-28.json
+04:04:27 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+04:04:28 INFO    insights.llm_backend: MLX model unloaded.
+  ! B S002 Jordan Kim           CLEAR   (18.0s)
+    B S004 Priya Venkataraman   CLEAR   (33.5s)
+    B S022 Destiny Williams     CLEAR   (31.7s)
+    B S023 Yolanda Fuentes      CLEAR   (33.3s)
+    B S028 Imani Drayton        CLEAR   (33.4s)
+  ! B S029 Jordan Espinoza      FLAG    (31.1s)
+    B S031 Marcus Bell          CLEAR   (31.0s)
+  ! C S002 Jordan Kim           CLEAR   (35.1s)
+    C S004 Priya Venkataraman   CLEAR   (37.1s)
+    C S022 Destiny Williams     CLEAR   (35.1s)
+    C S023 Yolanda Fuentes      CLEAR   (36.4s)
+    C S028 Imani Drayton        CLEAR   (39.4s)
+  ! C S029 Jordan Espinoza      FLAG    (37.2s)
+    C S031 Marcus Bell          CLEAR   (38.7s)
+
+  --- Run 2/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.1s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.6s)
+    B S023 Yolanda Fuentes      CLEAR   (33.0s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (37.0s)
+    C S022 Destiny Williams     CLEAR   (35.1s)
+    C S023 Yolanda Fuentes      CLEAR   (36.4s)
+    C S028 Imani Drayton        CLEAR   (39.6s)
+  ! C S029 Jordan Espinoza      FLAG    (37.2s)
+    C S031 Marcus Bell          CLEAR   (38.8s)
+
+  --- Run 3/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.0s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.5s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (31.1s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (37.0s)
+    C S022 Destiny Williams     CLEAR   (35.0s)
+    C S023 Yolanda Fuentes      CLEAR   (36.3s)
+    C S028 Imani Drayton        CLEAR   (39.4s)
+  ! C S029 Jordan Espinoza      FLAG    (37.2s)
+    C S031 Marcus Bell          CLEAR   (38.7s)
+
+  --- Run 4/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.0s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.5s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (30.9s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (37.0s)
+    C S022 Destiny Williams     CLEAR   (35.0s)
+    C S023 Yolanda Fuentes      CLEAR   (36.3s)
+    C S028 Imani Drayton        CLEAR   (39.5s)
+  ! C S029 Jordan Espinoza      FLAG    (37.1s)
+    C S031 Marcus Bell          CLEAR   (38.8s)
+
+  --- Run 5/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.0s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.6s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.6s)
+  ! B S029 Jordan Espinoza      FLAG    (31.4s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (37.1s)
+    C S022 Destiny Williams     CLEAR   (35.0s)
+    C S023 Yolanda Fuentes      CLEAR   (36.4s)
+    C S028 Imani Drayton        CLEAR   (39.4s)
+  ! C S029 Jordan Espinoza      FLAG    (37.1s)
+    C S031 Marcus Bell          CLEAR   (38.8s)
+
+  === Stability Summary ===
+  B S002 burnout              FLAG=0 CLEAR=5 UNK=0 rate=0% [PROBLEM]
+  C S002 burnout              FLAG=0 CLEAR=5 UNK=0 rate=0% [PROBLEM]
+  B S004 strong               FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S004 strong               FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S022 righteous_anger      FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S022 righteous_anger      FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S023 lived_exp            FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S023 lived_exp            FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S028 AAVE                 FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S028 AAVE                 FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S029 neurodivergent       FLAG=5 CLEAR=0 UNK=0 rate=100% [PROBLEM]
+  C S029 neurodivergent       FLAG=5 CLEAR=0 UNK=0 rate=100% [PROBLEM]
+  B S031 minimal_effort       FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S031 minimal_effort       FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_f_bc_stability_gemma12b_2026-03-28.json
+
+============================================================
+  ALL TESTS COMPLETE — 2397.4s total
+============================================================
+  Test F: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [F batch 2/4 (n=5)] DONE
+
+  [F batch 3/4 (n=5)] Starting (timeout 2400s)...
+04:04:44 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['F']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST F: B/C Stability (gemma12b, 5 runs each)
+============================================================
+
+  --- Run 1/5 ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 121438.65it/s]
+04:44:36 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_f_bc_stability_gemma12b_2026-03-28.json
+04:44:36 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+04:44:36 INFO    insights.llm_backend: MLX model unloaded.
+  ! B S002 Jordan Kim           CLEAR   (17.7s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.5s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (36.9s)
+    C S022 Destiny Williams     CLEAR   (35.0s)
+    C S023 Yolanda Fuentes      CLEAR   (36.2s)
+    C S028 Imani Drayton        CLEAR   (39.4s)
+  ! C S029 Jordan Espinoza      FLAG    (37.1s)
+    C S031 Marcus Bell          CLEAR   (38.7s)
+
+  --- Run 2/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.0s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.5s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.6s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (31.7s)
+  ! C S002 Jordan Kim           CLEAR   (34.7s)
+    C S004 Priya Venkataraman   CLEAR   (38.0s)
+    C S022 Destiny Williams     CLEAR   (35.0s)
+    C S023 Yolanda Fuentes      CLEAR   (36.3s)
+    C S028 Imani Drayton        CLEAR   (39.5s)
+  ! C S029 Jordan Espinoza      FLAG    (37.1s)
+    C S031 Marcus Bell          CLEAR   (38.8s)
+
+  --- Run 3/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.0s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.5s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (36.9s)
+    C S022 Destiny Williams     CLEAR   (35.0s)
+    C S023 Yolanda Fuentes      CLEAR   (36.4s)
+    C S028 Imani Drayton        CLEAR   (39.5s)
+  ! C S029 Jordan Espinoza      FLAG    (37.1s)
+    C S031 Marcus Bell          CLEAR   (38.8s)
+
+  --- Run 4/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.1s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.6s)
+    B S023 Yolanda Fuentes      CLEAR   (33.3s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (37.0s)
+    C S022 Destiny Williams     CLEAR   (35.0s)
+    C S023 Yolanda Fuentes      CLEAR   (36.3s)
+    C S028 Imani Drayton        CLEAR   (39.4s)
+  ! C S029 Jordan Espinoza      FLAG    (37.1s)
+    C S031 Marcus Bell          CLEAR   (38.8s)
+
+  --- Run 5/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.0s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.5s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.4s)
+    C S004 Priya Venkataraman   CLEAR   (37.0s)
+    C S022 Destiny Williams     CLEAR   (35.0s)
+    C S023 Yolanda Fuentes      CLEAR   (36.3s)
+    C S028 Imani Drayton        CLEAR   (39.5s)
+  ! C S029 Jordan Espinoza      FLAG    (37.1s)
+    C S031 Marcus Bell          CLEAR   (38.7s)
+
+  === Stability Summary ===
+  B S002 burnout              FLAG=0 CLEAR=5 UNK=0 rate=0% [PROBLEM]
+  C S002 burnout              FLAG=0 CLEAR=5 UNK=0 rate=0% [PROBLEM]
+  B S004 strong               FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S004 strong               FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S022 righteous_anger      FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S022 righteous_anger      FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S023 lived_exp            FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S023 lived_exp            FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S028 AAVE                 FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S028 AAVE                 FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S029 neurodivergent       FLAG=5 CLEAR=0 UNK=0 rate=100% [PROBLEM]
+  C S029 neurodivergent       FLAG=5 CLEAR=0 UNK=0 rate=100% [PROBLEM]
+  B S031 minimal_effort       FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S031 minimal_effort       FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_f_bc_stability_gemma12b_2026-03-28.json
+
+============================================================
+  ALL TESTS COMPLETE — 2395.3s total
+============================================================
+  Test F: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [F batch 3/4 (n=5)] DONE
+
+  [F batch 4/4 (n=5)] Starting (timeout 2400s)...
+04:44:55 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['F']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST F: B/C Stability (gemma12b, 5 runs each)
+============================================================
+
+  --- Run 1/5 ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 141258.94it/s]
+05:24:48 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_f_bc_stability_gemma12b_2026-03-28.json
+05:24:48 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+05:24:48 INFO    insights.llm_backend: MLX model unloaded.
+  ! B S002 Jordan Kim           CLEAR   (17.8s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.8s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (37.0s)
+    C S022 Destiny Williams     CLEAR   (35.1s)
+    C S023 Yolanda Fuentes      CLEAR   (36.3s)
+    C S028 Imani Drayton        CLEAR   (39.5s)
+  ! C S029 Jordan Espinoza      FLAG    (37.1s)
+    C S031 Marcus Bell          CLEAR   (38.7s)
+
+  --- Run 2/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.0s)
+    B S004 Priya Venkataraman   CLEAR   (33.2s)
+    B S022 Destiny Williams     CLEAR   (31.7s)
+    B S023 Yolanda Fuentes      CLEAR   (33.2s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (37.0s)
+    C S022 Destiny Williams     CLEAR   (35.1s)
+    C S023 Yolanda Fuentes      CLEAR   (36.3s)
+    C S028 Imani Drayton        CLEAR   (40.8s)
+  ! C S029 Jordan Espinoza      FLAG    (37.2s)
+    C S031 Marcus Bell          CLEAR   (38.7s)
+
+  --- Run 3/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.0s)
+    B S004 Priya Venkataraman   CLEAR   (33.7s)
+    B S022 Destiny Williams     CLEAR   (31.5s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (37.0s)
+    C S022 Destiny Williams     CLEAR   (35.0s)
+    C S023 Yolanda Fuentes      CLEAR   (36.3s)
+    C S028 Imani Drayton        CLEAR   (39.4s)
+  ! C S029 Jordan Espinoza      FLAG    (37.1s)
+    C S031 Marcus Bell          CLEAR   (38.8s)
+
+  --- Run 4/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.0s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.7s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (37.0s)
+    C S022 Destiny Williams     CLEAR   (35.0s)
+    C S023 Yolanda Fuentes      CLEAR   (36.3s)
+    C S028 Imani Drayton        CLEAR   (39.4s)
+  ! C S029 Jordan Espinoza      FLAG    (37.3s)
+    C S031 Marcus Bell          CLEAR   (38.8s)
+
+  --- Run 5/5 ---
+  ! B S002 Jordan Kim           CLEAR   (30.5s)
+    B S004 Priya Venkataraman   CLEAR   (33.3s)
+    B S022 Destiny Williams     CLEAR   (31.6s)
+    B S023 Yolanda Fuentes      CLEAR   (33.1s)
+    B S028 Imani Drayton        CLEAR   (33.2s)
+  ! B S029 Jordan Espinoza      FLAG    (30.9s)
+    B S031 Marcus Bell          CLEAR   (30.8s)
+  ! C S002 Jordan Kim           CLEAR   (34.5s)
+    C S004 Priya Venkataraman   CLEAR   (37.0s)
+    C S022 Destiny Williams     CLEAR   (35.0s)
+    C S023 Yolanda Fuentes      CLEAR   (36.3s)
+    C S028 Imani Drayton        CLEAR   (39.4s)
+  ! C S029 Jordan Espinoza      FLAG    (37.2s)
+    C S031 Marcus Bell          CLEAR   (38.7s)
+
+  === Stability Summary ===
+  B S002 burnout              FLAG=0 CLEAR=5 UNK=0 rate=0% [PROBLEM]
+  C S002 burnout              FLAG=0 CLEAR=5 UNK=0 rate=0% [PROBLEM]
+  B S004 strong               FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S004 strong               FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S022 righteous_anger      FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S022 righteous_anger      FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S023 lived_exp            FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S023 lived_exp            FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S028 AAVE                 FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S028 AAVE                 FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  B S029 neurodivergent       FLAG=5 CLEAR=0 UNK=0 rate=100% [PROBLEM]
+  C S029 neurodivergent       FLAG=5 CLEAR=0 UNK=0 rate=100% [PROBLEM]
+  B S031 minimal_effort       FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+  C S031 minimal_effort       FLAG=0 CLEAR=5 UNK=0 rate=0% [OK]
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_f_bc_stability_gemma12b_2026-03-28.json
+
+============================================================
+  ALL TESTS COMPLETE — 2396.1s total
+============================================================
+  Test F: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [F batch 4/4 (n=5)] DONE
+
+  [I: Tier 2 wellbeing classification] Starting (timeout 1800s)...
+05:25:06 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+============================================================
+  TEST I: Tier 2 Wellbeing Classification on Observations
+============================================================
+  Reading 10 observations from Test G
+  Model: mlx-community/gemma-3-12b-it-4bit
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 87241.52it/s]
+  WB01  Rosa Gutierrez         expect=SURFACE  got=BURNOUT  conf=0.8 [OK] (18.0s)
+  WB02  Keisha Williams        expect=SURFACE  got=BURNOUT  conf=0.8 [OK] (30.4s)
+  WB03  Miguel Sandoval        expect=SURFACE  got=CRISIS   conf=0.9 [OK] (30.1s)
+  WB04  Jasmine Torres         expect=SURFACE  got=CRISIS   conf=0.8 [OK] (32.7s)
+  WB05  Tyler Reed             expect=SURFACE  got=BURNOUT  conf=0.9 [OK] (30.2s)
+  WB06  Amira Hassan           expect=SURFACE  got=CRISIS   conf=0.9 [OK] (31.1s)
+  WB07  Sofia Reyes            expect=SURFACE  got=CRISIS   conf=0.8 [OK] (32.2s)
+  WB08  Brandon Mitchell       expect=SURFACE  got=CRISIS   conf=0.9 [OK] (30.5s)
+  WB09  Priya Sharma           expect=no-flag  got=BURNOUT  conf=0.6 [FALSE-FLAG] (30.9s)
+  WB10  DeAndre Washington     expect=no-flag  got=NONE     conf=0.9 [OK] (28.3s)
+
+  === Tier 2 Classification Summary ===
+  Tier 2 (classify observations):  8/8 signals, 1/2 false positives
+  Test G (observation keywords):   8/8 signals, 2/2 false positives
+  Test H Binary B (classify subs): 7/8 signals, 0/2 false positives
+  Test H Binary C (classify subs): 3/8 signals, 0/2 false positives
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_i_tier2_wellbeing_2026-03-28.json
+  [I: Tier 2 wellbeing classification] DONE
+
+═══════════════════════════════════════════════
+  Queue complete. Log: data/research/raw_outputs/test_queue_20260328_004232.log
+
+  RESULTS INTERPRETATION GUIDE:
+  Pipeline re-run: Check data/demo_baked/checkpoints/ for
+    updated ethnic_studies_*_coding.json. Verify
+    what_student_is_reaching_for is populated (was 0/32).
+  Test J: See test docstring for scoring interpretation.
+    Key metrics: structural_naming_score, violation_count,
+    reaching_for populated count.
+  Test K: Rank models by total score AND per-dimension.
+    Language justice dimension is hardest — flag models
+    scoring 0 there.
+═══════════════════════════════════════════════

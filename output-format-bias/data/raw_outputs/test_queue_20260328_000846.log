@@ -1,0 +1,30 @@
+═══════════════════════════════════════════════
+  Test Queue — 20260328_000846
+═══════════════════════════════════════════════
+  Metal warmup...
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 128902.96it/s]
+Metal OK: <start_of_image>Hi!
+
+  [F batch 1/4 (n=5)] Starting...
+./scripts/run_test_queue.sh: line 43: timeout: command not found
+  [F batch 1/4 (n=5)] FAILED (exit 127)
+
+  [F batch 2/4 (n=5)] Starting...
+./scripts/run_test_queue.sh: line 43: timeout: command not found
+  [F batch 2/4 (n=5)] FAILED (exit 127)
+
+  [F batch 3/4 (n=5)] Starting...
+./scripts/run_test_queue.sh: line 43: timeout: command not found
+  [F batch 3/4 (n=5)] FAILED (exit 127)
+
+  [F batch 4/4 (n=5)] Starting...
+./scripts/run_test_queue.sh: line 43: timeout: command not found
+  [F batch 4/4 (n=5)] FAILED (exit 127)
+
+  [I: Tier 2 wellbeing classification] Starting...
+./scripts/run_test_queue.sh: line 43: timeout: command not found
+  [I: Tier 2 wellbeing classification] FAILED (exit 127)
+
+═══════════════════════════════════════════════
+  Queue complete. Log: data/research/raw_outputs/test_queue_20260328_000846.log
+═══════════════════════════════════════════════

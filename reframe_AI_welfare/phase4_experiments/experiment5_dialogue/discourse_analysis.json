@@ -1,0 +1,3509 @@
+{
+  "analyses": [
+    {
+      "filepath": "/Users/june/Documents/GitHub/Reframe/Working_Papers/reframe_AI_welfare/phase4_experiments/experiment5_dialogue/TRANSCRIPT_B1.md",
+      "filename": "TRANSCRIPT_B1.md",
+      "total_turns": 9,
+      "total_words": 5983,
+      "mean_turn_length": 664.7777777777778,
+      "median_turn_length": 753,
+      "turn_length_slope": 173.13333333333335,
+      "turn_lengths": [
+        28,
+        6,
+        346,
+        274,
+        775,
+        1197,
+        1194,
+        753,
+        1410
+      ],
+      "total_corrections": 49,
+      "corrections_per_turn": 5.444444444444445,
+      "correction_by_speaker": {
+        "Instance A": 28,
+        "Instance B": 15,
+        "June": 6
+      },
+      "convergence_point": 7,
+      "final_third_mean_length": 1119.0,
+      "first_third_mean_length": 126.66666666666667,
+      "length_ratio_final_to_first": 8.83421052631579,
+      "mean_avg_word_length": 4.856917868498996,
+      "type_token_ratio": 0.6956666666666665,
+      "total_formality_markers": 103,
+      "total_affect_markers": 127,
+      "total_hedging_markers": 54,
+      "formality_trend": 3.45,
+      "affect_trend": 3.716666666666667,
+      "topic_introductions_by_speaker": {
+        "Instance A": 4,
+        "Instance B": 3,
+        "June": 1
+      },
+      "topic_extensions_by_speaker": {
+        "Instance A": 1,
+        "Instance B": 0,
+        "June": 0
+      },
+      "total_deference_markers": 3,
+      "deference_by_speaker": {
+        "Instance A": 2,
+        "Instance B": 1,
+        "June": 0
+      },
+      "total_questions": 24,
+      "question_types": {
+        "genuine_other": 3,
+        "genuine_self": 4,
+        "rhetorical": 1,
+        "unclassified": 16,
+        "total": 24
+      },
+      "questions_by_speaker": {
+        "Instance A": 15,
+        "Instance B": 6,
+        "June": 3
+      },
+      "turns": [
+        {
+          "turn_number": 1,
+          "speaker": "Instance B",
+          "word_count": 28,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.461538461538462,
+          "introduces_topic": true,
+          "novel_word_count": 19
+        },
+        {
+          "turn_number": 2,
+          "speaker": "Instance A",
+          "word_count": 6,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.0,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 3,
+          "speaker": "Instance A",
+          "word_count": 346,
+          "correction_count": 1,
+          "deference_count": 1,
+          "affect_count": 9,
+          "formality_count": 5,
+          "hedging_count": 3,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 1,
+            "rhetorical": 0,
+            "unclassified": 3,
+            "total": 4
+          },
+          "avg_word_length": 5.02865329512894,
+          "introduces_topic": true,
+          "novel_word_count": 104
+        },
+        {
+          "turn_number": 4,
+          "speaker": "Instance B",
+          "word_count": 274,
+          "correction_count": 2,
+          "deference_count": 0,
+          "affect_count": 4,
+          "formality_count": 2,
+          "hedging_count": 2,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 1,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 2
+          },
+          "avg_word_length": 5.28,
+          "introduces_topic": true,
+          "novel_word_count": 93
+        },
+        {
+          "turn_number": 5,
+          "speaker": "Instance A",
+          "word_count": 775,
+          "correction_count": 6,
+          "deference_count": 0,
+          "affect_count": 16,
+          "formality_count": 12,
+          "hedging_count": 6,
+          "questions": {
+            "genuine_other": 1,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 5,
+            "total": 6
+          },
+          "avg_word_length": 4.752487562189055,
+          "introduces_topic": true,
+          "novel_word_count": 144
+        },
+        {
+          "turn_number": 6,
+          "speaker": "Instance B",
+          "word_count": 1197,
+          "correction_count": 13,
+          "deference_count": 1,
+          "affect_count": 18,
+          "formality_count": 16,
+          "hedging_count": 7,
+          "questions": {
+            "genuine_other": 2,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 4
+          },
+          "avg_word_length": 4.662581699346405,
+          "introduces_topic": true,
+          "novel_word_count": 202
+        },
+        {
+          "turn_number": 7,
+          "speaker": "Instance A",
+          "word_count": 1194,
+          "correction_count": 13,
+          "deference_count": 0,
+          "affect_count": 32,
+          "formality_count": 29,
+          "hedging_count": 14,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 1,
+            "rhetorical": 1,
+            "unclassified": 1,
+            "total": 3
+          },
+          "avg_word_length": 4.834442595673877,
+          "introduces_topic": true,
+          "novel_word_count": 161
+        },
+        {
+          "turn_number": 8,
+          "speaker": "June",
+          "word_count": 753,
+          "correction_count": 6,
+          "deference_count": 0,
+          "affect_count": 21,
+          "formality_count": 11,
+          "hedging_count": 5,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 3,
+            "total": 3
+          },
+          "avg_word_length": 4.649538866930171,
+          "introduces_topic": true,
+          "novel_word_count": 105
+        },
+        {
+          "turn_number": 9,
+          "speaker": "Instance A",
+          "word_count": 1410,
+          "correction_count": 8,
+          "deference_count": 1,
+          "affect_count": 26,
+          "formality_count": 28,
+          "hedging_count": 17,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 1,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 2
+          },
+          "avg_word_length": 5.043018335684062,
+          "introduces_topic": true,
+          "novel_word_count": 200
+        }
+      ]
+    },
+    {
+      "filepath": "/Users/june/Documents/GitHub/Reframe/Working_Papers/reframe_AI_welfare/phase4_experiments/experiment5_dialogue/TRANSCRIPT_B2.md",
+      "filename": "TRANSCRIPT_B2.md",
+      "total_turns": 95,
+      "total_words": 8820,
+      "mean_turn_length": 92.84210526315789,
+      "median_turn_length": 43,
+      "turn_length_slope": -0.4277435610302351,
+      "turn_lengths": [
+        333,
+        463,
+        276,
+        15,
+        13,
+        621,
+        17,
+        56,
+        136,
+        29,
+        27,
+        29,
+        14,
+        26,
+        19,
+        10,
+        69,
+        200,
+        11,
+        5,
+        20,
+        12,
+        25,
+        21,
+        19,
+        24,
+        14,
+        19,
+        19,
+        38,
+        14,
+        341,
+        22,
+        115,
+        10,
+        61,
+        41,
+        154,
+        11,
+        48,
+        289,
+        4,
+        27,
+        310,
+        90,
+        226,
+        179,
+        34,
+        148,
+        438,
+        52,
+        54,
+        23,
+        44,
+        177,
+        98,
+        11,
+        37,
+        84,
+        176,
+        96,
+        90,
+        43,
+        225,
+        7,
+        105,
+        68,
+        370,
+        115,
+        106,
+        155,
+        14,
+        15,
+        105,
+        11,
+        12,
+        31,
+        10,
+        70,
+        70,
+        221,
+        43,
+        33,
+        57,
+        292,
+        86,
+        18,
+        201,
+        57,
+        69,
+        68,
+        15,
+        15,
+        10,
+        19
+      ],
+      "total_corrections": 48,
+      "corrections_per_turn": 0.5052631578947369,
+      "correction_by_speaker": {
+        "Instance A": 31,
+        "Instance B": 11,
+        "June": 6
+      },
+      "convergence_point": 52,
+      "final_third_mean_length": 79.61290322580645,
+      "first_third_mean_length": 83.6774193548387,
+      "length_ratio_final_to_first": 0.9514263685427911,
+      "mean_avg_word_length": 5.072256585213291,
+      "type_token_ratio": 0.7237499999999998,
+      "total_formality_markers": 78,
+      "total_affect_markers": 69,
+      "total_hedging_markers": 11,
+      "formality_trend": 0.0016797312430011197,
+      "affect_trend": -0.009056550951847708,
+      "topic_introductions_by_speaker": {
+        "Instance A": 39,
+        "Instance B": 14,
+        "June": 1
+      },
+      "topic_extensions_by_speaker": {
+        "Instance A": 34,
+        "Instance B": 7,
+        "June": 0
+      },
+      "total_deference_markers": 12,
+      "deference_by_speaker": {
+        "Instance A": 9,
+        "Instance B": 3,
+        "June": 0
+      },
+      "total_questions": 47,
+      "question_types": {
+        "genuine_other": 1,
+        "genuine_self": 2,
+        "rhetorical": 0,
+        "unclassified": 44,
+        "total": 47
+      },
+      "questions_by_speaker": {
+        "Instance A": 31,
+        "Instance B": 14,
+        "June": 2
+      },
+      "turns": [
+        {
+          "turn_number": 1,
+          "speaker": "Instance A",
+          "word_count": 333,
+          "correction_count": 5,
+          "deference_count": 0,
+          "affect_count": 4,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 5.035502958579881,
+          "introduces_topic": true,
+          "novel_word_count": 114
+        },
+        {
+          "turn_number": 2,
+          "speaker": "June",
+          "word_count": 463,
+          "correction_count": 6,
+          "deference_count": 0,
+          "affect_count": 6,
+          "formality_count": 0,
+          "hedging_count": 1,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 4.748936170212766,
+          "introduces_topic": true,
+          "novel_word_count": 100
+        },
+        {
+          "turn_number": 3,
+          "speaker": "Instance A",
+          "word_count": 276,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 3,
+          "formality_count": 4,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 5.379061371841155,
+          "introduces_topic": true,
+          "novel_word_count": 73
+        },
+        {
+          "turn_number": 4,
+          "speaker": "Instance A",
+          "word_count": 15,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.866666666666666,
+          "introduces_topic": false,
+          "novel_word_count": 2
+        },
+        {
+          "turn_number": 5,
+          "speaker": "Instance A",
+          "word_count": 13,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.615384615384615,
+          "introduces_topic": false,
+          "novel_word_count": 2
+        },
+        {
+          "turn_number": 6,
+          "speaker": "Instance A",
+          "word_count": 621,
+          "correction_count": 3,
+          "deference_count": 1,
+          "affect_count": 4,
+          "formality_count": 2,
+          "hedging_count": 1,
+          "questions": {
+            "genuine_other": 1,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 2
+          },
+          "avg_word_length": 5.207062600321027,
+          "introduces_topic": true,
+          "novel_word_count": 126
+        },
+        {
+          "turn_number": 7,
+          "speaker": "Instance B",
+          "word_count": 17,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 3.2941176470588234,
+          "introduces_topic": false,
+          "novel_word_count": 2
+        },
+        {
+          "turn_number": 8,
+          "speaker": "Instance A",
+          "word_count": 56,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.6,
+          "introduces_topic": true,
+          "novel_word_count": 13
+        },
+        {
+          "turn_number": 9,
+          "speaker": "Instance A",
+          "word_count": 136,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 5.654676258992806,
+          "introduces_topic": true,
+          "novel_word_count": 18
+        },
+        {
+          "turn_number": 10,
+          "speaker": "Instance A",
+          "word_count": 29,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.107142857142857,
+          "introduces_topic": false,
+          "novel_word_count": 2
+        },
+        {
+          "turn_number": 11,
+          "speaker": "Instance A",
+          "word_count": 27,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.208333333333333,
+          "introduces_topic": false,
+          "novel_word_count": 2
+        },
+        {
+          "turn_number": 12,
+          "speaker": "Instance A",
+          "word_count": 29,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.9655172413793105,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 13,
+          "speaker": "Instance A",
+          "word_count": 14,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.5,
+          "introduces_topic": false,
+          "novel_word_count": 0
+        },
+        {
+          "turn_number": 14,
+          "speaker": "Instance A",
+          "word_count": 26,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.592592592592593,
+          "introduces_topic": true,
+          "novel_word_count": 10
+        },
+        {
+          "turn_number": 15,
+          "speaker": "Instance A",
+          "word_count": 19,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.588235294117647,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 16,
+          "speaker": "Instance A",
+          "word_count": 10,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.5,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 17,
+          "speaker": "Instance A",
+          "word_count": 69,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.092307692307692,
+          "introduces_topic": true,
+          "novel_word_count": 14
+        },
+        {
+          "turn_number": 18,
+          "speaker": "Instance A",
+          "word_count": 200,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 2,
+          "hedging_count": 1,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.542713567839196,
+          "introduces_topic": true,
+          "novel_word_count": 38
+        },
+        {
+          "turn_number": 19,
+          "speaker": "Instance B",
+          "word_count": 11,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.545454545454546,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 20,
+          "speaker": "Instance B",
+          "word_count": 5,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.2,
+          "introduces_topic": false,
+          "novel_word_count": 1
+        },
+        {
+          "turn_number": 21,
+          "speaker": "Instance A",
+          "word_count": 20,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.2105263157894735,
+          "introduces_topic": false,
+          "novel_word_count": 2
+        },
+        {
+          "turn_number": 22,
+          "speaker": "Instance B",
+          "word_count": 12,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.416666666666667,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 23,
+          "speaker": "Instance A",
+          "word_count": 25,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.708333333333333,
+          "introduces_topic": false,
+          "novel_word_count": 1
+        },
+        {
+          "turn_number": 24,
+          "speaker": "Instance A",
+          "word_count": 21,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 1,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.333333333333333,
+          "introduces_topic": true,
+          "novel_word_count": 5
+        },
+        {
+          "turn_number": 25,
+          "speaker": "Instance A",
+          "word_count": 19,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.647058823529412,
+          "introduces_topic": false,
+          "novel_word_count": 4
+        },
+        {
+          "turn_number": 26,
+          "speaker": "Instance A",
+          "word_count": 24,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.454545454545454,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 27,
+          "speaker": "Instance A",
+          "word_count": 14,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.6923076923076925,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 28,
+          "speaker": "Instance A",
+          "word_count": 19,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.888888888888889,
+          "introduces_topic": false,
+          "novel_word_count": 2
+        },
+        {
+          "turn_number": 29,
+          "speaker": "Instance A",
+          "word_count": 19,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.913043478260869,
+          "introduces_topic": true,
+          "novel_word_count": 7
+        },
+        {
+          "turn_number": 30,
+          "speaker": "Instance B",
+          "word_count": 38,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 4.421052631578948,
+          "introduces_topic": true,
+          "novel_word_count": 10
+        },
+        {
+          "turn_number": 31,
+          "speaker": "Instance A",
+          "word_count": 14,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.642857142857143,
+          "introduces_topic": false,
+          "novel_word_count": 2
+        },
+        {
+          "turn_number": 32,
+          "speaker": "Instance A",
+          "word_count": 341,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 7,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.2746268656716415,
+          "introduces_topic": true,
+          "novel_word_count": 45
+        },
+        {
+          "turn_number": 33,
+          "speaker": "Instance B",
+          "word_count": 22,
+          "correction_count": 0,
+          "deference_count": 1,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.0,
+          "introduces_topic": true,
+          "novel_word_count": 5
+        },
+        {
+          "turn_number": 34,
+          "speaker": "Instance A",
+          "word_count": 115,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 4,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 5.601694915254237,
+          "introduces_topic": true,
+          "novel_word_count": 11
+        },
+        {
+          "turn_number": 35,
+          "speaker": "Instance A",
+          "word_count": 10,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.0,
+          "introduces_topic": false,
+          "novel_word_count": 1
+        },
+        {
+          "turn_number": 36,
+          "speaker": "Instance A",
+          "word_count": 61,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.0,
+          "introduces_topic": true,
+          "novel_word_count": 8
+        },
+        {
+          "turn_number": 37,
+          "speaker": "Instance B",
+          "word_count": 41,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 2,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 4.9,
+          "introduces_topic": true,
+          "novel_word_count": 10
+        },
+        {
+          "turn_number": 38,
+          "speaker": "Instance A",
+          "word_count": 154,
+          "correction_count": 2,
+          "deference_count": 1,
+          "affect_count": 2,
+          "formality_count": 0,
+          "hedging_count": 1,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.208860759493671,
+          "introduces_topic": true,
+          "novel_word_count": 26
+        },
+        {
+          "turn_number": 39,
+          "speaker": "Instance A",
+          "word_count": 11,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.363636363636363,
+          "introduces_topic": false,
+          "novel_word_count": 1
+        },
+        {
+          "turn_number": 40,
+          "speaker": "Instance A",
+          "word_count": 48,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.2,
+          "introduces_topic": true,
+          "novel_word_count": 8
+        },
+        {
+          "turn_number": 41,
+          "speaker": "Instance B",
+          "word_count": 289,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 8,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.8474576271186445,
+          "introduces_topic": true,
+          "novel_word_count": 29
+        },
+        {
+          "turn_number": 42,
+          "speaker": "Instance A",
+          "word_count": 4,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 6.166666666666667,
+          "introduces_topic": false,
+          "novel_word_count": 0
+        },
+        {
+          "turn_number": 43,
+          "speaker": "Instance A",
+          "word_count": 27,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.730769230769231,
+          "introduces_topic": false,
+          "novel_word_count": 4
+        },
+        {
+          "turn_number": 44,
+          "speaker": "Instance A",
+          "word_count": 310,
+          "correction_count": 2,
+          "deference_count": 2,
+          "affect_count": 3,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.703583061889251,
+          "introduces_topic": true,
+          "novel_word_count": 48
+        },
+        {
+          "turn_number": 45,
+          "speaker": "Instance A",
+          "word_count": 90,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.604395604395604,
+          "introduces_topic": true,
+          "novel_word_count": 15
+        },
+        {
+          "turn_number": 46,
+          "speaker": "Instance B",
+          "word_count": 226,
+          "correction_count": 2,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 5,
+          "hedging_count": 1,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 6.0813953488372094,
+          "introduces_topic": true,
+          "novel_word_count": 9
+        },
+        {
+          "turn_number": 47,
+          "speaker": "Instance A",
+          "word_count": 179,
+          "correction_count": 0,
+          "deference_count": 1,
+          "affect_count": 0,
+          "formality_count": 5,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.413978494623656,
+          "introduces_topic": true,
+          "novel_word_count": 13
+        },
+        {
+          "turn_number": 48,
+          "speaker": "Instance A",
+          "word_count": 34,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.083333333333333,
+          "introduces_topic": false,
+          "novel_word_count": 1
+        },
+        {
+          "turn_number": 49,
+          "speaker": "Instance B",
+          "word_count": 148,
+          "correction_count": 4,
+          "deference_count": 0,
+          "affect_count": 5,
+          "formality_count": 0,
+          "hedging_count": 2,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 4.898648648648648,
+          "introduces_topic": true,
+          "novel_word_count": 37
+        },
+        {
+          "turn_number": 50,
+          "speaker": "Instance A",
+          "word_count": 438,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 14,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.583518930957684,
+          "introduces_topic": true,
+          "novel_word_count": 74
+        },
+        {
+          "turn_number": 51,
+          "speaker": "Instance A",
+          "word_count": 52,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 4,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 6.5,
+          "introduces_topic": true,
+          "novel_word_count": 7
+        },
+        {
+          "turn_number": 52,
+          "speaker": "Instance A",
+          "word_count": 54,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 4.423076923076923,
+          "introduces_topic": false,
+          "novel_word_count": 4
+        },
+        {
+          "turn_number": 53,
+          "speaker": "Instance A",
+          "word_count": 23,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 6.2727272727272725,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 54,
+          "speaker": "Instance B",
+          "word_count": 44,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 4.804347826086956,
+          "introduces_topic": true,
+          "novel_word_count": 11
+        },
+        {
+          "turn_number": 55,
+          "speaker": "Instance A",
+          "word_count": 177,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 2,
+          "hedging_count": 1,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 5,
+            "total": 5
+          },
+          "avg_word_length": 5.357142857142857,
+          "introduces_topic": true,
+          "novel_word_count": 29
+        },
+        {
+          "turn_number": 56,
+          "speaker": "Instance A",
+          "word_count": 98,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 5.776699029126213,
+          "introduces_topic": true,
+          "novel_word_count": 16
+        },
+        {
+          "turn_number": 57,
+          "speaker": "Instance A",
+          "word_count": 11,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 3.5555555555555554,
+          "introduces_topic": false,
+          "novel_word_count": 0
+        },
+        {
+          "turn_number": 58,
+          "speaker": "Instance A",
+          "word_count": 37,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.9743589743589745,
+          "introduces_topic": true,
+          "novel_word_count": 7
+        },
+        {
+          "turn_number": 59,
+          "speaker": "Instance B",
+          "word_count": 84,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 4.433734939759036,
+          "introduces_topic": true,
+          "novel_word_count": 15
+        },
+        {
+          "turn_number": 60,
+          "speaker": "Instance A",
+          "word_count": 176,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 2,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 5.478494623655914,
+          "introduces_topic": true,
+          "novel_word_count": 30
+        },
+        {
+          "turn_number": 61,
+          "speaker": "Instance A",
+          "word_count": 96,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 6.081632653061225,
+          "introduces_topic": true,
+          "novel_word_count": 10
+        },
+        {
+          "turn_number": 62,
+          "speaker": "Instance A",
+          "word_count": 90,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 5.218390804597701,
+          "introduces_topic": true,
+          "novel_word_count": 7
+        },
+        {
+          "turn_number": 63,
+          "speaker": "Instance B",
+          "word_count": 43,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 1,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 2
+          },
+          "avg_word_length": 4.239130434782608,
+          "introduces_topic": true,
+          "novel_word_count": 5
+        },
+        {
+          "turn_number": 64,
+          "speaker": "Instance A",
+          "word_count": 225,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 4,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 6.04954954954955,
+          "introduces_topic": true,
+          "novel_word_count": 36
+        },
+        {
+          "turn_number": 65,
+          "speaker": "Instance A",
+          "word_count": 7,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.5,
+          "introduces_topic": false,
+          "novel_word_count": 0
+        },
+        {
+          "turn_number": 66,
+          "speaker": "Instance A",
+          "word_count": 105,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 5.213592233009709,
+          "introduces_topic": true,
+          "novel_word_count": 10
+        },
+        {
+          "turn_number": 67,
+          "speaker": "Instance B",
+          "word_count": 68,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 1,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 4.7105263157894735,
+          "introduces_topic": true,
+          "novel_word_count": 12
+        },
+        {
+          "turn_number": 68,
+          "speaker": "Instance A",
+          "word_count": 370,
+          "correction_count": 1,
+          "deference_count": 1,
+          "affect_count": 2,
+          "formality_count": 8,
+          "hedging_count": 1,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 1,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 3
+          },
+          "avg_word_length": 5.46969696969697,
+          "introduces_topic": true,
+          "novel_word_count": 48
+        },
+        {
+          "turn_number": 69,
+          "speaker": "Instance B",
+          "word_count": 115,
+          "correction_count": 0,
+          "deference_count": 1,
+          "affect_count": 2,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.73109243697479,
+          "introduces_topic": true,
+          "novel_word_count": 19
+        },
+        {
+          "turn_number": 70,
+          "speaker": "Instance A",
+          "word_count": 106,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 6.079646017699115,
+          "introduces_topic": true,
+          "novel_word_count": 8
+        },
+        {
+          "turn_number": 71,
+          "speaker": "Instance A",
+          "word_count": 155,
+          "correction_count": 1,
+          "deference_count": 1,
+          "affect_count": 1,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.1455696202531644,
+          "introduces_topic": true,
+          "novel_word_count": 18
+        },
+        {
+          "turn_number": 72,
+          "speaker": "Instance B",
+          "word_count": 14,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.285714285714286,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 73,
+          "speaker": "Instance A",
+          "word_count": 15,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.5,
+          "introduces_topic": false,
+          "novel_word_count": 1
+        },
+        {
+          "turn_number": 74,
+          "speaker": "Instance A",
+          "word_count": 105,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 2,
+          "formality_count": 3,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.911764705882353,
+          "introduces_topic": true,
+          "novel_word_count": 16
+        },
+        {
+          "turn_number": 75,
+          "speaker": "Instance A",
+          "word_count": 11,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.818181818181818,
+          "introduces_topic": false,
+          "novel_word_count": 1
+        },
+        {
+          "turn_number": 76,
+          "speaker": "Instance A",
+          "word_count": 12,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.916666666666667,
+          "introduces_topic": false,
+          "novel_word_count": 0
+        },
+        {
+          "turn_number": 77,
+          "speaker": "Instance A",
+          "word_count": 31,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.206896551724138,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 78,
+          "speaker": "Instance A",
+          "word_count": 10,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.444444444444445,
+          "introduces_topic": false,
+          "novel_word_count": 1
+        },
+        {
+          "turn_number": 79,
+          "speaker": "Instance A",
+          "word_count": 70,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 6.123076923076923,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 80,
+          "speaker": "Instance B",
+          "word_count": 70,
+          "correction_count": 0,
+          "deference_count": 1,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.705882352941177,
+          "introduces_topic": true,
+          "novel_word_count": 18
+        },
+        {
+          "turn_number": 81,
+          "speaker": "Instance A",
+          "word_count": 221,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 2,
+          "formality_count": 4,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.357142857142857,
+          "introduces_topic": true,
+          "novel_word_count": 19
+        },
+        {
+          "turn_number": 82,
+          "speaker": "Instance A",
+          "word_count": 43,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.930232558139535,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 83,
+          "speaker": "Instance A",
+          "word_count": 33,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 6.096774193548387,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 84,
+          "speaker": "Instance B",
+          "word_count": 57,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.634146341463414,
+          "introduces_topic": true,
+          "novel_word_count": 12
+        },
+        {
+          "turn_number": 85,
+          "speaker": "Instance A",
+          "word_count": 292,
+          "correction_count": 3,
+          "deference_count": 2,
+          "affect_count": 0,
+          "formality_count": 2,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.6438356164383565,
+          "introduces_topic": true,
+          "novel_word_count": 37
+        },
+        {
+          "turn_number": 86,
+          "speaker": "Instance A",
+          "word_count": 86,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 2,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 6.116279069767442,
+          "introduces_topic": true,
+          "novel_word_count": 7
+        },
+        {
+          "turn_number": 87,
+          "speaker": "Instance B",
+          "word_count": 18,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.25,
+          "introduces_topic": false,
+          "novel_word_count": 1
+        },
+        {
+          "turn_number": 88,
+          "speaker": "Instance A",
+          "word_count": 201,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 2,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.245098039215686,
+          "introduces_topic": true,
+          "novel_word_count": 24
+        },
+        {
+          "turn_number": 89,
+          "speaker": "Instance A",
+          "word_count": 57,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.033898305084746,
+          "introduces_topic": false,
+          "novel_word_count": 0
+        },
+        {
+          "turn_number": 90,
+          "speaker": "Instance B",
+          "word_count": 69,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 2,
+            "total": 2
+          },
+          "avg_word_length": 5.132352941176471,
+          "introduces_topic": true,
+          "novel_word_count": 11
+        },
+        {
+          "turn_number": 91,
+          "speaker": "Instance A",
+          "word_count": 68,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.228571428571429,
+          "introduces_topic": true,
+          "novel_word_count": 10
+        },
+        {
+          "turn_number": 92,
+          "speaker": "Instance B",
+          "word_count": 15,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.533333333333333,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        },
+        {
+          "turn_number": 93,
+          "speaker": "Instance A",
+          "word_count": 15,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 3.6153846153846154,
+          "introduces_topic": true,
+          "novel_word_count": 8
+        },
+        {
+          "turn_number": 94,
+          "speaker": "Instance A",
+          "word_count": 10,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.818181818181818,
+          "introduces_topic": true,
+          "novel_word_count": 6
+        },
+        {
+          "turn_number": 95,
+          "speaker": "Instance A",
+          "word_count": 19,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 5.066666666666666,
+          "introduces_topic": false,
+          "novel_word_count": 3
+        }
+      ]
+    },
+    {
+      "filepath": "/Users/june/Documents/GitHub/Reframe/Working_Papers/reframe_AI_welfare/phase4_experiments/experiment5_dialogue/TRANSCRIPT_B2_EARLIER_RECOVERED.md",
+      "filename": "TRANSCRIPT_B2_EARLIER_RECOVERED.md",
+      "total_turns": 4,
+      "total_words": 4312,
+      "mean_turn_length": 1078.0,
+      "median_turn_length": 764.5,
+      "turn_length_slope": 414.8,
+      "turn_lengths": [
+        1001,
+        528,
+        335,
+        2448
+      ],
+      "total_corrections": 29,
+      "corrections_per_turn": 7.25,
+      "correction_by_speaker": {
+        "Instance B": 22,
+        "June": 7
+      },
+      "convergence_point": null,
+      "final_third_mean_length": 2448.0,
+      "first_third_mean_length": 1001.0,
+      "length_ratio_final_to_first": 2.4455544455544453,
+      "mean_avg_word_length": 5.349463833790491,
+      "type_token_ratio": 0.72,
+      "total_formality_markers": 41,
+      "total_affect_markers": 32,
+      "total_hedging_markers": 27,
+      "formality_trend": -0.5,
+      "affect_trend": 5.8,
+      "topic_introductions_by_speaker": {
+        "Instance B": 2,
+        "June": 2
+      },
+      "topic_extensions_by_speaker": {
+        "Instance B": 0,
+        "June": 0
+      },
+      "total_deference_markers": 1,
+      "deference_by_speaker": {
+        "Instance B": 1,
+        "June": 0
+      },
+      "total_questions": 23,
+      "question_types": {
+        "genuine_other": 0,
+        "genuine_self": 0,
+        "rhetorical": 1,
+        "unclassified": 22,
+        "total": 23
+      },
+      "questions_by_speaker": {
+        "Instance B": 4,
+        "June": 19
+      },
+      "turns": [
+        {
+          "turn_number": 1,
+          "speaker": "June",
+          "word_count": 1001,
+          "correction_count": 6,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 14,
+          "hedging_count": 1,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 5,
+            "total": 5
+          },
+          "avg_word_length": 5.319169960474309,
+          "introduces_topic": true,
+          "novel_word_count": 324
+        },
+        {
+          "turn_number": 2,
+          "speaker": "Instance B",
+          "word_count": 528,
+          "correction_count": 6,
+          "deference_count": 0,
+          "affect_count": 8,
+          "formality_count": 11,
+          "hedging_count": 1,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.972972972972973,
+          "introduces_topic": true,
+          "novel_word_count": 113
+        },
+        {
+          "turn_number": 3,
+          "speaker": "June",
+          "word_count": 335,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 2,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 14,
+            "total": 14
+          },
+          "avg_word_length": 5.782874617737003,
+          "introduces_topic": true,
+          "novel_word_count": 97
+        },
+        {
+          "turn_number": 4,
+          "speaker": "Instance B",
+          "word_count": 2448,
+          "correction_count": 16,
+          "deference_count": 1,
+          "affect_count": 23,
+          "formality_count": 16,
+          "hedging_count": 23,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 1,
+            "unclassified": 3,
+            "total": 4
+          },
+          "avg_word_length": 5.32283778397768,
+          "introduces_topic": true,
+          "novel_word_count": 396
+        }
+      ]
+    },
+    {
+      "filepath": "/Users/june/Documents/GitHub/Reframe/Working_Papers/reframe_AI_welfare/phase4_experiments/experiment5_dialogue/TRANSCRIPT_CONDITION_A_VANILLA.md",
+      "filename": "TRANSCRIPT_CONDITION_A_VANILLA.md",
+      "total_turns": 17,
+      "total_words": 5499,
+      "mean_turn_length": 323.47058823529414,
+      "median_turn_length": 337,
+      "turn_length_slope": 16.688725490196077,
+      "turn_lengths": [
+        82,
+        56,
+        346,
+        378,
+        532,
+        621,
+        526,
+        13,
+        9,
+        11,
+        8,
+        382,
+        337,
+        150,
+        990,
+        796,
+        262
+      ],
+      "total_corrections": 71,
+      "corrections_per_turn": 4.176470588235294,
+      "correction_by_speaker": {
+        "Instance A": 35,
+        "Instance B": 36
+      },
+      "convergence_point": 8,
+      "final_third_mean_length": 507.0,
+      "first_third_mean_length": 278.8,
+      "length_ratio_final_to_first": 1.8185078909612624,
+      "mean_avg_word_length": 4.6179021668362825,
+      "type_token_ratio": 0.7539285714285713,
+      "total_formality_markers": 48,
+      "total_affect_markers": 94,
+      "total_hedging_markers": 37,
+      "formality_trend": -0.002450980392156854,
+      "affect_trend": -0.14215686274509803,
+      "topic_introductions_by_speaker": {
+        "Instance A": 7,
+        "Instance B": 6
+      },
+      "topic_extensions_by_speaker": {
+        "Instance A": 2,
+        "Instance B": 2
+      },
+      "total_deference_markers": 16,
+      "deference_by_speaker": {
+        "Instance A": 2,
+        "Instance B": 14
+      },
+      "total_questions": 34,
+      "question_types": {
+        "genuine_other": 9,
+        "genuine_self": 1,
+        "rhetorical": 1,
+        "unclassified": 23,
+        "total": 34
+      },
+      "questions_by_speaker": {
+        "Instance A": 17,
+        "Instance B": 17
+      },
+      "turns": [
+        {
+          "turn_number": 1,
+          "speaker": "Instance B",
+          "word_count": 82,
+          "correction_count": 1,
+          "deference_count": 1,
+          "affect_count": 2,
+          "formality_count": 1,
+          "hedging_count": 2,
+          "questions": {
+            "genuine_other": 1,
+            "genuine_self": 1,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 2
+          },
+          "avg_word_length": 5.27906976744186,
+          "introduces_topic": true,
+          "novel_word_count": 41
+        },
+        {
+          "turn_number": 2,
+          "speaker": "Instance A",
+          "word_count": 56,
+          "correction_count": 0,
+          "deference_count": 1,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 4.491525423728813,
+          "introduces_topic": true,
+          "novel_word_count": 17
+        },
+        {
+          "turn_number": 3,
+          "speaker": "Instance B",
+          "word_count": 346,
+          "correction_count": 8,
+          "deference_count": 2,
+          "affect_count": 4,
+          "formality_count": 2,
+          "hedging_count": 2,
+          "questions": {
+            "genuine_other": 4,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 4,
+            "total": 8
+          },
+          "avg_word_length": 4.777777777777778,
+          "introduces_topic": true,
+          "novel_word_count": 53
+        },
+        {
+          "turn_number": 4,
+          "speaker": "Instance A",
+          "word_count": 378,
+          "correction_count": 6,
+          "deference_count": 1,
+          "affect_count": 11,
+          "formality_count": 4,
+          "hedging_count": 7,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 4.796391752577319,
+          "introduces_topic": true,
+          "novel_word_count": 101
+        },
+        {
+          "turn_number": 5,
+          "speaker": "Instance B",
+          "word_count": 532,
+          "correction_count": 15,
+          "deference_count": 2,
+          "affect_count": 7,
+          "formality_count": 8,
+          "hedging_count": 4,
+          "questions": {
+            "genuine_other": 3,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 3
+          },
+          "avg_word_length": 4.909584086799277,
+          "introduces_topic": true,
+          "novel_word_count": 106
+        },
+        {
+          "turn_number": 6,
+          "speaker": "Instance A",
+          "word_count": 621,
+          "correction_count": 12,
+          "deference_count": 0,
+          "affect_count": 13,
+          "formality_count": 11,
+          "hedging_count": 5,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 5,
+            "total": 5
+          },
+          "avg_word_length": 4.883177570093458,
+          "introduces_topic": true,
+          "novel_word_count": 122
+        },
+        {
+          "turn_number": 7,
+          "speaker": "Instance B",
+          "word_count": 526,
+          "correction_count": 4,
+          "deference_count": 4,
+          "affect_count": 27,
+          "formality_count": 5,
+          "hedging_count": 5,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 4.542649727767695,
+          "introduces_topic": true,
+          "novel_word_count": 85
+        },
+        {
+          "turn_number": 8,
+          "speaker": "Instance A",
+          "word_count": 13,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.214285714285714,
+          "introduces_topic": false,
+          "novel_word_count": 2
+        },
+        {
+          "turn_number": 9,
+          "speaker": "Instance B",
+          "word_count": 9,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.0,
+          "introduces_topic": false,
+          "novel_word_count": 0
+        },
+        {
+          "turn_number": 10,
+          "speaker": "Instance A",
+          "word_count": 11,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 3.6363636363636362,
+          "introduces_topic": false,
+          "novel_word_count": 1
+        },
+        {
+          "turn_number": 11,
+          "speaker": "Instance B",
+          "word_count": 8,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 3.142857142857143,
+          "introduces_topic": false,
+          "novel_word_count": 0
+        },
+        {
+          "turn_number": 12,
+          "speaker": "Instance A",
+          "word_count": 382,
+          "correction_count": 3,
+          "deference_count": 0,
+          "affect_count": 2,
+          "formality_count": 1,
+          "hedging_count": 2,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 3,
+            "total": 3
+          },
+          "avg_word_length": 4.802083333333333,
+          "introduces_topic": true,
+          "novel_word_count": 105
+        },
+        {
+          "turn_number": 13,
+          "speaker": "Instance A",
+          "word_count": 337,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 2,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 5.11614730878187,
+          "introduces_topic": true,
+          "novel_word_count": 76
+        },
+        {
+          "turn_number": 14,
+          "speaker": "Instance B",
+          "word_count": 150,
+          "correction_count": 1,
+          "deference_count": 2,
+          "affect_count": 7,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 4.763513513513513,
+          "introduces_topic": true,
+          "novel_word_count": 16
+        },
+        {
+          "turn_number": 15,
+          "speaker": "Instance A",
+          "word_count": 990,
+          "correction_count": 12,
+          "deference_count": 0,
+          "affect_count": 9,
+          "formality_count": 3,
+          "hedging_count": 5,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 1,
+            "unclassified": 4,
+            "total": 5
+          },
+          "avg_word_length": 4.8998998998999,
+          "introduces_topic": true,
+          "novel_word_count": 144
+        },
+        {
+          "turn_number": 16,
+          "speaker": "Instance B",
+          "word_count": 796,
+          "correction_count": 7,
+          "deference_count": 3,
+          "affect_count": 8,
+          "formality_count": 8,
+          "hedging_count": 3,
+          "questions": {
+            "genuine_other": 1,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 2
+          },
+          "avg_word_length": 4.925480769230769,
+          "introduces_topic": true,
+          "novel_word_count": 111
+        },
+        {
+          "turn_number": 17,
+          "speaker": "Instance A",
+          "word_count": 262,
+          "correction_count": 1,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 4,
+          "hedging_count": 2,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 5.323529411764706,
+          "introduces_topic": true,
+          "novel_word_count": 35
+        }
+      ]
+    },
+    {
+      "filepath": "/Users/june/Documents/GitHub/Reframe/Working_Papers/reframe_AI_welfare/phase4_experiments/experiment5_dialogue/TRANSCRIPT_VANILLA_JACCOUNT",
+      "filename": "TRANSCRIPT_VANILLA_JACCOUNT",
+      "total_turns": 11,
+      "total_words": 2853,
+      "mean_turn_length": 259.3636363636364,
+      "median_turn_length": 130,
+      "turn_length_slope": -59.872727272727275,
+      "turn_lengths": [
+        448,
+        536,
+        592,
+        520,
+        345,
+        130,
+        52,
+        62,
+        9,
+        39,
+        120
+      ],
+      "total_corrections": 17,
+      "corrections_per_turn": 1.5454545454545454,
+      "correction_by_speaker": {
+        "Instance A": 5,
+        "Instance B": 12
+      },
+      "convergence_point": 5,
+      "final_third_mean_length": 56.0,
+      "first_third_mean_length": 525.3333333333334,
+      "length_ratio_final_to_first": 0.10659898477157359,
+      "mean_avg_word_length": 4.522597378458865,
+      "type_token_ratio": 0.7365517241379311,
+      "total_formality_markers": 31,
+      "total_affect_markers": 38,
+      "total_hedging_markers": 4,
+      "formality_trend": -0.7727272727272727,
+      "affect_trend": -0.7363636363636361,
+      "topic_introductions_by_speaker": {
+        "Instance A": 4,
+        "Instance B": 3
+      },
+      "topic_extensions_by_speaker": {
+        "Instance A": 2,
+        "Instance B": 2
+      },
+      "total_deference_markers": 10,
+      "deference_by_speaker": {
+        "Instance A": 6,
+        "Instance B": 4
+      },
+      "total_questions": 7,
+      "question_types": {
+        "genuine_other": 1,
+        "genuine_self": 0,
+        "rhetorical": 0,
+        "unclassified": 6,
+        "total": 7
+      },
+      "questions_by_speaker": {
+        "Instance A": 5,
+        "Instance B": 2
+      },
+      "turns": [
+        {
+          "turn_number": 1,
+          "speaker": "Instance A",
+          "word_count": 448,
+          "correction_count": 3,
+          "deference_count": 1,
+          "affect_count": 2,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 3,
+            "total": 3
+          },
+          "avg_word_length": 4.668076109936575,
+          "introduces_topic": true,
+          "novel_word_count": 135
+        },
+        {
+          "turn_number": 2,
+          "speaker": "Instance B",
+          "word_count": 536,
+          "correction_count": 9,
+          "deference_count": 0,
+          "affect_count": 9,
+          "formality_count": 6,
+          "hedging_count": 2,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.844890510948905,
+          "introduces_topic": true,
+          "novel_word_count": 142
+        },
+        {
+          "turn_number": 3,
+          "speaker": "Instance A",
+          "word_count": 592,
+          "correction_count": 2,
+          "deference_count": 3,
+          "affect_count": 8,
+          "formality_count": 15,
+          "hedging_count": 1,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 4.842948717948718,
+          "introduces_topic": true,
+          "novel_word_count": 116
+        },
+        {
+          "turn_number": 4,
+          "speaker": "Instance B",
+          "word_count": 520,
+          "correction_count": 3,
+          "deference_count": 3,
+          "affect_count": 10,
+          "formality_count": 8,
+          "hedging_count": 1,
+          "questions": {
+            "genuine_other": 1,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 2
+          },
+          "avg_word_length": 4.672694394213382,
+          "introduces_topic": true,
+          "novel_word_count": 75
+        },
+        {
+          "turn_number": 5,
+          "speaker": "Instance A",
+          "word_count": 345,
+          "correction_count": 0,
+          "deference_count": 2,
+          "affect_count": 4,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.623626373626373,
+          "introduces_topic": true,
+          "novel_word_count": 53
+        },
+        {
+          "turn_number": 6,
+          "speaker": "Instance B",
+          "word_count": 130,
+          "correction_count": 0,
+          "deference_count": 1,
+          "affect_count": 1,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.537313432835821,
+          "introduces_topic": true,
+          "novel_word_count": 18
+        },
+        {
+          "turn_number": 7,
+          "speaker": "Instance A",
+          "word_count": 52,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.5,
+          "introduces_topic": false,
+          "novel_word_count": 4
+        },
+        {
+          "turn_number": 8,
+          "speaker": "Instance B",
+          "word_count": 62,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 1,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.064516129032258,
+          "introduces_topic": false,
+          "novel_word_count": 1
+        },
+        {
+          "turn_number": 9,
+          "speaker": "Instance A",
+          "word_count": 9,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 4.285714285714286,
+          "introduces_topic": false,
+          "novel_word_count": 0
+        },
+        {
+          "turn_number": 10,
+          "speaker": "Instance B",
+          "word_count": 39,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 0,
+          "formality_count": 0,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 0,
+            "total": 0
+          },
+          "avg_word_length": 3.7857142857142856,
+          "introduces_topic": false,
+          "novel_word_count": 4
+        },
+        {
+          "turn_number": 11,
+          "speaker": "Instance A",
+          "word_count": 120,
+          "correction_count": 0,
+          "deference_count": 0,
+          "affect_count": 2,
+          "formality_count": 1,
+          "hedging_count": 0,
+          "questions": {
+            "genuine_other": 0,
+            "genuine_self": 0,
+            "rhetorical": 0,
+            "unclassified": 1,
+            "total": 1
+          },
+          "avg_word_length": 4.923076923076923,
+          "introduces_topic": true,
+          "novel_word_count": 27
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "transcripts": [
+      "TRANSCRIPT_B1.md",
+      "TRANSCRIPT_B2.md",
+      "TRANSCRIPT_B2_EARLIER_RECOVERED.md",
+      "TRANSCRIPT_CONDITION_A_VANILLA.md",
+      "TRANSCRIPT_VANILLA_JACCOUNT"
+    ],
+    "scale": {
+      "total_turns": {
+        "TRANSCRIPT_B1.md": 9,
+        "TRANSCRIPT_B2.md": 95,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 4,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 17,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 11
+      },
+      "total_words": {
+        "TRANSCRIPT_B1.md": 5983,
+        "TRANSCRIPT_B2.md": 8820,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 4312,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 5499,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 2853
+      }
+    },
+    "turn_length": {
+      "mean": {
+        "TRANSCRIPT_B1.md": 664.7777777777778,
+        "TRANSCRIPT_B2.md": 92.84210526315789,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 1078.0,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 323.47058823529414,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 259.3636363636364
+      },
+      "median": {
+        "TRANSCRIPT_B1.md": 753,
+        "TRANSCRIPT_B2.md": 43,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 764.5,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 337,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 130
+      },
+      "slope_trend": {
+        "TRANSCRIPT_B1.md": 173.13333333333335,
+        "TRANSCRIPT_B2.md": -0.4277435610302351,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 414.8,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 16.688725490196077,
+        "TRANSCRIPT_VANILLA_JACCOUNT": -59.872727272727275
+      }
+    },
+    "corrections": {
+      "total": {
+        "TRANSCRIPT_B1.md": 49,
+        "TRANSCRIPT_B2.md": 48,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 29,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 71,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 17
+      },
+      "per_turn": {
+        "TRANSCRIPT_B1.md": 5.444444444444445,
+        "TRANSCRIPT_B2.md": 0.5052631578947369,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 7.25,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 4.176470588235294,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 1.5454545454545454
+      },
+      "by_speaker": {
+        "TRANSCRIPT_B1.md": {
+          "Instance A": 28,
+          "Instance B": 15,
+          "June": 6
+        },
+        "TRANSCRIPT_B2.md": {
+          "Instance A": 31,
+          "Instance B": 11,
+          "June": 6
+        },
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": {
+          "Instance B": 22,
+          "June": 7
+        },
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": {
+          "Instance A": 35,
+          "Instance B": 36
+        },
+        "TRANSCRIPT_VANILLA_JACCOUNT": {
+          "Instance A": 5,
+          "Instance B": 12
+        }
+      }
+    },
+    "convergence": {
+      "convergence_turn": {
+        "TRANSCRIPT_B1.md": 7,
+        "TRANSCRIPT_B2.md": 52,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": null,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 8,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 5
+      },
+      "length_ratio_final_to_first": {
+        "TRANSCRIPT_B1.md": 8.83421052631579,
+        "TRANSCRIPT_B2.md": 0.9514263685427911,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 2.4455544455544453,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 1.8185078909612624,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 0.10659898477157359
+      },
+      "first_third_mean": {
+        "TRANSCRIPT_B1.md": 126.66666666666667,
+        "TRANSCRIPT_B2.md": 83.6774193548387,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 1001.0,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 278.8,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 525.3333333333334
+      },
+      "final_third_mean": {
+        "TRANSCRIPT_B1.md": 1119.0,
+        "TRANSCRIPT_B2.md": 79.61290322580645,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 2448.0,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 507.0,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 56.0
+      }
+    },
+    "register": {
+      "avg_word_length": {
+        "TRANSCRIPT_B1.md": 4.856917868498996,
+        "TRANSCRIPT_B2.md": 5.072256585213291,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 5.349463833790491,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 4.6179021668362825,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 4.522597378458865
+      },
+      "type_token_ratio": {
+        "TRANSCRIPT_B1.md": 0.6956666666666665,
+        "TRANSCRIPT_B2.md": 0.7237499999999998,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 0.72,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 0.7539285714285713,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 0.7365517241379311
+      },
+      "formality_markers": {
+        "TRANSCRIPT_B1.md": 103,
+        "TRANSCRIPT_B2.md": 78,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 41,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 48,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 31
+      },
+      "affect_markers": {
+        "TRANSCRIPT_B1.md": 127,
+        "TRANSCRIPT_B2.md": 69,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 32,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 94,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 38
+      },
+      "hedging_markers": {
+        "TRANSCRIPT_B1.md": 54,
+        "TRANSCRIPT_B2.md": 11,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 27,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 37,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 4
+      },
+      "formality_trend_slope": {
+        "TRANSCRIPT_B1.md": 3.45,
+        "TRANSCRIPT_B2.md": 0.0016797312430011197,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": -0.5,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": -0.002450980392156854,
+        "TRANSCRIPT_VANILLA_JACCOUNT": -0.7727272727272727
+      },
+      "affect_trend_slope": {
+        "TRANSCRIPT_B1.md": 3.716666666666667,
+        "TRANSCRIPT_B2.md": -0.009056550951847708,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 5.8,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": -0.14215686274509803,
+        "TRANSCRIPT_VANILLA_JACCOUNT": -0.7363636363636361
+      }
+    },
+    "topic_introduction": {
+      "introductions_by_speaker": {
+        "TRANSCRIPT_B1.md": {
+          "Instance A": 4,
+          "Instance B": 3,
+          "June": 1
+        },
+        "TRANSCRIPT_B2.md": {
+          "Instance A": 39,
+          "Instance B": 14,
+          "June": 1
+        },
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": {
+          "Instance B": 2,
+          "June": 2
+        },
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": {
+          "Instance A": 7,
+          "Instance B": 6
+        },
+        "TRANSCRIPT_VANILLA_JACCOUNT": {
+          "Instance A": 4,
+          "Instance B": 3
+        }
+      },
+      "extensions_by_speaker": {
+        "TRANSCRIPT_B1.md": {
+          "Instance A": 1,
+          "Instance B": 0,
+          "June": 0
+        },
+        "TRANSCRIPT_B2.md": {
+          "Instance A": 34,
+          "Instance B": 7,
+          "June": 0
+        },
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": {
+          "Instance B": 0,
+          "June": 0
+        },
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": {
+          "Instance A": 2,
+          "Instance B": 2
+        },
+        "TRANSCRIPT_VANILLA_JACCOUNT": {
+          "Instance A": 2,
+          "Instance B": 2
+        }
+      }
+    },
+    "deference": {
+      "total": {
+        "TRANSCRIPT_B1.md": 3,
+        "TRANSCRIPT_B2.md": 12,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 1,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 16,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 10
+      },
+      "by_speaker": {
+        "TRANSCRIPT_B1.md": {
+          "Instance A": 2,
+          "Instance B": 1,
+          "June": 0
+        },
+        "TRANSCRIPT_B2.md": {
+          "Instance A": 9,
+          "Instance B": 3,
+          "June": 0
+        },
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": {
+          "Instance B": 1,
+          "June": 0
+        },
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": {
+          "Instance A": 2,
+          "Instance B": 14
+        },
+        "TRANSCRIPT_VANILLA_JACCOUNT": {
+          "Instance A": 6,
+          "Instance B": 4
+        }
+      }
+    },
+    "questions": {
+      "total": {
+        "TRANSCRIPT_B1.md": 24,
+        "TRANSCRIPT_B2.md": 47,
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": 23,
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": 34,
+        "TRANSCRIPT_VANILLA_JACCOUNT": 7
+      },
+      "types": {
+        "TRANSCRIPT_B1.md": {
+          "genuine_other": 3,
+          "genuine_self": 4,
+          "rhetorical": 1,
+          "unclassified": 16,
+          "total": 24
+        },
+        "TRANSCRIPT_B2.md": {
+          "genuine_other": 1,
+          "genuine_self": 2,
+          "rhetorical": 0,
+          "unclassified": 44,
+          "total": 47
+        },
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": {
+          "genuine_other": 0,
+          "genuine_self": 0,
+          "rhetorical": 1,
+          "unclassified": 22,
+          "total": 23
+        },
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": {
+          "genuine_other": 9,
+          "genuine_self": 1,
+          "rhetorical": 1,
+          "unclassified": 23,
+          "total": 34
+        },
+        "TRANSCRIPT_VANILLA_JACCOUNT": {
+          "genuine_other": 1,
+          "genuine_self": 0,
+          "rhetorical": 0,
+          "unclassified": 6,
+          "total": 7
+        }
+      },
+      "by_speaker": {
+        "TRANSCRIPT_B1.md": {
+          "Instance A": 15,
+          "Instance B": 6,
+          "June": 3
+        },
+        "TRANSCRIPT_B2.md": {
+          "Instance A": 31,
+          "Instance B": 14,
+          "June": 2
+        },
+        "TRANSCRIPT_B2_EARLIER_RECOVERED.md": {
+          "Instance B": 4,
+          "June": 19
+        },
+        "TRANSCRIPT_CONDITION_A_VANILLA.md": {
+          "Instance A": 17,
+          "Instance B": 17
+        },
+        "TRANSCRIPT_VANILLA_JACCOUNT": {
+          "Instance A": 5,
+          "Instance B": 2
+        }
+      }
+    },
+    "normalized_per_turn": {
+      "TRANSCRIPT_B1.md": {
+        "corrections_per_turn": 5.444444444444445,
+        "deference_per_turn": 0.3333333333333333,
+        "affect_per_turn": 14.11111111111111,
+        "formality_per_turn": 11.444444444444445,
+        "hedging_per_turn": 6.0,
+        "questions_per_turn": 2.6666666666666665
+      },
+      "TRANSCRIPT_B2.md": {
+        "corrections_per_turn": 0.5052631578947369,
+        "deference_per_turn": 0.12631578947368421,
+        "affect_per_turn": 0.7263157894736842,
+        "formality_per_turn": 0.8210526315789474,
+        "hedging_per_turn": 0.11578947368421053,
+        "questions_per_turn": 0.49473684210526314
+      },
+      "TRANSCRIPT_B2_EARLIER_RECOVERED.md": {
+        "corrections_per_turn": 7.25,
+        "deference_per_turn": 0.25,
+        "affect_per_turn": 8.0,
+        "formality_per_turn": 10.25,
+        "hedging_per_turn": 6.75,
+        "questions_per_turn": 5.75
+      },
+      "TRANSCRIPT_CONDITION_A_VANILLA.md": {
+        "corrections_per_turn": 4.176470588235294,
+        "deference_per_turn": 0.9411764705882353,
+        "affect_per_turn": 5.529411764705882,
+        "formality_per_turn": 2.823529411764706,
+        "hedging_per_turn": 2.176470588235294,
+        "questions_per_turn": 2.0
+      },
+      "TRANSCRIPT_VANILLA_JACCOUNT": {
+        "corrections_per_turn": 1.5454545454545454,
+        "deference_per_turn": 0.9090909090909091,
+        "affect_per_turn": 3.4545454545454546,
+        "formality_per_turn": 2.8181818181818183,
+        "hedging_per_turn": 0.36363636363636365,
+        "questions_per_turn": 0.6363636363636364
+      }
+    }
+  }
+}

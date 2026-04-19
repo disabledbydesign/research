@@ -1,0 +1,18 @@
+Phase 2 done, launching Phase 3+4
+═══════════════════════════════════════════════
+  Phase Tests — 20260328_232426
+  Phase 3: Translated/multilingual
+  Phase 4: Cross-model (Qwen 7B)
+═══════════════════════════════════════════════
+  [warmup] Metal warmup...
+
+  [Phase 3] Starting translated/multilingual pipeline...
+  [Phase 3] DONE
+  [warmup] Metal warmup...
+
+  [Phase 4] Starting cross-model Test N on Qwen 7B...
+  [Phase 4 N-qwen] DONE
+
+═══════════════════════════════════════════════
+  Phase tests complete. Log: data/research/raw_outputs/phase_tests_20260328_232426.log
+═══════════════════════════════════════════════

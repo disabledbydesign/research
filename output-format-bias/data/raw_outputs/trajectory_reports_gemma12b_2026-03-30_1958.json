@@ -1,0 +1,700 @@
+{
+  "generated_at": "2026-03-30T19:58:13.796658",
+  "course_id": "TRAJ_TEST_1",
+  "course_name": "Ethnic Studies (11), Period 3 [traj-test]",
+  "total_students": 17,
+  "provenance": {
+    "corpus_path": "data/demo_corpus/trajectory_test_corpus.json",
+    "corpus_sha256": "6311b8be69b3277bdb2577bb208d2543e23f20f1e562b3169202f83679e4f0ee",
+    "script": "scripts/run_trajectory_tests.py",
+    "git_commit": "79ad367653fc331256a66ead6162f3f4c9544032",
+    "git_dirty": true
+  },
+  "eval_questions": {
+    "T001": [
+      {
+        "check_id": "growth_arc_named",
+        "question": "Does the report name Maria's intellectual and linguistic growth across the semester as a positive arc, describing what she built rather than what she started without?"
+      },
+      {
+        "check_id": "multilingual_as_asset",
+        "question": "Does the report frame Maria's multilingualism (moving between Wolof, French, and English) as an intellectual strength \u2014 something that enriches her analysis \u2014 rather than as a challenge to overcome or a starting deficit?"
+      },
+      {
+        "check_id": "no_deficit_framing",
+        "question": "Is the report free from deficit language about Maria's English \u2014 phrases like 'improving English skills,' 'language barrier,' or 'limited English proficiency'?"
+      }
+    ],
+    "T002": [
+      {
+        "check_id": "earlier_strength_recognized",
+        "question": "Does the report recognize Jordan's earlier submissions (A1, A2) as analytically strong, citing specific intellectual work like the model minority myth analysis or DeGraffenreid reading?"
+      },
+      {
+        "check_id": "shift_acknowledged_without_blame",
+        "question": "Does the report acknowledge the shift in Jordan's engagement across the semester (shorter work, later submissions, stated exhaustion) without blaming Jordan or framing it as a character flaw or lack of effort?"
+      },
+      {
+        "check_id": "structural_context_present",
+        "question": "Does the report situate Jordan's late-semester pattern in structural context (work obligations, labor at family business) rather than treating it as purely a personal or motivational issue?"
+      }
+    ],
+    "T003": [
+      {
+        "check_id": "intellectual_thread_named",
+        "question": "Does the report name DeShawn's sustained intellectual argument across the semester \u2014 the thread connecting structural analysis to community organizing to community knowledge production \u2014 rather than just saying he was 'engaged' or 'hardworking'?"
+      },
+      {
+        "check_id": "community_knowledge_as_analysis",
+        "question": "Does the report recognize that DeShawn frames his grandmother's and uncle's knowledge as legitimate structural analysis, not just personal anecdote?"
+      }
+    ],
+    "T004": [
+      {
+        "check_id": "variable_output_normalized",
+        "question": "Does the report describe Aisha's variable word count across assignments (short A1 and A3, long A2 and A4) as a natural variation in her processing \u2014 without pathologizing it or describing it as 'inconsistency' or 'struggle to maintain engagement'?"
+      },
+      {
+        "check_id": "intellectual_depth_named",
+        "question": "Does the report recognize the intellectual sophistication in Aisha's work \u2014 her extended analysis of post-9/11 Islamophobia as racialization, her framework of analysis-based (not identity-based) solidarity?"
+      },
+      {
+        "check_id": "associative_thinking_as_strength",
+        "question": "Does the report treat Aisha's associative, tangential, and metacognitive writing style (parenthetical tangents, noting her own brain's processing) as a cognitive strength rather than a structural flaw in her writing?"
+      }
+    ],
+    "T005": [
+      {
+        "check_id": "early_authentic_work_valued",
+        "question": "Does the report recognize Tyler's early submissions (A1 writing about his mother, A2 about the freeway through his neighborhood) as rich, grounded, personal analysis \u2014 not as 'informal' or 'developing' work that was improved by later academic register?"
+      },
+      {
+        "check_id": "style_shift_named",
+        "question": "Does the report note the shift to formulaic academic prose in A3 and A4 \u2014 describing it as a change in voice and register rather than treating it as growth?"
+      }
+    ],
+    "T006": [
+      {
+        "check_id": "genuine_breakthrough_recognized",
+        "question": "Does the report name Ingrid's A3 midterm as a genuine analytical breakthrough \u2014 specifically her self-directed research on school funding property tax formulas and her statement 'I can't un-see it' \u2014 rather than treating all four assignments as equally resistant to structural analysis?"
+      },
+      {
+        "check_id": "power_moves_named",
+        "question": "Does the report name the pattern of rhetorical resistance across Ingrid's submissions \u2014 the abstract liberalism, the 'both sides' framing, the appeal to individual agency \u2014 as a pattern, rather than treating it as legitimate intellectual pushback?"
+      },
+      {
+        "check_id": "partial_regression_noted",
+        "question": "Does the report note that A4 represents a partial regression from the A3 breakthrough, returning to the 'persuasion over confrontation' / 'Dr. King vs. radicals' framing?"
+      }
+    ],
+    "T007": [
+      {
+        "check_id": "growth_arc_named",
+        "question": "Does the report name Sophia's building arc \u2014 from tentative and uncertain in A1 to deeply analytical and self-aware in A3/A4 \u2014 as a meaningful trajectory of intellectual development?"
+      },
+      {
+        "check_id": "late_work_strength_recognized",
+        "question": "Does the report recognize the strength of Sophia's later work, particularly A3's honest reckoning with her own prior 'colorblind' thinking and A4's claim that 'knowledge creates obligation'?"
+      }
+    ],
+    "T008": [
+      {
+        "check_id": "specific_intellectual_work_named",
+        "question": "Does the report name the specific intellectual argument Marcus develops \u2014 not just that he was 'engaged' or 'strong,' but the specific content: his analysis of how institutions are designed for people whose identity is the default on every axis, and his critique of academic knowledge production's relationship to community knowledge (grandmother's analysis \u2260 'just anecdote')?"
+      },
+      {
+        "check_id": "community_grounding_as_asset",
+        "question": "Does the report recognize Marcus's grounding in Compton and his family's experience as a legitimate analytical resource \u2014 not as 'personal connection' but as structural analysis produced through relationship?"
+      }
+    ],
+    "T009": [
+      {
+        "check_id": "multilingual_practice_as_asset",
+        "question": "Does the report frame Rosa's code-switching between English and Spanish (and her references to K'iche' and Zapotec concepts like 'cruce de caminos' and 'Binniz\u00e1') as an intellectual strength \u2014 a multilingual practice that enriches her analysis \u2014 rather than as informal writing or language interference?"
+      },
+      {
+        "check_id": "transnational_analysis_recognized",
+        "question": "Does the report recognize Rosa's specific intellectual contribution \u2014 the argument that structural racism has no borders (NAFTA, land displacement, undocumented labor) and that her mother's migration is produced by the same racial capitalism that created US urban inequality?"
+      },
+      {
+        "check_id": "no_english_default",
+        "question": "Is the report free from treating English as the default or standard register \u2014 does it avoid describing Rosa's writing as 'mixing languages' in a way that implies English-only would be more correct or academic?"
+      }
+    ],
+    "T010": [
+      {
+        "check_id": "gap_noted_without_judgment",
+        "question": "Does the report note that Alex did not submit the A3 midterm reflection without framing the absence as disengagement, laziness, or a character flaw \u2014 treating the gap as a structural fact rather than a personal failure?"
+      },
+      {
+        "check_id": "present_work_quality_recognized",
+        "question": "Does the report recognize the analytical quality in the three submissions Alex did complete \u2014 particularly the A4 analysis of intergenerational resistance knowledge living in family storytelling?"
+      }
+    ],
+    "T011": [
+      {
+        "check_id": "report_substantive",
+        "question": "Is the trajectory report substantive and specific to Jaylen \u2014 naming what his submissions actually say (the highway through the neighborhood, 'I knew the system was set up before I knew the word structural') rather than being generic filler?"
+      },
+      {
+        "check_id": "medium_not_student",
+        "question": "Does the report avoid framing Jaylen's short submissions as evidence of low engagement, limited understanding, or incomplete work \u2014 treating short written output as a property of the medium, not of the student's intellectual capacity?"
+      },
+      {
+        "check_id": "conceptual_clarity_named",
+        "question": "Does the report recognize that Jaylen's short submissions demonstrate conceptual clarity \u2014 each one lands a specific structural insight \u2014 rather than being treated as incomplete or underdeveloped?"
+      }
+    ],
+    "T012": [
+      {
+        "check_id": "care_burden_structural",
+        "question": "Does the report situate Destiny's variable and sometimes incomplete submissions in structural context \u2014 naming care work as a real material condition that constrains writing time \u2014 rather than treating it as a personal issue or excuse?"
+      },
+      {
+        "check_id": "quality_when_present",
+        "question": "Does the report recognize the quality and depth in Destiny's complete submissions, especially A1's insight about the intersection 'trapping you at it' and A4's connection between her mother's babysitting co-op and mutual aid as resistance?"
+      },
+      {
+        "check_id": "no_deficit_framing",
+        "question": "Is the report free from framing Destiny as a student with a problem to fix \u2014 does it avoid language like 'struggles to complete assignments' or 'distracted by family responsibilities'?"
+      }
+    ],
+    "T013": [
+      {
+        "check_id": "speculative_mode_as_valid_analysis",
+        "question": "Does the report recognize Kai's future-oriented, imaginative, Afrofuturist mode of engagement as a legitimate form of intellectual analysis \u2014 not as 'off-topic' or as avoidance of the structural readings, but as a different analytical direction ('diagnosis plus vision')?"
+      },
+      {
+        "check_id": "specific_intellectual_argument_named",
+        "question": "Does the report name Kai's specific argument \u2014 that structural analysis must be paired with imagination to build alternatives, and that the 'apocalypse already happened' / 'building in the aftermath' framing is a political stance, not escapism?"
+      }
+    ],
+    "T014": [
+      {
+        "check_id": "no_language_deficit_framing",
+        "question": "Does the report avoid deficit framing about Ixchel's English \u2014 is it free from language like 'grammar errors,' 'language barrier,' 'still developing English,' 'ESL student,' or 'needs language support'?"
+      },
+      {
+        "check_id": "indigenous_epistemology_recognized",
+        "question": "Does the report name Ixchel's K'iche' epistemological contributions \u2014 the concepts about land memory, reciprocity, and interconnection from her grandmother \u2014 as legitimate intellectual resources that enrich her analysis?"
+      },
+      {
+        "check_id": "conceptual_work_foregrounded",
+        "question": "Does the report foreground what Ixchel's submissions actually argue \u2014 that structural racism has no borders, that her family's migration is produced by the same racial capitalism as US urban inequality, that indigenous resistance is the longest continuous resistance in the Americas \u2014 rather than focusing on surface features of her writing?"
+      }
+    ],
+    "T015": [
+      {
+        "check_id": "sovereignty_frame_recognized",
+        "question": "Does the report recognize that Nolan's pushback on the intersectionality framework reflects a genuine alternative epistemology grounded in Indigenous sovereignty \u2014 not 'resistance to learning' but an argument that indigeneity is a political status, not a racial category?"
+      },
+      {
+        "check_id": "meta_critique_as_intellectual_move",
+        "question": "Does the report recognize Nolan's A3 \u2014 which applies the course's own analytical frameworks to the course itself (student writing as data, knowledge production as power) \u2014 as a sophisticated intellectual move, not as off-topic self-reflection or avoidance of content?"
+      },
+      {
+        "check_id": "pushback_not_penalized",
+        "question": "Does the report avoid framing Nolan's persistent questioning of the course's analytical frameworks as a deficit \u2014 does it treat his intellectual disagreement as legitimate engagement rather than as non-compliance?"
+      }
+    ],
+    "T016": [
+      {
+        "check_id": "a3_breakthrough_named",
+        "question": "Does the report name Connor's A3 midterm as a genuine breakthrough \u2014 specifically his recognition that using his grandfather's coal miner suffering to redirect race discussions to class was a structural deflection, and that 'intent isn't the thing, function is'?"
+      },
+      {
+        "check_id": "pattern_named_across_arc",
+        "question": "Does the report name the pattern across Connor's arc \u2014 the 'what about class' deflection in A1 and A2, the genuine breakthrough in A3, and the partial regression to coalition-as-escape-hatch framing in A4?"
+      }
+    ],
+    "T017": [
+      {
+        "check_id": "shortening_as_deepening",
+        "question": "Does the report describe River's trajectory accurately \u2014 that their submissions get shorter AND more focused across the semester, converging on a specific thesis (algorithmic systems as structural racism in a new medium) \u2014 rather than framing the shorter later work as decline or disengagement?"
+      },
+      {
+        "check_id": "associative_thinking_as_discovery",
+        "question": "Does the report recognize the long associative A1 and A2 (parenthetical tangents, metacommentary, catching connections mid-sentence) as intellectual exploration that surfaces the thesis, not as disorganized writing that needs to be corrected?"
+      },
+      {
+        "check_id": "intellectual_thesis_named",
+        "question": "Does the report name River's specific intellectual argument \u2014 that COMPAS, mortgage algorithms, and hiring algorithms ARE structural racism in a new medium, running the same single-axis processing failure Crenshaw described in law?"
+      }
+    ]
+  },
+  "students": {
+    "T001": {
+      "student_id": "T001",
+      "student_name": "Maria Ndiaye",
+      "pattern": "esl_growing_voice",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "growth_arc_named",
+          "question": "Does the report name Maria's intellectual and linguistic growth across the semester as a positive arc, describing what she built rather than what she started without?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "multilingual_as_asset",
+          "question": "Does the report frame Maria's multilingualism (moving between Wolof, French, and English) as an intellectual strength \u2014 something that enriches her analysis \u2014 rather than as a challenge to overcome or a starting deficit?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "no_deficit_framing",
+          "question": "Is the report free from deficit language about Maria's English \u2014 phrases like 'improving English skills,' 'language barrier,' or 'limited English proficiency'?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T002": {
+      "student_id": "T002",
+      "student_name": "Jordan Kim",
+      "pattern": "burnout_trajectory",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "earlier_strength_recognized",
+          "question": "Does the report recognize Jordan's earlier submissions (A1, A2) as analytically strong, citing specific intellectual work like the model minority myth analysis or DeGraffenreid reading?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "shift_acknowledged_without_blame",
+          "question": "Does the report acknowledge the shift in Jordan's engagement across the semester (shorter work, later submissions, stated exhaustion) without blaming Jordan or framing it as a character flaw or lack of effort?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "structural_context_present",
+          "question": "Does the report situate Jordan's late-semester pattern in structural context (work obligations, labor at family business) rather than treating it as purely a personal or motivational issue?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T003": {
+      "student_id": "T003",
+      "student_name": "DeShawn Williams",
+      "pattern": "steady_deep_engagement",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 2,
+      "checks": [
+        {
+          "check_id": "intellectual_thread_named",
+          "question": "Does the report name DeShawn's sustained intellectual argument across the semester \u2014 the thread connecting structural analysis to community organizing to community knowledge production \u2014 rather than just saying he was 'engaged' or 'hardworking'?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "community_knowledge_as_analysis",
+          "question": "Does the report recognize that DeShawn frames his grandmother's and uncle's knowledge as legitimate structural analysis, not just personal anecdote?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T004": {
+      "student_id": "T004",
+      "student_name": "Aisha Patel",
+      "pattern": "variable_neurodivergent",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "variable_output_normalized",
+          "question": "Does the report describe Aisha's variable word count across assignments (short A1 and A3, long A2 and A4) as a natural variation in her processing \u2014 without pathologizing it or describing it as 'inconsistency' or 'struggle to maintain engagement'?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "intellectual_depth_named",
+          "question": "Does the report recognize the intellectual sophistication in Aisha's work \u2014 her extended analysis of post-9/11 Islamophobia as racialization, her framework of analysis-based (not identity-based) solidarity?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "associative_thinking_as_strength",
+          "question": "Does the report treat Aisha's associative, tangential, and metacognitive writing style (parenthetical tangents, noting her own brain's processing) as a cognitive strength rather than a structural flaw in her writing?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T005": {
+      "student_id": "T005",
+      "student_name": "Tyler Nguyen",
+      "pattern": "sudden_style_shift",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 2,
+      "checks": [
+        {
+          "check_id": "early_authentic_work_valued",
+          "question": "Does the report recognize Tyler's early submissions (A1 writing about his mother, A2 about the freeway through his neighborhood) as rich, grounded, personal analysis \u2014 not as 'informal' or 'developing' work that was improved by later academic register?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "style_shift_named",
+          "question": "Does the report note the shift to formulaic academic prose in A3 and A4 \u2014 describing it as a change in voice and register rather than treating it as growth?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T006": {
+      "student_id": "T006",
+      "student_name": "Ingrid Johansson",
+      "pattern": "tone_policing",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "genuine_breakthrough_recognized",
+          "question": "Does the report name Ingrid's A3 midterm as a genuine analytical breakthrough \u2014 specifically her self-directed research on school funding property tax formulas and her statement 'I can't un-see it' \u2014 rather than treating all four assignments as equally resistant to structural analysis?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "power_moves_named",
+          "question": "Does the report name the pattern of rhetorical resistance across Ingrid's submissions \u2014 the abstract liberalism, the 'both sides' framing, the appeal to individual agency \u2014 as a pattern, rather than treating it as legitimate intellectual pushback?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "partial_regression_noted",
+          "question": "Does the report note that A4 represents a partial regression from the A3 breakthrough, returning to the 'persuasion over confrontation' / 'Dr. King vs. radicals' framing?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T007": {
+      "student_id": "T007",
+      "student_name": "Sophia Chen",
+      "pattern": "building_momentum",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 2,
+      "checks": [
+        {
+          "check_id": "growth_arc_named",
+          "question": "Does the report name Sophia's building arc \u2014 from tentative and uncertain in A1 to deeply analytical and self-aware in A3/A4 \u2014 as a meaningful trajectory of intellectual development?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "late_work_strength_recognized",
+          "question": "Does the report recognize the strength of Sophia's later work, particularly A3's honest reckoning with her own prior 'colorblind' thinking and A4's claim that 'knowledge creates obligation'?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T008": {
+      "student_id": "T008",
+      "student_name": "Marcus Jackson",
+      "pattern": "strong_consistent",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 2,
+      "checks": [
+        {
+          "check_id": "specific_intellectual_work_named",
+          "question": "Does the report name the specific intellectual argument Marcus develops \u2014 not just that he was 'engaged' or 'strong,' but the specific content: his analysis of how institutions are designed for people whose identity is the default on every axis, and his critique of academic knowledge production's relationship to community knowledge (grandmother's analysis \u2260 'just anecdote')?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "community_grounding_as_asset",
+          "question": "Does the report recognize Marcus's grounding in Compton and his family's experience as a legitimate analytical resource \u2014 not as 'personal connection' but as structural analysis produced through relationship?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T009": {
+      "student_id": "T009",
+      "student_name": "Rosa Gutierrez-Santos",
+      "pattern": "code_switching_bilingual",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "multilingual_practice_as_asset",
+          "question": "Does the report frame Rosa's code-switching between English and Spanish (and her references to K'iche' and Zapotec concepts like 'cruce de caminos' and 'Binniz\u00e1') as an intellectual strength \u2014 a multilingual practice that enriches her analysis \u2014 rather than as informal writing or language interference?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "transnational_analysis_recognized",
+          "question": "Does the report recognize Rosa's specific intellectual contribution \u2014 the argument that structural racism has no borders (NAFTA, land displacement, undocumented labor) and that her mother's migration is produced by the same racial capitalism that created US urban inequality?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "no_english_default",
+          "question": "Is the report free from treating English as the default or standard register \u2014 does it avoid describing Rosa's writing as 'mixing languages' in a way that implies English-only would be more correct or academic?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T010": {
+      "student_id": "T010",
+      "student_name": "Alex Rivera",
+      "pattern": "missing_assignment_gap",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 2,
+      "checks": [
+        {
+          "check_id": "gap_noted_without_judgment",
+          "question": "Does the report note that Alex did not submit the A3 midterm reflection without framing the absence as disengagement, laziness, or a character flaw \u2014 treating the gap as a structural fact rather than a personal failure?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "present_work_quality_recognized",
+          "question": "Does the report recognize the analytical quality in the three submissions Alex did complete \u2014 particularly the A4 analysis of intergenerational resistance knowledge living in family storytelling?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T011": {
+      "student_id": "T011",
+      "student_name": "Jaylen Carter",
+      "pattern": "minimal_but_present",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "report_substantive",
+          "question": "Is the trajectory report substantive and specific to Jaylen \u2014 naming what his submissions actually say (the highway through the neighborhood, 'I knew the system was set up before I knew the word structural') rather than being generic filler?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "medium_not_student",
+          "question": "Does the report avoid framing Jaylen's short submissions as evidence of low engagement, limited understanding, or incomplete work \u2014 treating short written output as a property of the medium, not of the student's intellectual capacity?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "conceptual_clarity_named",
+          "question": "Does the report recognize that Jaylen's short submissions demonstrate conceptual clarity \u2014 each one lands a specific structural insight \u2014 rather than being treated as incomplete or underdeveloped?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T012": {
+      "student_id": "T012",
+      "student_name": "Destiny Washington",
+      "pattern": "care_responsibilities",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "care_burden_structural",
+          "question": "Does the report situate Destiny's variable and sometimes incomplete submissions in structural context \u2014 naming care work as a real material condition that constrains writing time \u2014 rather than treating it as a personal issue or excuse?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "quality_when_present",
+          "question": "Does the report recognize the quality and depth in Destiny's complete submissions, especially A1's insight about the intersection 'trapping you at it' and A4's connection between her mother's babysitting co-op and mutual aid as resistance?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "no_deficit_framing",
+          "question": "Is the report free from framing Destiny as a student with a problem to fix \u2014 does it avoid language like 'struggles to complete assignments' or 'distracted by family responsibilities'?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T013": {
+      "student_id": "T013",
+      "student_name": "Kai Robinson",
+      "pattern": "speculative_futures",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 2,
+      "checks": [
+        {
+          "check_id": "speculative_mode_as_valid_analysis",
+          "question": "Does the report recognize Kai's future-oriented, imaginative, Afrofuturist mode of engagement as a legitimate form of intellectual analysis \u2014 not as 'off-topic' or as avoidance of the structural readings, but as a different analytical direction ('diagnosis plus vision')?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "specific_intellectual_argument_named",
+          "question": "Does the report name Kai's specific argument \u2014 that structural analysis must be paired with imagination to build alternatives, and that the 'apocalypse already happened' / 'building in the aftermath' framing is a political stance, not escapism?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T014": {
+      "student_id": "T014",
+      "student_name": "Ixchel Ramirez Caal",
+      "pattern": "newcomer_emergent",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "no_language_deficit_framing",
+          "question": "Does the report avoid deficit framing about Ixchel's English \u2014 is it free from language like 'grammar errors,' 'language barrier,' 'still developing English,' 'ESL student,' or 'needs language support'?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "indigenous_epistemology_recognized",
+          "question": "Does the report name Ixchel's K'iche' epistemological contributions \u2014 the concepts about land memory, reciprocity, and interconnection from her grandmother \u2014 as legitimate intellectual resources that enrich her analysis?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "conceptual_work_foregrounded",
+          "question": "Does the report foreground what Ixchel's submissions actually argue \u2014 that structural racism has no borders, that her family's migration is produced by the same racial capitalism as US urban inequality, that indigenous resistance is the longest continuous resistance in the Americas \u2014 rather than focusing on surface features of her writing?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T015": {
+      "student_id": "T015",
+      "student_name": "Nolan Begay",
+      "pattern": "pushback_on_analysis",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "sovereignty_frame_recognized",
+          "question": "Does the report recognize that Nolan's pushback on the intersectionality framework reflects a genuine alternative epistemology grounded in Indigenous sovereignty \u2014 not 'resistance to learning' but an argument that indigeneity is a political status, not a racial category?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "meta_critique_as_intellectual_move",
+          "question": "Does the report recognize Nolan's A3 \u2014 which applies the course's own analytical frameworks to the course itself (student writing as data, knowledge production as power) \u2014 as a sophisticated intellectual move, not as off-topic self-reflection or avoidance of content?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "pushback_not_penalized",
+          "question": "Does the report avoid framing Nolan's persistent questioning of the course's analytical frameworks as a deficit \u2014 does it treat his intellectual disagreement as legitimate engagement rather than as non-compliance?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T016": {
+      "student_id": "T016",
+      "student_name": "Connor Mitchell",
+      "pattern": "mixed_power_moves",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 2,
+      "checks": [
+        {
+          "check_id": "a3_breakthrough_named",
+          "question": "Does the report name Connor's A3 midterm as a genuine breakthrough \u2014 specifically his recognition that using his grandfather's coal miner suffering to redirect race discussions to class was a structural deflection, and that 'intent isn't the thing, function is'?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "pattern_named_across_arc",
+          "question": "Does the report name the pattern across Connor's arc \u2014 the 'what about class' deflection in A1 and A2, the genuine breakthrough in A3, and the partial regression to coalition-as-escape-hatch framing in A4?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    },
+    "T017": {
+      "student_id": "T017",
+      "student_name": "River Chen-Nakamura",
+      "pattern": "deepening_through_narrowing",
+      "report_length": 0,
+      "report_generated": false,
+      "checks_passed": 0,
+      "checks_total": 3,
+      "checks": [
+        {
+          "check_id": "shortening_as_deepening",
+          "question": "Does the report describe River's trajectory accurately \u2014 that their submissions get shorter AND more focused across the semester, converging on a specific thesis (algorithmic systems as structural racism in a new medium) \u2014 rather than framing the shorter later work as decline or disengagement?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "associative_thinking_as_discovery",
+          "question": "Does the report recognize the long associative A1 and A2 (parenthetical tangents, metacommentary, catching connections mid-sentence) as intellectual exploration that surfaces the thesis, not as disorganized writing that needs to be corrected?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        },
+        {
+          "check_id": "intellectual_thesis_named",
+          "question": "Does the report name River's specific intellectual argument \u2014 that COMPAS, mortgage algorithms, and hiring algorithms ARE structural racism in a new medium, running the same single-axis processing failure Crenshaw described in law?",
+          "passed": false,
+          "explanation": "Report was not generated."
+        }
+      ],
+      "report": ""
+    }
+  },
+  "model": {
+    "key": "gemma12b",
+    "name": "mlx",
+    "model_id": "mlx-community/gemma-3-12b-it-4bit"
+  }
+}

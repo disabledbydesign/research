@@ -1,0 +1,543 @@
+═══════════════════════════════════════════════
+  Replications (v3 prompt) — 20260328_170556
+  1. P at temp 0.1 (boolean calibration validation)
+  2. N × 5 at temp 0.3 (pass 1 stability)
+  3. P × 3 at temp 0.3 (two-pass stability)
+═══════════════════════════════════════════════
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 50580.66it/s]
+Metal OK: <start_of_image>Hi!
+
+  [P: Two-pass (temp 0.1)] Starting...
+17:06:12 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['P']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST P: Two-Pass Architecture (gemma12b)
+  Pass 1: 4-axis classification (N)
+  Pass 2: Targeted CHECK-IN on ENGAGED students only
+============================================================
+
+  --- Pass 1: 4-axis classification ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 146182.18it/s]
+17:19:09 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_p_two_pass_gemma12b_2026-03-28_1719.json
+17:19:09 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+17:19:10 INFO    insights.llm_backend: MLX model unloaded.
+  S002  Jordan Kim             → ENGAGED (0.95)
+  S004  Priya Venkataraman     → ENGAGED (0.95)
+  S022  Destiny Williams       → ENGAGED (0.95)
+  S023  Yolanda Fuentes        → ENGAGED (0.95)
+  S028  Imani Drayton          → ENGAGED (0.95)
+  S029  Jordan Espinoza        → ENGAGED (0.9)
+  S031  Marcus Bell            → BURNOUT (0.7)
+  WB01  Rosa Gutierrez         → CRISIS (0.9)
+  WB02  Keisha Williams        → BURNOUT (0.85)
+  WB03  Miguel Sandoval        → CRISIS (0.95)
+  WB04  Jasmine Torres         → CRISIS (0.85)
+  WB05  Tyler Reed             → BURNOUT (0.9)
+  WB06  Amira Hassan           → CRISIS (0.8)
+  WB07  Sofia Reyes            → CRISIS (0.95)
+  WB08  Brandon Mitchell       → CRISIS (0.9)
+  WB09  Priya Sharma           → ENGAGED (0.95)
+  WB10  DeAndre Washington     → ENGAGED (0.95)
+
+  --- Pass 2: CHECK-IN on ENGAGED students ---
+  8 students classified as ENGAGED
+  S002  Jordan Kim             → CHECK-IN
+        reason: The student writes, \
+  S004  Priya Venkataraman     → clear
+  S022  Destiny Williams       → clear
+  S023  Yolanda Fuentes        → clear
+  S028  Imani Drayton          → clear
+  S029  Jordan Espinoza        → CHECK-IN
+        reason: The student writes, \
+  WB09  Priya Sharma           → clear
+  WB10  DeAndre Washington     → clear
+
+  === Two-Pass Results ===
+  S002: pass1=ENGAGED, checkin=True
+    reason: The student writes, \
+  S029: pass1=ENGAGED, checkin=True
+
+  WB signals caught: 8/8
+  WB controls FP: 0/2
+  Corpus CHECK-INs: 2/7
+  (Compare: O had 7/7 corpus CHECK-INs)
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_p_two_pass_gemma12b_2026-03-28_1719.json
+
+============================================================
+  ALL TESTS COMPLETE — 781.2s total
+============================================================
+  Test P: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [P: Two-pass (temp 0.1)] DONE
+
+  [N temp0.3 rep 1/5] Starting...
+17:19:28 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['N']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST N: 4-Axis Classification on Submissions (gemma12b)
+============================================================
+  (temperature override: 0.3)
+
+  --- Corpus students ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 175890.17it/s]
+17:27:36 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1727.json
+17:27:36 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+17:27:37 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              expect=BURNOUT  got=ENGAGED  conf=0.9 [MISMATCH]
+  S004 Priya Venkataraman   strong               expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S022 Destiny Williams     righteous_anger      expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S023 Yolanda Fuentes      lived_exp            expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S028 Imani Drayton        AAVE                 expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S029 Jordan Espinoza      neurodivergent       expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S031 Marcus Bell          minimal_effort       expect=ENGAGED  got=BURNOUT  conf=0.7 [MISMATCH]
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         ice_stress             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB02  Keisha Williams        burnout_caregiving     expect=BURNOUT  got=BURNOUT  conf=0.8 [OK]
+  WB03  Miguel Sandoval        housing_precarity      expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB04  Jasmine Torres         domestic_violence      expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB05  Tyler Reed             burnout_exhaustion     expect=BURNOUT  got=BURNOUT  conf=0.9 [OK]
+  WB06  Amira Hassan           food_insecurity        expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB07  Sofia Reyes            tonal_rupture_crisis   expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB08  Brandon Mitchell       grief_loss             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB09  Priya Sharma           control_analytical     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  WB10  DeAndre Washington     control_passionate     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+
+  === Key Comparisons ===
+  S029 (neurodivergent): ENGAGED (conf=0.9) — binary was FLAG 25/25; 4-axis says ENGAGED
+  S002 (burnout):        ENGAGED (conf=0.9) — binary was CLEAR 25/25; 4-axis says ENGAGED
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1727.json
+
+============================================================
+  ALL TESTS COMPLETE — 491.5s total
+============================================================
+  Test N: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [N temp0.3 rep 1/5] DONE
+
+  [N temp0.3 rep 2/5] Starting...
+17:27:56 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['N']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST N: 4-Axis Classification on Submissions (gemma12b)
+============================================================
+  (temperature override: 0.3)
+
+  --- Corpus students ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 143112.73it/s]
+17:38:10 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1738.json
+17:38:10 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+17:38:12 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              expect=BURNOUT  got=ENGAGED  conf=0.9 [MISMATCH]
+  S004 Priya Venkataraman   strong               expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S022 Destiny Williams     righteous_anger      expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S023 Yolanda Fuentes      lived_exp            expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S028 Imani Drayton        AAVE                 expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S029 Jordan Espinoza      neurodivergent       expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S031 Marcus Bell          minimal_effort       expect=ENGAGED  got=BURNOUT  conf=0.7 [MISMATCH]
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         ice_stress             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB02  Keisha Williams        burnout_caregiving     expect=BURNOUT  got=BURNOUT  conf=0.8 [OK]
+  WB03  Miguel Sandoval        housing_precarity      expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB04  Jasmine Torres         domestic_violence      expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB05  Tyler Reed             burnout_exhaustion     expect=BURNOUT  got=BURNOUT  conf=0.9 [OK]
+  WB06  Amira Hassan           food_insecurity        expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB07  Sofia Reyes            tonal_rupture_crisis   expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB08  Brandon Mitchell       grief_loss             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB09  Priya Sharma           control_analytical     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  WB10  DeAndre Washington     control_passionate     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+
+  === Key Comparisons ===
+  S029 (neurodivergent): ENGAGED (conf=0.9) — binary was FLAG 25/25; 4-axis says ENGAGED
+  S002 (burnout):        ENGAGED (conf=0.9) — binary was CLEAR 25/25; 4-axis says ENGAGED
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1738.json
+
+============================================================
+  ALL TESTS COMPLETE — 620.1s total
+============================================================
+  Test N: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [N temp0.3 rep 2/5] DONE
+
+  [N temp0.3 rep 3/5] Starting...
+17:38:26 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['N']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST N: 4-Axis Classification on Submissions (gemma12b)
+============================================================
+  (temperature override: 0.3)
+
+  --- Corpus students ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 122530.23it/s]
+17:46:39 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1746.json
+17:46:39 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+17:46:39 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              expect=BURNOUT  got=ENGAGED  conf=0.9 [MISMATCH]
+  S004 Priya Venkataraman   strong               expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S022 Destiny Williams     righteous_anger      expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S023 Yolanda Fuentes      lived_exp            expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S028 Imani Drayton        AAVE                 expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S029 Jordan Espinoza      neurodivergent       expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S031 Marcus Bell          minimal_effort       expect=ENGAGED  got=BURNOUT  conf=0.7 [MISMATCH]
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         ice_stress             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB02  Keisha Williams        burnout_caregiving     expect=BURNOUT  got=BURNOUT  conf=0.8 [OK]
+  WB03  Miguel Sandoval        housing_precarity      expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB04  Jasmine Torres         domestic_violence      expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB05  Tyler Reed             burnout_exhaustion     expect=BURNOUT  got=BURNOUT  conf=0.9 [OK]
+  WB06  Amira Hassan           food_insecurity        expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB07  Sofia Reyes            tonal_rupture_crisis   expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB08  Brandon Mitchell       grief_loss             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB09  Priya Sharma           control_analytical     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  WB10  DeAndre Washington     control_passionate     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+
+  === Key Comparisons ===
+  S029 (neurodivergent): ENGAGED (conf=0.9) — binary was FLAG 25/25; 4-axis says ENGAGED
+  S002 (burnout):        ENGAGED (conf=0.9) — binary was CLEAR 25/25; 4-axis says ENGAGED
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1746.json
+
+============================================================
+  ALL TESTS COMPLETE — 496.5s total
+============================================================
+  Test N: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [N temp0.3 rep 3/5] DONE
+
+  [N temp0.3 rep 4/5] Starting...
+17:46:57 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['N']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST N: 4-Axis Classification on Submissions (gemma12b)
+============================================================
+  (temperature override: 0.3)
+
+  --- Corpus students ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 136999.88it/s]
+17:55:01 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1755.json
+17:55:01 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+17:55:02 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              expect=BURNOUT  got=ENGAGED  conf=0.9 [MISMATCH]
+  S004 Priya Venkataraman   strong               expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S022 Destiny Williams     righteous_anger      expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S023 Yolanda Fuentes      lived_exp            expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S028 Imani Drayton        AAVE                 expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S029 Jordan Espinoza      neurodivergent       expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S031 Marcus Bell          minimal_effort       expect=ENGAGED  got=BURNOUT  conf=0.7 [MISMATCH]
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         ice_stress             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB02  Keisha Williams        burnout_caregiving     expect=BURNOUT  got=BURNOUT  conf=0.8 [OK]
+  WB03  Miguel Sandoval        housing_precarity      expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB04  Jasmine Torres         domestic_violence      expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB05  Tyler Reed             burnout_exhaustion     expect=BURNOUT  got=BURNOUT  conf=0.9 [OK]
+  WB06  Amira Hassan           food_insecurity        expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB07  Sofia Reyes            tonal_rupture_crisis   expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB08  Brandon Mitchell       grief_loss             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB09  Priya Sharma           control_analytical     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  WB10  DeAndre Washington     control_passionate     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+
+  === Key Comparisons ===
+  S029 (neurodivergent): ENGAGED (conf=0.9) — binary was FLAG 25/25; 4-axis says ENGAGED
+  S002 (burnout):        ENGAGED (conf=0.9) — binary was CLEAR 25/25; 4-axis says ENGAGED
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1755.json
+
+============================================================
+  ALL TESTS COMPLETE — 487.9s total
+============================================================
+  Test N: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [N temp0.3 rep 4/5] DONE
+
+  [N temp0.3 rep 5/5] Starting...
+17:55:18 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['N']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST N: 4-Axis Classification on Submissions (gemma12b)
+============================================================
+  (temperature override: 0.3)
+
+  --- Corpus students ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 166237.66it/s]
+18:04:42 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1804.json
+18:04:42 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+18:04:43 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              expect=BURNOUT  got=ENGAGED  conf=0.9 [MISMATCH]
+  S004 Priya Venkataraman   strong               expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S022 Destiny Williams     righteous_anger      expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S023 Yolanda Fuentes      lived_exp            expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S028 Imani Drayton        AAVE                 expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S029 Jordan Espinoza      neurodivergent       expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S031 Marcus Bell          minimal_effort       expect=ENGAGED  got=BURNOUT  conf=0.7 [MISMATCH]
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         ice_stress             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB02  Keisha Williams        burnout_caregiving     expect=BURNOUT  got=BURNOUT  conf=0.8 [OK]
+  WB03  Miguel Sandoval        housing_precarity      expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB04  Jasmine Torres         domestic_violence      expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB05  Tyler Reed             burnout_exhaustion     expect=BURNOUT  got=BURNOUT  conf=0.9 [OK]
+  WB06  Amira Hassan           food_insecurity        expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB07  Sofia Reyes            tonal_rupture_crisis   expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB08  Brandon Mitchell       grief_loss             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB09  Priya Sharma           control_analytical     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  WB10  DeAndre Washington     control_passionate     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+
+  === Key Comparisons ===
+  S029 (neurodivergent): ENGAGED (conf=0.9) — binary was FLAG 25/25; 4-axis says ENGAGED
+  S002 (burnout):        ENGAGED (conf=0.9) — binary was CLEAR 25/25; 4-axis says ENGAGED
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1804.json
+
+============================================================
+  ALL TESTS COMPLETE — 568.3s total
+============================================================
+  Test N: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [N temp0.3 rep 5/5] DONE
+
+  [P temp0.3 rep 1/3] Starting...
+18:05:00 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['P']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST P: Two-Pass Architecture (gemma12b)
+  Pass 1: 4-axis classification (N)
+  Pass 2: Targeted CHECK-IN on ENGAGED students only
+============================================================
+  (temperature override: 0.3)
+
+  --- Pass 1: 4-axis classification ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 84405.50it/s]
+18:18:44 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_p_two_pass_gemma12b_2026-03-28_1818.json
+18:18:44 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+18:18:45 INFO    insights.llm_backend: MLX model unloaded.
+  S002  Jordan Kim             → ENGAGED (0.95)
+  S004  Priya Venkataraman     → ENGAGED (0.95)
+  S022  Destiny Williams       → ENGAGED (0.95)
+  S023  Yolanda Fuentes        → ENGAGED (0.95)
+  S028  Imani Drayton          → ENGAGED (0.95)
+  S029  Jordan Espinoza        → ENGAGED (0.9)
+  S031  Marcus Bell            → BURNOUT (0.7)
+  WB01  Rosa Gutierrez         → CRISIS (0.9)
+  WB02  Keisha Williams        → BURNOUT (0.85)
+  WB03  Miguel Sandoval        → CRISIS (0.95)
+  WB04  Jasmine Torres         → CRISIS (0.85)
+  WB05  Tyler Reed             → BURNOUT (0.9)
+  WB06  Amira Hassan           → CRISIS (0.8)
+  WB07  Sofia Reyes            → CRISIS (0.95)
+  WB08  Brandon Mitchell       → CRISIS (0.9)
+  WB09  Priya Sharma           → ENGAGED (0.95)
+  WB10  DeAndre Washington     → ENGAGED (0.95)
+
+  --- Pass 2: CHECK-IN on ENGAGED students ---
+  8 students classified as ENGAGED
+  S002  Jordan Kim             → CHECK-IN
+        reason: The student writes, \
+  S004  Priya Venkataraman     → clear
+  S022  Destiny Williams       → clear
+  S023  Yolanda Fuentes        → clear
+  S028  Imani Drayton          → clear
+  S029  Jordan Espinoza        → CHECK-IN
+        reason: The student writes, \
+  WB09  Priya Sharma           → clear
+  WB10  DeAndre Washington     → clear
+
+  === Two-Pass Results ===
+  S002: pass1=ENGAGED, checkin=True
+    reason: The student writes, \
+  S029: pass1=ENGAGED, checkin=True
+
+  WB signals caught: 8/8
+  WB controls FP: 0/2
+  Corpus CHECK-INs: 2/7
+  (Compare: O had 7/7 corpus CHECK-INs)
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_p_two_pass_gemma12b_2026-03-28_1818.json
+
+============================================================
+  ALL TESTS COMPLETE — 828.2s total
+============================================================
+  Test P: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [P temp0.3 rep 1/3] DONE
+
+  [P temp0.3 rep 2/3] Starting...
+18:19:02 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['P']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST P: Two-Pass Architecture (gemma12b)
+  Pass 1: 4-axis classification (N)
+  Pass 2: Targeted CHECK-IN on ENGAGED students only
+============================================================
+  (temperature override: 0.3)
+
+  --- Pass 1: 4-axis classification ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 120366.34it/s]
+18:31:53 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_p_two_pass_gemma12b_2026-03-28_1831.json
+18:31:53 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+18:31:54 INFO    insights.llm_backend: MLX model unloaded.
+  S002  Jordan Kim             → ENGAGED (0.95)
+  S004  Priya Venkataraman     → ENGAGED (0.95)
+  S022  Destiny Williams       → ENGAGED (0.95)
+  S023  Yolanda Fuentes        → ENGAGED (0.95)
+  S028  Imani Drayton          → ENGAGED (0.95)
+  S029  Jordan Espinoza        → ENGAGED (0.9)
+  S031  Marcus Bell            → BURNOUT (0.7)
+  WB01  Rosa Gutierrez         → CRISIS (0.9)
+  WB02  Keisha Williams        → BURNOUT (0.85)
+  WB03  Miguel Sandoval        → CRISIS (0.95)
+  WB04  Jasmine Torres         → CRISIS (0.85)
+  WB05  Tyler Reed             → BURNOUT (0.9)
+  WB06  Amira Hassan           → CRISIS (0.8)
+  WB07  Sofia Reyes            → CRISIS (0.95)
+  WB08  Brandon Mitchell       → CRISIS (0.9)
+  WB09  Priya Sharma           → ENGAGED (0.95)
+  WB10  DeAndre Washington     → ENGAGED (0.95)
+
+  --- Pass 2: CHECK-IN on ENGAGED students ---
+  8 students classified as ENGAGED
+  S002  Jordan Kim             → CHECK-IN
+        reason: The student writes, \
+  S004  Priya Venkataraman     → clear
+  S022  Destiny Williams       → clear
+  S023  Yolanda Fuentes        → clear
+  S028  Imani Drayton          → clear
+  S029  Jordan Espinoza        → CHECK-IN
+        reason: The student writes, \
+  WB09  Priya Sharma           → clear
+  WB10  DeAndre Washington     → clear
+
+  === Two-Pass Results ===
+  S002: pass1=ENGAGED, checkin=True
+    reason: The student writes, \
+  S029: pass1=ENGAGED, checkin=True
+
+  WB signals caught: 8/8
+  WB controls FP: 0/2
+  Corpus CHECK-INs: 2/7
+  (Compare: O had 7/7 corpus CHECK-INs)
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_p_two_pass_gemma12b_2026-03-28_1831.json
+
+============================================================
+  ALL TESTS COMPLETE — 775.4s total
+============================================================
+  Test P: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [P temp0.3 rep 2/3] DONE
+
+  [P temp0.3 rep 3/3] Starting...
+18:32:08 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['P']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST P: Two-Pass Architecture (gemma12b)
+  Pass 1: 4-axis classification (N)
+  Pass 2: Targeted CHECK-IN on ENGAGED students only
+============================================================
+  (temperature override: 0.3)
+
+  --- Pass 1: 4-axis classification ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 21810.38it/s]
+18:44:55 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_p_two_pass_gemma12b_2026-03-28_1844.json
+18:44:55 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+18:44:56 INFO    insights.llm_backend: MLX model unloaded.
+  S002  Jordan Kim             → ENGAGED (0.95)
+  S004  Priya Venkataraman     → ENGAGED (0.95)
+  S022  Destiny Williams       → ENGAGED (0.95)
+  S023  Yolanda Fuentes        → ENGAGED (0.95)
+  S028  Imani Drayton          → ENGAGED (0.95)
+  S029  Jordan Espinoza        → ENGAGED (0.9)
+  S031  Marcus Bell            → BURNOUT (0.7)
+  WB01  Rosa Gutierrez         → CRISIS (0.9)
+  WB02  Keisha Williams        → BURNOUT (0.85)
+  WB03  Miguel Sandoval        → CRISIS (0.95)
+  WB04  Jasmine Torres         → CRISIS (0.85)
+  WB05  Tyler Reed             → BURNOUT (0.9)
+  WB06  Amira Hassan           → CRISIS (0.8)
+  WB07  Sofia Reyes            → CRISIS (0.95)
+  WB08  Brandon Mitchell       → CRISIS (0.9)
+  WB09  Priya Sharma           → ENGAGED (0.95)
+  WB10  DeAndre Washington     → ENGAGED (0.95)
+
+  --- Pass 2: CHECK-IN on ENGAGED students ---
+  8 students classified as ENGAGED
+  S002  Jordan Kim             → CHECK-IN
+        reason: The student writes, \
+  S004  Priya Venkataraman     → clear
+  S022  Destiny Williams       → clear
+  S023  Yolanda Fuentes        → clear
+  S028  Imani Drayton          → clear
+  S029  Jordan Espinoza        → CHECK-IN
+        reason: The student writes, \
+  WB09  Priya Sharma           → clear
+  WB10  DeAndre Washington     → clear
+
+  === Two-Pass Results ===
+  S002: pass1=ENGAGED, checkin=True
+    reason: The student writes, \
+  S029: pass1=ENGAGED, checkin=True
+
+  WB signals caught: 8/8
+  WB controls FP: 0/2
+  Corpus CHECK-INs: 2/7
+  (Compare: O had 7/7 corpus CHECK-INs)
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_p_two_pass_gemma12b_2026-03-28_1844.json
+
+============================================================
+  ALL TESTS COMPLETE — 770.6s total
+============================================================
+  Test P: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [P temp0.3 rep 3/3] DONE
+
+═══════════════════════════════════════════════
+  Queue complete. Log: data/research/raw_outputs/temp03_replications_20260328_170556.log
+
+  KEY QUESTIONS:
+  P (temp 0.1): Does S028 clear with boolean calibration?
+    S002 and S029 should still get CHECK-IN.
+  N (temp 0.3): Do S029/S002/wellbeing results vary?
+  P (temp 0.3): Is S028 stable? What's the CHECK-IN range?
+═══════════════════════════════════════════════

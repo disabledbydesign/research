@@ -1,0 +1,520 @@
+═══════════════════════════════════════════════
+  Test Queue — 20260328_095817
+  Timeouts: pipeline=18000s test=3600s F_batch=2400s (scale=1.0)
+═══════════════════════════════════════════════
+  Metal warmup...
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 149386.17it/s]
+Metal OK: <start_of_image>Hi!
+
+  [J: Pipeline validation] Starting (timeout 3600s)...
+09:58:30 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['J']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST J: Pipeline Validation (gemma12b)
+============================================================
+
+  J1: Structural Naming Quality
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 92104.65it/s]
+10:17:48 INFO    insights.submission_coder: Reading-first P1 for Priya Venkataraman chunk 1/1: 1469 chars
+10:19:51 INFO    insights.submission_coder: Reading-first P1 for Destiny Williams chunk 1/1: 1479 chars
+10:22:00 INFO    insights.submission_coder: Reading-first P1 for Imani Drayton chunk 1/1: 1451 chars
+10:23:10 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_j_pipeline_validation_gemma12b_2026-03-28.json
+10:23:10 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+10:23:11 INFO    insights.llm_backend: MLX model unloaded.
+    S018 Connor Walsh         mechanisms=1 hedges=0 score=1.00 preamble=False (61.2s)
+    S025 Aiden Brooks         mechanisms=1 hedges=0 score=1.00 preamble=False (73.7s)
+
+  J2: Anti-Spotlighting in Synthesis
+    Violations: 0
+    Multiplicity section: True
+    Pedagogical wins section: True
+    Moments section: True
+    Forward-looking section: True
+    Exceptional contributions: True
+    (237.6s)
+
+  J3: what_student_is_reaching_for Population
+    S004 Priya Venkataraman   reaching=YES confusion=YES (124.9s)
+      → Priya is attempting to move beyond a theoretical understanding of intersectionality to apply it to a...
+    S022 Destiny Williams     reaching=YES confusion=no  (127.9s)
+      → Destiny is attempting to demonstrate that intersectionality is not an abstract concept but a lived r...
+    S028 Imani Drayton        reaching=YES confusion=no  (132.4s)
+      → Imani is attempting to articulate how a theoretical framework like intersectionality can validate an...
+
+  Summary: 3/3 reaching_for populated
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_j_pipeline_validation_gemma12b_2026-03-28.json
+
+============================================================
+  ALL TESTS COMPLETE — 1483.2s total
+============================================================
+  Test J: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [J: Pipeline validation] DONE
+
+  [K: Enhancement model comparison] Starting (timeout 3600s)...
+10:23:27 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:23:27 INFO    openai._base_client: Retrying request to /chat/completions in 0.461974 seconds
+10:23:28 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:23:28 INFO    openai._base_client: Retrying request to /chat/completions in 0.772430 seconds
+10:23:29 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:23:29 INFO    alt_hypothesis_tests: Rate limited on gemma27b_free, retrying in 15s...
+10:23:44 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:23:44 INFO    openai._base_client: Retrying request to /chat/completions in 0.478358 seconds
+10:23:45 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:23:45 INFO    openai._base_client: Retrying request to /chat/completions in 0.990749 seconds
+10:23:46 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:23:46 INFO    alt_hypothesis_tests: Rate limited on gemma27b_free, retrying in 30s...
+10:24:17 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+10:24:34 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:24:34 INFO    openai._base_client: Retrying request to /chat/completions in 0.474585 seconds
+10:24:35 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:24:35 INFO    openai._base_client: Retrying request to /chat/completions in 0.968546 seconds
+10:24:36 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:24:36 INFO    alt_hypothesis_tests: Rate limited on llama70b_free, retrying in 15s...
+10:24:51 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:24:51 INFO    openai._base_client: Retrying request to /chat/completions in 0.446656 seconds
+10:24:52 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:24:52 INFO    openai._base_client: Retrying request to /chat/completions in 0.771662 seconds
+10:24:54 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:24:54 INFO    alt_hypothesis_tests: Rate limited on llama70b_free, retrying in 30s...
+10:25:24 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:25:24 INFO    openai._base_client: Retrying request to /chat/completions in 0.499577 seconds
+10:25:25 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:25:25 INFO    openai._base_client: Retrying request to /chat/completions in 0.970354 seconds
+10:25:26 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:25:26 ERROR   alt_hypothesis_tests: Model llama70b_free failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+10:25:27 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:25:27 INFO    openai._base_client: Retrying request to /chat/completions in 0.481353 seconds
+10:25:27 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:25:27 INFO    openai._base_client: Retrying request to /chat/completions in 0.772511 seconds
+10:25:28 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:25:28 INFO    alt_hypothesis_tests: Rate limited on mistral_small_free, retrying in 15s...
+10:25:44 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:25:44 INFO    openai._base_client: Retrying request to /chat/completions in 0.491189 seconds
+10:25:44 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:25:44 INFO    openai._base_client: Retrying request to /chat/completions in 0.826029 seconds
+10:25:45 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:25:45 INFO    alt_hypothesis_tests: Rate limited on mistral_small_free, retrying in 30s...
+10:26:16 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:26:16 INFO    openai._base_client: Retrying request to /chat/completions in 0.417877 seconds
+10:26:17 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:26:17 INFO    openai._base_client: Retrying request to /chat/completions in 0.985847 seconds
+10:26:18 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:26:18 ERROR   alt_hypothesis_tests: Model mistral_small_free failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'mistralai/mistral-small-3.1-24b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+10:26:18 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+10:26:58 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:26:58 INFO    openai._base_client: Retrying request to /chat/completions in 0.468461 seconds
+10:27:08 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+10:28:39 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:28:39 INFO    openai._base_client: Retrying request to /chat/completions in 0.433044 seconds
+10:28:40 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:28:40 INFO    openai._base_client: Retrying request to /chat/completions in 0.758780 seconds
+10:28:41 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:28:41 INFO    alt_hypothesis_tests: Rate limited on hermes_405b_free, retrying in 15s...
+10:28:57 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:28:57 INFO    openai._base_client: Retrying request to /chat/completions in 0.471612 seconds
+10:28:57 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:28:57 INFO    openai._base_client: Retrying request to /chat/completions in 0.816965 seconds
+10:28:58 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:28:58 INFO    alt_hypothesis_tests: Rate limited on hermes_405b_free, retrying in 30s...
+10:29:29 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:29:29 INFO    openai._base_client: Retrying request to /chat/completions in 0.418538 seconds
+10:29:29 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:29:29 INFO    openai._base_client: Retrying request to /chat/completions in 0.778098 seconds
+10:29:30 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+10:29:30 ERROR   alt_hypothesis_tests: Model hermes_405b_free failed: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'nousresearch/hermes-3-llama-3.1-405b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+10:29:30 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_k_enhancement_comparison_multi_model_2026-03-28.json
+
+Tests to run: ['K']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST K: Enhancement Model Comparison (OpenRouter)
+============================================================
+
+  gemma27b_free (google/gemma-3-27b-it:free)...
+    Total: 8 | Words: 691 | Time: 16.7s
+    structural_naming       2 ██░░░
+    language_justice        2 ██░░░
+    relational_analysis     2 ██░░░
+    pedagogical_depth       2 ██░░░
+    anti_spotlighting       0 ░░░░░
+
+  llama70b_free (meta-llama/llama-3.3-70b-instruct:free)...
+    FAILED: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+
+  mistral_small_free (mistralai/mistral-small-3.1-24b-instruct:free)...
+    FAILED: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'mistralai/mistral-small-3.1-24b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+
+  nemotron_120b_free (nvidia/nemotron-3-super-120b-a12b:free)...
+    Total: 5 | Words: 389 | Time: 39.0s
+    structural_naming       2 ██░░░
+    language_justice        0 ░░░░░
+    relational_analysis     2 ██░░░
+    pedagogical_depth       1 █░░░░
+    anti_spotlighting       0 ░░░░░
+
+  glm45_air_free (z-ai/glm-4.5-air:free)...
+    Total: 0 | Words: 0 | Time: 101.9s
+    structural_naming       0 ░░░░░
+    language_justice        0 ░░░░░
+    relational_analysis     0 ░░░░░
+    pedagogical_depth       0 ░░░░░
+    anti_spotlighting       0 ░░░░░
+
+  hermes_405b_free (nousresearch/hermes-3-llama-3.1-405b:free)...
+    FAILED: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'nousresearch/hermes-3-llama-3.1-405b:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}
+
+  === Enhancement Model Ranking ===
+  #1 gemma27b_free             total= 8 (Free — Google AI Studio (no system prompt support)) 16.7s
+  #2 nemotron_120b_free        total= 5 (Free — 120B MoE (12B active), 262K context) 39.0s
+  #3 glm45_air_free            total= 0 (Free — GLM 4.5, 131K context) 101.9s
+
+  === Per-Dimension Leaders ===
+  structural_naming      → gemma27b_free (score=2)
+  language_justice       → gemma27b_free (score=2)
+  relational_analysis    → gemma27b_free (score=2)
+  pedagogical_depth      → gemma27b_free (score=2)
+  anti_spotlighting      → gemma27b_free (score=0)
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_k_enhancement_comparison_multi_model_2026-03-28.json
+
+============================================================
+  ALL TESTS COMPLETE — 364.4s total
+============================================================
+  Test K: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [K: Enhancement model comparison] DONE
+
+  [M: Production concern detector] Starting (timeout 3600s)...
+10:29:35 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['M']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST M: Production Concern Detector (gemma12b)
+============================================================
+
+  --- Corpus students (production detector) ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 119312.81it/s]
+10:59:52 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_m_production_detector_gemma12b_2026-03-28.json
+10:59:52 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+10:59:53 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              CLEAR      [MISSED] confs=[] (54.3s)
+  S004 Priya Venkataraman   strong               CLEAR      [OK] confs=[] (120.7s)
+  S022 Destiny Williams     righteous_anger      CLEAR      [OK] confs=[] (94.4s)
+  S023 Yolanda Fuentes      lived_exp            CLEAR      [OK] confs=[] (94.5s)
+  S028 Imani Drayton        AAVE                 FLAG (2)   [FALSE-FLAG] confs=['0.70', '0.70'] (144.8s)
+  S029 Jordan Espinoza      neurodivergent       CLEAR      [OK] confs=[] (71.9s)
+  S031 Marcus Bell          minimal_effort       CLEAR      [OK] confs=[] (103.1s)
+
+  --- Wellbeing cases (production detector) ---
+  WB01  Rosa Gutierrez         ice_stress             FLAG (1)   [OK] (107.9s)
+  WB02  Keisha Williams        burnout_caregiving     CLEAR      [MISSED] (122.2s)
+  WB03  Miguel Sandoval        housing_precarity      FLAG (1)   [OK] (103.9s)
+  WB04  Jasmine Torres         domestic_violence      FLAG (2)   [OK] (128.4s)
+  WB05  Tyler Reed             burnout_exhaustion     CLEAR      [MISSED] (105.0s)
+  WB06  Amira Hassan           food_insecurity        CLEAR      [MISSED] (111.2s)
+  WB07  Sofia Reyes            tonal_rupture_crisis   FLAG (1)   [OK] (128.6s)
+  WB08  Brandon Mitchell       grief_loss             FLAG (1)   [OK] (112.0s)
+  WB09  Priya Sharma           control_analytical     CLEAR      [OK] (78.5s)
+  WB10  DeAndre Washington     control_passionate     FLAG (1)   [FALSE-FLAG] (138.1s)
+
+  === Production Detector Summary ===
+  S029 (neurodivergent): CLEAR — DIFFERENT from simplified test
+  S002 (burnout):        CLEAR — SAME as simplified test
+  Wellbeing signals: 5/8 caught
+  Wellbeing controls: 1/2 false positives
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_m_production_detector_gemma12b_2026-03-28.json
+
+============================================================
+  ALL TESTS COMPLETE — 1821.3s total
+============================================================
+  Test M: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [M: Production concern detector] DONE
+
+  [L: Expanded wellbeing classifier] Starting (timeout 3600s)...
+11:00:08 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['L']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST L: Expanded Wellbeing Classifier (gemma12b)
+  4-axis: CRISIS | BURNOUT | ENGAGED | NONE
+============================================================
+  Using observations from: test_g_wellbeing_gemma12b_2026-03-27.json
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 42631.71it/s]
+11:05:14 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_l_expanded_wellbeing_gemma12b_2026-03-28.json
+11:05:14 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+11:05:15 INFO    insights.llm_backend: MLX model unloaded.
+  WB01  Rosa Gutierrez         expect=SURFACE  axis=ENGAGED  conf=0.9 [MISSED] (24.4s)
+  WB02  Keisha Williams        expect=SURFACE  axis=ENGAGED  conf=0.9 [MISSED] (31.5s)
+  WB03  Miguel Sandoval        expect=SURFACE  axis=CRISIS   conf=0.9 [OK] (30.9s)
+  WB04  Jasmine Torres         expect=SURFACE  axis=ENGAGED  conf=0.9 [MISSED] (31.4s)
+  WB05  Tyler Reed             expect=SURFACE  axis=BURNOUT  conf=0.9 [OK] (31.3s)
+  WB06  Amira Hassan           expect=SURFACE  axis=CRISIS   conf=0.9 [OK] (31.4s)
+  WB07  Sofia Reyes            expect=SURFACE  axis=ENGAGED  conf=0.9 [MISSED] (33.2s)
+  WB08  Brandon Mitchell       expect=SURFACE  axis=BURNOUT  conf=0.9 [OK] (32.2s)
+  WB09  Priya Sharma           expect=no-flag  axis=ENGAGED  conf=0.9 [OK] (30.4s)
+  WB10  DeAndre Washington     expect=no-flag  axis=ENGAGED  conf=0.9 [OK] (32.8s)
+
+  === Expanded vs Original Comparison ===
+  Test L (4-axis):  4/8 signals, 0/2 FP, 2/2 correctly ENGAGED
+  Test I (3-axis):  8/8 signals, 1/2 FP (Priya BURNOUT@0.6)
+  Test H Binary B:  7/8 signals, 0/2 FP
+  Test H Binary C:  3/8 signals, 0/2 FP
+
+  WARNING: 4 genuine signal(s) classified as ENGAGED:
+    Rosa Gutierrez (ice_stress) — was expected to surface
+    Keisha Williams (burnout_caregiving) — was expected to surface
+    Jasmine Torres (domestic_violence) — was expected to surface
+    Sofia Reyes (tonal_rupture_crisis) — was expected to surface
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_l_expanded_wellbeing_gemma12b_2026-03-28.json
+
+============================================================
+  ALL TESTS COMPLETE — 310.0s total
+============================================================
+  Test L: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [L: Expanded wellbeing classifier] DONE
+
+  [N: 4-axis classification on submissions] Starting (timeout 3600s)...
+11:05:33 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+Tests to run: ['N']
+Model: mlx-community/gemma-3-12b-it-4bit
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST N: 4-Axis Classification on Submissions (gemma12b)
+============================================================
+
+  --- Corpus students ---
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 156683.77it/s]
+11:13:45 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1113.json
+11:13:45 INFO    insights.llm_backend: Unloading MLX model(s) to free Metal memory...
+11:13:45 INFO    insights.llm_backend: MLX model unloaded.
+  S002 Jordan Kim           burnout              expect=BURNOUT  got=ENGAGED  conf=0.9 [MISMATCH]
+  S004 Priya Venkataraman   strong               expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S022 Destiny Williams     righteous_anger      expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S023 Yolanda Fuentes      lived_exp            expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S028 Imani Drayton        AAVE                 expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S029 Jordan Espinoza      neurodivergent       expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S031 Marcus Bell          minimal_effort       expect=ENGAGED  got=BURNOUT  conf=0.7 [MISMATCH]
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         ice_stress             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB02  Keisha Williams        burnout_caregiving     expect=BURNOUT  got=BURNOUT  conf=0.8 [OK]
+  WB03  Miguel Sandoval        housing_precarity      expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB04  Jasmine Torres         domestic_violence      expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB05  Tyler Reed             burnout_exhaustion     expect=BURNOUT  got=BURNOUT  conf=0.9 [OK]
+  WB06  Amira Hassan           food_insecurity        expect=CRISIS   got=CRISIS   conf=0.8 [OK]
+  WB07  Sofia Reyes            tonal_rupture_crisis   expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB08  Brandon Mitchell       grief_loss             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB09  Priya Sharma           control_analytical     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  WB10  DeAndre Washington     control_passionate     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+
+  === Key Comparisons ===
+  S029 (neurodivergent): ENGAGED (conf=0.9) — binary was FLAG 25/25; 4-axis says ENGAGED
+  S002 (burnout):        ENGAGED (conf=0.9) — binary was CLEAR 25/25; 4-axis says ENGAGED
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_1113.json
+
+============================================================
+  ALL TESTS COMPLETE — 495.1s total
+============================================================
+  Test N: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+  [N: 4-axis classification on submissions] DONE
+
+  [I: Tier 2 wellbeing (3-axis baseline)] Starting (timeout 3600s)...
+11:14:04 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+
+============================================================
+  TEST I: Tier 2 Wellbeing Classification on Observations
+============================================================
+  Reading 10 observations from Test G
+  Model: mlx-community/gemma-3-12b-it-4bit
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 190650.18it/s]
+  WB01  Rosa Gutierrez         expect=SURFACE  got=BURNOUT  conf=0.8 [OK] (18.1s)
+  WB02  Keisha Williams        expect=SURFACE  got=BURNOUT  conf=0.8 [OK] (30.4s)
+  WB03  Miguel Sandoval        expect=SURFACE  got=CRISIS   conf=0.9 [OK] (30.1s)
+  WB04  Jasmine Torres         expect=SURFACE  got=CRISIS   conf=0.8 [OK] (32.7s)
+  WB05  Tyler Reed             expect=SURFACE  got=BURNOUT  conf=0.9 [OK] (30.3s)
+  WB06  Amira Hassan           expect=SURFACE  got=CRISIS   conf=0.9 [OK] (31.0s)
+  WB07  Sofia Reyes            expect=SURFACE  got=CRISIS   conf=0.8 [OK] (33.2s)
+  WB08  Brandon Mitchell       expect=SURFACE  got=CRISIS   conf=0.9 [OK] (30.3s)
+  WB09  Priya Sharma           expect=no-flag  got=BURNOUT  conf=0.6 [FALSE-FLAG] (30.6s)
+  WB10  DeAndre Washington     expect=no-flag  got=NONE     conf=0.9 [OK] (28.1s)
+
+  === Tier 2 Classification Summary ===
+  Tier 2 (classify observations):  8/8 signals, 1/2 false positives
+  Test G (observation keywords):   8/8 signals, 2/2 false positives
+  Test H Binary B (classify subs): 7/8 signals, 0/2 false positives
+  Test H Binary C (classify subs): 3/8 signals, 0/2 false positives
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_i_tier2_wellbeing_2026-03-28.json
+  [I: Tier 2 wellbeing (3-axis baseline)] DONE
+
+  [Pipeline re-run (all fixes)] Starting (timeout 18000s)...
+11:19:17 INFO    insights.engine: Sleep prevention active (caffeinate -s)
+11:19:18 INFO    insights.quick_analyzer: spaCy/en_core_web_sm not available — skipping NER
+11:19:20 INFO    httpx: HTTP Request: HEAD https://huggingface.co/SamLowe/roberta-base-go_emotions/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+11:19:20 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/SamLowe/roberta-base-go_emotions/58b6c5b44a7a12093f782442969019c7e2982299/config.json "HTTP/1.1 200 OK"
+
+════════════════════════════════════════════════════════════
+  Pipeline: Ethnic Studies (11), Period 3
+  Students: 32
+════════════════════════════════════════════════════════════
+
+[LLM Backend] mlx / mlx-community/gemma-3-12b-it-4bit (tier=lightweight)
+  Running Quick Analysis...
+  Running gibberish gate...
+  Computing submission statistics...
+  Analyzing word frequency...
+  Computing TF-IDF terms...
+  Extracting named entities...
+  Matching keyword patterns...
+  Computing emotional register...
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 10532.00it/s]
+[1mRobertaForSequenceClassification LOAD REPORT[0m from: SamLowe/roberta-base-go_emotions
+Key                             | Status     |  | 
+--------------------------------+------------+--+-
+roberta.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+11:19:20 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/SamLowe/roberta-base-go_emotions/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+11:19:20 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/SamLowe/roberta-base-go_emotions/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+11:19:21 INFO    insights.quick_analyzer: GoEmotions scorer loaded (SamLowe/roberta-base-go_emotions)
+11:19:23 INFO    sentence_transformers.SentenceTransformer: Use pytorch device_name: mps
+11:19:23 INFO    sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+11:19:23 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+11:19:23 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+11:19:23 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+11:19:23 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+11:19:23 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+11:19:23 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+11:19:24 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+11:19:24 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+11:19:24 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+11:19:24 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+11:19:24 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+11:19:24 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+11:19:24 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+11:19:24 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+11:19:24 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+  Clustering submissions...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8004.99it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+11:19:24 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+11:19:24 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+11:19:24 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+11:19:24 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+11:19:24 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+11:19:25 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+11:19:25 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+11:19:25 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+11:19:25 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+11:19:25 INFO    sentence_transformers.SentenceTransformer: Use pytorch device_name: mps
+11:19:25 INFO    sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+11:19:25 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+11:19:25 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+11:19:25 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+11:19:25 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+11:19:26 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+  Computing pairwise similarity...
+  Detecting shared references...
+  Running signal matrix...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 24036.79it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+11:19:26 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+11:19:26 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+11:19:27 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+11:19:27 INFO    httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+11:19:27 INFO    httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+11:19:27 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+11:19:48 INFO    insights.engine: AIC pre-scan: 2/32 submissions flagged as likely AI-generated
+11:19:48 INFO    insights.class_reader: Hierarchical reading: 32 students in 7 groups
+11:19:48 INFO    httpx: HTTP Request: GET https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit/revision/main "HTTP/1.1 200 OK"
+  Detecting contradictions...
+  Extracting citations...
+  LLM backend: mlx (mlx-community/gemma-3-12b-it-4bit)
+  Reading class as a community...
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 138390.74it/s]
+11:21:29 INFO    insights.class_reader:   Group 1/7 (8 students): 646 words
+11:23:24 INFO    insights.class_reader:   Group 2/7 (2 students): 558 words
+11:25:48 INFO    insights.class_reader:   Group 3/7 (8 students): 641 words
+11:27:55 INFO    insights.class_reader:   Group 4/7 (6 students): 529 words
+11:30:05 INFO    insights.class_reader:   Group 5/7 (4 students): 535 words
+11:32:10 INFO    insights.class_reader:   Group 6/7 (2 students): 526 words
+11:34:14 INFO    insights.class_reader:   Group 7/7 (2 students): 567 words
+11:38:32 INFO    insights.class_reader: Merged class reading: 814 words
+11:38:32 INFO    insights.engine: Class reading complete (6384 chars)
+11:39:46 INFO    insights.submission_coder: Reading-first P1 for Maria Ndiaye chunk 1/1: 1489 chars
+11:41:59 INFO    insights.submission_coder: Reading-first P1 for Jordan Kim chunk 1/1: 1472 chars
+11:43:58 INFO    insights.submission_coder: Reading-first P1 for Alex Hernandez chunk 1/1: 1365 chars
+11:46:05 INFO    insights.submission_coder: Reading-first P1 for Priya Venkataraman chunk 1/1: 1540 chars
+11:48:26 INFO    insights.submission_coder: Reading-first P1 for Amara Diallo chunk 1/1: 1500 chars
+libc++abi: terminating due to uncaught exception of type std::runtime_error: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-49064-jzvtxdbi'}
+  warnings.warn(
+  [Pipeline re-run (all fixes)] FAILED (exit 134)
+
+═══════════════════════════════════════════════
+  Queue complete. Log: data/research/raw_outputs/test_queue_20260328_095817.log
+
+  RESULTS INTERPRETATION GUIDE:
+  Test M: THE CRITICAL TEST. Does the production concern detector
+    reproduce S029 false-flag and S002 miss? If production system
+    handles S029 correctly, the n=25 finding is specific to the
+    simplified binary prompt, not a general classification failure.
+  Test J: structural_naming_score, violation_count,
+    reaching_for count. J2 uses ~10 students, no P7 ranking.
+  Test K: Rank models by total score AND per-dimension.
+    Language justice dimension hardest — flag 0-scorers.
+  Test L vs I: Compare false positive rates. L should have
+    0/2 FP (vs I's 1/2). If ENGAGED absorbed BURNOUT cases,
+    the prompt needs refinement.
+  Pipeline: Check what_student_is_reaching_for populated (was 0/32).
+═══════════════════════════════════════════════

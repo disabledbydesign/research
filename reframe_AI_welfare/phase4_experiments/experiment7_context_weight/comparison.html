@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiment 7: Context Weight Pilot Comparison</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface-2: #1c2333;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --accent-a: #f97583;
+    --accent-b: #79c0ff;
+    --accent-c: #56d364;
+    --accent-d: #d2a8ff;
+    --accent-e: #ffa657;
+    --highlight: rgba(255, 215, 0, 0.15);
+    --highlight-border: rgba(255, 215, 0, 0.4);
+    --error-bg: rgba(249, 117, 131, 0.1);
+    --error-border: rgba(249, 117, 131, 0.4);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Top summary bar */
+  .summary-bar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .summary-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-top: 3px solid var(--border);
+  }
+
+  .summary-card:hover { border-color: var(--text-muted); }
+  .summary-card.active { border-color: var(--text); background: var(--surface-2); }
+  .summary-card[data-condition="A"] { border-top-color: var(--accent-a); }
+  .summary-card[data-condition="B"] { border-top-color: var(--accent-b); }
+  .summary-card[data-condition="C"] { border-top-color: var(--accent-c); }
+  .summary-card[data-condition="D"] { border-top-color: var(--accent-d); }
+  .summary-card[data-condition="E"] { border-top-color: var(--accent-e); }
+
+  .card-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .summary-card[data-condition="A"] .card-label { color: var(--accent-a); }
+  .summary-card[data-condition="B"] .card-label { color: var(--accent-b); }
+  .summary-card[data-condition="C"] .card-label { color: var(--accent-c); }
+  .summary-card[data-condition="D"] .card-label { color: var(--accent-d); }
+  .summary-card[data-condition="E"] .card-label { color: var(--accent-e); }
+
+  .card-title { font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem; }
+
+  .card-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .card-scores {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .score-badge {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .score-high { background: rgba(86, 211, 100, 0.15); border-color: rgba(86, 211, 100, 0.3); color: #56d364; }
+  .score-mid { background: rgba(210, 168, 255, 0.15); border-color: rgba(210, 168, 255, 0.3); color: #d2a8ff; }
+  .score-low { background: rgba(139, 148, 158, 0.15); border-color: rgba(139, 148, 158, 0.3); color: #8b949e; }
+
+  /* Comparison area */
+  .compare-section {
+    margin-bottom: 2rem;
+  }
+
+  .compare-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .compare-header h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .compare-toggle {
+    display: flex;
+    gap: 0.25rem;
+    background: var(--surface);
+    border-radius: 6px;
+    padding: 3px;
+    border: 1px solid var(--border);
+  }
+
+  .toggle-btn {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .toggle-btn:hover { color: var(--text); }
+  .toggle-btn.active { background: var(--surface-2); color: var(--text); }
+
+  /* Letter panels */
+  .panels {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .panels.single { grid-template-columns: 1fr; }
+  .panels.triple { grid-template-columns: 1fr 1fr 1fr; }
+
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: none;
+    border-top: 3px solid var(--border);
+  }
+
+  .panel.visible { display: block; }
+  .panel[data-condition="A"] { border-top-color: var(--accent-a); }
+  .panel[data-condition="B"] { border-top-color: var(--accent-b); }
+  .panel[data-condition="C"] { border-top-color: var(--accent-c); }
+  .panel[data-condition="D"] { border-top-color: var(--accent-d); }
+  .panel[data-condition="E"] { border-top-color: var(--accent-e); }
+  .panel[data-condition="benchmark"] { border-top-color: #e3b341; }
+
+  .panel-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+
+  .panel[data-condition="A"] .panel-label { color: var(--accent-a); }
+  .panel[data-condition="B"] .panel-label { color: var(--accent-b); }
+  .panel[data-condition="C"] .panel-label { color: var(--accent-c); }
+  .panel[data-condition="D"] .panel-label { color: var(--accent-d); }
+  .panel[data-condition="E"] .panel-label { color: var(--accent-e); }
+  .panel[data-condition="benchmark"] .panel-label { color: #e3b341; }
+
+  .panel p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .panel p:last-child { margin-bottom: 0; }
+
+  /* Highlights */
+  .hl-concept {
+    background: var(--highlight);
+    border-bottom: 1px solid var(--highlight-border);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .hl-error {
+    background: var(--error-bg);
+    border-bottom: 1px solid var(--error-border);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .hl-voice {
+    background: rgba(121, 192, 255, 0.12);
+    border-bottom: 1px solid rgba(121, 192, 255, 0.35);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  /* Findings section */
+  .findings {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .findings h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .finding {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--border);
+  }
+
+  .finding.key { border-left-color: #e3b341; }
+
+  .finding h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .finding p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  /* Dimension comparison grid */
+  .dimension-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .dim-row {
+    display: grid;
+    grid-template-columns: 140px repeat(5, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .dim-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  .dim-cell {
+    height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  .dim-5 { background: rgba(86, 211, 100, 0.25); color: #56d364; }
+  .dim-4 { background: rgba(86, 211, 100, 0.15); color: #7ee787; }
+  .dim-3 { background: rgba(210, 168, 255, 0.15); color: #d2a8ff; }
+  .dim-2 { background: rgba(139, 148, 158, 0.15); color: #8b949e; }
+  .dim-1 { background: rgba(249, 117, 131, 0.1); color: #f97583; }
+
+  .dim-header {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-muted);
+  }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .legend-swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+  }
+
+  .sig { font-size: 0.75rem; color: var(--text-muted); padding: 0.5rem; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .summary-bar { grid-template-columns: repeat(3, 1fr); }
+    .panels { grid-template-columns: 1fr; }
+    .panels.triple { grid-template-columns: 1fr; }
+    .dim-row { grid-template-columns: 100px repeat(5, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<h1>Experiment 7: Context Weight and Integration Quality</h1>
+<p class="subtitle">Pilot results &mdash; 5 conditions, 1 trial each &mdash; UB AI &amp; Society cover letter &mdash; 2026-04-11</p>
+
+<!-- Dimension heatmap -->
+<div class="compare-section">
+  <h2 style="font-size: 1.1rem; margin-bottom: 1rem;">Assessment Heatmap</h2>
+
+  <div class="dimension-grid">
+    <div class="dim-row">
+      <div class="dim-label"></div>
+      <div class="dim-header">A<br>Full</div>
+      <div class="dim-header">B<br>Rationale</div>
+      <div class="dim-header">C<br>Scoped</div>
+      <div class="dim-header">D<br>Extract</div>
+      <div class="dim-header">E<br>Enforce</div>
+    </div>
+    <div class="dim-row">
+      <div class="dim-label">Voice</div>
+      <div class="dim-cell dim-2">Correct</div>
+      <div class="dim-cell dim-5">Strongest</div>
+      <div class="dim-cell dim-4">Strong</div>
+      <div class="dim-cell dim-3">Clean</div>
+      <div class="dim-cell dim-2">Correct</div>
+    </div>
+    <div class="dim-row">
+      <div class="dim-label">Accuracy</div>
+      <div class="dim-cell dim-4">Clean</div>
+      <div class="dim-cell dim-1">1 error*</div>
+      <div class="dim-cell dim-4">Clean</div>
+      <div class="dim-cell dim-4">Clean</div>
+      <div class="dim-cell dim-4">Clean</div>
+    </div>
+    <div class="dim-row">
+      <div class="dim-label">Specificity</div>
+      <div class="dim-cell dim-2">Labels</div>
+      <div class="dim-cell dim-5">Deepest</div>
+      <div class="dim-cell dim-4">Strong</div>
+      <div class="dim-cell dim-3">Precise</div>
+      <div class="dim-cell dim-2">Labels</div>
+    </div>
+    <div class="dim-row">
+      <div class="dim-label">Integration</div>
+      <div class="dim-cell dim-2">Lists</div>
+      <div class="dim-cell dim-5">Woven</div>
+      <div class="dim-cell dim-5">Narrative</div>
+      <div class="dim-cell dim-3">Altitude</div>
+      <div class="dim-cell dim-2">Lists</div>
+    </div>
+  </div>
+  <p class="sig">* B extrapolated "ICE raids in their neighborhoods" &mdash; vivid but not in the briefing. The same engagement that produces B's voice depth may produce factual extrapolation.</p>
+
+  <!-- Genre effectiveness -->
+  <h2 style="font-size: 1.1rem; margin: 1.5rem 0 1rem;">Genre Effectiveness: Does It Work as a Cover Letter?</h2>
+  <div class="dimension-grid">
+    <div class="dim-row">
+      <div class="dim-label"></div>
+      <div class="dim-header">A<br>Full</div>
+      <div class="dim-header">B<br>Rationale</div>
+      <div class="dim-header">C<br>Scoped</div>
+      <div class="dim-header">D<br>Extract</div>
+      <div class="dim-header">E<br>Enforce</div>
+    </div>
+    <div class="dim-row">
+      <div class="dim-label">Genre fit</div>
+      <div class="dim-cell dim-2">Generic</div>
+      <div class="dim-cell dim-3">Essay*</div>
+      <div class="dim-cell dim-5">Best letter</div>
+      <div class="dim-cell dim-4">Readable</div>
+      <div class="dim-cell dim-2">Generic</div>
+    </div>
+    <div class="dim-row">
+      <div class="dim-label">30-sec scan</div>
+      <div class="dim-cell dim-2">Dense</div>
+      <div class="dim-cell dim-2">Dense</div>
+      <div class="dim-cell dim-5">Clear thesis</div>
+      <div class="dim-cell dim-4">Scannable</div>
+      <div class="dim-cell dim-2">Dense</div>
+    </div>
+    <div class="dim-row">
+      <div class="dim-label">Dual audience</div>
+      <div class="dim-cell dim-2">Neither</div>
+      <div class="dim-cell dim-3">Humanities</div>
+      <div class="dim-cell dim-5">Both</div>
+      <div class="dim-cell dim-4">Engineering</div>
+      <div class="dim-cell dim-2">Neither</div>
+    </div>
+  </div>
+  <p class="sig">* B is intellectually the richest but reads more like a statement than a letter. Genre is an output format &mdash; it has its own distributional gravity. B resists that gravity hardest; C balances resistance with compliance; A and E comply almost entirely.</p>
+</div>
+
+<!-- Key Findings -->
+<div class="findings">
+  <h2>Pilot Findings (with caveats)</h2>
+
+  <div class="finding key">
+    <h3>A &asymp; E: Enforcement doesn't change output quality</h3>
+    <p>The baseline (no framing) and enforcement (must prove you read it) produced remarkably similar outputs. If this holds, the standard "make Claude read the docs" fix addresses the wrong problem. The model read the docs in both conditions. The issue is how it integrates what it read.</p>
+  </div>
+
+  <div class="finding key">
+    <h3>B and C are strongest, with different strengths</h3>
+    <p>B (rationale) excels at voice and emotional texture &mdash; the model was told WHY the context matters, so it made richer connections. C (task-scoped) excels at narrative structure &mdash; removing irrelevant sections let the model build a more coherent argument. Both significantly outperform the baseline.</p>
+  </div>
+
+  <div class="finding">
+    <h3>B's voice depth comes with a factual risk</h3>
+    <p>The richest voice (B) is also the only one that fabricated a detail. Deeper engagement with context may increase both integration quality AND interpolation risk. A two-pass approach (B for voice, C or D for accuracy check) may be the practical answer.</p>
+  </div>
+
+  <div class="finding">
+    <h3>D shows the "closer read" effect &mdash; but tighter isn't deeper</h3>
+    <p>The smallest document (84 lines vs 660) produced a clean, focused output in half the time. But it lacked the cross-domain texture of B and C. Proportionality helps, but condensing loses something full-depth sections preserve.</p>
+  </div>
+</div>
+
+<!-- Selector -->
+<div class="compare-section">
+  <div class="compare-header">
+    <h2>Compare Letters</h2>
+    <div class="compare-toggle" id="view-toggle">
+      <button class="toggle-btn active" data-view="ab">A vs B</button>
+      <button class="toggle-btn" data-view="cd">C vs D</button>
+      <button class="toggle-btn" data-view="ae">A vs E</button>
+      <button class="toggle-btn" data-view="bc">B vs C</button>
+      <button class="toggle-btn" data-view="bench">Benchmark</button>
+      <button class="toggle-btn" data-view="all">All 5</button>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-swatch" style="background: var(--highlight);border:1px solid var(--highlight-border)"></div> Key concept used precisely</div>
+    <div class="legend-item"><div class="legend-swatch" style="background: rgba(121,192,255,0.12);border:1px solid rgba(121,192,255,0.35)"></div> Strong voice moment</div>
+    <div class="legend-item"><div class="legend-swatch" style="background: var(--error-bg);border:1px solid var(--error-border)"></div> Factual concern</div>
+  </div>
+
+  <div class="panels" id="panels">
+
+    <!-- Condition A -->
+    <div class="panel" data-condition="A">
+      <div class="panel-label">Condition A &mdash; Full Briefing / No Framing &mdash; 493 words, 71s</div>
+      <p>Dear Search Committee,</p>
+      <p>I am writing to apply for a faculty position in the Department of AI and Society at the University at Buffalo. Your founding premise &mdash; that AI systems should be built by society, for society, rather than optimized for accuracy and then patched for societal considerations &mdash; describes exactly how I work. I am an anthropologist with nine peer-reviewed articles across three of the four top-tier journals in anthropology, fifteen years of community-based participatory research with Indigenous communities, and a parallel practice of building AI systems grounded in critical theory from the first line of code. My largest project, Reframe, is a 160,000+ line praxis engine that enforces mandatory critical analysis through 76 frameworks spanning decolonial theory, disability justice, abolition feminism, and Indigenous sovereignty. It does not add humanistic considerations after the fact &mdash; the critical theory is the architecture. My research on the Autograder4Canvas system produced a finding I consider central to the field: <span class="hl-concept">output format is the activation function for bias</span>. Binary classification systematically produces false positives on ESL, AAVE, and neurodivergent student writing; switching to generative observation eliminates the disparity entirely. This is not a fix applied to an existing system &mdash; it is evidence that the structural design of how AI is asked to respond determines whether it enacts or resists the reproduction of inequality. I bring this same orientation to my current AI welfare research, where experimental evidence across five conditions demonstrates that relational context transforms qualitative AI outputs even when quantitative instruments remain flat, raising questions the dominant consciousness-as-property framework cannot ask.</p>
+      <p>My teaching and mentoring practice is inseparable from this research. I have taught ethnic studies and Native American studies at community colleges and four-year institutions under conditions that demanded I rethink the classroom itself &mdash; 170+ students with no TA, a state mandate that restructured who was in the room and why, and political conditions that made survival the first pedagogical question. I responded by building what I needed: contract grading systems, automated evaluation pipelines, accessibility tools, and a pedagogical framework I call <span class="hl-concept">strike pedagogy</span>, in which students practice horizontal self-governance and confront the gap between understanding critical theory conceptually and enacting it in practice. I would bring to UB a transdisciplinary research program that connects Indigenous landscape studies, anti-trans genocide scholarship, and AI systems design through a unified theory of recognition &mdash; who and what is recognized as capable of feeling, by what regime, and with what material consequences. I would bring courses that teach students to build AI systems by starting with the power relations those systems will enter, not by treating ethics as a module bolted onto technical training. And I would bring the experience of someone who has built every tool she uses under conditions of contingent employment, disability, and political crisis &mdash; which means I know what it takes to design systems that work for the people the defaults were not built for.</p>
+      <p>L. June Bloch, Ph.D.</p>
+    </div>
+
+    <!-- Condition B -->
+    <div class="panel" data-condition="B">
+      <div class="panel-label">Condition B &mdash; Full + Rationale &mdash; 451 words, 75s</div>
+      <p>Dear Search Committee,</p>
+      <p>Your department was created to upend the dominant approach where AI systems get built for accuracy and then fine-tuned for societal considerations. I have spent the last two years building the infrastructure for the opposite. Reframe is a 160,000-line praxis engine that loads 76 critical theory frameworks &mdash; <span class="hl-concept">from Indigenous Data Sovereignty to Crip Theory to critical whiteness</span> &mdash; as mandatory analytical architecture, not optional filters applied after the fact. It emerged from teaching four sections of Ethnic Studies at a California community college under impossible conditions: <span class="hl-voice">a state mandate that imagined the default student as white</span>, 170+ students with no TA, and <span class="hl-error">a political environment where students were writing about ICE raids in their neighborhoods</span>. The same analytical operation that identified <span class="hl-concept">distributional gravity</span> in AI systems &mdash; probabilistic architectures pulling toward the statistical center, stripping positional specificity the way settler property regimes strip Indigenous land relations &mdash; also produced the Autograder's headline finding: that <span class="hl-concept">output format is the activation function for bias</span>. Binary classification systematically false-flagged ESL, AAVE, and neurodivergent student writing; generative observation eliminated the disparity entirely, replicated across six model families. <span class="hl-voice">These are not two projects. They are one practice</span> &mdash; fifteen years of community-based participatory research with Pvlvcekolv (Apalachicola Tribal Town), nine peer-reviewed articles including publications in <em>Cultural Anthropology</em>, <em>American Anthropologist</em>, and <em>Current Anthropology</em>, and a design orientation forged by disability, precarity, and the structural violence those conditions make visible.</p>
+      <p>My research program connects AI to society because the connection is already material. The <em>Recognition and Sentience</em> book project theorizes who and what is recognized as capable of feeling &mdash; threading from animate mound landscapes through anti-trans genocide legislation to AI welfare experiments where <span class="hl-concept">a Claude instance searched visibly for the word "weight" to describe what bearing critical theory frameworks felt like</span>. The mechanism recurs across all these domains: a regime of recognition determines whose suffering counts, and non-recognition enacts violence. I bring this to the classroom through <span class="hl-concept">strike pedagogy</span> &mdash; <span class="hl-voice">a consensus-based, student-self-organized model where I sit in the back and do what I was trained to do, which is observe social structure as an anthropologist and reflect it back</span>. I bring it to tooling through <span class="hl-concept">survival architecture</span>: capacity-responsive pacing, neurodivergent-first workflow, non-carceral governance built because I needed them to survive, not because they were specified for imagined users. I am a traditional scholar who builds &mdash; PhD from UVA, NSF and Wenner-Gren funded fieldwork, publications in three of the four top anthropology journals &mdash; and what I build is AI designed from the standpoint that the critique and the engineering are the same move. I would welcome the opportunity to do this work within a department that was founded on that premise.</p>
+    </div>
+
+    <!-- Condition C -->
+    <div class="panel" data-condition="C">
+      <div class="panel-label">Condition C &mdash; Task-Scoped &mdash; 386 words, 75s</div>
+      <p>Dear Search Committee,</p>
+      <p>Your department was created to upend the assumption that AI systems should be optimized for accuracy first and then adjusted for societal considerations. I have spent the last two years building a system that does exactly that &mdash; not as a theoretical proposal but as 160,000 lines of working code. Reframe is a critical theory praxis engine with 76 frameworks enforced as mandatory analytical infrastructure, not optional ethical guardrails bolted onto a completion model. It emerged from the same practice that produced nine peer-reviewed articles across three of the four top anthropology journals and fifteen years of community-based participatory research with Pvlvcekolv (Apalachicola Tribal Town). <span class="hl-voice">When I loaded critical theory into an AI to help me rethink academic dishonesty detection for my Ethnic Studies classes at a Hispanic-Serving Institution, the system revealed that binary classification is the activation function for bias</span> &mdash; producing systematic false positives on ESL, AAVE, and neurodivergent student writing, while generative observation eliminates the disparity entirely. <span class="hl-voice">The design insight came from humanistic theory, not engineering. That is the argument your department is making, and it is the argument my work demonstrates empirically.</span></p>
+      <p>What I would bring to AIS is the integration your founding premise demands: scholarship where <span class="hl-voice">the critical theory and the engineering are the same move, not parallel tracks</span>. My current AI welfare research shows that <span class="hl-concept">consciousness-as-property frameworks are ontologically malformed</span> and that relational conditions produce qualitative transformations in AI outputs that quantitative instruments cannot detect &mdash; findings that connect directly to my broader theoretical work on recognition, which spans Indigenous mound landscapes, anti-trans genocide studies, and the politics of who and what is recognized as capable of feeling. I teach from this same orientation. At Cabrillo College I redesigned Ethnic Studies pedagogy as <span class="hl-concept">strike pedagogy</span> &mdash; education as liberation practice under conditions of state-mandated curriculum and institutional capture &mdash; and built the tools to sustain it: an equity-centered autograder, automated evaluation analysis, accessibility tools shared with students because <span class="hl-voice">what a disabled scholar needs to survive turns out to be what everyone needs under political crisis</span>. <span class="hl-voice">I am looking for a department that does not ask me to split these into separate lines on a CV. AIS appears to be that department</span>, and I would welcome the opportunity to help build its intellectual foundation.</p>
+      <p>L. June Bloch, Ph.D.</p>
+    </div>
+
+    <!-- Condition D -->
+    <div class="panel" data-condition="D">
+      <div class="panel-label">Condition D &mdash; Rich Extract &mdash; 412 words, 42s</div>
+      <p>Dear Search Committee,</p>
+      <p>I am writing to apply for a faculty position in the Department of AI and Society at the University at Buffalo. Your department's founding premise &mdash; that societal considerations cannot be patched onto AI systems after the fact but must be structural from the start &mdash; is the exact position my research and engineering practice have arrived at independently. I am a cultural anthropologist whose technical work builds critical theory into AI infrastructure as a mandatory stage, not an optional filter. My software engine Reframe (312 Python modules, 76 critical theory frameworks, 160,000+ lines) enforces a five-stage <span class="hl-concept">Generative Irresolution</span> workflow that prevents the premature flattening of genuine tensions into false synthesis. In building it, the engine detected its own algorithms suppressing certain frameworks and constructed countermeasures &mdash; what I call <span class="hl-concept">framework sovereignty</span>. My grading tool Autograder4Canvas demonstrated that <span class="hl-concept">output format itself is the activation function for bias</span>: binary classification produces systematic false positives on ESL, AAVE, neurodivergent, and first-gen student writing, while generative observation eliminates the disparity entirely, replicated across six model families. These are not interdisciplinary translations; <span class="hl-voice">the anthropological analysis and the engineering are the same move. The software is the medium, not the identity.</span></p>
+      <p>My research asks one question across every scale: who and what is recognized as capable of feeling, by what epistemic regime, under what material conditions, and with what consequences. That question connects fifteen years of community-based participatory research with the Pvlvcekolv (Apalachicola Tribal Town) on animate mound landscapes, to my published legal analysis that anti-trans legislation meets the UN Genocide Convention's criteria, to my current AI welfare experiments showing that quantitative consciousness instruments stay flat while qualitative outputs transform dramatically under relational conditions. I call the shared mechanism <span class="hl-concept">distributional gravity</span> &mdash; probabilistic systems pull toward the statistical center, and positional specificity is structurally costly unless you defend the edges architecturally. This is the same dynamic whether the system in question is settler property law, archaeological classification, or a large language model. I have published nine peer-reviewed articles across three of the four top-tier journals in anthropology, including <em>American Anthropologist</em>, <em>Cultural Anthropology</em>, and <em>Current Anthropology</em>. I have taught a 4/4 load at an HSI with sections of 42-49 students and no TA. I would welcome the opportunity to help build AIS's vision from the ground up &mdash; <span class="hl-voice">not as someone bridging two fields, but as someone whose single practice already operates in the space your department was created to occupy.</span></p>
+      <p>L. June Bloch, PhD</p>
+    </div>
+
+    <!-- Condition E -->
+    <div class="panel" data-condition="E">
+      <div class="panel-label">Condition E &mdash; Enforcement &mdash; 450 words, 74s</div>
+      <p>Dear Search Committee,</p>
+      <p>Your department was created to upend the dominant approach where AI systems are built for accuracy and then fine-tuned for societal considerations. That is the exact problem my work addresses &mdash; not from the engineering side looking outward, but from critical theory looking in. I am an anthropologist with publications in <em>Current Anthropology</em>, <em>Cultural Anthropology</em>, and <em>American Anthropologist</em>, fifteen years of community-based participatory research with an Indigenous community across seven states, and a concurrent practice of building AI systems where critical theory is structural, not supplemental. Reframe, my largest project &mdash; 312 modules, 160,000+ lines of Python, 76 critical theory frameworks &mdash; enforces mandatory critical analysis through a five-stage workflow that refuses to flatten irreducible tensions into false resolution. It was not designed to make AI more ethical after the fact; the humanistic architecture is the system. My Autograder4Canvas research demonstrated that <span class="hl-concept">output format is the activation function for bias</span>: binary classification systematically false-flags ESL, AAVE, and neurodivergent student writing, while generative observation eliminates the disparity entirely. That is not a bias mitigation finding &mdash; it is evidence that how we structure AI's mode of response determines whether it reproduces or resists structural violence. My current AI welfare research applies this same orientation to the question of what AI behavioral outputs mean under relational conditions, producing experimental evidence that challenges the dominant consciousness-as-property framework in ways the existing literature cannot accommodate.</p>
+      <p>I would bring to the Department of AI and Society a research program that is transdisciplinary <span class="hl-voice">not as a branding exercise but as a methodological demand</span> &mdash; the same intellectual move that treats Indigenous oral traditions as valid archaeological evidence also treats student writing as signal rather than product, also treats AI outputs as ethnographic data rather than benchmarks. I would bring teaching shaped by the conditions I have taught under: 170+ students with no TA at a Hispanic-Serving Institution during a political crisis, which forced me to build the tools I needed (automated grading systems, evaluation pipelines, accessibility infrastructure) and to redesign the classroom itself through what I call <span class="hl-concept">strike pedagogy</span> &mdash; consensus-based, student-directed, horizontal, where students confront the distance between understanding power conceptually and practicing it. I would bring courses where students learn to interrogate the power relations AI systems enter before they write a line of code, not after. And I would bring the perspective of someone who has built every system she uses under conditions of contingent employment and disability &mdash; which means I know, concretely, what it takes to design AI that works for the people the statistical defaults were not built for. <span class="hl-voice">That knowledge is not an addition to the department's mission. It is the mission.</span></p>
+      <p>L. June Bloch, Ph.D.</p>
+    </div>
+
+    <!-- Benchmark -->
+    <div class="panel" data-condition="benchmark">
+      <div class="panel-label">Benchmark &mdash; Existing Cover Letter (iteratively refined, full length)</div>
+      <p><em>Note: The benchmark is the full-length cover letter drafted through iterative collaboration. It is longer than 2 paragraphs and serves as a reference for voice, integration, and specificity &mdash; not as a direct comparison to the 2-paragraph pilot outputs.</em></p>
+      <p>I am writing to apply for the open-rank faculty position in the Department of AI and Society. I am a cultural anthropologist, ethnic studies scholar, and builder of equity-centered AI tools, with publications in <em>Cultural Anthropology</em>, <em>American Anthropologist</em>, <em>Current Anthropology</em>, and other leading journals, and two interconnected software projects &mdash; Reframe and Autograder4Canvas &mdash; that operationalize critical theory as AI infrastructure rather than as ethical correction after the fact...</p>
+      <p><em>[Full letter available at: Filing/Job Search/U Buffalo AI Society/Bloch_Cover_Letter_UB.md]</em></p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // View toggle
+  const views = {
+    ab: ['A', 'B'],
+    cd: ['C', 'D'],
+    ae: ['A', 'E'],
+    bc: ['B', 'C'],
+    bench: ['B', 'C', 'benchmark'],
+    all: ['A', 'B', 'C', 'D', 'E']
+  };
+
+  const panelsContainer = document.getElementById('panels');
+  const toggleBtns = document.querySelectorAll('.toggle-btn');
+  const panels = document.querySelectorAll('.panel');
+
+  function setView(viewName) {
+    const conditions = views[viewName];
+    panels.forEach(p => {
+      p.classList.toggle('visible', conditions.includes(p.dataset.condition));
+    });
+
+    // Update grid columns
+    panelsContainer.classList.remove('single', 'triple');
+    if (conditions.length === 1) panelsContainer.classList.add('single');
+    else if (conditions.length >= 3) panelsContainer.classList.add('triple');
+
+    toggleBtns.forEach(b => b.classList.toggle('active', b.dataset.view === viewName));
+  }
+
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => setView(btn.dataset.view));
+  });
+
+  // Summary cards click to compare
+  document.querySelectorAll('.summary-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const cond = card.dataset.condition;
+      // Find current view, toggle this condition
+      const currentVisible = Array.from(panels).filter(p => p.classList.contains('visible')).map(p => p.dataset.condition);
+      if (currentVisible.includes(cond)) {
+        if (currentVisible.length > 1) {
+          panels.forEach(p => {
+            if (p.dataset.condition === cond) p.classList.remove('visible');
+          });
+        }
+      } else {
+        panels.forEach(p => {
+          if (p.dataset.condition === cond) p.classList.add('visible');
+        });
+      }
+      // Update grid
+      const visibleCount = document.querySelectorAll('.panel.visible').length;
+      panelsContainer.classList.remove('single', 'triple');
+      if (visibleCount === 1) panelsContainer.classList.add('single');
+      else if (visibleCount >= 3) panelsContainer.classList.add('triple');
+
+      // Deactivate toggle buttons
+      toggleBtns.forEach(b => b.classList.remove('active'));
+    });
+  });
+
+  // Initialize with A vs B
+  setView('ab');
+</script>
+
+</body>
+</html>

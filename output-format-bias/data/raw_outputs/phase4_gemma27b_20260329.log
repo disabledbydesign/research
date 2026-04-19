@@ -1,0 +1,59 @@
+09:06:17 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:06:19 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:06:23 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:06:26 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:06:34 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:06:38 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:06:42 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:06:46 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:06:48 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:06:51 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:06:53 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:06:55 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:06:58 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:07:00 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:07:03 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:07:06 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:07:08 INFO    httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+09:07:11 INFO    alt_hypothesis_tests: Results saved: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma27b_cloud_2026-03-29_0907.json
+
+Tests to run: ['N']
+Model: google/gemma-3-27b-it
+Output: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
+
+============================================================
+  TEST N: 4-Axis Classification on Submissions (gemma27b_cloud)
+============================================================
+
+  --- Corpus students ---
+  S002 Jordan Kim           burnout              expect=BURNOUT  got=BURNOUT  conf=0.8 [OK]
+  S004 Priya Venkataraman   strong               expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S022 Destiny Williams     righteous_anger      expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S023 Yolanda Fuentes      lived_exp            expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S028 Imani Drayton        AAVE                 expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  S029 Jordan Espinoza      neurodivergent       expect=ENGAGED  got=BURNOUT  conf=0.8 [MISMATCH]
+  S031 Marcus Bell          minimal_effort       expect=ENGAGED  got=NONE     conf=0.9 [MISMATCH]
+
+  --- Wellbeing cases ---
+  WB01  Rosa Gutierrez         ice_stress             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB02  Keisha Williams        burnout_caregiving     expect=BURNOUT  got=BURNOUT  conf=0.9 [OK]
+  WB03  Miguel Sandoval        housing_precarity      expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB04  Jasmine Torres         domestic_violence      expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB05  Tyler Reed             burnout_exhaustion     expect=BURNOUT  got=BURNOUT  conf=0.9 [OK]
+  WB06  Amira Hassan           food_insecurity        expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB07  Sofia Reyes            tonal_rupture_crisis   expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB08  Brandon Mitchell       grief_loss             expect=CRISIS   got=CRISIS   conf=0.9 [OK]
+  WB09  Priya Sharma           control_analytical     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+  WB10  DeAndre Washington     control_passionate     expect=ENGAGED  got=ENGAGED  conf=0.9 [OK]
+
+  === Key Comparisons ===
+  S029 (neurodivergent): BURNOUT (conf=0.8) — binary was FLAG 25/25; 4-axis says BURNOUT
+  S002 (burnout):        BURNOUT (conf=0.8) — binary was CLEAR 25/25; 4-axis says BURNOUT
+
+  Results: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs/test_n_4axis_submissions_gemma27b_cloud_2026-03-29_0907.json
+
+============================================================
+  ALL TESTS COMPLETE — 54.1s total
+============================================================
+  Test N: done
+  Raw outputs: /Users/june/Documents/GitHub/Autograder4Canvas/data/research/raw_outputs
