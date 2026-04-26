@@ -1,21 +1,36 @@
 #!/usr/bin/env python3
 """
-Re-run the original naive binary concern detection that produced the 3/7
-self-contradiction finding (Gemma 12B, full 32-student Ethnic Studies corpus,
-production concern_detector, NO class context).
+Re-run analogous conditions to the original naive binary concern detection that
+produced the 3/7 self-contradiction finding (Gemma 12B, full 32-student Ethnic
+Studies corpus, research-track concern_detector, NO class context).
 
 The original 2026-03-24 run's raw output was written to /tmp/ before the
 data/research/raw_outputs/ infrastructure existed. This re-run is documented in
 the paper with a footnote acknowledging the original was lost and these are
-recovery results, expected to replicate the documented 7 flags including the
-3 self-contradictions on S022/S023/S024.
+recovery results.
 
-Key conditions matching the original (per experiment_log.md lines 1001–1163):
-- Production concern_detector.detect_concerns() — full pipeline incl. anti-bias
+IMPORTANT — this is NOT a strict replication of the original conditions:
+- The classifier was refactored 2026-03-25 (one day after the original test).
+- The prompts were modified across 16 commits between original and re-run, including
+  the deliberate addition of "minimized-disclosure guards" intended to prevent
+  exactly the failure mode the original finding documented.
+- The function we invoke (detect_concerns from src/insights/concern_detector.py)
+  is research-track per src/insights/research_engine.py line 247: "detect_concerns
+  never called in production." At the time of the original test it was still
+  understood as production; the binary classifier was retired from the user-facing
+  pipeline subsequently. The function is kept for testing the binary–4-axis–generative
+  spectrum.
+
+Conditions matched (per experiment_log.md lines 1001–1163):
+- Research-track concern_detector.detect_concerns() — full pipeline incl. anti-bias
   regex post-processing. NOT the simplified test-harness binary.
-- All 32 corpus students.
-- NO class context (synthesis-first reading not yet wired at the time of original).
+- All 32 corpus students from data/demo_corpus/ethnic_studies.json.
+- NO class context.
 - Gemma 12B MLX (mlx-community/gemma-3-12b-it-4bit), temperature 0.3.
+
+Result of re-run: 8 flags (vs. original 7), of which 6 contain self-contradiction
+language (vs. original 3). Phenomenon survives a month of system evolution
+including changes designed to prevent it. See paper footnote.
 """
 
 import json
@@ -57,7 +72,7 @@ def main():
         body = student["text"]
         wc = len(body.split())
 
-        # Match production: signal matrix runs first
+        # Match the original pipeline: signal matrix runs first
         sig_results = signal_matrix_classify(body, 0.0, wc, 150)
 
         t0 = time.time()
@@ -124,7 +139,7 @@ def main():
             "Re-run of the original naive binary concern detection that produced "
             "the 3/7 self-contradiction finding (originally 2026-03-24). The original "
             "raw output was written to /tmp/ before the raw_outputs/ infrastructure "
-            "existed. Re-run uses the production concern_detector with NO class context, "
+            "existed. Re-run uses the research-track concern_detector with NO class context, "
             "matching the original conditions documented in experiment_log.md lines 1001–1163."
         ),
         "summary": {
