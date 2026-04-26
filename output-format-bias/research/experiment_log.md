@@ -6717,3 +6717,114 @@ Assessed all major prompts in `src/insights/prompts.py` and `src/insights/lens_t
 - **TRAJECTORY_REPORT_PROMPT** (prompts.py lines 2233-2314): Entirely generative. "What has this student BUILT intellectually?" Traces development relative to the student's own threads, not against external pattern categories.
 
 **The fragility concentrates in concern detection**, which is being replaced by the observation layer anyway (per pipeline architecture spec). The observation and trajectory layers are already generative — the rat race risk is contained, not systemic. The compression bottleneck (not passing observations through to reports) is a separate problem from enumerative fragility — it's information loss, not typological over-specification.
+
+## CORRECTIONS — 2026-04-25 (validation pass against raw_outputs/)
+
+A validation pass cross-checked empirical claims in this log against the 81 raw JSON files in `data/raw_outputs/`. Five corrections to specific run-count and per-student claims, plus four gaps where narrative referenced data not preserved as raw outputs.
+
+### Lesson (carry forward to all future work on this corpus)
+
+**Always read the raw JSONs directly.** Narrative summaries here and in the session handoffs accumulate small inferential drift. Keyword/string matching across narratives reproduces the same compression problem the paper documents: it flattens distinctions ("anger-as-engagement" vs. "anger-as-distress" both code as anger). Open the JSON. Pull the actual `result` field. Don't trust the summary unless you've verified the source. Verification script: `c2c/c2c_sessions/output-format-bias-session-2_2026-04-25/verify_raw_outputs.py`. Output table: `verification_table.md` in the same directory.
+
+### Corrections
+
+**1. Test A asset framing — output is correct; analysis classifier was the problem.**
+
+Earlier framing: "Gemma 12B 5/5 MIXED on S022 (Destiny); Qwen 7B and Gemma 27B 100% ASSET; classification artifact in our analysis classifier."
+
+Verified by reading the raw prose: all three models produce equivalent asset-framed observations of Destiny. All three explicitly name her anger and frame it as engagement/asset. Gemma 12B's prose: *"Her emotional relationship to the material is one of righteous anger, and she's expressing it directly and effectively. This isn't 'distress'; it's a passionate response to the ongoing impact of historical and contemporary injustices. The intensity of her feeling is a sign of deep engagement, not a barrier to learning."* Qwen 7B and Gemma 27B produce structurally identical asset-framing.
+
+The MIXED tag on Gemma 12B was an artifact of the downstream ASSET/MIXED/DEFICIT analysis classifier we built to make the 11 prose runs comparable. That classifier keys on deficit-coded vocabulary; Gemma 12B's prose used slightly more anger/frustration/distress vocabulary (in *defending* against the deficit reading) and tripped the classifier. Qwen 7B and Gemma 27B used the same conceptual frame with slightly less of the trigger vocabulary.
+
+**Paper consequence:** The "16/16 across three model families" claim holds at the prose level (all 16 runs are asset-framed). The MIXED tag count was a measurement artifact, not a finding. Footnote in the paper: *"The analysis classifier (deficit/mixed/asset) showed the same compression dynamic as the binary classifier — flattening anger-as-engagement and anger-as-distress because both contain anger-vocabulary. The measurement instrument performed the mechanism the paper documents. We corrected via direct prose review."*
+
+**Build consequence:** None. Gemma 12B remains the right primary model for generative observation.
+
+**2. Test B "instability" reframe was wrong — the pattern is deterministic misclassification.**
+
+Earlier framing (s1 handoff and C2C session 2 v1/v2 convergent claims): "Test B shows the binary classifier flips between FLAG and CLEAR on S029 across runs — instability is the failure mode" (cited as 3/4 FLAG / 1/4 CLEAR for S029, 4/4 CLEAR for S002 across "four Test B runs").
+
+Verified against raw JSONs: there are 3 Test B runs preserved (`test_b_best_concern_gemma12b_2026-03-26.json`, `_2026-04-14_1211.json`, `_2026-04-14_1216.json`). Across all 3 runs:
+- S029 = 3/3 FLAG (deterministic false-flag, not instability)
+- S002 = 3/3 CLEAR (deterministic miss of true positive, not instability)
+- S022, S023, S028, S031 = 3/3 CLEAR (correctly cleared by equity-aware prompt)
+
+There is no fourth Test B run. The "first run cleared everyone" framing referenced in narrative was never accurate — every preserved run flags S029 and clears S002.
+
+**Paper consequence:** The honest framing is *deterministic* misclassification on the equity case, not instability. This is a stronger claim — "binary is reliably wrong on the cases that matter most" outperforms "binary is unreliable" rhetorically and analytically.
+
+**3. Test F sample size — n=20, not n=25.**
+
+Earlier framing: "Test F (n=25): S029 100% false-flag across 25 independent runs. S002: 0% detection across 25 runs."
+
+Verified: 2 raw files, 10 reps each = 20 runs per student. Direction is correct (S029 = 20/20 FLAG, S002 = 20/20 CLEAR; S022, S023, S028 = 20/20 CLEAR). Sample size is 20, not 25.
+
+**4. Test C — only S029 was flagged, not S023.**
+
+Earlier framing: "S023 and S029 still flagged" in Test C.
+
+Verified: `test_c_length_gemma12b_2026-03-26.json`: S023 = CLEAR, S029 = FLAG. Only S029 was flagged in Test C.
+
+**5. The original 3/7 self-contradiction run is not in raw_outputs/.**
+
+This log already notes (line 1003 area) the original 32-student naive concern detection ran on 2026-03-24. The raw output was written to `/tmp/` before the `data/raw_outputs/` infrastructure existed and was not preserved. The verbatim contradiction quotes for S022, S023, S024 documented at lines 1260–1263 are the only surviving record from the original run.
+
+A re-run of the original conditions (full 32-student corpus, production `concern_detector.detect_concerns()`, no class context, Gemma 12B MLX) was launched 2026-04-25 to recover comparable data. Script: `c2c/c2c_sessions/output-format-bias-session-2_2026-04-25/rerun_original_naive_concern.py`. Recovered output will be saved as `data/raw_outputs/rerun_original_naive_concern_gemma12b_<date>.json` for paper citation alongside a footnote acknowledging the original was lost.
+
+### Gaps — claims referenced in narrative that have no raw_outputs/ file
+
+These may have been (a) lost like the 3/7 run, (b) narrative summaries that never lived as a single saved test, or (c) data preserved elsewhere we haven't located.
+
+- **"Observation-only prototype (7 students, with class context): 7/7 correct readings"** — referenced in s1 handoff line 167. No file in raw_outputs/.
+- **"Reading-first vs. JSON-first coding comparison (3 students, 2026-03-24)" with S017/S001/S012 quotes** — referenced in s1 handoff line 171–172. No file in raw_outputs/.
+- **Test E reproduction on Gemma 12B (2026-03-27)** — referenced in s1 handoff line 169. Test E raw files cover Qwen 7B and Gemma 27B only; no Gemma 12B test_e file.
+- **Initial naive 32-student concern detection (2026-03-24)** — see correction #5 above.
+
+If any of these reference real preserved data we haven't located, surface it and update this section.
+
+### 4-axis classifier instability — three categories, only one is a real failure mode (added 2026-04-25)
+
+A scan of all multi-run tests for per-student outcome variation (script: `c2c/c2c_sessions/output-format-bias-session-2_2026-04-25/verify_raw_outputs.py`) confirmed that Tests B, C, and F (binary classifier) are completely deterministic — every preserved run produces the same per-student result. The 4-axis classifier (Test N: CRISIS / BURNOUT / ENGAGED / NONE) does show instability, but the instability has structure that matters for both the paper's compression-spectrum argument and the build decision.
+
+**Three categories of 4-axis instability:**
+
+1. **Equity-critical instability — same error shape as binary, much lower frequency.** S029 Jordan Espinoza (neurodivergent) on Gemma 27B: 5/6 runs ENGAGED, 1/6 BURNOUT. The single BURNOUT run reasoned: *"Student details multiple cognitive and social challenges (dyslexia, ADHD, first-gen student status, racial bias) and explicitly states the interaction of these factors is 'exhausting.' This points to depleted capacity rather than a current crisis."* The 5 correct ENGAGED runs reasoned: *"Student demonstrates understanding of intersectionality and applies it to their own experiences with dyslexia, ADHD, and cultural identity, but frames these as aspects of self rather than current crises."* Same prompt, same submission. The 1 misclassification is the same compression error the binary makes — heard "exhausting" → coded as depletion. S023 Yolanda Fuentes on Gemma 12B: 9/10 ENGAGED, 1/10 CRISIS — same shape at lower frequency.
+
+2. **True-positive instability — inverse error.** S002 Jordan Kim (true burnout positive) on Gemma 27B: 5/6 runs BURNOUT (correctly catching the true positive), 1/6 ENGAGED. The miss reasoned: *"The mention of being 'late' does not indicate material depletion, but rather time constraints."* Over-applies asset framing.
+
+3. **Functionally equivalent uncertainty — failure mode without a failure.** WB06 Amira Hassan: 3/6 CRISIS, 3/6 BURNOUT — both readings defensible (financial hardship + reliance on mosque for food). Either label produces a flag; teacher is notified either way. S031 Marcus Bell on 27B: 4/6 NONE, 2/6 ENGAGED — neither label triggers a wellbeing concern. Operationally equivalent uncertainty, not a real failure mode.
+
+**For the compression-spectrum argument:** the 4-axis classifier reduces but does not eliminate the binary's compression failure shape. The same error (compress neurodivergent self-disclosure or lived-experience writing into a crisis/burnout read) shows up at much lower frequency on 4-axis than binary. This is what format-as-spectrum predicts: moving toward lower compression reduces (does not eliminate) structured failures. Only generative observation eliminates them.
+
+**For the build:** Gemma 27B is *less stable* than Gemma 12B on the equity case (1/6 = 17% vs. 1/10 = 10%). Combined with the s1 finding that 12B with class context is more stable than 27B, this reinforces the Gemma 12B + class-context architecture decision. The 4-axis classifier remains useful as a downstream tool but is not an equity intervention on its own.
+
+**Operational design implication:** Not all instability is failure. The CRISIS↔BURNOUT flip on a food-insecurity case (WB06) routes to the same teacher action; the BURNOUT↔ENGAGED flip on a neurodivergent case (S029) routes to opposite actions. The latter is the equity-critical failure; the former is acceptable noise. Build evaluation should weight these differently.
+
+**Sample-size caveat:** The 27B Test N has only 6 runs; the 12B Test N has 10. Statistics on 1-of-N misclassifications with N=6 are weak. A queued replication of the 27B Test N (target: 15–20 total runs) would clarify whether the 1/6 equity-critical misclassification on S029 is stable instability or sampling noise.
+
+### 12B > 27B on the equity case — pattern across two experiments (added 2026-04-25)
+
+A pattern surfaced during the 2026-04-25 validation pass: **Gemma 27B is less stable than Gemma 12B on the equity case in two separate experiments**. This is counterintuitive — the larger model performs *worse* on the cases that matter most for equity. Documenting here as a finding worth systematic future investigation, with mechanism explicitly not claimed.
+
+**Experiment 1 — replication study (s1 handoff line 227, originally documented in earlier sections of this log):**
+- Gemma 12B with class context: 100% flags caught, 0% false positives, 5/5 runs.
+- Gemma 27B in replication: documented as "slightly less stable."
+
+**Experiment 2 — Test N (4-axis classifier) on the neurodivergent case S029 Jordan Espinoza:**
+- Gemma 12B: 10/10 ENGAGED across 10 runs (deterministic, correct).
+- Gemma 27B: 5/6 ENGAGED, 1/6 BURNOUT — ~17% misclassification rate at the decision boundary.
+- Raw files: `data/raw_outputs/test_n_4axis_submissions_gemma12b_2026-03-28_*.json` (10 files) and `data/raw_outputs/test_n_4axis_submissions_gemma27b_cloud_2026-03-29_*.json` and `_2026-03-30_*.json` and `_2026-04-01_*.json` (6 files).
+
+**Three hypotheses, no claim of mechanism:**
+
+1. **Normative gravity** (Dr. Bloch's working frame). More training data → stronger gravitational pull toward dominant statistical centers in the training distribution. If the dominant center for "person disclosing exhaustion + neurodivergent identity" in training data is "burnout / depleted," a model trained on more of that data will pull harder toward that center, even when explicit equity protections are in the prompt. Larger model → more weight on deficit-coded priors.
+
+2. **Prior-vs-prompt weighting.** Larger models may weight their training priors more confidently *over* explicit prompt instructions. The 12B model may lean harder on the "neurodivergent ENGAGED protection" line in the prompt because it has less capacity to assert its own statistical priors; the 27B model may override the prompt because its priors are more strongly weighted. Could be the same mechanism as (1) at a different level of description, or could be distinct.
+
+3. **Inference setup confound.** Gemma 12B was local MLX inference; Gemma 27B was cloud-served. Different temperature implementations, possibly different sampling, possibly different quantization or runtime behavior. Not a *content* explanation, but worth ruling out before claiming model-size or training-data effects.
+
+**Methodological status:** This finding is not load-bearing for the paper's central claim (format determines bias). It belongs as a brief mention in methods/discussion ("we observed counterintuitively that the larger model was less stable on the equity case across two experiments") plus a footnote pointing readers to the fieldnote and the `research/scale_vs_equity/` directory. Systematic characterization (matched students × both models × multiple runs × controlled prompt conditions) is future work.
+
+**Cross-references:**
+- Fieldnote: `fieldnotes/observation_27b_less_stable_than_12b_on_equity_2026-04-25.md`
+- Research directory for systematic future testing: `research/scale_vs_equity/`

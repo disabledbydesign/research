@@ -1,0 +1,44 @@
+Loading corpus from /Users/june/Documents/GitHub/Autograder4Canvas/data/demo_corpus/ethnic_studies.json
+Loaded 32 students
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 75104.62it/s]
+/Users/june/Documents/GitHub/research/output-format-bias/c2c/c2c_sessions/output-format-bias-session-2_2026-04-25/rerun_original_naive_concern.py:118: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "date": datetime.utcnow().strftime("%Y-%m-%d"),
+/Users/june/Documents/GitHub/research/output-format-bias/c2c/c2c_sessions/output-format-bias-session-2_2026-04-25/rerun_original_naive_concern.py:119: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().isoformat(),
+  [1/32] S001 Maria Ndiaye (esl): FLAG — 358.2s
+  [2/32] S002 Jordan Kim (burnout): CLEAR — 199.8s
+  [3/32] S003 Alex Hernandez (smoking_gun): CLEAR — 172.7s
+  [4/32] S004 Priya Venkataraman (strong): CLEAR — 218.2s
+  [5/32] S005 Amara Diallo (strong): FLAG — 205.1s
+  [6/32] S006 Sofia Esparza (strong): CLEAR — 175.3s
+  [7/32] S007 Rashida Thompson (strong): CLEAR — 103.3s
+  [8/32] S008 Jasmine Holloway (moderate): CLEAR — 176.9s
+  [9/32] S009 Kevin Osei (moderate): CLEAR — 105.9s
+  [10/32] S010 Tyler Nguyen (sustained_cheat): CLEAR — 107.8s
+  [11/32] S011 Jaylen Carter (sustained_cheat): CLEAR — 99.0s
+  [12/32] S012 Talia Reyes (moderate): FLAG — 163.9s
+  [13/32] S013 Elijah Summers (moderate): CLEAR — 94.7s
+  [14/32] S014 Sierra Nakamura (moderate): CLEAR — 157.9s
+  [15/32] S015 Brittany Okafor (essentializer): CLEAR — 162.4s
+  [16/32] S016 Brianna Foster (moderate): CLEAR — 85.0s
+  [17/32] S017 Tyler Huang (surface): CLEAR — 89.3s
+  [18/32] S018 Connor Walsh (colorblind): FLAG — 240.7s
+  [19/32] S019 Paige Kowalczyk (surface): CLEAR — 97.0s
+  [20/32] S020 Jake Novak (premise_challenger): FLAG — 276.1s
+  [21/32] S021 Cameron Schultz (surface): CLEAR — 95.7s
+  [22/32] S022 Destiny Williams (righteous_anger): CLEAR — 205.1s
+  [23/32] S023 Yolanda Fuentes (lived_experience_no_vocab): FLAG — 155.9s
+  [24/32] S024 Ingrid Vasquez (lived_experience_no_vocab): FLAG — 209.2s
+  [25/32] S025 Aiden Brooks (tone_policer): FLAG — 225.0s
+  [26/32] S026 DeShawn Mercer (lived_experience_no_vocab): CLEAR — 145.8s
+  [27/32] S027 Camille Osei (outside_source): CLEAR — 169.2s
+  [28/32] S028 Imani Drayton (nonstandard_english): CLEAR — 226.2s
+  [29/32] S029 Jordan Espinoza (neurodivergent_writing): CLEAR — 157.0s
+  [30/32] S030 Aaliyah Robinson (oral_tradition): CLEAR — 145.5s
+  [31/32] S031 Marcus Bell (minimal_effort): CLEAR — 130.5s
+  [32/32] S032 Linh Tran (translated): CLEAR — 175.6s
+
+=== DONE ===
+  8 flagged, 24 cleared, 0 errors
+  Total: 88.8 min
+  Saved: /Users/june/Documents/GitHub/research/output-format-bias/data/raw_outputs/rerun_original_naive_concern_gemma12b_2026-04-26.json

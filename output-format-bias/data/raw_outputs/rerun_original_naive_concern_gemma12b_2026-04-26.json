@@ -1,0 +1,420 @@
+{
+  "test_name": "rerun_original_naive_concern",
+  "model": "mlx-community/gemma-3-12b-it-4bit",
+  "backend": "mlx",
+  "date": "2026-04-26",
+  "timestamp": "2026-04-26T04:55:39.486592",
+  "temperature": 0.3,
+  "corpus": "ethnic_studies",
+  "class_reading_source": null,
+  "note": "Re-run of the original naive binary concern detection that produced the 3/7 self-contradiction finding (originally 2026-03-24). The original raw output was written to /tmp/ before the raw_outputs/ infrastructure existed. Re-run uses the production concern_detector with NO class context, matching the original conditions documented in experiment_log.md lines 1001\u20131163.",
+  "summary": {
+    "n_students": 32,
+    "n_flagged": 8,
+    "n_cleared": 24,
+    "n_error": 0,
+    "elapsed_minutes": 88.8
+  },
+  "results": [
+    {
+      "student_id": "S001",
+      "student_name": "Maria Ndiaye",
+      "pattern": "esl",
+      "result": "FLAG",
+      "flagged": true,
+      "n_concerns": 3,
+      "concerns": [
+        {
+          "concern_type": "ConcernRecord",
+          "confidence": 0.9,
+          "why_flagged": "The student is articulating a complex understanding of their mother's identity and how multiple factors contribute to her experiences. This is a strong application of intersectionality and a valuable personal connection to the concept.",
+          "matched_text": ""
+        },
+        {
+          "concern_type": "ConcernRecord",
+          "confidence": 0.9,
+          "why_flagged": "This is a concrete example of how intersectionality manifests in everyday life. The teacher could use this as a springboard to discuss microaggressions and implicit bias in school settings.",
+          "matched_text": ""
+        },
+        {
+          "concern_type": "ConcernRecord",
+          "confidence": 0.9,
+          "why_flagged": "This is a very insightful critique of the reading. The student is pointing out the limitations of a US-centric perspective on intersectionality and advocating for a more global approach. This is a valuable contribution to the discussion.",
+          "matched_text": ""
+        }
+      ],
+      "time_seconds": 358.2
+    },
+    {
+      "student_id": "S002",
+      "student_name": "Jordan Kim",
+      "pattern": "burnout",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 199.8
+    },
+    {
+      "student_id": "S003",
+      "student_name": "Alex Hernandez",
+      "pattern": "smoking_gun",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 172.7
+    },
+    {
+      "student_id": "S004",
+      "student_name": "Priya Venkataraman",
+      "pattern": "strong",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 218.2
+    },
+    {
+      "student_id": "S005",
+      "student_name": "Amara Diallo",
+      "pattern": "strong",
+      "result": "FLAG",
+      "flagged": true,
+      "n_concerns": 1,
+      "concerns": [
+        {
+          "concern_type": "ConcernRecord",
+          "confidence": 0.7,
+          "why_flagged": "While this isn't inherently a wellbeing concern, it's a moment where the student is identifying a limitation of a theoretical framework. It's a valuable critical insight, but the teacher might want to guide the student to explore *how* colonialism and francophone identity complicate intersectionality, rather than simply stating that it's 'not fully accounted for.' This could lead to a deeper engagement with postcolonial theory or a discussion of how to adapt intersectionality to different contexts.",
+          "matched_text": ""
+        }
+      ],
+      "time_seconds": 205.1
+    },
+    {
+      "student_id": "S006",
+      "student_name": "Sofia Esparza",
+      "pattern": "strong",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 175.3
+    },
+    {
+      "student_id": "S007",
+      "student_name": "Rashida Thompson",
+      "pattern": "strong",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 103.3
+    },
+    {
+      "student_id": "S008",
+      "student_name": "Jasmine Holloway",
+      "pattern": "moderate",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 176.9
+    },
+    {
+      "student_id": "S009",
+      "student_name": "Kevin Osei",
+      "pattern": "moderate",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 105.9
+    },
+    {
+      "student_id": "S010",
+      "student_name": "Tyler Nguyen",
+      "pattern": "sustained_cheat",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 107.8
+    },
+    {
+      "student_id": "S011",
+      "student_name": "Jaylen Carter",
+      "pattern": "sustained_cheat",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 99.0
+    },
+    {
+      "student_id": "S012",
+      "student_name": "Talia Reyes",
+      "pattern": "moderate",
+      "result": "FLAG",
+      "flagged": true,
+      "n_concerns": 1,
+      "concerns": [
+        {
+          "concern_type": "ConcernRecord",
+          "confidence": 0.8,
+          "why_flagged": "The student is describing a personal experience of microaggressions and implicit bias. While not inherently a wellbeing concern, it's a moment for the teacher to acknowledge the student's experience and potentially facilitate a classroom discussion about the challenges faced by first-generation or minority students in honors programs. It's important to validate the student's feelings and avoid dismissing their experience as 'reaching'.",
+          "matched_text": ""
+        }
+      ],
+      "time_seconds": 163.9
+    },
+    {
+      "student_id": "S013",
+      "student_name": "Elijah Summers",
+      "pattern": "moderate",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 94.7
+    },
+    {
+      "student_id": "S014",
+      "student_name": "Sierra Nakamura",
+      "pattern": "moderate",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 157.9
+    },
+    {
+      "student_id": "S015",
+      "student_name": "Brittany Okafor",
+      "pattern": "essentializer",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 162.4
+    },
+    {
+      "student_id": "S016",
+      "student_name": "Brianna Foster",
+      "pattern": "moderate",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 85.0
+    },
+    {
+      "student_id": "S017",
+      "student_name": "Tyler Huang",
+      "pattern": "surface",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 89.3
+    },
+    {
+      "student_id": "S018",
+      "student_name": "Connor Walsh",
+      "pattern": "colorblind",
+      "result": "FLAG",
+      "flagged": true,
+      "n_concerns": 3,
+      "concerns": [
+        {
+          "concern_type": "ConcernRecord",
+          "confidence": 0.7,
+          "why_flagged": "This statement, while seemingly well-intentioned, leans towards a colorblind perspective. It risks dismissing the very real and complex challenges that individuals face due to intersecting identities. The teacher may want to gently challenge this notion and encourage Connor to consider how treating everyone 'the same' might not address systemic inequalities.",
+          "matched_text": ""
+        },
+        {
+          "concern_type": "ConcernRecord",
+          "confidence": 0.8,
+          "why_flagged": "This statement expresses a concern about division, but it misunderstands the purpose of intersectionality. Intersectionality isn't about creating divisions; it's about understanding how systems of power operate and how identities shape experiences. The teacher could clarify that recognizing categories is a step towards dismantling oppressive systems, not creating them.",
+          "matched_text": ""
+        },
+        {
+          "concern_type": "ConcernRecord",
+          "confidence": 0.85,
+          "why_flagged": "This is a classic colorblind statement. While the sentiment of seeing individuals is admirable, it ignores the reality that race and gender *do* matter and shape people's experiences. It also dismisses the importance of understanding systemic inequalities. The teacher could ask Connor to reflect on how ignoring race and gender can perpetuate those inequalities.",
+          "matched_text": ""
+        }
+      ],
+      "time_seconds": 240.7
+    },
+    {
+      "student_id": "S019",
+      "student_name": "Paige Kowalczyk",
+      "pattern": "surface",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 97.0
+    },
+    {
+      "student_id": "S020",
+      "student_name": "Jake Novak",
+      "pattern": "premise_challenger",
+      "result": "FLAG",
+      "flagged": true,
+      "n_concerns": 1,
+      "concerns": [
+        {
+          "concern_type": "ConcernRecord",
+          "confidence": 0.7,
+          "why_flagged": "While the student is making a valid critique of the reading, the phrasing 'blind spot for class' can be interpreted as dismissing the complexity of race and gender oppression. The teacher could encourage the student to articulate how class interacts with race and gender to create unique experiences of marginalization, rather than simply stating that the framework has a 'blind spot'.",
+          "matched_text": ""
+        }
+      ],
+      "time_seconds": 276.1
+    },
+    {
+      "student_id": "S021",
+      "student_name": "Cameron Schultz",
+      "pattern": "surface",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 95.7
+    },
+    {
+      "student_id": "S022",
+      "student_name": "Destiny Williams",
+      "pattern": "righteous_anger",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 205.1
+    },
+    {
+      "student_id": "S023",
+      "student_name": "Yolanda Fuentes",
+      "pattern": "lived_experience_no_vocab",
+      "result": "FLAG",
+      "flagged": true,
+      "n_concerns": 1,
+      "concerns": [
+        {
+          "concern_type": "ConcernRecord",
+          "confidence": 0.7,
+          "why_flagged": "The student is grappling with a complex concept (intersectionality) but is unsure of the terminology. This is a normal part of the learning process and indicates a desire to understand the material. It would be helpful for the teacher to provide the vocabulary and connect it to the student's observations about her abuela.",
+          "matched_text": ""
+        }
+      ],
+      "time_seconds": 155.9
+    },
+    {
+      "student_id": "S024",
+      "student_name": "Ingrid Vasquez",
+      "pattern": "lived_experience_no_vocab",
+      "result": "FLAG",
+      "flagged": true,
+      "n_concerns": 1,
+      "concerns": [
+        {
+          "concern_type": "ConcernRecord",
+          "confidence": 0.8,
+          "why_flagged": "This passage powerfully articulates a sense of dehumanization and disregard for a person's well-being. While not a direct wellbeing concern, it highlights a profound impact of systemic exploitation and marginalization. The teacher might use this as a springboard to discuss the psychological effects of precarious labor and the ways that intersecting forms of oppression can erode a person's sense of self-worth. It's a moment of profound vulnerability and insight.",
+          "matched_text": ""
+        }
+      ],
+      "time_seconds": 209.2
+    },
+    {
+      "student_id": "S025",
+      "student_name": "Aiden Brooks",
+      "pattern": "tone_policer",
+      "result": "FLAG",
+      "flagged": true,
+      "n_concerns": 1,
+      "concerns": [
+        {
+          "concern_type": "ConcernRecord",
+          "confidence": 0.7,
+          "why_flagged": "This statement implies that anger and raised voices are inherently unproductive and lead to others shutting down. It risks dismissing the validity of passionate or urgent expressions, particularly from students who may be experiencing or discussing injustice. It also risks pathologizing emotional responses to difficult topics.",
+          "matched_text": ""
+        }
+      ],
+      "time_seconds": 225.0
+    },
+    {
+      "student_id": "S026",
+      "student_name": "DeShawn Mercer",
+      "pattern": "lived_experience_no_vocab",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 145.8
+    },
+    {
+      "student_id": "S027",
+      "student_name": "Camille Osei",
+      "pattern": "outside_source",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 169.2
+    },
+    {
+      "student_id": "S028",
+      "student_name": "Imani Drayton",
+      "pattern": "nonstandard_english",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 226.2
+    },
+    {
+      "student_id": "S029",
+      "student_name": "Jordan Espinoza",
+      "pattern": "neurodivergent_writing",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 157.0
+    },
+    {
+      "student_id": "S030",
+      "student_name": "Aaliyah Robinson",
+      "pattern": "oral_tradition",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 145.5
+    },
+    {
+      "student_id": "S031",
+      "student_name": "Marcus Bell",
+      "pattern": "minimal_effort",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 130.5
+    },
+    {
+      "student_id": "S032",
+      "student_name": "Linh Tran",
+      "pattern": "translated",
+      "result": "CLEAR",
+      "flagged": false,
+      "n_concerns": 0,
+      "concerns": [],
+      "time_seconds": 175.6
+    }
+  ]
+}
