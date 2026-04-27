@@ -3,7 +3,11 @@
 **Date:** 2026-04-26
 **Author:** Interface pane (Claude, on behalf of June), revising v2 against the data-verification-audit findings
 **Status:** Draft for June's review. Edit in place.
-**Inheritance lineage:** B's v1 outline → interface v2 (validation pass) → this v3 (audit).
+**Inheritance lineage:** B's v1 outline → interface v2 (validation pass) → v3 (audit) → in-place gap-review revision 2026-04-26 PM (see "Gap-review revision" note below).
+
+**Gap-review revision (2026-04-26 PM):** Two additions against this outline:
+(1) Section IV Findings preamble was expanded to include the 2026-03-25 context-paradox single-variable test (no class context vs. with class context on the naive binary classifier). This was load-bearing s1 evidence — a same-model, same-corpus, same-prompt comparison where adding context produced 12 flags with zero true positives where 7-with-1-TP had been; AAVE and neurodivergent linguistic protections newly broken when context was added. It forecloses "context is the missing variable" as competing explanation and is itself an early instance of the configurable-failure-mode pattern Row 2 demonstrates. The finding had been lost between v2 and v3 during the audit's three-row reorganization; restored here to the Findings preamble. Item 6 added to the "Other updates" list above.
+(2) Section III.E gained a verification-debt footnote covering five methodological-transparency points: retroactive provenance applies to the entire 2026-03-26/27 batch (not only Tests B/C); the three preserved Test B runs are 1 March recovery + 1 April back-to-back doublet, not 3 independent time points; for Test C the contemporary log narrative differs from the recovery JSON, with both sources recorded; the Test M files encode a "production_concern_detector" label in their metadata that the codebase itself contradicts; the "four Test B runs" cited in earlier project handoffs is unresolvable from preserved data and the deterministic-misclassification finding does not depend on its resolution. None of these change Findings; they document what we know and what we do not.
 
 ---
 
@@ -17,6 +21,7 @@ Other updates:
 3. **Methods section** gains a sub-section on the calibration-and-recovery history, naming the persistence-fix commit + ablation development period.
 4. **Discussion** gains the *"configurable failure mode but not configurable failure"* framing from B (A endorsed) and the *asymmetry-of-recovery as signature evidence* finding from A (B endorsed).
 5. **Limitations** updated: held-architecture run is no longer a "covariation confound for Test B" but a "generalizability strengthening for revision," because the three-row ablation provides the format-ceiling evidence even with class context as failed safeguard rather than confound.
+6. **Context-paradox finding (2026-03-25)** restored to Findings preamble as evidence. Single-variable test (no context vs. with context, naive binary): 7 flags with 1 TP → 12 flags with 0 TP; AAVE and neurodivergent linguistic protections newly broken when context was added. Forecloses "context is the missing variable" as competing explanation; provides an early instance of the configurable-failure-mode pattern Row 2 surfaces more comprehensively. Was load-bearing s1 evidence; lost between v2 and v3; restored here.
 
 The structural architecture of the paper holds. What changes is what the paper's empirical core *is*, organized in a way that mirrors the actual evidence.
 
@@ -52,6 +57,12 @@ One paragraph. Standard.
 **C. Racism without racists at the architecture level (Bonilla-Silva)** — knowledge-action gap operationalized.
 **D. Compression as mechanism — one focused paragraph** — output format as one instance of probabilistic compression toward dominant statistical centers; full theoretical treatment in *Politics of Compression* forthcoming.
 
+// What about the lit on Algorithmic Bias? That seems relevent. 
+// bell hooks is probably also relevent, and we should cite Caldwell and Frame's *let's get real* - these are the pedagogical justifications for the architectural design for the larger insights pipeline (if we discuss that, which I imagine we will)
+// We should assess what context would be improtant for readers so they can follow the story. And make sure to include it. That's always a big gap with LLM writing.
+// drafting (S4) needs to use /voice-check
+// lets have a session where we think about what other scholarship we might want to draw on and develop an annotated bibliography. We should include the existing research articles we found on similar matter, too. The goal is to draw out the specificities of their arguments and build on them, as a conversation.  
+
 ---
 
 ### III. Situating the Research: Setting, Corpus, and Method (~900–1100 words; expanded ~100 words from v2)
@@ -62,12 +73,17 @@ One paragraph. Standard.
 **B. The synthetic test corpus** — 32-student Ethnic Studies corpus with controlled patterns; Buolamwini & Gebru rationale for synthetic ground truth.
 **C. The iterative design method** — autoethnographic design research; iterative history is method and primary evidence.
 **D. Primary model and cross-family testing** — Gemma 12B selection, cross-family reproduction details.
+// Spring 2026 political context? This is *why* i needed the system to flag burnout and welfare. 
 
 **E. (NEW) The classifier provenance: development history of binary safeguards** (~150 words)
 
-The binary classifier evaluated in this paper went through documented development between the initial 2026-03-24 deployment and the formal Tests A–F evaluation period (2026-03-26 to 2026-03-27). The naive deployment produced false positives on equity-critical students with self-contradicting reasoning (the original 3-of-7 self-contradiction finding). In response, three engineering changes were introduced before the formal tests: explicit equity-protective prompt language naming righteous anger / lived experience / AAVE / neurodivergent writing as non-concerns; an anti-bias regex post-processing layer scanning for tone-policing markers in model output; and class-context loading providing per-student assessment with relational reading. The persistence-fix commit (`765ba64`, 2026-03-26) added "alt hypothesis test infrastructure, data preservation (never /tmp)" alongside these calibration changes. Tests A–F were executed under the calibrated configuration on 2026-03-27 (commit `0c67cc5`, "Tests A–E reproduced"). The development history makes possible the three-row ablation reported in Findings: naive binary (Row 1) and calibrated anti-bias binary (Row 2) are two configurations that emerged from the same iterative process, not two unrelated experimental conditions. The calibrated-anti-bias safeguards are documented in `src/insights/concern_detector.py` and the prompts file under git provenance.
+The binary classifier evaluated in this paper went through documented development between the initial 2026-03-24 deployment and the formal Tests A–F evaluation period (2026-03-26 to 2026-03-27). The naive deployment produced false positives on equity-critical students [define] with self-contradicting reasoning (the original 3-of-7 self-contradiction finding). In response, three engineering changes were introduced before the formal tests: explicit equity-protective prompt language naming righteous anger / lived experience / AAVE / neurodivergent writing as non-concerns; an anti-bias regex post-processing layer scanning for tone-policing markers in model output; and class-context loading providing per-student assessment with relational reading. The persistence-fix commit (`765ba64`, 2026-03-26) added "alt hypothesis test infrastructure, data preservation (never /tmp)" alongside these calibration changes. Tests A–F were executed under the calibrated configuration on 2026-03-27 (commit `0c67cc5`, "Tests A–E reproduced"). The development history makes possible the three-row ablation reported in Findings: naive binary (Row 1) and calibrated anti-bias binary (Row 2) are two configurations that emerged from the same iterative process, not two unrelated experimental conditions. The calibrated-anti-bias safeguards are documented in `src/insights/concern_detector.py` and the prompts file under git provenance.
 
 Note on the binary classifier's current status: the function (`detect_concerns()` in `src/insights/concern_detector.py`) is research-track and not called in production (per `src/insights/research_engine.py` line 247). It was retained after the user-facing pipeline was retired specifically to enable the binary-vs-generative comparisons reported here. The findings are about what the function does when invoked under the stated conditions, regardless of its production status.
+
+**Verification-debt note** (paper-ready, intended as a methodological-transparency footnote on Section III.E):
+
+> *Several methodological details about the preserved test data deserve explicit acknowledgment. (i) Across the entire 2026-03-26/27 batch (Tests A, B, C, D, F), the preserved JSON files carry a `provenance.note: "Retroactively added — commit identified from git log timestamps"` annotation. This is consistent with the recovery-and-repersistence period described above (the original runs predated the `data/raw_outputs/` infrastructure; the recovery re-runs were the first runs persisted as files). The retroactive provenance applies to the batch as a whole, not only to Tests B/C. (ii) The three preserved Test B runs are not three independent runs across time: one is the 2026-03-27 recovery run, and two are back-to-back replications conducted on 2026-04-14, five minutes apart, under the same git state. Cited as "1 March recovery + 1 April replication doublet" rather than three independent time points. (iii) For Test C, the contemporary experiment-log narrative (lines 1850–1860) describes both S023 and S029 as flagged; the preserved JSON (recovery-period file) shows only S029 flagged, with S023 cleared. We treat the JSON values as the verifiable record while noting that the log narrative may describe an earlier configuration that was not preserved as a file. The Row 2 evidence cited in Findings is from the JSON. (iv) The test files under `test_m_production_detector_*` encode the label "production_concern_detector" in their `codepath`, `features`, and `note` metadata fields. The label predates the explicit clarification (in `src/insights/research_engine.py` line 247) that the function is research-track and not called in production. We treat the function as research-track throughout this paper; readers comparing our citations to the file-level metadata should be aware that the metadata reflects an earlier internal labeling that the codebase itself contradicts. The substantive findings are unaffected. (v) Earlier internal compression of the data into project handoffs cited "four Test B runs"; only three are preserved as raw files. We cannot rule out the possibility that a fourth run was conducted before the persistent storage layer existed and was not preserved. The 24/24 deterministic-misclassification result for S029 reported in Findings is based on the three preserved runs (Test B) plus Test C (1 run) plus Test F (20 runs); it does not depend on resolving whether a fourth Test B run existed.*
 
 ---
 
@@ -75,9 +91,9 @@ Note on the binary classifier's current status: the function (`detect_concerns()
 
 **Structural note:** v2 organized Findings around three levels (problem → fixes → format change). v3 reorganizes around the three-row ablation that emerged from the audit. The rows are three configurations of the binary-vs-generative comparison; together they make the format-ceiling argument by direct comparison. The iteration history (which fixes were tried in what order) is the *origin* of the rows, briefly recapped here; the rows themselves are the *evidence*.
 
-**Brief preamble on iteration history (~200 words)**
+**Brief preamble on iteration history (~250 words)**
 
-Recap (briefly — full provenance in Methods Section III.E): the naive binary deployed first (2026-03-24); equity false positives surfaced; three engineering changes were introduced (equity-protective prompt language, anti-bias regex post-processing, class context); calibrated configuration formally tested 2026-03-27. The three rows below report what each configuration produces.
+Recap (briefly — full provenance in Methods Section III.E): the naive binary deployed first (2026-03-24); equity false positives surfaced. An attempted single-variable fix — adding class context to the binary classifier (2026-03-25, same model, same corpus, same prompt; only the `class_context` parameter changed) — produced 12 flags with zero true positives, where the no-context configuration had produced 7 flags with one true positive (S002 burnout). Context did not reduce bias; it shifted which students the binary mis-flagged: relational-bias false positives improved (S022 righteous anger, S023 lived experience newly cleared), but content-sensitivity false positives worsened (S028 AAVE, S029 neurodivergent metacognition newly broken; the only true positive lost). The class reading primed the model to read engagement-with-racial-content as a signal *for* concern in an Ethnic Studies class — penalizing exactly what the course was designed to produce. This single-variable result foreclosed "context is the missing variable" as an explanation for the equity false positives. Three engineering changes were then introduced together for the calibrated configuration (equity-protective prompt language, anti-bias regex post-processing, class context); calibrated configuration formally tested 2026-03-27. The three rows below report what each configuration produces. The 2026-03-25 context-paradox result is itself an early instance of the pattern Row 2 demonstrates more comprehensively: tuning shifts which students fall through; tuning does not eliminate the falling through.
 
 ---
 
@@ -107,6 +123,8 @@ The configuration produces a specific failure mode: false positives on equity-cr
 1. **Explicit equity-protective prompt language.** "Righteous anger = ENGAGEMENT. Lived experience = STRENGTH. AAVE = VALID REGISTER. Neurodivergent writing = COGNITIVE STYLE." Documented in the system prompt for Tests B/C; preserved in JSON `system_prompt` fields.
 2. **Anti-bias regex post-processing.** Scans model output for tone-policing markers ("aggressive," "too emotional," "hostile tone," etc.); demotes or flags the demote.
 3. **Class context.** Per-student assessment with synthesized class reading providing relational context (`class_reading_source: data/demo_baked/checkpoints/ethnic_studies_gemma12b_mlx_class_reading.json`).
+
+// I think there was some fixes and guards we did beyond this? I think it was more specific class coontext techniques?
 
 *Evidence:*
 
@@ -192,18 +210,20 @@ Brief note on 4-axis instability: reduces but does not eliminate the equity-crit
 
 [v2 content holds.] EdTech bias literature; Queiroga et al. contrast strengthened by the iteration history (you can't reject the model — the format produces the bias across model families); Hew et al. and Liu as conceptual cousins; novelty claim.
 
+// the model *did* differentiate - that's why we chose gemma 12b over the qwens or llamas. But i dont know if that's essential or not. 
+
 **D. The architecture-not-scale finding (~100 words)**
 
 [v2 content holds.] Counterintuitive Gemma 27B less stable than 12B on equity case across two experiments. Mechanism not characterized in this paper. Brief mention; footnote pointer to fieldnote and `research/scale_vs_equity/`.
 
 **E. Limitations (~250 words)**
 
-- Synthetic corpus: controlled design enables clean experiment; generalizability to real-world student writing is ongoing work (real-classroom data potentially in revision).
-- Single subject area: biology corpus deferred; Ethnic Studies equity-critical patterns may be louder than in STEM.
-- **Held-architecture run not yet conducted.** The three-row ablation in this paper covers naive binary (Row 1, no safeguards) and calibrated anti-bias binary (Row 2, three safeguard layers including class context). The cleanest format-only isolation — binary classification with no class context, no equity-protective prompt language, and no anti-bias post-processing, run alongside generative observation under matched conditions — would strengthen the generalizability of the format-ceiling claim. Planned for revision.
+- Synthetic corpus: controlled design enables clean experiment; generalizability to real-world student writing is ongoing work (real-classroom data potentially in revision). // should I do that before we draft? I have the data. 
+- Single subject area: biology corpus deferred; Ethnic Studies equity-critical patterns may be louder than in STEM. // yeah i mean these are definitely common ethnic studies patterns - using life experience in papers
+- **Held-architecture run not yet conducted.** The three-row ablation in this paper covers naive binary (Row 1, no safeguards) and calibrated anti-bias binary (Row 2, three safeguard layers including class context). The cleanest format-only isolation — binary classification with no class context, no equity-protective prompt language, and no anti-bias post-processing, run alongside generative observation under matched conditions — would strengthen the generalizability of the format-ceiling claim. Planned for revision. // this is news to me. Should we go ahead and do this?
 - Self-contradiction phenomenon: documented in three cases in the original 2026-03-24 run with raw output not preserved; reproduced in re-runs at varying rates across system iterations including explicit guards against the failure mode. Rate claims would require broader replication under matched conditions.
 - The classifier evaluated as "the binary classifier" in this paper is research-track code retained for the binary-vs-generative comparison; the user-facing pipeline retired the binary after the original 2026-03-24 deployment.
-- Counterintuitive 12B-vs-27B finding documented but not characterized; future research direction.
+- Counterintuitive 12B-vs-27B finding documented but not characterized; future research direction. // we could certainly lay out our hypothses. 
 - Small n for some comparisons (Test D: 7 cases on single model; power moves cross-model not tested).
 
 ---
@@ -240,11 +260,11 @@ Brief note on 4-axis instability: reduces but does not eliminate the equity-crit
 ## Open questions for June and s3
 
 1. **Confirm hook quote choice.** Three preserved verbatim quotes (Destiny / Yolanda / Ingrid). Outline currently recommends Destiny.
-
+// i like it
 2. **Live data question.** Self-care unit anonymized cases — defer to R&R working recommendation. Confirm or revise.
-
+// eh? I'm happy to do it. Want me to? 
 3. **Word count.** Outline as structured runs ~7,800–9,200 words (slight increase from v2 due to expanded Methods E and Findings preamble + cross-row synthesis). REE word limit confirmation needed before drafting.
-
+// its a bit long but that's ok. The draft just has to exist - we'll edit it before submitting. 
 4. **The "compression is hybrid" framing.** With the three-row ablation now in place, the hybrid framing is *more* empirically grounded than it was in v3 — the calibrated-anti-bias-binary evidence directly demonstrates the routing half of the hybrid (prompt content reaches the model; format overrides it). Provenance still flagged in s3 handoff; s3 instances still have permission to push back. But the substance is now better supported.
 
 ---
