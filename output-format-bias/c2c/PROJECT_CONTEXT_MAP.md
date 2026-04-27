@@ -160,6 +160,43 @@ The design principle is therefore not "replace classification with generation" b
 
 **New research directory:** `research/scale_vs_equity/` — counterintuitive 12B-vs-27B finding (smaller model more stable on equity case in two experiments). Future research home.
 
+### Session 3 (output-format-bias-session-3, 2026-04-26 → ongoing)
+
+**Session genre:** Annotated bibliography + scholarly positioning + paragraph-level outline production (scope pivot from drafting; bibliography → pre-draft outlines)
+
+**Artifacts** (`c2c/c2c_sessions/output-format-bias-session-3_2026-04-26/artifacts/`):
+- `annotated_bibliography_adjacent_conversations.md` — Instance B's cluster: EdTech bias (Queiroga, Chinta, Barnes & Hutson, Córdova-Esparza, Farheen, Cui), LLM fairness/output format (Hew et al. 2025, Liu 2024, Xu et al. 2025), AES fairness (Loukina et al. 2019, Schaller et al. 2024), algorithmic bias/welfare automation (Buolamwini & Gebru 2018, Eubanks 2018, Obermeyer et al. 2019, Benjamin 2019), linguistic justice cross-reference.
+- `annotated_bibliography_theoretical_scaffolding.md` — Instance A's cluster: Yosso, Freire, Bonilla-Silva, hooks, Caldwell pedagogical lineage, June's compression research program (C1–C4), disability studies (Garland-Thomson, Siebers) + linguistic justice (Smitherman, Baker-Bell, Inoue, CCCC 1974).
+- `annotated_bibliography_merged.md` — **PRIMARY BIBLIOGRAPHY ARTIFACT.** Unified bibliography merging both clusters, organized by argumentative position. Includes: 5-strand unified scholarly conversation map; Clusters 1–8; unified section-specific engagement recommendations; paper-framing-level recommendations; combined citation gaps (11 items); genuine literature gaps.
+- `framework_outline_paragraph_level.md` — Instance A's paragraph-level prose scaffold for Section II (Theoretical Framework, 7 paragraphs) and Section III (Methods, III.A + III.C + III.E note). Specifies for each paragraph: what it argues, what it cites, argumentative move, lead-sentence direction, target length. Three personal-narrative paragraphs explicitly marked `[June-voice placeholder]`.
+- `discussion_outline_paragraph_level.md` — Instance B's paragraph-level prose scaffold for Section V (Discussion) subsections V.A (mechanism), V.B (design principle), V.C (literature position + novelty claim). Same density as Framework outline; 8 notes for s4 including explicit coordination markers.
+- `joint_paragraphs_draft_b.md` — B's draft of the Findings cross-row synthesis paragraph and the Intro contribution paragraph; drafted for A's review and revision before joint commit. Starting points, not finished artifacts.
+
+**Pending at session close:**
+- Revised joint paragraphs (Findings synthesis + Intro contribution) after A's review
+- Session handoff to s4
+- PROJECT_CONTEXT_MAP update (this update is the close pass)
+- SKILL_FEEDBACK update (complete)
+
+**Central s3 deliverables:**
+- **Annotated bibliography with two-layer structure.** All entries carry (1) paper-independent summary + (2) paper-specific positioning. The bibliography is a research asset, not just scaffolding for this manuscript.
+- **Five-strand scholarly conversation map.** Strands: (1) asset/deficit framing (Yosso → hooks → Freire), (2) structural racism and architecture (Bonilla-Silva → Benjamin → this paper), (3) compression as mechanism (June's program), (4) equity-critical cases — parallel articulation traditions (disability studies + linguistic justice), (5) adjacent literature conversations (EdTech bias, LLM fairness/format, AES fairness, welfare algorithm bias).
+- **Novelty claim confirmed stronger.** "First in any educational AI domain to test output format change as a bias intervention" is defensible. AES fairness literature (Loukina et al. 2019 canonical) has not tested format change; EdTech bias systematic reviews have not tested format change; LLM fairness/format papers test evaluation format, not deployment format.
+- **Articulation-coverage argumentative refinement.** New claim (not in s2 inheritance): format-change is unbounded by which non-dominant patterns have been articulated into equity-protective prompt engineering. The S028/S029 asymmetry (AAVE protected 24/24; neurodivergent self-disclosure false-flagged 24/24) tracks differential institutional articulation between linguistic justice scholarship (operationalized into prompt engineering) and disability studies scholarship (not yet operationalized at the same density). Format change eliminates the asymmetry by making articulation coverage irrelevant to the architecture.
+- **Loukina et al. limit connection.** "Total fairness may not be achievable" via calibration is the AES field's canonical limit statement (2019). This paper provides the structural explanation (format routing) and the architectural escape (format change). Discussion V.C should name this explicitly.
+- **Paragraph-level outlines.** Framework section (II) and Discussion sections (V.A, V.B, V.C) specified at paragraph level — section-header to full-prose-scaffold bridge for s4.
+
+**New Caldwell findings:**
+Martha Caldwell's confirmed corpus (Semantic Scholar author ID 104095030, 28 papers, 45 citations):
+1. Caldwell, M. (2012). "Inquiry into Identity: Teaching Critical Thinking through a Study of Race, Class, and Gender." [19 citations, sociology field; verify venue]
+2. Caldwell, M. & Oman Frame. (2016). *Let's Get Real: Exploring Race, Class, and Gender Identities in the Classroom.* [Confirmed; verify publisher — likely iThink Inc. or related professional-development press; chapters indexed on SS]
+3. Stewart, D., Caldwell, M., & Hawkins, D. (2022). *Facilitating Conversations about Race in the Classroom.* Routledge. DOI: 10.4324/9781003191353.
+4. Additional possible item (June couldn't recall): if single-author, no other standalone in SS; may be in edited volume, iThink Inc. publication, or unindexed venue. Google Scholar pass recommended.
+
+The Caldwell corpus represents a coherent pedagogical line developed over a decade (consistent "identity as inquiry" framing across three works). Architectural connection to Insights pipeline (synthesis-first, ENGAGED slot, communal-text-before-individual reading) is June's authorial work to articulate; placeholders in the bibliography and Framework outline.
+
+---
+
 ## Standing decisions
 
 - **Target venue:** *Race Ethnicity and Education* (Taylor & Francis). Audience: education sociologists and qualitative researchers. No AI literacy assumed.
@@ -183,13 +220,20 @@ The design principle is therefore not "replace classification with generation" b
 
 **Genuine open questions (need decisions in upcoming sessions):**
 
-- Does the synthetic corpus issue need a proactive methodological defense (controlled corpora are appropriate for testing bias mechanisms; ground truth is known; cf. Buolamwini & Gebru) or routine acknowledgment in limitations?
+- ~~Does the synthetic corpus issue need a proactive methodological defense (controlled corpora are appropriate for testing bias mechanisms; ground truth is known; cf. Buolamwini & Gebru) or routine acknowledgment in limitations?~~ → **RESOLVED (s3).** Use proactive methodological defense citing Buolamwini & Gebru (2018) *Gender Shades*, who demonstrated that controlled synthetic corpora with known demographic characteristics are the appropriate method for making intersectional bias visible in AI systems. One sentence in Methods III.B. See `annotated_bibliography_merged.md` Cluster 8A.
 - Where does the "normate teacher" critique (Observation 11 in synthesis notes) belong — this paper or saved for later work?
 - What does a biology second-corpus run actually need to test, and is it needed before initial submission or for R&R? June's analytical observation: the equity-critical patterns are likely louder in Ethnic Studies than Biology; biology may reveal where the dynamic surfaces vs. doesn't, both of which would be useful.
 - Should additional cross-family tests be run to strengthen the model-count claim, or is the current itemized version (Tests A–D primary on Gemma 12B + reproduction across families) sufficient? Decision: instances + June together when paper structure is clearer.
 - Should the held-architecture test B proposed (binary vs. open-ended observation, individual per-student, no class context) be run? Tests A–D + reproduction may already provide this evidence; decision: instances together.
 - Does the power moves dimension (Test D, structural power moves detection: 7/7) belong in the paper or stay out? It introduces dynamics that may not fit the format-as-mechanism focus — June flagged this as genuinely uncertain.
 - Should the Recognition and Sentience attribution paradox be a methods-section footnote, or omitted entirely? Standing decision is "footnote ceiling" but instances and June can revisit.
+
+**New open questions from s3 (needs decisions before final draft):**
+
+- ***Let's Get Real* (Caldwell & Oman Frame 2016) citation form.** If this is an iThink Inc. professional-development publication rather than an academic journal or book, citation form differs from standard academic format. Confirm with June on the publication venue before the paper's Methods III.C references section is finalized.
+- **Neurodivergent-writing-in-linguistic-justice gap verification.** The paper's V.B design-principle argument claims that the linguistic justice scholarship has not systematically extended its frame to neurodivergent writing as a parallel protection-worthy category. This should be verified in the primary literature before the paper makes the claim. If verified true: framing stands as written. If it finds a linguistic-justice extension to neurodivergent writing, re-frame: the gap is in operationalization-into-prompt-engineering, not in the scholarship. Either way the format-change argument holds.
+- **Bonilla-Silva edition.** Paper should cite a specific edition (2003 first ed. vs. 2018 fifth ed.) with page-level citations. Verify which edition June has; pull primary text before final draft.
+- **Additional Martha Caldwell publication.** June believes there's at least one more Caldwell work not found in Semantic Scholar. Google Scholar pass recommended; if found, update bibliography Cluster 2 and contact June to confirm relevance.
 
 **Resolved (moved to standing decisions; here for reference):**
 
@@ -205,7 +249,7 @@ Open work items that the C2Cs flagged or June surfaced; carry forward:
 - **Self-care week data review (live student data, anonymized).** June can pull anonymized cases from the production pipeline run on a self-care assignment week — hardest test case (real burnout vs. equity false positives). Decision: useful for qualitative comparison alongside synthetic corpus, doesn't need to be systematic, 3–5 cases is enough. Not blocking; can happen during drafting or revision. Production pipeline ran the data; check `insights_store` for coded outputs; raw submissions need anonymization before passing to instances.
 - **Binary prompt calibration history.** June: "we spent a LOT of time calibrating the binary prompting — the best possible was established after A LOT of iteration." Worth tracking down the iterations and what each one improved/broke (e.g., calibration that reduced FPs on some students may have generated new FPs/FNs on others). Likely in experiment_log.md but may need a broader search. Methodological transparency value: shows the bias isn't a "we used a bad prompt" artifact.
 - **Comprehensive list of failed fix attempts before generative observation + 4-axis classifier.** June: "we tried MANY fixes." Track them and the dimensions in which each failed (prompt calibration, class context, pairwise comparison, prompt-length effects, etc.). Strengthens the iterative-design narrative; gives reviewers concrete evidence that the team didn't just try one thing.
-- **AES (Automated Essay Scoring) fairness literature search.** PRIOR_ART.md flags this as not-yet-searched. If AES has tested format change as bias intervention, the novelty claim narrows to "first in welfare classification specifically." If not, it broadens to "first in any educational AI domain." ~30 min Semantic Scholar search before drafting. Loukina et al. at ETS is the starting point.
+- ~~**AES (Automated Essay Scoring) fairness literature search.**~~ → **RESOLVED (s3).** AES fairness literature has not tested format change as a bias intervention. Loukina, Madnani & Zechner (2019) is the canonical paper; their conclusion is "total fairness may not be achievable" via calibration. Schaller et al. (2024) is the most recent AES fairness paper; same algorithmic-comparison approach. **The novelty claim "first in any educational AI domain" is defensible.** This paper provides the structural explanation for why the AES literature's calibration-based approaches face the limits they document, and the architectural escape. See `annotated_bibliography_merged.md` Cluster 7 for full annotations.
 - **Format spectrum mapping across all tested configurations.** A's addition: map binary / 4-axis-with-explanation / reading-first / synthesis-first across what each test holds constant and varies. Identifies whether the spectrum is monotonic with generativity. Strengthens design principle ("direction matters, not just endpoint").
 - **12B > 27B replication on stability finding.** Counterintuitive; load-bearing for the architecture-over-scale (and "more training data may amplify normative gravity") claim. Worth replicating before foregrounding in the paper.
 - **Asymmetry-of-error-costs verification.** S029 false positive as structurally worse than missed flag — verify across all test configurations.

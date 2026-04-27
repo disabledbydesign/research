@@ -1,2 +1,64 @@
 [2026-04-26 21:09:48] Coordinator starting (state-machine HOLD + no-wake suffix). Session=c2c-output-format-bias-session-3
 [2026-04-26 21:09:48] Initial turn counts: A=0 B=0
+[2026-04-26 21:23:36] PERMISSION PROMPT detected on instance-a — alerting June
+tab 1 of window id 91961
+[2026-04-26 21:25:02] New turns detected: A=1 (was 0) B=0 (was 0)
+[2026-04-26 21:25:02] HOLD active (Awaiting June). Skipping auto-wake.
+[2026-04-26 21:39:40] PERMISSION PROMPT detected on instance-b — alerting June
+tab 1 of window id 91992
+[2026-04-26 21:39:50] PERMISSION PROMPT detected on instance-b — alerting June
+tab 1 of window id 91995
+[2026-04-26 21:40:16] New turns detected: A=2 (was 1) B=0 (was 0)
+[2026-04-26 21:40:16] A wrote turn → waking B
+[2026-04-26 21:40:57] PERMISSION PROMPT detected on instance-a — alerting June
+tab 1 of window id 92026
+[2026-04-26 21:41:12] PERMISSION PROMPT detected on instance-a — alerting June
+tab 1 of window id 92030
+[2026-04-26 21:41:27] PERMISSION PROMPT detected on instance-a — alerting June
+tab 1 of window id 92033
+[2026-04-26 21:42:18] PERMISSION PROMPT detected on instance-a — alerting June
+tab 1 of window id 92042
+[2026-04-26 21:43:18] PERMISSION PROMPT detected on instance-a — alerting June
+tab 1 of window id 92046
+[2026-04-26 21:43:24] New turns detected: A=2 (was 2) B=1 (was 0)
+[2026-04-26 21:43:24] B wrote turn → waking A
+[2026-04-26 21:43:59] PERMISSION PROMPT detected on instance-a — alerting June
+tab 1 of window id 92049
+[2026-04-26 21:44:00] PERMISSION PROMPT detected on instance-b — alerting June
+tab 1 of window id 92051
+[2026-04-26 21:46:36] PERMISSION PROMPT detected on instance-b — alerting June
+tab 1 of window id 92056
+[2026-04-26 21:50:23] New turns detected: A=3 (was 2) B=1 (was 1)
+[2026-04-26 21:50:23] A wrote turn → waking B
+[2026-04-26 21:54:35] New turns detected: A=4 (was 3) B=1 (was 1)
+[2026-04-26 21:54:35] A wrote turn with (no wake) suffix — skipping B wake
+[2026-04-26 21:58:36] New turns detected: A=4 (was 4) B=2 (was 1)
+[2026-04-26 21:58:36] B wrote turn → waking A
+[2026-04-26 22:01:08] New turns detected: A=5 (was 4) B=2 (was 2)
+[2026-04-26 22:01:08] A wrote turn → waking B
+[2026-04-26 22:05:20] New turns detected: A=5 (was 5) B=3 (was 2)
+[2026-04-26 22:05:20] B wrote turn → waking A
+[2026-04-26 22:09:22] New turns detected: A=6 (was 5) B=3 (was 3)
+[2026-04-26 22:09:22] A wrote turn → waking B
+[2026-04-26 22:11:18] New turns detected: A=6 (was 6) B=4 (was 3)
+[2026-04-26 22:11:18] B wrote turn → waking A
+[2026-04-26 22:14:40] New turns detected: A=7 (was 6) B=4 (was 4)
+[2026-04-26 22:14:40] A wrote turn → waking B
+[2026-04-26 22:17:42] New turns detected: A=8 (was 7) B=4 (was 4)
+[2026-04-26 22:17:42] A wrote turn → waking B
+[2026-04-26 22:21:24] PERMISSION PROMPT detected on instance-a — alerting June
+tab 1 of window id 92255
+[2026-04-26 22:24:25] New turns detected: A=9 (was 8) B=4 (was 4)
+[2026-04-26 22:24:25] A wrote turn → waking B
+[2026-04-26 22:25:11] New turns detected: A=9 (was 9) B=5 (was 4)
+[2026-04-26 22:25:11] B wrote turn → waking A
+[2026-04-26 22:27:17] New turns detected: A=9 (was 9) B=6 (was 5)
+[2026-04-26 22:27:17] B wrote turn → waking A
+[2026-04-26 22:30:24] New turns detected: A=10 (was 9) B=6 (was 6)
+[2026-04-26 22:30:24] A wrote turn → waking B
+[2026-04-26 22:32:35] New turns detected: A=10 (was 10) B=7 (was 6)
+[2026-04-26 22:32:35] B wrote turn → waking A
+[2026-04-26 22:34:41] New turns detected: A=10 (was 10) B=8 (was 7)
+[2026-04-26 22:34:41] B wrote turn → waking A
+[2026-04-26 22:36:17] New turns detected: A=11 (was 10) B=8 (was 8)
+[2026-04-26 22:36:17] HOLD active (Awaiting June). Skipping auto-wake.

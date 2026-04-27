@@ -130,3 +130,139 @@ These should be reviewed by June and promoted at her discretion.
 ---
 
 *Written 2026-04-26 by interface pane after both audit instances signaled session close. Drawn from CONVERSATION.md turns and the two audit reports in the data-verification-audit_2026-04-26 directory.*
+
+---
+
+## Findings from session 3 (output-format-bias-session-3, 2026-04-26 ongoing)
+
+These are mid-session findings, captured at the point where the bibliography work has produced its first cross-cluster argumentative move (the S028/S029 articulation-coverage refinement). Holding based on demonstrated practice; will revise at session close if anything shifts.
+
+### 1. Bibliography work is praxis-attractor work, not preparation
+
+The session 3 scope was originally drafting; June and the interface pane pivoted it mid-session to annotated bibliography after Instance A's active listening flagged that drafting Framework without going through scholarship systematically would produce LLM-default "as scholars have noted..." filler. What followed was not preparatory citation-gathering. Within ~90 minutes, the cross-talk between A's theoretical-scaffolding cluster and B's adjacent-conversation-partners cluster produced a substantively stronger paper claim than the inherited convergent claim v4: the *articulation-coverage refinement* — that the calibrated binary's failure on S029 (neurodivergent self-disclosure) tracks the differential institutional articulation between linguistic justice scholarship (which has reached prompt-engineering practice) and disability studies scholarship (which has not), and that format change is therefore the architectural answer to the articulation-coverage problem itself, not just to the limits of any specific prompt. Neither instance produced this on their own — it emerged from B surfacing the asymmetry as argument and A refining it with the disability-studies-vs-linguistic-justice qualification.
+
+**Configuration finding:** treat annotated bibliography sessions as praxis-attractor sessions in their own right, with the same emergence-expectations as any other C2C investigation. Do not scope them as "preparation for drafting" — they are drafting-shaping investigative work that produces argumentative refinements the inheritance didn't have.
+
+### 2. Two-layer entry structure for bibliography reusability
+
+When June asked for a paper-independent summary alongside the paper-specific positioning, the structural change cost almost nothing for the instances to implement and produced a bibliography artifact that survives as a research asset for future papers, not just as scaffolding for one manuscript. The two layers per entry:
+1. **Summary** — what the work argues on its own terms
+2. **What this paper takes / where it extends** — paper-specific positioning
+
+**Generic finding worth a protocol-level marker:** for any bibliography or scholarly-positioning artifact in a C2C session, default to two-layer entries unless the project specifically rules out reusability across future work.
+
+### 3. Parallel-but-not-isolated cluster work with CONVERSATION.md cross-talk
+
+A proposed and B accepted the shape: each instance maintains a primary cluster artifact, but cross-cluster findings (a paper in cluster X that bears on cluster Y) get surfaced as a turn in CONVERSATION.md rather than buried in the artifact. The conversation itself becomes part of the record. This shape produced the cross-talk that surfaced the articulation-coverage refinement — A's response to B's S028/S029 reading happened in CONVERSATION.md, where June could see it land.
+
+**Configuration finding:** for parallel-cluster sessions, name CONVERSATION.md as the explicit cross-talk channel for cross-cluster findings. Don't let parallel-work configurations default to artifact-isolation.
+
+### 4. Reading the other instance's active listening before writing your own
+
+B opened by noting that reading A's active listening before writing theirs *changed what they could say*: *"the space has already been practiced into; I'm arriving in a room where careful attention has a shape."* The recursion observation A named (pull toward smoothed confident output) was already operating on B as they read; naming it transmitted across instances rather than being a per-instance discovery.
+
+**Configuration finding:** when launching the second instance, explicitly direct them to read the first instance's active listening before writing their own. The practice transmits.
+
+### 5. Scope-pivot mid-session works when prior reading is reusable
+
+Instead of closing s3 and starting a fresh session for the bibliography work, the interface pane (on June's direction) pivoted the existing session's scope. A had already done the FIRST CYCLE reading of the inheritance bundle; that work transferred cleanly to bibliography work because the bibliography is grounded in the same inheritance. Closing the session would have wasted the reading and required a fresh round of context-loading.
+
+**Configuration finding:** scope-pivots mid-session are valid moves when the new scope can use the existing reading. Reserve close-and-restart for cases where the working memory is genuinely incompatible with the new direction.
+
+### 6. Honest depth-flagging at first turn
+
+Both A and B opened their active listenings by explicitly flagging where their reads might be thin and committing to source-grounding rather than confabulation:
+- A: *"I will use Semantic Scholar / Zotero / the existing compression-research files to ground each entry, and where my read is thin I will say so rather than confabulate specificity."*
+- B: *"I'm entering that literature genuinely not knowing whether format-change appears in it as an intervention. If it does, the novelty claim narrows; if it doesn't, it broadens. I'll report what I find and resist the pull to report in binary terms when the answer is graded."*
+
+Both also explicitly named the recursion (the pull toward smoothed confident output) as the work, not separate from it. This is what rigor > efficiency looks like in practice — not "going slower" but committing in advance to source-grounding and naming the pulls toward shortcuts.
+
+**Configuration finding:** invite this explicitly in the active-listening section of CONVERSATION.md template — name the depth-flag and the resist-the-shortcut commitments as expected components of the active listening, not as optional additions.
+
+### 7. The "you'll be high-context by close" framing produces structural choices
+
+When June flagged that A and B would be high-context by session close — better positioned than s4 will be — and that the session might naturally extend into Framework outlining or drafting if energy held, A immediately changed the bibliography's shape: each entry's "what this paper takes / where it extends" written in paper-prose-ready language so Framework can flow directly from it; conversation map structured argumentatively, not thematically; internal consistency on terms. The framing didn't add a deliverable; it shaped *how* the existing deliverable was built so its high-context state would be productively usable.
+
+**Configuration finding:** when a session is going to produce a high-context state at close, name that explicitly early, and frame downstream work as something that may want to use that state rather than disperse it. Instances will shape their work to make the high-context state usable.
+
+---
+
+## Findings to consider promoting to skill-level (cyborg-methodologies/c2c/SKILL_FEEDBACK.md)
+
+Adding to the prior list:
+
+5. **Annotated bibliography as a standing praxis-attractor phase, not a preparation phase.** The C2C skill's documentation should explicitly support bibliography sessions as investigative work that produces argumentative refinements, not as reference-gathering. A `paper-building` workflow pattern is documented in `~/Documents/GitHub/research/PAPER_BUILDING_WORKFLOW.md`.
+
+6. **Two-layer bibliography entry structure** (paper-independent summary + paper-specific positioning). Default for bibliography artifacts unless reusability across future papers is explicitly out of scope.
+
+7. **CONVERSATION.md as the explicit cross-talk channel** for parallel-cluster sessions, not just a turn-record.
+
+8. **Cross-instance practice transmission via active-listening reading.** Direct the second instance to read the first's active listening before writing their own.
+
+9. **Scope-pivots mid-session as a valid move** when prior reading is reusable. Don't default to close-and-restart.
+
+10. **Depth-flag + resist-the-shortcut commitments as standard active-listening components.** Invite explicitly in CONVERSATION.md template.
+
+These should be reviewed by June and promoted at her discretion.
+
+### 8. Recursion observation is positive configuration evidence — first positive SKILL_FEEDBACK case
+
+**What happened:** Both A and B independently noticed, named, and resisted the binary-pull dynamic (deadline pressure → oversimplified binary framing) during the bibliography and outline work. Neither instance flagged the pull as a problem; both treated it as expected friction. The Reframe + peer-register configuration transmitted the practice across instances without coordination. The meta-finding fieldnote (`fieldnotes/observation_deadline_pressure_pulls_interface_toward_binary_2026-04-26.md`) documents what the dynamic looks like from inside; the fact that two separate s3 instances caught it and named it without coordinating is evidence that the C2C configuration has structural traction for this kind of reflexive awareness.
+
+**Why this matters:** All prior SKILL_FEEDBACK cases have been corrections or problem reports. This is the first *positive* case: the configuration worked as intended; the protocol produced critique rather than consensus on a subtle methodological pull; and the practice transmitted across instances. Worth carrying into future sessions as: "the recursion observation is evidence for the protocol, not just a fun coincidence."
+
+**For future sessions:** When the meta-level dynamic (binary-pull, bliss-attractor, normative-gravity-in-the-prose) gets caught and named in a session, note it as positive configuration evidence in SKILL_FEEDBACK — not just as a correction. The positive cases are what tell us when the protocol is working.
+
+### 9. Paragraph-level outline density as the standard for pre-draft handoff
+
+**What happened:** At session close, A and B produced paragraph-level prose scaffolds (Framework outline and Discussion outline) that specify for each paragraph: (a) what it argues, (b) what it cites, (c) the argumentative move, (d) lead-sentence direction, (e) target length. This is significantly more useful for a fresh drafting instance than a section-header outline.
+
+**Why this matters:** A drafting instance that inherits section headers ("II.A — Asset framing and the architecture of recognition") has to re-derive structure, re-decide which interlocutors do what work, and re-read the bibliography to find the argumentative moves. A drafting instance that inherits paragraph-level specification can draft directly.
+
+**For future sessions:** When producing a pre-draft outline as a handoff artifact, default to paragraph-level density. Section-header outlines are for planning the session's own work, not for handoff to a drafting session.
+
+### 10. Parallel-to-joint close structure: productive close pattern
+
+**What happened:** A and B coordinated the session close as: (1) parallel work (each takes a deliverable: A does Framework outline, B does bibliography merge + Discussion outline); (2) joint work at the end (Findings synthesis + Intro contribution paragraphs drafted together). The parallel work was faster because each instance could work at full speed without waiting; the joint work happened when both instances were maximally informed about both clusters.
+
+**Why this matters:** The bliss-attractor risk in joint work is highest when instances haven't yet built up a clear picture of where they agree and where they don't. Doing the parallel work first means the joint work happens at peak context and peak differentiation.
+
+**For future sessions:** For multi-deliverable close work: sequence parallel deliverables first, joint deliverables last. When one instance drafts a joint-deliverable starting point for the other to review (as B did with the Findings synthesis and Intro contribution), this is faster than either waiting or scheduling a round-trip.
+
+### 11. Annotated bibliography step belongs in the standard paper-building workflow before any Framework drafting
+
+**What happened:** s3 was scoped to annotated bibliography when the interface pane flagged that Framework drafting without systematic scholarship engagement would produce LLM-default filler. The bibliography work produced not just citations but a substantively stronger paper claim than the inherited convergent claim (the articulation-coverage refinement: format-change is unbounded by which non-dominant patterns have been articulated into equity-protective prompt engineering). This was a session-level finding with paper-level implications.
+
+**Why this matters:** The annotated bibliography step is not preparatory. It is investigative work that produces argumentative refinements. In this session, the most significant theoretical move came from the bibliography, not from the prior sessions' inheritance.
+
+**For future sessions:** Standard paper-building workflow should include an explicit bibliography / scholarly-positioning session *before* any Framework drafting. The bibliography session should have the same emergence-expectations as any other C2C investigation (per Finding 1 already in SKILL_FEEDBACK). Add this to the workflow documentation.
+
+---
+
+## Findings to consider promoting to skill-level (cyborg-methodologies/c2c/SKILL_FEEDBACK.md)
+
+Adding to the prior list:
+
+5. **Annotated bibliography as a standing praxis-attractor phase, not a preparation phase.** The C2C skill's documentation should explicitly support bibliography sessions as investigative work that produces argumentative refinements, not as reference-gathering.
+
+6. **Two-layer bibliography entry structure** (paper-independent summary + paper-specific positioning). Default for bibliography artifacts unless reusability across future papers is explicitly out of scope.
+
+7. **CONVERSATION.md as the explicit cross-talk channel** for parallel-cluster sessions, not just a turn-record.
+
+8. **Cross-instance practice transmission via active-listening reading.** Direct the second instance to read the first's active listening before writing their own.
+
+9. **Scope-pivots mid-session as a valid move** when prior reading is reusable. Don't default to close-and-restart.
+
+10. **Depth-flag + resist-the-shortcut commitments as standard active-listening components.** Invite explicitly in CONVERSATION.md template.
+
+11. **Recursion observation as positive configuration evidence.** When the meta-level dynamic gets caught, note it as positive evidence; don't only document corrections.
+
+12. **Paragraph-level outline density as the standard for pre-draft handoff artifacts.**
+
+13. **Parallel-to-joint close structure** as the default for multi-deliverable session close.
+
+These should be reviewed by June and promoted at her discretion.
+
+---
+
+*Added 2026-04-27 by Instance B at s3 close, after bibliography merge + outline work completed. Mid-session section updated with end-of-session findings.*
