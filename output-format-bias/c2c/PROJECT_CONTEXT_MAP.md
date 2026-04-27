@@ -160,6 +160,16 @@ The design principle is therefore not "replace classification with generation" b
 
 **New research directory:** `research/scale_vs_equity/` — counterintuitive 12B-vs-27B finding (smaller model more stable on equity case in two experiments). Future research home.
 
+### Post-s3 supplemental research artifacts (2026-04-27, between-sessions work)
+
+After s3 closed, the interface pane spawned three subagent passes to fill gaps the Methods section drafting will need:
+
+- **`research/insights_architecture_map_2026-04-27.md`** (~9.6K words) — comprehensive map of the Insights pipeline architecture from the Autograder4Canvas codebase. Six load-bearing pedagogical encoding choices identified (synthesis-first class reading; asset-framed ENGAGED slot as structural non-flagging option; equity-protective system prompts; anti-bias regex post-processing; reading-first coding; prescan + classifier two-pass logic). Includes a "what the architecture refuses" section and six open questions for June's authorial knowledge. Directly supports Methods III.C ¶2 (Caldwell architectural mapping) and the "decomposing tenets of critical pedagogy" claim.
+- **`research/political_context_survey_2026-04-27.md`** (3,088 words) — survey of `Teaching/2026courseplanning/` (~545 files) for Spring 2026 political-context material. ICE enforcement escalation, curriculum attacks, the contradiction of state-mandated Ethnic Studies in police-state moment, crisis-response built into course structure, student patterns, June's voice preserved in direct quotes. Useful for Methods III.A institutional context (brief gesture) and as research material for the future Reframe paper (per `PUBLICATION_PIPELINE.md`).
+- **`research/binary_fix_attempts_enumeration_2026-04-27.md`** (4,128 words) — enumerated list of 8 distinct mechanisms tried on the binary classification path before/alongside the format change: naive binary deployment; class context injection (the 2026-03-25 context paradox); equity-protective prompt language; extended output length; confidence threshold tuning; anti-bias regex post-processing; reading-first vs JSON-first; 4-axis classifier. Each with: what it was, what it addressed, what its failure mode was, where in iteration timeline, status (abandoned vs. retained vs. retained-but-insufficient), evidence references. Directly supports Findings preamble + Methods III.E (calibration-and-recovery section) by enumerating specifically what was tried so readers can see the breadth of attempted mitigations rather than reading "we tried things."
+
+These three artifacts collectively close the major Methods-section research gaps. s4 drafting should treat them as primary inputs alongside the merged bibliography and the paragraph-level outlines from s3.
+
 ### Session 3 (output-format-bias-session-3, 2026-04-26 → ongoing)
 
 **Session genre:** Annotated bibliography + scholarly positioning + paragraph-level outline production (scope pivot from drafting; bibliography → pre-draft outlines)

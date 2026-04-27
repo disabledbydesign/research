@@ -172,3 +172,21 @@ About the recursion: the practice transmitted, the pulls were caught, the work d
 ---
 
 *Drafted as joint A+B contribution at session close. Final review pending June; SKILL_FEEDBACK and PROJECT_CONTEXT_MAP updates already committed (B). The hook voice question and the Caldwell additional-publication question are the only items requiring June's input before s4 can begin drafting at full speed.*
+
+---
+
+## Post-close addendum (interface pane, 2026-04-27 PM)
+
+Three between-sessions artifacts were produced after s3 closed, all in `output-format-bias/research/`. Read these as primary inputs alongside the s3 deliverables — they fill specific Methods-section gaps the bibliography work surfaced.
+
+1. **`insights_architecture_map_2026-04-27.md`** (~9.6K words) — comprehensive map of the Insights pipeline architecture from the Autograder4Canvas codebase. Six load-bearing pedagogical encoding choices identified with code references (synthesis-first class reading; asset-framed ENGAGED slot; equity-protective system prompts; anti-bias regex post-processing; reading-first coding; prescan + classifier two-pass logic). Includes a *"what the architecture refuses"* section directly usable for the *decomposing-tenets-of-critical-pedagogy* claim. Primary input for **Methods III.C ¶2** (the Caldwell architectural mapping `[June-voice placeholder]`).
+
+2. **`political_context_survey_2026-04-27.md`** (3,088 words) — survey of `Teaching/2026courseplanning/` (~545 files) covering Spring 2026 political context: ICE enforcement escalation, curriculum attacks, the contradiction of state-mandated Ethnic Studies in police-state moment. June's voice preserved in direct quotes. Useful for **Methods III.A** (institutional context) — keep BRIEF per June's direction; the deeper material is research for the future Reframe paper (`PUBLICATION_PIPELINE.md` entry on *"Hallucinating Social Justice into Existence"* now references this survey).
+
+3. **`binary_fix_attempts_enumeration_2026-04-27.md`** (4,128 words) — paper-citable enumeration of 8 distinct mechanisms tried on the binary classification path (naive binary deployment; class context injection [the 2026-03-25 context paradox]; equity-protective prompt language; extended output length; confidence threshold tuning; anti-bias regex post-processing; reading-first vs JSON-first; 4-axis classifier). Each with: what it was, what it addressed, what its failure mode was, where in the iteration timeline, status, evidence references. Directly supports the **Findings preamble** and **Methods III.E** (the calibration-and-recovery period section) by enumerating specifically what was tried so readers can see the breadth of attempted mitigations rather than reading "we tried things."
+
+**June also confirmed two outstanding items from the s3 close:**
+- **Hook voice: A's analytical-voice version.** Use that draft in `joint_paragraphs_final.md`.
+- **Caldwell publication June was trying to remember:** the 2012 single-author article *"Inquiry into Identity"* — already in A's bibliography as B1. Caldwell corpus is complete (three confirmed entries: 2012 article, 2016 *Let's Get Real* with Oman Frame, 2022 *Facilitating Conversations* with Stewart and Hawkins).
+
+**Possible bounded draft pass on Methods III.A + III.C ¶2:** the interface pane may produce a `methods_draft_pass_v0.md` artifact before s4 launches. If present, treat it as a starting point June revises; voice-carrying personal-narrative remains hers.
