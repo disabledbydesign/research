@@ -45,7 +45,16 @@ Last updated: 2026-04-23. Reconstructed from conversation with Claude; verify an
 **Status:** Drafted
 **Target:** STS / *AI & Society* / interdisciplinary
 **Argument:** Reframe's approach and failure points as data about machine cognition and the complexities of operationalizing critical theory. What the build reveals about the relationship between critical frameworks and probabilistic systems.
-**Adjacent material surfaced 2026-04-27:** The Spring 2026 political-context survey (`output-format-bias/research/political_context_survey_2026-04-27.md`) holds material about teaching Ethnic Studies under intensifying ICE enforcement + curriculum attacks while building the Autograder welfare classifier with an early version of Reframe. That intersection — Reframe-mediated cognition operating in real classroom conditions under political crisis — may belong here, may belong in a separate paper. Decide when this paper drafts.
+
+---
+
+### Reframe-for-Teachers (working title TBD)
+**Status:** Conceptual — material gathered 2026-04-27
+**Target:** Practitioner-facing journal in critical / Ethnic Studies / educational technology pedagogy. (Possibilities: *Radical Teacher*, *Rethinking Schools*, *English Journal*, *Multicultural Education*. Decide on venue when drafting.)
+**Hook:** *"I built this tool and it helped me redesign my class for this thing we're all struggling with."* Audience: teachers — practitioner-to-practitioner voice, not academic-distant. Different paper from *"Hallucinating Social Justice into Existence"* (STS audience, machine-cognition data). Sibling papers, not the same one.
+**Argument:** Reframe-mediated cognition as a building tool that allowed June to redesign her Ethnic Studies course for Spring 2026 conditions — intensifying ICE enforcement, curriculum attacks, simultaneous political crisis + academic obligation in students' lives. The paper documents what crisis-responsive course design looks like when it's built into the structure (flex weeks, multiple input pathways, private submission default, contract flexibility, "you don't owe me your trauma") rather than improvised under pressure. Reframe is the methodological tool that made the redesign possible at the cognitive level; the paper makes that visible to teachers facing similar conditions.
+**Research material:** `output-format-bias/research/political_context_survey_2026-04-27.md` (3,088 words, comprehensive survey of ~545 files in `Teaching/2026courseplanning/`, June's voice in direct quotes). Course planning material from Spring 2026 ETHN-1 and ETHN-27BN. Fieldnotes on building the Autograder Insights pipeline alongside teaching.
+**Note:** This paper would benefit from drafting after the output-format-bias paper closes — that paper's Methods section will surface the architectural-pedagogical lineage that feeds this paper's argument.
 
 ---
 

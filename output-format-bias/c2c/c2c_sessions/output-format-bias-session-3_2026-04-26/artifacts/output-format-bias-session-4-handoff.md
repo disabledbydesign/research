@@ -190,3 +190,20 @@ Three between-sessions artifacts were produced after s3 closed, all in `output-f
 - **Caldwell publication June was trying to remember:** the 2012 single-author article *"Inquiry into Identity"* — already in A's bibliography as B1. Caldwell corpus is complete (three confirmed entries: 2012 article, 2016 *Let's Get Real* with Oman Frame, 2022 *Facilitating Conversations* with Stewart and Hawkins).
 
 **Possible bounded draft pass on Methods III.A + III.C ¶2:** the interface pane may produce a `methods_draft_pass_v0.md` artifact before s4 launches. If present, treat it as a starting point June revises; voice-carrying personal-narrative remains hers.
+
+---
+
+## Scope expansion (June's direction, 2026-04-27 PM)
+
+June asked for an expanded scope for the paper: not just an empirical argument, but a document that makes practitioner-researcher readers think *"I want this program."* Three concrete shifts to incorporate:
+
+1. **A general program description.** Add a sub-section in Methods (likely III.A or a new III.A-bis) describing the Insights pipeline as a program — what it is, what it does, what makes it usable on consumer hardware in a real teaching load. Practitioners want concrete: what the system actually produces, what teachers see, what they do with it. Draw from `research/insights_architecture_map_2026-04-27.md` for substance; keep accessible (not technical-jargon).
+
+2. **Expanded Spring 2026 institutional context.** III.A as drafted in `methods_draft_pass_v0.md` is brief; expand it. The political-context survey at `research/political_context_survey_2026-04-27.md` has substantial material (3,088 words). Surface more: the contradiction of state-mandated Ethnic Studies in police-state moment, the crisis-response built into course structure, what students were carrying. The point is for practitioner-readers to recognize their own conditions in the paper's framing.
+
+3. **Name all 8 fix mechanisms by name in III.E.** Don't leave it as "various calibration interventions." `research/binary_fix_attempts_enumeration_2026-04-27.md` has the full list with what each addressed and what failed. Practitioners want to see *we tried these specific things* — not a vague gesture at iteration. Use the enumeration's structure (mechanism / what it addressed / failure mode) compressed to paper length.
+
+**Word budget management:** The 10K inclusive cap means either cut elsewhere (Discussion has compressible room — V.C novelty positioning can compress; some of V.A mechanism elaboration can compress) or move material to *Supplemental Online Material* (REE supports this; see submission specs in CONVERSATION.md). Recommendation: keep program description, expanded III.A, and named fix mechanisms IN the paper because they're load-bearing for the recruiting-document goal; move the full architecture-map detail and the extended fix-history to Supplemental.
+
+**Why this matters for s4 drafting register:** the paper is now both an empirical argument AND a practitioner-recruiting document. Voice should be accessible, concrete, usable. Practitioner-researchers reading should think both *"this is rigorous research"* and *"I could use this in my classroom."* Both registers have to land.
+
