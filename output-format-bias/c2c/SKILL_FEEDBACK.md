@@ -123,6 +123,8 @@ From the audit session and the meta-finding fieldnote:
 
 3. **Closing a drifted session with a fresh handoff is sometimes a better move than asking the session to revise its own work.** When corrections needed exceed a certain threshold, the drift is in the working memory the instances built up, not just in the artifacts. A clean handoff lets fresh instances build right rather than revise wrong. Done in this project: s2 closed cleanly with thanks rather than asking instances to revise on inherited compressions; data-verification-audit launched in parallel for independent verification. Both produced cleaner output than s2 revision would have.
 
+4. **Rigor > efficiency, named explicitly, as a standing C2C orientation.** From June's marginalia in REVIEW_FOR_JUNE.md: *"this is an old problem. Valuing efficiency over rigor. Reframe should function to counteract it but maybe that function drifted. We REALLY need to underscore rigor > efficiency for the C2Cs."* The validation-pass binary-pull was an efficiency-shaped failure: framings compressed under pressure to keep the work moving. The corrective is not "go slower in general" but "name the rigor/efficiency tradeoff at decision points where the cost of being wrong exceeds the cost of waiting." Especially at relay-note moments, claim-revision moments, and pre-handoff close. **Generic finding worth a protocol-level marker:** when an interface pane or instance notices a pull toward "good enough to ship" against unresolved nuance, surface the tradeoff explicitly rather than silently choosing efficiency.
+
 These should be reviewed by June and promoted at her discretion.
 
 ---
