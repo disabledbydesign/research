@@ -180,13 +180,13 @@ These three artifacts collectively close the major Methods-section research gaps
 - `annotated_bibliography_merged.md` — **PRIMARY BIBLIOGRAPHY ARTIFACT.** Unified bibliography merging both clusters, organized by argumentative position. Includes: 5-strand unified scholarly conversation map; Clusters 1–8; unified section-specific engagement recommendations; paper-framing-level recommendations; combined citation gaps (11 items); genuine literature gaps.
 - `framework_outline_paragraph_level.md` — Instance A's paragraph-level prose scaffold for Section II (Theoretical Framework, 7 paragraphs) and Section III (Methods, III.A + III.C + III.E note). Specifies for each paragraph: what it argues, what it cites, argumentative move, lead-sentence direction, target length. Three personal-narrative paragraphs explicitly marked `[June-voice placeholder]`.
 - `discussion_outline_paragraph_level.md` — Instance B's paragraph-level prose scaffold for Section V (Discussion) subsections V.A (mechanism), V.B (design principle), V.C (literature position + novelty claim). Same density as Framework outline; 8 notes for s4 including explicit coordination markers.
-- `joint_paragraphs_draft_b.md` — B's draft of the Findings cross-row synthesis paragraph and the Intro contribution paragraph; drafted for A's review and revision before joint commit. Starting points, not finished artifacts.
+- `joint_paragraphs_draft_b.md` — B's draft of the Findings cross-row synthesis paragraph and the Intro contribution paragraph; drafted for A's review and revision before joint commit. Starting points, superseded by `joint_paragraphs_final.md`.
+- `joint_outline_findings_intro.md` — A's outline-shaped spec of the joint sections, sibling to A's coordinated final drafts.
+- **`joint_paragraphs_final.md` — PRIMARY PAPER-PROSE ARTIFACT for hook + Findings synthesis + Intro contribution.** A's coordinated final versions of the joint paragraphs, taking strongest material from B's draft + A's outline. Hook locked to analytical-voice version per June's call. Findings cross-row synthesis (~210 words) leads with capacity-limit falsification logic; Intro contribution (~175 words) names the two contributions and locates the Loukina et al. limit. Closing line: *"read student writing as something the system describes, not as a target the system judges."*
+- `output-format-bias-session-4-handoff.md` — letter to s4. Includes a post-close addendum (2026-04-27 PM) pointing s4 to the three between-sessions research artifacts + `methods_draft_pass_v0.md` + the scope-expansion direction (practitioner-recruiting frame, expanded Spring 2026 context, named-by-name fix mechanisms in III.E).
+- **`methods_draft_pass_v0.md` — Methods III.A + III.C ¶2 BOUNDED DRAFT PASS by interface pane (2026-04-27 PM).** Draws from the architecture map, political-context survey, and bibliography. III.A institutional context (~280 words including brief Spring 2026 political context); III.C ¶2 pedagogical-lineage and architectural mapping (~340 words connecting Caldwell's "identity as inquiry" line to the Insights pipeline's specific design decisions). Voice-carrying personal-narrative passages explicitly marked `[J: revise voice]` for June's revision. v0 — explicitly preliminary; expect revision.
 
-**Pending at session close:**
-- Revised joint paragraphs (Findings synthesis + Intro contribution) after A's review
-- Session handoff to s4
-- PROJECT_CONTEXT_MAP update (this update is the close pass)
-- SKILL_FEEDBACK update (complete)
+**Session 3 fully closed.** All deliverables committed (commit 594dc40 + 7048b9b for between-sessions work + 390f3a9 for scope expansion).
 
 **Central s3 deliverables:**
 - **Annotated bibliography with two-layer structure.** All entries carry (1) paper-independent summary + (2) paper-specific positioning. The bibliography is a research asset, not just scaffolding for this manuscript.
