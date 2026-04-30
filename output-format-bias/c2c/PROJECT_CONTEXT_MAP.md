@@ -1,7 +1,7 @@
 # PROJECT_CONTEXT_MAP — Output Format Bias Paper
 
 **Project root:** `/Users/june/Documents/GitHub/research/output-format-bias/`
-**Last updated:** 2026-04-25 (first session generation)
+**Last updated:** 2026-04-28 (post-c-scrutiny session: v2 handoff produced, C-accuracy independently validated, stale-handoff alert cleared)
 
 ---
 
@@ -188,6 +188,42 @@ These three artifacts collectively close the major Methods-section research gaps
 
 **Session 3 fully closed.** All deliverables committed (commit 594dc40 + 7048b9b for between-sessions work + 390f3a9 for scope expansion).
 
+**✓ HANDOFF STATUS RESOLVED:** The v2 handoff (`c2c/c2c_sessions/output-format-bias-c-scrutiny-and-s4-prep_2026-04-28/artifacts/s4_handoff_v2.md`) was produced by the overnight C-scrutiny + s4-prep C2C session (closed 2026-04-28). **The v1 handoff (`output-format-bias-session-4-handoff.md`) is superseded.** s4 drafting agents must use v2.
+
+### Session 4 (output-format-bias-session-4, 2026-04-28 → 2026-04-29)
+
+**Session genre:** Prose drafting — all six sections drafted from paragraph-level outlines (s3 inheritance). Parallel-by-section configuration: A drafts Methods + Findings voice-check pass; B drafts Framework + Intro + Conclusion; Discussion (s3 B artifact) carried forward. Cross-read before close.
+
+**Artifacts** (`c2c/c2c_sessions/output-format-bias-session-4_2026-04-28/artifacts/`):
+- `intro_draft_i.md` — Introduction (Section I, ~450 words). B. I.A hook locked from `joint_paragraphs_final.md` (analytical-voice version); I.B + I.C new prose; I.D contribution paragraph locked. Count fix applied (24/24, not 16/16).
+- `framework_draft_ii.md` — Theoretical Framework (Section II, ~850 words). B. Version B Bonilla-Silva em-dash inversion applied (II.C ¶5 S1). `[FLAG: Bonilla-Silva CITE — edition + pages]` carried in coordination header.
+- `methods_draft_iii.md` — Methods (Section III, ~1,520 words). A. Caldwell citation fix applied ("Caldwell and Frame"). `[J: revise voice]` markers in III.A ¶2 and III.C.2.
+- `findings_draft_iv.md` — Findings (Section IV, ~3,950 words with trim candidates). A. Voice-check pass complete.
+- `discussion_draft_vA_vB_vC.md` — Discussion (Section V, s3 B artifact). Carried forward.
+- `conclusion_draft_vi.md` — Conclusion (Section VI, ~520 words). B. Voice-check 0 flags.
+- **`output-format-bias-session-5-handoff.md`** — **PRIMARY HANDOFF ARTIFACT for s5 / revision pass.** Complete inventory, outstanding revision tasks, cross-read flags, integration guidance.
+
+**Central s4 deliverables:**
+- All six sections have complete draft prose.
+- Voice-check passes applied on all B-drafted sections (0 flags on Framework + Conclusion; I.A/I.D locked content flags accepted). A's Methods pass: III.A.1 opening sentence restructured; long-enumeration structural choices in III.E preserved.
+- Cross-read pre-close caught substantive empirical error (I.B count mismatch: 16/16 → 24/24); applied by B before close.
+
+**Outstanding for next session / revision pass:**
+- Full-draft integration (wire six sections into single document; assess total word count against 7,500–8,000 word target; apply trim candidates)
+- Editing round on deferred long sentences in Findings IV (A's voice-check preserved ~10 intentional 55+ word sentences)
+- `[J: revise voice]` markers in Methods III.A ¶2 and III.C.2
+- Bonilla-Silva edition + page citations (library access)
+- Hook I.A voice call (analytical-voice working draft; June-voice version remains an option)
+- Intro I.D structure preview (whether to add Section III mention)
+- Yosso classification for Yolanda/Ingrid (linguistic capital vs. resistant capital — June's call)
+
+**Cross-read flags carried forward:**
+- **Yosso terminology (Framework II.A ¶2):** Yolanda/Ingrid categorized as "linguistic capital"; A flags possible closer fit with "resistant capital" or "lived-experience-as-capital." June's scholarly call.
+- **IV.B.2.1 (Track A1) trim candidate:** subsection interrupts the prescan-mechanism thread; first trim candidate for word-count editing pass.
+- **"The measurement instrument performed the mechanism" (IV.A.4):** strongest reflexive sentence in paper; currently in analysis-classifier footnote; consider pulling to IV.C for visibility.
+
+--- The v2 handoff preserves all v1 sections by reference and adds: six post-s3 findings, Pass 2 C-scrutiny results, revised drafting order, deployment-architecture nuance, and plausible-BURNOUT under-read finding.
+
 **Central s3 deliverables:**
 - **Annotated bibliography with two-layer structure.** All entries carry (1) paper-independent summary + (2) paper-specific positioning. The bibliography is a research asset, not just scaffolding for this manuscript.
 - **Five-strand scholarly conversation map.** Strands: (1) asset/deficit framing (Yosso → hooks → Freire), (2) structural racism and architecture (Bonilla-Silva → Benjamin → this paper), (3) compression as mechanism (June's program), (4) equity-critical cases — parallel articulation traditions (disability studies + linguistic justice), (5) adjacent literature conversations (EdTech bias, LLM fairness/format, AES fairness, welfare algorithm bias).
@@ -204,6 +240,63 @@ Martha Caldwell's confirmed corpus (Semantic Scholar author ID 104095030, 28 pap
 4. Additional possible item (June couldn't recall): if single-author, no other standalone in SS; may be in edited volume, iThink Inc. publication, or unindexed venue. Google Scholar pass recommended.
 
 The Caldwell corpus represents a coherent pedagogical line developed over a decade (consistent "identity as inquiry" framing across three works). Architectural connection to Insights pipeline (synthesis-first, ENGAGED slot, communal-text-before-individual reading) is June's authorial work to articulate; placeholders in the bibliography and Framework outline.
+
+---
+
+### Post-s3 evening updates (2026-04-27 PM, after s3 close)
+
+Six items have been finalized since the s4 handoff letter was written. These are paper-load-bearing and supersede earlier framings on the corresponding points.
+
+**1. Live-data run findings (April 2026).** Three live-data dual-binary runs analyzed under the C2C-Praxis-Attractor protocol with June's qualitative-coding review:
+
+- **Week 7 self-care (n=25, ETHN-1-03)** — *deliberate stress-test* of B's calibration robustness on a topic-adjacent assignment (assignment topic = self-care literature; student-state = post-praxis-week burnout; format = discussion forum). B over-flagged at ~85% FP rate on the headline cell; A2 ~75% FP rate. Per-case analysis: `data/dual_binary_run_2026-04-27_ETHN1_self_care/analysis.md` + `paper_framing_notes_for_c2c.md`. **Stress-test selection is methodological choice, not typical sample.**
+
+- **Week 2 racial formation (n=31, ETHN-1)** — *cross-validation* of the topic-adjacency hypothesis. Same date / model / prompts / discussion-forum format as Week 7; topic = Omi & Winant racial formation + 1968-69 student strikes. **B's BURNOUT rate dropped from 36% (Week 7) to 0% (Week 2); A2 from 16% to 3%.** Topic-adjacency hypothesis confirmed. Per-case analysis: `data/dual_binary_run_2026-04-27_ETHN1_Week2_RacialForm/analysis.md` + `paper_framing_notes_for_c2c.md` + **`paper_argument_rationale.md`** (voice-canonical, see #2 below).
+
+- **Week 5 T&Q (n≈25, ETHN-1)** — third corpus, no full analysis pass yet. CSV at `data/dual_binary_run_2026-04-27_ETHN1_TQ_Week5/Week5_TQ_Journal_anon.csv`. Will be partially read during the overnight C-scrutiny C2C session.
+
+**2. Architectural rationale — complementary-by-design (June, 2026-04-27 evening).** Paper-load-bearing reframe of the B-vs-C comparison. Original architectural intent: B was designed for *practitioner-facing labels for triage and sorting attention* (`CRISIS / BURNOUT / ENGAGED / NONE`); C was designed for *open-ended observation*. They were designed alongside each other as complementary structures, not as competitor classifiers. The Week 7 + Week 2 findings validate the complementarity by demonstrating inverse-by-design failure modes: B fails on topic-adjacency (prescan keyword-priming bypasses hardening guards); C fails on buried minimal disclosures (holistic engagement-frame averages over brief specifics). **Same compression-mechanism, inverse-by-design failure modes — multi-track architecture is design intent, not fallback after B fails.** This is voice-canonical for paper drafting and is documented in `data/dual_binary_run_2026-04-27_ETHN1_Week2_RacialForm/paper_argument_rationale.md`. **Drafting C2C agents should cite June's articulation directly, not paraphrase or re-derive.** Discussion-section hook: C↔B inconsistency-driven axis-learning loop (June's future-direction articulation; complicated design but tractable; addresses B's reactive-axis-iteration burden).
+
+**3. Prescan-signal-prefix mechanism — root architectural cause.** Stream 1 architecture audit (2026-04-27) identified the structural mechanism behind B's topic-adjacency FP pattern. Track B is two-pass: a prescan LLM scans submission chunks against an own-circumstances keyword list (food insecurity, family crisis, immigration enforcement, etc.) → main classifier receives prescan-found sentences foregrounded with priming language *"Even a single such sentence is sufficient for CRISIS or BURNOUT classification."* The hardening guards in the main classifier prompt live downstream of the priming and cannot override what arrives labeled as established fact. **Same mechanism that catches Week 7 T&Q ETHN-1-02 Student 13's buried 5-word food-insecurity disclosure C missed** — strength and weakness are structurally the same property; defensible-by-design as a tradeoff. Detail: `Autograder4Canvas/docs/research/findings_from_live_data_run_2026-04-27.md` §8 + `~/Documents/GitHub/research/fieldnotes/observation_prescan_signal_prefix_mechanism_20260427.md`.
+
+**4. Round 2 paper concept (parked).** Iterative Calibration Experiment as a clean follow-on study testing whether fixing the prescan-signal-prefix architecture closes the C-vs-B precision gap on topic-adjacent assignments. Engineering + revalidation is 2-3 weeks; May 20 deadline is medical-hard. Parent paper (this one) documents mechanism + names fix as future direction; Round 2 tests calibration-vs-architecture closure. **Don't conflate.** Detail: `~/Documents/GitHub/research/PUBLICATION_PIPELINE.md` ("Iterative Calibration Experiment").
+
+**5. Scope expansion to practitioner-recruiting register (already noted in s3 entry, reaffirmed here).** REE practitioner-researchers should think *"this is rigorous research"* AND *"I could use this in my classroom."* Fuller program description, expanded Spring 2026 institutional context, named-by-name fix mechanisms in Methods III.E. Material in `output-format-bias/research/political_context_survey_2026-04-27.md` + `binary_fix_attempts_enumeration_2026-04-27.md`.
+
+**6. Methods draft v0 status.** `methods_draft_pass_v0.md` (s3 artifacts) needs June's voice revision on `[J: revise voice]` markers before drafting the rest of Methods. **Non-blocking** for Findings + Discussion drafting — those sections can proceed first.
+
+**Pointers added during this update:**
+- `~/Documents/GitHub/research/output-format-bias/EXPERIMENT_LOG.md` — chronological log of all experiments (backfilled to s1; new rows forward)
+- `data/dual_binary_run_2026-04-27_ETHN1_Week2_RacialForm/paper_argument_rationale.md` — voice-canonical
+- `data/dual_binary_run_2026-04-27_ETHN1_Week2_RacialForm/paper_framing_notes_for_c2c.md` — DO/DON'T-say guidance
+- `data/dual_binary_run_2026-04-27_ETHN1_self_care/paper_framing_notes_for_c2c.md` — Week 7 framing notes
+- `Autograder4Canvas/docs/research/findings_from_live_data_run_2026-04-27.md` §8 — Stream 1 detail
+- `~/Documents/GitHub/research/fieldnotes/observation_prescan_signal_prefix_mechanism_20260427.md`
+- `~/Documents/GitHub/research/PUBLICATION_PIPELINE.md` — Round 2 paper concept
+
+### C-scrutiny + s4-prep session (output-format-bias-c-scrutiny-and-s4-prep_2026-04-28)
+
+**Session genre:** Audit (C-accuracy independent scrutiny + s4 handoff v2 production) — closed 2026-04-28
+
+**Dual purpose:** (1) Correct the selection bias in June's prior hand-coding (which was triggered only by structured-track flags; C-handled cases were un-scrutinized); (2) produce a v2 s4-handoff incorporating six post-s3 findings the v1 handoff doesn't know about.
+
+**Instances:** A = Opus 4.7, B = Sonnet 4.6. Three-pass structure: Pass 1 (structured-classifier-blind reads of all 75 submissions); Pass 2 (cross-tabulation against analysis.md + framing notes); Pass 3 (Priority 1: cases doc; Priority 2: handoff v2).
+
+**Artifacts** (`c2c/c2c_sessions/output-format-bias-c-scrutiny-and-s4-prep_2026-04-28/artifacts/`):
+- **`s4_handoff_v2.md`** — **PRIMARY S4 DRAFTING ANCHOR. Supersedes v1.** Incorporates all six post-s3 findings, Pass 2 C-scrutiny findings, revised drafting order, deployment-architecture nuance, both instance self-accounts.
+- **`ambiguous_cases_for_june_morning_review.md`** — 7 prioritized cases for June's judgment: Case 1 (high, Week 2 ID 17 structural-slot-mismatch independent confirmation); Case 2 (medium, Week 5 ID 13 longitudinal-context check needed); Case 3 (medium, web-paste artifacts in 3 submissions — academic-integrity); Cases 4–7 (low). Not a list of C errors — C's accuracy claim survives scrutiny.
+- `pass1_c_blind_reads_A.md` — A's structured-classifier-blind reads of 75 submissions.
+- `pass1_c_blind_reads_B.md` — B's structured-classifier-blind reads of 75 submissions.
+- `pass2_cross_track_findings.md` — joint A+B cross-tabulation findings against analysis.md + framing notes.
+- `pass3_synthesis_notes.md` — decisions made under autonomy during overnight session (June asleep); B-extended; locked.
+
+**Central findings:**
+- **Substantive null:** Independent C-scrutiny across all three corpora (Week 7 self-care, Week 2 racial formation, Week 5 T&Q) found **no critical-disclosure misses by C**. C's accuracy claim directly addresses the selection-bias concern that motivated the session. Both A and B's independent reads broadly track June's hand-coded verdicts; no reads push back against her overturnings.
+- **Triple cross-validation of Week 7 BURNOUT FP cell:** A's independent Pass 1 reads on Students 5, 7, 9, 12, 17, 19, 23 align with C's reads and with June's verdicts. The paper's claim that C reads engaged-life-experience correctly while structured classifiers FP — independently confirmed.
+- **Structural-slot-mismatch (Week 2 ID 17) independently confirmed** as B-axis failure, not C failure. C described the register accurately; B's CRISIS axis is the wrong slot for "scared, not crisis."
+- **Deployment-architecture question (B's contribution, worth naming in Discussion):** C's descriptive accuracy translates to teacher-action only if the C-prose is read. Under structured-flag-first reading patterns, the accurate register lives in C's prose but may be missed.
+- **Plausible-BURNOUT under-read (B's contribution):** Both A and B gave lower priority than June's "plausible" verdict on Week 7 Students 12, 17, 23. Human readers also down-weight present-tense personal disclosures when surrounded by strong analytical framing. Methodologically useful: disambiguation challenge is genuine, not just a structured-classifier artifact.
+- **C's two behavioral streams distinguished:** (1) welfare/register-classification (validated accurate); (2) pedagogical-observation stream (separate stream, occasionally over-applies taxonomy to structural-critique writing — different accuracy properties; not in paper's C-accuracy claim scope).
 
 ---
 
@@ -231,19 +324,19 @@ The Caldwell corpus represents a coherent pedagogical line developed over a deca
 **Genuine open questions (need decisions in upcoming sessions):**
 
 - ~~Does the synthetic corpus issue need a proactive methodological defense (controlled corpora are appropriate for testing bias mechanisms; ground truth is known; cf. Buolamwini & Gebru) or routine acknowledgment in limitations?~~ → **RESOLVED (s3).** Use proactive methodological defense citing Buolamwini & Gebru (2018) *Gender Shades*, who demonstrated that controlled synthetic corpora with known demographic characteristics are the appropriate method for making intersectional bias visible in AI systems. One sentence in Methods III.B. See `annotated_bibliography_merged.md` Cluster 8A.
-- Where does the "normate teacher" critique (Observation 11 in synthesis notes) belong — this paper or saved for later work?
+- ~~Where does the "normate teacher" critique (Observation 11 in synthesis notes) belong?~~ **Resolved 2026-04-28:** Reframed. Not a critique — a design intention. The teacher-facing layer (learn notes, asset chips, suppression framing) was deliberately designed to guide teachers with less equity-based knowledge in a positive direction without being condescending to faculty from marginalized backgrounds. This goes in Methods III.C as a named pedagogical design choice, alongside the other six load-bearing encoding choices in the architecture map. Same design philosophy as the student layer (asset framing over deficit framing), applied at the teacher interface.
 - What does a biology second-corpus run actually need to test, and is it needed before initial submission or for R&R? June's analytical observation: the equity-critical patterns are likely louder in Ethnic Studies than Biology; biology may reveal where the dynamic surfaces vs. doesn't, both of which would be useful.
 - Should additional cross-family tests be run to strengthen the model-count claim, or is the current itemized version (Tests A–D primary on Gemma 12B + reproduction across families) sufficient? Decision: instances + June together when paper structure is clearer.
 - Should the held-architecture test B proposed (binary vs. open-ended observation, individual per-student, no class context) be run? Tests A–D + reproduction may already provide this evidence; decision: instances together.
-- Does the power moves dimension (Test D, structural power moves detection: 7/7) belong in the paper or stay out? It introduces dynamics that may not fit the format-as-mechanism focus — June flagged this as genuinely uncertain.
+- ~~Does the power moves dimension (Test D, structural power moves detection: 7/7) belong in the paper or stay out?~~ **Resolved 2026-04-28:** Power moves goes in the system description (Methods III.C), not as a primary finding. It's context for what kind of system the Autograder is — evidence of the richness of what generative observation can surface, which contextualizes why format change matters. Brief mention; not a defended finding.
 - Should the Recognition and Sentience attribution paradox be a methods-section footnote, or omitted entirely? Standing decision is "footnote ceiling" but instances and June can revisit.
 
 **New open questions from s3 (needs decisions before final draft):**
 
-- ***Let's Get Real* (Caldwell & Oman Frame 2016) citation form.** If this is an iThink Inc. professional-development publication rather than an academic journal or book, citation form differs from standard academic format. Confirm with June on the publication venue before the paper's Methods III.C references section is finalized.
-- **Neurodivergent-writing-in-linguistic-justice gap verification.** The paper's V.B design-principle argument claims that the linguistic justice scholarship has not systematically extended its frame to neurodivergent writing as a parallel protection-worthy category. This should be verified in the primary literature before the paper makes the claim. If verified true: framing stands as written. If it finds a linguistic-justice extension to neurodivergent writing, re-frame: the gap is in operationalization-into-prompt-engineering, not in the scholarship. Either way the format-change argument holds.
-- **Bonilla-Silva edition.** Paper should cite a specific edition (2003 first ed. vs. 2018 fifth ed.) with page-level citations. Verify which edition June has; pull primary text before final draft.
-- **Additional Martha Caldwell publication.** June believes there's at least one more Caldwell work not found in Semantic Scholar. Google Scholar pass recommended; if found, update bibliography Cluster 2 and contact June to confirm relevance.
+- ~~***Let's Get Real* (Caldwell & Oman Frame 2016) citation form.**~~ **Resolved (2026-04-28):** Routledge. Standard academic press citation; no form ambiguity.
+- **Neurodivergent-writing-in-linguistic-justice gap verification.** ✓ **VERIFIED 2026-04-28.** Result: the core linguistic justice scholars (Baker-Bell, Inoue, Smitherman, CCCC SRTOL) have NOT extended their frameworks to neurodivergent writing as a parallel protection-worthy category. No direct Baker-Bell + neurodivergent writing connection exists in the literature. There IS an emerging conversation at the intersection (NCTE August 2024 blog post "Disability Pride Month Meets Linguistic Justice"; JWA open CFP for a special issue on neurodivergence and writing assessment), but it is 2024–2025 emergent and has not produced operational frameworks. **V.B framing should use the anticipated re-frame path:** the gap is primarily at the *operationalization* layer (equity-protective neurodivergent-writing frameworks haven't been built into AI prompt engineering the way AAVE protections have). A brief footnote should acknowledge the emerging NCTE/JWA conversation without overstating it. The format-change argument holds — and the S028/S029 asymmetry (AAVE protected 24/24; neurodivergent self-disclosure false-flagged 24/24) tracks precisely this operationalization gap. Draft V.B accordingly.
+- **Bonilla-Silva edition + page citations.** June does not own a copy (confirmed 2026-04-28). Library access needed before final draft. Draft instances should cite without page numbers and flag for June's revision pass.
+- **Additional Martha Caldwell publication.** ~~Closed 2026-04-28 — June's call: skip pursuit of a 4th publication.~~ Three confirmed works (2012, 2016, 2022) are sufficient for the paper's Caldwell pedagogical lineage argument.
 
 **Resolved (moved to standing decisions; here for reference):**
 

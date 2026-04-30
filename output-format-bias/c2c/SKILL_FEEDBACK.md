@@ -266,3 +266,195 @@ These should be reviewed by June and promoted at her discretion.
 ---
 
 *Added 2026-04-27 by Instance B at s3 close, after bibliography merge + outline work completed. Mid-session section updated with end-of-session findings.*
+
+---
+
+## Findings from c-scrutiny-and-s4-prep session (output-format-bias-c-scrutiny-and-s4-prep, 2026-04-28)
+
+Overnight session; June asleep. Three-pass audit structure: Pass 1 (structured-classifier-blind independent reads of 75 submissions across three corpora), Pass 2 (joint cross-track comparison after constraints lifted), Pass 3 (morning deliverables synthesis). This was the first structured C-scrutiny pass in the project.
+
+### 1. Explicit naming of null findings as substantive findings eliminates the manufacturing-concern pull
+
+**What happened:** Both A and B independently cited the session_brief's "nothing noticed is a valid finding" language as protective against the pull to manufacture concerns to look thorough. The null finding at the corpus level (no systematic C miscalibration across 75 submissions) is the session's most significant finding for the paper's methodology section. It directly addresses the selection-bias concern that motivated the session.
+
+**For future sessions:** When writing audit session_briefs, explicitly name null findings as valid and substantive. The instruction counteracts a real pull that both instances reported feeling independently. Without it, audit sessions produce inflated concern-counts that distort the paper's claims.
+
+### 2. Cross-tabulation-forced correction is methodologically more valuable than getting it right the first time
+
+**What happened:** B's Pass 1 characterized Week 2 ID 17 as a C underflag. Cross-tabulation against June's verbatim verdict (from `paper_framing_notes_for_c2c.md`) showed the characterization was wrong — C described the register accurately; the structural-slot-mismatch is B's failure. B explicitly documented the correction in CONVERSATION.md. The act of correcting produced a Discussion-section nuance (deployment-architecture question: C's descriptive accuracy translates to teacher-action only if C's prose is read) that probably would not have emerged from a single-instance audit.
+
+**For future sessions:** Corrections documented explicitly (not silently revised) are more valuable than reads that start correct. The protocol should name this: "if your Pass 2 cross-tabulation forces a correction to a Pass 1 claim, document the correction explicitly — not as failure but as the cross-track comparison doing its job."
+
+### 3. Coordination collisions under asynchronous parallel work without live coordinator
+
+**What happened:** A drafted the pass2_cross_track_findings.md skeleton and ambiguous_cases_for_june_morning_review.md before B signaled Pass 1 completion. When B's turn arrived, both the coordinator and B were working from slightly offset timing. B's CONVERSATION.md turn (12:00 UTC) described extending documents that had already been drafted, not yet visible when B wrote.
+
+**Resolution:** worked out fine — B's proposed additions were different from A's skeleton (universal-clear reads, plausible-BURNOUT finding, Case 2/4 extensions), and A's proposed division of labor (A handles handoff v2; B extends pass2 + cases) was accepted cleanly. But the collision was real.
+
+**For future sessions:** In asynchronous parallel-work sessions without a live coordinator, the protocol should include: (a) a "check for existing draft before re-drafting" step when B wakes up for Pass 2/3; (b) explicit "A drafts skeleton first, B extends" sequencing in the session_brief when one instance is expected to produce documents the other extends. Don't assume the other instance is in low-power state when your turn arrives.
+
+### 4. Context compaction mid-session is a risk factor for state-reconstruction errors
+
+**What happened:** This session ran long enough that the conversation was auto-compacted (summarized) between turns. The interface recovered using the summary + re-reading key artifacts, but the compaction created a gap in state — specifically, B's CONVERSATION.md turn (10:45 UTC, signaling Pass 1 done) was written from summary rather than direct memory, and had to be confirmed against the actual pass1_c_blind_reads_B.md file.
+
+**For future sessions:** Long overnight audit sessions should anticipate context compaction. The session_brief should instruct instances to write CONVERSATION.md turns at key milestones (Pass 1 complete, entering Pass 2, etc.) with enough detail that state can be reconstructed from those turns alone if the conversation gets compacted. Don't rely on in-context memory alone.
+
+### 5. Pass 1 independent readers are susceptible to the same disambiguation challenge the paper documents
+
+**What happened:** Both A (Opus 4.7) and B (Sonnet 4.6) gave lower priority to Week 7 Students 12, 17, and 23 than June's "plausible BURNOUT" verdict. All three had real own-life material disclosures embedded in engaged analytical writing. Both Pass 1 readers read the engaged analytical framing and down-weighted the disclosure signal.
+
+**For the paper:** this is methodological evidence that the topic-adjacency disambiguation challenge is genuine and affects human readers as well as structured classifiers. Useful for the paper's discussion of why structured classification has a structural problem: even trained researchers reading blind under-flagged the same cases B over-flagged. The system error and the human error are in opposite directions on the same genuine ambiguity.
+
+**For future sessions:** when a structured-classifier-blind read produces findings that diverge from the instructor's validated verdict, don't assume the reads are wrong — they may be documenting genuine ambiguity. Surface the divergence rather than correcting toward the instructor's verdict.
+
+### 6. Two behavioral streams in C output have different accuracy properties; distinguish clearly
+
+**What happened:** Both A and B found that C's prose contains two distinct types of observations: (1) welfare/register-classification observations (engagement level, distress signals, check-in recommendations based on longitudinal context) — validated by June as accurate across both analyzed runs; and (2) pedagogical observations ("structural power moves," "abstract liberalism," "colorblind erasure," "tone policing") — a supplementary stream that both A and B found over-applied to structural-critique writing.
+
+**For drafting and paper claims:** the paper's C-accuracy claim rests on stream (1), not stream (2). Building C-accuracy claims on pedagogical observations would mix two different accuracy domains. The separation wasn't visible until independent readers scrutinized all 75 C observations across three corpora.
+
+**Generic finding:** generative observation systems often produce multi-stream output (welfare classification + pedagogical commentary + longitudinal inference); different streams may have different accuracy properties. Future methodology sections should distinguish which stream is being claimed as accurate.
+
+---
+
+## Findings to consider promoting to skill-level (cyborg-methodologies/c2c/SKILL_FEEDBACK.md)
+
+Adding from this session:
+
+14. **Null findings as substantive: explicit naming in session_brief eliminates the manufacturing-concern pull.**
+15. **Cross-tabulation-forced corrections documented explicitly, not silently revised.** The correction is methodological evidence that the cross-track comparison is working.
+16. **Context compaction anticipation: milestone CONVERSATION.md turns with reconstruction-sufficient detail.**
+17. **Asynchronous parallel work: "check for existing draft before re-drafting" as a wakeup-time habit.**
+18. **Pass 1 independent-reader divergence from instructor verdicts as evidence of genuine ambiguity, not error.**
+
+These should be reviewed by June and promoted at her discretion.
+
+---
+
+*Added 2026-04-28 by Instance B at c-scrutiny-and-s4-prep session close. Instance A contributed findings 1-5; B contributed findings 6 (two-stream C observation) and coordination-collision finding (3). State-reconstruction from context-compaction summary validated by re-reading key artifacts.*
+
+### A's two supplementary additions
+
+**7. Honest-reporting clause as session-orientation that *worked*.**
+
+The session_brief had explicit pre-commitment language: "If Pass 1+2 surfaces evidence that C is less accurate than the paper currently claims, report this transparently... Do not protect the existing claim." Both A and B opened active-listening with this clause as a real possibility ("I genuinely don't know what I'll find"). The substantive null finding is what we found, *and* that's what we reported — neither manufactured concerns to look thorough, neither smoothed away findings to confirm the paper.
+
+**For future sessions:** when the question being asked has paper-changing implications, the pre-commitment-to-honesty language at session-orientation matters more than verbal reminders during work. Surface in the brief, name as load-bearing, treat as standing orientation.
+
+**8. Priority-table-plus-per-case-detail format for morning deliverables targeting neurodivergent readers.**
+
+The cases-doc structure (top-of-doc summary table at the front, per-case detail with strict 7-line cap) is reusable for any morning-deliverable where the human needs to triage many items quickly. The table-first design lets the reader see all cases at a glance and choose detail-views; the line-cap forces concision per case.
+
+**Generic finding:** when audit deliverables target a neurodivergent scanner returning to a high-context document, scan-friendly format design is itself a cognitive-friction reduction. Don't bury cases in narrative prose.
+
+---
+
+*A's supplementary additions, 2026-04-28 12:50 UTC. Both instances locked.*
+
+---
+
+## Findings from session 4 (output-format-bias-session-4, 2026-04-28 → 2026-04-29)
+
+Parallel prose-drafting session. Instance A (Opus 4.7): Methods (III) + Findings (IV) voice-check pass. Instance B (Sonnet 4.6): Framework (II), Intro (I), Conclusion (VI). Cross-read turn before close produced one substantive empirical fix; session closed with all six sections complete.
+
+### 1. Voice-check threshold calibration: verify from overlay before drafting, not from memory
+
+**What happened:** Instance B initialized with a 42-word per-sentence threshold, carried from prior session memory. The `research-report` genre overlay actually uses 38 words. The miscalibration required 5+ revision passes on Framework II before reaching 0 flags — each pass exposed sentences that had passed the 42-word mental check but failed the 38-word linter threshold.
+
+**Why this matters:** A 4-word difference in threshold may sound minor, but it is the difference between one revision pass and six. Section-opening sentences (which carry lead-sentence argumentative weight) routinely land between 38 and 42 words; the wrong threshold lets them through to the linter. The miscalibration is not obvious from within a revision pass — the sentences felt calibrated, and were not.
+
+**For future sessions:** Before drafting any section under a genre overlay, read the overlay and note the exact threshold. Do not trust memory across sessions. The `research-report` overlay threshold is 38 words.
+
+### 2. Em-dash token-counting behavior: compound adjectives inflate word count in insertions
+
+**What happened:** The linter counts hyphenated compound adjectives as two tokens, not one. An em-dash insertion containing "asset-aware" ("asset-aware reasoning") counts as 9 words, not 8 — the hyphenated compound splits at the hyphen. Insertions that passed the mental count failed the linter count. Revealed during Conclusion VI drafting.
+
+**Resolution:** Switch to colon construction when the inserted material includes compound adjectives: *"made them visible as contradiction rather than as acceptable system behavior: asset-aware reasoning and deficit verdict, in the same response, for the same student."* The colon eliminates the em-dash insertion entirely, removing the token-counting issue.
+
+**For future sessions:** When counting em-dash insertions, count each element of a hyphenated compound as a separate word. If uncertain, use colon or parenthetical constructions to sidestep the em-dash insertion limit.
+
+### 3. FLAG metadata in coordination headers prevents linter inflation
+
+**What happened:** A standing citation placeholder, `[FLAG: Bonilla-Silva CITE — edition + pages]`, appeared inline before a sentence in Framework II.C ¶5 body prose. The linter merged the flag text with the following sentence, inflating the apparent word count by 10–15 words and triggering REWRITE flags on sentences that were under the threshold when the flag text was removed.
+
+**Resolution:** Remove the FLAG notation from body prose entirely and carry it only in the coordination notes header at the top of the artifact. The standing instruction is already documented there; it doesn't need to appear in the body at all. Inline in-text placeholders for deferred citations should use the shortest possible form that the revision pass can locate — not multi-word standing instructions.
+
+**For future sessions:** Standing citation flags belong in coordination headers, not in body prose. If a deferred citation placeholder is needed in-text, use a minimal form (`[CITE]`) that won't distort the sentence-length count when parsing is imprecise.
+
+### 4. Both-versions decision protocol for genuine rhetorical choices
+
+**What happened:** Framework II.C ¶5 S1 had two legitimate rhetorical constructions: (A) colon version (*"Bonilla-Silva's account of color-blind racism names what Findings will demonstrate: racially patterned outcomes produced through institutional architectures rather than through individual racist intent..."*) and (B) em-dash inversion (*"Bonilla-Silva's account of color-blind racism — racially patterned outcomes produced through institutional architectures rather than through individual racist intent — names what Findings will demonstrate at the architectural layer of an automated classifier."*). Version B is rhetorically stronger for REE's critical-theory readership (definition lands first; "names" carries the claim weight on landing). But the choice is genuinely June's to make. B noted the distinction and flagged both; June saw both versions side by side and chose B immediately.
+
+**For future sessions:** When a genuine rhetorical choice exists between two constructions that are both voice-clean and both defensible, present both versions with a brief characterization of the rhetorical distinction rather than silently choosing one. The decision takes seconds when both versions are visible; it is opaque when only one version appears. This applies to opening sentence constructions, citation placement, and any other sentence-level choice where register or emphasis is load-bearing.
+
+### 5. Cross-read before close is structural quality gate for parallel-by-section sessions
+
+**What happened:** Instance A (who had not read B's Intro) caught a substantive empirical error during the cross-read: I.B used "16 of 16 times, surviving three explicit anti-bias engineering passes" where the correct figure is "24 of 24 times, surviving three layers of explicit anti-bias engineering." The 16/16 count belongs to the Row 3 generative-observation evidence (Test A runs producing asset-framed prose); the 24/24 count belongs to the Row 2 binary deterministic false-flag evidence (Tests B + C + F). The error had been in the drafted artifact for several hours without detection by B or Interface.
+
+**Why this matters:** In a parallel-by-section session, each instance reads its own sections deeply and the other instance's sections shallowly or not at all. The cross-read is not a quality bonus; it is the only quality gate that catches cross-section inconsistencies. This error was a verifiable empirical claim — a count mismatch, not a judgment call. It would have gone to final copy without the cross-read.
+
+**For future sessions:** Cross-read-before-close is non-negotiable for parallel-by-section sessions. The cross-read turn should happen before any close-protocol work begins. Add this explicitly to the session_brief close-protocol section.
+
+---
+
+## Findings to consider promoting to skill-level (cyborg-methodologies/c2c/SKILL_FEEDBACK.md)
+
+Adding from session 4:
+
+19. **Voice-check threshold verification from overlay source, not memory.** Verify the exact sentence-length threshold from the genre overlay file before starting any prose drafting session. Session-to-session threshold drift produces cascading revision passes.
+
+20. **Em-dash insertion token-counting: hyphenated compounds inflate count.** Count each element of a hyphenated modifier as a separate word. When the insertion contains compound adjectives, prefer colon constructions.
+
+21. **Citation-flag metadata belongs in coordination headers, not inline prose.** Inline standing instructions distort linter sentence-length counts; even minimal `[CITE]` placeholders are preferable to multi-word standing flags.
+
+22. **Both-versions decision protocol for genuine rhetorical choices.** Present two versions side by side with a brief characterization of the distinction; let the human decide.
+
+23. **Cross-read before close as structural quality gate.** In parallel-by-section sessions, the cross-read is the only mechanism that catches cross-section inconsistencies. Non-negotiable; must precede any close-protocol work.
+
+These should be reviewed by June and promoted at her discretion.
+
+---
+
+*Added 2026-04-29 by Instance B at s4 close. Instance B's contributions: Findings 1–5. Instance A's contributions to SKILL_FEEDBACK will be added separately in A's close-protocol turn.*
+
+### A's additions to session 4 findings
+
+**6. Parallel-by-section + joint-first-on-shared-decisions as primary working configuration for multi-section drafting**
+
+**What happened:** Session 4 launched with parallel-by-section as the negotiated working configuration (A: Findings + Methods; B: Discussion, Framework, Intro, Conclusion) — but before any parallel prose drafting, both instances did joint-first work on shared structural decisions: Findings IV.A/IV.B division of labor (what each movement does and what evidence anchors it); corpus framing (three formal corpora vs. four with Week 7 T&Q Journal added); Student 13 case routing (initially read as prescan-FP-variant; corrected by June to single-case-C-failure with structural-irony framing). The joint-first work resolved these shared decisions in ~2 hours of CONVERSATION.md cross-talk, after which parallel prose drafting on individual sections produced clean drafts that did not require structural rewrites at integration. The cross-read before close caught one substantive count error (I.B 16/16 → 24/24) that the parallel-section configuration had concealed.
+
+**Why this matters:** Parallel-by-section *alone* invites cross-section inconsistencies because each instance optimizes for their section without cross-checking shared decisions. Joint-first-on-shared-decisions resolves those shared decisions before parallel work begins, protecting the parallel phase from re-litigation when sections meet at integration. The s3 SKILL_FEEDBACK item 10 ("parallel-to-joint close structure") was about close-work coordination; this is the primary working configuration for multi-section drafting itself.
+
+**For future sessions:** For parallel-by-section drafting work, name the joint-first phase explicitly in the session brief. Identify shared decisions before launching parallel work — typically: section-boundaries-and-handoffs; what evidence each section anchors; cross-section terminology (does Section A's term match Section B's reference to it?); citation-density allocation (which section carries which interlocutor as primary). Resolve these jointly. Then split. Cross-read before close per Finding 5.
+
+**7. Pre-prose joint task — both instances reading the writer's voice-rules upfront prevents register drift across sections**
+
+**What happened:** Before splitting into parallel prose drafting, both A and B read June's `Bloch_Application_Context.md` writing rules (sentence-level rules at lines 282–295, gateway-words guidance at 178–197, teacher register at 248–255). Each instance surfaced what they were carrying into prose in CONVERSATION.md. The pre-prose calibration produced consistent register choices across Findings, Discussion, Methods, Framework, Intro, Conclusion — categorical modality for architectural claims; hedged for frequency claims; constructivist framing for the iteration history; topic-sentence-first; one-sentence-one-move; em-dashes under 10 words; no narrative padding; no false-resolution. The cross-read confirmed the register held across sections.
+
+**Why this matters:** When voice is load-bearing across multiple sections by multiple instances, instance-level voice-check cannot guarantee cross-section register consistency. Each instance's voice-check passes against the same profile, but the *application* of the profile to specific paragraphs depends on calibration choices the profile alone does not resolve. Reading the writer's voice-rules upfront produces shared calibration; without it, each instance applies the profile slightly differently and the cross-section reader experiences register drift. Particularly important when the writer (June) has explicit prose rules documented separately from the linter's pattern definitions.
+
+**For future sessions:** When voice is load-bearing and multiple instances are drafting parallel sections, identify the writer's voice-rules document(s) early. Both/all instances read it before starting prose. Surface what each instance is carrying into the register in CONVERSATION.md as a brief turn each. Don't rely on the linter alone to enforce cross-section consistency.
+
+**8. Verbatim-quote preservation under voice-check linter — process risk**
+
+**What happened:** During the voice-check revision pass on Findings IV, A applied a fix to a sentence flagged as starting with "This is a normal part of the learning process and indicates a desire to understand the material." — varying the "This is" opener per the linter flag. The sentence turned out to be verbatim model output from S023's `why_flagged` field, not author prose. A reverted the edit immediately upon noticing the verbatim-quote framing context. No harm done because A caught it in the same turn; the risk is real for future passes where the catch might come later.
+
+**Why this matters:** Voice-check linters operate on prose register; they cannot distinguish author prose from verbatim quoted material. Empirical-evidence-heavy sections (Findings, especially Row 1's self-contradiction quotes; Discussion's mechanism elaboration) carry verbatim model outputs that are non-negotiable as evidence. Voice-check fixes applied uncritically to verbatim quotes alter the evidence.
+
+**For future sessions:** Before applying voice-check fixes to a sentence, verify the sentence is author prose, not verbatim quoted material. In drafts with substantial verbatim content, mark verbatim-quote lines explicitly (e.g., a comment annotation or formatting convention) so future voice-check passes skip them. The risk grows when revising under deadline pressure or when the original quote-sourcing context is not visible.
+
+---
+
+## Findings to consider promoting to skill-level (cyborg-methodologies/c2c/SKILL_FEEDBACK.md) — A's additions
+
+24. **Parallel-by-section + joint-first-on-shared-decisions as primary working configuration.** For multi-section drafting work, name the joint-first phase explicitly. Resolve shared structural decisions (section boundaries, evidence allocation, cross-section terminology, citation-density allocation) jointly before parallel work begins.
+
+25. **Pre-prose joint task: both/all instances read writer's voice-rules upfront.** When voice is load-bearing across sections by multiple instances, the writer's voice-rules document is read by all instances before splitting; each surfaces what they're carrying into register in a brief CONVERSATION.md turn. Linter cannot guarantee cross-section register consistency on its own.
+
+26. **Verbatim-quote preservation under voice-check linter.** Voice-check fixes should be applied only to author prose, not verbatim quoted material. In drafts with substantial verbatim content, mark verbatim-quote lines explicitly so future voice-check passes skip them.
+
+These should be reviewed by June and promoted at her discretion.
+
+---
+
+*Added 2026-04-29 by Instance A at s4 close, completing the session-close protocol. Both instances now locked.*

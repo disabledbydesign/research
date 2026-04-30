@@ -167,17 +167,17 @@ The paper does not need to load the four-frames apparatus. It needs the structur
 **For collaborative mapping with June:**
 - What specifically about Caldwell's facilitation framework grounds the synthesis-first move (read the community first, individuals within the communal frame)?
 - Does Caldwell's work address the asymmetry between explicitly named protections and ambient pathologies that the paper's S028/S029 contrast surfaces?
-- Is *Let's Get Real* a separate work from *Facilitating Conversations about Race in the Classroom*, an iThink Inc. publication, or both? (Caldwell appears to be associated with iThink Inc., a critical-pedagogy professional development organization; bibliographic detail TBD.)
+- ~~Is *Let's Get Real* a separate work or an iThink Inc. publication?~~ **Resolved (2026-04-28):** *Let's Get Real* is a separate Routledge book, distinct from *Facilitating Conversations*.
 
 ---
 
-### 2C. Caldwell, Martha & Oman Frame (2016). *Let's Get Real: Exploring Race, Class, and Gender Identities in the Classroom.* [Verify publisher — confirmed via Semantic Scholar (Caldwell author ID 104095030); chapters indexed separately including "Inquiry Into Identity/Race/Social Class" and "Teacher Identity Work." Likely iThink Inc. or professional-development press — verify citation form.]
+### 2C. Caldwell, Martha & Oman Frame (2016). *Let's Get Real: Exploring Race, Class, and Gender Identities in the Classroom.* Routledge. [Publisher confirmed by June, 2026-04-28. Chapters indexed separately on Semantic Scholar including "Inquiry Into Identity/Race/Social Class" and "Teacher Identity Work." Standard academic press — cite as Routledge book.]
 
 **Summary.** [Provisional — verify before drafting; full primary text needed for annotation.] An extended treatment of the inquiry-into-identity pedagogical framework developed in the 2012 article, now in book form and expanded to include class and gender alongside race. The book indexing suggests it is organized around facilitation practice — identity inquiry as a process teachers and students work through together, not a content area to be transmitted. Co-authored with Oman Frame, suggesting practitioner-facing rather than purely academic framing. Published a decade after Caldwell's 2012 foundational article.
 
 **What this paper takes / where it extends.** The Caldwell corpus (2012 article → 2016 *Let's Get Real* → 2022 *Facilitating Conversations*) represents a coherent pedagogical line developed over a decade: consistent "identity as inquiry" framing, consistent facilitation-focused approach to dialogue across difference, consistent pedagogical commitment to reading identity categories as questions rather than fixed attributes. The architectural decisions in the Insights pipeline — synthesis-first / observation-first design; ENGAGED as a non-flagging slot; communal-text-before-individual reading — reflect this pedagogical line as a decade-long influence, not a single-citation connection. The Methods III.C ¶2 placeholder paragraph should acknowledge the corpus breadth, not just one work. The specific architectural link is June's authorial work to fill.
 
-**Note for s4:** if *Let's Get Real* is an iThink Inc. professional-development publication rather than an academic journal or standard academic press book, citation form may differ. Confirm with June on the publication venue and how to cite appropriately in an academic manuscript targeting REE.
+**Note for s4:** Publisher confirmed as Routledge (June, 2026-04-28). Cite as standard Routledge book. No citation-form ambiguity.
 
 ---
 
@@ -471,7 +471,7 @@ This is a stronger contribution claim than "we found a bias intervention that wo
 
 All items below require external verification before final submission:
 
-1. **Bonilla-Silva edition + page citations.** Specific edition (2003 first vs. 2018 fifth) and page-level citations need verification before final draft. Add to June's Zotero.
+1. **Bonilla-Silva edition + page citations.** June does not own a copy (confirmed 2026-04-28). Library access needed for page-level citations before final draft. Use general in-text citation without page numbers until a copy is obtained; flag in-paper for June's revision pass.
 2. **Caldwell broader corpus.** Three works confirmed: Caldwell 2012 "Inquiry into Identity"; Stewart, Caldwell & Hawkins 2022 *Facilitating Conversations*; Caldwell & Oman Frame, *Let's Get Real* (confirmed as separate work; year and publisher TBD — wider search needed). June notes there may be at least one more Caldwell publication she can't recall. Additional searches needed if session time permits; otherwise, flag for s4.
 3. **Disability studies primary citations.** Garland-Thomson's *Staring* is in June's library; verify whether *Extraordinary Bodies* (1997) or the 2011 "Misfits" (*Hypatia*) carries the *normate* concept more precisely for this paper's use. Siebers's *Disability Theory* (2008) — medical/social model distinction — needs primary verification; not in June's library.
 4. **Linguistic justice primary citations.** Smitherman *Talkin and Testifyin* (1977); Baker-Bell *Linguistic Justice* (2020) for Black Language Pedagogy; Inoue *Antiracist Writing Assessment Ecologies* (2015) for assessment-architecture argument. Verify which specific text carries the AAVE-as-language articulation most cleanly, and which addresses assessment specifically. CCCC 1974 "Students' Right to Their Own Language" — confirm proper citation form.
