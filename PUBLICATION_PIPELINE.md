@@ -33,6 +33,18 @@ Last updated: 2026-04-23. Reconstructed from conversation with Claude; verify an
 
 ---
 
+### Iterative Calibration Experiment (Round 2 follow-on to "Bias Is in the Output Format")
+**Status:** Conceptual / parked 2026-04-27 — clean follow-on study, not a section of the parent paper
+**Target:** *Race Ethnicity and Education* (sibling submission) or *AI & Society* (methods-of-equity-engineering venue) — decide when drafting
+**Hypothesis:** A2 (binary) and B (4-axis) have not been tuned to live student data; both were calibrated against synthetic corpora before the Spring 2026 Autograder live deployment. The output-format-bias paper documents B's structural failure modes on live data: topic-adjacency mis-priming via the prescan-signal-prefix architecture (specifically `submission_coder.py:1044-1055` + `prompts.py:1671-1685`), CHECK-IN calibration drift, structural-slot-mismatch on cases like "scared without active emergency." Round 2 tests whether prompt-level + architecture-level fixes (prescan course-material disambiguation; conditional signal_prefix; weighted prescan downweighting on assignment-keyword context) close the C-vs-B precision gap on topic-adjacent assignments — or whether C's no-compression architecture retains an irreducible advantage independent of structured-classifier calibration.
+**Why a follow-on paper rather than parent-paper section:** the parent paper's argument is complete without it (*structured classifiers have characterizable failure modes; multi-track is the design implication*). Round 2's argument is methodologically distinct (*calibration vs. architecture: which carries the gap?*) and constitutes an iterative-experiment methods arc worth its own publication. Compressing it into the parent paper would (a) dilute the architectural-complementarity claim, (b) force the May 20 deadline on engineering work that needs unhurried design iteration, and (c) collapse a clean cross-paper conversation into a single confused chapter.
+**Why parked now:** May 20, 2026 deadline on the parent paper is medical-hard, not aspirational. Engineering the prescan fix + revalidating against both Week 7 + Week 2 datasets + analyzing closure-of-gap evidence is a 2-3 week effort minimum. Doing it half-baked under deadline pressure dilutes both papers.
+**What the parent paper carries:** documents the mechanism (`prompts.py:1697-1827` CRISIS criteria + `submission_coder.py:1044-1055` signal_prefix priming) as empirical finding; names the fix as future direction in Discussion; cites the parked study as the natural follow-on.
+**Stream 1 future direction also parked here:** C↔B inconsistency-driven axis-learning loop (June's articulation 2026-04-27) — automated detection of cases where B's structured output misses/miscategorizes register C's qualitative observation surfaces, used to propose new B axes without manual retrofit. Complicated design, tractable; potentially its own design paper or a section of the Round 2 calibration paper. Decide when scoping.
+**Pointers:** parent paper repo `output-format-bias/`; Stream 1 architectural details in `Autograder4Canvas/docs/research/findings_from_live_data_run_2026-04-27.md` §8; June's complementary-by-design rationale in `output-format-bias/data/dual_binary_run_2026-04-27_ETHN1_Week2_RacialForm/paper_argument_rationale.md`.
+
+---
+
 ### "Cyborg Methodologies: AI-Powered Constructivist Grounded Theory"
 **Status:** Conceptual — design and research notes in progress
 **Target:** STS / qualitative methods / interdisciplinary
