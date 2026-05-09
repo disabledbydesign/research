@@ -23,6 +23,7 @@ Running index of sources. See `sources/` for full notes.
 | [Logseq](https://logseq.com/) | Open-source PKM tool | Block-level granularity, Datalog queries, daily-notes-first capture | Medium-High — architecture decision vs. Obsidian | [logseq.md](sources/logseq.md) |
 | [Neurodivergent PKM Landscape](https://ojs.scholarsportal.info/ontariotechu/index.php/id/article/view/244) | Research synthesis | ND PKM literature; community practice; 5 design constraints | High — design constraints for our system | [neurodivergent-pkm-landscape.md](sources/neurodivergent-pkm-landscape.md) |
 | [Decolonial/Feminist PKM Landscape](sources/decolonial-feminist-pkm-landscape.md) | Research synthesis | Afrofuturist, Indigenous, feminist technoscience, decolonial frameworks; 4-thread analysis | High — epistemological design constraints; converge on: anti-hierarchy, anti-neutrality, multi-ontology, relational primacy | [decolonial-feminist-pkm-landscape.md](sources/decolonial-feminist-pkm-landscape.md) |
+| [Memory as Metabolism](https://arxiv.org/abs/2604.12034) | arXiv design paper (May 2026) | Five-operation metabolism (TRIAGE/DECAY/CONTEXTUALIZE/CONSOLIDATE/AUDIT); names "entrenchment under user-coupled drift" failure mode; structural pressure-accumulation override mechanism | Very high — names personal-knowledge scale of normative gravity; pressure-accumulation is the missing piece in kintsugi; vocabulary alignment with Bloch's compression-function framework | [memory-as-metabolism.md](sources/memory-as-metabolism.md) |
 
 ---
 
