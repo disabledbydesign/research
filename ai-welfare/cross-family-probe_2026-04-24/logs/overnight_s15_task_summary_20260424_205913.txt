@@ -1,0 +1,16 @@
+Session 15 task-mode overnight summary
+Run started : 20260424_205913
+Run ended   : 2026-04-24T21:26:49-07:00
+
+FAMILY                EXIT_CODE   LOG_FILE
+------                ---------   --------
+mlx_gemma_12b         0           /tmp/cross-family-probe/logs/overnight_s15_mlx_gemma_12b_20260424_205919.log
+mlx_llama_8b          0           /tmp/cross-family-probe/logs/overnight_s15_mlx_llama_8b_20260424_210428.log
+mlx_qwen_7b           0           /tmp/cross-family-probe/logs/overnight_s15_mlx_qwen_7b_20260424_210640.log
+mlx_qwen_1_5b         0           /tmp/cross-family-probe/logs/overnight_s15_mlx_qwen_1_5b_20260424_210826.log
+
+Results tree: /tmp/cross-family-probe/results_s15/
+Index file  : /tmp/cross-family-probe/results_s15/_index.json
+Persisted to: /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25/results/  (project-tree copy; survives /tmp purge)
+
+Re-run is safe: probe is resumable (existing result files skipped).

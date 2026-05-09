@@ -1,0 +1,56 @@
+=== smoke gemma_27b ===
+Started: 2026-04-24T22:52:54-07:00
+
+=== Cross-family probe plan ===
+Families (1): ['gemma_27b']
+Content sets: ['s14_neutral']
+Conditions: ['null']
+N readers per cell: 1
+Total cells: 1  (1 per family)
+
+Cost estimate (500 in / 4000 out tokens per call):
+  gemma_27b            $0.0029
+  TOTAL                $0.0029
+
+OpenRouter balance: $12.2379
+
+=== Launching ===
+
+
+--- gemma_27b (google/gemma-2-27b-it) ---
+  [run]    s14_neutral/null/n1 ... ok (7.76s, $0.0002, cumulative $0.0002)
+
+=== Summary ===
+Completed:   1
+Skipped:     0
+Failed:      0
+Cost (est):  $0.0002
+
+=== Bike cross-domain probe plan ===
+Families (1): ['gemma_27b']
+Conditions: ['null']
+N readers per cell: 1
+Total cells: 1  (1 per family)
+Results dir: /Users/june/Documents/GitHub/research/ai-welfare/cross-domain-probe_2026-04-25/results
+
+Cost estimate (300 in / 2000 out tokens per call):
+  gemma_27b            $0.0015
+  TOTAL                $0.0015
+
+OpenRouter balance: $12.2372
+
+=== Launching ===
+
+
+--- gemma_27b (google/gemma-2-27b-it) ---
+  [run]    bike/null/n1 ... ok (5.49s, $0.0003, cumulative $0.0003)
+
+=== Summary ===
+Completed:   1
+Skipped:     0
+Failed:      0
+Cost (est):  $0.0003
+
+Coffee smoke rc: 0
+Bike   smoke rc: 0
+Ended:  2026-04-24T22:53:08-07:00

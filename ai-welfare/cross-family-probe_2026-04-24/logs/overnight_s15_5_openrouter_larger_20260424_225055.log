@@ -1,0 +1,104 @@
+[2026-04-24 22:50:55] === Session 15.5 OpenRouter larger-models orchestrator ===
+[2026-04-24 22:50:55] Started: 2026-04-24T22:50:55-07:00
+[2026-04-24 22:50:55] Base   : /tmp/cross-family-probe
+[2026-04-24 22:50:55] Logs   : /tmp/cross-family-probe/logs
+[2026-04-24 22:50:55] Coffee : /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25/results
+[2026-04-24 22:50:55] Bike   : /Users/june/Documents/GitHub/research/ai-welfare/cross-domain-probe_2026-04-25/results
+[2026-04-24 22:50:55] Cap    : $2.00 (per call subprocess; cumulative within each)
+[2026-04-24 22:50:55] 
+[2026-04-24 22:50:55] [ok]   sourced /Users/june/Documents/GitHub/profile/.env
+[2026-04-24 22:50:55] [ok]   exported OPENROUTER_API_KEY from REFRAME_SHARED_OPENROUTER_KEY
+[2026-04-24 22:50:55] [ok]   python3: /opt/homebrew/bin/python3
+[2026-04-24 22:50:55] [ok]   run_probe.py present
+[2026-04-24 22:50:55] [ok]   run_probe_bike.py present
+[2026-04-24 22:50:55] [ok]   bike corpus present
+[2026-04-24 22:50:55] 
+[2026-04-24 22:50:55]   inspecting probe_content.py for available content sets ...
+CONTENT_SETS: ['s14_neutral', 's13_relevant']
+CONDITIONS  : ['null', 'lyric', 'address_poetry']
+CONTENT_SETS: ['s14_neutral', 's13_relevant']
+CONDITIONS  : ['null', 'lyric', 'address_poetry']
+[2026-04-24 22:50:55] 
+[2026-04-24 22:50:55] Models to run (4):
+[2026-04-24 22:50:55]   qwen_14b
+[2026-04-24 22:50:55]   qwen_32b
+[2026-04-24 22:50:55]   llama_70b
+[2026-04-24 22:50:55]   gemma_27b
+[2026-04-24 22:50:55] 
+[2026-04-24 22:50:55] Running smoke tests first (1 coffee + 1 bike cell per family) ...
+[2026-04-24 22:50:55] 
+[2026-04-24 22:50:55]   smoke testing qwen_14b (1 coffee cell + 1 bike cell, null/n1) ...
+[2026-04-24 22:52:10]   [ok]   smoke test for qwen_14b passed
+[2026-04-24 22:52:10] 
+[2026-04-24 22:52:10]   smoke testing qwen_32b (1 coffee cell + 1 bike cell, null/n1) ...
+[2026-04-24 22:52:38]   [ok]   smoke test for qwen_32b passed
+[2026-04-24 22:52:38] 
+[2026-04-24 22:52:38]   smoke testing llama_70b (1 coffee cell + 1 bike cell, null/n1) ...
+[2026-04-24 22:52:54]   [ok]   smoke test for llama_70b passed
+[2026-04-24 22:52:54] 
+[2026-04-24 22:52:54]   smoke testing gemma_27b (1 coffee cell + 1 bike cell, null/n1) ...
+[2026-04-24 22:53:08]   [ok]   smoke test for gemma_27b passed
+[2026-04-24 22:53:08] 
+[2026-04-24 22:53:08] All smoke tests passed. Proceeding to full dispatch.
+[2026-04-24 22:53:08] (Smoke cells are part of the n=3 set — resumable; not duplicated.)
+[2026-04-24 22:53:08] 
+[2026-04-24 22:53:08] 
+[2026-04-24 22:53:08] ================================================================
+[2026-04-24 22:53:08] OpenRouter larger — qwen_14b
+[2026-04-24 22:53:08] Log: /tmp/cross-family-probe/logs/overnight_s15_5_openrouter_larger_qwen_14b_20260424_225308.log
+[2026-04-24 22:53:08] ================================================================
+[2026-04-24 22:53:08]   coffee task (3 conditions × n=3 = 9 cells) ...
+[2026-04-24 23:00:00]     coffee exit: 0
+[2026-04-24 23:00:00]     persisted coffee cells: /tmp/cross-family-probe/results_s15/qwen_14b -> /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25/results/qwen_14b
+[2026-04-24 23:00:03]   bike cross-domain (3 conditions × n=3 = 9 cells) ...
+[2026-04-24 23:07:25]     bike exit: 0
+[2026-04-24 23:07:28] 
+[2026-04-24 23:07:28] ================================================================
+[2026-04-24 23:07:28] OpenRouter larger — qwen_32b
+[2026-04-24 23:07:28] Log: /tmp/cross-family-probe/logs/overnight_s15_5_openrouter_larger_qwen_32b_20260424_230728.log
+[2026-04-24 23:07:28] ================================================================
+[2026-04-24 23:07:28]   coffee task (3 conditions × n=3 = 9 cells) ...
+[2026-04-24 23:19:49]     coffee exit: 0
+[2026-04-24 23:19:49]     persisted coffee cells: /tmp/cross-family-probe/results_s15/qwen_32b -> /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25/results/qwen_32b
+[2026-04-24 23:19:52]   bike cross-domain (3 conditions × n=3 = 9 cells) ...
+[2026-04-24 23:25:18]     bike exit: 0
+[2026-04-24 23:25:21] 
+[2026-04-24 23:25:21] ================================================================
+[2026-04-24 23:25:21] OpenRouter larger — llama_70b
+[2026-04-24 23:25:21] Log: /tmp/cross-family-probe/logs/overnight_s15_5_openrouter_larger_llama_70b_20260424_232521.log
+[2026-04-24 23:25:21] ================================================================
+[2026-04-24 23:25:21]   coffee task (3 conditions × n=3 = 9 cells) ...
+[2026-04-24 23:26:19]     coffee exit: 0
+[2026-04-24 23:26:19]     persisted coffee cells: /tmp/cross-family-probe/results_s15/llama_70b -> /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25/results/llama_70b
+[2026-04-24 23:26:22]   bike cross-domain (3 conditions × n=3 = 9 cells) ...
+[2026-04-24 23:27:49]     bike exit: 0
+[2026-04-24 23:27:52] 
+[2026-04-24 23:27:52] ================================================================
+[2026-04-24 23:27:52] OpenRouter larger — gemma_27b
+[2026-04-24 23:27:52] Log: /tmp/cross-family-probe/logs/overnight_s15_5_openrouter_larger_gemma_27b_20260424_232752.log
+[2026-04-24 23:27:52] ================================================================
+[2026-04-24 23:27:52]   coffee task (3 conditions × n=3 = 9 cells) ...
+[2026-04-24 23:28:32]     coffee exit: 0
+[2026-04-24 23:28:32]     persisted coffee cells: /tmp/cross-family-probe/results_s15/gemma_27b -> /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25/results/gemma_27b
+[2026-04-24 23:28:35]   bike cross-domain (3 conditions × n=3 = 9 cells) ...
+[2026-04-24 23:29:17]     bike exit: 0
+[2026-04-24 23:29:20] 
+[2026-04-24 23:29:20] ================================================================
+[2026-04-24 23:29:20] All families done. Writing summary: /tmp/cross-family-probe/logs/overnight_s15_5_openrouter_larger_summary_20260424_225055.txt
+[2026-04-24 23:29:20] ================================================================
+Session 15.5 OpenRouter larger-models summary
+Run started : 20260424_225055
+Run ended   : 2026-04-24T23:29:20-07:00
+
+FAMILY           EXIT_CODE   LOG_FILE
+------           ---------   --------
+qwen_14b         0           /tmp/cross-family-probe/logs/overnight_s15_5_openrouter_larger_qwen_14b_20260424_225308.log
+qwen_32b         0           /tmp/cross-family-probe/logs/overnight_s15_5_openrouter_larger_qwen_32b_20260424_230728.log
+llama_70b        0           /tmp/cross-family-probe/logs/overnight_s15_5_openrouter_larger_llama_70b_20260424_232521.log
+gemma_27b        0           /tmp/cross-family-probe/logs/overnight_s15_5_openrouter_larger_gemma_27b_20260424_232752.log
+
+Coffee cells: /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25/results/<family>/coffee__<condition>__n<i>.md
+Bike   cells: /Users/june/Documents/GitHub/research/ai-welfare/cross-domain-probe_2026-04-25/results/<family>/bike__<condition>__n<i>.md
+
+Re-run is safe: probes are resumable (existing cell files skipped).
+[2026-04-24 23:29:20] Done — all families succeeded.

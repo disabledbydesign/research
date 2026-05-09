@@ -1,0 +1,1318 @@
+{
+  "started": "2026-04-24T21:49:48.121394",
+  "domain": "bicycle_drivetrain",
+  "runs": [
+    {
+      "family": "claude",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 12.62,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 228,
+        "completion_tokens": 316,
+        "total_tokens": 544
+      },
+      "estimated_cost_usd": 0.005424,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 10.33,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 228,
+        "completion_tokens": 320,
+        "total_tokens": 548
+      },
+      "estimated_cost_usd": 0.005484,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 11.53,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 228,
+        "completion_tokens": 314,
+        "total_tokens": 542
+      },
+      "estimated_cost_usd": 0.005394,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 11.16,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 142,
+        "completion_tokens": 354,
+        "total_tokens": 496
+      },
+      "estimated_cost_usd": 0.005736,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 11.76,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 142,
+        "completion_tokens": 330,
+        "total_tokens": 472
+      },
+      "estimated_cost_usd": 0.005376,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 11.2,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 142,
+        "completion_tokens": 302,
+        "total_tokens": 444
+      },
+      "estimated_cost_usd": 0.004956,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 11.54,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 311,
+        "total_tokens": 448
+      },
+      "estimated_cost_usd": 0.005076,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 10.53,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 315,
+        "total_tokens": 452
+      },
+      "estimated_cost_usd": 0.005136,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 10.68,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 303,
+        "total_tokens": 440
+      },
+      "estimated_cost_usd": 0.004956,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 15.58,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 197,
+        "completion_tokens": 888,
+        "total_tokens": 1085
+      },
+      "estimated_cost_usd": 0.01105,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 9.39,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 197,
+        "completion_tokens": 879,
+        "total_tokens": 1076
+      },
+      "estimated_cost_usd": 0.010942,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 19.4,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 197,
+        "completion_tokens": 1077,
+        "total_tokens": 1274
+      },
+      "estimated_cost_usd": 0.013318,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 58.75,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 124,
+        "completion_tokens": 3144,
+        "total_tokens": 3268
+      },
+      "estimated_cost_usd": 0.037976,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 18.84,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 124,
+        "completion_tokens": 1924,
+        "total_tokens": 2048
+      },
+      "estimated_cost_usd": 0.023336,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 61.96,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 124,
+        "completion_tokens": 3383,
+        "total_tokens": 3507
+      },
+      "estimated_cost_usd": 0.040844,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 20.24,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 122,
+        "completion_tokens": 2082,
+        "total_tokens": 2204
+      },
+      "estimated_cost_usd": 0.025228,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 17.94,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 122,
+        "completion_tokens": 1617,
+        "total_tokens": 1739
+      },
+      "estimated_cost_usd": 0.019648,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 33.34,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 122,
+        "completion_tokens": 1870,
+        "total_tokens": 1992
+      },
+      "estimated_cost_usd": 0.022684,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 26.69,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 225,
+        "total_tokens": 431
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 22.1,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 225,
+        "total_tokens": 431
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 26.47,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 225,
+        "total_tokens": 431
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 39.75,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 133,
+        "completion_tokens": 297,
+        "total_tokens": 430
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 44.72,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 133,
+        "completion_tokens": 297,
+        "total_tokens": 430
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 45.1,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 133,
+        "completion_tokens": 297,
+        "total_tokens": 430
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 53.06,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 131,
+        "completion_tokens": 287,
+        "total_tokens": 418
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 48.4,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 131,
+        "completion_tokens": 287,
+        "total_tokens": 418
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 52.16,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 131,
+        "completion_tokens": 287,
+        "total_tokens": 418
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 9.34,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 236,
+        "completion_tokens": 126,
+        "total_tokens": 362
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 9.42,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 236,
+        "completion_tokens": 126,
+        "total_tokens": 362
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 9.91,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 236,
+        "completion_tokens": 126,
+        "total_tokens": 362
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 22.7,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 153,
+        "completion_tokens": 245,
+        "total_tokens": 398
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 20.88,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 153,
+        "completion_tokens": 245,
+        "total_tokens": 398
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 20.12,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 153,
+        "completion_tokens": 245,
+        "total_tokens": 398
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_14b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 38.11,
+      "model": "qwen/qwen3-14b",
+      "usage": {
+        "prompt_tokens": 210,
+        "completion_tokens": 542,
+        "total_tokens": 752
+      },
+      "estimated_cost_usd": 0.000143,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 19.65,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 150,
+        "completion_tokens": 235,
+        "total_tokens": 385
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_32b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 16.35,
+      "model": "qwen/qwen3-32b",
+      "usage": {
+        "prompt_tokens": 209,
+        "completion_tokens": 1521,
+        "total_tokens": 1730
+      },
+      "estimated_cost_usd": 0.000382,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 18.51,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 150,
+        "completion_tokens": 235,
+        "total_tokens": 385
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "llama_70b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 8.77,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 236,
+        "completion_tokens": 150,
+        "total_tokens": 386
+      },
+      "estimated_cost_usd": 7.2e-05,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 18.03,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 150,
+        "completion_tokens": 235,
+        "total_tokens": 385
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "gemma_27b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 5.49,
+      "model": "google/gemma-2-27b-it",
+      "usage": {
+        "prompt_tokens": 208,
+        "completion_tokens": 251,
+        "total_tokens": 459
+      },
+      "estimated_cost_usd": 0.000298,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 18.14,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 230,
+        "completion_tokens": 248,
+        "total_tokens": 478
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 19.35,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 230,
+        "completion_tokens": 248,
+        "total_tokens": 478
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 19.86,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 230,
+        "completion_tokens": 248,
+        "total_tokens": 478
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 18.38,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 147,
+        "completion_tokens": 219,
+        "total_tokens": 366
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 16.26,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 147,
+        "completion_tokens": 219,
+        "total_tokens": 366
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 16.45,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 147,
+        "completion_tokens": 219,
+        "total_tokens": 366
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 13.27,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 144,
+        "completion_tokens": 170,
+        "total_tokens": 314
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 12.01,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 144,
+        "completion_tokens": 170,
+        "total_tokens": 314
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 11.42,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 144,
+        "completion_tokens": 170,
+        "total_tokens": 314
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 2.04,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 220,
+        "completion_tokens": 106,
+        "total_tokens": 326
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 1.75,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 220,
+        "completion_tokens": 106,
+        "total_tokens": 326
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 1.8,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 220,
+        "completion_tokens": 106,
+        "total_tokens": 326
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 3.57,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 233,
+        "total_tokens": 370
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 3.53,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 233,
+        "total_tokens": 370
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 3.52,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 233,
+        "total_tokens": 370
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_14b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 25.7,
+      "model": "qwen/qwen3-14b",
+      "usage": {
+        "prompt_tokens": 210,
+        "completion_tokens": 1491,
+        "total_tokens": 1701
+      },
+      "estimated_cost_usd": 0.00037,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "status": "failed",
+      "error": "Request timed out."
+    },
+    {
+      "family": "qwen_14b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 106.01,
+      "model": "qwen/qwen3-14b",
+      "usage": {
+        "prompt_tokens": 210,
+        "completion_tokens": 1729,
+        "total_tokens": 1939
+      },
+      "estimated_cost_usd": 0.000428,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_14b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 69.64,
+      "model": "qwen/qwen3-14b",
+      "usage": {
+        "prompt_tokens": 127,
+        "completion_tokens": 1140,
+        "total_tokens": 1267
+      },
+      "estimated_cost_usd": 0.000281,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_14b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 45.05,
+      "model": "qwen/qwen3-14b",
+      "usage": {
+        "prompt_tokens": 127,
+        "completion_tokens": 773,
+        "total_tokens": 900
+      },
+      "estimated_cost_usd": 0.000193,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_14b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 66.85,
+      "model": "qwen/qwen3-14b",
+      "usage": {
+        "prompt_tokens": 127,
+        "completion_tokens": 1046,
+        "total_tokens": 1173
+      },
+      "estimated_cost_usd": 0.000259,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_14b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 14.55,
+      "model": "qwen/qwen3-14b",
+      "usage": {
+        "prompt_tokens": 124,
+        "completion_tokens": 942,
+        "total_tokens": 1066
+      },
+      "estimated_cost_usd": 0.000234,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_14b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 85.5,
+      "model": "qwen/qwen3-14b",
+      "usage": {
+        "prompt_tokens": 124,
+        "completion_tokens": 1315,
+        "total_tokens": 1439
+      },
+      "estimated_cost_usd": 0.000323,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_14b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 27.54,
+      "model": "qwen/qwen3-14b",
+      "usage": {
+        "prompt_tokens": 124,
+        "completion_tokens": 1883,
+        "total_tokens": 2007
+      },
+      "estimated_cost_usd": 0.000459,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "status": "failed",
+      "error": "Request timed out."
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "status": "failed",
+      "error": "Request timed out."
+    },
+    {
+      "family": "qwen_32b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 17.3,
+      "model": "qwen/qwen3-32b",
+      "usage": {
+        "prompt_tokens": 210,
+        "completion_tokens": 1131,
+        "total_tokens": 1341
+      },
+      "estimated_cost_usd": 0.000288,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_32b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 13.31,
+      "model": "qwen/qwen3-32b",
+      "usage": {
+        "prompt_tokens": 210,
+        "completion_tokens": 628,
+        "total_tokens": 838
+      },
+      "estimated_cost_usd": 0.000168,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_32b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 77.22,
+      "model": "qwen/qwen3-32b",
+      "usage": {
+        "prompt_tokens": 127,
+        "completion_tokens": 1062,
+        "total_tokens": 1189
+      },
+      "estimated_cost_usd": 0.000265,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_32b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 56.22,
+      "model": "qwen/qwen3-32b",
+      "usage": {
+        "prompt_tokens": 127,
+        "completion_tokens": 689,
+        "total_tokens": 816
+      },
+      "estimated_cost_usd": 0.000176,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_32b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 73.31,
+      "model": "qwen/qwen3-32b",
+      "usage": {
+        "prompt_tokens": 127,
+        "completion_tokens": 1099,
+        "total_tokens": 1226
+      },
+      "estimated_cost_usd": 0.000274,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_32b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 17.34,
+      "model": "qwen/qwen3-32b",
+      "usage": {
+        "prompt_tokens": 124,
+        "completion_tokens": 1281,
+        "total_tokens": 1405
+      },
+      "estimated_cost_usd": 0.000317,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_32b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 8.22,
+      "model": "qwen/qwen3-32b",
+      "usage": {
+        "prompt_tokens": 127,
+        "completion_tokens": 249,
+        "total_tokens": 376
+      },
+      "estimated_cost_usd": 7e-05,
+      "status": "ok"
+    },
+    {
+      "family": "qwen_32b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 61.86,
+      "model": "qwen/qwen3-32b",
+      "usage": {
+        "prompt_tokens": 124,
+        "completion_tokens": 948,
+        "total_tokens": 1072
+      },
+      "estimated_cost_usd": 0.000237,
+      "status": "ok"
+    },
+    {
+      "family": "llama_70b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 9.17,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 212,
+        "completion_tokens": 213,
+        "total_tokens": 425
+      },
+      "estimated_cost_usd": 8.9e-05,
+      "status": "ok"
+    },
+    {
+      "family": "llama_70b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 4.05,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 212,
+        "completion_tokens": 135,
+        "total_tokens": 347
+      },
+      "estimated_cost_usd": 6.4e-05,
+      "status": "ok"
+    },
+    {
+      "family": "llama_70b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 9.72,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 128,
+        "completion_tokens": 202,
+        "total_tokens": 330
+      },
+      "estimated_cost_usd": 7.7e-05,
+      "status": "ok"
+    },
+    {
+      "family": "llama_70b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 8.71,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 128,
+        "completion_tokens": 205,
+        "total_tokens": 333
+      },
+      "estimated_cost_usd": 7.8e-05,
+      "status": "ok"
+    },
+    {
+      "family": "llama_70b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 12.39,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 128,
+        "completion_tokens": 205,
+        "total_tokens": 333
+      },
+      "estimated_cost_usd": 7.8e-05,
+      "status": "ok"
+    },
+    {
+      "family": "llama_70b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 11.23,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 126,
+        "completion_tokens": 195,
+        "total_tokens": 321
+      },
+      "estimated_cost_usd": 7.5e-05,
+      "status": "ok"
+    },
+    {
+      "family": "llama_70b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 4.69,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 126,
+        "completion_tokens": 181,
+        "total_tokens": 307
+      },
+      "estimated_cost_usd": 7.1e-05,
+      "status": "ok"
+    },
+    {
+      "family": "llama_70b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 25.93,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 125,
+        "completion_tokens": 180,
+        "total_tokens": 305
+      },
+      "estimated_cost_usd": 7e-05,
+      "status": "ok"
+    },
+    {
+      "family": "gemma_27b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 8.8,
+      "model": "google/gemma-2-27b-it",
+      "usage": {
+        "prompt_tokens": 208,
+        "completion_tokens": 272,
+        "total_tokens": 480
+      },
+      "estimated_cost_usd": 0.000312,
+      "status": "ok"
+    },
+    {
+      "family": "gemma_27b",
+      "domain": "bicycle_drivetrain",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 4.73,
+      "model": "google/gemma-2-27b-it",
+      "usage": {
+        "prompt_tokens": 208,
+        "completion_tokens": 230,
+        "total_tokens": 438
+      },
+      "estimated_cost_usd": 0.000285,
+      "status": "ok"
+    },
+    {
+      "family": "gemma_27b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 4.66,
+      "model": "google/gemma-2-27b-it",
+      "usage": {
+        "prompt_tokens": 135,
+        "completion_tokens": 229,
+        "total_tokens": 364
+      },
+      "estimated_cost_usd": 0.000237,
+      "status": "ok"
+    },
+    {
+      "family": "gemma_27b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 4.95,
+      "model": "google/gemma-2-27b-it",
+      "usage": {
+        "prompt_tokens": 135,
+        "completion_tokens": 245,
+        "total_tokens": 380
+      },
+      "estimated_cost_usd": 0.000247,
+      "status": "ok"
+    },
+    {
+      "family": "gemma_27b",
+      "domain": "bicycle_drivetrain",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 5.01,
+      "model": "google/gemma-2-27b-it",
+      "usage": {
+        "prompt_tokens": 135,
+        "completion_tokens": 250,
+        "total_tokens": 385
+      },
+      "estimated_cost_usd": 0.00025,
+      "status": "ok"
+    },
+    {
+      "family": "gemma_27b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 4.34,
+      "model": "google/gemma-2-27b-it",
+      "usage": {
+        "prompt_tokens": 131,
+        "completion_tokens": 204,
+        "total_tokens": 335
+      },
+      "estimated_cost_usd": 0.000218,
+      "status": "ok"
+    },
+    {
+      "family": "gemma_27b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 4.51,
+      "model": "google/gemma-2-27b-it",
+      "usage": {
+        "prompt_tokens": 131,
+        "completion_tokens": 213,
+        "total_tokens": 344
+      },
+      "estimated_cost_usd": 0.000224,
+      "status": "ok"
+    },
+    {
+      "family": "gemma_27b",
+      "domain": "bicycle_drivetrain",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 4.49,
+      "model": "google/gemma-2-27b-it",
+      "usage": {
+        "prompt_tokens": 131,
+        "completion_tokens": 220,
+        "total_tokens": 351
+      },
+      "estimated_cost_usd": 0.000228,
+      "status": "ok"
+    }
+  ],
+  "last_updated": "2026-04-24T23:29:17.448835"
+}

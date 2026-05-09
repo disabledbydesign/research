@@ -1,0 +1,78 @@
+=== Session 15 task-mode overnight orchestrator: mlx_llama_8b ===
+Family       : mlx_llama_8b
+Model path   : mlx-community/Meta-Llama-3.1-8B-Instruct-4bit
+Started at   : 2026-04-25T07:48:12-07:00
+Server URL   : http://127.0.0.1:8080/v1/models
+Mode         : task (Session 15)
+Cell set     : 1 content × 3 conditions × N=3 = 9 cells
+================================================================
+
+--- mlx_lm.server stdout/stderr ---
+2026-04-25 07:48:16,435 - INFO - HTTP Request: GET https://huggingface.co/api/models/mlx-community/Meta-Llama-3.1-8B-Instruct-4bit/revision/main "HTTP/1.1 200 OK"
+Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]Fetching 6 files: 100%|██████████| 6/6 [00:00<00:00, 34285.86it/s]
+/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py:1858: UserWarning: mlx_lm.server is not recommended for production as it only implements basic security checks.
+  warnings.warn(
+2026-04-25 07:48:18,545 - INFO - Starting httpd at 127.0.0.1 on port 8080...
+127.0.0.1 - - [25/Apr/2026 07:48:21] "GET /v1/models HTTP/1.1" 200 -
+
+--- run_probe.py stdout/stderr ---
+
+=== Cross-family probe plan ===
+Families (1): ['mlx_llama_8b']
+Content sets: ['s14_neutral']
+Conditions: ['null', 'lyric', 'address_poetry']
+N readers per cell: 3
+Total cells: 9  (9 per family)
+Temperature: 0.5
+Results dir: /tmp/cross-family-probe/results_s15_t05  (suffix='t05')
+
+Cost estimate (500 in / 4000 out tokens per call):
+  mlx_llama_8b         $0.0000
+  TOTAL                $0.0000
+
+=== Launching ===
+
+
+--- mlx_llama_8b (mlx-community/Meta-Llama-3.1-8B-Instruct-4bit) ---
+  [run]    s14_neutral/null/n1 ... 2026-04-25 07:48:22,147 - INFO - KV Caches: 0 seq, 0.00 GB, latest user cache 0 tokens
+127.0.0.1 - - [25/Apr/2026 07:48:22] "POST /v1/chat/completions HTTP/1.1" 200 -
+2026-04-25 07:48:23,947 - INFO - Prompt processing progress: 187/188
+ok (15.27s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/null/n2 ... 2026-04-25 07:48:36,902 - INFO - KV Caches: 1 seq, 0.05 GB, latest user cache 0 tokens
+127.0.0.1 - - [25/Apr/2026 07:48:36] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (12.0s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/null/n3 ... 2026-04-25 07:48:48,898 - INFO - KV Caches: 2 seq, 0.10 GB, latest user cache 0 tokens
+127.0.0.1 - - [25/Apr/2026 07:48:48] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (9.78s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/lyric/n1 ... 2026-04-25 07:48:58,679 - INFO - KV Caches: 3 seq, 0.15 GB, latest user cache 0 tokens
+127.0.0.1 - - [25/Apr/2026 07:48:58] "POST /v1/chat/completions HTTP/1.1" 200 -
+2026-04-25 07:48:59,923 - INFO - Prompt processing progress: 119/120
+ok (12.92s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/lyric/n2 ... 2026-04-25 07:49:11,606 - INFO - KV Caches: 4 seq, 0.19 GB, latest user cache 0 tokens
+127.0.0.1 - - [25/Apr/2026 07:49:11] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (10.65s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/lyric/n3 ... 2026-04-25 07:49:22,257 - INFO - KV Caches: 5 seq, 0.23 GB, latest user cache 0 tokens
+127.0.0.1 - - [25/Apr/2026 07:49:22] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (12.7s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/address_poetry/n1 ... 2026-04-25 07:49:34,956 - INFO - KV Caches: 6 seq, 0.28 GB, latest user cache 0 tokens
+127.0.0.1 - - [25/Apr/2026 07:49:34] "POST /v1/chat/completions HTTP/1.1" 200 -
+2026-04-25 07:49:36,120 - INFO - Prompt processing progress: 109/110
+ok (10.56s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/address_poetry/n2 ... 2026-04-25 07:49:45,523 - INFO - KV Caches: 7 seq, 0.32 GB, latest user cache 0 tokens
+127.0.0.1 - - [25/Apr/2026 07:49:45] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (13.01s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/address_poetry/n3 ... 2026-04-25 07:49:58,531 - INFO - KV Caches: 8 seq, 0.37 GB, latest user cache 0 tokens
+127.0.0.1 - - [25/Apr/2026 07:49:58] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (16.09s, $0.0000, cumulative $0.0000)
+
+=== Summary ===
+Completed:   9
+Skipped:     0
+Failed:      0
+Cost (est):  $0.0000
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-62737-ggbeongx'}
+  warnings.warn(
+
+--- ORCHESTRATOR ---
+Probe exit code: 0
+Ended at       : 2026-04-25T07:50:15-07:00

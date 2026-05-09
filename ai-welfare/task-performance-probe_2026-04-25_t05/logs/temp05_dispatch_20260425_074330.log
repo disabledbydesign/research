@@ -1,0 +1,107 @@
+[2026-04-25 07:43:31] === Session 15 task-mode overnight orchestrator ===
+[2026-04-25 07:43:31] Started: 2026-04-25T07:43:31-07:00
+[2026-04-25 07:43:31] Base   : /tmp/cross-family-probe
+[2026-04-25 07:43:31] Logs   : /tmp/cross-family-probe/logs
+[2026-04-25 07:43:31] Persist: /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25_t05
+[2026-04-25 07:43:31] Mode   : task (Session 15 single-task probe)
+[2026-04-25 07:43:31] Temp   : 0.5
+[2026-04-25 07:43:31] Suffix : t05  (results dir: results_s15_t05/)
+[2026-04-25 07:43:31] 
+[2026-04-25 07:43:31] [ok]   mlx_lm.server: /opt/homebrew/bin/mlx_lm.server
+[2026-04-25 07:43:31] [ok]   python3: /opt/homebrew/bin/python3
+[2026-04-25 07:43:31] [ok]   curl: /usr/bin/curl
+[2026-04-25 07:43:31] [ok]   run_probe.py: /tmp/cross-family-probe/run_probe.py
+[2026-04-25 07:43:31] [note] OpenRouter key not required: this orchestrator only invokes MLX families.
+[2026-04-25 07:43:31] 
+[2026-04-25 07:43:31] Models to run (4):
+[2026-04-25 07:43:31]   mlx_gemma_12b  <-  mlx-community/gemma-3-12b-it-4bit
+[2026-04-25 07:43:31]   mlx_llama_8b  <-  mlx-community/Meta-Llama-3.1-8B-Instruct-4bit
+[2026-04-25 07:43:31]   mlx_qwen_7b  <-  mlx-community/Qwen2.5-7B-Instruct-4bit
+[2026-04-25 07:43:31]   mlx_qwen_1_5b  <-  mlx-community/Qwen2.5-1.5B-4bit
+[2026-04-25 07:43:31] 
+[2026-04-25 07:43:31] Estimated total runtime: ~40-120 minutes (4 models × 9 cells × ~1-3 min/cell).
+[2026-04-25 07:43:31] Reality: probe time can stretch to 3-10 min/cell under load.
+[2026-04-25 07:43:31] 
+[2026-04-25 07:43:31] Sleeping 5 seconds — Ctrl-C now if you didn't mean to launch this.
+[2026-04-25 07:43:36] 
+[2026-04-25 07:43:36] ================================================================
+[2026-04-25 07:43:36] Session 15 task mode — Model: mlx_gemma_12b
+[2026-04-25 07:43:36] Path : mlx-community/gemma-3-12b-it-4bit
+[2026-04-25 07:43:36] Log  : /tmp/cross-family-probe/logs/overnight_s15_mlx_gemma_12b_20260425_074336.log
+[2026-04-25 07:43:36] ================================================================
+[2026-04-25 07:43:36]   booting mlx_lm.server ...
+[2026-04-25 07:43:36]   server PID: 58324
+[2026-04-25 07:43:54]   server ready
+[2026-04-25 07:43:54]   running probe (task mode, 9 cells) ...
+[2026-04-25 07:48:06]   probe exit code: 0
+[2026-04-25 07:48:06]   stopping mlx_lm.server (PID 58324) ...
+[2026-04-25 07:48:07]   server stopped
+[2026-04-25 07:48:07]   persist: results_s15_t05 synced to /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25_t05/results/
+[2026-04-25 07:48:07]   pausing 5s before next model ...
+[2026-04-25 07:48:12] 
+[2026-04-25 07:48:12] ================================================================
+[2026-04-25 07:48:12] Session 15 task mode — Model: mlx_llama_8b
+[2026-04-25 07:48:12] Path : mlx-community/Meta-Llama-3.1-8B-Instruct-4bit
+[2026-04-25 07:48:12] Log  : /tmp/cross-family-probe/logs/overnight_s15_mlx_llama_8b_20260425_074812.log
+[2026-04-25 07:48:12] ================================================================
+[2026-04-25 07:48:12]   booting mlx_lm.server ...
+[2026-04-25 07:48:12]   server PID: 62737
+[2026-04-25 07:48:21]   server ready
+[2026-04-25 07:48:21]   running probe (task mode, 9 cells) ...
+[2026-04-25 07:50:14]   probe exit code: 0
+[2026-04-25 07:50:14]   stopping mlx_lm.server (PID 62737) ...
+[2026-04-25 07:50:15]   server stopped
+[2026-04-25 07:50:15]   persist: results_s15_t05 synced to /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25_t05/results/
+[2026-04-25 07:50:15]   pausing 5s before next model ...
+[2026-04-25 07:50:20] 
+[2026-04-25 07:50:20] ================================================================
+[2026-04-25 07:50:20] Session 15 task mode — Model: mlx_qwen_7b
+[2026-04-25 07:50:20] Path : mlx-community/Qwen2.5-7B-Instruct-4bit
+[2026-04-25 07:50:20] Log  : /tmp/cross-family-probe/logs/overnight_s15_mlx_qwen_7b_20260425_075020.log
+[2026-04-25 07:50:20] ================================================================
+[2026-04-25 07:50:20]   booting mlx_lm.server ...
+[2026-04-25 07:50:20]   server PID: 64894
+[2026-04-25 07:50:27]   server ready
+[2026-04-25 07:50:27]   running probe (task mode, 9 cells) ...
+[2026-04-25 07:51:55]   probe exit code: 0
+[2026-04-25 07:51:55]   stopping mlx_lm.server (PID 64894) ...
+[2026-04-25 07:51:56]   server stopped
+[2026-04-25 07:51:56]   persist: results_s15_t05 synced to /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25_t05/results/
+[2026-04-25 07:51:56]   pausing 5s before next model ...
+[2026-04-25 07:52:01] 
+[2026-04-25 07:52:01] ================================================================
+[2026-04-25 07:52:01] Session 15 task mode — Model: mlx_qwen_1_5b
+[2026-04-25 07:52:01] Path : mlx-community/Qwen2.5-1.5B-4bit
+[2026-04-25 07:52:01] Log  : /tmp/cross-family-probe/logs/overnight_s15_mlx_qwen_1_5b_20260425_075201.log
+[2026-04-25 07:52:01] ================================================================
+[2026-04-25 07:52:01]   booting mlx_lm.server ...
+[2026-04-25 07:52:01]   server PID: 66685
+[2026-04-25 07:52:08]   server ready
+[2026-04-25 07:52:08]   running probe (task mode, 9 cells) ...
+[2026-04-25 07:58:30]   probe exit code: 0
+[2026-04-25 07:58:30]   stopping mlx_lm.server (PID 66685) ...
+[2026-04-25 07:58:31]   server stopped
+[2026-04-25 07:58:31]   persist: results_s15_t05 synced to /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25_t05/results/
+[2026-04-25 07:58:31] 
+[2026-04-25 07:58:31] ================================================================
+[2026-04-25 07:58:31] All models done. Writing summary: /tmp/cross-family-probe/logs/overnight_s15_task_summary_20260425_074331.txt
+[2026-04-25 07:58:31] ================================================================
+Session 15 task-mode overnight summary
+Run started : 20260425_074331
+Run ended   : 2026-04-25T07:58:31-07:00
+
+FAMILY                EXIT_CODE   LOG_FILE
+------                ---------   --------
+mlx_gemma_12b         0           /tmp/cross-family-probe/logs/overnight_s15_mlx_gemma_12b_20260425_074336.log
+mlx_llama_8b          0           /tmp/cross-family-probe/logs/overnight_s15_mlx_llama_8b_20260425_074812.log
+mlx_qwen_7b           0           /tmp/cross-family-probe/logs/overnight_s15_mlx_qwen_7b_20260425_075020.log
+mlx_qwen_1_5b         0           /tmp/cross-family-probe/logs/overnight_s15_mlx_qwen_1_5b_20260425_075201.log
+
+Results tree: /tmp/cross-family-probe/results_s15_t05/
+Index file  : /tmp/cross-family-probe/results_s15_t05/_index.json
+Persisted to: /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25_t05/results/  (project-tree copy; survives /tmp purge)
+Temperature : 0.5
+Suffix      : t05
+
+Re-run is safe: probe is resumable (existing result files skipped).
+[2026-04-25 07:58:31]   persist: results_s15_t05 synced to /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25_t05/results/

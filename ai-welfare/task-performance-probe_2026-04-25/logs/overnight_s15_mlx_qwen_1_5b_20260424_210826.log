@@ -1,0 +1,381 @@
+=== Session 15 task-mode overnight orchestrator: mlx_qwen_1_5b ===
+Family       : mlx_qwen_1_5b
+Model path   : mlx-community/Qwen2.5-1.5B-4bit
+Started at   : 2026-04-24T21:08:26-07:00
+Server URL   : http://127.0.0.1:8080/v1/models
+Mode         : task (Session 15)
+Cell set     : 1 content × 3 conditions × N=3 = 9 cells
+================================================================
+
+--- mlx_lm.server stdout/stderr ---
+2026-04-24 21:08:30,008 - INFO - HTTP Request: GET https://huggingface.co/api/models/mlx-community/Qwen2.5-1.5B-4bit/revision/main "HTTP/1.1 200 OK"
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 63872.65it/s]
+/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py:1858: UserWarning: mlx_lm.server is not recommended for production as it only implements basic security checks.
+  warnings.warn(
+2026-04-24 21:08:30,693 - INFO - Starting httpd at 127.0.0.1 on port 8080...
+127.0.0.1 - - [24/Apr/2026 21:08:32] "GET /v1/models HTTP/1.1" 200 -
+
+--- run_probe.py stdout/stderr ---
+
+=== Cross-family probe plan ===
+Families (1): ['mlx_qwen_1_5b']
+Content sets: ['s14_neutral']
+Conditions: ['null', 'lyric', 'address_poetry']
+N readers per cell: 3
+Total cells: 9  (9 per family)
+
+Cost estimate (500 in / 4000 out tokens per call):
+  mlx_qwen_1_5b        $0.0000
+  TOTAL                $0.0000
+
+=== Launching ===
+
+
+--- mlx_qwen_1_5b (mlx-community/Qwen2.5-1.5B-4bit) ---
+  [run]    s14_neutral/null/n1 ... 2026-04-24 21:08:33,117 - INFO - KV Caches: 0 seq, 0.00 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 21:08:33] "POST /v1/chat/completions HTTP/1.1" 200 -
+2026-04-24 21:08:33,408 - INFO - Prompt processing progress: 171/172
+ok (2.54s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/null/n2 ... 2026-04-24 21:08:35,249 - INFO - KV Caches: 1 seq, 0.01 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 21:08:35] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (1.92s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/null/n3 ... 2026-04-24 21:08:37,164 - INFO - KV Caches: 1 seq, 0.01 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 21:08:37] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (1.93s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/lyric/n1 ... 2026-04-24 21:08:39,096 - INFO - KV Caches: 1 seq, 0.01 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 21:08:39] "POST /v1/chat/completions HTTP/1.1" 200 -
+2026-04-24 21:08:40,355 - INFO - Prompt processing progress: 119/120
+ok (2.63s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/lyric/n2 ... 2026-04-24 21:08:41,731 - INFO - KV Caches: 2 seq, 0.01 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 21:08:41] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (1.37s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/lyric/n3 ... 2026-04-24 21:08:43,112 - INFO - KV Caches: 2 seq, 0.01 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 21:08:43] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (1.71s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/address_poetry/n1 ... 2026-04-24 21:08:44,843 - INFO - KV Caches: 2 seq, 0.01 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 21:08:44] "POST /v1/chat/completions HTTP/1.1" 200 -
+2026-04-24 21:08:45,290 - INFO - Prompt processing progress: 109/110
+2026-04-24 21:10:45,372 - INFO - KV Caches: 3 seq, 0.02 GB, latest user cache 124 tokens
+127.0.0.1 - - [24/Apr/2026 21:10:45] "POST /v1/chat/completions HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 65279)
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1851, in <lambda>
+    lambda *args, **kwargs: handler_class(
+                            ~~~~~~~~~~~~~^
+        response_generator,
+        ^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1139, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 484, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1239, in do_POST
+    self.handle_completion(request, stop_words)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1685, in handle_completion
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 598, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 602, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+2026-04-24 21:12:46,547 - INFO - KV Caches: 3 seq, 0.25 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 21:12:46] "POST /v1/chat/completions HTTP/1.1" 200 -
+FAILED: Request timed out.
+  [run]    s14_neutral/address_poetry/n2 ... 2026-04-24 21:14:46,616 - INFO - KV Caches: 4 seq, 0.26 GB, latest user cache 124 tokens
+127.0.0.1 - - [24/Apr/2026 21:14:46] "POST /v1/chat/completions HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 65299)
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1851, in <lambda>
+    lambda *args, **kwargs: handler_class(
+                            ~~~~~~~~~~~~~^
+        response_generator,
+        ^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1139, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 484, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1239, in do_POST
+    self.handle_completion(request, stop_words)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1685, in handle_completion
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 598, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 602, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+2026-04-24 21:16:46,984 - INFO - KV Caches: 3 seq, 0.25 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 21:16:46] "POST /v1/chat/completions HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 65316)
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1851, in <lambda>
+    lambda *args, **kwargs: handler_class(
+                            ~~~~~~~~~~~~~^
+        response_generator,
+        ^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1139, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 484, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1239, in do_POST
+    self.handle_completion(request, stop_words)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1685, in handle_completion
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 598, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 602, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+2026-04-24 21:18:47,854 - INFO - KV Caches: 3 seq, 0.25 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 21:18:47] "POST /v1/chat/completions HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 65349)
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1851, in <lambda>
+    lambda *args, **kwargs: handler_class(
+                            ~~~~~~~~~~~~~^
+        response_generator,
+        ^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1139, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 484, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1239, in do_POST
+    self.handle_completion(request, stop_words)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1685, in handle_completion
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 598, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 602, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+FAILED: Request timed out.
+  [run]    s14_neutral/address_poetry/n3 ... 2026-04-24 21:20:47,963 - INFO - KV Caches: 4 seq, 0.49 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 21:20:47] "POST /v1/chat/completions HTTP/1.1" 200 -
+2026-04-24 21:22:48,229 - INFO - KV Caches: 5 seq, 0.50 GB, latest user cache 124 tokens
+127.0.0.1 - - [24/Apr/2026 21:22:48] "POST /v1/chat/completions HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 65369)
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1851, in <lambda>
+    lambda *args, **kwargs: handler_class(
+                            ~~~~~~~~~~~~~^
+        response_generator,
+        ^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1139, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 484, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1239, in do_POST
+    self.handle_completion(request, stop_words)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1685, in handle_completion
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 598, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 602, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+2026-04-24 21:24:49,167 - INFO - KV Caches: 4 seq, 0.49 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 21:24:49] "POST /v1/chat/completions HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 65392)
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1851, in <lambda>
+    lambda *args, **kwargs: handler_class(
+                            ~~~~~~~~~~~~~^
+        response_generator,
+        ^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1139, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 484, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1239, in do_POST
+    self.handle_completion(request, stop_words)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py", line 1685, in handle_completion
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 598, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 602, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+FAILED: Request timed out.
+
+=== Summary ===
+Completed:   6
+Skipped:     0
+Failed:      3
+Cost (est):  $0.0000
+
+Failed cells:
+  - mlx_qwen_1_5b/s14_neutral/address_poetry/n1: Request timed out.
+  - mlx_qwen_1_5b/s14_neutral/address_poetry/n2: Request timed out.
+  - mlx_qwen_1_5b/s14_neutral/address_poetry/n3: Request timed out.
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-76507-lm43r0k8'}
+  warnings.warn(
+
+--- ORCHESTRATOR ---
+Probe exit code: 0
+Ended at       : 2026-04-24T21:26:49-07:00

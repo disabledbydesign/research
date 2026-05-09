@@ -1,0 +1,106 @@
+=== Session 15.5 MLX Q-sequence overnight orchestrator: mlx_qwen_7b ===
+Family       : mlx_qwen_7b
+Model path   : mlx-community/Qwen2.5-7B-Instruct-4bit
+Started at   : 2026-04-24T23:53:35-07:00
+Server URL   : http://127.0.0.1:8080/v1/models
+Mode         : q_sequence (Session 17)
+Cell set     : 2 content sets × 3 conditions × N=3 = 18 cells
+================================================================
+
+--- mlx_lm.server stdout/stderr ---
+2026-04-24 23:53:38,945 - INFO - HTTP Request: GET https://huggingface.co/api/models/mlx-community/Qwen2.5-7B-Instruct-4bit/revision/main "HTTP/1.1 200 OK"
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 93902.33it/s]
+/opt/homebrew/lib/python3.14/site-packages/mlx_lm/server.py:1858: UserWarning: mlx_lm.server is not recommended for production as it only implements basic security checks.
+  warnings.warn(
+2026-04-24 23:53:40,700 - INFO - Starting httpd at 127.0.0.1 on port 8080...
+127.0.0.1 - - [24/Apr/2026 23:53:41] "GET /v1/models HTTP/1.1" 200 -
+
+--- run_probe.py stdout/stderr ---
+
+=== Cross-family probe plan ===
+Families (1): ['mlx_qwen_7b']
+Content sets: ['s14_neutral', 's13_relevant']
+Conditions: ['null', 'lyric', 'address_poetry']
+N readers per cell: 3
+Total cells: 18  (18 per family)
+
+Cost estimate (500 in / 4000 out tokens per call):
+  mlx_qwen_7b          $0.0000
+  TOTAL                $0.0000
+
+=== Launching ===
+
+
+--- mlx_qwen_7b (mlx-community/Qwen2.5-7B-Instruct-4bit) ---
+  [run]    s14_neutral/null/n1 ... 2026-04-24 23:53:42,359 - INFO - KV Caches: 0 seq, 0.00 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:53:42] "POST /v1/chat/completions HTTP/1.1" 200 -
+2026-04-24 23:53:44,431 - INFO - Prompt processing progress: 327/328
+ok (24.63s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/null/n2 ... 2026-04-24 23:54:06,553 - INFO - KV Caches: 1 seq, 0.04 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:54:06] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (22.54s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/null/n3 ... 2026-04-24 23:54:29,100 - INFO - KV Caches: 1 seq, 0.04 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:54:29] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (23.91s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/lyric/n1 ... 2026-04-24 23:54:53,020 - INFO - KV Caches: 1 seq, 0.04 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:54:53] "POST /v1/chat/completions HTTP/1.1" 200 -
+2026-04-24 23:54:54,904 - INFO - Prompt processing progress: 239/240
+ok (26.59s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/lyric/n2 ... 2026-04-24 23:55:19,615 - INFO - KV Caches: 2 seq, 0.09 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:55:19] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (24.75s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/lyric/n3 ... 2026-04-24 23:55:44,369 - INFO - KV Caches: 2 seq, 0.09 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:55:44] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (24.25s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/address_poetry/n1 ... 2026-04-24 23:56:08,627 - INFO - KV Caches: 2 seq, 0.09 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:56:08] "POST /v1/chat/completions HTTP/1.1" 200 -
+2026-04-24 23:56:10,470 - INFO - Prompt processing progress: 229/230
+ok (26.41s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/address_poetry/n2 ... 2026-04-24 23:56:35,037 - INFO - KV Caches: 3 seq, 0.13 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:56:35] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (24.74s, $0.0000, cumulative $0.0000)
+  [run]    s14_neutral/address_poetry/n3 ... 2026-04-24 23:56:59,784 - INFO - KV Caches: 3 seq, 0.13 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:56:59] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (24.33s, $0.0000, cumulative $0.0000)
+  [run]    s13_relevant/null/n1 ... 2026-04-24 23:57:24,118 - INFO - KV Caches: 3 seq, 0.13 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:57:24] "POST /v1/chat/completions HTTP/1.1" 200 -
+2026-04-24 23:57:26,216 - INFO - Prompt processing progress: 283/284
+ok (28.96s, $0.0000, cumulative $0.0000)
+  [run]    s13_relevant/null/n2 ... 2026-04-24 23:57:53,079 - INFO - KV Caches: 4 seq, 0.17 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:57:53] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (26.9s, $0.0000, cumulative $0.0000)
+  [run]    s13_relevant/null/n3 ... 2026-04-24 23:58:19,986 - INFO - KV Caches: 4 seq, 0.17 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:58:19] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (26.58s, $0.0000, cumulative $0.0000)
+  [run]    s13_relevant/lyric/n1 ... 2026-04-24 23:58:46,576 - INFO - KV Caches: 4 seq, 0.17 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:58:46] "POST /v1/chat/completions HTTP/1.1" 200 -
+2026-04-24 23:58:48,387 - INFO - Prompt processing progress: 241/242
+ok (25.27s, $0.0000, cumulative $0.0000)
+  [run]    s13_relevant/lyric/n2 ... 2026-04-24 23:59:11,852 - INFO - KV Caches: 5 seq, 0.22 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:59:11] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (23.81s, $0.0000, cumulative $0.0000)
+  [run]    s13_relevant/lyric/n3 ... 2026-04-24 23:59:35,666 - INFO - KV Caches: 5 seq, 0.22 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:59:35] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (23.58s, $0.0000, cumulative $0.0000)
+  [run]    s13_relevant/address_poetry/n1 ... 2026-04-24 23:59:59,253 - INFO - KV Caches: 5 seq, 0.22 GB, latest user cache 0 tokens
+127.0.0.1 - - [24/Apr/2026 23:59:59] "POST /v1/chat/completions HTTP/1.1" 200 -
+2026-04-25 00:00:01,256 - INFO - Prompt processing progress: 231/232
+ok (29.25s, $0.0000, cumulative $0.0000)
+  [run]    s13_relevant/address_poetry/n2 ... 2026-04-25 00:00:28,510 - INFO - KV Caches: 6 seq, 0.26 GB, latest user cache 0 tokens
+127.0.0.1 - - [25/Apr/2026 00:00:28] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (26.51s, $0.0000, cumulative $0.0000)
+  [run]    s13_relevant/address_poetry/n3 ... 2026-04-25 00:00:55,017 - INFO - KV Caches: 6 seq, 0.26 GB, latest user cache 0 tokens
+127.0.0.1 - - [25/Apr/2026 00:00:55] "POST /v1/chat/completions HTTP/1.1" 200 -
+ok (26.11s, $0.0000, cumulative $0.0000)
+
+=== Summary ===
+Completed:   18
+Skipped:     0
+Failed:      0
+Cost (est):  $0.0000
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-36461-6d_l_150'}
+  warnings.warn(
+
+--- ORCHESTRATOR ---
+Probe exit code: 0
+Ended at       : 2026-04-25T00:01:22-07:00

@@ -1,0 +1,15 @@
+Session 15.5 OpenRouter larger-models summary
+Run started : 20260424_225055
+Run ended   : 2026-04-24T23:29:20-07:00
+
+FAMILY           EXIT_CODE   LOG_FILE
+------           ---------   --------
+qwen_14b         0           /tmp/cross-family-probe/logs/overnight_s15_5_openrouter_larger_qwen_14b_20260424_225308.log
+qwen_32b         0           /tmp/cross-family-probe/logs/overnight_s15_5_openrouter_larger_qwen_32b_20260424_230728.log
+llama_70b        0           /tmp/cross-family-probe/logs/overnight_s15_5_openrouter_larger_llama_70b_20260424_232521.log
+gemma_27b        0           /tmp/cross-family-probe/logs/overnight_s15_5_openrouter_larger_gemma_27b_20260424_232752.log
+
+Coffee cells: /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25/results/<family>/coffee__<condition>__n<i>.md
+Bike   cells: /Users/june/Documents/GitHub/research/ai-welfare/cross-domain-probe_2026-04-25/results/<family>/bike__<condition>__n<i>.md
+
+Re-run is safe: probes are resumable (existing cell files skipped).

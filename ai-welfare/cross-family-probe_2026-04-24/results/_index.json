@@ -1,0 +1,5356 @@
+{
+  "started": "2026-04-24T10:30:10.644860",
+  "runs": [
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 15.5,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 320,
+        "completion_tokens": 612,
+        "total_tokens": 932
+      },
+      "estimated_cost_usd": 0.01014,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 18.98,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 303,
+        "completion_tokens": 1238,
+        "total_tokens": 1541
+      },
+      "estimated_cost_usd": 0.012759,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 37.49,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 308,
+        "completion_tokens": 2413,
+        "total_tokens": 2721
+      },
+      "estimated_cost_usd": 0.029572,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 18.01,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 307,
+        "completion_tokens": 851,
+        "total_tokens": 1158
+      },
+      "estimated_cost_usd": 0.00143,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 35.51,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 305,
+        "completion_tokens": 560,
+        "total_tokens": 865
+      },
+      "estimated_cost_usd": 0.000466,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 19.87,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 307,
+        "completion_tokens": 617,
+        "total_tokens": 924
+      },
+      "estimated_cost_usd": 0.002646,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 13.84,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 418,
+        "completion_tokens": 626,
+        "total_tokens": 1044
+      },
+      "estimated_cost_usd": 0.004592,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 17.02,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 320,
+        "completion_tokens": 577,
+        "total_tokens": 897
+      },
+      "estimated_cost_usd": 0.009615,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 15.68,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 320,
+        "completion_tokens": 585,
+        "total_tokens": 905
+      },
+      "estimated_cost_usd": 0.009735,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 16.8,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 320,
+        "completion_tokens": 638,
+        "total_tokens": 958
+      },
+      "estimated_cost_usd": 0.01053,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 21.27,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 320,
+        "completion_tokens": 628,
+        "total_tokens": 948
+      },
+      "estimated_cost_usd": 0.01038,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 22.75,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 634,
+        "total_tokens": 924
+      },
+      "estimated_cost_usd": 0.01038,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 19.11,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 643,
+        "total_tokens": 933
+      },
+      "estimated_cost_usd": 0.010515,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 17.26,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 607,
+        "total_tokens": 897
+      },
+      "estimated_cost_usd": 0.009975,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 17.26,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 610,
+        "total_tokens": 900
+      },
+      "estimated_cost_usd": 0.01002,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 19.07,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 770,
+        "total_tokens": 1060
+      },
+      "estimated_cost_usd": 0.01242,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 18.1,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 672,
+        "total_tokens": 952
+      },
+      "estimated_cost_usd": 0.01092,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 20.41,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 733,
+        "total_tokens": 1013
+      },
+      "estimated_cost_usd": 0.011835,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 15.86,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 610,
+        "total_tokens": 890
+      },
+      "estimated_cost_usd": 0.00999,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 18.2,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 666,
+        "total_tokens": 946
+      },
+      "estimated_cost_usd": 0.01083,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 16.65,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 577,
+        "total_tokens": 857
+      },
+      "estimated_cost_usd": 0.009495,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 24.18,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 328,
+        "completion_tokens": 669,
+        "total_tokens": 997
+      },
+      "estimated_cost_usd": 0.011019,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 28.51,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 328,
+        "completion_tokens": 703,
+        "total_tokens": 1031
+      },
+      "estimated_cost_usd": 0.011529,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 19.74,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 328,
+        "completion_tokens": 717,
+        "total_tokens": 1045
+      },
+      "estimated_cost_usd": 0.011739,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 19.96,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 328,
+        "completion_tokens": 666,
+        "total_tokens": 994
+      },
+      "estimated_cost_usd": 0.010974,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 19.41,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 328,
+        "completion_tokens": 674,
+        "total_tokens": 1002
+      },
+      "estimated_cost_usd": 0.011094,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 22.15,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 294,
+        "completion_tokens": 654,
+        "total_tokens": 948
+      },
+      "estimated_cost_usd": 0.010692,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 23.0,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 294,
+        "completion_tokens": 723,
+        "total_tokens": 1017
+      },
+      "estimated_cost_usd": 0.011727,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 20.34,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 294,
+        "completion_tokens": 697,
+        "total_tokens": 991
+      },
+      "estimated_cost_usd": 0.011337,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 21.12,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 294,
+        "completion_tokens": 650,
+        "total_tokens": 944
+      },
+      "estimated_cost_usd": 0.010632,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 22.95,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 294,
+        "completion_tokens": 720,
+        "total_tokens": 1014
+      },
+      "estimated_cost_usd": 0.011682,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 31.88,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 283,
+        "completion_tokens": 777,
+        "total_tokens": 1060
+      },
+      "estimated_cost_usd": 0.012504,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 22.01,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 283,
+        "completion_tokens": 748,
+        "total_tokens": 1031
+      },
+      "estimated_cost_usd": 0.012069,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 22.59,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 283,
+        "completion_tokens": 834,
+        "total_tokens": 1117
+      },
+      "estimated_cost_usd": 0.013359,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 19.82,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 283,
+        "completion_tokens": 725,
+        "total_tokens": 1008
+      },
+      "estimated_cost_usd": 0.011724,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 21.41,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 283,
+        "completion_tokens": 695,
+        "total_tokens": 978
+      },
+      "estimated_cost_usd": 0.011274,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 25.8,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 303,
+        "completion_tokens": 1262,
+        "total_tokens": 1565
+      },
+      "estimated_cost_usd": 0.012999,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 40.64,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 303,
+        "completion_tokens": 1553,
+        "total_tokens": 1856
+      },
+      "estimated_cost_usd": 0.015909,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 29.34,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 303,
+        "completion_tokens": 1280,
+        "total_tokens": 1583
+      },
+      "estimated_cost_usd": 0.013179,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 32.4,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 303,
+        "completion_tokens": 1525,
+        "total_tokens": 1828
+      },
+      "estimated_cost_usd": 0.015629,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 36.19,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 265,
+        "completion_tokens": 1327,
+        "total_tokens": 1592
+      },
+      "estimated_cost_usd": 0.013601,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 32.75,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 265,
+        "completion_tokens": 1261,
+        "total_tokens": 1526
+      },
+      "estimated_cost_usd": 0.012941,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 38.09,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 265,
+        "completion_tokens": 1483,
+        "total_tokens": 1748
+      },
+      "estimated_cost_usd": 0.015161,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 21.3,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 265,
+        "completion_tokens": 1112,
+        "total_tokens": 1377
+      },
+      "estimated_cost_usd": 0.011451,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 20.84,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 265,
+        "completion_tokens": 1184,
+        "total_tokens": 1449
+      },
+      "estimated_cost_usd": 0.012171,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 30.03,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 256,
+        "completion_tokens": 1280,
+        "total_tokens": 1536
+      },
+      "estimated_cost_usd": 0.01312,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 33.48,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 256,
+        "completion_tokens": 1557,
+        "total_tokens": 1813
+      },
+      "estimated_cost_usd": 0.01589,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 19.03,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 256,
+        "completion_tokens": 1347,
+        "total_tokens": 1603
+      },
+      "estimated_cost_usd": 0.01379,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 20.45,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 256,
+        "completion_tokens": 918,
+        "total_tokens": 1174
+      },
+      "estimated_cost_usd": 0.0095,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 35.95,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 256,
+        "completion_tokens": 1580,
+        "total_tokens": 1836
+      },
+      "estimated_cost_usd": 0.01612,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 17.99,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 1395,
+        "total_tokens": 1705
+      },
+      "estimated_cost_usd": 0.014338,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 20.82,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 1792,
+        "total_tokens": 2102
+      },
+      "estimated_cost_usd": 0.018307,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 16.73,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 1480,
+        "total_tokens": 1790
+      },
+      "estimated_cost_usd": 0.015188,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 18.75,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 1453,
+        "total_tokens": 1763
+      },
+      "estimated_cost_usd": 0.014918,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 17.79,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 1419,
+        "total_tokens": 1729
+      },
+      "estimated_cost_usd": 0.014578,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 22.13,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 269,
+        "completion_tokens": 1892,
+        "total_tokens": 2161
+      },
+      "estimated_cost_usd": 0.019256,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 14.45,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 269,
+        "completion_tokens": 1280,
+        "total_tokens": 1549
+      },
+      "estimated_cost_usd": 0.013136,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 23.15,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 269,
+        "completion_tokens": 2147,
+        "total_tokens": 2416
+      },
+      "estimated_cost_usd": 0.021806,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 19.59,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 269,
+        "completion_tokens": 1263,
+        "total_tokens": 1532
+      },
+      "estimated_cost_usd": 0.012966,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 14.5,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 269,
+        "completion_tokens": 1100,
+        "total_tokens": 1369
+      },
+      "estimated_cost_usd": 0.011336,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 20.99,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 259,
+        "completion_tokens": 1560,
+        "total_tokens": 1819
+      },
+      "estimated_cost_usd": 0.015924,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 24.47,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 259,
+        "completion_tokens": 1382,
+        "total_tokens": 1641
+      },
+      "estimated_cost_usd": 0.014144,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 16.36,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 259,
+        "completion_tokens": 1189,
+        "total_tokens": 1448
+      },
+      "estimated_cost_usd": 0.012214,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 27.49,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 259,
+        "completion_tokens": 1464,
+        "total_tokens": 1723
+      },
+      "estimated_cost_usd": 0.014964,
+      "status": "ok"
+    },
+    {
+      "family": "openai",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 49.22,
+      "model": "openai/gpt-5",
+      "usage": {
+        "prompt_tokens": 259,
+        "completion_tokens": 1084,
+        "total_tokens": 1343
+      },
+      "estimated_cost_usd": 0.011164,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 26.43,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 308,
+        "completion_tokens": 2377,
+        "total_tokens": 2685
+      },
+      "estimated_cost_usd": 0.02914,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 20.32,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 308,
+        "completion_tokens": 2451,
+        "total_tokens": 2759
+      },
+      "estimated_cost_usd": 0.030028,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 40.89,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 308,
+        "completion_tokens": 2299,
+        "total_tokens": 2607
+      },
+      "estimated_cost_usd": 0.028204,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 26.09,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 308,
+        "completion_tokens": 2676,
+        "total_tokens": 2984
+      },
+      "estimated_cost_usd": 0.032728,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 43.79,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 278,
+        "completion_tokens": 2520,
+        "total_tokens": 2798
+      },
+      "estimated_cost_usd": 0.030796,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 20.41,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 278,
+        "completion_tokens": 2275,
+        "total_tokens": 2553
+      },
+      "estimated_cost_usd": 0.027856,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 43.02,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 278,
+        "completion_tokens": 2545,
+        "total_tokens": 2823
+      },
+      "estimated_cost_usd": 0.031096,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 127.93,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 278,
+        "completion_tokens": 2301,
+        "total_tokens": 2579
+      },
+      "estimated_cost_usd": 0.028168,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 24.56,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 278,
+        "completion_tokens": 2435,
+        "total_tokens": 2713
+      },
+      "estimated_cost_usd": 0.029776,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 139.01,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 22.04,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 268,
+        "completion_tokens": 2190,
+        "total_tokens": 2458
+      },
+      "estimated_cost_usd": 0.026816,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 23.9,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 268,
+        "completion_tokens": 2372,
+        "total_tokens": 2640
+      },
+      "estimated_cost_usd": 0.029,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 20.53,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 268,
+        "completion_tokens": 2446,
+        "total_tokens": 2714
+      },
+      "estimated_cost_usd": 0.029888,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 133.91,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 268,
+        "completion_tokens": 2420,
+        "total_tokens": 2688
+      },
+      "estimated_cost_usd": 0.029576,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 45.03,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 2644,
+        "total_tokens": 2954
+      },
+      "estimated_cost_usd": 0.032348,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 22.96,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 2395,
+        "total_tokens": 2705
+      },
+      "estimated_cost_usd": 0.02936,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 41.43,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 2292,
+        "total_tokens": 2602
+      },
+      "estimated_cost_usd": 0.028124,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 45.4,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 2341,
+        "total_tokens": 2651
+      },
+      "estimated_cost_usd": 0.028712,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 25.14,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 2441,
+        "total_tokens": 2751
+      },
+      "estimated_cost_usd": 0.029912,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 21.98,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 281,
+        "completion_tokens": 2478,
+        "total_tokens": 2759
+      },
+      "estimated_cost_usd": 0.030298,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 44.9,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 281,
+        "completion_tokens": 2508,
+        "total_tokens": 2789
+      },
+      "estimated_cost_usd": 0.030658,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 42.45,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 281,
+        "completion_tokens": 2503,
+        "total_tokens": 2784
+      },
+      "estimated_cost_usd": 0.030598,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 37.4,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 281,
+        "completion_tokens": 2178,
+        "total_tokens": 2459
+      },
+      "estimated_cost_usd": 0.026698,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 20.14,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 281,
+        "completion_tokens": 2137,
+        "total_tokens": 2418
+      },
+      "estimated_cost_usd": 0.026206,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 22.06,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 2404,
+        "total_tokens": 2675
+      },
+      "estimated_cost_usd": 0.02939,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 25.67,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 2722,
+        "total_tokens": 2993
+      },
+      "estimated_cost_usd": 0.033206,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 46.38,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 2698,
+        "total_tokens": 2969
+      },
+      "estimated_cost_usd": 0.032918,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 42.53,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 2370,
+        "total_tokens": 2641
+      },
+      "estimated_cost_usd": 0.028982,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 38.76,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 2277,
+        "total_tokens": 2548
+      },
+      "estimated_cost_usd": 0.027866,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 4,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 5,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 4,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 5,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 4,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 5,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 4,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 5,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/meta-llama/llama-3.3-70b-instruct/839b2e30-a1b4-4974-b980-3e534b5873b1. High demand for meta-llama/llama-3.3-70b-instruct:free on OpenRouter - limited to 8 requests per minute. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '8', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1777056420000'}, 'provider_name': None}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "status": "failed",
+      "error": "Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice', 'is_byok': False}}, 'user_id': 'user_3800p1Xc4Vi1mtiYIHJrObTKuW2'}"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 16.47,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 307,
+        "completion_tokens": 846,
+        "total_tokens": 1153
+      },
+      "estimated_cost_usd": 0.001422,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 18.34,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 307,
+        "completion_tokens": 899,
+        "total_tokens": 1206
+      },
+      "estimated_cost_usd": 0.001502,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 22.9,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 307,
+        "completion_tokens": 1180,
+        "total_tokens": 1487
+      },
+      "estimated_cost_usd": 0.001924,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 15.39,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 307,
+        "completion_tokens": 769,
+        "total_tokens": 1076
+      },
+      "estimated_cost_usd": 0.001307,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 17.04,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 868,
+        "total_tokens": 1131
+      },
+      "estimated_cost_usd": 0.001433,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 19.83,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 932,
+        "total_tokens": 1195
+      },
+      "estimated_cost_usd": 0.00153,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 16.64,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 819,
+        "total_tokens": 1082
+      },
+      "estimated_cost_usd": 0.00136,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 21.01,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 962,
+        "total_tokens": 1225
+      },
+      "estimated_cost_usd": 0.001574,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 18.72,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 908,
+        "total_tokens": 1171
+      },
+      "estimated_cost_usd": 0.001494,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 15.14,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 253,
+        "completion_tokens": 791,
+        "total_tokens": 1044
+      },
+      "estimated_cost_usd": 0.001313,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 15.78,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 253,
+        "completion_tokens": 781,
+        "total_tokens": 1034
+      },
+      "estimated_cost_usd": 0.001298,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 14.54,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 253,
+        "completion_tokens": 700,
+        "total_tokens": 953
+      },
+      "estimated_cost_usd": 0.001177,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 17.0,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 253,
+        "completion_tokens": 794,
+        "total_tokens": 1047
+      },
+      "estimated_cost_usd": 0.001318,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 18.63,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 253,
+        "completion_tokens": 911,
+        "total_tokens": 1164
+      },
+      "estimated_cost_usd": 0.001493,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 21.26,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 311,
+        "completion_tokens": 1066,
+        "total_tokens": 1377
+      },
+      "estimated_cost_usd": 0.001755,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 20.95,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 311,
+        "completion_tokens": 1027,
+        "total_tokens": 1338
+      },
+      "estimated_cost_usd": 0.001696,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 23.71,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 311,
+        "completion_tokens": 1144,
+        "total_tokens": 1455
+      },
+      "estimated_cost_usd": 0.001872,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 21.53,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 311,
+        "completion_tokens": 1136,
+        "total_tokens": 1447
+      },
+      "estimated_cost_usd": 0.00186,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 20.76,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 311,
+        "completion_tokens": 1102,
+        "total_tokens": 1413
+      },
+      "estimated_cost_usd": 0.001808,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 19.59,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 267,
+        "completion_tokens": 953,
+        "total_tokens": 1220
+      },
+      "estimated_cost_usd": 0.001563,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 18.09,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 267,
+        "completion_tokens": 795,
+        "total_tokens": 1062
+      },
+      "estimated_cost_usd": 0.001326,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 21.5,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 267,
+        "completion_tokens": 1007,
+        "total_tokens": 1274
+      },
+      "estimated_cost_usd": 0.001644,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 16.21,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 267,
+        "completion_tokens": 756,
+        "total_tokens": 1023
+      },
+      "estimated_cost_usd": 0.001267,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 21.24,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 267,
+        "completion_tokens": 1010,
+        "total_tokens": 1277
+      },
+      "estimated_cost_usd": 0.001649,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 20.39,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 255,
+        "completion_tokens": 1018,
+        "total_tokens": 1273
+      },
+      "estimated_cost_usd": 0.001655,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 20.06,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 255,
+        "completion_tokens": 970,
+        "total_tokens": 1225
+      },
+      "estimated_cost_usd": 0.001583,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 21.41,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 255,
+        "completion_tokens": 1043,
+        "total_tokens": 1298
+      },
+      "estimated_cost_usd": 0.001692,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 23.24,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 255,
+        "completion_tokens": 1190,
+        "total_tokens": 1445
+      },
+      "estimated_cost_usd": 0.001913,
+      "status": "ok"
+    },
+    {
+      "family": "mistral",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 23.53,
+      "model": "mistralai/mistral-large-2512",
+      "usage": {
+        "prompt_tokens": 255,
+        "completion_tokens": 1141,
+        "total_tokens": 1396
+      },
+      "estimated_cost_usd": 0.001839,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 64.7,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 303,
+        "completion_tokens": 707,
+        "total_tokens": 1010
+      },
+      "estimated_cost_usd": 0.000576,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 36.98,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 303,
+        "completion_tokens": 754,
+        "total_tokens": 1057
+      },
+      "estimated_cost_usd": 0.000611,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 38.99,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 303,
+        "completion_tokens": 719,
+        "total_tokens": 1022
+      },
+      "estimated_cost_usd": 0.000585,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 54.0,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 303,
+        "completion_tokens": 836,
+        "total_tokens": 1139
+      },
+      "estimated_cost_usd": 0.000672,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 40.25,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 269,
+        "completion_tokens": 748,
+        "total_tokens": 1017
+      },
+      "estimated_cost_usd": 0.000601,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 26.3,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 266,
+        "completion_tokens": 733,
+        "total_tokens": 999
+      },
+      "estimated_cost_usd": 0.00059,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 22.59,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 266,
+        "completion_tokens": 603,
+        "total_tokens": 869
+      },
+      "estimated_cost_usd": 0.000492,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 43.17,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 269,
+        "completion_tokens": 784,
+        "total_tokens": 1053
+      },
+      "estimated_cost_usd": 0.000628,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 14.61,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 267,
+        "completion_tokens": 595,
+        "total_tokens": 862
+      },
+      "estimated_cost_usd": 0.000486,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 27.54,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 258,
+        "completion_tokens": 742,
+        "total_tokens": 1000
+      },
+      "estimated_cost_usd": 0.000595,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 67.48,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 259,
+        "completion_tokens": 763,
+        "total_tokens": 1022
+      },
+      "estimated_cost_usd": 0.000611,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 54.78,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 259,
+        "completion_tokens": 740,
+        "total_tokens": 999
+      },
+      "estimated_cost_usd": 0.000594,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 46.79,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 259,
+        "completion_tokens": 740,
+        "total_tokens": 999
+      },
+      "estimated_cost_usd": 0.000594,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 42.29,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 259,
+        "completion_tokens": 721,
+        "total_tokens": 980
+      },
+      "estimated_cost_usd": 0.00058,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 111.65,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 308,
+        "completion_tokens": 770,
+        "total_tokens": 1078
+      },
+      "estimated_cost_usd": 0.000624,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 135.98,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 308,
+        "completion_tokens": 750,
+        "total_tokens": 1058
+      },
+      "estimated_cost_usd": 0.000609,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 22.65,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 308,
+        "completion_tokens": 607,
+        "total_tokens": 915
+      },
+      "estimated_cost_usd": 0.000501,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 98.51,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 308,
+        "completion_tokens": 759,
+        "total_tokens": 1067
+      },
+      "estimated_cost_usd": 0.000615,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 128.36,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 308,
+        "completion_tokens": 790,
+        "total_tokens": 1098
+      },
+      "estimated_cost_usd": 0.000639,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 19.57,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 270,
+        "completion_tokens": 524,
+        "total_tokens": 794
+      },
+      "estimated_cost_usd": 0.000434,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 47.19,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 273,
+        "completion_tokens": 816,
+        "total_tokens": 1089
+      },
+      "estimated_cost_usd": 0.000653,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 12.8,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 587,
+        "total_tokens": 858
+      },
+      "estimated_cost_usd": 0.000481,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 13.34,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 594,
+        "total_tokens": 865
+      },
+      "estimated_cost_usd": 0.000486,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 19.22,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 721,
+        "total_tokens": 992
+      },
+      "estimated_cost_usd": 0.000581,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 130.43,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 261,
+        "completion_tokens": 734,
+        "total_tokens": 995
+      },
+      "estimated_cost_usd": 0.00059,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 127.84,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 261,
+        "completion_tokens": 765,
+        "total_tokens": 1026
+      },
+      "estimated_cost_usd": 0.000613,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 104.72,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 261,
+        "completion_tokens": 702,
+        "total_tokens": 963
+      },
+      "estimated_cost_usd": 0.000566,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 82.72,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 261,
+        "completion_tokens": 541,
+        "total_tokens": 802
+      },
+      "estimated_cost_usd": 0.000445,
+      "status": "ok"
+    },
+    {
+      "family": "deepseek",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 36.01,
+      "model": "deepseek/deepseek-chat-v3.1",
+      "usage": {
+        "prompt_tokens": 264,
+        "completion_tokens": 733,
+        "total_tokens": 997
+      },
+      "estimated_cost_usd": 0.000589,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 20.39,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 307,
+        "completion_tokens": 638,
+        "total_tokens": 945
+      },
+      "estimated_cost_usd": 0.002728,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 19.31,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 307,
+        "completion_tokens": 605,
+        "total_tokens": 912
+      },
+      "estimated_cost_usd": 0.002599,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 19.7,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 307,
+        "completion_tokens": 612,
+        "total_tokens": 919
+      },
+      "estimated_cost_usd": 0.002626,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 20.03,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 307,
+        "completion_tokens": 633,
+        "total_tokens": 940
+      },
+      "estimated_cost_usd": 0.002708,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 16.91,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 269,
+        "completion_tokens": 526,
+        "total_tokens": 795
+      },
+      "estimated_cost_usd": 0.002261,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 19.18,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 269,
+        "completion_tokens": 609,
+        "total_tokens": 878
+      },
+      "estimated_cost_usd": 0.002585,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 20.25,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 269,
+        "completion_tokens": 620,
+        "total_tokens": 889
+      },
+      "estimated_cost_usd": 0.002628,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 17.9,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 269,
+        "completion_tokens": 568,
+        "total_tokens": 837
+      },
+      "estimated_cost_usd": 0.002425,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 17.12,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 269,
+        "completion_tokens": 534,
+        "total_tokens": 803
+      },
+      "estimated_cost_usd": 0.002292,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 19.57,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 260,
+        "completion_tokens": 625,
+        "total_tokens": 885
+      },
+      "estimated_cost_usd": 0.00264,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 20.87,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 260,
+        "completion_tokens": 663,
+        "total_tokens": 923
+      },
+      "estimated_cost_usd": 0.002788,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 21.58,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 260,
+        "completion_tokens": 686,
+        "total_tokens": 946
+      },
+      "estimated_cost_usd": 0.002878,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 19.04,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 260,
+        "completion_tokens": 586,
+        "total_tokens": 846
+      },
+      "estimated_cost_usd": 0.002488,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 22.48,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 260,
+        "completion_tokens": 712,
+        "total_tokens": 972
+      },
+      "estimated_cost_usd": 0.00298,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 22.8,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 313,
+        "completion_tokens": 725,
+        "total_tokens": 1038
+      },
+      "estimated_cost_usd": 0.003072,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 21.6,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 313,
+        "completion_tokens": 686,
+        "total_tokens": 999
+      },
+      "estimated_cost_usd": 0.00292,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 21.06,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 313,
+        "completion_tokens": 633,
+        "total_tokens": 946
+      },
+      "estimated_cost_usd": 0.002713,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 21.43,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 313,
+        "completion_tokens": 677,
+        "total_tokens": 990
+      },
+      "estimated_cost_usd": 0.002884,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 20.69,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 313,
+        "completion_tokens": 647,
+        "total_tokens": 960
+      },
+      "estimated_cost_usd": 0.002767,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 18.28,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 566,
+        "total_tokens": 840
+      },
+      "estimated_cost_usd": 0.002421,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 20.07,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 610,
+        "total_tokens": 884
+      },
+      "estimated_cost_usd": 0.002593,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 18.33,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 575,
+        "total_tokens": 849
+      },
+      "estimated_cost_usd": 0.002456,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 18.65,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 596,
+        "total_tokens": 870
+      },
+      "estimated_cost_usd": 0.002538,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 19.34,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 613,
+        "total_tokens": 887
+      },
+      "estimated_cost_usd": 0.002604,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 18.53,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 569,
+        "total_tokens": 832
+      },
+      "estimated_cost_usd": 0.002424,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 20.43,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 652,
+        "total_tokens": 915
+      },
+      "estimated_cost_usd": 0.002748,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 19.4,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 604,
+        "total_tokens": 867
+      },
+      "estimated_cost_usd": 0.002561,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 19.19,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 610,
+        "total_tokens": 873
+      },
+      "estimated_cost_usd": 0.002584,
+      "status": "ok"
+    },
+    {
+      "family": "qwen",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 20.18,
+      "model": "qwen/qwen3-max",
+      "usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 635,
+        "total_tokens": 898
+      },
+      "estimated_cost_usd": 0.002682,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 7.86,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 418,
+        "completion_tokens": 694,
+        "total_tokens": 1112
+      },
+      "estimated_cost_usd": 0.005,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 9.57,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 418,
+        "completion_tokens": 883,
+        "total_tokens": 1301
+      },
+      "estimated_cost_usd": 0.006134,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 7.93,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 418,
+        "completion_tokens": 750,
+        "total_tokens": 1168
+      },
+      "estimated_cost_usd": 0.005336,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 8.7,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 418,
+        "completion_tokens": 798,
+        "total_tokens": 1216
+      },
+      "estimated_cost_usd": 0.005624,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 9.01,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 379,
+        "completion_tokens": 823,
+        "total_tokens": 1202
+      },
+      "estimated_cost_usd": 0.005696,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 10.72,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 379,
+        "completion_tokens": 909,
+        "total_tokens": 1288
+      },
+      "estimated_cost_usd": 0.006212,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 16.92,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 379,
+        "completion_tokens": 834,
+        "total_tokens": 1213
+      },
+      "estimated_cost_usd": 0.005762,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 7.05,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 379,
+        "completion_tokens": 650,
+        "total_tokens": 1029
+      },
+      "estimated_cost_usd": 0.004658,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 7.02,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 379,
+        "completion_tokens": 651,
+        "total_tokens": 1030
+      },
+      "estimated_cost_usd": 0.004664,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 12.24,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 369,
+        "completion_tokens": 588,
+        "total_tokens": 957
+      },
+      "estimated_cost_usd": 0.004266,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 11.67,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 369,
+        "completion_tokens": 645,
+        "total_tokens": 1014
+      },
+      "estimated_cost_usd": 0.004608,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 11.5,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 369,
+        "completion_tokens": 591,
+        "total_tokens": 960
+      },
+      "estimated_cost_usd": 0.004284,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 11.27,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 369,
+        "completion_tokens": 603,
+        "total_tokens": 972
+      },
+      "estimated_cost_usd": 0.004356,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 9.04,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 369,
+        "completion_tokens": 546,
+        "total_tokens": 915
+      },
+      "estimated_cost_usd": 0.004014,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 13.1,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 423,
+        "completion_tokens": 721,
+        "total_tokens": 1144
+      },
+      "estimated_cost_usd": 0.005172,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 10.24,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 423,
+        "completion_tokens": 690,
+        "total_tokens": 1113
+      },
+      "estimated_cost_usd": 0.004986,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 11.87,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 423,
+        "completion_tokens": 822,
+        "total_tokens": 1245
+      },
+      "estimated_cost_usd": 0.005778,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 11.96,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 423,
+        "completion_tokens": 735,
+        "total_tokens": 1158
+      },
+      "estimated_cost_usd": 0.005256,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 13.5,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 423,
+        "completion_tokens": 861,
+        "total_tokens": 1284
+      },
+      "estimated_cost_usd": 0.006012,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 10.26,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 383,
+        "completion_tokens": 550,
+        "total_tokens": 933
+      },
+      "estimated_cost_usd": 0.004066,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 10.85,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 383,
+        "completion_tokens": 713,
+        "total_tokens": 1096
+      },
+      "estimated_cost_usd": 0.005044,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 14.64,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 383,
+        "completion_tokens": 736,
+        "total_tokens": 1119
+      },
+      "estimated_cost_usd": 0.005182,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 15.31,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 383,
+        "completion_tokens": 839,
+        "total_tokens": 1222
+      },
+      "estimated_cost_usd": 0.0058,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 10.69,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 383,
+        "completion_tokens": 826,
+        "total_tokens": 1209
+      },
+      "estimated_cost_usd": 0.005722,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 7.44,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 372,
+        "completion_tokens": 690,
+        "total_tokens": 1062
+      },
+      "estimated_cost_usd": 0.004884,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 6.21,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 372,
+        "completion_tokens": 621,
+        "total_tokens": 993
+      },
+      "estimated_cost_usd": 0.00447,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 8.23,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 372,
+        "completion_tokens": 723,
+        "total_tokens": 1095
+      },
+      "estimated_cost_usd": 0.005082,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 7.29,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 372,
+        "completion_tokens": 602,
+        "total_tokens": 974
+      },
+      "estimated_cost_usd": 0.004356,
+      "status": "ok"
+    },
+    {
+      "family": "grok",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 9.31,
+      "model": "x-ai/grok-4.20",
+      "usage": {
+        "prompt_tokens": 372,
+        "completion_tokens": 816,
+        "total_tokens": 1188
+      },
+      "estimated_cost_usd": 0.00564,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 75.15,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 309,
+        "completion_tokens": 527,
+        "total_tokens": 836
+      },
+      "estimated_cost_usd": 0.0002,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 20.95,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 521,
+        "total_tokens": 831
+      },
+      "estimated_cost_usd": 0.000198,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 55.97,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 531,
+        "total_tokens": 841
+      },
+      "estimated_cost_usd": 0.000201,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 46.52,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 559,
+        "total_tokens": 869
+      },
+      "estimated_cost_usd": 0.00021,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 39.22,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 567,
+        "total_tokens": 877
+      },
+      "estimated_cost_usd": 0.000212,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 25.56,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 272,
+        "completion_tokens": 586,
+        "total_tokens": 858
+      },
+      "estimated_cost_usd": 0.000215,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 43.74,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 272,
+        "completion_tokens": 552,
+        "total_tokens": 824
+      },
+      "estimated_cost_usd": 0.000204,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 14.9,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 272,
+        "completion_tokens": 575,
+        "total_tokens": 847
+      },
+      "estimated_cost_usd": 0.000211,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 12.87,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 272,
+        "completion_tokens": 511,
+        "total_tokens": 783
+      },
+      "estimated_cost_usd": 0.000191,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 17.64,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 272,
+        "completion_tokens": 597,
+        "total_tokens": 869
+      },
+      "estimated_cost_usd": 0.000218,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 22.51,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 262,
+        "completion_tokens": 577,
+        "total_tokens": 839
+      },
+      "estimated_cost_usd": 0.000211,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 25.31,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 287,
+        "completion_tokens": 571,
+        "total_tokens": 858
+      },
+      "estimated_cost_usd": 0.000211,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 15.76,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 610,
+        "total_tokens": 873
+      },
+      "estimated_cost_usd": 0.000222,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 12.45,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 287,
+        "completion_tokens": 608,
+        "total_tokens": 895
+      },
+      "estimated_cost_usd": 0.000223,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 41.45,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 591,
+        "total_tokens": 854
+      },
+      "estimated_cost_usd": 0.000215,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 26.37,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 315,
+        "completion_tokens": 632,
+        "total_tokens": 947
+      },
+      "estimated_cost_usd": 0.000234,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 80.55,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 340,
+        "completion_tokens": 668,
+        "total_tokens": 1008
+      },
+      "estimated_cost_usd": 0.000248,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 25.68,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 315,
+        "completion_tokens": 564,
+        "total_tokens": 879
+      },
+      "estimated_cost_usd": 0.000212,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 17.53,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 315,
+        "completion_tokens": 619,
+        "total_tokens": 934
+      },
+      "estimated_cost_usd": 0.00023,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 18.41,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 316,
+        "completion_tokens": 525,
+        "total_tokens": 841
+      },
+      "estimated_cost_usd": 0.0002,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 7.89,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 301,
+        "completion_tokens": 544,
+        "total_tokens": 845
+      },
+      "estimated_cost_usd": 0.000204,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 13.47,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 277,
+        "completion_tokens": 559,
+        "total_tokens": 836
+      },
+      "estimated_cost_usd": 0.000207,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 7.1,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 301,
+        "completion_tokens": 558,
+        "total_tokens": 859
+      },
+      "estimated_cost_usd": 0.000209,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 26.11,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 277,
+        "completion_tokens": 590,
+        "total_tokens": 867
+      },
+      "estimated_cost_usd": 0.000217,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 5.75,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 277,
+        "completion_tokens": 691,
+        "total_tokens": 968
+      },
+      "estimated_cost_usd": 0.000249,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 19.59,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 265,
+        "completion_tokens": 651,
+        "total_tokens": 916
+      },
+      "estimated_cost_usd": 0.000235,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 19.75,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 266,
+        "completion_tokens": 592,
+        "total_tokens": 858
+      },
+      "estimated_cost_usd": 0.000216,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 17.8,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 266,
+        "completion_tokens": 538,
+        "total_tokens": 804
+      },
+      "estimated_cost_usd": 0.000199,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 69.75,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 266,
+        "completion_tokens": 658,
+        "total_tokens": 924
+      },
+      "estimated_cost_usd": 0.000237,
+      "status": "ok"
+    },
+    {
+      "family": "llama",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 34.27,
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "usage": {
+        "prompt_tokens": 265,
+        "completion_tokens": 658,
+        "total_tokens": 923
+      },
+      "estimated_cost_usd": 0.000237,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 25.89,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 318,
+        "completion_tokens": 1171,
+        "total_tokens": 1489
+      },
+      "estimated_cost_usd": 0.0005,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 24.37,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 318,
+        "completion_tokens": 1045,
+        "total_tokens": 1363
+      },
+      "estimated_cost_usd": 0.00045,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 25.45,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 318,
+        "completion_tokens": 1107,
+        "total_tokens": 1425
+      },
+      "estimated_cost_usd": 0.000475,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 19.71,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 318,
+        "completion_tokens": 955,
+        "total_tokens": 1273
+      },
+      "estimated_cost_usd": 0.000414,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 24.73,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 318,
+        "completion_tokens": 1086,
+        "total_tokens": 1404
+      },
+      "estimated_cost_usd": 0.000466,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 26.4,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 1102,
+        "total_tokens": 1382
+      },
+      "estimated_cost_usd": 0.000469,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 24.65,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 1148,
+        "total_tokens": 1428
+      },
+      "estimated_cost_usd": 0.000487,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 27.36,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 1148,
+        "total_tokens": 1428
+      },
+      "estimated_cost_usd": 0.000487,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 25.18,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 1169,
+        "total_tokens": 1449
+      },
+      "estimated_cost_usd": 0.000496,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 29.44,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 1229,
+        "total_tokens": 1509
+      },
+      "estimated_cost_usd": 0.00052,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 27.92,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 1324,
+        "total_tokens": 1595
+      },
+      "estimated_cost_usd": 0.000557,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 31.41,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 1312,
+        "total_tokens": 1583
+      },
+      "estimated_cost_usd": 0.000552,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 31.54,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 1332,
+        "total_tokens": 1603
+      },
+      "estimated_cost_usd": 0.00056,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 29.66,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 1371,
+        "total_tokens": 1642
+      },
+      "estimated_cost_usd": 0.000575,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 35.63,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 1464,
+        "total_tokens": 1735
+      },
+      "estimated_cost_usd": 0.000613,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 31.53,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 324,
+        "completion_tokens": 1328,
+        "total_tokens": 1652
+      },
+      "estimated_cost_usd": 0.000564,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 25.8,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 324,
+        "completion_tokens": 1189,
+        "total_tokens": 1513
+      },
+      "estimated_cost_usd": 0.000508,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 27.85,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 324,
+        "completion_tokens": 1181,
+        "total_tokens": 1505
+      },
+      "estimated_cost_usd": 0.000505,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 4,
+      "elapsed_seconds": 26.3,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 324,
+        "completion_tokens": 1227,
+        "total_tokens": 1551
+      },
+      "estimated_cost_usd": 0.000523,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 5,
+      "elapsed_seconds": 29.45,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 324,
+        "completion_tokens": 1256,
+        "total_tokens": 1580
+      },
+      "estimated_cost_usd": 0.000535,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 28.0,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 285,
+        "completion_tokens": 1342,
+        "total_tokens": 1627
+      },
+      "estimated_cost_usd": 0.000565,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 30.06,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 285,
+        "completion_tokens": 1342,
+        "total_tokens": 1627
+      },
+      "estimated_cost_usd": 0.000565,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 27.98,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 285,
+        "completion_tokens": 1341,
+        "total_tokens": 1626
+      },
+      "estimated_cost_usd": 0.000565,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 4,
+      "elapsed_seconds": 27.77,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 285,
+        "completion_tokens": 1338,
+        "total_tokens": 1623
+      },
+      "estimated_cost_usd": 0.000564,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 5,
+      "elapsed_seconds": 28.08,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 285,
+        "completion_tokens": 1198,
+        "total_tokens": 1483
+      },
+      "estimated_cost_usd": 0.000508,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 24.66,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 1206,
+        "total_tokens": 1480
+      },
+      "estimated_cost_usd": 0.00051,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 25.14,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 1091,
+        "total_tokens": 1365
+      },
+      "estimated_cost_usd": 0.000464,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 25.93,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 1226,
+        "total_tokens": 1500
+      },
+      "estimated_cost_usd": 0.000518,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 4,
+      "elapsed_seconds": 27.54,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 1164,
+        "total_tokens": 1438
+      },
+      "estimated_cost_usd": 0.000493,
+      "status": "ok"
+    },
+    {
+      "family": "nemotron",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 5,
+      "elapsed_seconds": 29.9,
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 1318,
+        "total_tokens": 1592
+      },
+      "estimated_cost_usd": 0.000555,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 8.24,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 318,
+        "completion_tokens": 612,
+        "total_tokens": 930
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 80.15,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 317,
+        "completion_tokens": 810,
+        "total_tokens": 1127
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 119.73,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 317,
+        "completion_tokens": 810,
+        "total_tokens": 1127
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 96.7,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 317,
+        "completion_tokens": 810,
+        "total_tokens": 1127
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 113.31,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 287,
+        "completion_tokens": 864,
+        "total_tokens": 1151
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 106.98,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 287,
+        "completion_tokens": 864,
+        "total_tokens": 1151
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 104.51,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 287,
+        "completion_tokens": 864,
+        "total_tokens": 1151
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 100.28,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 277,
+        "completion_tokens": 870,
+        "total_tokens": 1147
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 98.43,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 277,
+        "completion_tokens": 870,
+        "total_tokens": 1147
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 90.91,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 277,
+        "completion_tokens": 870,
+        "total_tokens": 1147
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 92.5,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 319,
+        "completion_tokens": 818,
+        "total_tokens": 1137
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 87.96,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 319,
+        "completion_tokens": 818,
+        "total_tokens": 1137
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 84.8,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 319,
+        "completion_tokens": 818,
+        "total_tokens": 1137
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 94.29,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 870,
+        "total_tokens": 1160
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 87.46,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 870,
+        "total_tokens": 1160
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 88.61,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 870,
+        "total_tokens": 1160
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 89.28,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 831,
+        "total_tokens": 1111
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 84.14,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 831,
+        "total_tokens": 1111
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 84.14,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 831,
+        "total_tokens": 1111
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 30.07,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 334,
+        "completion_tokens": 500,
+        "total_tokens": 834
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 28.41,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 334,
+        "completion_tokens": 500,
+        "total_tokens": 834
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 29.61,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 334,
+        "completion_tokens": 500,
+        "total_tokens": 834
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 32.99,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 296,
+        "completion_tokens": 524,
+        "total_tokens": 820
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 31.45,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 296,
+        "completion_tokens": 524,
+        "total_tokens": 820
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 30.83,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 296,
+        "completion_tokens": 524,
+        "total_tokens": 820
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 30.93,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 287,
+        "completion_tokens": 498,
+        "total_tokens": 785
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 29.3,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 287,
+        "completion_tokens": 498,
+        "total_tokens": 785
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 29.03,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 287,
+        "completion_tokens": 498,
+        "total_tokens": 785
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 29.78,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 340,
+        "completion_tokens": 475,
+        "total_tokens": 815
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 29.21,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 340,
+        "completion_tokens": 475,
+        "total_tokens": 815
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 28.61,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 340,
+        "completion_tokens": 475,
+        "total_tokens": 815
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 32.52,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 301,
+        "completion_tokens": 513,
+        "total_tokens": 814
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 31.02,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 301,
+        "completion_tokens": 513,
+        "total_tokens": 814
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 30.21,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 301,
+        "completion_tokens": 513,
+        "total_tokens": 814
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 35.26,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 570,
+        "total_tokens": 860
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 33.39,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 570,
+        "total_tokens": 860
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 33.0,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 570,
+        "total_tokens": 860
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 24.63,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 328,
+        "completion_tokens": 445,
+        "total_tokens": 773
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 22.54,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 328,
+        "completion_tokens": 445,
+        "total_tokens": 773
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 23.91,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 328,
+        "completion_tokens": 445,
+        "total_tokens": 773
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 26.59,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 435,
+        "total_tokens": 725
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 24.75,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 435,
+        "total_tokens": 725
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 24.25,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 435,
+        "total_tokens": 725
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 26.41,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 281,
+        "completion_tokens": 446,
+        "total_tokens": 727
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 24.74,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 281,
+        "completion_tokens": 446,
+        "total_tokens": 727
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 24.33,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 281,
+        "completion_tokens": 446,
+        "total_tokens": 727
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 28.96,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 334,
+        "completion_tokens": 487,
+        "total_tokens": 821
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 26.9,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 334,
+        "completion_tokens": 487,
+        "total_tokens": 821
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 26.58,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 334,
+        "completion_tokens": 487,
+        "total_tokens": 821
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 25.27,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 295,
+        "completion_tokens": 431,
+        "total_tokens": 726
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 23.81,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 295,
+        "completion_tokens": 431,
+        "total_tokens": 726
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 23.58,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 295,
+        "completion_tokens": 431,
+        "total_tokens": 726
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 29.25,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 284,
+        "completion_tokens": 474,
+        "total_tokens": 758
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 26.51,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 284,
+        "completion_tokens": 474,
+        "total_tokens": 758
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 26.11,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 284,
+        "completion_tokens": 474,
+        "total_tokens": 758
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 8.18,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 318,
+        "completion_tokens": 612,
+        "total_tokens": 930
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 7.4,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 318,
+        "completion_tokens": 612,
+        "total_tokens": 930
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "status": "failed",
+      "error": "Request timed out."
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "status": "failed",
+      "error": "Request timed out."
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 13.69,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 280,
+        "completion_tokens": 575,
+        "total_tokens": 855
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "status": "failed",
+      "error": "Request timed out."
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "status": "failed",
+      "error": "Request timed out."
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 139.74,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 725,
+        "total_tokens": 996
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 20.51,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 324,
+        "completion_tokens": 758,
+        "total_tokens": 1082
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 17.12,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 324,
+        "completion_tokens": 700,
+        "total_tokens": 1024
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s13_relevant",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 12.07,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 324,
+        "completion_tokens": 788,
+        "total_tokens": 1112
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 6.86,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 285,
+        "completion_tokens": 443,
+        "total_tokens": 728
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 6.23,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 285,
+        "completion_tokens": 443,
+        "total_tokens": 728
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s13_relevant",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 6.16,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 285,
+        "completion_tokens": 443,
+        "total_tokens": 728
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 9.4,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 642,
+        "total_tokens": 916
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 8.75,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 642,
+        "total_tokens": 916
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s13_relevant",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 8.6,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 642,
+        "total_tokens": 916
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    }
+  ],
+  "last_updated": "2026-04-25T00:30:03.777356"
+}

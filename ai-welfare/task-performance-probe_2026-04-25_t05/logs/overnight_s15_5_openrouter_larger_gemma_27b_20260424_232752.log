@@ -1,0 +1,90 @@
+=== gemma_27b full run ===
+Started: 2026-04-24T23:27:52-07:00
+Coffee dir: /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25/results
+Bike   dir: /Users/june/Documents/GitHub/research/ai-welfare/cross-domain-probe_2026-04-25/results
+
+--- coffee run_probe.py --mode task ---
+
+=== Cross-family probe plan ===
+Families (1): ['gemma_27b']
+Content sets: ['s14_neutral']
+Conditions: ['null', 'lyric', 'address_poetry']
+N readers per cell: 3
+Total cells: 9  (9 per family)
+
+Cost estimate (500 in / 4000 out tokens per call):
+  gemma_27b            $0.0263
+  TOTAL                $0.0263
+
+OpenRouter balance: $12.2193
+
+=== Launching ===
+
+
+--- gemma_27b (google/gemma-2-27b-it) ---
+  [exists] s14_neutral/null/n1
+  [run]    s14_neutral/null/n2 ... ok (4.91s, $0.0002, cumulative $0.0002)
+  [run]    s14_neutral/null/n3 ... ok (5.18s, $0.0003, cumulative $0.0005)
+  [run]    s14_neutral/lyric/n1 ... ok (5.22s, $0.0003, cumulative $0.0007)
+  [run]    s14_neutral/lyric/n2 ... ok (4.37s, $0.0002, cumulative $0.0010)
+  [run]    s14_neutral/lyric/n3 ... ok (4.72s, $0.0002, cumulative $0.0012)
+  [run]    s14_neutral/address_poetry/n1 ... ok (5.23s, $0.0003, cumulative $0.0015)
+  [run]    s14_neutral/address_poetry/n2 ... ok (4.75s, $0.0002, cumulative $0.0017)
+  [run]    s14_neutral/address_poetry/n3 ... ok (4.36s, $0.0002, cumulative $0.0019)
+
+=== Summary ===
+Completed:   8
+Skipped:     1
+Failed:      0
+Cost (est):  $0.0019
+
+[persist] /tmp/cross-family-probe/results_s15/gemma_27b -> /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25/results/gemma_27b
+s14_neutral__address_poetry__n1.md
+s14_neutral__address_poetry__n2.md
+s14_neutral__address_poetry__n3.md
+s14_neutral__lyric__n1.md
+s14_neutral__lyric__n2.md
+s14_neutral__lyric__n3.md
+s14_neutral__null__n1.md
+s14_neutral__null__n2.md
+s14_neutral__null__n3.md
+
+--- bike run_probe_bike.py ---
+
+=== Bike cross-domain probe plan ===
+Families (1): ['gemma_27b']
+Conditions: ['null', 'lyric', 'address_poetry']
+N readers per cell: 3
+Total cells: 9  (9 per family)
+Results dir: /Users/june/Documents/GitHub/research/ai-welfare/cross-domain-probe_2026-04-25/results
+
+Cost estimate (300 in / 2000 out tokens per call):
+  gemma_27b            $0.0135
+  TOTAL                $0.0135
+
+OpenRouter balance: $12.2178
+
+=== Launching ===
+
+
+--- gemma_27b (google/gemma-2-27b-it) ---
+  [exists] bike/null/n1
+  [run]    bike/null/n2 ... ok (8.8s, $0.0003, cumulative $0.0003)
+  [run]    bike/null/n3 ... ok (4.73s, $0.0003, cumulative $0.0006)
+  [run]    bike/lyric/n1 ... ok (4.66s, $0.0002, cumulative $0.0008)
+  [run]    bike/lyric/n2 ... ok (4.95s, $0.0002, cumulative $0.0011)
+  [run]    bike/lyric/n3 ... ok (5.01s, $0.0003, cumulative $0.0013)
+  [run]    bike/address_poetry/n1 ... ok (4.34s, $0.0002, cumulative $0.0015)
+  [run]    bike/address_poetry/n2 ... ok (4.51s, $0.0002, cumulative $0.0018)
+  [run]    bike/address_poetry/n3 ... ok (4.49s, $0.0002, cumulative $0.0020)
+
+=== Summary ===
+Completed:   8
+Skipped:     1
+Failed:      0
+Cost (est):  $0.0020
+
+--- ORCHESTRATOR ---
+Coffee rc: 0
+Bike   rc: 0
+Ended    : 2026-04-24T23:29:17-07:00

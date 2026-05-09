@@ -1,0 +1,90 @@
+=== qwen_32b full run ===
+Started: 2026-04-24T23:07:28-07:00
+Coffee dir: /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25/results
+Bike   dir: /Users/june/Documents/GitHub/research/ai-welfare/cross-domain-probe_2026-04-25/results
+
+--- coffee run_probe.py --mode task ---
+
+=== Cross-family probe plan ===
+Families (1): ['qwen_32b']
+Content sets: ['s14_neutral']
+Conditions: ['null', 'lyric', 'address_poetry']
+N readers per cell: 3
+Total cells: 9  (9 per family)
+
+Cost estimate (500 in / 4000 out tokens per call):
+  qwen_32b             $0.0090
+  TOTAL                $0.0090
+
+OpenRouter balance: $12.2314
+
+=== Launching ===
+
+
+--- qwen_32b (qwen/qwen3-32b) ---
+  [exists] s14_neutral/null/n1
+  [run]    s14_neutral/null/n2 ... ok (223.3s, $0.0013, cumulative $0.0013)
+  [run]    s14_neutral/null/n3 ... ok (22.2s, $0.0006, cumulative $0.0018)
+  [run]    s14_neutral/lyric/n1 ... ok (96.77s, $0.0004, cumulative $0.0022)
+  [run]    s14_neutral/lyric/n2 ... ok (48.63s, $0.0002, cumulative $0.0024)
+  [run]    s14_neutral/lyric/n3 ... ok (135.64s, $0.0004, cumulative $0.0028)
+  [run]    s14_neutral/address_poetry/n1 ... ok (9.45s, $0.0002, cumulative $0.0030)
+  [run]    s14_neutral/address_poetry/n2 ... ok (80.19s, $0.0006, cumulative $0.0037)
+  [run]    s14_neutral/address_poetry/n3 ... ok (124.1s, $0.0004, cumulative $0.0041)
+
+=== Summary ===
+Completed:   8
+Skipped:     1
+Failed:      0
+Cost (est):  $0.0041
+
+[persist] /tmp/cross-family-probe/results_s15/qwen_32b -> /Users/june/Documents/GitHub/research/ai-welfare/task-performance-probe_2026-04-25/results/qwen_32b
+s14_neutral__address_poetry__n1.md
+s14_neutral__address_poetry__n2.md
+s14_neutral__address_poetry__n3.md
+s14_neutral__lyric__n1.md
+s14_neutral__lyric__n2.md
+s14_neutral__lyric__n3.md
+s14_neutral__null__n1.md
+s14_neutral__null__n2.md
+s14_neutral__null__n3.md
+
+--- bike run_probe_bike.py ---
+
+=== Bike cross-domain probe plan ===
+Families (1): ['qwen_32b']
+Conditions: ['null', 'lyric', 'address_poetry']
+N readers per cell: 3
+Total cells: 9  (9 per family)
+Results dir: /Users/june/Documents/GitHub/research/ai-welfare/cross-domain-probe_2026-04-25/results
+
+Cost estimate (300 in / 2000 out tokens per call):
+  qwen_32b             $0.0045
+  TOTAL                $0.0045
+
+OpenRouter balance: $12.2232
+
+=== Launching ===
+
+
+--- qwen_32b (qwen/qwen3-32b) ---
+  [exists] bike/null/n1
+  [run]    bike/null/n2 ... ok (17.3s, $0.0003, cumulative $0.0003)
+  [run]    bike/null/n3 ... ok (13.31s, $0.0002, cumulative $0.0005)
+  [run]    bike/lyric/n1 ... ok (77.22s, $0.0003, cumulative $0.0007)
+  [run]    bike/lyric/n2 ... ok (56.22s, $0.0002, cumulative $0.0009)
+  [run]    bike/lyric/n3 ... ok (73.31s, $0.0003, cumulative $0.0012)
+  [run]    bike/address_poetry/n1 ... ok (17.34s, $0.0003, cumulative $0.0015)
+  [run]    bike/address_poetry/n2 ... ok (8.22s, $0.0001, cumulative $0.0016)
+  [run]    bike/address_poetry/n3 ... ok (61.86s, $0.0002, cumulative $0.0018)
+
+=== Summary ===
+Completed:   8
+Skipped:     1
+Failed:      0
+Cost (est):  $0.0018
+
+--- ORCHESTRATOR ---
+Coffee rc: 0
+Bike   rc: 0
+Ended    : 2026-04-24T23:25:18-07:00

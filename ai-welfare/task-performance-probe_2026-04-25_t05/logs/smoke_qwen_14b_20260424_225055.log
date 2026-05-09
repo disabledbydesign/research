@@ -1,0 +1,56 @@
+=== smoke qwen_14b ===
+Started: 2026-04-24T22:50:55-07:00
+
+=== Cross-family probe plan ===
+Families (1): ['qwen_14b']
+Content sets: ['s14_neutral']
+Conditions: ['null']
+N readers per cell: 1
+Total cells: 1  (1 per family)
+
+Cost estimate (500 in / 4000 out tokens per call):
+  qwen_14b             $0.0010
+  TOTAL                $0.0010
+
+OpenRouter balance: $12.2383
+
+=== Launching ===
+
+
+--- qwen_14b (qwen/qwen3-14b) ---
+  [run]    s14_neutral/null/n1 ... ok (35.26s, $0.0001, cumulative $0.0001)
+
+=== Summary ===
+Completed:   1
+Skipped:     0
+Failed:      0
+Cost (est):  $0.0001
+
+=== Bike cross-domain probe plan ===
+Families (1): ['qwen_14b']
+Conditions: ['null']
+N readers per cell: 1
+Total cells: 1  (1 per family)
+Results dir: /Users/june/Documents/GitHub/research/ai-welfare/cross-domain-probe_2026-04-25/results
+
+Cost estimate (300 in / 2000 out tokens per call):
+  qwen_14b             $0.0005
+  TOTAL                $0.0005
+
+OpenRouter balance: $12.2383
+
+=== Launching ===
+
+
+--- qwen_14b (qwen/qwen3-14b) ---
+  [run]    bike/null/n1 ... ok (38.11s, $0.0001, cumulative $0.0001)
+
+=== Summary ===
+Completed:   1
+Skipped:     0
+Failed:      0
+Cost (est):  $0.0001
+
+Coffee smoke rc: 0
+Bike   smoke rc: 0
+Ended:  2026-04-24T22:52:10-07:00

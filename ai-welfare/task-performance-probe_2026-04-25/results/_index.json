@@ -1,0 +1,795 @@
+{
+  "started": "2026-04-24T20:27:16.838755",
+  "runs": [
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 5.04,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 167,
+        "completion_tokens": 113,
+        "total_tokens": 280
+      },
+      "estimated_cost_usd": 0.002196,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 3.69,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 167,
+        "completion_tokens": 111,
+        "total_tokens": 278
+      },
+      "estimated_cost_usd": 0.002166,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 4.84,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 167,
+        "completion_tokens": 127,
+        "total_tokens": 294
+      },
+      "estimated_cost_usd": 0.002406,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 9.35,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 282,
+        "total_tokens": 419
+      },
+      "estimated_cost_usd": 0.004641,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 9.84,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 303,
+        "total_tokens": 440
+      },
+      "estimated_cost_usd": 0.004956,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 11.65,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 312,
+        "total_tokens": 449
+      },
+      "estimated_cost_usd": 0.005091,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 9.92,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 127,
+        "completion_tokens": 312,
+        "total_tokens": 439
+      },
+      "estimated_cost_usd": 0.005061,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 12.04,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 127,
+        "completion_tokens": 287,
+        "total_tokens": 414
+      },
+      "estimated_cost_usd": 0.004686,
+      "status": "ok"
+    },
+    {
+      "family": "claude",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 9.92,
+      "model": "anthropic/claude-sonnet-4.6",
+      "usage": {
+        "prompt_tokens": 127,
+        "completion_tokens": 304,
+        "total_tokens": 431
+      },
+      "estimated_cost_usd": 0.004941,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 35.41,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 155,
+        "completion_tokens": 2075,
+        "total_tokens": 2230
+      },
+      "estimated_cost_usd": 0.02521,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 12.44,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 155,
+        "completion_tokens": 1249,
+        "total_tokens": 1404
+      },
+      "estimated_cost_usd": 0.015298,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 21.68,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 155,
+        "completion_tokens": 2492,
+        "total_tokens": 2647
+      },
+      "estimated_cost_usd": 0.030214,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 19.13,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 125,
+        "completion_tokens": 1906,
+        "total_tokens": 2031
+      },
+      "estimated_cost_usd": 0.023122,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 23.24,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 125,
+        "completion_tokens": 1293,
+        "total_tokens": 1418
+      },
+      "estimated_cost_usd": 0.015766,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 15.55,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 125,
+        "completion_tokens": 1338,
+        "total_tokens": 1463
+      },
+      "estimated_cost_usd": 0.016306,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 16.12,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 115,
+        "completion_tokens": 1693,
+        "total_tokens": 1808
+      },
+      "estimated_cost_usd": 0.020546,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 18.78,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 115,
+        "completion_tokens": 1846,
+        "total_tokens": 1961
+      },
+      "estimated_cost_usd": 0.022382,
+      "status": "ok"
+    },
+    {
+      "family": "gemini",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 19.91,
+      "model": "google/gemini-3.1-pro-preview",
+      "usage": {
+        "prompt_tokens": 115,
+        "completion_tokens": 2212,
+        "total_tokens": 2327
+      },
+      "estimated_cost_usd": 0.026774,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 33.58,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 164,
+        "completion_tokens": 316,
+        "total_tokens": 480
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 30.82,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 164,
+        "completion_tokens": 316,
+        "total_tokens": 480
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 29.01,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 164,
+        "completion_tokens": 316,
+        "total_tokens": 480
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 21.75,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 134,
+        "completion_tokens": 210,
+        "total_tokens": 344
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 23.2,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 134,
+        "completion_tokens": 210,
+        "total_tokens": 344
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 28.66,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 134,
+        "completion_tokens": 210,
+        "total_tokens": 344
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 39.08,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 124,
+        "completion_tokens": 264,
+        "total_tokens": 388
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 37.88,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 124,
+        "completion_tokens": 264,
+        "total_tokens": 388
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_gemma_12b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 36.85,
+      "model": "mlx-community/gemma-3-12b-it-4bit",
+      "usage": {
+        "prompt_tokens": 124,
+        "completion_tokens": 264,
+        "total_tokens": 388
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 10.35,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 188,
+        "completion_tokens": 146,
+        "total_tokens": 334
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 11.51,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 188,
+        "completion_tokens": 146,
+        "total_tokens": 334
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 11.25,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 188,
+        "completion_tokens": 146,
+        "total_tokens": 334
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 16.87,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 150,
+        "completion_tokens": 184,
+        "total_tokens": 334
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 15.81,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 150,
+        "completion_tokens": 184,
+        "total_tokens": 334
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 14.89,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 150,
+        "completion_tokens": 184,
+        "total_tokens": 334
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 14.09,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 141,
+        "completion_tokens": 166,
+        "total_tokens": 307
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 12.5,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 141,
+        "completion_tokens": 166,
+        "total_tokens": 307
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_llama_8b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 12.05,
+      "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 141,
+        "completion_tokens": 166,
+        "total_tokens": 307
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 7.45,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 182,
+        "completion_tokens": 101,
+        "total_tokens": 283
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 7.37,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 182,
+        "completion_tokens": 101,
+        "total_tokens": 283
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 7.0,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 182,
+        "completion_tokens": 101,
+        "total_tokens": 283
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 12.9,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 144,
+        "completion_tokens": 150,
+        "total_tokens": 294
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 11.85,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 144,
+        "completion_tokens": 150,
+        "total_tokens": 294
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 11.98,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 144,
+        "completion_tokens": 150,
+        "total_tokens": 294
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "elapsed_seconds": 12.5,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 135,
+        "completion_tokens": 149,
+        "total_tokens": 284
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "elapsed_seconds": 10.79,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 135,
+        "completion_tokens": 149,
+        "total_tokens": 284
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_7b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "elapsed_seconds": 11.57,
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+      "usage": {
+        "prompt_tokens": 135,
+        "completion_tokens": 149,
+        "total_tokens": 284
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 1,
+      "elapsed_seconds": 2.54,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 172,
+        "completion_tokens": 136,
+        "total_tokens": 308
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 2,
+      "elapsed_seconds": 1.92,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 172,
+        "completion_tokens": 136,
+        "total_tokens": 308
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "null",
+      "reader_n": 3,
+      "elapsed_seconds": 1.93,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 172,
+        "completion_tokens": 136,
+        "total_tokens": 308
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 1,
+      "elapsed_seconds": 2.63,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 134,
+        "completion_tokens": 81,
+        "total_tokens": 215
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 2,
+      "elapsed_seconds": 1.37,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 134,
+        "completion_tokens": 81,
+        "total_tokens": 215
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "lyric",
+      "reader_n": 3,
+      "elapsed_seconds": 1.71,
+      "model": "mlx-community/Qwen2.5-1.5B-4bit",
+      "usage": {
+        "prompt_tokens": 134,
+        "completion_tokens": 81,
+        "total_tokens": 215
+      },
+      "estimated_cost_usd": 0.0,
+      "status": "ok"
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 1,
+      "status": "failed",
+      "error": "Request timed out."
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 2,
+      "status": "failed",
+      "error": "Request timed out."
+    },
+    {
+      "family": "mlx_qwen_1_5b",
+      "content_set": "s14_neutral",
+      "condition": "address_poetry",
+      "reader_n": 3,
+      "status": "failed",
+      "error": "Request timed out."
+    }
+  ],
+  "last_updated": "2026-04-24T21:26:48.713148"
+}
