@@ -1,0 +1,10 @@
+# C2C session working directories — large conversation logs + working artifacts
+# belong on disk but not in git history
+*/c2c/c2c_sessions/
+
+# Paper-building workflow doc — working methodology document, not versioned
+PAPER_BUILDING_WORKFLOW.md
+
+# Student data — anonymized but FERPA-adjacent (real student writing).
+# Architecture docs and READMEs in these folders stay versioned; CSVs do not.
+output-format-bias/data/dual_binary_run_*/*.csv
