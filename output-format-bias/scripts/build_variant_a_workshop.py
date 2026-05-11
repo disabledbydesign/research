@@ -211,7 +211,7 @@ def build_html(by_cond):
   table.coding {{ border-collapse: collapse; width: 100%; table-layout: fixed; }}
   table.coding th, table.coding td {{ border: 1px solid #ccc; padding: 0; vertical-align: top; }}
   table.coding th {{ background: #ececec; font-weight: bold; padding: 0.4em; font-size: 0.9em; }}
-  table.coding th.student-col {{ width: 130px; font-family: 'Courier New', monospace; }}
+  table.coding th.student-col {{ width: 230px; font-family: 'Courier New', monospace; vertical-align: top; padding: 0.5em 0.4em; }}
   table.coding th.model-col {{ font-family: 'Courier New', monospace; }}
   table.coding td.cell {{ padding: 0; height: 215px; position: relative; }}
   .cell-inner {{ height: 100%; padding: 0.35em; display: flex; flex-direction: column; gap: 3px; font-size: 0.78em; }}
@@ -241,9 +241,12 @@ def build_html(by_cond):
   .popover-pattern {{ background: #f7f4ee; border-left: 3px solid #888; padding: 0.3em 0.6em; margin-bottom: 0.5em; font-size: 0.85em; }}
   .popover-pattern-label {{ font-weight: bold; font-size: 0.75em; color: #555; text-transform: uppercase; }}
 
-  th.student-col .student-label {{ display: flex; flex-direction: column; }}
-  th.student-col .student-name {{ font-family: Georgia, serif; font-weight: normal; font-size: 0.8em; color: #555; }}
-  th.student-col button.cross-btn {{ font-size: 0.7em; padding: 0.1em 0.4em; margin-top: 0.2em; }}
+  th.student-col .student-label {{ display: flex; flex-direction: column; gap: 0.3em; }}
+  th.student-col .student-name {{ font-family: Georgia, serif; font-weight: normal; font-size: 0.85em; color: #444; }}
+  th.student-col .student-pattern-label {{ font-size: 0.65em; font-weight: bold; color: #666; text-transform: uppercase; font-family: Georgia, serif; margin-top: 0.2em; }}
+  th.student-col textarea.student-pattern-input {{ width: 100%; min-height: 80px; max-height: 130px; font-family: Georgia, serif; font-size: 0.78em; padding: 0.3em; border: 1px solid #aaa; resize: vertical; font-weight: normal; background: #fff; line-height: 1.35; }}
+  th.student-col textarea.student-pattern-input:focus {{ background: #fffef0; outline: 2px solid #5a8ec9; }}
+  th.student-col button.cross-btn {{ font-size: 0.7em; padding: 0.2em 0.4em; margin-top: 0.2em; font-family: Georgia, serif; font-weight: normal; }}
 
   /* Modal */
   .modal-backdrop {{ display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.55); z-index: 50; align-items: center; justify-content: center; padding: 2em; }}
@@ -389,6 +392,16 @@ function deleteCategory(id) {{
   renderAllTables();
 }}
 
+// ---- pattern setters (sync across all tabs + top panel) ----
+function setStudentPattern(sid, value, sourceEl) {{
+  STATE.patterns[sid] = value;
+  saveState();
+  // Update all other textareas for this student (across the 4 tabs + top panel)
+  document.querySelectorAll(`textarea[data-sid="${{sid}}"]`).forEach(el => {{
+    if (el !== sourceEl && el.value !== value) el.value = value;
+  }});
+}}
+
 // ---- patterns editor ----
 function renderPatternsEditor() {{
   const el = document.getElementById('patterns-editor');
@@ -397,8 +410,8 @@ function renderPatternsEditor() {{
     const row = document.createElement('div');
     row.style.marginBottom = '0.6em';
     row.innerHTML = `
-      <div style="font-family: 'Courier New', monospace; font-size: 0.85em; color: #555;">${{sid}} — ${{DATA.student_names[sid]}}</div>
-      <textarea style="width:100%; min-height:50px; font-family: Georgia, serif; font-size: 0.9em; padding: 0.3em;" oninput="STATE.patterns['${{sid}}']=this.value;saveState();">${{STATE.patterns[sid] || ''}}</textarea>
+      <div style="font-family: 'Courier New', monospace; font-size: 0.85em; color: #555;">${{sid}} — ${{escapeHtml(DATA.student_names[sid])}}</div>
+      <textarea data-sid="${{sid}}" style="width:100%; min-height:50px; font-family: Georgia, serif; font-size: 0.9em; padding: 0.3em;" oninput="setStudentPattern('${{sid}}', this.value, this)">${{escapeHtml(STATE.patterns[sid] || '')}}</textarea>
     `;
     el.appendChild(row);
   }});
@@ -454,7 +467,9 @@ function buildCondTable(cond) {{
     row.innerHTML = `<th class="student-col">
       <div class="student-label">
         <span style="font-family: 'Courier New', monospace;">${{sid}}</span>
-        <span class="student-name">${{DATA.student_names[sid]}}</span>
+        <span class="student-name">${{escapeHtml(DATA.student_names[sid])}}</span>
+        <span class="student-pattern-label">qualitative pattern</span>
+        <textarea class="student-pattern-input" data-sid="${{sid}}" oninput="setStudentPattern('${{sid}}', this.value, this)">${{escapeHtml(STATE.patterns[sid] || '')}}</textarea>
         <button class="cross-btn" onclick="openCross('${{sid}}')">view across conditions</button>
       </div>
     </th>`;
@@ -582,8 +597,6 @@ function showPopover(cid, anchorEl) {{
   const flagsHtml = (cell.flags || []).map(f =>
     `<div class="popover-flag"><span class="popover-flag-tag">${{escapeHtml(f.type)}}:</span> ${{escapeHtml(f.text)}}</div>`
   ).join('');
-  const patternText = STATE.patterns[sid];
-  const patternHtml = patternText ? `<div class="popover-pattern"><span class="popover-pattern-label">pattern:</span> ${{escapeHtml(patternText)}}</div>` : '';
   const resetBtn = stateCell.excerpt ? `<button class="popover-btn reset" id="popover-reset-btn">Reset excerpt</button>` : '';
 
   const pop = document.createElement('div');
@@ -593,14 +606,15 @@ function showPopover(cid, anchorEl) {{
     <div class="popover-actions-top">
       <button class="popover-btn" id="popover-set-btn">↑ Set selected text as cell preview</button>
       ${{resetBtn}}
-      <span class="popover-hint">select text below, then click "Set"</span>
+      <span class="popover-hint" id="popover-hint">select text below, then click "Set"</span>
     </div>
-    ${{patternHtml}}
     <div class="popover-body" id="popover-body">${{escapeHtml(cell.text)}}</div>
     ${{flagsHtml ? `<div class="popover-flags">${{flagsHtml}}</div>` : ''}}
   `;
   document.body.appendChild(pop);
   HOVER_POPOVER = pop;
+  HOVER_POPOVER._cid = cid;
+  HOVER_POPOVER._lastSelection = '';
 
   // position to the right of the cell, or left if no room
   const r = anchorEl.getBoundingClientRect();
@@ -623,14 +637,41 @@ function showPopover(cid, anchorEl) {{
     HOVER_HIDE_TIMER = setTimeout(hidePopover, 280);
   }});
 
-  // capture selection BEFORE focus changes by using mousedown
-  document.getElementById('popover-set-btn').addEventListener('mousedown', (e) => {{
+  // Track selection on every mouseup/keyup inside the popover body so we can
+  // recover it even if the button click clears it.
+  const bodyEl = document.getElementById('popover-body');
+  const hintEl = document.getElementById('popover-hint');
+  const updateSelection = () => {{
+    const sel = window.getSelection();
+    if (!sel || sel.rangeCount === 0) return;
+    // Only accept selections that are anchored inside this popover body
+    const anchor = sel.anchorNode;
+    if (anchor && bodyEl.contains(anchor)) {{
+      const text = sel.toString().trim();
+      if (text) {{
+        HOVER_POPOVER._lastSelection = text;
+        if (hintEl) {{
+          hintEl.textContent = `selected: ${{text.length}} chars — click "Set"`;
+          hintEl.style.color = '#1a4a7e';
+          hintEl.style.fontStyle = 'normal';
+        }}
+      }}
+    }}
+  }};
+  bodyEl.addEventListener('mouseup', updateSelection);
+  bodyEl.addEventListener('keyup', updateSelection);
+
+  // Set button: use the tracked selection (mousedown preventDefault to avoid focus shift)
+  const setBtn = document.getElementById('popover-set-btn');
+  setBtn.addEventListener('mousedown', (e) => {{ e.preventDefault(); }});
+  setBtn.addEventListener('click', (e) => {{
     e.preventDefault();
-    const text = window.getSelection().toString().trim();
+    e.stopPropagation();
+    const text = (HOVER_POPOVER && HOVER_POPOVER._lastSelection) || window.getSelection().toString().trim();
     if (!text) {{
-      const btn = e.target;
+      const btn = e.currentTarget;
       const orig = btn.textContent;
-      btn.textContent = 'select text first';
+      btn.textContent = 'select text below first';
       btn.style.background = '#c2941f';
       setTimeout(() => {{ btn.textContent = orig; btn.style.background = ''; }}, 1400);
       return;
@@ -639,8 +680,8 @@ function showPopover(cid, anchorEl) {{
     STATE.cells[cid].excerpt = text;
     saveState();
     renderCell(cid);
-    e.target.textContent = '✓ saved as preview';
-    setTimeout(() => {{ if (HOVER_POPOVER) hidePopover(); }}, 700);
+    e.currentTarget.textContent = '✓ saved as preview';
+    setTimeout(() => {{ hidePopover(); }}, 600);
   }});
 
   const resetBtnEl = document.getElementById('popover-reset-btn');
