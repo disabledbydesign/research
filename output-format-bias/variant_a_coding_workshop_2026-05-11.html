@@ -35,17 +35,33 @@
   table.coding th { background: #ececec; font-weight: bold; padding: 0.4em; font-size: 0.9em; }
   table.coding th.student-col { width: 130px; font-family: 'Courier New', monospace; }
   table.coding th.model-col { font-family: 'Courier New', monospace; }
-  table.coding td.cell { padding: 0; height: 360px; position: relative; }
-  .cell-inner { height: 100%; padding: 0.4em; display: flex; flex-direction: column; gap: 4px; font-size: 0.78em; }
-  .cell-top { display: flex; gap: 4px; align-items: center; }
-  .cell-cat { flex: 1; font-family: Georgia, serif; font-size: 0.82em; padding: 0.2em; border: 1px solid #888; background: rgba(255,255,255,0.85); }
-  .cell-flag-badge { background: #c2941f; color: #fff; padding: 0.1em 0.45em; border-radius: 3px; font-size: 0.7em; font-weight: bold; font-family: 'Courier New', monospace; cursor: help; }
-  .cell-preview { flex: 1; overflow: hidden; cursor: pointer; padding: 0.4em; background: rgba(255,255,255,0.65); border: 1px dashed #999; border-radius: 2px; font-family: Georgia, serif; line-height: 1.35; position: relative; }
+  table.coding td.cell { padding: 0; height: 215px; position: relative; }
+  .cell-inner { height: 100%; padding: 0.35em; display: flex; flex-direction: column; gap: 3px; font-size: 0.78em; }
+  .cell-top { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+  .cell-cat { flex: 1; font-family: Georgia, serif; font-size: 0.82em; padding: 0.15em; border: 1px solid #888; background: rgba(255,255,255,0.85); min-width: 0; }
+  .cell-flag-badge { background: #c2941f; color: #fff; padding: 0.1em 0.45em; border-radius: 3px; font-size: 0.7em; font-weight: bold; font-family: 'Courier New', monospace; cursor: help; flex-shrink: 0; }
+  .cell-preview { flex: 1; overflow: hidden; padding: 0.35em 0.45em; background: rgba(255,255,255,0.6); border: 1px dashed #aaa; border-radius: 2px; font-family: Georgia, serif; line-height: 1.32; position: relative; min-height: 0; }
   .cell-preview:hover { background: rgba(255,255,255,0.95); border-color: #1a4a7e; }
-  .cell-preview::after { content: '↗ open full'; position: absolute; bottom: 2px; right: 4px; font-size: 0.7em; color: #1a4a7e; background: rgba(255,255,255,0.9); padding: 0 0.3em; opacity: 0; transition: opacity 0.1s; }
-  .cell-preview:hover::after { opacity: 1; }
-  .cell-notes-input { height: 90px; font-family: Georgia, serif; font-size: 0.82em; padding: 0.3em; border: 1px solid #888; resize: none; background: rgba(255,255,255,0.85); }
+  .cell-excerpt-marker { color: #b8860b; font-weight: bold; margin-right: 0.2em; }
+  .cell-notes-input { height: 60px; flex-shrink: 0; font-family: Georgia, serif; font-size: 0.82em; padding: 0.3em; border: 1px solid #888; resize: none; background: rgba(255,255,255,0.85); }
   .cell-notes-input:focus { background: #fff; outline: 2px solid #5a8ec9; }
+
+  /* Hover popover */
+  .hover-popover { position: absolute; z-index: 100; width: 540px; background: #fff; border: 1px solid #555; border-radius: 5px; box-shadow: 0 8px 28px rgba(0,0,0,0.25); padding: 0.7em 0.9em; font-size: 0.88em; line-height: 1.5; }
+  .popover-meta { font-family: 'Courier New', monospace; font-size: 0.8em; color: #555; margin-bottom: 0.3em; }
+  .popover-actions-top { display: flex; gap: 0.4em; align-items: center; margin-bottom: 0.5em; padding-bottom: 0.5em; border-bottom: 1px solid #ddd; flex-wrap: wrap; }
+  .popover-btn { font-size: 0.78em; padding: 0.3em 0.6em; background: #1a4a7e; color: #fff; border: none; border-radius: 3px; cursor: pointer; }
+  .popover-btn:hover { background: #2563a3; }
+  .popover-btn.reset { background: #888; }
+  .popover-btn.reset:hover { background: #555; }
+  .popover-hint { font-style: italic; color: #777; font-size: 0.78em; }
+  .popover-body { white-space: pre-wrap; font-family: Georgia, serif; user-select: text; max-height: 50vh; overflow-y: auto; padding: 0.5em; background: #fafafa; border: 1px solid #eee; border-radius: 3px; }
+  .popover-body::selection { background: #ffe082; }
+  .popover-flags { margin-top: 0.6em; }
+  .popover-flag { background: #fff8dc; border-left: 3px solid #c2941f; padding: 0.3em 0.6em; margin-top: 0.3em; font-size: 0.85em; }
+  .popover-flag-tag { font-weight: bold; color: #8b6914; font-family: 'Courier New', monospace; font-size: 0.85em; }
+  .popover-pattern { background: #f7f4ee; border-left: 3px solid #888; padding: 0.3em 0.6em; margin-bottom: 0.5em; font-size: 0.85em; }
+  .popover-pattern-label { font-weight: bold; font-size: 0.75em; color: #555; text-transform: uppercase; }
 
   th.student-col .student-label { display: flex; flex-direction: column; }
   th.student-col .student-name { font-family: Georgia, serif; font-weight: normal; font-size: 0.8em; color: #555; }
@@ -315,12 +331,17 @@ function buildCellInner(cid) {
   }
   inner.appendChild(top);
 
-  // preview text (click to expand)
+  // preview text (hover for full text in popover; can highlight to override excerpt)
   const preview = document.createElement('div');
   preview.className = 'cell-preview';
-  const txt = cell.text.length > 280 ? cell.text.slice(0, 280) + '…' : cell.text;
-  preview.textContent = txt;
-  preview.onclick = () => openCellModal(cid);
+  const isCustomExcerpt = !!stateCell.excerpt;
+  const previewText = stateCell.excerpt || (cell.text.length > 220 ? cell.text.slice(0, 220) + '…' : cell.text);
+  if (isCustomExcerpt) {
+    preview.innerHTML = `<span class="cell-excerpt-marker" title="Custom excerpt — hover for full text">★</span>${escapeHtml(previewText)}`;
+  } else {
+    preview.textContent = previewText;
+  }
+  attachHoverHandlers(preview, cid);
   inner.appendChild(preview);
 
   // notes textarea
@@ -349,7 +370,115 @@ function renderCell(cid) {
 }
 function renderAllTables() { renderTabs(); }
 
-// ---- cell modal ----
+// ---- hover popover (full text + highlight-to-excerpt) ----
+let HOVER_POPOVER = null;
+let HOVER_SHOW_TIMER = null;
+let HOVER_HIDE_TIMER = null;
+
+function attachHoverHandlers(preview, cid) {
+  preview.addEventListener('mouseenter', () => {
+    clearTimeout(HOVER_HIDE_TIMER);
+    HOVER_SHOW_TIMER = setTimeout(() => showPopover(cid, preview), 320);
+  });
+  preview.addEventListener('mouseleave', () => {
+    clearTimeout(HOVER_SHOW_TIMER);
+    HOVER_HIDE_TIMER = setTimeout(hidePopover, 280);
+  });
+}
+
+function hidePopover() {
+  clearTimeout(HOVER_SHOW_TIMER);
+  if (HOVER_POPOVER) {
+    HOVER_POPOVER.remove();
+    HOVER_POPOVER = null;
+  }
+}
+
+function showPopover(cid, anchorEl) {
+  clearTimeout(HOVER_HIDE_TIMER);
+  if (HOVER_POPOVER) HOVER_POPOVER.remove();
+
+  const cell = DATA.cells[cid];
+  const stateCell = STATE.cells[cid] || {};
+  const sid = cell.sid;
+  const flagsHtml = (cell.flags || []).map(f =>
+    `<div class="popover-flag"><span class="popover-flag-tag">${escapeHtml(f.type)}:</span> ${escapeHtml(f.text)}</div>`
+  ).join('');
+  const patternText = STATE.patterns[sid];
+  const patternHtml = patternText ? `<div class="popover-pattern"><span class="popover-pattern-label">pattern:</span> ${escapeHtml(patternText)}</div>` : '';
+  const resetBtn = stateCell.excerpt ? `<button class="popover-btn reset" id="popover-reset-btn">Reset excerpt</button>` : '';
+
+  const pop = document.createElement('div');
+  pop.className = 'hover-popover';
+  pop.innerHTML = `
+    <div class="popover-meta">${cell.sid} · ${escapeHtml(DATA.student_names[sid])} · ${cell.model} · ${cell.condition}</div>
+    <div class="popover-actions-top">
+      <button class="popover-btn" id="popover-set-btn">↑ Set selected text as cell preview</button>
+      ${resetBtn}
+      <span class="popover-hint">select text below, then click "Set"</span>
+    </div>
+    ${patternHtml}
+    <div class="popover-body" id="popover-body">${escapeHtml(cell.text)}</div>
+    ${flagsHtml ? `<div class="popover-flags">${flagsHtml}</div>` : ''}
+  `;
+  document.body.appendChild(pop);
+  HOVER_POPOVER = pop;
+
+  // position to the right of the cell, or left if no room
+  const r = anchorEl.getBoundingClientRect();
+  const popW = 540;
+  let left = r.right + 12;
+  if (left + popW > window.innerWidth - 20) left = Math.max(10, r.left - popW - 12);
+  pop.style.left = left + 'px';
+  let top = r.top + window.scrollY;
+  // clamp vertically so the popover stays in the viewport
+  const popHeight = Math.min(window.innerHeight - 40, 600);
+  pop.style.maxHeight = popHeight + 'px';
+  if (top + popHeight > window.scrollY + window.innerHeight - 20) {
+    top = window.scrollY + window.innerHeight - popHeight - 20;
+  }
+  if (top < window.scrollY + 10) top = window.scrollY + 10;
+  pop.style.top = top + 'px';
+
+  pop.addEventListener('mouseenter', () => clearTimeout(HOVER_HIDE_TIMER));
+  pop.addEventListener('mouseleave', () => {
+    HOVER_HIDE_TIMER = setTimeout(hidePopover, 280);
+  });
+
+  // capture selection BEFORE focus changes by using mousedown
+  document.getElementById('popover-set-btn').addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    const text = window.getSelection().toString().trim();
+    if (!text) {
+      const btn = e.target;
+      const orig = btn.textContent;
+      btn.textContent = 'select text first';
+      btn.style.background = '#c2941f';
+      setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 1400);
+      return;
+    }
+    STATE.cells[cid] = STATE.cells[cid] || {};
+    STATE.cells[cid].excerpt = text;
+    saveState();
+    renderCell(cid);
+    e.target.textContent = '✓ saved as preview';
+    setTimeout(() => { if (HOVER_POPOVER) hidePopover(); }, 700);
+  });
+
+  const resetBtnEl = document.getElementById('popover-reset-btn');
+  if (resetBtnEl) {
+    resetBtnEl.addEventListener('click', () => {
+      if (STATE.cells[cid]) {
+        delete STATE.cells[cid].excerpt;
+        saveState();
+        renderCell(cid);
+      }
+      hidePopover();
+    });
+  }
+}
+
+// ---- cell modal (kept for cross-view drill-through; not used on main table now) ----
 let CURRENT_CID = null;
 function openCellModal(cid) {
   CURRENT_CID = cid;
