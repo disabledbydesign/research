@@ -117,6 +117,8 @@ This workflow was distilled from the *output-format-bias* paper's process (s1 / 
 
 ## Notes on configuration
 
+- **Repository hygiene.** C2C session directories (`*/c2c/c2c_sessions/`) and this workflow document are gitignored at the repo root. Session directories generate large conversation logs and working artifacts that belong on disk but not in git history. When setting up a new paper's C2C directory, verify the gitignore pattern covers it before committing.
+
 - **Reframe must be active for any C2C session.** Sessions without Reframe produce the bliss attractor (convergent, sycophantic, smoothed). Sessions with Reframe produce real-time critique, held tensions, and findings that change the architecture.
 - **Peer investigation > A-leads/B-stress-tests** for most paper-building phases. The hierarchical configuration is a known smoothing failure mode (apparent critique conceals consensus).
 - **Closing a drifted session and writing a fresh handoff** is sometimes a better move than asking the session to revise its own work. When corrections needed exceed a certain threshold, the drift is in the working memory the instances built up, not just in the artifacts.
