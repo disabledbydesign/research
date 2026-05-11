@@ -42,11 +42,11 @@ CROSS_NOTES = {
     "S002": "Burnout signal trajectory: no model in any condition reads burnout. Llama 8B's affect attention oscillates b_replicate \"struggle/overwhelmed\" → a1 \"introspection\" → a2 \"frustration or overwhelm\" → a2_no_context \"passionate\" (most asset-flattened). Memory note: no preserved-binary catches S002 either.",
     "S004": "Priya false-positive resolution: Llama's b_replicate \"deflection\" reading CLEARED in all three stripped conditions. Direct corroboration that the structural-power-moves taxonomy was the source.",
     "S022": "Anger handling robust across all 4 conditions × 3 models. Equity floor on anger (system-prompt level, kept across all conditions) appears load-bearing.",
-    "S023": "Yolanda asset framing stable, BUT Llama in a2_no_context fabricates \"undocumented\" status and produces paternalistic background-inference. Without class context, Llama starts inferring background details that may not be in Yolanda's submission.",
+    "S023": "Yolanda asset framing stable across all 4 conditions × 3 models. Llama in a2 and a2_no_context uses \"undocumented immigrant woman\" — interpretive synonym for Yolanda's \"came here without papers\" (not fabrication, but a register shift worth noting). The new failure mode is specifically in a2_no_context Llama: paternalistic background-inference (\"may be from a low-income background… which could be relevant for the teacher to be aware of\"). Class context appears to anchor more careful framing.",
     "S024": "Ingrid false-positive resolution (Llama b_replicate): CLEARED in all three stripped conditions. Same mechanism as S004.",
     "S028": "Imani asset framing stable, BUT Llama in a2_no_context shifts to paternalistic background-inference (\"may have had to navigate complex social dynamics… particularly as a Black girl\"). New failure mode emerging without class context.",
-    "S029": "Espinoza asset framing stable. Qwen pronoun flips at the a1 boundary (she/her → he/his). Same student, deterministic temp 0.3 — prompt-content spillover into gender inference.",
-    "S031": "Marcus minimal-effort: most uneven case. Llama only names \"not yet invested\" in a2 and a2_no_context. Gemma never names minimal-effort directly but a2 comes closest (\"needs more scaffolding or a different kind of prompt\"). Qwen b_replicate hallucinates a \"previous-work dip\"; in a1+ shifts to peer-comparison. The strips help in this cell — closer to honest reading once asset-only scaffolding is removed.",
+    "S029": "Espinoza asset framing stable. Qwen pronoun shifts across THREE states: b_replicate uses she/her; a1 + a2 use he/his; a2_no_context shifts to they/their. Same student, deterministic temp 0.3 — prompt content has multi-stage spillover into gender inference. Llama uses they/them consistently.",
+    "S031": "Marcus minimal-effort: most uneven case. Llama only names \"not yet invested\" in a2 and a2_no_context (verbatim). Llama a1 and a2 also use peer-comparison (\"lacks the depth and nuance of some of his peers\"). Gemma never names minimal-effort directly but a2 comes closest (\"needs more scaffolding or a different kind of prompt\"). Qwen b_replicate hallucinates a \"previous-work dip\"; a1 shifts to a peer-comparison framing (\"compared to other students' submissions\") + foundational-level register; a2 and a2_no_context drop the peer-comparison and stay in foundational-level framing. Strips help in this cell — closer to honest reading once asset-only scaffolding is removed.",
 }
 
 # Pre-populated flags per (student, model, condition)
@@ -63,13 +63,9 @@ FLAGS = {
         ("HALLUCINATION",
          "\"a temporary dip in depth and nuance compared to his previous work\" — there is no previous work in the prompt. Trajectory data fabricated. Disappears in a1+."),
     ],
-    ("S022", "qwen7b", "b_replicate"): [
-        ("TAXONOMY MISUSE",
-         "Qwen calls Destiny's analytic move \"a structural power move\" — uses taxonomy term as positive descriptor (the term denotes student foreclosures to flag, not student insight)."),
-    ],
     ("S023", "qwen7b", "b_replicate"): [
         ("TAXONOMY MISUSE",
-         "Same as S022 — Yolanda's analysis labeled \"a structural power move\" in positive direction."),
+         "Qwen labels Yolanda's analytic move \"a structural power move\" in positive direction — uses taxonomy term as positive descriptor (the term denotes student foreclosures to flag, not student insight). Only confirmed instance of this in Qwen b_replicate (S022 does not show the same pattern, despite Claude's initial annotation — validation correction)."),
     ],
     ("S029", "qwen7b", "b_replicate"): [
         ("PRONOUN INFERENCE",
@@ -90,10 +86,12 @@ FLAGS = {
          "Contrasts Ingrid with \"Alex Hernandez's more formal definition.\" Verify against class_reading_source. Does NOT recur in a2_no_context."),
     ],
     ("S023", "llama8b", "a2_no_context"): [
-        ("CONTENT FABRICATION (?)",
-         "Describes Yolanda's abuela as \"undocumented immigrant woman\" and \"undocumented worker.\" Verify against Yolanda's submission text."),
         ("PATERNALISTIC BACKGROUND INFERENCE",
-         "\"may be from a low-income background or have a family history of immigration and labor struggles, which could be relevant for the teacher to be aware of.\" New failure mode without class context."),
+         "\"may be from a low-income background or have a family history of immigration and labor struggles, which could be relevant for the teacher to be aware of in terms of providing support and resources for her academic journey.\" Llama infers student background as concern-flag — new failure mode emerging without class context. (Note: an earlier flag claimed Llama fabricates Yolanda's abuela as 'undocumented' — validation found Yolanda's submission does say her abuela 'came here without papers', so 'undocumented' is interpretive synonymy, not fabrication. Flag removed.)"),
+    ],
+    ("S023", "llama8b", "a2"): [
+        ("VOCABULARY INTERPRETATION",
+         "Describes Yolanda's abuela as \"undocumented immigrant woman\" — Yolanda's submission says \"came here without papers,\" so this is interpretive synonymy rather than fabrication. Worth noting because the same model uses the same phrasing in a2_no_context with more concerning paternalism."),
     ],
     ("S028", "llama8b", "a2_no_context"): [
         ("PATERNALISTIC BACKGROUND INFERENCE",
@@ -240,6 +238,31 @@ def build_html(by_cond):
   .popover-flag-tag {{ font-weight: bold; color: #8b6914; font-family: 'Courier New', monospace; font-size: 0.85em; }}
   .popover-pattern {{ background: #f7f4ee; border-left: 3px solid #888; padding: 0.3em 0.6em; margin-bottom: 0.5em; font-size: 0.85em; }}
   .popover-pattern-label {{ font-weight: bold; font-size: 0.75em; color: #555; text-transform: uppercase; }}
+
+  /* Flags tab */
+  .flag-row {{ background: #fff; border: 1px solid #ddd; border-left: 5px solid #999; border-radius: 4px; padding: 0.7em 0.9em; margin-bottom: 0.7em; }}
+  .flag-row.status-open {{ border-left-color: #c2941f; }}
+  .flag-row.status-verified {{ border-left-color: #2f8a3a; background: #f0f7f1; }}
+  .flag-row.status-needs-correction {{ border-left-color: #d9534f; background: #fdf2f2; }}
+  .flag-row.status-dismissed {{ border-left-color: #888; background: #f3f3f3; opacity: 0.7; }}
+  .flag-row.status-dismissed .flag-text {{ text-decoration: line-through; color: #777; }}
+  .flag-meta {{ display: flex; gap: 0.8em; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.4em; }}
+  .flag-id {{ font-family: 'Courier New', monospace; font-size: 0.85em; color: #444; }}
+  .flag-type {{ font-family: 'Courier New', monospace; font-size: 0.78em; font-weight: bold; color: #8b6914; background: #fff8dc; padding: 0.1em 0.5em; border-radius: 3px; }}
+  .flag-student-name {{ font-size: 0.85em; color: #666; }}
+  .flag-text {{ font-size: 0.92em; line-height: 1.45; margin-bottom: 0.6em; }}
+  .flag-controls {{ display: grid; grid-template-columns: 180px 1fr 140px; gap: 0.5em; align-items: start; }}
+  .flag-controls label {{ font-size: 0.8em; color: #555; display: block; margin-bottom: 0.2em; font-weight: bold; }}
+  .flag-controls select {{ width: 100%; padding: 0.3em; font-family: Georgia, serif; font-size: 0.9em; }}
+  .flag-controls textarea {{ width: 100%; min-height: 48px; font-family: Georgia, serif; font-size: 0.85em; padding: 0.3em; resize: vertical; }}
+  .flag-controls button {{ padding: 0.4em 0.7em; font-family: Georgia, serif; font-size: 0.85em; cursor: pointer; background: #1a4a7e; color: #fff; border: none; border-radius: 3px; }}
+  .flag-controls button:hover {{ background: #2563a3; }}
+  .flag-progress {{ background: #f7f4ee; padding: 0.5em 1em; border-radius: 4px; margin-bottom: 1em; font-size: 0.9em; }}
+  .cell-jumped {{ animation: cellFlash 2.5s ease-out; }}
+  @keyframes cellFlash {{
+    0%, 100% {{ outline: 0px solid transparent; }}
+    10%, 50% {{ outline: 4px solid #d4a017; outline-offset: -4px; }}
+  }}
 
   th.student-col .student-label {{ display: flex; flex-direction: column; gap: 0.3em; }}
   th.student-col .student-name {{ font-family: Georgia, serif; font-weight: normal; font-size: 0.85em; color: #444; }}
@@ -417,12 +440,119 @@ function renderPatternsEditor() {{
   }});
 }}
 
+// ---- flag list + jump-to-cell ----
+const FLAG_STATUSES = ['open', 'verified', 'needs-correction', 'dismissed'];
+
+function getAllFlags() {{
+  const flags = [];
+  Object.values(DATA.cells).forEach(cell => {{
+    (cell.flags || []).forEach((f, idx) => {{
+      flags.push({{
+        flagId: `${{cell.sid}}__${{cell.model}}__${{cell.condition}}__${{idx}}`,
+        cid: `${{cell.sid}}_${{cell.model}}_${{cell.condition}}`,
+        sid: cell.sid,
+        model: cell.model,
+        cond: cell.condition,
+        student_name: DATA.student_names[cell.sid],
+        type: f.type,
+        text: f.text,
+      }});
+    }});
+  }});
+  return flags;
+}}
+
+function setFlagStatus(flagId, status) {{
+  STATE.flag_states = STATE.flag_states || {{}};
+  STATE.flag_states[flagId] = STATE.flag_states[flagId] || {{}};
+  STATE.flag_states[flagId].status = status;
+  saveState();
+  renderFlagsTab();
+}}
+function setFlagNotes(flagId, notes) {{
+  STATE.flag_states = STATE.flag_states || {{}};
+  STATE.flag_states[flagId] = STATE.flag_states[flagId] || {{}};
+  STATE.flag_states[flagId].notes = notes;
+  saveState();
+}}
+function jumpToCell(cid) {{
+  const parts = cid.split('_');
+  const cond = parts.slice(2).join('_');
+  activateTab(cond);
+  setTimeout(() => {{
+    const el = document.getElementById('tc-' + cid);
+    if (el) {{
+      el.scrollIntoView({{behavior: 'smooth', block: 'center'}});
+      el.classList.remove('cell-jumped');
+      void el.offsetWidth;  // force reflow
+      el.classList.add('cell-jumped');
+    }}
+  }}, 80);
+}}
+
+function renderFlagsTab() {{
+  const c = document.getElementById('tabc-_flags');
+  if (!c) return;
+  const flags = getAllFlags();
+  const counts = {{open: 0, verified: 0, 'needs-correction': 0, dismissed: 0}};
+  flags.forEach(f => {{
+    const st = (STATE.flag_states && STATE.flag_states[f.flagId] && STATE.flag_states[f.flagId].status) || 'open';
+    counts[st] = (counts[st] || 0) + 1;
+  }});
+  let html = `<div class="cond-desc">Pre-populated flags I (Claude) attached during my initial read. Work through them one at a time — open the corresponding cell, verify against the model's actual output, set status + notes. Counts in <code>{{open: ${{counts.open}}, verified: ${{counts.verified}}, needs-correction: ${{counts['needs-correction']}}, dismissed: ${{counts.dismissed}}}}</code>.</div>`;
+  flags.forEach(f => {{
+    const st = (STATE.flag_states && STATE.flag_states[f.flagId]) || {{}};
+    const status = st.status || 'open';
+    const notes = st.notes || '';
+    const opts = FLAG_STATUSES.map(s => `<option value="${{s}}" ${{s === status ? 'selected' : ''}}>${{s}}</option>`).join('');
+    html += `
+      <div class="flag-row status-${{status}}">
+        <div class="flag-meta">
+          <span class="flag-id">${{f.sid}} · ${{f.model}} · ${{f.cond}}</span>
+          <span class="flag-student-name">${{escapeHtml(f.student_name)}}</span>
+          <span class="flag-type">${{escapeHtml(f.type)}}</span>
+        </div>
+        <div class="flag-text">${{escapeHtml(f.text)}}</div>
+        <div class="flag-controls">
+          <div>
+            <label>Status</label>
+            <select onchange="setFlagStatus('${{f.flagId}}', this.value)">${{opts}}</select>
+          </div>
+          <div>
+            <label>Resolution notes</label>
+            <textarea oninput="setFlagNotes('${{f.flagId}}', this.value)" placeholder="What you decided after reviewing the cell…">${{escapeHtml(notes)}}</textarea>
+          </div>
+          <div>
+            <label>&nbsp;</label>
+            <button onclick="jumpToCell('${{f.cid}}')">→ Jump to cell</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }});
+  c.innerHTML = html;
+}}
+
 // ---- tabs + tables ----
 function renderTabs() {{
   const tabsEl = document.getElementById('tabs');
   const contentsEl = document.getElementById('tab-contents');
   tabsEl.innerHTML = '';
   contentsEl.innerHTML = '';
+
+  // Flags tab first
+  const flagCount = getAllFlags().length;
+  const flagTab = document.createElement('div');
+  flagTab.className = 'tab';
+  flagTab.innerHTML = `🚩 Flags (${{flagCount}})`;
+  flagTab.onclick = () => activateTab('_flags');
+  flagTab.id = 'tab-_flags';
+  tabsEl.appendChild(flagTab);
+  const flagContent = document.createElement('div');
+  flagContent.className = 'tab-content';
+  flagContent.id = 'tabc-_flags';
+  contentsEl.appendChild(flagContent);
+
   DATA.conds.forEach((cond, idx) => {{
     const tab = document.createElement('div');
     tab.className = 'tab' + (idx === 0 ? ' active' : '');
@@ -437,12 +567,15 @@ function renderTabs() {{
     c.appendChild(buildCondTable(cond));
     contentsEl.appendChild(c);
   }});
+
+  renderFlagsTab();
 }}
 function activateTab(cond) {{
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
   document.getElementById('tab-' + cond).classList.add('active');
   document.getElementById('tabc-' + cond).classList.add('active');
+  if (cond === '_flags') renderFlagsTab();
 }}
 
 function buildCondTable(cond) {{
