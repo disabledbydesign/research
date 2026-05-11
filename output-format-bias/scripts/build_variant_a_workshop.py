@@ -213,13 +213,17 @@ def build_html(by_cond):
   table.coding th {{ background: #ececec; font-weight: bold; padding: 0.4em; font-size: 0.9em; }}
   table.coding th.student-col {{ width: 130px; font-family: 'Courier New', monospace; }}
   table.coding th.model-col {{ font-family: 'Courier New', monospace; }}
-  table.coding td.cell {{ cursor: pointer; transition: outline 0.1s; padding: 0; height: 220px; position: relative; }}
-  table.coding td.cell:hover {{ outline: 3px solid #5a8ec9; outline-offset: -3px; }}
-  .cell-inner {{ height: 100%; padding: 0.5em; overflow: hidden; position: relative; font-size: 0.78em; }}
-  .cell-tag {{ display: inline-block; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.75em; font-family: 'Courier New', monospace; background: rgba(0,0,0,0.08); margin-bottom: 0.3em; }}
-  .cell-flag-icon {{ position: absolute; top: 0.3em; right: 0.3em; background: #c2941f; color: #fff; padding: 0.1em 0.4em; border-radius: 3px; font-size: 0.7em; font-weight: bold; }}
-  .cell-preview {{ font-family: Georgia, serif; line-height: 1.35; }}
-  .cell-notes {{ position: absolute; bottom: 0.4em; left: 0.5em; right: 0.5em; font-style: italic; font-size: 0.72em; color: #444; background: rgba(255,255,255,0.85); padding: 0.2em 0.4em; border-radius: 2px; max-height: 50px; overflow: hidden; }}
+  table.coding td.cell {{ padding: 0; height: 360px; position: relative; }}
+  .cell-inner {{ height: 100%; padding: 0.4em; display: flex; flex-direction: column; gap: 4px; font-size: 0.78em; }}
+  .cell-top {{ display: flex; gap: 4px; align-items: center; }}
+  .cell-cat {{ flex: 1; font-family: Georgia, serif; font-size: 0.82em; padding: 0.2em; border: 1px solid #888; background: rgba(255,255,255,0.85); }}
+  .cell-flag-badge {{ background: #c2941f; color: #fff; padding: 0.1em 0.45em; border-radius: 3px; font-size: 0.7em; font-weight: bold; font-family: 'Courier New', monospace; cursor: help; }}
+  .cell-preview {{ flex: 1; overflow: hidden; cursor: pointer; padding: 0.4em; background: rgba(255,255,255,0.65); border: 1px dashed #999; border-radius: 2px; font-family: Georgia, serif; line-height: 1.35; position: relative; }}
+  .cell-preview:hover {{ background: rgba(255,255,255,0.95); border-color: #1a4a7e; }}
+  .cell-preview::after {{ content: '↗ open full'; position: absolute; bottom: 2px; right: 4px; font-size: 0.7em; color: #1a4a7e; background: rgba(255,255,255,0.9); padding: 0 0.3em; opacity: 0; transition: opacity 0.1s; }}
+  .cell-preview:hover::after {{ opacity: 1; }}
+  .cell-notes-input {{ height: 90px; font-family: Georgia, serif; font-size: 0.82em; padding: 0.3em; border: 1px solid #888; resize: none; background: rgba(255,255,255,0.85); }}
+  .cell-notes-input:focus {{ background: #fff; outline: 2px solid #5a8ec9; }}
 
   th.student-col .student-label {{ display: flex; flex-direction: column; }}
   th.student-col .student-name {{ font-family: Georgia, serif; font-weight: normal; font-size: 0.8em; color: #555; }}
@@ -443,7 +447,6 @@ function buildCondTable(cond) {{
       const td = document.createElement('td');
       td.className = 'cell';
       td.id = 'tc-' + cid;
-      td.onclick = () => openCellModal(cid);
       td.appendChild(buildCellInner(cid));
       row.appendChild(td);
     }});
@@ -461,15 +464,57 @@ function buildCellInner(cid) {{
   const inner = document.createElement('div');
   inner.className = 'cell-inner';
   if (cat) inner.style.background = cat.color;
-  let html = '';
-  if (cell.flags && cell.flags.length) html += `<span class="cell-flag-icon">⚑ ${{cell.flags.length}}</span>`;
-  if (cat) html += `<span class="cell-tag">${{escapeHtml(cat.label)}}</span><br>`;
-  const preview = cell.text.length > 200 ? cell.text.slice(0, 200) + '…' : cell.text;
-  html += `<div class="cell-preview">${{escapeHtml(preview)}}</div>`;
-  if (stateCell.notes && stateCell.notes.trim()) {{
-    html += `<div class="cell-notes">${{escapeHtml(stateCell.notes.slice(0, 200))}}${{stateCell.notes.length > 200 ? '…' : ''}}</div>`;
+
+  // top row: category dropdown + flag badge
+  const top = document.createElement('div');
+  top.className = 'cell-top';
+  const sel = document.createElement('select');
+  sel.className = 'cell-cat';
+  sel.innerHTML = `<option value="">— uncategorized —</option>` + STATE.categories.map(c =>
+    `<option value="${{c.id}}" ${{stateCell.category === c.id ? 'selected' : ''}}>${{escapeHtml(c.label)}}</option>`
+  ).join('');
+  sel.onchange = (e) => {{
+    e.stopPropagation();
+    STATE.cells[cid] = STATE.cells[cid] || {{}};
+    STATE.cells[cid].category = sel.value;
+    saveState();
+    const newCat = sel.value ? categoryById(sel.value) : null;
+    inner.style.background = newCat ? newCat.color : '';
+  }};
+  sel.onclick = (e) => e.stopPropagation();
+  top.appendChild(sel);
+  if (cell.flags && cell.flags.length) {{
+    const badge = document.createElement('span');
+    badge.className = 'cell-flag-badge';
+    badge.textContent = `⚑ ${{cell.flags.length}}`;
+    badge.title = cell.flags.map(f => f.type + ': ' + f.text).join('\\n\\n');
+    badge.onclick = (e) => {{ e.stopPropagation(); openCellModal(cid); }};
+    top.appendChild(badge);
   }}
-  inner.innerHTML = html;
+  inner.appendChild(top);
+
+  // preview text (click to expand)
+  const preview = document.createElement('div');
+  preview.className = 'cell-preview';
+  const txt = cell.text.length > 280 ? cell.text.slice(0, 280) + '…' : cell.text;
+  preview.textContent = txt;
+  preview.onclick = () => openCellModal(cid);
+  inner.appendChild(preview);
+
+  // notes textarea
+  const notes = document.createElement('textarea');
+  notes.className = 'cell-notes-input';
+  notes.placeholder = 'coding notes…';
+  notes.value = stateCell.notes || '';
+  notes.oninput = (e) => {{
+    e.stopPropagation();
+    STATE.cells[cid] = STATE.cells[cid] || {{}};
+    STATE.cells[cid].notes = notes.value;
+    saveState();
+  }};
+  notes.onclick = (e) => e.stopPropagation();
+  inner.appendChild(notes);
+
   return inner;
 }}
 
