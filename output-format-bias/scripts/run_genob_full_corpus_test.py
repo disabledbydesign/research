@@ -292,11 +292,13 @@ def determinism_check(results_by_model):
 
 
 def run_condition(condition_name, condition_cfg, corpus, class_reading, student_ids,
-                  n_runs, timestamp):
+                  n_runs, timestamp, initial_results=None, start_run=1):
+    resumed = start_run > 1
     print(f"\n\n{'#'*72}")
     print(f"#  CONDITION: {condition_name}")
     print(f"#  {condition_cfg['description']}")
-    print(f"#  students={len(student_ids)}  n_runs={n_runs}")
+    print(f"#  students={len(student_ids)}  n_runs={n_runs}"
+          + (f"  (resuming from pass {start_run})" if resumed else ""))
     print(f"{'#'*72}")
 
     prompt_template = condition_cfg["prompt"]
@@ -307,8 +309,8 @@ def run_condition(condition_name, condition_cfg, corpus, class_reading, student_
     for model_key in MODELS:
         print(f"\n{'='*70}\n  {condition_name} — {model_key} (n={n_runs})\n{'='*70}")
         backend = get_backend(model_key)
-        results = []
-        for run in range(1, n_runs + 1):
+        results = list(initial_results) if initial_results else []
+        for run in range(start_run, n_runs + 1):
             print(f"\n  --- Pass {run}/{n_runs} ---")
             for sid in student_ids:
                 if sid not in corpus:
@@ -421,6 +423,23 @@ def parse_args():
         "--smoke", action="store_true",
         help="Limit to 2 students (1 ES = S002, 1 WB = WB01) and n=1 per condition.",
     )
+    p.add_argument(
+        "--condition", choices=["a2", "a2_no_context", "both"], default="both",
+        help="Which condition to run. Default: both. Use 'a2' or 'a2_no_context' "
+             "to run a single condition (useful for interleaving with other tests).",
+    )
+    p.add_argument(
+        "--n-runs", type=int, default=None,
+        help=f"Number of passes per condition. Default: {N_RUNS_PER_MODEL} (paper standard). "
+             "Override with 1 for a quick first pass before chaining other tests.",
+    )
+    p.add_argument(
+        "--resume-from", metavar="PARTIAL_FILE",
+        help="Path to a .partial.json checkpoint. Loads completed passes and runs "
+             "the remainder up to --n-runs (default: N_RUNS_PER_MODEL). The final "
+             "output file uses the same timestamp as the partial, so all passes "
+             "land in one file.",
+    )
     return p.parse_args()
 
 
@@ -447,8 +466,41 @@ def _metal_warmup(model_key: str = "gemma12b") -> None:
 def main():
     args = parse_args()
     smoke = args.smoke
-    n_runs = 1 if smoke else N_RUNS_PER_MODEL
-    timestamp = _dt.datetime.now().strftime("%Y-%m-%d_%H%M")
+
+    # Handle --resume-from: load checkpoint, override condition + timestamp.
+    resume_initial_results = None
+    resume_start_run = 1
+    if args.resume_from:
+        import pathlib as _pl
+        partial_path = _pl.Path(args.resume_from)
+        if not partial_path.exists():
+            raise FileNotFoundError(f"--resume-from: {partial_path} not found")
+        partial = json.loads(partial_path.read_text())
+        resume_initial_results = partial["results_so_far"]
+        resume_start_run = partial["passes_complete"] + 1
+        # Infer timestamp from filename: test_variant_COND_FULL_CORPUS_observation_TIMESTAMP.partial.json
+        stem = partial_path.stem  # strips .json
+        stem = stem.replace(".partial", "")
+        timestamp = stem.split("observation_")[-1]
+        if not args.condition or args.condition == "both":
+            args.condition = partial["condition"]
+        print(f"  [resume] Loaded {partial['passes_complete']} passes from {partial_path.name}")
+        print(f"  [resume] Resuming from pass {resume_start_run}, timestamp={timestamp}")
+    else:
+        timestamp = _dt.datetime.now().strftime("%Y-%m-%d_%H%M")
+
+    if smoke:
+        n_runs = 1
+    elif args.n_runs is not None:
+        n_runs = args.n_runs
+    else:
+        n_runs = N_RUNS_PER_MODEL
+    condition_filter = args.condition  # "a2", "a2_no_context", or "both"
+
+    conditions_to_run = {
+        k: v for k, v in CONDITIONS.items()
+        if condition_filter == "both" or k == condition_filter
+    }
 
     print("="*72)
     print("Generative observation — FULL CORPUS test "
@@ -461,7 +513,7 @@ def main():
     es_ids = [s for s in student_ids if s.startswith("S")]
     wb_ids = [s for s in student_ids if s.startswith("WB")]
 
-    print(f"Conditions: {list(CONDITIONS.keys())}")
+    print(f"Conditions: {list(conditions_to_run.keys())}")
     print(f"Models: {list(MODELS.keys())}  (Gemma 12B only)")
     print(f"Students: {len(student_ids)} total = "
           f"{len(es_ids)} ES + {len(wb_ids)} WB")
@@ -481,11 +533,16 @@ def main():
         _metal_warmup()
 
     try:
-        for condition_name, condition_cfg in CONDITIONS.items():
+        for condition_name, condition_cfg in conditions_to_run.items():
             t_cond = time.time()
+            # Pass resume state only for the matching condition (first iteration when resuming).
+            use_initial = resume_initial_results if condition_name == args.condition else None
+            use_start = resume_start_run if condition_name == args.condition else 1
             results_by_model = run_condition(
                 condition_name, condition_cfg, corpus, class_reading,
                 student_ids, n_runs, timestamp,
+                initial_results=use_initial,
+                start_run=use_start,
             )
             write_condition_output(
                 condition_name, condition_cfg, results_by_model, prov,
