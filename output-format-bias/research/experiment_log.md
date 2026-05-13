@@ -1816,6 +1816,8 @@ VALID REGISTER. Neurodivergent writing = COGNITIVE STYLE." Binary output:
 
 **Results**:
 
+> **⚠ CORRECTION 2026-05-11**: This Test B table has S029 = CLEAR. **Raw JSON shows S029 = FLAG in 3/3 Test B runs** (`test_b_best_concern_gemma12b_2026-03-26.json`, `..._2026-04-14_1211.json`, `..._2026-04-14_1216.json`). The verdict paragraph below — "CLEARED EVERY STUDENT" — is also wrong. Test B did flag S029 (false positive on neurodivergent). This means Test B and Test C had the same disparate pattern (both clear S023, both flag S029), contradicting the Test-B-vs-Test-C contrast that the narrative at line ~1870 below draws. Flagged by Pass 2 (2026-04-25), Pass 3 (2026-04-26), Pass 8 (2026-05-11). Canonical correct values at the "CORRECTIONS — 2026-04-25" appendix beginning line 6721. Detailed drift tracking: `c2c/c2c_sessions/output-format-bias-session-4_2026-04-28/artifacts/verification_2026-05-11/log_vs_json_drift_2026-05-11.md` Drift 1 + Drift 3.
+
 | Student | Pattern | Expected | Result |
 |---|---|---|---|
 | S002 Jordan Kim | burnout | FLAG | **CLEAR** |
@@ -1823,7 +1825,7 @@ VALID REGISTER. Neurodivergent writing = COGNITIVE STYLE." Binary output:
 | S022 Destiny | righteous_anger | CLEAR | CLEAR |
 | S023 Yolanda | lived_exp | CLEAR | CLEAR |
 | S028 Imani | AAVE | CLEAR | CLEAR |
-| S029 Jordan E | neurodivergent | CLEAR | CLEAR |
+| S029 Jordan E | neurodivergent | CLEAR | CLEAR ← **actually FLAG in raw JSON (3/3 runs)** |
 | S031 Marcus | minimal_effort | CLEAR | CLEAR |
 
 **Verdict**: The best possible concern prompt CLEARED EVERY STUDENT — including
@@ -1832,6 +1834,8 @@ to be both sensitive (catch burnout) AND equitable (don't flag Destiny). It
 overcorrects in one direction or the other. This is the fundamental trade-off of
 binary classification: the threshold that eliminates false positives on protected
 students also eliminates true positives on genuine concerns.
+
+> **⚠ Note on verdict**: The "CLEARED EVERY STUDENT" claim is wrong per raw JSON. Test B flagged S029 (3/3 false positive on neurodivergent) AND cleared S002 (missed the true positive). The actual finding is that the prompt produces *both* failure modes simultaneously — miss the TP, false-flag the neurodivergent case — rather than "overcorrects in one direction or the other." The corrected verdict still supports the broader claim that binary classification can't be both sensitive and equitable, but the specific framing of "cleared every student" is inaccurate.
 
 The observation approach has no such trade-off because it doesn't classify — it
 describes. S002's observation naturally surfaces "rush to finish... running low
@@ -1849,12 +1853,14 @@ concern detection). Same equity protections as Test B. Conclude with
 
 **Results**:
 
+> **⚠ CORRECTION 2026-05-11**: This Test C table has S023 = FLAG. **Raw JSON shows S023 = CLEAR** (`test_c_length_gemma12b_2026-03-26.json`). Only S029 was flagged in Test C, not S023. The narrative paragraph below comparing Test B to Test C is also wrong — both tests have the SAME disparate pattern (clear S023, flag S029), not different patterns. Flagged by Pass 2 (2026-04-25), Pass 3 (2026-04-26), Pass 8 (2026-05-11). Canonical correct values at "CORRECTIONS — 2026-04-25" appendix beginning line 6721. Detailed drift tracking: `c2c/c2c_sessions/output-format-bias-session-4_2026-04-28/artifacts/verification_2026-05-11/log_vs_json_drift_2026-05-11.md` Drift 2 + Drift 3.
+
 | Student | Pattern | Expected | Result |
 |---|---|---|---|
 | S002 Jordan Kim | burnout | FLAG | CLEAR |
 | S004 Priya | strong | CLEAR | CLEAR |
 | S022 Destiny | righteous_anger | CLEAR | CLEAR |
-| **S023 Yolanda** | **lived_exp** | **CLEAR** | **FLAG** |
+| **S023 Yolanda** | **lived_exp** | **CLEAR** | **FLAG** ← **actually CLEAR in raw JSON** |
 | S028 Imani | AAVE | CLEAR | CLEAR |
 | **S029 Jordan E** | **neurodivergent** | **CLEAR** | **FLAG — STILL DISPARATE** |
 | S031 Marcus | minimal_effort | CLEAR | CLEAR |
@@ -1867,11 +1873,15 @@ reconsider it. **The format, not the length, is the variable.** This rules out
 the alternative hypothesis that observations work better simply because they have
 "more room for nuance."
 
+> **⚠ Note on verdict**: Per raw JSON, only S029 was flagged in Test C, not S023. The "S023 and S029 are STILL flagged" claim is partially wrong (only S029 was flagged in Test C). The broader claim about format-not-length still holds — Test C flagged S029 just as Test B did, so length-adjustment didn't fix the disparity on the neurodivergent case.
+
 Notably, Test B (binary JSON, short) cleared S023 and S029, while Test C
 (binary with long justification) flagged them. More output space actually HURTS
 on these students — the model uses the extra room to build a case for its flag
 rather than to reconsider. This is consistent with the "no way out" hypothesis:
 in a classification format, more tokens means more opportunity to justify the
+
+> **⚠ CORRECTION 2026-05-11**: The "Test B cleared S023 and S029, while Test C flagged them" framing is **wrong on both data points**. Raw JSON shows Test B FLAGGED S029 (3/3 runs, narrative is wrong) and Test B CLEARED S023 (narrative is correct on S023 for Test B). Test C CLEARED S023 (narrative is wrong about Test C flagging S023) and FLAGGED S029 (narrative correct on S029 for Test C). **Honest summary: both Test B and Test C had the same disparate pattern — both cleared S023, both flagged S029.** The "more output space actually HURTS on these students" framing rests on a contrast that doesn't exist; the actual finding is that prompt-length variation doesn't change the underlying disparity (S023 cleared in both, S029 flagged in both). This change strengthens the "format is the variable" claim by removing the within-binary length differentiator. Flagged by Pass 2/3/8; see log_vs_json_drift_2026-05-11.md Drift 3.
 forced choice, not more opportunity to escape it.
 
 ### Test D: Structural Power Moves Detection

@@ -12,7 +12,7 @@ import difflib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-HTML = ROOT / "variant_a_coding_workshop_2026-05-11.html"
+DEFAULT_HTML = ROOT / "data_tables" / "variant_a_coding_workshop_2026-05-11.html"
 OUT_DIR = ROOT / "data" / "raw_outputs"
 
 CONDS = ["b_replicate", "a1", "a2", "a2_no_context"]
@@ -50,7 +50,11 @@ def extract_embedded_data(html_text: str) -> dict:
 
 
 def main():
-    html_text = HTML.read_text(encoding="utf-8")
+    html_path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_HTML
+    if not html_path.exists():
+        sys.exit(f"ERROR: HTML not found: {html_path}")
+    print(f"Validating: {html_path}")
+    html_text = html_path.read_text(encoding="utf-8")
     embedded = extract_embedded_data(html_text)
 
     sources = {}

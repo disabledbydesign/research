@@ -8,3 +8,8 @@ PAPER_BUILDING_WORKFLOW.md
 # Student data — anonymized but FERPA-adjacent (real student writing).
 # Architecture docs and READMEs in these folders stay versioned; CSVs do not.
 output-format-bias/data/dual_binary_run_*/*.csv
+
+# API keys — defense in depth; primary keys live in ~/Documents/GitHub/reframe/.env
+.env
+.env.*
+!.env.example

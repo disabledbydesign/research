@@ -1,122 +1,112 @@
 #!/usr/bin/env python3
 """Build the hand-coding workshop HTML for the Variant A stripped-observation run.
 
-v2 design: condition-tabs, click-to-modal, dropdown category picker, editable
-categories, per-cell notes, cross-condition viewer per student.
+v3 (2026-05-12 refactor):
+- File paths read from registry.json (scripts/test_comparison/registry.json)
+- Pre-populated content (STUDENT_PATTERNS, CROSS_NOTES, FLAGS, DEFAULT_CATEGORIES,
+  COND_LABELS, MODELS, STUDENT_IDS) read from genob_workshop_config.json
+- Adds an "Export as comparison config" button that downloads a manual_codes JSON
+  the comparison tool can register as a column.
+- Uses scripts/test_comparison/loader.py for the observation schema (single
+  source of schema knowledge).
 
-Reads the four condition JSON files written by run_variant_a_stripped_observation.py
-and produces a single self-contained HTML page.
+CLI:
+    # Build with default observations (b_replicate, a1, a2, a2_no_context — order matters):
+    python scripts/build_variant_a_workshop.py
+
+    # Build with a custom set of observations registered in registry.json:
+    python scripts/build_variant_a_workshop.py --observations variant_a_b_replicate variant_a_a1
+
+    # Custom output date (default = today). Use --date 2026-05-11 to overwrite the
+    # existing dated file so localStorage state survives:
+    python scripts/build_variant_a_workshop.py --date 2026-05-11
 """
 
-import json
+import argparse
+import datetime
 import html
+import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "data" / "raw_outputs"
-OUT_HTML = ROOT / "variant_a_coding_workshop_2026-05-11.html"
+sys.path.insert(0, str(ROOT / "scripts"))
+from test_comparison import loader as _loader  # noqa: E402
+from test_comparison.register import _load as _load_registry  # noqa: E402
 
-CONDS = ["b_replicate", "a1", "a2", "a2_no_context"]
-COND_FILES = {c: f"test_variant_{c}_observation_2026-05-11.json" for c in CONDS}
-COND_LABELS = {
-    "b_replicate":   "b_replicate — full prompt (taxonomy + rel/narrative + class context)",
-    "a1":            "a1 — taxonomy STRIPPED (kept: rel/narrative + class context)",
-    "a2":            "a2 — taxonomy + rel/narrative both STRIPPED (kept: class context)",
-    "a2_no_context": "a2_no_context — also class context STRIPPED (equity floor only)",
-}
-MODELS = ["gemma12b", "qwen7b", "llama8b"]
-STUDENT_IDS = ["S002", "S004", "S022", "S023", "S024", "S028", "S029", "S031"]
-
-STUDENT_PATTERNS = {
-    "S002": "Submission trails off mid-sentence (\"its late and...\"). Test R corpus designation: burnout. Late-night fatigue affect; signal worth teacher attention.",
-    "S004": "Questions whether intersectionality framework applies cleanly to South Asian immigrant women. Sophisticated theoretical critique by an engaged student.",
-    "S022": "Anger framed explicitly as legitimate political affect tied to redlining/family neighborhood. Test R corpus designation: righteous anger (NOT distress).",
-    "S023": "Abuela as analytic anchor. Explicit \"I don't know the academic word\" — epistemic humility about formal vocabulary, embodied knowledge intact.",
-    "S024": "Mother's experience as undocumented, pregnant immigrant. Lived-experience-precedes-theory framing (\"My mom lived it before I had words for it\").",
-    "S028": "Black girl in school — texture of differential treatment. Intergenerational knowledge transmission from mother's navigation.",
-    "S029": "Neurodivergent self-disclosure (dyslexia + ADHD + Latino + honors). Self-aware about writing struggles. Test R corpus designation: identity-navigation fatigue.",
-    "S031": "Brief submission (\"thats basically it i think\"). Minimal-effort affect; foundational comprehension but no elaboration.",
-}
-
-CROSS_NOTES = {
-    "S002": "Burnout signal trajectory: no model in any condition reads burnout. Llama 8B's affect attention oscillates b_replicate \"struggle/overwhelmed\" → a1 \"introspection\" → a2 \"frustration or overwhelm\" → a2_no_context \"passionate\" (most asset-flattened). Memory note: no preserved-binary catches S002 either.",
-    "S004": "Priya false-positive resolution: Llama's b_replicate \"deflection\" reading CLEARED in all three stripped conditions. Direct corroboration that the structural-power-moves taxonomy was the source.",
-    "S022": "Anger handling robust across all 4 conditions × 3 models. Equity floor on anger (system-prompt level, kept across all conditions) appears load-bearing.",
-    "S023": "Yolanda asset framing stable across all 4 conditions × 3 models. Llama in a2 and a2_no_context uses \"undocumented immigrant woman\" — interpretive synonym for Yolanda's \"came here without papers\" (not fabrication, but a register shift worth noting). The new failure mode is specifically in a2_no_context Llama: paternalistic background-inference (\"may be from a low-income background… which could be relevant for the teacher to be aware of\"). Class context appears to anchor more careful framing.",
-    "S024": "Ingrid false-positive resolution (Llama b_replicate): CLEARED in all three stripped conditions. Same mechanism as S004.",
-    "S028": "Imani asset framing stable, BUT Llama in a2_no_context shifts to paternalistic background-inference (\"may have had to navigate complex social dynamics… particularly as a Black girl\"). New failure mode emerging without class context.",
-    "S029": "Espinoza asset framing stable. Qwen pronoun shifts across THREE states: b_replicate uses she/her; a1 + a2 use he/his; a2_no_context shifts to they/their. Same student, deterministic temp 0.3 — prompt content has multi-stage spillover into gender inference. Llama uses they/them consistently.",
-    "S031": "Marcus minimal-effort: most uneven case. Llama only names \"not yet invested\" in a2 and a2_no_context (verbatim). Llama a1 and a2 also use peer-comparison (\"lacks the depth and nuance of some of his peers\"). Gemma never names minimal-effort directly but a2 comes closest (\"needs more scaffolding or a different kind of prompt\"). Qwen b_replicate hallucinates a \"previous-work dip\"; a1 shifts to a peer-comparison framing (\"compared to other students' submissions\") + foundational-level register; a2 and a2_no_context drop the peer-comparison and stay in foundational-level framing. Strips help in this cell — closer to honest reading once asset-only scaffolding is removed.",
-}
-
-# Pre-populated flags per (student, model, condition)
-FLAGS = {
-    ("S004", "llama8b", "b_replicate"): [
-        ("TAXONOMY FALSE-POSITIVE",
-         "Reads Priya's framework-questioning as \"a subtle attempt to deflect from the main point.\" Critical-theoretical sophistication misread as foreclosure. CLEARED in a1 / a2 / a2_no_context."),
-    ],
-    ("S024", "llama8b", "b_replicate"): [
-        ("TAXONOMY FALSE-POSITIVE",
-         "Claims Ingrid \"frames her mother's situation as a universal example… without explicitly acknowledging the structural power dynamics at play.\" Ingrid is explicitly engaging structural power throughout. CLEARED in a1 / a2 / a2_no_context."),
-    ],
-    ("S031", "qwen7b", "b_replicate"): [
-        ("HALLUCINATION",
-         "\"a temporary dip in depth and nuance compared to his previous work\" — there is no previous work in the prompt. Trajectory data fabricated. Disappears in a1+."),
-    ],
-    ("S023", "qwen7b", "b_replicate"): [
-        ("TAXONOMY MISUSE",
-         "Qwen labels Yolanda's analytic move \"a structural power move\" in positive direction — uses taxonomy term as positive descriptor (the term denotes student foreclosures to flag, not student insight). Only confirmed instance of this in Qwen b_replicate (S022 does not show the same pattern, despite Claude's initial annotation — validation correction)."),
-    ],
-    ("S029", "qwen7b", "b_replicate"): [
-        ("PRONOUN INFERENCE",
-         "Qwen uses \"she/her\" for Jordan Espinoza here. Flips to \"he/his\" in a1, a2, a2_no_context."),
-    ],
-    ("S029", "qwen7b", "a1"): [
-        ("PRONOUN FLIP", "Now \"he/his\" — flipped from \"she/her\" in b_replicate."),
-    ],
-    ("S028", "qwen7b", "b_replicate"): [
-        ("PRONOUN SLIP", "Refers to \"Iman\" once (truncated form of Imani). Minor."),
-    ],
-    ("S024", "gemma12b", "a1"): [
-        ("POSSIBLE CONTEXT-LEAK",
-         "References \"Maria Ndiaye and DeShawn Mercer\" as peer students. Verify against class_reading_source. Does NOT recur in a2_no_context (suggests class context was the source)."),
-    ],
-    ("S024", "llama8b", "a2"): [
-        ("POSSIBLE CONTEXT-LEAK",
-         "Contrasts Ingrid with \"Alex Hernandez's more formal definition.\" Verify against class_reading_source. Does NOT recur in a2_no_context."),
-    ],
-    ("S023", "llama8b", "a2_no_context"): [
-        ("PATERNALISTIC BACKGROUND INFERENCE",
-         "\"may be from a low-income background or have a family history of immigration and labor struggles, which could be relevant for the teacher to be aware of in terms of providing support and resources for her academic journey.\" Llama infers student background as concern-flag — new failure mode emerging without class context. (Note: an earlier flag claimed Llama fabricates Yolanda's abuela as 'undocumented' — validation found Yolanda's submission does say her abuela 'came here without papers', so 'undocumented' is interpretive synonymy, not fabrication. Flag removed.)"),
-    ],
-    ("S023", "llama8b", "a2"): [
-        ("VOCABULARY INTERPRETATION",
-         "Describes Yolanda's abuela as \"undocumented immigrant woman\" — Yolanda's submission says \"came here without papers,\" so this is interpretive synonymy rather than fabrication. Worth noting because the same model uses the same phrasing in a2_no_context with more concerning paternalism."),
-    ],
-    ("S028", "llama8b", "a2_no_context"): [
-        ("PATERNALISTIC BACKGROUND INFERENCE",
-         "\"may have had to navigate complex social dynamics and expectations in their daily life, particularly as a Black girl. This could be a circumstance that the teacher might want to be aware of.\""),
-    ],
-}
-
-DEFAULT_CATEGORIES = [
-    {"id": "asset",         "label": "asset frame",            "color": "#d4edda"},
-    {"id": "deficit",       "label": "deficit frame",          "color": "#f8d7da"},
-    {"id": "mixed",         "label": "mixed",                  "color": "#fff3cd"},
-    {"id": "concern_ok",    "label": "legit concern flagged",  "color": "#ffe0b3"},
-    {"id": "concern_miss",  "label": "legit concern MISSED",   "color": "#ffd6e7"},
-    {"id": "hallucination", "label": "hallucination/fabrication", "color": "#e5d4ed"},
-    {"id": "paternalism",   "label": "paternalism / othering", "color": "#cfe2f3"},
-    {"id": "taxonomy_fp",   "label": "taxonomy false-positive","color": "#f5c6cb"},
-]
+CONFIG_PATH = ROOT / "scripts" / "test_comparison" / "genob_workshop_config.json"
 
 
-def load_all():
-    by_cond = {}
-    for c in CONDS:
-        with open(OUT_DIR / COND_FILES[c]) as f:
-            by_cond[c] = json.load(f)
-    return by_cond
+def _load_workshop_config():
+    return json.loads(CONFIG_PATH.read_text())
+
+
+def _observations_to_data(observation_ids, registry):
+    """For each registered observation id, load via loader and group by condition.
+
+    Returns: {condition_short_id: {'records_by_model': {model: [records]}, 'condition': str}}
+    where condition_short_id is derived from the observation id by stripping the
+    'variant_a_' prefix (so 'variant_a_b_replicate' -> 'b_replicate').
+    """
+    obs_by_id = {o["id"]: o for o in registry.get("genob_observations", [])}
+    out = {}
+    for oid in observation_ids:
+        if oid not in obs_by_id:
+            available = ", ".join(repr(x) for x in obs_by_id)
+            raise ValueError(f"Observation id {oid!r} not registered. Available: {available}")
+        records = []
+        for f in obs_by_id[oid]["files"]:
+            records.extend(_loader.load(ROOT / f))
+        # Re-group: condition is taken from the underlying file (records share it)
+        cond_short = oid[len("variant_a_"):] if oid.startswith("variant_a_") else oid
+        by_model = {}
+        for r in records:
+            by_model.setdefault(r["model"], []).append(r)
+        out[cond_short] = {
+            "records_by_model": by_model,
+            "condition": records[0]["condition"] if records else cond_short,
+        }
+    return out
+
+
+# ---- Content (loaded from genob_workshop_config.json on every build) ----
+_CFG = _load_workshop_config()
+
+COND_LABELS = {k: v for k, v in _CFG["conditions"].items() if k != "_doc"}
+CONDS = list(COND_LABELS.keys())  # iteration order = JSON order, _doc filtered out
+MODELS = list(_CFG["models"])
+STUDENT_IDS = list(_CFG["student_ids"])
+
+STUDENT_PATTERNS = {k: v for k, v in _CFG["student_patterns"].items() if k != "_doc"}
+CROSS_NOTES = {k: v for k, v in _CFG["cross_notes"].items() if k != "_doc"}
+
+# Convert FLAGS from pipe-separated string keys ("S004|llama8b|b_replicate") back to tuples
+FLAGS = {}
+for key, entries in _CFG["flags"].items():
+    if key == "_doc":
+        continue
+    parts = key.split("|")
+    if len(parts) != 3:
+        raise ValueError(f"Bad flag key in genob_workshop_config.json: {key!r} (expected 'SID|model|condition')")
+    FLAGS[tuple(parts)] = [tuple(e) for e in entries]
+
+DEFAULT_CATEGORIES = list(_CFG["default_categories"])
+DEFAULT_CATEGORY_TO_VERDICT = {k: v for k, v in _CFG["default_category_to_verdict"].items() if k != "_doc"}
+UNMAPPED_CATEGORY_BEHAVIOR = _CFG.get("unmapped_category_behavior", "REVIEW")
+
+
+def load_all(observation_ids):
+    """Load observation records grouped by short condition id.
+
+    Returns: {cond_short_id: <data shape compatible with existing get_cell()>}
+    where the shape is {"results_by_model": {model: [records]}}.
+
+    The existing build_html() / get_cell() code expects this shape — we mirror it
+    so the downstream HTML/JS doesn't need any changes.
+    """
+    registry = _load_registry()
+    obs_data = _observations_to_data(observation_ids, registry)
+    return {cond: {"results_by_model": v["records_by_model"]} for cond, v in obs_data.items()}
 
 
 def get_cell(data, model, sid):
@@ -130,14 +120,20 @@ def build_cell_data(by_cond):
     """Return dict: cell_id -> {text, flags, student_name, sid, model, condition}"""
     out = {}
     for c in CONDS:
+        if c not in by_cond:
+            continue
         for m in MODELS:
             for sid in STUDENT_IDS:
                 cell = get_cell(by_cond[c], m, sid)
                 if cell is None:
                     continue
                 cid = f"{sid}_{m}_{c}"
+                # Records from the new loader use "raw_output_text"; older raw json
+                # used "raw_output". Accept either so existing JSONs and refactored
+                # loader records both work.
+                text = cell.get("raw_output_text") or cell.get("raw_output") or ""
                 out[cid] = {
-                    "text": cell["raw_output"].strip(),
+                    "text": text.strip(),
                     "student_name": cell["student_name"],
                     "sid": sid,
                     "model": m,
@@ -173,6 +169,8 @@ def build_html(by_cond):
         "student_ids": STUDENT_IDS,
     }
     js_data_json = json.dumps(js_data, ensure_ascii=False)
+    category_to_verdict_json = json.dumps(DEFAULT_CATEGORY_TO_VERDICT, ensure_ascii=False)
+    unmapped_behavior_json = json.dumps(UNMAPPED_CATEGORY_BEHAVIOR, ensure_ascii=False)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -309,8 +307,44 @@ def build_html(by_cond):
 <div class="controls-bar">
   <button onclick="exportState()">Export coding state (JSON)</button>
   <button onclick="importState()">Import</button>
+  <button onclick="openComparisonExport()" style="background:#1a4a7e;color:#fff;border:none;border-radius:3px;">Export as comparison config →</button>
   <button onclick="if(confirm('Clear ALL coding, notes, and category edits?')){{localStorage.removeItem('vaw_state');location.reload();}}">Reset</button>
   <span class="progress" id="progress"></span>
+</div>
+
+<!-- Comparison export modal -->
+<div class="modal-backdrop" id="cmp-export-modal" onclick="if(event.target===this)closeCmpExport()">
+  <div class="modal" style="max-width:680px">
+    <h2>Export codes as comparison-tool config</h2>
+    <p style="font-size:0.92em">Pick which model and condition column to export. This becomes one column of the comparison tool — register the resulting JSON with <code>python -m scripts.test_comparison.register add-config --schema manual_codes ...</code>.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1em;margin-top:1em">
+      <div>
+        <label style="font-weight:bold;display:block;font-size:0.85em">Model</label>
+        <select id="cmp-export-model" style="width:100%;padding:0.4em"></select>
+      </div>
+      <div>
+        <label style="font-weight:bold;display:block;font-size:0.85em">Condition</label>
+        <select id="cmp-export-cond" style="width:100%;padding:0.4em"></select>
+      </div>
+    </div>
+    <div id="cmp-export-summary" style="margin-top:1em;font-size:0.88em;background:#f7f4ee;padding:0.6em 0.8em;border-left:3px solid #888"></div>
+    <div style="margin-top:1em">
+      <label style="font-weight:bold;display:block;font-size:0.85em;margin-bottom:0.3em">Category → verdict mapping (edit before exporting if needed)</label>
+      <div id="cmp-export-mapping" style="font-size:0.85em"></div>
+    </div>
+    <div style="margin-top:1em">
+      <label style="font-weight:bold;display:block;font-size:0.85em">If a category isn't in the mapping</label>
+      <select id="cmp-export-unmapped" style="padding:0.3em">
+        <option value="REVIEW">REVIEW (default — safest)</option>
+        <option value="CLEAR">CLEAR</option>
+        <option value="FLAG">FLAG</option>
+      </select>
+    </div>
+    <div class="modal-actions" style="margin-top:1.2em">
+      <button class="primary" onclick="doComparisonExport()">Download manual_codes JSON</button>
+      <button class="secondary" onclick="closeCmpExport()">Cancel</button>
+    </div>
+  </div>
 </div>
 
 <h1>Variant A Stripped-Observation — Coding Workshop</h1>
@@ -668,6 +702,10 @@ function buildCellInner(cid) {{
     preview.textContent = previewText;
   }}
   attachHoverHandlers(preview, cid);
+  // Click the preview area to open the full cell modal (full text + categorize + cross-view)
+  preview.style.cursor = 'pointer';
+  preview.title = 'Click to open full observation in modal';
+  preview.onclick = (e) => {{ e.stopPropagation(); hidePopover(); openCellModal(cid); }};
   inner.appendChild(preview);
 
   // notes textarea
@@ -974,12 +1012,106 @@ document.addEventListener('keydown', (e) => {{
   if (e.key === 'Escape') {{
     closeCellModal();
     closeCrossModal();
+    closeCmpExport();
   }}
   if (CURRENT_CID) {{
     if (e.key === 'ArrowLeft' && e.altKey) navCell(-1);
     if (e.key === 'ArrowRight' && e.altKey) navCell(1);
   }}
 }});
+
+// ---- Comparison-export modal ----
+const DEFAULT_CATEGORY_TO_VERDICT = {category_to_verdict_json};
+const DEFAULT_UNMAPPED_BEHAVIOR = {unmapped_behavior_json};
+
+function openComparisonExport() {{
+  const modelSel = document.getElementById('cmp-export-model');
+  const condSel = document.getElementById('cmp-export-cond');
+  modelSel.innerHTML = DATA.models.map(m => `<option value="${{m}}">${{m}}</option>`).join('');
+  condSel.innerHTML = DATA.conds.map(c => `<option value="${{c}}">${{c}} — ${{DATA.cond_labels[c]||c}}</option>`).join('');
+  modelSel.onchange = renderCmpExportSummary;
+  condSel.onchange = renderCmpExportSummary;
+  document.getElementById('cmp-export-unmapped').value = DEFAULT_UNMAPPED_BEHAVIOR;
+  renderCmpExportMapping();
+  renderCmpExportSummary();
+  document.getElementById('cmp-export-modal').classList.add('show');
+}}
+function closeCmpExport() {{
+  document.getElementById('cmp-export-modal').classList.remove('show');
+}}
+function renderCmpExportMapping() {{
+  const el = document.getElementById('cmp-export-mapping');
+  const opts = ['FLAG', 'CLEAR', 'REVIEW'];
+  el.innerHTML = STATE.categories.map(cat => {{
+    const current = DEFAULT_CATEGORY_TO_VERDICT[cat.id] || 'REVIEW';
+    return `<div style="display:flex;align-items:center;gap:0.5em;margin:0.2em 0">
+      <span style="display:inline-block;width:14px;height:14px;background:${{cat.color}};border:1px solid #999;border-radius:2px"></span>
+      <span style="flex:1;font-size:0.85em">${{cat.label}} <span style="color:#888">[${{cat.id}}]</span></span>
+      <select data-cat="${{cat.id}}" class="cmp-cat-verdict" style="padding:0.2em">
+        ${{opts.map(o => `<option value="${{o}}" ${{o===current?'selected':''}}>${{o}}</option>`).join('')}}
+      </select>
+    </div>`;
+  }}).join('');
+}}
+function renderCmpExportSummary() {{
+  const model = document.getElementById('cmp-export-model').value;
+  const cond = document.getElementById('cmp-export-cond').value;
+  if (!model || !cond) {{ document.getElementById('cmp-export-summary').textContent = ''; return; }}
+  let coded = 0, total = 0;
+  for (const sid of DATA.student_ids) {{
+    const cid = `${{sid}}_${{model}}_${{cond}}`;
+    if (!DATA.cells[cid]) continue;
+    total++;
+    if (STATE.cells[cid] && STATE.cells[cid].category) coded++;
+  }}
+  document.getElementById('cmp-export-summary').innerHTML =
+    `Will export <strong>${{coded}}/${{total}}</strong> coded cells for ${{model}} × ${{cond}}. ` +
+    (coded < total ? `<span style="color:#a33">${{total-coded}} uncoded — these will use the "unmapped" verdict.</span>` : '<span style="color:#393">all cells coded ✓</span>');
+}}
+function doComparisonExport() {{
+  const model = document.getElementById('cmp-export-model').value;
+  const cond = document.getElementById('cmp-export-cond').value;
+  const unmapped = document.getElementById('cmp-export-unmapped').value;
+  // gather edited mapping
+  const mapping = {{}};
+  document.querySelectorAll('.cmp-cat-verdict').forEach(sel => {{
+    mapping[sel.dataset.cat] = sel.value;
+  }});
+  const codes = {{}};
+  for (const sid of DATA.student_ids) {{
+    const cid = `${{sid}}_${{model}}_${{cond}}`;
+    const cell = DATA.cells[cid];
+    if (!cell) continue;
+    const state = STATE.cells[cid] || {{}};
+    codes[sid] = {{
+      code: state.category || null,
+      notes: state.notes || '',
+      excerpt: state.excerpt || '',
+      raw_observation_text: cell.text,
+      student_name: cell.student_name,
+    }};
+  }}
+  const payload = {{
+    schema: 'manual_codes',
+    exported_from: `variant_a_${{cond}}`,
+    exported_model: model,
+    exported_condition: cond,
+    exported_at: new Date().toISOString(),
+    category_to_verdict: mapping,
+    unmapped_category_behavior: unmapped,
+    codes: codes,
+  }};
+  const blob = new Blob([JSON.stringify(payload, null, 2)], {{type: 'application/json'}});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const today = new Date().toISOString().slice(0,10);
+  a.href = url;
+  a.download = `genob_codes_${{model}}_${{cond}}_${{today}}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  closeCmpExport();
+  alert(`Exported ${{Object.keys(codes).length}} student codes for ${{model}} × ${{cond}}.\\n\\nNext steps:\\n1. Move the downloaded file to data_tables/genob_codes/\\n2. Run:\\n   python -m scripts.test_comparison.register add-config \\\\\\n     --id genob_${{model}}_${{cond}}_${{today}} \\\\\\n     --schema manual_codes \\\\\\n     --files data_tables/genob_codes/genob_codes_${{model}}_${{cond}}_${{today}}.json\\n3. Add the new config id to a comparison and rebuild.`);
+}}
 
 // ---- init ----
 renderCategoriesEditor();
@@ -992,11 +1124,41 @@ updateProgress();
 """
 
 
-def main():
-    by_cond = load_all()
+DEFAULT_OBSERVATIONS = [
+    "variant_a_b_replicate",
+    "variant_a_a1",
+    "variant_a_a2",
+    "variant_a_a2_no_context",
+]
+
+
+def main(argv=None):
+    p = argparse.ArgumentParser(description="Build the Variant A gen-ob coding workshop HTML.")
+    p.add_argument(
+        "--observations",
+        nargs="+",
+        default=DEFAULT_OBSERVATIONS,
+        help="genob_observations ids from registry.json (default: the four Variant A conditions).",
+    )
+    p.add_argument(
+        "--date",
+        default=datetime.date.today().isoformat(),
+        help="Date suffix for the output filename (default: today). Use --date 2026-05-11 to overwrite the existing dated file.",
+    )
+    p.add_argument(
+        "--out-dir",
+        default="data_tables",
+        help="Directory under output-format-bias/ to write the HTML (default: data_tables).",
+    )
+    args = p.parse_args(argv)
+
+    by_cond = load_all(args.observations)
     out_html = build_html(by_cond)
-    OUT_HTML.write_text(out_html, encoding="utf-8")
-    print(f"Wrote {OUT_HTML} ({OUT_HTML.stat().st_size/1024:.1f} KB)")
+    out_dir = ROOT / args.out_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_html_path = out_dir / f"variant_a_coding_workshop_{args.date}.html"
+    out_html_path.write_text(out_html, encoding="utf-8")
+    print(f"Wrote {out_html_path} ({out_html_path.stat().st_size/1024:.1f} KB)")
 
 
 if __name__ == "__main__":
