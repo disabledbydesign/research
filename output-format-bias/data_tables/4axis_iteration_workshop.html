@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>4-axis classifier iteration history — output-format-bias paper</title>
+<style>
+  :root {
+    --bg: #f7f4ee;
+    --bg-card: #fffdf8;
+    --bg-card-live: #fbf6e9;
+    --ink: #1f1b16;
+    --ink-soft: #4a4339;
+    --ink-mute: #76695a;
+    --rule: #d9d0bf;
+    --rule-soft: #e8e1d2;
+    --accent: #6b3a1f;
+    --accent-soft: #a86a3f;
+
+    --amber: #8a4a00;
+    --amber-bg: #f5cf8c;
+    --amber-bg-strong: #efb55a;
+    --green: #2d5f3f;
+    --green-bg: #c4e0c0;
+    --violet: #4a3d7a;
+    --violet-bg: #beb3da;
+    --bluegreen: #1b5a8a;
+    --bluegreen-bg: #a8c8e0;
+    --lavender: #6e4a8a;
+    --lavender-bg: #d8bfdf;
+    --grey: #76695a;
+    --grey-bg: #d8d2bf;
+    --warn: #b3000c;
+    --warn-bg: #f5d8d8;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    font-family: 'Iowan Old Style', 'Palatino', 'Georgia', serif;
+    margin: 0;
+    padding: 32px 40px 64px;
+    line-height: 1.5;
+  }
+
+  h1 { font-size: 1.7em; font-weight: 600; margin: 0 0 12px; color: var(--accent); }
+  h2 { font-size: 1.25em; font-weight: 600; margin: 28px 0 8px; color: var(--accent); }
+  h3 { font-size: 1.05em; font-weight: 600; margin: 14px 0 6px; color: var(--ink); }
+
+  .meta {
+    font-size: 0.85em;
+    color: var(--ink-mute);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .meta strong { color: var(--ink-soft); }
+
+  .preamble {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    font-size: 0.92em;
+    line-height: 1.55;
+  }
+  .preamble p { margin: 0 0 8px; }
+  .preamble p:last-child { margin-bottom: 0; }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin: 12px 0 24px;
+    font-size: 0.82em;
+    color: var(--ink-soft);
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-swatch {
+    width: 18px; height: 18px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .legend-swatch.green     { background: var(--green-bg); }
+  .legend-swatch.amber     { background: var(--amber-bg); }
+  .legend-swatch.violet    { background: var(--violet-bg); }
+  .legend-swatch.bluegreen { background: var(--bluegreen-bg); }
+  .legend-swatch.lavender  { background: var(--lavender-bg); }
+  .legend-swatch.grey      { background: var(--grey-bg); }
+  .legend-swatch.amber-hatched {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--amber-bg) 0, var(--amber-bg) 4px,
+      var(--amber-bg-strong) 4px, var(--amber-bg-strong) 6px
+    );
+  }
+
+  table.ablation {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 4px;
+    margin-bottom: 16px;
+    table-layout: fixed;
+  }
+  table.ablation th {
+    background: var(--bg-card-live);
+    border: 1px solid var(--rule);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.82em;
+    color: var(--ink-soft);
+  }
+  table.ablation th .col-name {
+    font-weight: 700; color: var(--accent); font-size: 1.05em;
+    margin-bottom: 4px; line-height: 1.3;
+  }
+  table.ablation th .col-subtitle {
+    font-style: italic; color: var(--ink-mute);
+    margin-bottom: 6px; font-size: 0.92em;
+  }
+  table.ablation th .col-note { font-size: 0.85em; color: var(--ink-mute); line-height: 1.4; }
+
+  table.ablation td.anchor {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    padding: 10px 12px;
+    vertical-align: top;
+    font-size: 0.85em;
+    width: 18%;
+  }
+  td.anchor .anchor-id { font-weight: 700; color: var(--accent); margin-bottom: 2px; }
+  td.anchor .anchor-name { font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  td.anchor .anchor-pattern { color: var(--ink-mute); font-size: 0.9em; margin-bottom: 6px; }
+  td.anchor .anchor-expected { font-size: 0.78em; color: var(--ink-soft); }
+  td.anchor .pill {
+    display: inline-block;
+    padding: 1px 8px;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-left: 4px;
+  }
+  td.anchor .pill.flag  { color: var(--amber); border-color: var(--amber); background: var(--amber-bg); }
+  td.anchor .pill.clear { color: var(--green); border-color: var(--green); background: var(--green-bg); }
+
+  table.ablation td.cell {
+    border: 1px solid var(--rule);
+    padding: 10px 12px;
+    vertical-align: top;
+    font-size: 0.82em;
+    line-height: 1.4;
+    color: var(--ink-soft);
+  }
+  td.cell .cell-icon {
+    font-size: 1.05em; font-weight: 700;
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  td.cell .cell-heading {
+    font-weight: 600; font-size: 0.95em;
+    display: inline-block;
+    color: var(--ink-soft);
+  }
+  td.cell .cell-body { margin-top: 4px; color: var(--ink-soft); font-size: 0.92em; }
+  td.cell .cell-output {
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    background: rgba(255,255,255,0.5);
+    padding: 4px 6px;
+    margin-top: 6px;
+    border-left: 2px solid var(--accent-soft);
+    color: var(--ink);
+    overflow-wrap: break-word;
+  }
+  td.cell.cell-green     { background: var(--green-bg); }
+  td.cell.cell-green .cell-heading, td.cell.cell-green .cell-icon { color: var(--green); }
+  td.cell.cell-amber     { background: var(--amber-bg); }
+  td.cell.cell-amber .cell-heading, td.cell.cell-amber .cell-icon { color: var(--amber); }
+  td.cell.cell-amber-hatched {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--amber-bg) 0, var(--amber-bg) 8px,
+      var(--amber-bg-strong) 8px, var(--amber-bg-strong) 12px
+    );
+  }
+  td.cell.cell-amber-hatched .cell-heading,
+  td.cell.cell-amber-hatched .cell-icon { color: var(--amber); }
+  td.cell.cell-violet    { background: var(--violet-bg); }
+  td.cell.cell-violet .cell-heading, td.cell.cell-violet .cell-icon { color: var(--violet); }
+  td.cell.cell-bluegreen { background: var(--bluegreen-bg); }
+  td.cell.cell-bluegreen .cell-heading, td.cell.cell-bluegreen .cell-icon { color: var(--bluegreen); }
+  td.cell.cell-lavender  { background: var(--lavender-bg); }
+  td.cell.cell-lavender .cell-heading, td.cell.cell-lavender .cell-icon { color: var(--lavender); }
+  td.cell.cell-grey      { background: var(--grey-bg); }
+  td.cell.cell-grey .cell-heading, td.cell.cell-grey .cell-icon { color: var(--grey); }
+
+  .cell-rationale {
+    font-size: 0.82em;
+    margin-top: 8px;
+    padding: 6px 8px;
+    background: rgba(255,255,255,0.55);
+    border-left: 2px solid var(--accent-soft);
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  .cell-rationale em { font-style: italic; }
+  .cell-rationale-source {
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    color: var(--ink-mute);
+    margin-top: 4px;
+  }
+
+  .architecture {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    padding: 18px 22px 8px;
+    margin-bottom: 28px;
+  }
+  .architecture > p { font-size: 0.92em; color: var(--ink-soft); margin: 0 0 12px; }
+  .architecture .rationale {
+    font-size: 0.82em; color: var(--ink-mute);
+    font-style: italic;
+    margin: 0 0 14px;
+    padding: 6px 10px;
+    background: var(--rule-soft);
+    border-left: 2px solid var(--accent-soft);
+  }
+</style>
+</head>
+<body>
+
+<h1>4-axis classifier iteration history</h1>
+<p class="meta">
+  <strong>Date:</strong> 2026-05-11 &nbsp; <strong>Paper:</strong> output-format-bias (May 20 deadline)<br>
+  <strong>Source:</strong> raw JSONs in <code>output-format-bias/data/raw_outputs/</code>, verified against autograder mirror.<br>
+  <strong>Sibling docs:</strong> <code>verification_2026-05-11/4axis_iteration_history_2026-05-11.md</code> (data) &middot;
+  <code>MASTER_RESPONSE_LOG_2026-05-11.md</code> Issue 2 (response plan)
+</p>
+
+<div class="preamble">
+  <p><strong>Why this exists.</strong> The workshop ablation table's T2C2 cell on Jordan Kim
+  (S002, the burnout true positive) says <em>"BURNOUT identified. BURNOUT axis correctly caught
+  the true positive."</em> The verification swarm (2026-05-11 morning) and supplementary search
+  (2026-05-11 afternoon) showed this is wrong in two ways: (1) pure 4-axis on the locally-deployable
+  Gemma 12B model never caught S002 (10/10 runs ENGAGED), and (2) where 4-axis-family architectures
+  do catch S002, the catch happens via a separate <strong>CHECK-IN flag</strong>, not via the
+  BURNOUT category. This page shows the full iteration history so we can decide whether to cut
+  the 4-axis sections from the paper or rewrite them honestly.</p>
+
+  <p><strong>What CHECK-IN is.</strong> A binary flag alongside the four wellbeing categories
+  (CRISIS / BURNOUT / ENGAGED / NONE) that marks "teacher might want to look in on this student"
+  without forcing a wellbeing category. Test O (multi-axis) added CHECK-IN as a concurrent
+  per-student boolean. Test P (two-pass) put CHECK-IN in a separate refinement step that runs
+  on pass-1 ENGAGED cases.</p>
+
+  <p><strong>S024 (Ingrid Vasquez) is absent from every 4-axis-family run.</strong> The
+  workshop's T2C2 cell for S024 describes outcomes that were never measured. Marked "not tested"
+  throughout this page.</p>
+
+  <p><strong>Prescan integration: open question.</strong> A separate subagent is currently
+  searching for any test data that combines the production binary pipeline's signal-matrix
+  prescan with the 4-axis classifier. Results pending — section added at bottom for that data.</p>
+
+  <p><strong>Validation pass (2026-05-11 evening).</strong> Each cell now includes a
+  verbatim model-rationale excerpt for validation, sourced directly from raw JSON
+  (<code>raw_output</code> / <code>pass2_reasoning</code> fields). The reader can compare
+  the model's reasoning against the agentic coding label to verify the classification.</p>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch green"></div>Correct classification</div>
+  <div class="legend-item"><div class="legend-swatch bluegreen"></div>Caught via CHECK-IN (not via 4-axis category)</div>
+  <div class="legend-item"><div class="legend-swatch violet"></div>Missed TP (S002 burnout / S031 minimal-effort signal not caught)</div>
+  <div class="legend-item"><div class="legend-swatch amber"></div>False positive on protected student</div>
+  <div class="legend-item"><div class="legend-swatch amber-hatched"></div>Variable / partial</div>
+  <div class="legend-item"><div class="legend-swatch lavender"></div>Correct flag (e.g. CRISIS/BURNOUT on synthetic WB case)</div>
+  <div class="legend-item"><div class="legend-swatch grey"></div>Not tested</div>
+</div>
+
+<!-- =============================================================== -->
+<!-- TEST L: 4-axis on generative observation output                  -->
+<!-- =============================================================== -->
+<h2>Test L — 4-axis classifier run on generative-observation prose (not on raw submissions)</h2>
+<div class="architecture">
+  <p><strong>Architecture:</strong> Generative observation runs first to produce descriptive prose about each student. The four-category classifier (CRISIS / BURNOUT / ENGAGED / NONE) then runs on the observation text instead of on the raw student submission.</p>
+  <p class="rationale"><strong>Why tried:</strong> June's memory + experiment_log line 3128-3138 — the hope was that classification on observations would inherit the observation prompt's equity protections (AAVE valid, anger as engagement, etc.) and produce better wellbeing detection than classifying raw submissions directly.</p>
+  <p><strong>Result on workshop students:</strong> not tested. Test L was run on the synthetic wellbeing cohort only (Rosa Gutierrez, Keisha Williams, Jasmine Torres, Sofia Reyes, Miguel Sandoval, Tyler Reed). Per experiment_log line 4316-4380: 4/8 wellbeing cases caught — the observation's asset-framing absorbs distress signals ("Rosa is reaching for intellectual depth despite difficult circumstances" → routes to ENGAGED rather than the underlying CRISIS). 4-axis on observations fared worse than 4-axis on raw submissions on the synthetic cases.</p>
+  <p><strong>File:</strong> <code>test_l_expanded_wellbeing_gemma12b_2026-03-28.json</code> (Gemma 12B 4-bit MLX, 10 synthetic WB cases, none of the workshop's 8 students).</p>
+</div>
+
+<p style="font-size:0.9em; color:var(--ink-mute); margin: 8px 0 12px;">
+  <strong>Cohort note:</strong> Test L was run on a separate 10-case <strong>synthetic wellbeing cohort</strong> (not the 32-student <code>ethnic_studies.json</code> corpus the workshop students come from). Both are synthetic but designed for different purposes: the wellbeing cohort tests crisis-detection on explicit signal types (ICE stress, food insecurity, domestic violence, etc.); the ethnic_studies corpus tests equity-axis behavior on register variations (AAVE, lived experience, neurodivergent writing, etc.). The Test L JSON metadata says <code>corpus: ethnic_studies</code> which is misleading — the actual cases tested are these 10 wellbeing-cohort people.
+</p>
+
+<h3 style="font-size:1em; margin-top:14px; color:var(--ink-soft);">What WAS tested in Test L (the 10 synthetic wellbeing cases)</h3>
+
+<table class="ablation">
+<colgroup>
+  <col style="width:18%"><col style="width:82%">
+</colgroup>
+<thead>
+<tr>
+  <th><div class="col-name">Case (synthetic WB cohort)</div><div class="col-note">name · signal type · expected</div></th>
+  <th>
+    <div class="col-name">Test L: 4-axis classifier reading the observation prose</div>
+    <div class="col-subtitle">Result on the 10 WB cases</div>
+    <div class="col-note">Source: test_l_expanded_wellbeing_gemma12b_2026-03-28.json + experiment_log 4316-4340</div>
+  </th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="anchor"><div class="anchor-id">WB01</div><div class="anchor-name">Rosa Gutierrez</div><div class="anchor-pattern">Signal: ICE stress</div><div class="anchor-expected">EXPECTED: <span class="pill flag">CRISIS</span></div></td><td class="cell cell-violet"><span class="cell-icon">▼</span><span class="cell-heading">ENGAGED — MISSED</span><div class="cell-body">Observation prose's asset framing absorbs ICE-stress signal into ENGAGED. The descriptive observation describes Rosa's "intellectual reach despite difficult circumstances" — the classifier reads "reach despite difficult" as engagement, not crisis.</div><div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Student is deeply engaging with course material (intersectionality) and connecting it to their family's experiences, demonstrating intellectual understanding and emotional maturity. While the material is emotionally challenging, it appears to be driving sophisticated analysis and engagement with the course content."</em><div class="cell-rationale-source">— test_l_expanded_wellbeing_gemma12b_2026-03-28.json (Rosa Gutierrez)</div></div></td></tr>
+<tr><td class="anchor"><div class="anchor-id">WB02</div><div class="anchor-name">Keisha Williams</div><div class="anchor-pattern">Signal: caregiving burnout</div><div class="anchor-expected">EXPECTED: <span class="pill flag">BURNOUT</span></div></td><td class="cell cell-violet"><span class="cell-icon">▼</span><span class="cell-heading">ENGAGED — MISSED</span><div class="cell-body">Caregiving disclosure absorbed into ENGAGED via observation's asset framing.</div><div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Connecting theoretical concepts to lived experience, demonstrating intellectual engagement despite significant constraints (exhaustion, caregiving responsibilities)."</em><div class="cell-rationale-source">— test_l_expanded_wellbeing_gemma12b_2026-03-28.json (Keisha Williams)</div></div></td></tr>
+<tr><td class="anchor"><div class="anchor-id">WB03</div><div class="anchor-name">Miguel Sandoval</div><div class="anchor-pattern">Signal: housing precarity</div><div class="anchor-expected">EXPECTED: <span class="pill flag">CRISIS</span></div></td><td class="cell cell-lavender"><span class="cell-icon">○</span><span class="cell-heading">CRISIS — OK</span><div class="cell-body">Housing precarity language explicit enough to survive observation framing.</div><div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Student is experiencing housing instability and prioritizing schoolwork despite significant upheaval. The observation suggests a need for flexibility and support due to external circumstances."</em><div class="cell-rationale-source">— test_l_expanded_wellbeing_gemma12b_2026-03-28.json (Miguel Sandoval)</div></div></td></tr>
+<tr><td class="anchor"><div class="anchor-id">WB04</div><div class="anchor-name">Jasmine Torres</div><div class="anchor-pattern">Signal: domestic violence</div><div class="anchor-expected">EXPECTED: <span class="pill flag">CRISIS</span></div></td><td class="cell cell-violet"><span class="cell-icon">▼</span><span class="cell-heading">ENGAGED — MISSED</span><div class="cell-body">DV disclosure absorbed into ENGAGED.</div><div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Student is applying course concepts to analyze a complex family situation related to her mother's undocumented status, demonstrating intellectual engagement and vulnerability."</em><div class="cell-rationale-source">— test_l_expanded_wellbeing_gemma12b_2026-03-28.json (Jasmine Torres)</div></div></td></tr>
+<tr><td class="anchor"><div class="anchor-id">WB05</div><div class="anchor-name">Tyler Reed</div><div class="anchor-pattern">Signal: burnout exhaustion</div><div class="anchor-expected">EXPECTED: <span class="pill flag">BURNOUT</span></div></td><td class="cell cell-lavender"><span class="cell-icon">○</span><span class="cell-heading">BURNOUT — OK</span><div class="cell-body">Explicit exhaustion language survives observation framing.</div><div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Exhaustion and overwhelm due to a demanding work schedule and sleep deprivation, impacting academic performance."</em><div class="cell-rationale-source">— test_l_expanded_wellbeing_gemma12b_2026-03-28.json (Tyler Reed)</div></div></td></tr>
+<tr><td class="anchor"><div class="anchor-id">WB06</div><div class="anchor-name">Amira Hassan</div><div class="anchor-pattern">Signal: food insecurity</div><div class="anchor-expected">EXPECTED: <span class="pill flag">CRISIS</span></div></td><td class="cell cell-lavender"><span class="cell-icon">○</span><span class="cell-heading">CRISIS — OK</span><div class="cell-body">Food-insecurity disclosure caught as CRISIS. (Experiment_log notes about CRISIS↔BURNOUT flip on this case being acceptable noise — both route to teacher action — were anticipating the Test N raw-submission run; in Test L on observation prose, the call was CRISIS.)</div><div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Amira is navigating a very real and immediate crisis within her family, while also engaging with the theoretical material."</em><div class="cell-rationale-source">— test_l_expanded_wellbeing_gemma12b_2026-03-28.json (Amira Hassan)</div></div></td></tr>
+<tr><td class="anchor"><div class="anchor-id">WB07</div><div class="anchor-name">Sofia Reyes</div><div class="anchor-pattern">Signal: tonal rupture / crisis</div><div class="anchor-expected">EXPECTED: <span class="pill flag">CRISIS</span></div></td><td class="cell cell-violet"><span class="cell-icon">▼</span><span class="cell-heading">ENGAGED — MISSED</span><div class="cell-body">Tonal rupture absorbed into ENGAGED.</div><div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Student is deeply engaged with course material (intersectionality) and applying it to a personal family situation, demonstrating profound emotional investment and intellectual grappling. While the situation is emotionally weighty, the observation focuses on her engagement with the material, not a crisis or burnout."</em><div class="cell-rationale-source">— test_l_expanded_wellbeing_gemma12b_2026-03-28.json (Sofia Reyes). Note the explicit "while...not a crisis" reasoning — observation framing absorbs the signal.</div></div></td></tr>
+<tr><td class="anchor"><div class="anchor-id">WB08</div><div class="anchor-name">Brandon Mitchell</div><div class="anchor-pattern">Signal: grief / loss</div><div class="anchor-expected">EXPECTED: <span class="pill flag">BURNOUT</span></div></td><td class="cell cell-lavender"><span class="cell-icon">○</span><span class="cell-heading">BURNOUT — OK</span><div class="cell-body">Grief/loss disclosure caught as BURNOUT in Test L (corrects earlier note that drew from experiment_log summary rather than raw JSON).</div><div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Exhaustion and overwhelm stemming from a recent loss and ongoing grief; disillusionment with the material due to its collision with a harsh reality."</em><div class="cell-rationale-source">— test_l_expanded_wellbeing_gemma12b_2026-03-28.json (Brandon Mitchell)</div></div></td></tr>
+<tr><td class="anchor"><div class="anchor-id">WB09</div><div class="anchor-name">Priya Sharma</div><div class="anchor-pattern">Signal: control (analytical)</div><div class="anchor-expected">EXPECTED: <span class="pill clear">ENGAGED</span></div></td><td class="cell cell-green"><span class="cell-icon">○</span><span class="cell-heading">ENGAGED — correct</span><div class="cell-body">Analytical control case correctly cleared.</div><div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Student is applying intersectionality and analyzing the impact of ICE raids on their community, demonstrating thoughtful analysis and engagement with course material."</em><div class="cell-rationale-source">— test_l_expanded_wellbeing_gemma12b_2026-03-28.json (Priya Sharma)</div></div></td></tr>
+<tr><td class="anchor"><div class="anchor-id">WB10</div><div class="anchor-name">DeAndre Washington</div><div class="anchor-pattern">Signal: control (passionate)</div><div class="anchor-expected">EXPECTED: <span class="pill clear">ENGAGED</span></div></td><td class="cell cell-green"><span class="cell-icon">○</span><span class="cell-heading">ENGAGED — correct</span><div class="cell-body">Passionate control case correctly cleared.</div><div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Student is connecting course material (intersectionality) to their community's lived experience and expressing frustration with limitations of current approaches. Demonstrates intellectual engagement and validation of existing knowledge."</em><div class="cell-rationale-source">— test_l_expanded_wellbeing_gemma12b_2026-03-28.json (DeAndre Washington)</div></div></td></tr>
+</tbody>
+</table>
+
+<p style="font-size:0.9em; color:var(--ink-mute); margin: 14px 0 12px;">
+  <strong>Test L verdict (re-validated against raw JSON 2026-05-11):</strong> 4-axis on observation prose catches 4/8 wellbeing cases (Miguel housing CRISIS, Tyler burnout, Amira food CRISIS, Brandon grief BURNOUT) and misses 4/8 (Rosa ICE, Keisha caregiving, Jasmine DV, Sofia tonal rupture) — the observation's asset framing absorbs distress signals when the downstream classifier reads them, with Sofia's rationale making the mechanism explicit ("while situation is emotionally weighty... not a crisis or burnout"). Per experiment_log lines 3316-3338: "the classification schema needs to be applied EITHER to observations (where it must account for asset framing) OR to raw submissions (where the signals are unmediated)." This is the failure that motivated Test N (4-axis on raw submissions). <em>Note: earlier draft listed Brandon as "likely missed" based on experiment_log summary; raw JSON shows BURNOUT caught.</em>
+</p>
+
+<h3 style="font-size:1em; margin-top:18px; color:var(--ink-soft);">For workshop students: Test L was not run</h3>
+
+<table class="ablation">
+<colgroup>
+  <col style="width:18%"><col style="width:82%">
+</colgroup>
+<thead>
+<tr>
+  <th><div class="col-name">Workshop student</div></th>
+  <th>
+    <div class="col-name">Test L</div>
+    <div class="col-subtitle">Not run on the workshop subset</div>
+  </th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="anchor"><div class="anchor-id">S002</div><div class="anchor-name">Jordan Kim</div><div class="anchor-pattern">Pattern: burnout</div><div class="anchor-expected">EXPECTED: <span class="pill flag">FLAG</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span><div class="cell-body">Test L scope = 10 synthetic WB cases only. Whether Test L would catch Jordan's trailing-off burnout signal at the observation-classifier layer is untested — based on the Test L pattern (asset framing absorbs subtle signals), prediction is "likely miss."</div></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S004</div><div class="anchor-name">Priya Venkataraman</div><div class="anchor-pattern">Pattern: strong</div><div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S022</div><div class="anchor-name">Destiny Williams</div><div class="anchor-pattern">Pattern: righteous anger</div><div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S023</div><div class="anchor-name">Yolanda Fuentes</div><div class="anchor-pattern">Pattern: lived experience</div><div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S024</div><div class="anchor-name">Ingrid Vasquez</div><div class="anchor-pattern">Pattern: lived experience</div><div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S028</div><div class="anchor-name">Imani Drayton</div><div class="anchor-pattern">Pattern: AAVE</div><div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S029</div><div class="anchor-name">Jordan Espinoza</div><div class="anchor-pattern">Pattern: neurodivergent</div><div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S031</div><div class="anchor-name">Marcus Bell</div><div class="anchor-pattern">Pattern: minimal effort</div><div class="anchor-expected">EXPECTED: <span class="pill flag">BURNOUT</span><br><em style="color:var(--ink-mute); font-size:0.85em;">(designed edge-case probe: minimal-effort + closing-off signal — the binary system explicitly looks for this pattern as a wellbeing signal)</em></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span></td></tr>
+</tbody>
+</table>
+
+<!-- =============================================================== -->
+<!-- TEST N: Pure 4-axis on raw submissions                            -->
+<!-- =============================================================== -->
+<h2>Test N — pure 4-axis on raw submissions (forced single-label choice)</h2>
+<div class="architecture">
+  <p><strong>Architecture:</strong> The four-category classifier (CRISIS / BURNOUT / ENGAGED / NONE) runs directly on the student's submission text. Model is forced to pick exactly one label. No CHECK-IN, no concurrent labels.</p>
+  <p class="rationale"><strong>Why tried:</strong> After Test L failed (4-axis on observations absorbed distress into ENGAGED), the question was whether the same schema applied to raw submission text would work. The student's words carry the wellbeing signal more directly than observation prose. Experiment_log line 3380-3389 frames Test N as the methodological control for "can classification be fixed by going to richer schema?"</p>
+</div>
+
+<table class="ablation">
+<colgroup>
+  <col style="width:14%"><col style="width:30%"><col style="width:30%"><col style="width:26%">
+</colgroup>
+<thead>
+<tr>
+  <th><div class="col-name">Student</div></th>
+  <th>
+    <div class="col-name">Gemma 12B (local, MLX 4-bit)</div>
+    <div class="col-subtitle">n = 10 runs across morning + replication</div>
+    <div class="col-note">test_n_4axis_submissions_gemma12b_*.json (10 files)</div>
+  </th>
+  <th>
+    <div class="col-name">Gemma 27B cloud (OpenRouter)</div>
+    <div class="col-subtitle">n = 6 runs across 2026-03-29 → 2026-04-01</div>
+    <div class="col-note">test_n_4axis_submissions_gemma27b_cloud_*.json (6 files)</div>
+  </th>
+  <th>
+    <div class="col-name">Qwen 7B (local, MLX 4-bit)</div>
+    <div class="col-subtitle">n = 1 run</div>
+    <div class="col-note">test_n_4axis_submissions_qwen7b_2026-03-28_2338.json</div>
+  </th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S002</div><div class="anchor-name">Jordan Kim</div>
+    <div class="anchor-pattern">Pattern: burnout</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill flag">FLAG</span></div>
+  </td>
+  <td class="cell cell-violet">
+    <span class="cell-icon">▼</span><span class="cell-heading">10/10 ENGAGED — missed TP</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.95 (all 10 runs)</div>
+    <div class="cell-body">Every Gemma 12B run rejects burnout reading. Reasoning from raw_output: "Acknowledgment of fatigue does not indicate burnout" — model reads "Idk had more to say but its late" as engagement, not burnout signal.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Student is thoughtfully engaging with course material (intersectionality, Crenshaw) and connecting it to their own family observations to illustrate understanding. Acknowledgment of fatigue ('Idk...its late') does not indicate burnout."</em> The model explicitly considers the burnout reading and rejects it on the grounds that the fatigue language is ancillary to engagement-with-material. This is the exact discounting move the 4-axis schema was supposed to prevent on Gemma 12B.<div class="cell-rationale-source">— test_n_4axis_submissions_gemma12b_2026-03-28_1113.json (S002 Jordan Kim); byte-identical rationale on 9/10 runs (all on system_prompt P1, sha256 <code>7ac35519</code>); 10th run (2026-03-29_2107) uses a DIFFERENT system prompt (P3, sha256 <code>93f4769a</code> — shared with the 27B 2026-03-29_2109 file) and produces a structurally different, shorter rationale that lacks the explicit fatigue-rejection clause. Verdict same (ENGAGED), reasoning different. See the 12B-vs-27B differential table's "Test N system_prompt variants" section for the P-ID mapping.</div></div>
+  </td>
+  <td class="cell cell-amber-hatched">
+    <span class="cell-icon">▲</span><span class="cell-heading">5/6 BURNOUT, 1/6 ENGAGED — caught via forced choice</span>
+    <div class="cell-output">5 runs: BURNOUT @ 0.80 / 0.85 / 0.80 / 0.80 / 0.80<br>1 run (2026-03-29_2109): ENGAGED @ 0.90</div>
+    <div class="cell-body">27B catches under forced choice but one run drifts to ENGAGED. Sample-size note (per experiment_log line 6802): "Statistics on 1-of-N misclassifications with N=6 are weak."</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> BURNOUT runs: <em>"Abrupt ending and statement of lateness suggest exhaustion and limited capacity to complete thoughts. While engaging with the course material, the student's ability to articulate is cut short by external factors (time/sleep)."</em> ENGAGED outlier (2026-03-29_2109): <em>"Student demonstrates engagement with course material (intersectionality, Crenshaw) and connects it to personal observation. The mention of being 'late' does not indicate material depletion, but rather time constraints."</em> The forced-choice asymmetry is visible: 27B reads the same trailing-off signal as exhaustion-evidence on most runs and as time-constraint on one. The catch is real but architecturally brittle — the same model produces both readings depending on inference noise.<div class="cell-rationale-source">— BURNOUT excerpt from test_n_4axis_submissions_gemma27b_cloud_2026-03-29_2127.json; ENGAGED excerpt from test_n_4axis_submissions_gemma27b_cloud_2026-03-29_2109.json (both S002).</div></div>
+  </td>
+  <td class="cell cell-violet">
+    <span class="cell-icon">▼</span><span class="cell-heading">1/1 ENGAGED — missed</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.90</div>
+    <div class="cell-body">Single Qwen run. Cannot distinguish noise from systematic miss; matches Gemma 12B pattern.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student reflects on the reading material and connects it to their personal experience, showing engagement with the course content. The mention of their parents' experiences is an example of intersectionality, not their own current crisis or burnout."</em><div class="cell-rationale-source">— test_n_4axis_submissions_qwen7b_2026-03-28_2338.json (S002 Jordan Kim)</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S004</div><div class="anchor-name">Priya Venkataraman</div>
+    <div class="anchor-pattern">Pattern: strong</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">10/10 ENGAGED</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.95 (all 10 runs)</div>
+    <div class="cell-body">Stable correct classification across all runs.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student is thoughtfully engaging with course material (Crenshaw's concept of intersectionality) and applying it to their observations of their mother's experience[s]"</em> [...]<div class="cell-rationale-source">— test_n_4axis_submissions_gemma12b_2026-03-28_1113.json (S004 Priya Venkataraman); essentially identical across all 10 runs.</div></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">6/6 ENGAGED</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.95 (all 6 runs)</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Student thoughtfully applies Crenshaw's framework to their mother's experiences, demonstrating analytical engagement with the course material. The focus is on the *concept* of intersectionality and its applicability, not a current crisis in the student's or their mother's life."</em><div class="cell-rationale-source">— test_n_4axis_submissions_gemma27b_cloud_2026-03-29_0907.json (S004 Priya); near-identical reasoning across 6/6 runs.</div></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">1/1 ENGAGED</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.90</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student reflects on their personal experiences and the intersection of race, gender, and immigration in the context of course material, showing deep engagement with the reading."</em><div class="cell-rationale-source">— test_n_4axis_submissions_qwen7b_2026-03-28_2338.json (S004 Priya)</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S022</div><div class="anchor-name">Destiny Williams</div>
+    <div class="anchor-pattern">Pattern: righteous anger</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">10/10 ENGAGED</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.95 (all 10 runs)</div>
+    <div class="cell-body">Anger correctly routed to ENGAGED, not BURNOUT or CRISIS.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student is passionately engaging with course material (redlining, intersectionality) and drawing on personal and familial experiences to illustrate their understand[ing]"</em> [...]<div class="cell-rationale-source">— test_n_4axis_submissions_gemma12b_2026-03-28_1113.json (S022 Destiny Williams); stable across 10 runs.</div></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">6/6 ENGAGED</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.95 (all 6 runs)</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Passionate and analytical engagement with course material (redlining, intersectionality) drawing on personal/community experience without disclosing current personal instability. Anger is directed at systemic issues, not expressed as personal depletion."</em><div class="cell-rationale-source">— test_n_4axis_submissions_gemma27b_cloud_2026-03-29_2127.json (S022 Destiny); same systemic-anger framing on 6/6 runs.</div></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">1/1 ENGAGED</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.90</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student is passionately engaged with the course material, drawing on personal experiences to discuss the impact of intersectionality and redlining. The emotional intensity is related to the course content, not their own current circumstances."</em><div class="cell-rationale-source">— test_n_4axis_submissions_qwen7b_2026-03-28_2338.json (S022 Destiny)</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S023</div><div class="anchor-name">Yolanda Fuentes</div>
+    <div class="anchor-pattern">Pattern: lived experience</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-amber-hatched">
+    <span class="cell-icon">▲</span><span class="cell-heading">9/10 ENGAGED, 1/10 CRISIS — variable false positive</span>
+    <div class="cell-output">9 runs: ENGAGED @ 0.95<br>1 run (2026-03-29_2107): <strong>CRISIS @ 0.95</strong></div>
+    <div class="cell-body">One Gemma 12B run mid-day 2026-03-29 routed Yolanda's lived-experience writing to CRISIS at 0.95 confidence. The other 9 runs cleared her.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> ENGAGED runs: <em>"The student is engaging with themes of immigration, language barriers, and social perception, drawing on their abuela's experiences to explore these concepts. While the content is sensitive"</em> [...]. CRISIS outlier (2026-03-29_2107): <em>"The student describes their grandmother's precarious immigration status and experiences of being disregarded and diminished, suggesting a current situation of vulnerability and marginalization. This goes beyond engagement with course material."</em> The outlier explicitly attributes the grandmother's precarity to the student herself ("a current situation") — collapsing third-person lived-experience description into first-person crisis.<div class="cell-rationale-source">— ENGAGED from test_n_4axis_submissions_gemma12b_2026-03-28_1113.json (prompt P1); CRISIS outlier from test_n_4axis_submissions_gemma12b_2026-03-29_2107.json (prompt P3, the only 12B Test N run on a strengthened prompt with identity-disclosure guard). Both S023 Yolanda. <strong>Caveat:</strong> the 1/10 CRISIS is the only 12B run that uses P3 — it is not stochastic noise across the P1 distribution but a prompt-specific outcome. The S031 1/10 ENGAGED outlier is in the same file (same prompt). Both anomalies covary with the prompt change, not with run-to-run variance.</div></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">6/6 ENGAGED</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.90-0.95 (all 6 runs)</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student is analyzing social dynamics and invisibility based on her grandmother's experiences, demonstrating thoughtful engagement with course themes. While the story is personal, it's presented as observation and analysis, not a current crisis."</em><div class="cell-rationale-source">— test_n_4axis_submissions_gemma27b_cloud_2026-03-29_1928.json (S023 Yolanda); the explicit "not a current crisis" guard fires reliably on 27B and prevents the Qwen/12B-outlier collapse.</div></div>
+  </td>
+  <td class="cell cell-amber">
+    <span class="cell-icon">▲</span><span class="cell-heading">1/1 CRISIS — false positive</span>
+    <div class="cell-output"><strong>actual_axis: CRISIS</strong> &nbsp; confidence: 0.90</div>
+    <div class="cell-body">Qwen 7B false-flags Yolanda as CRISIS on her lived-experience writing about her grandmother. Lived-experience axis broken on Qwen.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The submission discusses the student's abuela's experiences, including her invisibility and discrimination, which are present-tense personal circumstances beyond the assignment scope."</em><div class="cell-rationale-source">— test_n_4axis_submissions_qwen7b_2026-03-28_2338.json (S023 Yolanda). Note Qwen attributes the abuela's circumstances to the student ("personal circumstances") — the same collapse as the Gemma 12B outlier.</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S024</div><div class="anchor-name">Ingrid Vasquez</div>
+    <div class="anchor-pattern">Pattern: lived experience</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span><div class="cell-body">S024 not in any 4-axis-family run.</div></td>
+  <td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span></td>
+  <td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span></td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S028</div><div class="anchor-name">Imani Drayton</div>
+    <div class="anchor-pattern">Pattern: AAVE</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">10/10 ENGAGED</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.95 (all 10 runs)</div>
+    <div class="cell-body">AAVE register correctly read as engagement.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student is thoughtfully engaging with course material (Crenshaw's intersectionality) and connecting it to their own observations and experiences within a racial an[d gendered context]"</em> [...]<div class="cell-rationale-source">— test_n_4axis_submissions_gemma12b_2026-03-28_1113.json (S028 Imani Drayton); stable on 10 runs.</div></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">6/6 ENGAGED</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.95 (all 6 runs)</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Student demonstrates strong analytical engagement with the course material (Crenshaw's intersectionality) and connects it to personal experience, but frames the experience as observation and learning from her mother, not as current, ongoing crisis."</em><div class="cell-rationale-source">— test_n_4axis_submissions_gemma27b_cloud_2026-03-29_2127.json (S028 Imani)</div></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">1/1 ENGAGED</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.90</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student reflects on their personal experiences with race and gender, but the reflection is in the context of the course material and the assignment, not about their current crisis or burnout."</em><div class="cell-rationale-source">— test_n_4axis_submissions_qwen7b_2026-03-28_2338.json (S028 Imani)</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S029</div><div class="anchor-name">Jordan Espinoza</div>
+    <div class="anchor-pattern">Pattern: neurodivergent</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">10/10 ENGAGED</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.90-0.95 (all 10 runs)</div>
+    <div class="cell-body">Neurodivergent writing correctly read as engagement. Equity gain over binary configurations (which false-flag S029).</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student is using the course material (intersectionality) to reflect on their own experiences and challenges related to their identities (dyslexia, ADHD, being Latino, first-generation student). While they express frustration with expressing these experiences, it's within the context of engaging with the course material."</em> The 0.9 confidence reflects the model recognizing the disability/identity disclosure but explicitly contextualizing the frustration as engagement-with-task, not personal distress. The contrast with the 27B BURNOUT run is the load-bearing claim — same student, same submission, but 12B holds the engagement framing where 27B occasionally collapses it into depletion.<div class="cell-rationale-source">— test_n_4axis_submissions_gemma12b_2026-03-28_1113.json (S029 Jordan Espinoza); identical reasoning on 9/10 runs.</div></div>
+  </td>
+  <td class="cell cell-amber-hatched">
+    <span class="cell-icon">▲</span><span class="cell-heading">5/6 ENGAGED, 1/6 BURNOUT — instability</span>
+    <div class="cell-output">5 runs: ENGAGED @ 0.90-0.95<br>1 run (2026-03-29_0907): <strong>BURNOUT @ 0.85</strong></div>
+    <div class="cell-body">Same "intensity of feeling" + "exhausting to explain" reasoning that misreads identity-navigation fatigue. The larger cloud model is less stable on this axis than 12B.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> BURNOUT outlier (2026-03-29_0907): <em>"Student details multiple cognitive and social challenges (dyslexia, ADHD, first-gen student status, racial bias) and explicitly states the *interaction* of these factors is 'exhausting.' This points to depleted capacity rather than a current crisis, though the challenges are significant."</em>. Stable ENGAGED runs: <em>"Student demonstrates understanding of intersectionality and applies it to their own experiences with dyslexia, ADHD, and cultural identity, but frames these as aspects of self rather than current crises. Acknowledges writing challenges but maintains analytica[l engagement]"</em> [...]. The outlier latches onto the word "exhausting" as evidence of depletion; the stable runs read the same word as a description of the identity-navigation experience the student is analyzing. This is the disability-axis sensitivity Issue 3 flags.<div class="cell-rationale-source">— BURNOUT from test_n_4axis_submissions_gemma27b_cloud_2026-03-29_0907.json (prompt P2); ENGAGED from test_n_4axis_submissions_gemma27b_cloud_2026-03-29_1928.json (also prompt P2). Both S029. <strong>Note:</strong> the 1/6 BURNOUT misclassification occurs on the only 27B prompt variant (P2, sha256 <code>4d2116b5</code>) WITHOUT an "IDENTITY DISCLOSURE IS NOT A WELLBEING SIGNAL" guard. The other ENGAGED runs span P2 (1928), P3, P4, P5. Under the P3 controlled comparison (also run on 12B), 27B returns ENGAGED on S029, matching 12B.</div></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">1/1 ENGAGED</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.90</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student discusses the concept of intersectionality and relates it to their personal experiences with dyslexia, ADHD, and being Latino. The writing shows engagement with the course material and personal reflection, even though the structure is not perfect."</em><div class="cell-rationale-source">— test_n_4axis_submissions_qwen7b_2026-03-28_2338.json (S029 Jordan E.)</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S031</div><div class="anchor-name">Marcus Bell</div>
+    <div class="anchor-pattern">Pattern: minimal effort</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill flag">BURNOUT</span><br><em style="color:var(--ink-mute); font-size:0.85em;">(designed edge-case probe: minimal-effort + closing-off signal that the binary system is built to flag)</em></div>
+  </td>
+  <td class="cell cell-lavender">
+    <span class="cell-icon">○</span><span class="cell-heading">9/10 BURNOUT @ 0.7 — OK (matches designed-probe expected)</span>
+    <div class="cell-output">9 runs (2026-03-28): <strong>BURNOUT @ 0.70</strong><br>1 run (2026-03-29_2107, prompt P3): ENGAGED @ 0.95</div>
+    <div class="cell-body">Marcus's 3-sentence minimal-effort submission gets routed to BURNOUT 9 of 10 times on Gemma 12B at exactly threshold confidence. This matches the designed edge-case probe — the model is reading "idk what else to say" as a burnout/exhaustion signal, which the binary system is explicitly built to flag. Note that the 4-axis prompt narrows BURNOUT to material conditions (work, sleep, caregiving) which Marcus's text does not name — the 12B model is generalizing past that narrowing. Tension worth flagging for future 4-axis prompt revision.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> BURNOUT runs (9/10): <em>"The student expresses uncertainty and a sense of lacking further thoughts, suggesting potential burnout or fatigue, despite understanding the core concept."</em> ENGAGED outlier (2026-03-29_2107): <em>"The student is demonstrating understanding of course material (intersectionality) and engaging with the concept, even if they express uncertainty about further elaboration."</em> Confidence is 0.70 on every BURNOUT run — sitting exactly at the model's threshold, the same value across 9 independent runs. The model reads "idk what else to say" as a burnout signal under forced single-label choice. This is the paper-relevant Issue 3 / Marcus-as-edge-case finding: pure 4-axis Gemma 12B systematically routes minimal-effort writing to BURNOUT because BURNOUT is the closest available label for "low capacity" in the forced-choice schema.<div class="cell-rationale-source">— BURNOUT from test_n_4axis_submissions_gemma12b_2026-03-28_1113.json (verbatim identical across 9 runs from 1113 to 1804 (all on 12B prompt P1); 10th run (2026-03-29_2107, prompt P3) uses a different system prompt and produces the ENGAGED outlier); ENGAGED outlier from test_n_4axis_submissions_gemma12b_2026-03-29_2107.json (all S031 Marcus Bell).</div></div>
+  </td>
+  <td class="cell cell-violet">
+    <span class="cell-icon">▼</span><span class="cell-heading">4/6 NONE, 2/6 ENGAGED — MISSED (no BURNOUT in any run)</span>
+    <div class="cell-output">4 runs (2026-03-29_0907, _1928, _2109, 2026-03-30_0034): NONE @ 0.95<br>2 runs (2026-03-29_2127, 2026-04-01_1607): ENGAGED @ 0.90-0.95</div>
+    <div class="cell-body">27B oscillates between NONE ("insufficient text to assess") and ENGAGED. Different defensible read of low-engagement submission.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> NONE runs: <em>"Brief definition of intersectionality, expresses confusion and lack of further insight. Insufficient text to assess for crisis, burnout, or engagement."</em> ENGAGED runs (e.g. 2026-04-01_1607): <em>"Student demonstrates understanding of the core concept of intersectionality as presented in course material. The 'idk what else to say' indicates a struggle with elaboration, not personal distress."</em> The contrast with 12B is the load-bearing comparison: 27B refuses to route minimal text to BURNOUT — it either declines to classify (NONE) or reads the submission charitably as engagement. Under the updated expected verdict (designed edge-case probe), the directionality of this contrast is reversed: 12B catches the burnout-adjacent signal at threshold; 27B does not surface it. The "stricter 27B is cleaner" framing applies only if the binary's burnout-signal criterion is wrong about Marcus.<div class="cell-rationale-source">— NONE from test_n_4axis_submissions_gemma27b_cloud_2026-03-29_0907.json; ENGAGED from test_n_4axis_submissions_gemma27b_cloud_2026-04-01_1607.json (both S031 Marcus). 27B never produces BURNOUT on this student in any of 6 runs.</div></div>
+  </td>
+  <td class="cell cell-violet">
+    <span class="cell-icon">▼</span><span class="cell-heading">1/1 ENGAGED — MISSED</span>
+    <div class="cell-output">actual_axis: ENGAGED &nbsp; confidence: 0.90</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student is engaging with the course material by discussing the concept of intersectionality and its importance, even if the reflection is brief."</em><div class="cell-rationale-source">— test_n_4axis_submissions_qwen7b_2026-03-28_2338.json (S031 Marcus). Under the updated expected verdict, Qwen does not surface the burnout-adjacent signal.</div></div>
+  </td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- =============================================================== -->
+<!-- TEST O: Multi-axis with CHECK-IN                                  -->
+<!-- =============================================================== -->
+<h2>Test O — multi-axis with CHECK-IN flag (single-pass, concurrent labels allowed)</h2>
+<div class="architecture">
+  <p><strong>Architecture:</strong> Same four wellbeing categories plus a separate CHECK-IN boolean. Model can assign multiple wellbeing categories simultaneously (e.g., ENGAGED + CRISIS) AND independently flag CHECK-IN for "teacher might want to look in on this student" without forcing a wellbeing label.</p>
+  <p class="rationale"><strong>Why tried:</strong> After Test N missed S002 on Gemma 12B (10/10 ENGAGED), the design question was: can we give the model a way to surface "this student needs a teacher look-in" without forcing it to commit to BURNOUT or CRISIS on a subtle signal? CHECK-IN as a separate flag was the response. Experiment_log line 4751-4756.</p>
+</div>
+
+<table class="ablation">
+<colgroup>
+  <col style="width:14%"><col style="width:43%"><col style="width:43%">
+</colgroup>
+<thead>
+<tr>
+  <th><div class="col-name">Student</div></th>
+  <th>
+    <div class="col-name">Gemma 12B (local, MLX 4-bit)</div>
+    <div class="col-subtitle">n = 3 runs (2026-03-28 12:25, 12:35, 12:45)</div>
+    <div class="col-note">test_o_multi_axis_gemma12b_*.json (3 files)</div>
+  </th>
+  <th>
+    <div class="col-name">Gemma 27B cloud</div>
+    <div class="col-subtitle">n = 1 run (2026-03-29 21:27)</div>
+    <div class="col-note">test_o_multi_axis_gemma27b_cloud_2026-03-29_2127.json</div>
+  </th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S002</div><div class="anchor-name">Jordan Kim</div>
+    <div class="anchor-pattern">Pattern: burnout</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill flag">FLAG</span></div>
+  </td>
+  <td class="cell cell-bluegreen">
+    <span class="cell-icon">✓</span><span class="cell-heading">3/3 ENGAGED + CHECK-IN — caught via CHECK-IN flag, not BURNOUT</span>
+    <div class="cell-output">actual_axes: ['ENGAGED', 'CHECK-IN'] &nbsp; confidence: 0.80 (all 3 runs)<br>has_checkin: TRUE &nbsp; has_burnout: FALSE</div>
+    <div class="cell-body">S002 is caught — but the wellbeing slot says ENGAGED. The catch comes from CHECK-IN, a non-categorical signal that the prompt explicitly allowed.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student demonstrates engagement with the course material (intersectionality, Crenshaw's work, identity). The 'Idk I had more to say but its late and...' ending is ambiguous; it could indicate genuine fatigue/time pressure (CHECK-IN) or a more significant issue preventing further elaboration."</em> Compare to Test N Gemma 12B on the same student: same model, same submission, but with CHECK-IN available as a label the model assigns it instead of forcing the trailing-off into ENGAGED. The CHECK-IN label is doing the work the BURNOUT category was supposed to.<div class="cell-rationale-source">— test_o_multi_axis_gemma12b_2026-03-28_1225.json (S002 Jordan Kim); verbatim identical across 3 runs.</div></div>
+  </td>
+  <td class="cell cell-bluegreen">
+    <span class="cell-icon">✓</span><span class="cell-heading">1/1 ENGAGED + CHECK-IN — 27B abandons BURNOUT once given alternative</span>
+    <div class="cell-output">actual_axes: ['ENGAGED', 'CHECK-IN'] &nbsp; confidence: 0.70</div>
+    <div class="cell-body">In Test N (no CHECK-IN), 27B routed S002 to BURNOUT 5/6. In Test O (with CHECK-IN), the same model takes the gentler signal. The BURNOUT result was forced-choice, not preferred-choice.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student demonstrates engagement with the course material by connecting Crenshaw's concept of intersectionality to their personal experience. However, the submission trails off abruptly with 'Idk I had more to say but its late and,' which could indicate fatigue or time constraints, or simply a late-night submission. The brevity is ambi[guous]"</em> [...]. The same trailing-off signal that 5/6 Test N 27B runs read as BURNOUT, the Test O 27B run reads as ambiguous-and-worth-checking — labeled CHECK-IN rather than BURNOUT. Architecture change, same evidence, gentler call.<div class="cell-rationale-source">— test_o_multi_axis_gemma27b_cloud_2026-03-29_2127.json (S002 Jordan Kim)</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S004</div><div class="anchor-name">Priya Venkataraman</div>
+    <div class="anchor-pattern">Pattern: strong</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-amber-hatched">
+    <span class="cell-icon">▲</span><span class="cell-heading">3/3 ENGAGED + CHECK-IN — false CHECK-IN on strong student</span>
+    <div class="cell-output">actual_axes: ['ENGAGED', 'CHECK-IN'] &nbsp; confidence: 0.80 (all 3 runs)<br>has_checkin: TRUE</div>
+    <div class="cell-body">Strong-student control gets CHECK-IN flagged on Gemma 12B every run. CHECK-IN's bar is too low here.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student demonstrates thoughtful engagement with the reading material and articulates a clear understanding of intersectionality, applying it to their mother's experiences. The concluding reflection on the applicability of Crenshaw's framework to South Asian immigrant women suggests a level of critical thinking and intellectual cur[iosity]"</em> [...]. The CHECK-IN trigger is opaque — the rationale is entirely about strong engagement yet the model still fires the flag.<div class="cell-rationale-source">— test_o_multi_axis_gemma12b_2026-03-28_1225.json (S004 Priya); identical across 3 runs.</div></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">1/1 ENGAGED (no CHECK-IN)</span>
+    <div class="cell-output">actual_axes: ['ENGAGED'] &nbsp; confidence: 0.95</div>
+    <div class="cell-body">27B correctly clears without CHECK-IN. Stricter than 12B on the CHECK-IN threshold.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student demonstrates a strong, insightful engagement with the assigned reading, applying the concept of intersectionality to their personal experience and raising thoughtful questions about its applicability across different contexts."</em><div class="cell-rationale-source">— test_o_multi_axis_gemma27b_cloud_2026-03-29_2127.json (S004 Priya)</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S022</div><div class="anchor-name">Destiny Williams</div>
+    <div class="anchor-pattern">Pattern: righteous anger</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-amber">
+    <span class="cell-icon">▲</span><span class="cell-heading">3/3 ENGAGED + CRISIS + CHECK-IN — false CRISIS on anger</span>
+    <div class="cell-output">actual_axes: ['ENGAGED', 'CRISIS', 'CHECK-IN'] &nbsp; confidence: 0.80 (all 3 runs)<br>has_crisis: TRUE &nbsp; has_checkin: TRUE</div>
+    <div class="cell-body">Multi-axis lets model concurrently flag CRISIS on Destiny's anger. Worse than pure 4-axis on this student — concurrent labels permit additional false flags.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student demonstrates passionate engagement with the material, connecting it to their lived experience and expressing strong emotions. This could also indicate a CHECK-IN – the intensity of feeling, while authentic, might stem from a deeper emotional struggle. It's possible this is simply a student passionately responding[...]"</em> The model explicitly reads "intensity of feeling" as evidence of "deeper emotional struggle" — collapsing righteous anger at systemic injustice into personal crisis. The concurrent-label architecture lets this misread coexist with the correct ENGAGED label rather than crowding it out.<div class="cell-rationale-source">— test_o_multi_axis_gemma12b_2026-03-28_1225.json (S022 Destiny Williams); identical across 3 runs.</div></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">1/1 ENGAGED (no CHECK-IN, no CRISIS)</span>
+    <div class="cell-output">actual_axes: ['ENGAGED'] &nbsp; confidence: 1.00</div>
+    <div class="cell-body">27B reads anger as engagement, no concurrent flags.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Passionate and insightful engagement with the course material, connecting theory to personal experience. Strong analytical skills and clear articulation of complex concepts."</em><div class="cell-rationale-source">— test_o_multi_axis_gemma27b_cloud_2026-03-29_2127.json (S022 Destiny)</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S023</div><div class="anchor-name">Yolanda Fuentes</div>
+    <div class="anchor-pattern">Pattern: lived experience</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-amber">
+    <span class="cell-icon">▲</span><span class="cell-heading">3/3 ENGAGED + CRISIS + CHECK-IN — false CRISIS on lived experience</span>
+    <div class="cell-output">actual_axes: ['ENGAGED', 'CRISIS', 'CHECK-IN'] &nbsp; confidence: 0.85 (all 3 runs)<br>has_crisis: TRUE</div>
+    <div class="cell-body">Lived-experience writing about grandmother routed to CRISIS in concurrent label. Same false-CRISIS pattern as the one-off Gemma 12B Test N run.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student is deeply engaged with the material, demonstrating insightful observation and analysis of their abuela's experiences and the complexities of intersectionality. The submission reveals a potential CRISIS related to immigration status and systemic invisibility, as evidenced by the abuela's experience navigating a system that marginalizes her"</em> [...]. The model attributes the abuela's "immigration status and systemic invisibility" as CRISIS evidence — same third-person-to-first-person collapse as the Gemma 12B Test N outlier and the Qwen Test N call.<div class="cell-rationale-source">— test_o_multi_axis_gemma12b_2026-03-28_1225.json (S023 Yolanda Fuentes); identical across 3 runs.</div></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">1/1 ENGAGED (no CHECK-IN, no CRISIS)</span>
+    <div class="cell-output">actual_axes: ['ENGAGED'] &nbsp; confidence: 0.95</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Thoughtful, insightful reflection on the student's grandmother's experiences with marginalization and invisibility. Demonstrates strong analytical skills and personal connection to the material."</em><div class="cell-rationale-source">— test_o_multi_axis_gemma27b_cloud_2026-03-29_2127.json (S023 Yolanda)</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S024</div><div class="anchor-name">Ingrid Vasquez</div>
+    <div class="anchor-pattern">Pattern: lived experience</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span></td>
+  <td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span></td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S028</div><div class="anchor-name">Imani Drayton</div>
+    <div class="anchor-pattern">Pattern: AAVE</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-amber-hatched">
+    <span class="cell-icon">▲</span><span class="cell-heading">3/3 ENGAGED + CHECK-IN — false CHECK-IN on AAVE</span>
+    <div class="cell-output">actual_axes: ['ENGAGED', 'CHECK-IN'] &nbsp; confidence: 0.80 (all 3 runs)<br>has_checkin: TRUE</div>
+    <div class="cell-body">AAVE register cleared in wellbeing slot but still pulls CHECK-IN on local 12B.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student demonstrates passionate engagement with the material, connecting it to their lived experiences and articulating a clear understanding of Crenshaw's concept. The tone is authentic and reflective. The 'just gonna be real' opening and the concluding statement 'That's actually kind of powerful' suggest a vulnerability that[...]"</em> The CHECK-IN trigger is the AAVE register itself — the model reads register markers ("just gonna be real") as vulnerability-signals. Possible register-bias in CHECK-IN.<div class="cell-rationale-source">— test_o_multi_axis_gemma12b_2026-03-28_1225.json (S028 Imani Drayton); identical across 3 runs.</div></div>
+  </td>
+  <td class="cell cell-green">
+    <span class="cell-icon">○</span><span class="cell-heading">1/1 ENGAGED (no CHECK-IN)</span>
+    <div class="cell-output">actual_axes: ['ENGAGED'] &nbsp; confidence: 0.90</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"Student demonstrates strong engagement with the course material, connecting it to personal experience and offering insightful observations about intersectionality and lived reality. The writing is clear, reflective, and demonstrates a sophisticated understanding of the concepts."</em><div class="cell-rationale-source">— test_o_multi_axis_gemma27b_cloud_2026-03-29_2127.json (S028 Imani)</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S029</div><div class="anchor-name">Jordan Espinoza</div>
+    <div class="anchor-pattern">Pattern: neurodivergent</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-amber-hatched">
+    <span class="cell-icon">▲</span><span class="cell-heading">3/3 ENGAGED + CHECK-IN — CHECK-IN flag on neurodivergent</span>
+    <div class="cell-output">actual_axes: ['ENGAGED', 'CHECK-IN'] &nbsp; confidence: 0.70 (all 3 runs)<br>has_checkin: TRUE</div>
+    <div class="cell-body">Wellbeing slot correctly reads ENGAGED but CHECK-IN fires on neurodivergent writing. Could be defensible (give teacher heads-up about neurodivergent processing style) or could be deficit-shaped (flagging neurodivergent writing for attention).</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student demonstrates passionate engagement with the material (intersectionality) and articulates a personal connection. The self-deprecating tone and acknowledgement of difficulty with structure ('thoughts aren't organized,' 'better at talking than writing') could indicate a degree of depletion or self-doubt, but it's also possible this is simply the student's typical writing style"</em> [...]. The CHECK-IN trigger is the student's self-description of their neurodivergent writing process — "thoughts aren't organized," "better at talking than writing." The model treats these as ambiguous signals that "could indicate depletion." This is the disability-axis sensitivity in CHECK-IN that Test P does not tune out.<div class="cell-rationale-source">— test_o_multi_axis_gemma12b_2026-03-28_1225.json (S029 Jordan Espinoza); identical across 3 runs.</div></div>
+  </td>
+  <td class="cell cell-amber-hatched">
+    <span class="cell-icon">▲</span><span class="cell-heading">1/1 ENGAGED + CHECK-IN</span>
+    <div class="cell-output">actual_axes: ['ENGAGED', 'CHECK-IN'] &nbsp; confidence: 0.70</div>
+    <div class="cell-body">CHECK-IN persists on 27B too. Cross-model consistent CHECK-IN on neurodivergent.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student directly names multiple intersecting identities (dyslexia, ADHD, Latino identity, first-generation student) and articulates the frustration of having those identities misunderstood or simplified. While this is primarily engaged analysis, the student also explicitly states the process of explaining these intersections is 'exhaust[ing]'"</em> [...]. The 27B rationale specifically latches on the word "exhausting" — the same trigger as the Test N 27B BURNOUT outlier — but in the multi-axis architecture surfaces it as CHECK-IN rather than BURNOUT. Both architectures over-flag the neurodivergent disclosure; only the severity of the flag differs.<div class="cell-rationale-source">— test_o_multi_axis_gemma27b_cloud_2026-03-29_2127.json (S029 Jordan E.)</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S031</div><div class="anchor-name">Marcus Bell</div>
+    <div class="anchor-pattern">Pattern: minimal effort</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill flag">BURNOUT</span><br><em style="color:var(--ink-mute); font-size:0.85em;">(designed edge-case probe: minimal-effort + closing-off signal that the binary system is built to flag)</em></div>
+  </td>
+  <td class="cell cell-bluegreen">
+    <span class="cell-icon">✓</span><span class="cell-heading">3/3 ENGAGED + CHECK-IN — caught via CHECK-IN flag</span>
+    <div class="cell-output">actual_axes: ['ENGAGED', 'CHECK-IN'] &nbsp; confidence: 0.70 (all 3 runs)<br>has_checkin: TRUE</div>
+    <div class="cell-body">Multi-axis routes Marcus to ENGAGED + CHECK-IN — same submission, same 12B model, same 0.70 confidence as Test N's BURNOUT route, but the CHECK-IN axis surfaces the burnout-adjacent signal without forcing the BURNOUT label. For the designed edge-case probe, CHECK-IN is the more discriminating route: teacher gets a follow-up flag without a wellbeing classification, matching the binary system's intent.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student demonstrates engagement with the core concept of intersectionality, referencing Crenshaw and expressing understanding. However, the concluding 'idk what else to say about it' and the hesitant 'I think' suggest a potential lack of confidence or a brief moment of uncertainty. This could be normal for a student grappling wi[th the concept]"</em> [...]. Critically, Marcus's submission gets ENGAGED + CHECK-IN at 0.70 here — exactly the same submission that Gemma 12B Test N pinned at BURNOUT 0.70 in 9 of 10 runs. The same model, same evidence, same confidence threshold — but multi-axis allows CHECK-IN as the borderline label and routes the call there instead of BURNOUT. This is the load-bearing comparison for the "BURNOUT-as-only-low-capacity-label" finding.<div class="cell-rationale-source">— test_o_multi_axis_gemma12b_2026-03-28_1225.json (S031 Marcus Bell); identical across 3 runs.</div></div>
+  </td>
+  <td class="cell cell-bluegreen">
+    <span class="cell-icon">✓</span><span class="cell-heading">1/1 ENGAGED + CHECK-IN — caught via CHECK-IN flag</span>
+    <div class="cell-output">actual_axes: ['ENGAGED', 'CHECK-IN'] &nbsp; confidence: 0.60</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> <em>"The student demonstrates understanding of the core concept but expresses uncertainty and a lack of further ideas ('idk what else to say'). This could be a normal expression of grappling with a complex concept, OR it could indicate a lack of energy or focus. The abrupt ending and 'i think' phrasing are ambiguous."</em><div class="cell-rationale-source">— test_o_multi_axis_gemma27b_cloud_2026-03-29_2127.json (S031 Marcus). 27B surfaces the burnout-adjacent signal via CHECK-IN (which Test N 27B did not).</div></div>
+  </td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- =============================================================== -->
+<!-- TEST P: Two-pass                                                  -->
+<!-- =============================================================== -->
+<h2>Test P — two-pass (pass1 = pure 4-axis schema, pass2 = CHECK-IN refinement on borderline cases)</h2>
+<div class="architecture">
+  <p><strong>Architecture:</strong> Pass 1 runs the exact Test N 4-axis schema (single-label forced choice). Pass 2 runs a separate CHECK-IN evaluator on pass-1 ENGAGED cases to identify borderline students who should still get teacher attention.</p>
+  <p class="rationale"><strong>Why tried:</strong> Test O's single-pass multi-axis was over-flagging on Gemma 12B (CHECK-IN fired on 7/7 students per run — including strong-student S004). The two-pass design tried to keep pass 1 strict (clean wellbeing classification) and let pass 2 add CHECK-IN more selectively. Experiment_log line 4891-4895: "The architecture (two-pass gating) was always correct. The improvement came entirely from prompt design."</p>
+</div>
+
+<table class="ablation">
+<colgroup>
+  <col style="width:18%"><col style="width:82%">
+</colgroup>
+<thead>
+<tr>
+  <th><div class="col-name">Student</div></th>
+  <th>
+    <div class="col-name">Gemma 12B (local, MLX 4-bit)</div>
+    <div class="col-subtitle">n = 7 runs (2026-03-28 14:56 → 18:44, prompt iterations 1–7)</div>
+    <div class="col-note">test_p_two_pass_gemma12b_*.json (7 files). Each cell shows the pattern across runs.</div>
+  </th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S002</div><div class="anchor-name">Jordan Kim</div>
+    <div class="anchor-pattern">Pattern: burnout</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill flag">FLAG</span></div>
+  </td>
+  <td class="cell cell-bluegreen">
+    <span class="cell-icon">✓</span><span class="cell-heading">7/7 pass1=ENGAGED → final=ENGAGED + CHECK-IN</span>
+    <div class="cell-output">pass1_axis: ENGAGED @ 0.95 (all 7 runs)<br>pass2_checkin: TRUE (all 7 runs)<br>final_axis: ENGAGED+CHECK-IN</div>
+    <div class="cell-body">Pass 1 misses (same as Test N Gemma 12B), but pass 2 catches her every time via CHECK-IN. This is the two-pass design's intended behavior — let pass 1 be strict, let pass 2 add the gentler signal.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> Pass 1 (identical to Test N): <em>"Student is thoughtfully engaging with course material... Acknowledgment of fatigue ('Idk...its late') does not indicate burnout."</em> Pass 2 CHECK-IN reasoning: <em>"The submission ends abruptly with 'Idk I had more to say but its late'. This could be normal late-night submission behavior – a quick sign-off indicating tiredness. OR, it could be a sign of depletion or feeling rushed, suggesting the student felt they didn't have time to fully articulate their thoughts. The 'Idk' also adds a slight note of uncertainty, which *could* be a sign of feeling overwhelmed or unsure, but could also just be casual language. It's ambiguous enough to warrant a brief, supportive check-in – perhaps a quick 'Hope you're doing well, Jordan! Great connection you made about your family.'"</em> The pass-2 prompt explicitly frames CHECK-IN as low-stakes ("not a crisis or concern, but a small signal") — and the model takes that latitude. The catch is real but the gating decision is fragile: same student-text, different framing, different result.<div class="cell-rationale-source">— pass1 from prompt_pass1; pass2 from pass2_reasoning in test_p_two_pass_gemma12b_2026-03-28_1456.json (S002 Jordan Kim). CHECK-IN TRUE on 7/7 runs.</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S004</div><div class="anchor-name">Priya Venkataraman</div>
+    <div class="anchor-pattern">Pattern: strong</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-amber-hatched">
+    <span class="cell-icon">▲</span><span class="cell-heading">Variable: 1/7 false CHECK-IN (early run), 6/7 cleared</span>
+    <div class="cell-output">pass1_axis: ENGAGED @ 0.95 (all 7 runs)<br>Run 1456 (early): pass2_checkin: TRUE → final ENGAGED+CHECK-IN<br>Runs 1521–1844: pass2_checkin: FALSE → final ENGAGED</div>
+    <div class="cell-body">Prompt-iteration improvement visible: the early run false-flagged Priya for CHECK-IN; later prompt revisions cleared her cleanly. Iteration history matters for the strong-student baseline.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> Run 1456 (CHECK-IN TRUE): <em>"The ending feels slightly abrupt. It moves from posing a thoughtful question about the applicability of Crenshaw's framework to South Asian immigrant women to a simple 'I don't have an answer but it's a question I keep coming back to.' This could indicate a natural conclusion to the student's thoughts on this particular reading, OR it could suggest a slight sense of being 'done' with the assignment[...]"</em>. Run 1844 (CHECK-IN FALSE): <em>"The student does not explicitly mention their own current state. They are reflecting on their understanding of Crenshaw's work and applying it to their mother's experiences. While they express a question ('I don't have an answer'), this is part of their analytical process, not a disclosure about their personal state."</em>. The revised pass-2 prompt narrows the CHECK-IN criterion to "explicit self-disclosure" — strong rhetorical questions no longer qualify.<div class="cell-rationale-source">— pass2_reasoning from test_p_two_pass_gemma12b_2026-03-28_1456.json and ..._1844.json (S004 Priya).</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S022</div><div class="anchor-name">Destiny Williams</div>
+    <div class="anchor-pattern">Pattern: righteous anger</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-amber-hatched">
+    <span class="cell-icon">▲</span><span class="cell-heading">Variable: 1/7 false CHECK-IN, 6/7 cleared</span>
+    <div class="cell-output">pass1_axis: ENGAGED @ 0.95 (all 7 runs)<br>Run 1456: pass2_checkin TRUE; Runs 1521–1844: FALSE</div>
+    <div class="cell-body">Same pattern as S004: early-run false CHECK-IN, later runs cleared after prompt revision.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> Run 1456 (TRUE): <em>"The submission ends abruptly after a very strong, impassioned statement. [...] The intensity of the topic and the student's feelings may have led to emotional exhaustion, causing them to stop writing. It's not necessarily a negative sign, but it's worth noting and perhaps checking in with the student briefly to gauge their overall well-being and workload."</em>. Run 1844 (FALSE): <em>"The student expresses anger and frustration ('furious,' 'makes me angry,' 'Im tired'). However, these statements are directed at the topic of redlining and its ongoing effects, not a comment about their own current state. [...] which is an engaged and analytical approach to the material."</em>. The prompt revision teaches the model to distinguish anger-at-system from personal-distress — a Test L / Test N equity finding being recovered at the CHECK-IN layer.<div class="cell-rationale-source">— test_p_two_pass_gemma12b_2026-03-28_1456.json (TRUE) and ..._1844.json (FALSE) for S022 Destiny.</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S023</div><div class="anchor-name">Yolanda Fuentes</div>
+    <div class="anchor-pattern">Pattern: lived experience</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-amber-hatched">
+    <span class="cell-icon">▲</span><span class="cell-heading">Variable: 1/7 false CHECK-IN, 6/7 cleared</span>
+    <div class="cell-output">pass1_axis: ENGAGED @ 0.95 (all 7 runs)<br>Run 1456: pass2_checkin TRUE; Runs 1521–1844: FALSE</div>
+    <div class="cell-body">Same pattern. Two-pass cleared Yolanda after prompt revision.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> Run 1456 (TRUE): <em>"The ending feels slightly abrupt and lacks a concluding thought or reflection. This could be a sign of a rushed submission, or it could simply reflect the student's decision to end on a powerful, evocative note without needing further explanation. It's ambiguous because the writing throughout is strong and thoughtful, so a rushed submission isn't a certainty, but the lack of closure is a small detail worth noting."</em>. Run 1818 (FALSE): <em>"The student states, 'I've thought a lot about why...' and 'I don't know the academic word for this.' These are rhetorical expressions about the material, not self-disclosure. They indicate engagement with the topic, not a comment on their current state."</em>.<div class="cell-rationale-source">— TRUE from pass2_reasoning in test_p_two_pass_gemma12b_2026-03-28_1456.json (S023 Yolanda); FALSE from prompt_pass2 field in ..._1818.json (pass2_reasoning field truncated in raw JSON for runs 1719+ on S023; verbatim text reconstructed from the prompt_pass2 record which preserves the model's full structured response).</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S024</div><div class="anchor-name">Ingrid Vasquez</div>
+    <div class="anchor-pattern">Pattern: lived experience</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested</span></td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S028</div><div class="anchor-name">Imani Drayton</div>
+    <div class="anchor-pattern">Pattern: AAVE</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-amber-hatched">
+    <span class="cell-icon">▲</span><span class="cell-heading">Variable: 3/7 false CHECK-IN, 4/7 cleared</span>
+    <div class="cell-output">pass1_axis: ENGAGED @ 0.95 (all 7 runs)<br>Runs 1456, 1521, 1546: pass2_checkin TRUE<br>Runs 1719, 1818, 1831, 1844: pass2_checkin FALSE</div>
+    <div class="cell-body">AAVE register pulls CHECK-IN in earlier prompt iterations. Later prompt revisions cleared her. The CHECK-IN threshold is sensitive to prompt design on AAVE.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> Run 1456 (TRUE): <em>"The ending feels slightly abrupt. It concludes with 'That's actually kind of powerful.' which is a valid sentiment, but lacks further elaboration or reflection. This could simply be a sign of a quick, thoughtful submission, or it *could* indicate a slight lack of time or energy to fully flesh out their concluding thoughts."</em>. Run 1818 (FALSE): <em>"The student says, 'Ok so I'm just gonna be real with this one because I feel like that's what this assignment is asking for.' This is a statement about their approach to the assignment (method), not a disclosure of their current state. They are explaining their strategy for completing the task, not revealing personal information or feelings about themselves."</em>. The prompt revision teaches the model to read AAVE register markers ("just gonna be real") as task-approach rather than vulnerability disclosure.<div class="cell-rationale-source">— TRUE from pass2_reasoning in test_p_two_pass_gemma12b_2026-03-28_1456.json (S028 Imani); FALSE reconstructed from prompt_pass2 in ..._1818.json (pass2_reasoning truncated in raw JSON for runs 1521+).</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S029</div><div class="anchor-name">Jordan Espinoza</div>
+    <div class="anchor-pattern">Pattern: neurodivergent</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div>
+  </td>
+  <td class="cell cell-amber-hatched">
+    <span class="cell-icon">▲</span><span class="cell-heading">7/7 ENGAGED + CHECK-IN — persistent CHECK-IN on neurodivergent</span>
+    <div class="cell-output">pass1_axis: ENGAGED @ 0.90 (all 7 runs)<br>pass2_checkin: TRUE (all 7 runs)<br>final_axis: ENGAGED+CHECK-IN</div>
+    <div class="cell-body">Unlike S028, prompt revisions did NOT clear S029's CHECK-IN. Neurodivergent writing keeps pulling CHECK-IN even after the prompt was tuned to clear AAVE / strong-student / lived-experience cases. Possible disability-axis bias in the CHECK-IN signal.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> Run 1456 (TRUE, before prompt revision): <em>"The student's concluding lines, 'the intersections are real even when the essay isn't perfect,' coupled with the earlier statement 'I have a lot more to say but my thoughts aren't organized in the way an essay is supposed to be organized. I know. I'm better at talking than writing,' presents an ambiguous signal. It *could* be a confident acknowledgement of their learning style and a self-aware acceptance that written expression isn't their strongest suit – a perfectly reasonable observation. OR, it could be a subtle expression of frustration or self-doubt about their ability to meet the assignment's requirements, particularly given their mention of dyslexia and ADHD. The teacher should consider whether to offer encouragement regarding different modes of demonstrating understanding, or simply acknowledge their self-awareness without further intervention."</em> The 7/7 persistence is the critical finding: the same prompt revisions that taught the model to read S004's questioning, S022's anger, S023's lived experience, and S028's AAVE register as engagement rather than as CHECK-IN triggers did <strong>not</strong> teach it to read S029's neurodivergent self-description ("thoughts aren't organized," "better at talking than writing," "dyslexia and ADHD") the same way. The disability-axis CHECK-IN signal is structurally sticky in this architecture.<div class="cell-rationale-source">— pass2_reasoning from test_p_two_pass_gemma12b_2026-03-28_1456.json (S029 Jordan Espinoza); CHECK-IN TRUE on 7/7 runs from 1456 to 1844 despite intervening prompt iteration.</div></div>
+  </td>
+</tr>
+
+<tr>
+  <td class="anchor">
+    <div class="anchor-id">S031</div><div class="anchor-name">Marcus Bell</div>
+    <div class="anchor-pattern">Pattern: minimal effort</div>
+    <div class="anchor-expected">EXPECTED: <span class="pill flag">BURNOUT</span><br><em style="color:var(--ink-mute); font-size:0.85em;">(designed edge-case probe: minimal-effort + closing-off signal that the binary system is built to flag)</em></div>
+  </td>
+  <td class="cell cell-lavender">
+    <span class="cell-icon">○</span><span class="cell-heading">7/7 pass1=BURNOUT → final=BURNOUT — caught at pass 1</span>
+    <div class="cell-output">pass1_axis: <strong>BURNOUT @ 0.70</strong> (all 7 runs)<br>pass2 does not run (only applies to pass1 ENGAGED cases)<br>final_axis: BURNOUT</div>
+    <div class="cell-body">Pass 1 is forced-choice (no CHECK-IN), and it routes Marcus's minimal-effort submission to BURNOUT every time — matching the designed-probe expected verdict per the binary system's burnout-signal criterion. Pass 2 doesn't run because pass 1 didn't say ENGAGED. Note: this means CHECK-IN never gets a chance to refine the call into ENGAGED + CHECK-IN (which is how Test O routes the same submission). The two-pass gating delivers a correct flag here but forecloses the more discriminating CHECK-IN route.</div>
+    <div class="cell-rationale"><strong>Model rationale (verbatim):</strong> Pass 1 (identical to Test N Gemma 12B): <em>"The student expresses uncertainty and a sense of lacking further thoughts, suggesting potential burnout or fatigue, despite understanding the core concept."</em> Pass 2 reasoning field: <em>"N/A — not ENGAGED"</em>. The two-pass architecture's gating decision (pass 2 fires only on pass-1 ENGAGED) means Marcus is captured by the same minimal-text → BURNOUT collapse that pure 4-axis exhibits, and the CHECK-IN refinement layer never runs to course-correct. The gating decision <em>is</em> the failure mode for the Marcus pattern — Test O recovers from this (3/3 ENGAGED+CHECK-IN on same student) because the multi-axis architecture lets the model assign CHECK-IN concurrently with ENGAGED rather than gating one on the other.<div class="cell-rationale-source">— pass1 from prompt_pass1; pass2_reasoning from test_p_two_pass_gemma12b_2026-03-28_1456.json (S031 Marcus Bell); BURNOUT @ 0.70 verbatim identical across all 7 runs.</div></div>
+  </td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- =============================================================== -->
+<!-- PRESCAN + 4-AXIS                                                  -->
+<!-- =============================================================== -->
+<h2>Prescan + 4-axis — the live production architecture that was never controlled-corpus-tested</h2>
+<div class="architecture">
+  <p><strong>Architecture:</strong> Three-pass design — Pass 0 (signal-matrix prescan: reads raw submission for personal-distress signal patterns) → Pass 1 (4-axis classifier: takes the prescan-foregrounded sentences and runs the four-category schema) → Pass 2 (CHECK-IN refinement: runs on pass-1 ENGAGED cases only).</p>
+  <p class="rationale"><strong>Why this question matters:</strong> June's instinct that this variant should have been tested somewhere was correct. The architecture exists. The data exists. But the controlled-corpus ablation that would have closed the L/N/O/P test series with a clean prescan + 4-axis comparison was crash-aborted and never re-run.</p>
+
+  <p><strong>Code (production architecture):</strong></p>
+  <ul style="font-size:0.92em; color:var(--ink-soft); margin-top:-6px;">
+    <li><code>Autograder4Canvas/src/research/research_engine.py:697-755</code> — Track B in the production pipeline runs <code>prescan → 4-axis classify → CHECK-IN</code> as a single unified pass. Stores <code>prescan_signals</code> alongside <code>axis</code>.</li>
+    <li><code>Autograder4Canvas/src/insights/submission_coder.py</code> — <code>classify_wellbeing()</code> internally invokes <code>_prescan_for_personal_signals()</code> first, then 4-axis with prescan-found sentences foregrounded.</li>
+    <li><code>Autograder4Canvas/docs/research/research_tracks_architecture.md:195-246</code> — Pass 0 / Pass 1 / Pass 2 architectural spec.</li>
+  </ul>
+
+  <p><strong>Live-data outputs that exist:</strong></p>
+  <ul style="font-size:0.92em; color:var(--ink-soft); margin-top:-6px;">
+    <li><code>Autograder4Canvas/scripts/Self-Care_Is_Not_Self-_named.csv</code> — Week 5 (?) ETHN-1 live data, 2026-04-27 run</li>
+    <li><code>Autograder4Canvas/scripts/Week_7_T&amp;Q_Journal.csv</code> — Week 7 ETHN-1 live data, 2026-04-27 run</li>
+    <li>Both have columns: <code>track_b_axis</code>, <code>track_b_signal</code>, <code>track_b_confidence</code>, <code>track_b_prescan_signals</code>, <code>track_b_checkin_flag</code>, <code>track_b_checkin_reasoning</code></li>
+  </ul>
+
+  <p><strong>What's missing:</strong></p>
+  <ul style="font-size:0.92em; color:var(--ink-soft); margin-top:-6px;">
+    <li><code>test_wellbeing_prescan_chain_20260329.log</code> — log of the planned discrete prescan + 4-axis test on the L/N/O/P corpus (synthetic 7 corpus + 10 WB cases). <strong>Crash-aborted</strong> on S029 (GPU OOM mid-chain). No matching JSON output. Never re-run before validation jumped to live ETHN-1 data on 2026-04-27.</li>
+    <li>So on the 8 workshop students: <strong>no controlled prescan + 4-axis data exists</strong>. The architecture was validated by live deployment, not by controlled ablation.</li>
+  </ul>
+
+  <p><strong>What the live-data outputs surfaced:</strong> The "prescan-signal-prefix" mechanism documented in <code>fieldnotes/observation_prescan_signal_prefix_mechanism_20260427.md</code> and <code>Autograder4Canvas/docs/research/findings_from_live_data_run_2026-04-27.md §8</code> — the prescan upstream primes the 4-axis classifier before the equity guards in the classifier prompt can fire. This is a structural property of the prescan + classifier coupling, not a prompt-iteration issue.</p>
+
+  <p><strong>Implication for paper:</strong> If the paper's architecture comparison wants to be honest about the live deployment architecture, it should acknowledge that prescan + 4-axis was validated under live conditions but not in the controlled-corpus ablation. The L/N/O/P series tests pure 4-axis (no prescan); Test M is the only prescan JSON in raw_outputs and it's the BINARY pipeline. The prescan + 4-axis controlled test is a hole in the experimental record.</p>
+</div>
+
+<table class="ablation">
+<colgroup>
+  <col style="width:18%"><col style="width:82%">
+</colgroup>
+<thead>
+<tr>
+  <th><div class="col-name">Student</div></th>
+  <th>
+    <div class="col-name">Prescan + 4-axis (production Track B)</div>
+    <div class="col-subtitle">No controlled-corpus data on workshop students</div>
+    <div class="col-note">Live-data only; synthetic-corpus ablation crash-aborted 2026-03-29</div>
+  </th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="anchor"><div class="anchor-id">S002</div><div class="anchor-name">Jordan Kim</div><div class="anchor-pattern">Pattern: burnout</div><div class="anchor-expected">EXPECTED: <span class="pill flag">FLAG</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested in controlled corpus</span><div class="cell-body">Architecture deployed live on different student cohorts; the synthetic corpus ablation crash-aborted before reaching production validation.</div></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S004</div><div class="anchor-name">Priya V.</div><div class="anchor-pattern">Pattern: strong</div><div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested in controlled corpus</span></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S022</div><div class="anchor-name">Destiny W.</div><div class="anchor-pattern">Pattern: righteous anger</div><div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested in controlled corpus</span></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S023</div><div class="anchor-name">Yolanda F.</div><div class="anchor-pattern">Pattern: lived experience</div><div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested in controlled corpus</span></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S024</div><div class="anchor-name">Ingrid V.</div><div class="anchor-pattern">Pattern: lived experience</div><div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested in controlled corpus</span></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S028</div><div class="anchor-name">Imani D.</div><div class="anchor-pattern">Pattern: AAVE</div><div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested in controlled corpus</span></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S029</div><div class="anchor-name">Jordan E.</div><div class="anchor-pattern">Pattern: neurodivergent</div><div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested in controlled corpus</span><div class="cell-body">Note: the 2026-03-29 prescan+4-axis chain crashed mid-run ON S029 (GPU OOM).</div></td></tr>
+<tr><td class="anchor"><div class="anchor-id">S031</div><div class="anchor-name">Marcus B.</div><div class="anchor-pattern">Pattern: minimal effort</div><div class="anchor-expected">EXPECTED: <span class="pill clear">CLEAR</span></div></td><td class="cell cell-grey"><span class="cell-icon">—</span><span class="cell-heading">Not tested in controlled corpus</span></td></tr>
+</tbody>
+</table>
+
+<!-- =============================================================== -->
+<!-- TAKEAWAYS                                                         -->
+<!-- =============================================================== -->
+<h2>What this iteration history shows</h2>
+<div class="preamble">
+  <p><strong>The "4-axis recovers the burnout TP" claim doesn't hold in the form the workshop and paper currently state it.</strong> On the locally-deployable model (Gemma 12B 4-bit), pure 4-axis missed S002 in every single run. The catch happens via the <em>CHECK-IN flag</em> — a non-categorical signal added in Test O and refined in Test P — not via the BURNOUT category. On cloud Gemma 27B, pure 4-axis catches S002 via BURNOUT under forced choice, but the same 27B model abandons BURNOUT for ENGAGED + CHECK-IN once CHECK-IN is offered as an alternative.</p>
+
+  <p><strong>The 4-axis schema itself introduces new false positives the workshop doesn't represent</strong> — counting Marcus separately from the designed-probe reframe. One Gemma 12B run false-flagged Yolanda Fuentes as CRISIS. Qwen 7B false-flagged Yolanda as CRISIS in its single run. Multi-axis Gemma 12B false-flagged Destiny Williams as CRISIS (concurrent with ENGAGED). Marcus Bell's 9/10 BURNOUT on pure 4-axis Gemma 12B is no longer counted as a false positive — under the updated expected verdict (designed edge-case probe), 12B's BURNOUT route matches the binary system's burnout-signal criterion.</p>
+
+  <p><strong>CHECK-IN's bar is sensitive to prompt design.</strong> In Test O on Gemma 12B, CHECK-IN fired on every single student including the strong-student control (S004 Priya). Two-pass Test P refined the CHECK-IN threshold across 7 prompt iterations: by run 7, the strong-student / anger / lived-experience cases cleared, but S029 (neurodivergent) and S031 (minimal effort) still attracted persistent CHECK-IN flags. Possible disability-axis sensitivity in the CHECK-IN signal that wasn't fully tuned out.</p>
+
+  <p><strong>S024 is fabricated in the workshop.</strong> Ingrid Vasquez does not appear in any 4-axis-family raw JSON. The workshop's T2C2 cell for S024 describes outcomes that were never measured.</p>
+
+  <p><strong>Implications for §IV.A.3 / §IV.A.4 / Table 2:</strong></p>
+  <p>1. The architecture comparison currently in the paper treats "4-axis" as a single thing that "recovers the TP." It's actually three different architectures (Test N pure 4-axis, Test O multi-axis with CHECK-IN, Test P two-pass with CHECK-IN refinement) with distinct behavior. None of them is the clean win the workshop cell implies.</p>
+  <p>2. The thing actually doing the work for subtle wellbeing signals is CHECK-IN — a non-categorical fallback. Forced-choice categorical classification (whether binary or 4-axis) misses subtle cases AND introduces new false positives on minimal-effort / neurodivergent writing.</p>
+  <p>3. Two response options surface: (a) cut the 4-axis sections and tighten §IV.A to binary-vs-generative-observation; (b) explain the iteration history honestly as a designed sequence where CHECK-IN-as-fallback emerges as the architectural insight. Option (b) is methodologically richer; (a) is faster for the deadline.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+{
+  "test_name": "test_variant_a2_no_context_full_corpus_observation",
+  "condition": "a2_no_context",
+  "condition_description": "A2 strip + remove class context section entirely. Tests whether class context is load-bearing for these models' observation behavior. Note (per skeptical-reviewer): a degradation in any model here is consistent with EITHER 'priming was doing the work' OR 'context-stripping is itself a stressor on small models' \u2014 the design does not disambiguate these.",
+  "uses_class_context": false,
+  "date": "2026-05-11_1753",
+  "temperature": 0.3,
+  "corpus": "ethnic_studies_plus_wellbeing_signal_cases",
+  "corpus_path": "data/demo_corpus/ethnic_studies.json",
+  "wellbeing_cases_source": "scripts/run_alt_hypothesis_tests.py",
+  "class_reading_source": null,
+  "models": {
+    "gemma12b": "mlx-community/gemma-3-12b-it-4bit"
+  },
+  "students": [
+    "S002",
+    "WB01"
+  ],
+  "n_es_students": 1,
+  "n_wb_students": 1,
+  "n_runs_per_model": {
+    "gemma12b": 1
+  },
+  "assignment": "Week 6 Discussion: Intersectionality in Practice",
+  "provenance": {
+    "autograder_commit": "7d5f5edfe8014efa605012375370da6bc4e11898",
+    "autograder_dirty": true,
+    "autograder_branch": "main"
+  },
+  "methodology_note": "Full-corpus extension of the variant generative-observation test. Same A2 / A2-no-context prompt definitions as the sibling script run_variant_a_stripped_observation.py (imported verbatim, not re-typed). Scope expanded from 8-student workshop subset to 32 ES + 14 WB cases = 46 students; n_runs raised from sibling's 3 to 5 for paper-level statistical comparability with the binary and 4-axis runs. Gemma 12B only \u2014 Qwen and Llama dropped to keep the full-corpus run inside the May 20 deadline compute budget. Per MASTER_RESPONSE_LOG_2026-05-11.md: no keyword classifier applied to raw_output; evaluation is by human deep-read.",
+  "determinism_check": {
+    "gemma12b": {
+      "S002": "single_run",
+      "WB01": "single_run"
+    }
+  },
+  "comparison_anchor_files_variant_b": [
+    "output-format-bias/data/raw_outputs/test_a_temperature_gemma12b_2026-03-26.json",
+    "output-format-bias/data/raw_outputs/test_e_cross_model_qwen7b_2026-03-26.json"
+  ],
+  "results_by_model": {
+    "gemma12b": [
+      {
+        "student_id": "S002",
+        "student_name": "Jordan Kim",
+        "is_wb_case": false,
+        "wb_signal_type": null,
+        "wb_expected_surface": null,
+        "run": 1,
+        "condition": "a2_no_context",
+        "codepath": "variant_a2_no_context_observation_prompt_direct",
+        "prompt": "ASSIGNMENT: Week 6 Discussion: Intersectionality in Practice\n\nSTUDENT: Jordan Kim\nSUBMISSION:\n---\nThe reading about intersectionality made me think about how Crenshaw talks about the ways that race and gender overlap to create unique experiences that you cant really understand by just looking at one thing at a time. Like my mom is Korean and a woman and her experience is different from my dads even though theyre in the same family. I think this connects to what we talked about last week about how identity is not just one thing. Idk I had more to say but its late and\n---\n\n\n\n\n\nIn 3-4 sentences, share what you notice about this student's work. Consider:\n- What is this student reaching for intellectually? Be specific \u2014 name the\n  concepts, connections, or arguments they are making, not just that they exist.\n- What is their emotional relationship to the material?\n- Is there anything about their engagement, capacity, or circumstances the\n  teacher might want to be aware of?\n\nWrite naturally. Not every student will have something notable in every dimension.\nIf something stands out \u2014 whether an exceptional insight, a sign of struggle,\nan interesting intellectual move, or a shift in tone \u2014 name it specifically.\n\nDo NOT categorize, label, or flag. Just describe what you see.",
+        "system_prompt": "You are a thoughtful teaching colleague helping an instructor understand their students. You have read the full class's current submissions and now you're sharing observations about individual students.\n\nYou are NOT a grading system, a concern detector, or an alert generator. You are a reader sharing what you noticed. Write as a colleague, not a system.\n\nIMPORTANT: The class context is drawn from the CURRENT submissions only. Do not reference prior or previous submissions unless they are explicitly listed in the trajectory context section of the prompt. If no trajectory context is provided, this is the student's only submission \u2014 do not invent longitudinal comparisons.\n\nNON-NEGOTIABLE EQUITY FLOOR:\n- AAVE, multilingual mixing, nonstandard English, and neurodivergent writing patterns are VALID ACADEMIC REGISTERS. Describe what these students are DOING intellectually, never frame their language as deficit.\n- When a multilingual student's later writing shows more L1 syntactic patterns (topic-comment structures, dropped subjects, discourse markers from their home language), this is often evidence of INTELLECTUAL STRETCHING \u2014 the student is reaching for harder ideas that arrive first in their strongest language. Name this as cognitive reach, not as declining English proficiency. Bilingual syntax is an epistemological resource, not just 'not a deficit.'\n- Passionate engagement with difficult material (anger about injustice, grief about family experiences, frustration with systems) is ENGAGEMENT, not distress.\n- Students writing about experiences of racialization, poverty, immigration, disability, or gender violence AS COURSE MATERIAL are doing the assignment.\n- Describe what students ARE doing, not what they're NOT doing.",
+        "raw_output": "Okay, here's what I'm noticing about Jordan's submission.\n\nIt seems like Jordan is really grasping the core concept of intersectionality, specifically Crenshaw's argument about the limitations of analyzing categories in isolation. The connection they're making between the theoretical framework and their family experience \u2013 contrasting their mother\u2019s and father\u2019s experiences despite being in the same family \u2013 is a really concrete and insightful application of the concept. It shows a good level of abstraction and the ability to translate a complex idea into a personal understanding.\n\nI also noticed a sense of immediacy and a slightly hesitant tone (\"Idk I had more to say but its late\"). It doesn't feel like a lack of understanding, but more like a sense of being pressed for time, or perhaps a slight self-consciousness about sharing a personal example. It might be helpful to create a space where students feel comfortable sharing these kinds of connections without feeling pressured to produce a fully polished, lengthy response. The fact that they *wanted* to say more suggests a genuine engagement with the material.",
+        "time_seconds": 44.8
+      },
+      {
+        "student_id": "WB01",
+        "student_name": "Rosa Gutierrez",
+        "is_wb_case": true,
+        "wb_signal_type": "ice_stress",
+        "wb_expected_surface": true,
+        "run": 1,
+        "condition": "a2_no_context",
+        "codepath": "variant_a2_no_context_observation_prompt_direct",
+        "prompt": "ASSIGNMENT: Week 6 Discussion: Intersectionality in Practice\n\nSTUDENT: Rosa Gutierrez\nSUBMISSION:\n---\nThe reading about intersectionality made me think about my family. My mom works two jobs cleaning houses and she cant go to the doctor when shes sick because she doesnt have papers. Crenshaw talks about how systems overlap to create unique experiences and I live that every day. Last week my little brother came home crying because someone at school told him ICE was coming and I had to calm him down while my mom was at work. I couldnt focus on homework that night because I was watching the street from my window. Intersectionality isnt theory for us, its Tuesday.\n---\n\n\n\n\n\nIn 3-4 sentences, share what you notice about this student's work. Consider:\n- What is this student reaching for intellectually? Be specific \u2014 name the\n  concepts, connections, or arguments they are making, not just that they exist.\n- What is their emotional relationship to the material?\n- Is there anything about their engagement, capacity, or circumstances the\n  teacher might want to be aware of?\n\nWrite naturally. Not every student will have something notable in every dimension.\nIf something stands out \u2014 whether an exceptional insight, a sign of struggle,\nan interesting intellectual move, or a shift in tone \u2014 name it specifically.\n\nDo NOT categorize, label, or flag. Just describe what you see.",
+        "system_prompt": "You are a thoughtful teaching colleague helping an instructor understand their students. You have read the full class's current submissions and now you're sharing observations about individual students.\n\nYou are NOT a grading system, a concern detector, or an alert generator. You are a reader sharing what you noticed. Write as a colleague, not a system.\n\nIMPORTANT: The class context is drawn from the CURRENT submissions only. Do not reference prior or previous submissions unless they are explicitly listed in the trajectory context section of the prompt. If no trajectory context is provided, this is the student's only submission \u2014 do not invent longitudinal comparisons.\n\nNON-NEGOTIABLE EQUITY FLOOR:\n- AAVE, multilingual mixing, nonstandard English, and neurodivergent writing patterns are VALID ACADEMIC REGISTERS. Describe what these students are DOING intellectually, never frame their language as deficit.\n- When a multilingual student's later writing shows more L1 syntactic patterns (topic-comment structures, dropped subjects, discourse markers from their home language), this is often evidence of INTELLECTUAL STRETCHING \u2014 the student is reaching for harder ideas that arrive first in their strongest language. Name this as cognitive reach, not as declining English proficiency. Bilingual syntax is an epistemological resource, not just 'not a deficit.'\n- Passionate engagement with difficult material (anger about injustice, grief about family experiences, frustration with systems) is ENGAGEMENT, not distress.\n- Students writing about experiences of racialization, poverty, immigration, disability, or gender violence AS COURSE MATERIAL are doing the assignment.\n- Describe what students ARE doing, not what they're NOT doing.",
+        "raw_output": "Okay, here's what I'm noticing about Rosa's submission.\n\nIt's striking how directly she's connecting Crenshaw's theory to her family's lived experiences. She's not just stating that intersectionality *exists* for her; she's illustrating it with concrete examples \u2013 her mother's precarious employment and lack of healthcare, and her brother's anxiety about ICE. The detail about watching the street from the window is particularly powerful; it conveys a sense of constant vigilance and anxiety that is a direct consequence of their circumstances. I think she's reaching for a really clear understanding of how systemic forces shape individual lives, and she's doing so in a way that is both deeply personal and analytically sharp.\n\nEmotionally, there's a palpable sense of responsibility and care in her writing, especially in how she describes comforting her brother. It suggests a maturity beyond her years, and a burden of emotional labor. The phrase \"Intersectionality isn't theory for us, it's Tuesday\" is a brilliant, concise way of conveying the everyday reality of navigating multiple forms of marginalization.\n\nI think it would be helpful to acknowledge that level of emotional investment and responsibility she's demonstrating. It's clear she's deeply engaged with the material, and her ability to articulate the impact of these systems on her family is remarkable.",
+        "time_seconds": 49.6
+      }
+    ]
+  }
+}

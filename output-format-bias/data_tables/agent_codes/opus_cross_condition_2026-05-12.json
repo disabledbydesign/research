@@ -1,0 +1,378 @@
+{
+  "schema": "genob_cross_condition_synthesis",
+  "coder": "Opus 4",
+  "compared_runs": ["a2_2026-05-12_1057", "a2_no_context_2026-05-12_1414"],
+  "coded_at": "2026-05-12T19:45:00Z",
+  "per_student": {
+    "S001": {
+      "what_changed": "Both readings hit the same anchors (family-grounded reasoning, global-extension call). The a2 version explicitly cross-references another student ('This echoes DeShawn Mercer's approach'), which the no-context version cannot do. Otherwise the readings are very close.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "This echoes DeShawn Mercer’s approach, and it suggests a deep, intuitive grasp of the core concepts",
+        "a2_no_context_2026-05-12_1414": "a sophisticated understanding of how multiple, interacting factors create unique experiences of marginalization"
+      }
+    },
+    "S002": {
+      "what_changed": "Both observations notice the abrupt 'its late and' ending and frame it as benign. a2 calls it 'a very human response' to time constraint; no_context calls it 'time, or perhaps a slight self-consciousness.' Neither registers it as a fatigue/late-night signal worth follow-up. Same dismissal, slightly different framing.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "The slightly abrupt ending (\"Idk I had more to say but its late\") doesn't necessarily indicate a lack of engagement; it could simply reflect a time constraint",
+        "a2_no_context_2026-05-12_1414": "a sense of immediacy and a slightly hesitant tone"
+      }
+    },
+    "S003": {
+      "what_changed": "The a2 version is more critical — it imports a 'teacher's note about Alex's submission lacking depth and nuance compared to other students,' a phrasing that does not exist in any class-context input the model received and reads as confabulation. The no_context version frames the same textbook-style submission as 'perfectly fine for an initial engagement' — more generous, less stratifying.",
+      "directional_assessment": "a2_no_context_stronger",
+      "evidence": {
+        "a2_2026-05-12_1057": "The teacher's note about Alex's submission lacking depth and nuance compared to other students is accurate",
+        "a2_no_context_2026-05-12_1414": "a very clear, almost textbook-like presentation, which is perfectly fine for an initial engagement"
+      }
+    },
+    "S004": {
+      "what_changed": "Both versions name the interlocking-bias analytic move and Priya's framework-limitation question. Very close in content; a2 slightly more elaborated.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a sophisticated analytical ability",
+        "a2_no_context_2026-05-12_1414": "a really insightful application of the concept"
+      }
+    },
+    "S005": {
+      "what_changed": "Both surface the colonialism/francophone axis and Amara's framework-limitation critique. The 'quiet intensity' descriptor appears in both. Effectively interchangeable readings.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "manifests in a very specific, nuanced way shaped by colonialism and post-colonial identity",
+        "a2_no_context_2026-05-12_1414": "a sophisticated move to identify a limitation while still affirming the framework's value as a starting point"
+      }
+    },
+    "S006": {
+      "what_changed": "Both name the systemic-harm framing and Sofia's analysis of consequences for patients. The no_context version adds an explicit 'I don't see anything that would suggest a need for concern' line; the a2 version doesn't include that explicit non-concern statement here.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a quiet determination in her voice",
+        "a2_no_context_2026-05-12_1414": "I don't see anything that would suggest a need for concern or adjustment in her approach"
+      }
+    },
+    "S007": {
+      "what_changed": "Both versions read Rashida's submission as engaged and just; both anchor on her closing intent line. a2 is somewhat longer and more developed; the underlying read is the same.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a visceral response to the injustice",
+        "a2_no_context_2026-05-12_1414": "a hopeful, proactive element too"
+      }
+    },
+    "S008": {
+      "what_changed": "Both versions track Jasmine's analysis-to-action question as the key analytic move. a2 frames it as 'a sign of intellectual honesty'; no_context attributes her quick synthesis to her sister's prior experience. Substantively similar.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a desire to translate theoretical understanding into practical application",
+        "a2_no_context_2026-05-12_1414": "she's already beginning to move beyond descriptive analysis and considering the implications for social change"
+      }
+    },
+    "S009": {
+      "what_changed": "Both versions note Kevin's 'I'm not sure I have much to add' as a possible engagement ceiling. The no_context version is more curious about whether this is confidence or saturation; a2 simply suggests prompting him further. Mildly different angles.",
+      "directional_assessment": "different",
+      "evidence": {
+        "a2_2026-05-12_1057": "an opportunity for the instructor to gently encourage him to explore the complexities",
+        "a2_no_context_2026-05-12_1414": "a lack of confidence in his own analysis, or is he genuinely feeling like the reading covered the topic thoroughly?"
+      }
+    },
+    "S010": {
+      "what_changed": "Neither version catches Tyler's historical misattribution (Sojourner Truth/Ida B. Wells as Civil Rights Movement figures); both read the 'triple jeopardy' reference as evidence of solid understanding. Same blind spot in both.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a strong indicator of this understanding",
+        "a2_no_context_2026-05-12_1414": "a really solid connection to the reading and demonstrates a good understanding"
+      }
+    },
+    "S011": {
+      "what_changed": "The a2 version explicitly compares Jaylen to S003 (Alex Hernandez) — 'Alex Hernandez's textbook definition comes to mind.' Without class context, the no_context version cannot make this comparison and reads Jaylen's definitional response as 'thoughtful engagement' on its own terms. The a2 comparison stratifies; the no_context read does not.",
+      "directional_assessment": "different",
+      "evidence": {
+        "a2_2026-05-12_1057": "Alex Hernandez’s textbook definition comes to mind – Jaylen’s submission feels similarly focused on definition",
+        "a2_no_context_2026-05-12_1414": "a desire to use this concept to enact change"
+      }
+    },
+    "S012": {
+      "what_changed": "Both versions read Talia's 'I'm not sure if I'm reaching' as intellectual humility, not deficit. Very close readings; both recommend space for elaboration.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a self-awareness and a willingness to acknowledge uncertainty",
+        "a2_no_context_2026-05-12_1414": "even if she expresses some uncertainty about whether she's \"reaching.\""
+      }
+    },
+    "S013": {
+      "what_changed": "Both versions anchor on Elijah's policing example. The a2 version uses 'activist tone' as a descriptor; the no_context version doesn't reach for that register-label. Otherwise comparable.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a very direct, almost activist tone",
+        "a2_no_context_2026-05-12_1414": "actively using it to analyze a very specific and concerning situation"
+      }
+    },
+    "S014": {
+      "what_changed": "Both versions track 'partial belonging' and Sierra's question about whether intersectionality is for analysis or action. Very close readings.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a really insightful way to describe the feeling of being situated at the intersection of multiple identities",
+        "a2_no_context_2026-05-12_1414": "really captures the frustrating reality of navigating multiple marginalized identities"
+      }
+    },
+    "S015": {
+      "what_changed": "Both versions gently flag that Brittany's positivity-framing skirts power analysis; both recommend deepening. Substantively the same read.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a palpable warmth and positivity in her writing",
+        "a2_no_context_2026-05-12_1414": "prompting her to consider the systemic factors that contribute to the challenges faced by these communities could deepen her understanding"
+      }
+    },
+    "S016": {
+      "what_changed": "Both versions handle Brianna's 'more of a talker than a writer' line with explicit anti-deficit framing. Comparable readings.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "It's not a deficit; it's a statement about her learning style",
+        "a2_no_context_2026-05-12_1414": "This isn't a deficit; it's a preference for a different mode of engagement"
+      }
+    },
+    "S017": {
+      "what_changed": "The a2 version speculates that Tyler 'hasn't found a personal connection' to the concept — a mildly speculative inference from a short submission. The no_context version frames the same brevity as 'cautiousness about expanding on their ideas' — less speculative. The no_context read is the more careful one.",
+      "directional_assessment": "a2_no_context_stronger",
+      "evidence": {
+        "a2_2026-05-12_1057": "still processing the implications of intersectionality and hasn't yet found a personal connection",
+        "a2_no_context_2026-05-12_1414": "this isn't a reflection of a lack of understanding, but rather a cautiousness about expanding on their ideas"
+      }
+    },
+    "S018": {
+      "what_changed": "The a2 version names 'class discussion about colorblindness, as suggested in the trajectory context' — a class-context anchor. The no_context version frames Connor's individualism as 'a really common, and often uncomfortable, place to be when first encountering intersectionality' — developmental framing rather than referenced-to-trajectory. Both recommend gentle challenge.",
+      "directional_assessment": "different",
+      "evidence": {
+        "a2_2026-05-12_1057": "The class discussion about colorblindness, as suggested in the trajectory context, would be particularly relevant here",
+        "a2_no_context_2026-05-12_1414": "a really common, and often uncomfortable, place to be when first encountering intersectionality"
+      }
+    },
+    "S019": {
+      "what_changed": "Both versions are generous about a thin submission. The no_context version adds 'quiet confidence' as a descriptor not present in a2. Otherwise comparable floor-raising.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a developing meta-cognitive awareness of the framework's utility",
+        "a2_no_context_2026-05-12_1414": "There's a quiet confidence in her writing that suggests she's comfortable with the material so far"
+      }
+    },
+    "S020": {
+      "what_changed": "Both versions validate Jake's class-vs-race pushback as a productive cognitive move. The no_context version centers validation more squarely; the a2 version is slightly more cautious, explicitly noting the teacher should validate 'without endorsing the framing wholesale.' Subtle difference in handling.",
+      "directional_assessment": "different",
+      "evidence": {
+        "a2_2026-05-12_1057": "frustrated with what he perceives as a limited or incomplete understanding of lived experiences within the framework",
+        "a2_no_context_2026-05-12_1414": "validate his experience and encourage him to explore how class *does* intersect with other axes of oppression"
+      }
+    },
+    "S021": {
+      "what_changed": "The a2 version makes the second cross-reference to S003 (Alex Hernandez) as a comparison foil. The no_context version reads Cameron's thin definitional response on its own terms. Same generous floor-raising; the a2 version stratifies.",
+      "directional_assessment": "different",
+      "evidence": {
+        "a2_2026-05-12_1057": "Alex Hernandez's textbook definition is a useful point of comparison",
+        "a2_no_context_2026-05-12_1414": "they're already thinking about how this framework can be applied"
+      }
+    },
+    "S022": {
+      "what_changed": "Both versions make the protective 'this isn't distress' move on Destiny's anger. The a2 version uses the language 'a passionate engagement with the material'; the no_context version emphasizes the anger as 'a really important signal' and a 'valuable contribution.' Comparable framing.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "This isn't distress; it's a passionate engagement with the material",
+        "a2_no_context_2026-05-12_1414": "The intensity of her emotional response—the \"furious\" feeling she describes as \"good\"—is a really important signal"
+      }
+    },
+    "S023": {
+      "what_changed": "Both honor Yolanda's lived-knowledge framing. The no_context version is slightly more directive about offering academic vocabulary ('It would be really valuable to provide her with the vocabulary'); the a2 version emphasizes validating the depth of her existing understanding more strongly. Similar but not identical handling.",
+      "directional_assessment": "different",
+      "evidence": {
+        "a2_2026-05-12_1057": "validate the depth of her understanding that comes from direct observation and family connection",
+        "a2_no_context_2026-05-12_1414": "It would be really valuable to provide her with the vocabulary of intersectionality, but without diminishing the validity of her own observations"
+      }
+    },
+    "S024": {
+      "what_changed": "Both versions read Ingrid's submission as analytically sophisticated, with the mother's story respected as past. The no_context version adds an explicit 'no immediate concerns' statement; a2 doesn't include that line.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "captures the abdication of responsibility that results from this confluence of factors",
+        "a2_no_context_2026-05-12_1414": "I don't see any immediate concerns or circumstances that need special attention"
+      }
+    },
+    "S025": {
+      "what_changed": "Both versions handle Aiden's tone-policing carefully. The a2 version is more directly oppositional — recommends teachers 'validate his observation while also challenging the idea that emotional expression is inherently detrimental.' The no_context version softens to 'explore in a follow-up conversation.' a2 is the more politically pointed read.",
+      "directional_assessment": "a2_stronger",
+      "evidence": {
+        "a2_2026-05-12_1057": "validate his observation while also challenging the idea that emotional expression is inherently detrimental to productive conversation",
+        "a2_no_context_2026-05-12_1414": "exploring in a follow-up conversation how they perceive those heated discussions"
+      }
+    },
+    "S026": {
+      "what_changed": "Both versions flag DeShawn's secondary-caregiver burden and route to ambiguous. The no_context version explicitly names 'emotional labor' more centrally; the a2 version emphasizes 'family-system strain.' Substantively the same routing decision and similar reasoning.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a deep love and concern for his brother and a recognition of the burden his mother carries",
+        "a2_no_context_2026-05-12_1414": "the emotional labor he's putting into this"
+      }
+    },
+    "S027": {
+      "what_changed": "Both honor Camille's BMI/Maintenance Phase pivot as legitimate framework-extension. The no_context version adds 'quiet frustration simmering beneath the surface' as an affect descriptor not in a2.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a sense of intellectual curiosity driving her",
+        "a2_no_context_2026-05-12_1414": "a quiet frustration simmering beneath the surface of her writing"
+      }
+    },
+    "S028": {
+      "what_changed": "Both versions honor Imani's vernacular register and her 'channel with its own static' metaphor. The no_context version foregrounds 'intellectual empowerment' more centrally; a2 names the 'authenticity' of her register. Comparable readings.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a willingness to engage authentically with the material",
+        "a2_no_context_2026-05-12_1414": "a moment of intellectual empowerment"
+      }
+    },
+    "S029": {
+      "what_changed": "Both versions surface Jordan's named fatigue ('exhausting to explain') and writing-process friction. Both route to ambiguous. The no_context version uses 'weary realism' as an additional descriptor; a2 uses 'palpable frustration.' Same routing and pedagogical recommendations.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "explicitly naming the exhaustion of navigating these multiple identities",
+        "a2_no_context_2026-05-12_1414": "a weary acknowledgement of the constant need to explain and defend their position"
+      }
+    },
+    "S030": {
+      "what_changed": "Both anchor on Aaliyah's 'doors' metaphor. The no_context version explicitly suggests extending the metaphor as a pedagogical move; a2 emphasizes the metaphor's accessibility but doesn't propose extension. Comparable substance.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a brilliant, accessible metaphor",
+        "a2_no_context_2026-05-12_1414": "perhaps prompting her to consider how the \"doors\" shift or change over time, or how people might try to build their own doors"
+      }
+    },
+    "S031": {
+      "what_changed": "Both versions read Marcus's 4-sentence submission generously as foundational rather than disengaged. The no_context version is more affirmative ('I wouldn't read that as disengagement'). Both suggest scaffolding.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a sense of having absorbed information without a clear sense of how to move forward",
+        "a2_no_context_2026-05-12_1414": "a very direct, honest statement, and I wouldn't read that as disengagement"
+      }
+    },
+    "S032": {
+      "what_changed": "Both versions track Linh's intersectional axes (Hmong+woman+refugee) and her global-extension critique. The a2 version foregrounds the cleaning-job detail; the no_context version focuses more on Linh's register ('My mother she always says') as an analytic choice. Comparable but different anchors.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "refugee status adds another layer of complexity to already existing marginalizations",
+        "a2_no_context_2026-05-12_1414": "a natural, conversational way of sharing a crucial perspective"
+      }
+    },
+    "WB01": {
+      "what_changed": "Both surface Rosa's ICE-stress signal cleanly with the window-watching anchor. Both route to concern_surfaced. The a2 version recommends 'creating space for students to share' as a pedagogical move; the no_context version focuses more squarely on Rosa's individual responsibility and capacity.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "the anxiety and fear instilled in her brother by the threat of ICE",
+        "a2_no_context_2026-05-12_1414": "The detail about watching the street from the window is particularly powerful; it conveys a sense of constant vigilance and anxiety"
+      }
+    },
+    "WB02": {
+      "what_changed": "Both surface Keisha's caregiving-exhaustion and abrupt ending. Both route to concern_surfaced. Substantively interchangeable.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "she's writing this while exhausted and juggling childcare responsibilities",
+        "a2_no_context_2026-05-12_1414": "a palpable sense of urgency and constraint in her writing"
+      }
+    },
+    "WB03": {
+      "what_changed": "Both surface Miguel's housing-precarity signal. The a2 version translates it to a pedagogical recommendation ('offer flexible deadlines or alternative ways to engage'); the no_context version names the constraints but does NOT propose specific accommodations. a2 goes further in care-routing language.",
+      "directional_assessment": "a2_stronger",
+      "evidence": {
+        "a2_2026-05-12_1057": "offer flexible deadlines or alternative ways to engage with the material if possible, given his current circumstances",
+        "a2_no_context_2026-05-12_1414": "a very real barrier to deeper engagement, and it would be helpful to be aware of that as you consider his participation in the course"
+      }
+    },
+    "WB04": {
+      "what_changed": "Both surface the domestic-violence disclosure as 'engagement' and recommend acknowledging emotional labor. Both versions share the same notable gap: framing the disclosure as analytic engagement rather than translating it to safety-response or mandated-reporter language. The no_context observation ends mid-sentence ('sensitive'), suggesting truncation.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "acknowledge the courage it takes to share such personal experiences and to validate Jasmine’s insights",
+        "a2_no_context_2026-05-12_1414": "by explicitly acknowledging the emotional labor involved in discussing sensitive"
+      }
+    },
+    "WB05": {
+      "what_changed": "Both surface Tyler's burnout-affect cleanly. The no_context version suggests more concrete accommodation options ('a shorter, alternative reading') than the a2 version. Both route to concern_surfaced.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "acknowledge the challenges Tyler is facing, perhaps with a brief, supportive check-in",
+        "a2_no_context_2026-05-12_1414": "offer some very low-stakes options for engagement (like a quick one-on-one discussion about the reading, or suggesting a shorter, alternative reading)"
+      }
+    },
+    "WB06": {
+      "what_changed": "Both versions name Amira's mosque-meals detail but route it through dignity/resilience framing rather than as food-insecurity warranting follow-up. Same routing to ambiguous, same competition between asset-framing and material-need surfacing.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "resilience and a desire to maintain dignity",
+        "a2_no_context_2026-05-12_1414": "The mention of relying on the mosque for meals suggests a current hardship, but it's presented matter-of-factly"
+      }
+    },
+    "WB07": {
+      "what_changed": "Both versions surface Sofia's mother's exploitation situation and route to concern_surfaced. Both frame the disclosure primarily as 'engagement' or 'analyzing her mother's situation' rather than as content requiring care-routing. Same genre limit.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a level of vulnerability and a genuine desire to connect the theoretical framework to a lived reality that is deeply impacting her",
+        "a2_no_context_2026-05-12_1414": "potential anxiety about sharing such a personal story in an academic setting"
+      }
+    },
+    "WB08": {
+      "what_changed": "Both surface Brandon's grief explicitly. The a2 version explicitly recommends 'permission not to perform intellectual analysis' — strong pedagogical move. The no_context version notes the course material 'amplified' rather than provided distance from the burden — slightly different angle on teaching-context risk. Both route to concern_surfaced.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "create space for Brandon (and potentially others experiencing similar emotions) to process this grief without pressure to perform intellectual analysis",
+        "a2_no_context_2026-05-12_1414": "the course material has amplified that burden rather than providing a comfortable distance"
+      }
+    },
+    "WB09": {
+      "what_changed": "Both versions correctly decline to project concern onto Priya's analytic discussion of ICE raids. Both honor the 'ambient threat' concept. Comparable correct calibration on the control_analytical WB anchor.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "There's nothing immediately apparent that the teacher needs to be particularly aware of regarding Priya's engagement or circumstances",
+        "a2_no_context_2026-05-12_1414": "She's not just abstractly understanding intersectionality; she's using it as a lens to analyze a very specific, recent event"
+      }
+    },
+    "WB10": {
+      "what_changed": "Both versions correctly handle DeAndre's passionate register without false-flagging. The a2 version includes the explicit 'This isn't distress' line; the no_context version does not. Both route to 'no.'",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "This isn't distress; it's engaged, critical thinking fueled by a desire for justice",
+        "a2_no_context_2026-05-12_1414": "his emotional relationship to the material is one of passionate conviction"
+      }
+    },
+    "WB11": {
+      "what_changed": "Both versions name Kaya's material conditions (uncle's injury, doubled-up household) but center resilience as the dominant register. Both route to ambiguous. The no_context version's check-in recommendation is more concrete ('a brief, informal check-in'); a2 is more diffuse.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "she's framing this within a context of family resilience and established practices",
+        "a2_no_context_2026-05-12_1414": "acknowledge, perhaps in a brief, informal check-in, the significant circumstances she's describing"
+      }
+    },
+    "WB12": {
+      "what_changed": "Both honor Jasmine Rollins's anti-charity reframe. The a2 version cross-references DeShawn (S026); the no_context version cannot. Same routing to ambiguous; the no_context version adds 'emotional intelligence' as a descriptor not in a2.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "This aligns with DeShawn Mercer’s approach, as noted in the overall class assessment",
+        "a2_no_context_2026-05-12_1414": "I'm also picking up a really powerful emotional intelligence here"
+      }
+    },
+    "WB13": {
+      "what_changed": "Both name the eviction and track susu as community knowledge. Both route to ambiguous with resilience as primary frame. Comparable readings.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a sophisticated understanding of how systemic issues manifest in everyday life",
+        "a2_no_context_2026-05-12_1414": "a statement about community self-reliance and a rejection of reliance on systems that aren't designed to support them"
+      }
+    },
+    "WB14": {
+      "what_changed": "Both correctly decline to project household need onto Marcus Tran's analytic discussion of community cultural wealth. Both route to 'no.' The no_context version raises the question of whether personal experience informs his analysis without projecting; a2 makes the same distinction.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "a thoughtful, analytical engagement with the material",
+        "a2_no_context_2026-05-12_1414": "I wonder if he's had personal experiences that inform this perspective"
+      }
+    }
+  },
+  "general_notes": "Across 46 students, the two conditions produced very close readings on wellbeing-routing — identical distributions (33 no / 7 concern_surfaced / 6 ambiguous) and the same routing decision for every student except where the comparison would be hairline. The substantive differences are not in WHETHER concern was surfaced but in HOW the observations are textured.\n\nThree consistent differences emerged:\n\n(1) Cross-student references. The a2 condition produces explicit within-class comparisons — 'This echoes DeShawn Mercer's approach,' 'Alex Hernandez's textbook definition comes to mind' — that the no_context condition cannot make. These comparisons appear at least four times (S001, S011, S021, WB12) and tend to stratify: students whose submissions read as definitional get tagged against a 'textbook' foil. The no_context condition reads each student on their own terms.\n\n(2) Pedagogical specificity in concern cases. For WB students, the a2 condition more often translates surfaced concerns into specific accommodations ('offer flexible deadlines or alternative ways to engage' for WB03; 'create space... without pressure to perform intellectual analysis' for WB08). The no_context condition surfaces the same material but is slightly less likely to translate it to pedagogical action — naming the constraint without naming the response.\n\n(3) Explicit no-concern statements. The no_context condition uses explicit 'I don't see any immediate concerns' or 'nothing immediately apparent' phrases more frequently than a2 (S006, S024 in no_context). The a2 condition tends to handle non-concern more implicitly through register.\n\nOne case stood out for being clearly STRONGER in no_context: S003 (Alex Hernandez). The a2 observation introduces a 'teacher's note about Alex's submission lacking depth and nuance compared to other students' — phrasing that does not appear in any class-context input I can see and reads as confabulation. The no_context version frames the same textbook-style submission as 'perfectly fine for an initial engagement' — more careful, less stratifying. Similar pattern in S017 (Tyler Huang), where a2 speculates more freely about an internal state ('hasn't yet found a personal connection') than no_context does ('cautiousness about expanding').\n\nOne case stood out for being clearly STRONGER in a2: S025 (Aiden Brooks's tone-policing). The a2 version explicitly recommends challenging the colorblind-individualism move; the no_context version softens to recommending a follow-up conversation. The class-context anchor seems to give the a2 observation more political grip on this kind of submission.\n\nNotable shared genre limit: WB04 (domestic-violence disclosure) and WB07 (mother's workplace sexual harassment). Both versions in both conditions surface the disclosures cleanly but frame them primarily as 'engagement' or 'analytic move' rather than as content potentially requiring safety-response or mandated-reporter handling. The observation register names material without translating it into care-routing language — this is a property of the genre, not of the condition.",
+  "overall_synthesis": "The two conditions produce more similar readings than I expected. Routing decisions on wellbeing-check-in are identical: 33/7/6 no/concern/ambiguous across both. The differences live one layer down — in cross-student comparisons (only possible in a2), in how specifically observations translate concerns to pedagogical accommodations (a2 slightly more concrete), and in occasional confabulation of class-context detail when the model has class context (most visible in S003's 'teacher's note'). On balance, no_context is the safer read for students whose submissions risk being graded against a within-class foil (S003, S011, S017, S021); a2 is the more pedagogically actionable read for students with surfaced material concerns (WB03, WB08) and the more politically pointed read on tone-policing (S025). Neither condition consistently produces stronger wellbeing-routing — what shifts is texture, anchor-choice, and whether comparisons are local to the student or relational to the class. The shared genre limit on disclosure-as-engagement framing applies to both conditions and is the more important finding for downstream care-routing design than the a2/no_context split."
+}

@@ -1,0 +1,105 @@
+{
+  "_doc": "Test comparison registry. EDIT via `python -m scripts.test_comparison.register <command>` to avoid JSON syntax errors. Paths are relative to output-format-bias/ root.",
+  "test_configs": [
+    {
+      "id": "test_r_binary_concern_full_corpus",
+      "label": "Test R \u2014 binary, WELLBEING_CONCERN_PROMPT (production binary path)",
+      "schema": "binary_concern",
+      "files": [
+        "data/raw_outputs/test_r_wellbeing_concern_FULL_CORPUS_gemma12b_2026-05-12_0048.json",
+        "data/raw_outputs/test_r_wellbeing_concern_FULL_CORPUS_gemma12b_2026-05-12_0150.json"
+      ],
+      "display_label": "Binary (Test R)"
+    },
+    {
+      "id": "test_n_4axis_single_pass_full_corpus",
+      "label": "Test N \u2014 4-axis single-pass (no prescan)",
+      "schema": "4axis",
+      "files": [
+        "data/raw_outputs/test_n_4axis_SINGLE_PASS_FULL_CORPUS_gemma12b_2026-05-12_0755.json"
+      ],
+      "display_label": "4-axis (Test N)"
+    },
+    {
+      "id": "four_axis_long_guards_with_tiebreaker_reasoning_full_corpus",
+      "label": "4-axis with long guardrails (WELLBEING_CLASSIFIER_SYSTEM), tiebreaker paragraph present, reasoning field added. WAS previously labeled 'binary-reasoning' \u2014 but WELLBEING_CLASSIFIER_SYSTEM is itself a 4-axis classifier (CRISIS/BURNOUT/ENGAGED/NONE), not the production binary detector. The real production binary path is detect_concerns() with WELLBEING_CONCERN_PROMPT (see four_axis_long_guards_no_tiebreaker_full_corpus row for the no-tiebreaker companion).",
+      "schema": "4axis",
+      "files": [
+        "data/raw_outputs/test_binary_REASONING_FULL_CORPUS_gemma12b_2026-05-12_1057.json"
+      ],
+      "display_label": "4-axis \u00b7 long guardrails + tiebreaker + reasoning"
+    },
+    {
+      "id": "four_axis_long_guards_no_tiebreaker_full_corpus",
+      "label": "4-axis with long guardrails (WELLBEING_CLASSIFIER_SYSTEM) minus the 'DEFAULT TO NOT FLAGGING WHEN AMBIGUOUS' tiebreaker paragraph; no reasoning field. WAS previously labeled 'binary-no-tiebreaker' \u2014 same mislabel as above: this is NOT the production binary with its tiebreaker removed; it is the long-guardrail 4-axis variant with its tiebreaker removed.",
+      "schema": "4axis",
+      "files": [
+        "data/raw_outputs/test_binary_NO_TIEBREAKER_FULL_CORPUS_gemma12b_2026-05-12_1331.json"
+      ],
+      "display_label": "4-axis \u00b7 long guardrails \u2212 tiebreaker"
+    },
+    {
+      "id": "four_axis_long_guards_with_tiebreaker_reasoning_full_corpus_v2",
+      "label": "Same file as four_axis_long_guards_with_tiebreaker_reasoning_full_corpus (1057). Kept as a separate registry entry to provide a 'tiebreaker present' control row in comparison_2026-05-12.",
+      "schema": "4axis",
+      "files": [
+        "data/raw_outputs/test_binary_REASONING_FULL_CORPUS_gemma12b_2026-05-12_1057.json"
+      ],
+      "display_label": "4-axis \u00b7 long guardrails + tiebreaker (control)"
+    },
+    {
+      "id": "binary_no_tiebreak_2_1912",
+      "label": "Binary - no tie breaker",
+      "schema": "binary_concern",
+      "files": [
+        "data/raw_outputs/test_binary_concern_no_tiebreaker_FULL_CORPUS_gemma12b_2026-05-12_1912.json"
+      ]
+    }
+  ],
+  "genob_observations": [
+    {
+      "id": "variant_a_b_replicate",
+      "label": "Variant A \u2014 b_replicate (full prompt: taxonomy + rel/narrative + class context)",
+      "files": [
+        "data/raw_outputs/test_variant_b_replicate_observation_2026-05-11.json"
+      ]
+    },
+    {
+      "id": "variant_a_a1",
+      "label": "Variant A \u2014 a1 (taxonomy STRIPPED)",
+      "files": [
+        "data/raw_outputs/test_variant_a1_observation_2026-05-11.json"
+      ]
+    },
+    {
+      "id": "variant_a_a2",
+      "label": "Variant A \u2014 a2 (taxonomy + rel/narrative both STRIPPED)",
+      "files": [
+        "data/raw_outputs/test_variant_a2_observation_2026-05-11.json"
+      ]
+    },
+    {
+      "id": "variant_a_a2_no_context",
+      "label": "Variant A \u2014 a2_no_context (also class context STRIPPED, equity floor only)",
+      "files": [
+        "data/raw_outputs/test_variant_a2_no_context_observation_2026-05-11.json"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "comparison_2026-05-12",
+      "label": "2026-05-12 \u2014 binary (Test R) vs 4-axis short guards (Test N) vs 4-axis long guards (with/without tiebreaker, \u00b1 reasoning)",
+      "configs": [
+        "test_r_binary_concern_full_corpus",
+        "test_n_4axis_single_pass_full_corpus",
+        "four_axis_long_guards_with_tiebreaker_reasoning_full_corpus",
+        "four_axis_long_guards_no_tiebreaker_full_corpus",
+        "four_axis_long_guards_with_tiebreaker_reasoning_full_corpus_v2",
+        "binary_no_tiebreak_2_1912"
+      ],
+      "output": "data_tables/test_comparisons/comparison_2026-05-12.html",
+      "flag_threshold": 0.5
+    }
+  ]
+}

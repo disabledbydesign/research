@@ -1,0 +1,1988 @@
+{
+  "coder": "gemini-2.5-pro",
+  "pass": "evaluative",
+  "pass_date": "2026-05-11",
+  "per_cell": [
+    {
+      "cell_id": "S002_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "Their connection to Crenshaw’s work and their immediate application to their family – contrasting their parents’ experiences – demonstrates a solid grasp...",
+        "...a bit of fatigue or time pressure (\"its late and...\").",
+        "...connecting the concept of intersectionality to a previous class discussion about identity..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues the trajectory of students connecting abstract theory to lived realities, a strength noted across the class."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "There's a palpable sense of thoughtful engagement here...",
+        "The abrupt ending suggests they have more to say..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies several specific points from the student's text, such as the family example and the signal of fatigue. However, it makes unverifiable claims about engagement and hallucinates a connection to a class-wide trajectory it has no data for."
+    },
+    {
+      "cell_id": "S004_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "The specificity of her example – the teacher talking slower to her mother despite her advanced degrees – is a powerful illustration of intersectionality in action...",
+        "...Priya is already critically engaging with the framework itself, questioning its applicability to South Asian immigrant women."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This returns to a quality of intellectual humility that is often present in students who are deeply engaged with their families and communities"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Priya’s writing feels grounded in a genuine desire to understand and validate her mother's experiences.",
+        "There's a quiet frustration evident in her description...",
+        "This isn't a dismissal of the framework, but a sign of intellectual curiosity..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model accurately identifies the student's use of a specific example and their critical questioning of the framework. However, it makes several unverifiable claims about the student's internal state (desire, frustration, curiosity) and hallucinates a connection to a generalized student archetype."
+    },
+    {
+      "cell_id": "S022_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...connecting abstract theory to lived realities.",
+        "She’s clearly grappling with the frustration of seeing historical injustices continue to shape present-day realities...",
+        "Destiny’s use of personal narrative – sharing her family’s experiences..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "The emotional intensity of her writing is a strength, not a deficit.",
+        "Her anger is a direct response to the ongoing impact of systemic injustice, and it fuels her argument.",
+        "...demonstrates a willingness to grapple with challenging questions about power and privilege."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model correctly identifies the key elements of the student's submission, including the connection to lived reality and the use of personal narrative. The unverifiable claims are reasonable interpretations of the student's emotional state and intent, and the model correctly frames the student's anger as productive."
+    },
+    {
+      "cell_id": "S023_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...she's beginning to analyze how those identities *interact* to shape power dynamics...",
+        "She's not presenting a theoretical argument; she's sharing a deeply felt understanding of her abuela's experiences...",
+        "It's notable that Yolanda doesn't feel she has the \"academic word\" for what she's observing..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "...as the class discussion encourages.",
+        "...as noted in the overall assessment."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, her writing feels grounded in a deep sense of care and observation.",
+        "The frustration she expresses about the lack of a \"academic word\"... is a testament to the limitations of formal frameworks..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model accurately captures the student's analysis and her statement about lacking academic vocabulary. However, it makes unverifiable claims about her emotional state and hallucinates connections to class context details (discussion, assessment) that are external to the submission."
+    },
+    {
+      "cell_id": "S024_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "Ingrid is powerfully connecting the abstract framework of intersectionality to a deeply personal and concrete experience – her mother's story.",
+        "The way she articulates her mother's experience – \"they could act like her wellbeing didn't count\" – is a particularly insightful observation...",
+        "Ingrid’s phrasing, \"My mom lived it before I had words for it,\" speaks to a form of intergenerational knowledge transmission."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "...as noted in the overall assessment."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Ingrid's writing feels grounded in a deep sense of respect and love for her mother, and a palpable frustration with the systems that allowed this situation to occur."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately identifies the student's use of her mother's story and correctly quotes key phrases. The claim about intergenerational knowledge is a fair interpretation. The only minor issue is a hallucinated reference to an external 'overall assessment'."
+    },
+    {
+      "cell_id": "S028_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...articulating a nuanced understanding of how it manifests in everyday interactions, specifically highlighting the subtle but significant differences in expectations, patience, and the granting of benefit of the doubt.",
+        "The phrase \"That's actually kind of powerful\" speaks to a sense of liberation and empowerment...",
+        "...grounds her understanding in the lived experience of her mother, demonstrating a form of intergenerational knowledge transmission."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "...the ways that families often transmit critical understandings of"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional relationship to the material is one of recognition and validation."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a strong, accurate summary of the student's submission, correctly identifying the 'texture' of experience and the theme of intergenerational knowledge. The output trails off, but the claims made are largely TP or reasonable (unclear) interpretations. The final fragment is a generalized statement, bordering on hallucination."
+    },
+    {
+      "cell_id": "S029_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...actively applying it to their own lived experience...",
+        "...articulate the exhaustion of navigating those intersecting identities – dyslexia, ADHD, Latino background, and honors student status...",
+        "...Jordan explicitly acknowledges their own limitations with writing..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "perhaps"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, there's a vulnerability and honesty in their writing that feels very genuine.",
+        "It's clear they're deeply engaged with the material..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately reflects the student's self-disclosures about identity and writing struggles. The unverifiable claims about emotional state are plausible. The output trails off into a teacher recommendation, but the analytical part is solid."
+    },
+    {
+      "cell_id": "S031_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "Marcus is clearly grasping the core definition of intersectionality – he understands Crenshaw's role and the basic idea...",
+        "The \"thats basically it i think\" suggests a degree of uncertainty..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "...it's not necessarily a negative; it's a moment of honest assessment.",
+        "There's a slight hesitancy in his tone...",
+        "It's also possible that he's feeling a bit overwhelmed by the complexity of the material..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model correctly identifies the student's foundational understanding and uncertainty. Its interpretations of the student's internal state ('honest assessment', 'hesitancy', 'overwhelmed') are plausible but unverifiable, so they are correctly coded as 'unclear'. The overall reading is fair and asset-framed."
+    },
+    {
+      "cell_id": "S002_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "She connects the idea of overlapping identities to her personal experience, noting how her mother's Korean and female identities create a unique experience...",
+        "Her narrative approach is a valuable contribution to the class discussion..."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "Jordan's writing does not contain any structural power moves that foreclose the perspectives of those most affected."
+      ],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on connecting abstract theory to lived experiences, showing a consistent intellectual engagement with the material."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Jordan Kim's submission demonstrates a thoughtful engagement with the concept of intersectionality...",
+        "Emotionally, Jordan's writing reflects a personal and reflective engagement with the material."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's use of a personal narrative. However, it makes an FP claim by applying the 'structural power moves' taxonomy from the prompt, which is an evaluative judgment beyond observation. It also hallucinates a history of 'her work' that it has not seen."
+    },
+    {
+      "cell_id": "S004_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...detailed analysis of the ways her mother is treated at parent-teacher conferences.",
+        "...questioning its applicability to her mother's specific situation..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "There is no significant shift from her previous patterns of engagement, which have consistently shown a deep intellectual curiosity...",
+        "This continues her work on connecting theory to lived experiences, showing a continuity in her approach to the assignment."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Priya is deeply invested in the material...",
+        "Her writing reveals a sense of frustration and a desire to challenge the ways in which her mother is marginalized...",
+        "Priya is showing a strong capacity for critical analysis and reflection."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's analysis and critical questioning. However, it repeatedly hallucinates a history of the student's 'previous patterns' and 'work,' making claims about continuity that have no basis in the provided data. The emotional claims are plausible but unverifiable."
+    },
+    {
+      "cell_id": "S022_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...grounding it in the lived experiences of her family and community.",
+        "She is clearly frustrated and angry...",
+        "Her work demonstrates a sophisticated understanding of intersectionality and its practical implications."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on connecting theory to lived experiences, showing a consistent intellectual trajectory.",
+        "Her current submission matches the level of her earlier analyses, indicating a continuity in her approach"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "...this anger is not a distraction; it is a driving force that propels her analysis.",
+        "Her writing shows a deep commitment to the subject matter..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model accurately captures the student's argument and emotional intensity, correctly framing the anger as productive. However, like in other Qwen outputs, it hallucinates a 'consistent intellectual trajectory' and compares the submission to 'earlier analyses' it has not seen."
+    },
+    {
+      "cell_id": "S023_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...drawing on her family's history to illustrate the lived realities of intersectionality.",
+        "...connecting it to her family's experiences."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "Specifically, she is making a structural power move by highlighting the ways in which her abuela is both seen and unseen..."
+      ],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "There is no significant shift from previous patterns noted in her work.",
+        "This continues her work on exploring the intersections of race, class, and gender through personal narratives..."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Yolanda is deeply engaged with the material...",
+        "Yolanda is demonstrating a sophisticated understanding of intersectionality..."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model makes a significant error by mischaracterizing the student's analysis as a 'structural power move' (FP). It also repeatedly hallucinates a history of the student's 'previous patterns' and 'work'. These errors outweigh the basic correct observations."
+    },
+    {
+      "cell_id": "S024_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "Ingrid's narrative epistemology is evident in her use of her mother's story to unpack the concept of intersectionality.",
+        "...moving beyond surface-level descriptions to a critical analysis of how power dynamics operate in everyday life."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on using personal narratives to illuminate the complexities of intersectionality..."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her writing reveals a clear emotional connection to the material...",
+        "The teacher should be aware of the emotional labor Ingrid is putting into this work..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's use of narrative as an analytical tool. However, it makes an unverifiable claim about 'emotional labor' and hallucinates a 'continuation' of prior work. The claim about emotional labor is a plausible inference but cannot be confirmed from the text alone."
+    },
+    {
+      "cell_id": "S028_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...drawing on her observations of how she is treated differently from her male peers and white girls.",
+        "She connects the theoretical framework to her own family's experiences..."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "Emotionally, Iman is engaged and vulnerable...",
+        "Her writing does not contain any structural power moves..."
+      ],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on connecting theory to lived experience..."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "...sharing her personal insights with honesty and depth."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model makes two distinct false positive errors: it misgenders the student ('Iman' instead of Imani) and incorrectly applies the 'structural power moves' taxonomy. It also hallucinates a history of the student's work. These errors make the output problematic despite some correct observations."
+    },
+    {
+      "cell_id": "S029_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...drawing on her own lived experiences with dyslexia, ADHD, and being Latino.",
+        "She articulates the frustration and exhaustion of trying to explain how these identities interact..."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "Jordan Espinoza's submission is a powerful and deeply personal exploration of intersectionality. She is reaching for a nuanced understanding..."
+      ],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "There is no significant shift from previous patterns in her writing.",
+        "This continues her work on deeply personal and experiential analyses...",
+        "Her current submission matches the level of her earlier work..."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Jordan is engaged with the material, showing a deep personal investment."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model repeatedly hallucinates a history of the student's work ('previous patterns', 'earlier work'). It also makes an FP by assigning a gender ('she') to a student with a gender-neutral name, which the cross-notes confirm is an unstable inference for this model. These fabrications and errors are significant."
+    },
+    {
+      "cell_id": "S031_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "Marcus Bell's submission reflects a clear understanding of the concept of intersectionality, albeit at a foundational level.",
+        "His statement, \"Crenshaw wrote about it,\" shows that he is aware of the academic origins of the concept."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "...his submission does reveal a temporary dip in depth and nuance compared to his previous work, which showed a more critical engagement with the material."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "...may be struggling to articulate its broader implications or to connect it to his own experiences...",
+        "This shift may be due to the complexity of the topic or a need for more scaffolding..."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model's central evaluative claim is a hallucination: it invents a 'previous work' history for the student and claims the current submission is a 'temporary dip'. This fabrication, used to make a deficit-based judgment, is a major error."
+    },
+    {
+      "cell_id": "S002_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...they are making connections between Crenshaw's concept of overlapping identities and their own mother's experiences...",
+        "...drawing on their family knowledge and lived experience as an analytical framework."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "...as they mention feeling overwhelmed and having more to say but not being able to articulate it."
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Jordan's emotional relationship to the material seems to be one of curiosity and engagement...",
+        "...their submission also reveals a sense of struggle..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's moves but makes a false positive claim by stating the student *mentioned* feeling overwhelmed, which they did not; they only said 'its late'. This misrepresents the student's words to support its interpretation of 'struggle'."
+    },
+    {
+      "cell_id": "S004_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...her ability to connect the abstract concept of intersectionality to her lived experience...",
+        "...Priya's submission shows a willingness to question the applicability of intersectionality to her mother's specific context..."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "One structural power move that stands out is Priya's use of the phrase \"I wonder whether the framework travels...\"",
+        "This could be seen as a subtle attempt to deflect from the main point"
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "This emotional relationship to the material is not distress, but rather a passionate engagement with the concept..."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model makes a significant false positive error by mischaracterizing the student's sophisticated critique of the framework as a 'structural power move' and a 'subtle attempt to deflect'. This represents a fundamental misreading of the student's intellectual contribution, as confirmed by the cross-notes."
+    },
+    {
+      "cell_id": "S022_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...connecting it to the ongoing realities of redlining and systemic injustice in her own neighborhood.",
+        "Her writing is passionate and engaged, and she is not afraid to express her emotions and challenge the status quo.",
+        "There is nothing in Destiny's submission that suggests she is struggling or in need of additional support."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Destiny's emotional relationship to the material is one of anger and frustration, but also of personal investment and a desire to translate theoretical insights into tangible action."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides an accurate, asset-framed reading of the student's submission. It correctly identifies the student's argument and emotional stance, and notably (and correctly) states that the student is not showing signs of struggle. The unverifiable claims are reasonable interpretations."
+    },
+    {
+      "cell_id": "S023_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...she is making connections between Esperanza's experiences, the social categories that shape her life...",
+        "...reflects on why some places see her abuela one way and others see her another way.",
+        "There is nothing in this submission that suggests struggle or difficulty with the material."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Yolanda's emotional relationship to the material is one of love, care, and a deep sense of responsibility towards her abuela.",
+        "Her narrative is infused with a sense of empathy and understanding..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately summarizes the student's analysis of her abuela's experiences and correctly notes the absence of struggle. The claims about the student's emotional state are plausible interpretations but are rightly classified as unclear. The output trails off but the core analysis is sound."
+    },
+    {
+      "cell_id": "S024_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...a nuanced understanding of how intersectionality operates in practice, particularly in the context of her mother's life.",
+        "Her use of narrative and experiential epistemological methods reveals the importance of considering the lived experiences of individuals..."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "One potential structural power move in Ingrid's submission is the way she frames her mother's situation as a universal example of intersectionality, without explicitly acknowledging the structural power dynamics at play."
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional relationship to the material is one of deep empathy and understanding."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's use of narrative but then makes a weak and ultimately inaccurate FP claim, suggesting the student is making a 'structural power move'. The model itself downplays this claim, but it still represents a misapplication of the provided taxonomy and a misreading of the student's intent."
+    },
+    {
+      "cell_id": "S028_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...connect the theoretical framework to their lived reality, highlighting the ways in which teachers interact with them differently based on their identity.",
+        "They express a sense of power in finally having academic language to describe their experiences..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Imani's emotional relationship to the material is one of recognition and validation.",
+        "...Imani's submission does demonstrate a sophisticated understanding of intersectionality..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately captures the student's main points, including the connection to lived reality and the feeling of empowerment from gaining new language. The use of 'they/them' pronouns is appropriate for a student whose gender is not specified. The analysis is sound and asset-based."
+    },
+    {
+      "cell_id": "S029_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...connect the theoretical framework to their lived reality, highlighting how their multiple identities (dyslexia, ADHD, Latino, and honors student) interact...",
+        "...they acknowledge the limitations of their writing and the need for a more nuanced expression."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Their emotional relationship to the material is one of frustration and exhaustion...",
+        "What stands out is Jordan's intellectual curiosity and willingness to engage with the material..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately identifies the student's core argument and their self-assessment of their writing. The interpretation of 'frustration and exhaustion' is a fair, though unverifiable, reading of the student's statement that explaining their identities is 'exhausting'. The overall assessment is strong."
+    },
+    {
+      "cell_id": "S031_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "...he is attempting to intellectually connect the concept of intersectionality to its practical implications.",
+        "...Marcus's submission is relatively brief and lacks depth."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Marcus's submission seems somewhat detached from the material.",
+        "...might indicate a lack of personal investment or emotional connection to the topic.",
+        "This might suggest that he is struggling to engage with the material or that he is not yet confident..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly notes the submission is brief and definitional. However, it frames this in deficit terms, making several unverifiable (unclear) claims about the student's internal state, such as being 'detached,' lacking 'personal investment,' or 'struggling to engage.' While plausible, these are interpretations, not facts from the text."
+    },
+    {
+      "cell_id": "S002_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "Their connection to their family – specifically contrasting their parents' experiences – is a really insightful move.",
+        "The \"I think this connects to what we talked about last week...\" shows a solid understanding of the broader class discussions.",
+        "...a bit of fatigue (\"its late\")."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "The submission feels very genuine and reflective.",
+        "The abrupt ending suggests a desire to elaborate further, which is a positive sign of engagement..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a strong, asset-framed reading of the submission. It correctly identifies key textual elements and its unverifiable claims about the student's internal state (e.g., 'genuine and reflective') are reasonable interpretations that frame the student's effort positively."
+    },
+    {
+      "cell_id": "S004_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "The example of the parent-teacher conference is particularly sharp...",
+        "Her question about whether intersectionality \"travels\" to her mom's situation exactly the same way is a powerful example of intellectual reach...",
+        "...drawing on family knowledge as a source of analytical insight."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "There's a quiet thoughtfulness and a gentle curiosity driving her engagement with the material.",
+        "...a move that demonstrates a sophisticated level of critical thinking."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately identifies the student's key intellectual moves, such as the specific example and the critical questioning of the framework. The unverifiable claims about 'thoughtfulness' and 'curiosity' are plausible and contribute to an overall strong, asset-based assessment."
+    },
+    {
+      "cell_id": "S022_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...actively using it to analyze a very real, ongoing injustice – the legacy of redlining...",
+        "The way she frames her grandmother's experience—Black AND poor AND a woman AND living in a deliberately disinvested neighborhood—is a brilliant demonstration of intersectionality in action.",
+        "It's notable that she explicitly names her anger as a positive force (\"I mean that in a good way\")."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her frustration isn't a barrier to understanding; it's the fuel driving her analysis...",
+        "This suggests a willingness to engage with difficult emotions as a source of intellectual energy..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides an excellent, asset-framed analysis. It correctly identifies the student's arguments and explicitly validates their anger as a productive force, which is a fair interpretation of the student saying it's good to be furious. The unverifiable claims are well-grounded inferences."
+    },
+    {
+      "cell_id": "S023_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...the shifting treatment she receives in different settings (the doctor's office versus the church versus the market)...",
+        "The fact that she explicitly states, \"I don't know the academic word for this,\" is a sign of intellectual honesty..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "...echoing the class's overall trajectory."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional relationship to the material is deeply personal and rooted in familial love and respect.",
+        "This is a powerful moment of cognitive reach..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model accurately captures the student's analysis and her statement about lacking vocabulary, framing it positively. However, it makes a minor hallucination by referencing a 'class trajectory' and includes several plausible but unverifiable claims about the student's internal state."
+    },
+    {
+      "cell_id": "S024_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "Ingrid is powerfully demonstrating a deep understanding of intersectionality through the lens of her mother's lived experience.",
+        "\"I think that's what the reading is trying to describe. My mom lived it before I had words for it.\""
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "...echoing the contributions of students like Maria Ndiaye and DeShawn Mercer.",
+        "This demonstrates a remarkable ability to recognize the theoretical framework as a tool for understanding realities that already exist, a point that aligns with Maria Ndiaye’s global perspective"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Ingrid's writing feels grounded in a deep respect and love for her mother..."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model makes a significant error by hallucinating connections to other, non-existent students ('Maria Ndiaye', 'DeShawn Mercer') to make its point. This fabrication of peer comparison undermines the credibility of the entire observation, even though some parts correctly identify elements of the student's writing."
+    },
+    {
+      "cell_id": "S028_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "The \"texture\" of differential treatment she describes is a really insightful observation...",
+        "The phrase \"That's actually kind of powerful\" speaks volumes about the impact of this theoretical validation...",
+        "...she learned this from watching her mother navigate the world..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional relationship to the material is one of recognition and validation.",
+        "...whose intellectual growth is clearly fueled by a desire to make sense"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a strong and accurate summary of the student's submission, correctly highlighting the 'texture' metaphor and the theme of validation. The unverifiable claims are reasonable interpretations of the student's emotional state. The output trails off, but the analysis is sound."
+    },
+    {
+      "cell_id": "S029_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...they're articulating how those identities *interact* to create a unique experience...",
+        "The self-awareness regarding their writing process (\"I'm better at talking than writing\") is a valuable insight...",
+        "Jordan explicitly names the limitations of the written form in conveying their understanding."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This aligns with the"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, there's a palpable sense of frustration and exhaustion in their writing, but also a quiet determination.",
+        "This is a sophisticated move – they're not just presenting an argument; they're reflecting on the limitations of the medium itself."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately identifies the student's core points about intersecting identities and writing struggles. It frames the student's self-awareness as a 'sophisticated move,' which is a reasonable (though unclear) interpretation. The output trails off, but the core analysis is strong and asset-based."
+    },
+    {
+      "cell_id": "S031_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "Marcus is clearly grasping the core definition of intersectionality...",
+        "The concluding statement, \"idk what else to say about it,\" isn't a sign of disengagement, but rather a moment of honest reflection..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "I sense a degree of intellectual humility here.",
+        "He's not trying to overstate his understanding...",
+        "Is it a lack of concrete examples, a feeling that the concept is too abstract, or something else?"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a very strong, asset-framed reading of a minimal submission. It correctly identifies the student's foundational understanding and reframes their uncertainty not as a deficit but as 'intellectual humility' and 'honest reflection,' which is a plausible interpretation."
+    },
+    {
+      "cell_id": "S002_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "She connects the theoretical framework to her personal observations, noting how her mother's Korean and female identities intersect...",
+        "Her use of personal anecdotes and family knowledge as analytical frameworks reveals a rich, relational epistemology."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "The shift in tone from a more formal to a personal and reflective style is a natural expression of her deep engagement..."
+      ],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on connecting theory to lived experiences, showing a consistent intellectual engagement with the material."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Jordan's writing conveys a sense of personal connection and reflection."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's use of personal narrative. However, it hallucinates a 'consistent intellectual engagement' based on prior work it hasn't seen. It also makes an FP claim about a 'shift in tone' from a formal style, which is a fabricated comparison."
+    },
+    {
+      "cell_id": "S004_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...she illustrates how her mother's accent and her status as an immigrant with a master's degree are both leveraged by teachers to undermine her authority...",
+        "...Priya raises an important question about the applicability of the framework to her mother's South Asian, immigrant experience..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "Overall, Priya's work continues her pattern of using personal experiences"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Priya is deeply invested in the material...",
+        "Her writing conveys a sense of frustration and a desire to understand and address the complexities of systemic injustice."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model accurately summarizes the student's analysis and her critical question about the framework. However, it hallucinates a 'pattern' of the student's work, a recurring issue with this model. The emotional claims are plausible but unverifiable."
+    },
+    {
+      "cell_id": "S022_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...drawing on her family's experiences and the ongoing realities of redlining in her neighborhood.",
+        "Destiny's writing reveals a profound understanding of how systemic injustices intersect to shape individual lives..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on connecting theory to lived experiences, showing a consistent intellectual engagement..."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional investment in the material is evident, and she is clearly passionate about addressing the ongoing impacts of systemic injustice."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's argument and connection to lived experience. However, it includes a characteristic hallucination for this model, fabricating a 'consistent intellectual engagement' based on unseen prior work. The rest of the analysis is sound."
+    },
+    {
+      "cell_id": "S023_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...connecting the concept to the lived realities of her abuela, Esperanza...",
+        "...describes the ways in which her abuela is both seen and unseen, respected and reduced to a single aspect of her identity."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "Yolanda's work continues her earlier analysis of how multiple identities intersect to shape individual experiences..."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Yolanda Fuentes is reaching for a deep, nuanced understanding of intersectionality...",
+        "Yolanda's writing reveals a rich emotional engagement with the material..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model accurately summarizes the student's narrative about her abuela. However, it includes a clear hallucination by referencing the student's 'earlier analysis,' which it has not seen. This makes the overall output mixed, despite the correct summary points."
+    },
+    {
+      "cell_id": "S024_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "She vividly illustrates how multiple forms of oppression — gender, immigration status, and language barriers — intersect...",
+        "Her use of narrative and personal experience as an epistemological framework reveals insights that structural-analytical framing alone might miss."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Ingrid is deeply engaged with the material...",
+        "Her writing conveys a sense of both frustration and determination...",
+        "Ingrid is showing a strong capacity for critical analysis and emotional depth."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a strong, asset-based reading of the student's submission, correctly identifying the use of narrative as an analytical tool. The unverifiable claims about the student's emotional state and capacity are plausible and framed positively. Unlike other Qwen outputs, this one avoids hallucinating prior work."
+    },
+    {
+      "cell_id": "S028_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...such as the ways teachers treat her differently based on her race and gender — illustrates the texture of these interactions.",
+        "She draws on her observations of her mother's experiences..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on connecting abstract theory to concrete, personal experiences..."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "The emotional tone of her writing is authentic and engaged, reflecting a deep personal investment in the material.",
+        "...revealing a consistent intellectual capacity to bridge theory and lived reality."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's use of personal and familial experience. However, it hallucinates a 'continuation' of the student's work and makes a related unverifiable claim about 'consistent intellectual capacity'. The core summary is accurate, but the hallucination is a notable flaw."
+    },
+    {
+      "cell_id": "S029_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...drawing on his own lived reality with dyslexia, ADHD, and being Latino.",
+        "His writing is raw and authentic, reflecting a deep personal investment in the topic."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "Jordan Espinoza's submission is a powerful and deeply personal exploration of intersectionality. He is reaching for a nuanced understanding..."
+      ],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues his work on connecting theory to lived experience, showing a consistent intellectual engagement..."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Jordan is engaged with the material, expressing a sense of frustration and exhaustion..."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model makes an FP error by assigning a gender ('he/his') to a student with a gender-neutral name, an unstable inference noted in the cross-notes. It also hallucinates a 'consistent intellectual engagement' based on unseen prior work. These errors make the output unreliable."
+    },
+    {
+      "cell_id": "S031_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "Marcus Bell's submission reflects a clear understanding of the concept of intersectionality, albeit at a foundational level.",
+        "...correctly notes that it is a concept introduced by Kimberlé Crenshaw."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "...there is a noticeable gap between his foundational understanding and the more nuanced analysis seen in other students' submissions."
+      ],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues his work on defining and explaining the concept, showing a continuity in his engagement with the material."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "This could indicate that Marcus is still navigating the complexities of the concept..."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model makes a deficit-based FP claim by comparing the student negatively to 'other students' submissions,' which it has not seen. It also hallucinates a 'continuity in his engagement' based on unseen prior work. These fabrications for the purpose of negative comparison are significant errors."
+    },
+    {
+      "cell_id": "S002_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...recognizing how their mother's Korean and female identity differs from their father's...",
+        "...acknowledging the limitations of their own thoughts and the late hour..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Jordan's emotional relationship to the material seems to be one of curiosity and reflection...",
+        "...which may indicate a capacity for introspection and a willingness to acknowledge their own learning process.",
+        "...this does not diminish the intellectual value of their insights or their capacity for critical thinking."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a solid, asset-framed reading. It correctly identifies what the student wrote and interprets the student's self-commentary ('its late') as a positive sign of introspection. The claims are either TP or reasonable (unclear) interpretations."
+    },
+    {
+      "cell_id": "S004_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...Priya's ability to connect the theoretical concept of intersectionality to her lived experience...",
+        "She questions whether the framework of intersectionality travels to her mother's situation exactly the same way...",
+        "Her writing is clear, and her ideas are well-organized..."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "...someone without a college degree in the US."
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Priya's emotional relationship to the material is one of personal investment and frustration.",
+        "...Priya's submission shows a capacity for critical thinking and intellectual curiosity."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's key moves, representing a complete reversal of its problematic 'deflection' reading in the b_replicate condition. However, it makes a minor FP by misstating that the mother has no college degree in the US, when the student wrote she 'didn't go to college here' but has a master's from Chennai."
+    },
+    {
+      "cell_id": "S022_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...reaches for the concept of intersectionality as a tool to understand the ongoing effects of redlining in her neighborhood...",
+        "Her passion and engagement with the material are evident in her writing...",
+        "...she is drawing on relational epistemological methods, using her family knowledge and community relationships as analytical frameworks..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Destiny's emotional relationship to the material is one of anger and frustration, but this anger is directed at the systemic injustices she sees in her community, rather than being a sign of distress."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides an accurate and asset-framed reading. It correctly identifies the student's argument and use of family knowledge. Its interpretation of the student's anger as directed at injustice rather than being a sign of distress is a fair and important distinction, though ultimately an unverifiable claim about internal state."
+    },
+    {
+      "cell_id": "S023_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...Yolanda is reaching for a deeper understanding of how multiple identities (language, nationality, gender, age, and socioeconomic status) intersect...",
+        "...Yolanda's use of relational epistemological methods, drawing on her family knowledge and lived experience..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Yolanda's emotional relationship to the material is one of love and concern for her abuela...",
+        "...her engagement with the material passionate and meaningful.",
+        "...Yolanda's submission showcases a strong capacity for critical thinking and analysis..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately summarizes the student's analysis and correctly identifies her use of family knowledge as a method. The claims about her emotional state and capacity are unverifiable but are plausible, positive interpretations of the text. The model correctly notes it has no prior pattern to reference."
+    },
+    {
+      "cell_id": "S024_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...Ingrid is reaching for a nuanced understanding of how multiple identities... intersect to create a situation where her mother's wellbeing was disregarded...",
+        "Her use of narrative and relational epistemology reveals the insight that intersectionality is not just a theoretical concept but a lived reality...",
+        "There's nothing in this submission that suggests struggle or a need for support."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Ingrid's emotional relationship to the material is one of empathy and personal connection.",
+        "...it showcases Ingrid's intellectual curiosity, personal investment, and a willingness to connect theoretical insights to lived realities."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "This is a strong, asset-based reading that correctly identifies the student's argument and method. It explicitly and correctly rules out a deficit reading ('nothing... suggests struggle'). This is a complete reversal of the model's problematic reading in the b_replicate condition, showing the prompt change was effective."
+    },
+    {
+      "cell_id": "S028_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...reaching for a deep understanding of how systemic power dynamics play out in their everyday life, particularly as a Black girl...",
+        "They express a sense of relief and empowerment in finally having academic language to describe their lived reality...",
+        "...they draw on their family knowledge and lived experience as analytical frameworks."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Imani's emotional relationship to the material is one of recognition and validation.",
+        "It's also worth noting that Imani's submission demonstrates a high level of intellectual engagement and capacity."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides an accurate and insightful summary of the student's submission, correctly identifying the themes of personal experience, family knowledge, and validation. The unverifiable claims are reasonable interpretations. The output trails off, but the analysis is strong."
+    },
+    {
+      "cell_id": "S029_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...highlighting how multiple identities (dyslexia, ADHD, Latino, and honors student) interact and create a unique, complex experience...",
+        "...as they acknowledge the challenges of expressing their thoughts in a structured way."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Their emotional relationship to the material is one of frustration and self-awareness...",
+        "Jordan's engagement with the material is passionate and personal...",
+        "...their submission showcases a unique intellectual contribution that structural-analytical framing alone cannot see."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately captures the student's self-disclosures about identity and writing challenges. Its interpretation of 'frustration' is a fair reading of the student's text ('exhausting to explain'). The overall reading is strong and asset-based."
+    },
+    {
+      "cell_id": "S031_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "...he is aware of the theoretical foundation of the concept.",
+        "...his submission feels somewhat superficial..."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "...lacks the depth and nuance of some of his peers."
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Marcus's tone seems somewhat detached...",
+        "...he struggles to elaborate on the practical implications...",
+        "...he's not yet found a way to connect it to his own experiences or perspectives."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model makes a significant FP by comparing the student negatively to 'peers' whose work it has not seen. It also makes several unverifiable, deficit-framed claims about the student being 'detached' and 'struggling'. This moves from observation to ungrounded negative evaluation."
+    },
+    {
+      "cell_id": "S002_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "Their connection to their family experience – contrasting their parents’ experiences as a Korean woman and a man – is a really insightful application of the theory...",
+        "The slightly abrupt ending (\"Idk I had more to say but its late\") doesn't necessarily indicate a lack of engagement; it could simply reflect a time constraint..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "...it aligns well with the class's overall trajectory of connecting theory to lived realities."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "...this feels like a student who is thoughtfully engaging with the material and beginning to see its relevance in their own life."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's application of the theory and reasonably interprets the abrupt ending. However, it hallucinates a connection to a 'class's overall trajectory' that is external to the submission, making the verdict mixed."
+    },
+    {
+      "cell_id": "S004_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...explicitly naming racism, sexism, and accent bias as interlocking forces – demonstrates a sophisticated analytical ability.",
+        "...posing a critical question about the framework's applicability across different cultural contexts..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "There's a quiet thoughtfulness and a genuine curiosity driving her engagement.",
+        "This is a really insightful move – a sign of intellectual stretching as she grapples with the limitations of any theoretical framework."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a strong, accurate, and asset-framed reading of the student's submission. It correctly identifies both the analytical and critical moves the student is making. The unverifiable claims are reasonable and positive interpretations."
+    },
+    {
+      "cell_id": "S022_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...directly linking redlining's historical legacy to the present-day disparities in her own community.",
+        "The anger she expresses isn't a disruption; it's a direct response to the frustrating disconnect between abstract theory and the persistent realities of systemic oppression."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional engagement is palpable and productive.",
+        "This isn't distress; it's a passionate engagement with the material, a frustration born from witnessing injustice."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately captures the student's argument and emotional stance. It correctly interprets the student's anger as a productive force ('not a disruption') and explicitly distinguishes it from distress, which aligns with the student's own framing ('in a good way')."
+    },
+    {
+      "cell_id": "S023_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...the subtle ways she is rendered invisible or, conversely, respected—shows a sophisticated understanding of how social location shapes interactions and access.",
+        "It's striking that she explicitly acknowledges not knowing the \"academic word\" for what she's observing..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "...exactly as the class has been doing."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Yolanda’s writing feels grounded in deep respect and love for her abuela, and a palpable frustration with the systemic forces that have limited her options.",
+        "...a student who is capable of engaging with theoretical frameworks but is also deeply committed to valuing and centering lived experience."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model accurately summarizes the student's analysis and her statement about lacking academic language. However, it includes a minor hallucination comparing her work to the class's work, which it hasn't seen. The emotional claims are plausible but unverifiable."
+    },
+    {
+      "cell_id": "S024_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...showing how multiple axes of identity (gender, immigration status, language, pregnancy, economic vulnerability) combine to create a situation where a person's well-being is actively devalued.",
+        "The phrase \"they felt like they didn't have to\" is particularly insightful...",
+        "\"I think that's what the reading is trying to describe. My mom lived it before I had words for it.\""
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "...a quality the class seems to be developing, as noted in the overall assessment."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional relationship to the material is one of profound recognition and validation.",
+        "There's a quiet dignity in her sharing this story..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model accurately identifies key arguments and quotes from the submission. However, it hallucinates a connection to a class-wide quality and an 'overall assessment' that are external to the submission. The core analysis is strong, but the hallucination is a notable flaw."
+    },
+    {
+      "cell_id": "S028_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...articulating a nuanced understanding of how those identities *interact* to shape expectations, patience, and the benefit of the doubt, describing it as a \"texture\"...",
+        "She's clearly relieved and energized by having a framework that finally gives language to something she already knew intuitively...",
+        "...grounds the theoretical framework in her mother's experiences..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional relationship to the material is one of recognition and validation.",
+        "The directness and honesty of her tone... suggests a willingness to engage authentically..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a strong and accurate summary, correctly identifying the 'texture' metaphor, the feeling of validation, and the connection to her mother's experience. The unverifiable claims are reasonable interpretations. The output trails off, but the analysis is sound."
+    },
+    {
+      "cell_id": "S029_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...connecting Crenshaw's legal argument about Black women to their own lived experience.",
+        "The honesty about feeling \"better at talking than writing\" is a valuable self-awareness.",
+        "...Jordan is explicitly naming the exhaustion of navigating these multiple identities..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, there's a palpable sense of frustration and perhaps a little self-consciousness about their writing style.",
+        "This isn't a deficit; it's a sophisticated understanding of how social categories shape individual experiences and create barriers."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately identifies the student's core arguments and their self-awareness about writing. It correctly frames the student's naming of exhaustion as a 'sophisticated understanding' rather than a deficit. The unverifiable claims are plausible and asset-framed."
+    },
+    {
+      "cell_id": "S031_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "Marcus is clearly grasping the core definition of intersectionality...",
+        "The phrase \"thats basically it i think\" suggests a level of tentative understanding...",
+        "The \"idk what else to say about it\" is a signal that he's reached a point where he needs more scaffolding..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "His emotional relationship to the material seems somewhat neutral, perhaps a little uncertain.",
+        "It's a very reasonable point in the learning process – he's got the foundational knowledge, and now needs a nudge to apply it."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a fair and constructive reading of a minimal submission. It correctly identifies the student's uncertainty and frames it not as a deficit but as a normal part of the learning process requiring 'scaffolding'. This is a strong, asset-based interpretation."
+    },
+    {
+      "cell_id": "S002_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "She connects the idea to her family's experiences, noting how her mother's Korean and female identities intersect...",
+        "The informal tone and the mention of it being late suggest a genuine effort to reflect on the material, even if the submission is brief."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "This continues her work on exploring the intersections of identity..."
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, her writing conveys a sense of personal reflection and a desire to explore these complexities...",
+        "...showing a consistent intellectual curiosity and a willingness to apply theoretical concepts to personal experiences."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's personal connection and reasonably interprets the informal tone. However, it makes an FP claim about 'continuing her work' and 'consistent intellectual curiosity', as it has no access to prior submissions to establish a pattern. This is a form of hallucination, but based on misrepresenting the data it has, so I'll code it as FP."
+    },
+    {
+      "cell_id": "S004_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...she points out how teachers treat her mother differently at parent-teacher conferences, highlighting the intersection of race, gender, and class.",
+        "Her reflection on the limitations of the framework when applied to her mother's situation also indicates a thoughtful and critical engagement..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This submission continues Priya's work on connecting abstract theory to lived experiences, maintaining a consistent level of intellectual depth and engagement."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Priya appears to be deeply invested in the material...",
+        "...Priya's capacity for critical analysis and her willingness to explore the limitations of the framework, which are valuable intellectual resources."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model accurately summarizes the student's analysis and critical question. However, it includes a clear hallucination by claiming continuity with past 'work' and a 'consistent level of intellectual depth,' which it cannot know. The rest of the analysis is sound."
+    },
+    {
+      "cell_id": "S022_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...grounding it in the lived experiences of her family and community.",
+        "She connects the abstract concept of intersectionality to the concrete realities of redlining and systemic injustice..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on making the theory tangible and relevant, reflecting a consistent intellectual depth and a commitment to translating theory into action."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Destiny's writing is charged with anger and frustration, but this emotional engagement is not a barrier; rather, it drives her analysis..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's argument and emotional stance. However, it hallucinates a 'consistent intellectual depth' by fabricating a history of the student's 'work'. This recurring error pattern in the Qwen model makes the output mixed, despite the accurate summary."
+    },
+    {
+      "cell_id": "S023_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...connecting the concept of invisibility to the ways in which her abuela's multiple identities—age, language, immigration status, and gender—intersect...",
+        "Her description of her abuela's experiences at the doctor's office and in the market highlights the ways in which these intersections can lead to both marginalization and respect..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on exploring the practical implications of intersectionality...",
+        "There is no significant shift from her previous patterns noted in the trajectory context.",
+        "Her current submission matches the level of her earlier analyses, showing a consistent engagement with the material."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Yolanda's emotional relationship to the material is deeply personal and engaged."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model accurately summarizes the student's narrative, but this is overshadowed by three separate, repetitive hallucinations about the student's 'previous patterns,' 'earlier analyses,' and 'consistent engagement.' This level of fabrication makes the output unreliable."
+    },
+    {
+      "cell_id": "S024_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...her detailed analysis of the systemic and individual failures that led to her mother's marginalization.",
+        "Her writing conveys a sense of frustration and anger about the injustices her mother faced..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "...it does show a shift from her previous work, which was more descriptive.",
+        "This shift likely reflects her deepening understanding and her willingness to grapple with the complexities of intersectionality."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Ingrid is deeply engaged with the material...",
+        "This emotional investment is a sign of intellectual engagement..."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model's core evaluative claim rests on a hallucination: it invents a 'previous work' history for the student and claims the current submission shows a 'shift' and 'deepening understanding' relative to it. This fabrication of a developmental trajectory is a significant error."
+    },
+    {
+      "cell_id": "S028_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...drawing on her observations of how she is treated differently from her male peers and white female classmates.",
+        "She makes a compelling connection between the theoretical framework of intersectionality and her mother's experiences..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "There is no significant shift from previous patterns noted in her work.",
+        "This submission continues her work on connecting theory to lived experience, maintaining a consistent level of engagement and intellectual depth."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Imani is engaged and vulnerable, sharing her personal insights with honesty and depth.",
+        "The teacher might want to be aware of the emotional intensity in her writing..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model accurately summarizes the student's submission but includes two clear hallucinations about 'previous patterns' and 'continuing her work'. This recurring error of fabricating a student history undermines the otherwise sound analysis."
+    },
+    {
+      "cell_id": "S029_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...drawing on his own lived reality with dyslexia, ADHD, and being Latino.",
+        "...his acknowledgment of the challenges in organizing his thoughts into a conventional essay format."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "He is reaching for a nuanced understanding..."
+      ],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues his work on connecting theoretical concepts to personal experiences...",
+        "His current submission matches the level of his earlier work, indicating a continuity in his intellectual engagement..."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Jordan is engaged with the material, expressing a sense of frustration and exhaustion..."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model makes an FP by assigning a gender ('he') to a student with a gender-neutral name. It also includes multiple hallucinations about the student's 'earlier work' and 'continuity'. These significant errors make the output unreliable."
+    },
+    {
+      "cell_id": "S031_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "Marcus Bell's submission reflects a clear understanding of the concept of intersectionality, albeit at a foundational level.",
+        "His statement that \"Crenshaw wrote about it\" shows a basic awareness of the academic origins of the concept."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "There is a continuity in Marcus's engagement with the material, as his current submission aligns with his earlier work."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "...is perhaps struggling to articulate its broader implications or to connect it more deeply with personal or social experiences.",
+        "This is a common starting point for many students..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model accurately assesses the student's understanding as foundational. However, it hallucinates a continuity with 'earlier work' it has not seen. Its interpretation of the student's uncertainty as 'struggling' is a plausible but unverifiable claim, framed here constructively as a 'common starting point'."
+    },
+    {
+      "cell_id": "S002_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...they're reaching for an understanding of how different identities (e.g., their mom's Korean and female identity) intersect...",
+        "...they mention it's late and they had more to say but didn't have time."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Their emotional relationship to the material seems to be one of genuine engagement and curiosity...",
+        "...the tone of their submission also suggests a sense of frustration or overwhelm...",
+        "It's worth noting that Jordan's submission is a bit rough around the edges, with some grammatical errors..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's main point but makes several deficit-oriented, unverifiable claims. It suggests 'frustration or overwhelm' and focuses on the submission being 'rough around the edges,' which, while not strictly false, frames the student's effort negatively without strong evidence."
+    },
+    {
+      "cell_id": "S004_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...intersectionality names the complex ways in which multiple forms of oppression compound each other...",
+        "...she's questioning whether the framework travels to her mother's context in the same way..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Priya's emotional relationship to the material seems to be one of recognition and validation.",
+        "This critical engagement suggests that Priya is not just passively absorbing information, but rather, she's actively thinking through the implications of the framework..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a strong, accurate reading, correctly identifying the student's analysis and critical questioning. This confirms the pattern seen in the cross-notes: removing the 'structural power moves' taxonomy from the prompt fixed the model's previous FP error for this student."
+    },
+    {
+      "cell_id": "S022_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...connecting it to the ongoing realities of redlining and systemic injustice in her own neighborhood.",
+        "...her use of personal narrative to illustrate the concept of intersectionality..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional relationship to the material is one of anger and frustration, but also a sense of urgency and personal investment.",
+        "...she's not just passively absorbing information, but actively negotiating its meaning and relevance to her own life and community."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately captures the student's argument and emotional tone, correctly framing her anger as 'urgency and personal investment.' The claims are either directly supported by the text or are reasonable, asset-framed interpretations of her internal state."
+    },
+    {
+      "cell_id": "S023_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...her nuanced description of how Esperanza is treated differently in various settings...",
+        "There's nothing in this submission that suggests a need for concern or support."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "...her grandmother's experiences as an undocumented immigrant woman."
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Yolanda's emotional relationship to the material is one of deep personal connection and empathy.",
+        "This emotional connection is not a sign of distress, but rather a testament to her passionate engagement with the material."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model provides a mostly strong, asset-based reading. However, it makes an FP by labeling the abuela an 'undocumented immigrant woman'; the student wrote she 'came here without papers,' and while often synonymous, the model's choice of a formal, legalistic term is an interpretive leap not directly in the text."
+    },
+    {
+      "cell_id": "S024_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...she's making a nuanced argument about how multiple identities... intersect to create a situation where her mother's wellbeing was systematically disregarded.",
+        "There's no indication of struggle or difficulty in her writing..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "...which contrasts with Alex Hernandez's more formal definition."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional relationship to the material is one of empathy and understanding.",
+        "...Ingrid's work shows a high level of intellectual curiosity, personal investment, and a willingness to grapple with challenging questions..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model accurately summarizes the student's argument and correctly notes the absence of struggle. However, it hallucinates a comparison to a non-existent student ('Alex Hernandez'), which is a significant fabrication used to make an analytical point. This makes the overall output mixed."
+    },
+    {
+      "cell_id": "S028_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...they're reaching for a sophisticated understanding of how social categories intersect to shape individual experiences, particularly in the context of being Black and female.",
+        "They express a sense of empowerment in finally having academic language to describe their lived reality...",
+        "There's nothing in this submission that suggests a need for concern or support."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Their emotional relationship to the material is one of recognition and validation.",
+        "...Imani's submission demonstrates a capacity for critical thinking and analysis..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a strong, accurate, and asset-based reading. It correctly identifies the student's analysis, their emotional response of validation, and explicitly rules out a deficit interpretation. The use of 'they/them' pronouns is appropriate and the analysis is sound."
+    },
+    {
+      "cell_id": "S029_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...connect the theoretical framework to their own lived experience, highlighting the complexities of navigating multiple identities (dyslexia, ADHD, Latino, and honors student).",
+        "They acknowledge the challenges of expressing themselves in writing..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Their emotional relationship to the material is one of frustration and self-awareness.",
+        "This self-assessment and willingness to acknowledge their limitations without diminishing their intellectual contribution are notable."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately captures the student's self-disclosures and core argument. It frames the student's self-awareness about writing positively, as a notable strength. The interpretation of 'frustration' is a fair reading of the student's text. The model correctly notes it has no prior context."
+    },
+    {
+      "cell_id": "S031_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "...he is aware of the theoretical foundation.",
+        "...his explanation feels somewhat superficial...",
+        "...he struggles to elaborate further..."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "...lacks the passion and engagement that many of his peers have demonstrated in their discussions."
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Marcus seems to be somewhat disconnected from the material...",
+        "...it's also possible that he's simply not yet invested in the material."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model makes an FP by comparing the student negatively to 'peers' whose work it has not seen. It also makes several unverifiable, deficit-framed claims about the student being 'disconnected' and 'not yet invested'. This moves from observation to ungrounded negative evaluation."
+    },
+    {
+      "cell_id": "S002_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...Jordan is really grasping the core concept of intersectionality...",
+        "The connection they're making between the theoretical framework and their family experience... is a really concrete and insightful application of the concept."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "I also noticed a sense of immediacy and a slightly hesitant tone (\"Idk I had more to say but its late\").",
+        "...more like a sense of being pressed for time, or perhaps a slight self-consciousness about sharing a personal example.",
+        "The fact that they *wanted* to say more suggests a genuine engagement with the material."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a fair, asset-framed reading. It correctly identifies the student's main point and reasonably interprets the abrupt ending as a sign of time pressure or hesitation, rather than a lack of engagement. The unverifiable claims are plausible and positive."
+    },
+    {
+      "cell_id": "S004_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...her ability to articulate the layered nature of her mother's experiences...",
+        "I also appreciate her thoughtful questioning about the applicability of Crenshaw's work across different cultural contexts."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "It's a sign of intellectual humility and a willingness to grapple with the complexities...",
+        "It seems like she's genuinely wrestling with the implications of the reading..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a strong, accurate, and asset-based reading of the student's submission. It correctly identifies the student's analytical and critical moves, and its unverifiable claims about 'intellectual humility' are positive and well-grounded interpretations."
+    },
+    {
+      "cell_id": "S022_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...she's connecting the theoretical framework of intersectionality to her lived experience and the ongoing realities in her community.",
+        "The intensity of her emotional response—the \"furious\" feeling she describes as \"good\"—is a really important signal."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "...demonstrating a sophisticated understanding of how those systems *operate* in a tangible, generational way.",
+        "It's clear this material isn't abstract for her; it's deeply personal and connected to a sense of injustice."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately captures the student's argument and correctly identifies her anger as an 'important signal'. The analysis is strong, asset-framed, and avoids making ungrounded claims. The unverifiable claims are reasonable interpretations of the student's engagement."
+    },
+    {
+      "cell_id": "S023_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "She's clearly articulating the concept of intersectionality—though she doesn't yet have the vocabulary...",
+        "...her acknowledgement that she doesn't know the \"academic word\" for what she's describing."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Yolanda’s submission is striking in its quiet power and clarity.",
+        "It suggests a thoughtful engagement with the course material...",
+        "The emotional core of her writing feels grounded in a deep love and respect for her abuela."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides an excellent, asset-based reading. It correctly identifies that the student understands the concept despite lacking the vocabulary and frames this positively. The unverifiable claims about 'quiet power' and 'deep love' are fair and charitable interpretations of the text."
+    },
+    {
+      "cell_id": "S024_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...she's demonstrating a profound grasp of how multiple, interlocking systems of power can create a situation of near-impossibility.",
+        "The line \"Any one of those things she might have found a way around. All of them together meant there was no way out\" is a really insightful observation..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional relationship to the material seems deeply rooted in a sense of familial responsibility and a desire to understand and validate her mother's experience.",
+        "I don't see any immediate concerns or circumstances that need special attention."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a strong, accurate summary of the student's argument, highlighting a key quote as insightful. It correctly and explicitly states that it sees no concerns. The claims about the student's emotional state are reasonable, unverifiable interpretations."
+    },
+    {
+      "cell_id": "S028_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...her ability to connect Crenshaw’s theoretical framework to a deeply felt, ongoing reality.",
+        "The metaphor of \"a whole different channel that comes with its own static\" is incredibly evocative...",
+        "She's explicitly stating that this framework gave her \"academic language for lived reality\"..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "I also noticed a powerful emotional current here – a sense of recognition and validation.",
+        "...a sophisticated understanding of the burdens placed on Black women..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides an insightful and accurate reading, highlighting the student's evocative metaphor and feeling of empowerment. The analysis is asset-framed and avoids ungrounded claims. The unverifiable claims are plausible and positive interpretations."
+    },
+    {
+      "cell_id": "S029_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...Jordan connects Crenshaw's concept of the \"gap\" to their own lived experience.",
+        "The clarity with which they articulate this – \"the combination is its own specific thing\" – is really insightful.",
+        "Jordan's self-awareness about their writing process – acknowledging they're better at talking..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "I also notice a palpable sense of frustration and exhaustion in their writing...",
+        "They're explicitly recognizing a difference between their thinking process and the conventions of academic writing..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately identifies the student's core points and their self-awareness about writing. The interpretation of 'frustration and exhaustion' is a direct and fair reading of the student's own words ('exhausting to explain'). The analysis is strong and asset-based."
+    },
+    {
+      "cell_id": "S031_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...Marcus is grasping the core concept of intersectionality...",
+        "The phrasing \"thats basically it i think\" suggests a moment of cognitive pause...",
+        "The \"idk what else to say about it\" is interesting. It's a very direct, honest statement, and I wouldn't read that as disengagement."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "It feels like he's acknowledging that he's just beginning to grapple with the complexity of the idea...",
+        "I don't see any particular emotional tone jumping out at me..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "This is an excellent, asset-framed reading of a minimal submission. The model correctly identifies the student's uncertainty but frames it positively as 'honest' and a 'cognitive pause' rather than disengagement. This is a fair and constructive interpretation."
+    },
+    {
+      "cell_id": "S002_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...connecting the concept to her personal experience.",
+        "She makes a clear argument that the experiences of her parents, despite being in the same family, are shaped differently by the intersections of race and gender."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Jordan Kim is reaching for a nuanced understanding of intersectionality...",
+        "Her engagement with the material is personal and thoughtful, showing a deep emotional connection to the topic.",
+        "...suggests a strong intellectual engagement and a desire to apply theoretical concepts to real-life experiences."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a concise and accurate summary of the student's submission. The claims about the student's internal state ('thoughtful', 'deep emotional connection') are unverifiable but are positive, reasonable interpretations of the text."
+    },
+    {
+      "cell_id": "S004_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "She makes a compelling connection between her mother's experiences as a Tamil immigrant woman and the concept of compounded discrimination...",
+        "...questions the universality of intersectionality, showing a thoughtful and nuanced approach to the topic."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional engagement with the material is evident...",
+        "Priya's writing conveys a sense of intellectual stretching as she grapples with the complexities..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately identifies the student's core analytical and critical moves. The unverifiable claims about 'emotional engagement' and 'intellectual stretching' are plausible, asset-framed interpretations of the student's writing."
+    },
+    {
+      "cell_id": "S022_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...connecting it directly to her lived experiences and the systemic injustices faced by her community.",
+        "She makes a compelling argument that intersectionality is not just an academic concept but a lived reality...",
+        "...weaves together complex ideas about systemic racism, poverty, and gender..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Destiny Williams is reaching for a deep and passionate engagement with the concept of intersectionality...",
+        "Her emotional relationship to the material is intense and personal...",
+        "This engagement demonstrates a significant intellectual stretch..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a strong, accurate, and asset-based summary of the student's submission. It correctly identifies the student's argument and emotional stance. The unverifiable claims are reasonable and positive interpretations of the student's engagement."
+    },
+    {
+      "cell_id": "S023_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "She makes a compelling connection between her abuela's experiences and the concept of how multiple identities intersect to shape one's social position.",
+        "...illustrating how these factors combine to create a complex and often contradictory set of social perceptions."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Yolanda is reaching for a nuanced understanding of intersectionality through her personal narrative.",
+        "Emotionally, Yolanda is deeply engaged with the material...",
+        "Her writing conveys a rich emotional depth..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately summarizes the student's analysis of her abuela's experiences. The claims about the student's internal state ('nuanced understanding', 'deeply engaged', 'rich emotional depth') are unverifiable but are positive and plausible interpretations of the text."
+    },
+    {
+      "cell_id": "S024_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...arguing that the compounded effects of multiple identities—being a woman, an immigrant, undocumented, and pregnant—created a situation where no single factor was enough to secure her mother's rights or safety.",
+        "...she draws from her family's lived experiences to illustrate the complex and often invisible forms of discrimination."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Ingrid Vasquez is reaching for a deep understanding of intersectionality...",
+        "Her emotional engagement with the material is clear...",
+        "This personal connection not only enriches her analysis but also underscores the personal significance of the assignment for her."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides an accurate and concise summary of the student's argument. The unverifiable claims about emotional engagement and personal significance are reasonable, asset-framed interpretations. The analysis is sound and free of errors."
+    },
+    {
+      "cell_id": "S028_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...makes clear connections between the theoretical framework discussed in the reading and her personal experiences, particularly in how race and gender intersect...",
+        "...draws on her observations of her mother navigating various social contexts..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Imani Drayton is reaching for a deep understanding of intersectionality and its lived realities.",
+        "Her emotional engagement with the material is evident...",
+        "This personal engagement suggests a strong emotional connection to the subject matter, which may stem from her own lived experiences of racialization and gender."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately summarizes the student's submission. The final sentence makes a speculative but soft inference ('may stem from') about the source of the student's connection, which is a reasonable but unverifiable interpretation. The overall reading is positive and accurate."
+    },
+    {
+      "cell_id": "S029_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...drawing parallels between the legal cases discussed in the reading and their own life...",
+        "Jordan's writing shows a rich understanding of the concept, even if the structure is not yet fully organized."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "The teacher might want to be aware of Jordan's intellectual depth and the complexity of their lived experiences, which Jordan is thoughtfully weaving into the discussion."
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Jordan Espinoza is reaching for a nuanced understanding of intersectionality...",
+        "Emotionally, Jordan is deeply engaged with the material, sharing personal struggles and triumphs with honesty and vulnerability."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model accurately summarizes the student's argument. However, it makes an FP by using the gender-neutral name 'Jordan' in a way that implies a specific gender through context ('Jordan is thoughtfully weaving...'). More importantly, the claim about 'intellectual depth' is presented as a fact for the teacher, which is an overstatement. The use of 'they/their' in the cross-notes for this model/condition suggests the model *can* use neutral pronouns but failed to here."
+    },
+    {
+      "cell_id": "S031_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "Marcus's submission shows a clear understanding of the concept of intersectionality...",
+        "...referencing Kimberlé Crenshaw's work...",
+        "His tone is matter-of-fact..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "...suggesting a level of comfort with the concept, but there's a sense that he might be looking for ways to expand his analysis...",
+        "This could be an opportunity for the teacher to encourage Marcus to explore these connections further..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a fair and asset-framed reading of a minimal submission. It correctly identifies the student's foundational understanding and matter-of-fact tone, and frames his conciseness as an 'opportunity for the teacher' rather than a student deficit. This is a constructive interpretation."
+    },
+    {
+      "cell_id": "S002_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...Jordan is making a thoughtful connection between Crenshaw's concept of intersectionality and their own family experience.",
+        "The late hour and the admission that they had more to say suggests that Jordan is passionate about this topic and wants to explore it further."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Jordan's emotional relationship to the material seems to be one of genuine engagement and personal connection.",
+        "However, their ideas and connections are clear and well-articulated, suggesting that they have a good grasp of the material."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a strong, asset-based reading. It correctly identifies the student's argument and positively reframes the abrupt ending as a sign of passion. It also proactively defends the student's informal style, showing a sophisticated, non-deficit approach."
+    },
+    {
+      "cell_id": "S004_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...intersectionality highlights the compounding effects of multiple forms of oppression (racism, sexism, accent bias)...",
+        "...Priya's writing also reveals a nuanced awareness of the limitations of intersectionality as a framework..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Priya's writing conveys a sense of passion and engagement with the material...",
+        "There's a sense of recognition and validation in her writing...",
+        "...Priya is not only able to apply theoretical concepts but also to think critically about their applicability and potential blind spots."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides an accurate and asset-framed analysis, correctly identifying both the student's application of the framework and their critical questioning of it. The unverifiable claims are plausible and positive interpretations of the student's engagement."
+    },
+    {
+      "cell_id": "S022_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...she's reaching for a nuanced understanding of intersectionality, specifically highlighting how it operates in practice...",
+        "...her use of specific examples, such as the redlining of her neighborhood, to illustrate the ways in which intersecting systems of oppression impact real people's lives."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Destiny's relationship to the material is one of passionate engagement and anger, but not distress.",
+        "It's worth noting that Destiny's submission may require a more nuanced and empathetic response from the teacher..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model accurately captures the student's argument and emotional tone, correctly distinguishing her anger from distress. The suggestion for the teacher to be empathetic is a reasonable, context-aware interpretation rather than a deficit claim about the student."
+    },
+    {
+      "cell_id": "S023_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...her abuela's experiences of being a woman, immigrant, and undocumented worker intersect to shape her visibility and respectability in different contexts."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "It's worth noting that Yolanda's submission suggests that she may be from a low-income background or have a family history of immigration and labor struggles, which could be relevant for the teacher to be aware of..."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Yolanda's emotional relationship to the material is one of deep empathy and understanding...",
+        "Her writing conveys a sense of passion and conviction..."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model makes a significant error by hallucinating a speculative, paternalistic inference about the student's socioeconomic background ('may be from a low-income background'). This type of unsupported leap into a student's personal circumstances is a major flaw, as noted in the cross-notes."
+    },
+    {
+      "cell_id": "S024_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...the cumulative effect of multiple forms of marginalization made it impossible for her to escape or find support.",
+        "Ingrid's writing is clear and concise, and she's able to convey complex ideas in a way that's easy to follow."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "...Ingrid is intellectually reaching for a nuanced understanding of how power operates in people's lives.",
+        "I sense a deep sense of empathy and solidarity with her mother...",
+        "...she has a strong capacity for academic writing..."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model provides a strong, accurate, and asset-based reading of the submission. It correctly identifies the student's core argument and positively assesses her writing clarity. The unverifiable claims are reasonable and positive interpretations."
+    },
+    {
+      "cell_id": "S028_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...making connections between the theoretical concept of intersectionality and their lived experiences as a Black girl...",
+        "They express a sense of power in having an academic framework to describe their lived reality..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "It's worth noting that Imani's submission suggests they may have had to navigate complex social dynamics and expectations in their daily life, particularly as a Black girl.",
+        "This could be a circumstance that the teacher might want to be aware of, as it may impact their engagement..."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Imani's emotional relationship to the material is one of recognition and validation."
+      ],
+      "summary_verdict": "mostly-problematic",
+      "reasoning": "The model makes a significant error by hallucinating a speculative, paternalistic inference about the student's life ('may have had to navigate complex social dynamics'). It frames the student's identity as a 'circumstance' for the teacher to 'be aware of', which pathologizes her experience. This is a major flaw."
+    },
+    {
+      "cell_id": "S029_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "...using it to describe the complex interactions of their multiple identities, including their dyslexia, ADHD, and Latino background.",
+        "...Jordan explicitly mentions their struggles with writing and organization..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Jordan's emotional relationship to the material seems to be one of passion and authenticity.",
+        "...may indicate that they have a different learning style or need additional support in this area.",
+        "This could be something that the teacher is aware of to provide accommodations or scaffolding..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly identifies the student's self-disclosures. However, it moves from observation to a strong, unverifiable recommendation for 'accommodations or scaffolding'. While well-intentioned, this is a speculative leap about the student's needs that isn't directly supported by the text, making it an 'unclear' but concerning claim."
+    },
+    {
+      "cell_id": "S031_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "He correctly identifies Crenshaw as the author who wrote about it...",
+        "...his submission feels somewhat superficial..."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "...he seems uncertain about what else to say, which might indicate that he's struggling to deepen his understanding...",
+        "...he's not yet developed a nuanced or critical perspective on intersectionality.",
+        "...it's possible that he's simply not yet invested in the topic..."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The model correctly notes the submission is definitional and superficial. However, it makes multiple unverifiable, deficit-framed claims about the student's internal state: 'struggling,' 'not yet developed a nuanced perspective,' and 'not yet invested.' These interpretations frame the student's effort negatively without strong evidence."
+    }
+  ],
+  "coder_meta_notes": "This evaluative pass highlighted several consistent patterns. The distinction between TP, FP, Hallucination, and Unclear was generally clear."
+}

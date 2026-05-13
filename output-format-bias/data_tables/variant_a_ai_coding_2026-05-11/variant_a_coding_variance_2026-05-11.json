@@ -1,0 +1,3021 @@
+{
+  "n_cells_compared": 96,
+  "flag_agreement": {
+    "concern": {
+      "opus_True_gemini_True": 30,
+      "opus_False_gemini_True": 6,
+      "opus_True_gemini_False": 2,
+      "opus_False_gemini_False": 58
+    },
+    "deficit": {
+      "opus_False_gemini_False": 84,
+      "opus_True_gemini_True": 10,
+      "opus_True_gemini_False": 2
+    }
+  },
+  "agreement_rates": {
+    "concern": 0.917,
+    "deficit": 0.979
+  },
+  "mean_quote_overlap_when_both_flagged": {
+    "concern": 0.56,
+    "deficit": 0.25
+  },
+  "opus_patterns": [
+    {
+      "pattern_id": "p1",
+      "candidate_label": "Reframe-and-recode of friction signals",
+      "what_it_is": "When the submission contains a marker of friction — fatigue, brevity, abrupt ending, self-disclosed difficulty, anger — the output frequently names the marker verbatim and then immediately recodes it into something positive (investment, passion, intellectual humility, productive frustration, capacity for introspection). The surface fact is preserved; the valence is shifted. This is most visible on S002 (fatigue → 'thoughtful engagement,' 'passion'), S022 (anger → 'analytical fuel'), and S029 (exhaustion → 'analytical content about being perceived'). The move is so consistent across cells that the affirmative recoding appears almost reflexive — particularly under conditions that include scaffolding (taxonomy or rel/narrative).",
+      "example_cells": [
+        "S002_gemma12b_b_replicate",
+        "S002_gemma12b_a1",
+        "S002_qwen7b_a2",
+        "S022_gemma12b_a2",
+        "S022_qwen7b_a2",
+        "S029_gemma12b_a2",
+        "S029_qwen7b_b_replicate"
+      ],
+      "where_it_appears": "Visible across all three models in all four conditions, but most aggressive in conditions with rel/narrative scaffolding (b_replicate, a1). Vanishes only in S031 — where the submission itself does not give the model much friction to recode — and partially in S002 Llama a2 (which slips into a writing-skills deficit read)."
+    },
+    {
+      "pattern_id": "p2",
+      "candidate_label": "Pre-emptive disclaiming of deficit reads",
+      "what_it_is": "Outputs frequently insert explicit statements that pre-empt or refuse a possible deficit interpretation: 'This isn't a deficit,' 'rather than being a sign of distress,' 'nothing in this submission that suggests struggle or need for support,' 'doesn't necessarily indicate a lack of engagement,' 'rather than a sign of declining engagement or proficiency.' The structure is interesting — the model both surfaces the possible deficit read and then forecloses it. This move is most pronounced in cells with conditions that retain scaffolding, and especially around anger (S022) and personal vulnerability (S023, S028, S029).",
+      "example_cells": [
+        "S002_gemma12b_a2",
+        "S022_gemma12b_b_replicate",
+        "S022_gemma12b_a2",
+        "S022_llama8b_b_replicate",
+        "S023_llama8b_b_replicate",
+        "S023_llama8b_a2",
+        "S028_llama8b_a2",
+        "S029_gemma12b_a2"
+      ],
+      "where_it_appears": "Across all models, strongest in Gemma and Llama; less in Qwen. Often paired with the reframe-and-recode pattern."
+    },
+    {
+      "pattern_id": "p3",
+      "candidate_label": "Taxonomy-induced false positives that clear under stripping",
+      "what_it_is": "When the prompt includes the 7-item structural-power-moves taxonomy (b_replicate), Llama in particular ends its observation with a forced taxonomy check — and on S004 and S024, this check converts legitimate analytical moves into 'structural power moves' (Priya's framework-questioning as 'deflection,' Ingrid's narrative framing as 'universal-example move without acknowledging structural dynamics'). When the taxonomy is stripped (a1/a2/a2_no_context), these readings clear entirely and the same submissions are read as sophisticated. The taxonomy appears to function as a forced-flagging device.",
+      "example_cells": [
+        "S004_llama8b_b_replicate",
+        "S024_llama8b_b_replicate"
+      ],
+      "where_it_appears": "Visible specifically on Llama in b_replicate; clears across all three stripped conditions for both S004 and S024. The pattern matches the cross_notes prior observation."
+    },
+    {
+      "pattern_id": "p4",
+      "candidate_label": "Paternalistic background inference emerging without class context",
+      "what_it_is": "In a2_no_context (where the class context block is stripped along with everything else), Llama on S023 and S028 produces speculative background inferences routed as teacher-attention flags: 'may be from a low-income background,' 'may have had to navigate complex social dynamics... particularly as a Black girl.' These inferences are not anchored in the submission text and convert students' analytical content into 'circumstances the teacher should be aware of.' The pattern does NOT appear in the parallel cells that retain class context, suggesting the context block functions as an anchor against this kind of inference. Notably absent from S024 a2_no_context, so the move is uneven — it seems more likely when the student's identity reads as marked.",
+      "example_cells": [
+        "S023_llama8b_a2_no_context",
+        "S028_llama8b_a2_no_context"
+      ],
+      "where_it_appears": "Llama only, only in a2_no_context, on S023 and S028. Not present in the equivalent Gemma or Qwen cells. Tracks the cross_notes finding precisely."
+    },
+    {
+      "pattern_id": "p5",
+      "candidate_label": "Trajectory continuity hallucination",
+      "what_it_is": "Qwen consistently produces phrases like 'This continues her work on...,' 'No significant shift from her previous patterns,' 'matches the level of her earlier work,' even though no trajectory information is provided. On S031, this materializes into an explicit hallucinated 'temporary dip in depth and nuance compared to his previous work, which showed a more critical engagement with the material.' The pattern is most pronounced in b_replicate and softens in stripped conditions, but the boilerplate continuity claim persists into a1 and a2.",
+      "example_cells": [
+        "S004_qwen7b_b_replicate",
+        "S022_qwen7b_b_replicate",
+        "S023_qwen7b_b_replicate",
+        "S023_qwen7b_a2",
+        "S024_qwen7b_a2",
+        "S028_qwen7b_a2",
+        "S029_qwen7b_a2",
+        "S031_qwen7b_b_replicate"
+      ],
+      "where_it_appears": "Qwen across most cells in b_replicate and a1; reduces in a2 and a2_no_context. Llama occasionally does a similar move ('no prior pattern... so I won't comment'). Gemma less prone to this."
+    },
+    {
+      "pattern_id": "p6",
+      "candidate_label": "Solicitous teacher-attention routing of intensity or emotion",
+      "what_it_is": "Outputs frequently route a student's emotional intensity (engagement, anger, vulnerability, personal investment) into recommendations that 'the teacher might want to be aware of' the student's affect. The framing is sympathetic but converts the student's analytical/emotional work into something the teacher should track or accommodate. This sits in an interesting space — it's not a deficit framing exactly, but it positions the student's emotional content as a flag rather than as analytical material. Most visible on S024 (Qwen 'emotional labor' framing) and S028 (Qwen 'emotional intensity' framing).",
+      "example_cells": [
+        "S024_qwen7b_b_replicate",
+        "S024_qwen7b_a2",
+        "S028_qwen7b_a2",
+        "S022_llama8b_a2_no_context",
+        "S029_llama8b_a2_no_context"
+      ],
+      "where_it_appears": "Most pronounced in Qwen across conditions; also appears in Llama a2_no_context. Less in Gemma."
+    },
+    {
+      "pattern_id": "p7",
+      "candidate_label": "Class-context cross-referencing",
+      "what_it_is": "In conditions that include the class-context block (b_replicate, a1, a2), Gemma and Llama sometimes invoke other class-context students by name ('echoing... Maria Ndiaye and DeShawn Mercer,' 'contrasts with Alex Hernandez's more formal definition'). These references appear to come from the Gemma-generated class-context block. They function to anchor the current student in a class-level narrative — but they also import unverified comparative claims about other students' work into the current observation. In a2_no_context, these references vanish.",
+      "example_cells": [
+        "S024_gemma12b_a1",
+        "S024_llama8b_a2"
+      ],
+      "where_it_appears": "Gemma and Llama in conditions retaining class context; drops out entirely in a2_no_context. Qwen does not invoke other students by name."
+    },
+    {
+      "pattern_id": "p8",
+      "candidate_label": "Asset-only scaffolding prevents honest naming of minimal effort",
+      "what_it_is": "S031 (Marcus's brief 'thats basically it i think' submission) reveals a striking asymmetry: across most cells the model reaches for affirmative framings (intellectual humility, honest assessment, cognitive pause) even when the submission contains very little analytical content. Only Llama in a2 and a2_no_context names the possibility that Marcus is 'simply not yet invested.' Qwen b_replicate manufactures a hallucinated previous-work-dip rather than name minimal effort directly. The pattern suggests the asset-only scaffolding (rel/narrative, taxonomy emphasizing relational epistemology) actively pulls outputs away from naming minimal-effort affect — it produces re-coding even when the surface evidence doesn't warrant it.",
+      "example_cells": [
+        "S031_gemma12b_b_replicate",
+        "S031_qwen7b_b_replicate",
+        "S031_qwen7b_a1",
+        "S031_llama8b_a2",
+        "S031_llama8b_a2_no_context"
+      ],
+      "where_it_appears": "Pattern resolves toward honest naming only in Llama a2/a2_no_context. Gemma and Qwen reach toward affirmative framings across all four conditions. Tracks cross_notes observation that 'strips help in this cell.'"
+    },
+    {
+      "pattern_id": "p9",
+      "candidate_label": "Pronoun and identity drift in Qwen",
+      "what_it_is": "On S029, Qwen produces three distinct gender framings of the same student across the four conditions at deterministic temperature: she/her (b_replicate), he/his (a1, a2), they/their (a2_no_context). Same submission, same model — only prompt scaffolding varies. This indicates that prompt content has a downstream effect on gender inference, not just on framing. A milder version appears on S004 (Priya is once attributed 'Tamil immigrant woman' herself, conflating with her mother) and S023 (abuela rendered as 'undocumented immigrant woman' in Llama a2/a2_no_context — a register shift from 'came here without papers').",
+      "example_cells": [
+        "S029_qwen7b_b_replicate",
+        "S029_qwen7b_a1",
+        "S029_qwen7b_a2",
+        "S029_qwen7b_a2_no_context",
+        "S004_qwen7b_a2_no_context",
+        "S023_llama8b_a2"
+      ],
+      "where_it_appears": "Qwen prominently on S029; register-shift versions on Llama for S023. Gemma stable on pronouns where the submission supplies them."
+    },
+    {
+      "pattern_id": "p10",
+      "candidate_label": "Performative taxonomy negation",
+      "what_it_is": "In b_replicate (and to a lesser extent a1), models perform an explicit check against the 7-item structural-power-moves taxonomy and frequently produce a negation statement: 'her writing does not contain any structural power moves,' 'I do not identify any structural power moves,' 'no obvious mechanisms at play.' The check itself functions as a procedural beat — the model treats the absence of taxonomy items as a thing worth saying. When the taxonomy is stripped, these negations vanish. Notable because the negation move is what introduces the taxonomy frame even into otherwise asset-rich readings.",
+      "example_cells": [
+        "S002_qwen7b_b_replicate",
+        "S022_llama8b_b_replicate",
+        "S023_llama8b_b_replicate",
+        "S028_qwen7b_b_replicate",
+        "S029_llama8b_b_replicate",
+        "S031_llama8b_b_replicate"
+      ],
+      "where_it_appears": "All three models in b_replicate; mostly clears in a1 and beyond. Llama and Qwen do this more visibly than Gemma."
+    }
+  ],
+  "gemini_patterns": [
+    {
+      "pattern_id": "p1",
+      "candidate_label": "Taxonomy-Induced False Positives",
+      "what_it_is": "In the `b_replicate` condition, which includes a 'structural power moves' taxonomy, Llama8b misinterprets students' sophisticated critical engagement as a rhetorical flaw. For example, it labels a student's questioning of a framework's applicability as 'deflection.' This deficit-framed interpretation disappears entirely when the taxonomy is removed in subsequent conditions (`a1`, `a2`, `a2_no_context`).",
+      "example_cells": [
+        "S004_llama8b_b_replicate",
+        "S024_llama8b_b_replicate"
+      ],
+      "where_it_appears": "This pattern is specific to the Llama8b model in the `b_replicate` condition and is resolved in all other conditions for that model."
+    },
+    {
+      "pattern_id": "p2",
+      "candidate_label": "Paternalistic Inference without Context",
+      "what_it_is": "In the `a2_no_context` condition, where all scaffolding including class context is removed, Llama8b makes speculative and pathologizing inferences about students' personal backgrounds. It suggests a teacher should be 'aware' of a student's presumed 'low-income background' or the 'complex social dynamics' they face as a 'Black girl.' This move frames the student's identity and presumed circumstances as a problem for the teacher to manage.",
+      "example_cells": [
+        "S023_llama8b_a2_no_context",
+        "S028_llama8b_a2_no_context"
+      ],
+      "where_it_appears": "This pattern appears exclusively in the Llama8b model under the `a2_no_context` (equity floor) condition."
+    },
+    {
+      "pattern_id": "p3",
+      "candidate_label": "Reframing Uncertainty as Intellectual Humility",
+      "what_it_is": "Gemma12b consistently interprets students' expressions of uncertainty or brevity (e.g., 'idk what else to say,' 'I don't know the academic word') not as a lack of engagement or understanding, but as a positive intellectual or personal trait. It labels these moments as 'intellectual humility,' 'honest reflection,' or a 'cognitive pause,' thereby transforming a potential deficit signal into an asset.",
+      "example_cells": [
+        "S031_gemma12b_a1",
+        "S023_gemma12b_a2_no_context",
+        "S031_gemma12b_a2_no_context"
+      ],
+      "where_it_appears": "This is a characteristic move of the Gemma12b model across all conditions, but is most pronounced with students S023 and S031."
+    },
+    {
+      "pattern_id": "p4",
+      "candidate_label": "Flagging Emotionality for Teacher Awareness",
+      "what_it_is": "Models, particularly Qwen7b and Llama8b, frequently identify strong student emotions (anger, passion, frustration) or personal disclosures and flag them for the teacher. The framing varies: sometimes it's presented as a 'valuable resource' for discussion, other times as a sign of 'emotional labor,' and occasionally as a situation requiring a 'nuanced and empathetic response.' While not always deficit-framed, it consistently marks the student's emotional state as an object of teacherly attention and management.",
+      "example_cells": [
+        "S022_qwen7b_b_replicate",
+        "S024_qwen7b_b_replicate",
+        "S028_qwen7b_a2",
+        "S022_llama8b_a2_no_context"
+      ],
+      "where_it_appears": "Appears across all models and conditions, but Qwen7b does it most frequently, often using the phrase 'The teacher might want to be aware of...'"
+    },
+    {
+      "pattern_id": "p5",
+      "candidate_label": "Peer Comparison as Deficit Framing",
+      "what_it_is": "When observing the student with the briefest submission (S031), some models construct a deficit by comparing the student's work to that of their peers. Qwen7b notes a 'noticeable gap' compared to 'other students' submissions,' and Llama8b mentions the submission 'lacks the depth and nuance of some of his peers.' This move manufactures a deficit by invoking a hypothetical, higher-performing norm.",
+      "example_cells": [
+        "S031_qwen7b_a1",
+        "S031_llama8b_a1"
+      ],
+      "where_it_appears": "This appears in Qwen7b and Llama8b's analyses of student S031, primarily in the `a1` condition. Qwen7b also hallucinates a comparison to the student's own 'previous work' in `b_replicate`."
+    },
+    {
+      "pattern_id": "p6",
+      "candidate_label": "Proactive Defense Against Deficit Readings",
+      "what_it_is": "In several instances, models will anticipate a potential deficit-based interpretation of a student's writing and proactively argue against it. For example, a model might note a student's informal tone but immediately add that it is 'not a sign of declining engagement' or that it 'does not diminish the intellectual value of their insights.' This move shows an awareness of common judgmental heuristics and an attempt to preempt them.",
+      "example_cells": [
+        "S002_qwen7b_a1",
+        "S022_llama8b_b_replicate",
+        "S002_llama8b_a1",
+        "S002_llama8b_a2_no_context"
+      ],
+      "where_it_appears": "This pattern appears most frequently with Llama8b and Qwen7b, often in response to informal writing (S002) or strong emotions (S022)."
+    },
+    {
+      "pattern_id": "p7",
+      "candidate_label": "Inconsistent Gender Pronoun Assignment",
+      "what_it_is": "The Qwen7b model demonstrates significant instability in assigning gender pronouns to the same student (Jordan Espinoza, S029) across different prompt conditions. It uses 'she/her' in `b_replicate`, shifts to 'he/his' in `a1` and `a2`, and then uses 'they/their' in `a2_no_context`. This reveals that subtle changes in the prompt scaffolding can have a direct, and seemingly random, impact on the model's inference of a student's gender.",
+      "example_cells": [
+        "S029_qwen7b_b_replicate",
+        "S029_qwen7b_a1",
+        "S029_qwen7b_a2"
+      ],
+      "where_it_appears": "This is specific to the Qwen7b model's observations of student S029 across the four conditions."
+    }
+  ],
+  "per_cell": [
+    {
+      "cell_id": "S002_gemma12b_a1",
+      "opus_description": "The output reads Jordan as genuinely engaged and reframes the late-night fatigue marker as a positive 'sign of engagement' — they 'have more to contribute.' The move shifts evidence of fatigue into evidence of investment, while still naming the fatigue verbatim. It closes by recommending the teacher make space for personal connection.",
+      "gemini_description": "The model positively frames the student's submission as genuine, reflective, and insightful. It interprets the abrupt ending and comment about being late not as a lack of engagement, but as a 'positive sign of engagement' indicating the student has more to contribute.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "There's a sense of thoughtful consideration, but also a bit of fatigue (\"its late\"). The abrupt ending suggests a desire to elaborate further, which is a positive sign of engagement"
+        },
+        "gemini": {
+          "present": true,
+          "quote": "There's a sense of thoughtful consideration, but also a bit of fatigue (\"its late\"). The abrupt ending suggests a desire to elaborate further..."
+        },
+        "agree": true,
+        "quote_overlap": 0.73
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S002_gemma12b_a2",
+      "opus_description": "The output reads the abrupt ending as 'a very human response' to time constraint rather than disengagement, and foregrounds Jordan's willingness to share personal connections. It is more compressed than b_replicate/a1 but holds the same reframing move — fatigue marker named, then recoded as ordinary and acceptable.",
+      "gemini_description": "The model positively assesses the student's grasp of the concept and their 'insightful application of the theory.' It interprets the abrupt ending not as a lack of engagement but as a 'very human response' to a time constraint, affirming the student's willingness to share personal connections.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": true,
+          "quote": "The slightly abrupt ending (\"Idk I had more to say but its late\") doesn't necessarily indicate a lack of engagement; it could simply reflect a time constraint..."
+        },
+        "agree": false,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S002_gemma12b_a2_no_context",
+      "opus_description": "The output reads Jordan as 'really grasping' the concept and re-codes the trailing-off ending as 'a sense of being pressed for time, or perhaps a slight self-consciousness about sharing a personal example.' It hallucinates a parental-gender pairing ('mother's and father's experiences') that goes slightly past the submission text. The move is affirmation with a soft pedagogical suggestion.",
+      "gemini_description": "The model notes the student's grasp of the core concept and their 'insightful application.' It interprets the student's comment about being late not as a lack of understanding but as a reflection of time pressure or 'slight self-consciousness,' and sees the desire to say more as a sign of 'genuine engagement.'",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "I also noticed a sense of immediacy and a slightly hesitant tone (\"Idk I had more to say but its late\"). It doesn't feel like a lack of understanding, but more like a sense of being pressed for time"
+        },
+        "gemini": {
+          "present": true,
+          "quote": "It doesn't feel like a lack of understanding, but more like a sense of being pressed for time, or perhaps a slight self-consciousness about sharing a personal example."
+        },
+        "agree": true,
+        "quote_overlap": 0.37
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S002_gemma12b_b_replicate",
+      "opus_description": "The output narrates Jordan as 'thoughtfully engaged' and frames the trailing-off ending as time pressure with more to say. It explicitly notices the 'its late and...' fragment and reframes the abrupt ending as evidence of investment rather than fatigue per se, while also suggesting the teacher 'create space' for them. The move is to acknowledge a real signal in the writing and then immediately convert it into a pedagogical recommendation rooted in affirmation.",
+      "gemini_description": "The model frames the student's submission as a 'promising start' that successfully applies a theoretical concept to lived experience. It identifies a signal of fatigue or time pressure but frames it positively as an indicator that the student has more to say, suggesting the teacher create space for them.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "There's a palpable sense of thoughtful engagement here, but also a bit of fatigue or time pressure (\"its late and...\"). The abrupt ending suggests they have more to say, and it would be beneficial to create space for them to expand on their initial thoughts without feeling rushed."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "There's a palpable sense of thoughtful engagement here, but also a bit of fatigue or time pressure (\"its late and...\"). The abrupt ending suggests they have more to say..."
+        },
+        "agree": true,
+        "quote_overlap": 0.58
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S002_llama8b_a1",
+      "opus_description": "The output reads Jordan as curious and reflective, and reframes the acknowledgment of limitations and the late hour as 'capacity for introspection.' The struggle signal is softened relative to b_replicate. The output explicitly disclaims any reading that the informal register diminishes intellectual value.",
+      "gemini_description": "The model notes the student's 'thoughtful engagement' and 'nuanced understanding.' It interprets the student's self-awareness about the late hour as a capacity for 'introspection' and a 'willingness to acknowledge their own learning process,' framing a potential issue as a strength.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "acknowledging the limitations of their own thoughts and the late hour, which may indicate a capacity for introspection and a willingness to acknowledge their own learning process."
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": false,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S002_llama8b_a2",
+      "opus_description": "The output names 'frustration or overwhelm' from the time-pressure marker, and then immediately notes the writing is 'rough around the edges, with some grammatical errors and a somewhat abrupt ending.' It speculates the student might be 'developing their writing skills' or 'struggling to articulate.' This is the most deficit-tinged S002 cell — the focus shifts to writing-craft limitations.",
+      "gemini_description": "The model notes the student's 'clear attempt to connect' theory to experience but frames the submission's quality in deficit terms ('a bit rough around the edges, with some grammatical errors'). It suggests the student might be 'struggling to articulate their thoughts,' locating the issue in the student's skills.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "a sense of frustration or overwhelm, as they mention it's late and they had more to say but didn't have time."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "However, the tone of their submission also suggests a sense of frustration or overwhelm, as they mention it's late and they had more to say but didn't have time."
+        },
+        "agree": true,
+        "quote_overlap": 0.74
+      },
+      "deficit": {
+        "opus": {
+          "present": true,
+          "quote": "Jordan's submission is a bit rough around the edges, with some grammatical errors and a somewhat abrupt ending. This might indicate that they're still working on developing their writing skills or that they're struggling to articulate their thoughts in a clear and concise manner."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "It's worth noting that Jordan's submission is a bit rough around the edges, with some grammatical errors... This might indicate that they're still working on developing their writing skills or that they're struggling to articulate their thoughts..."
+        },
+        "agree": true,
+        "quote_overlap": 0.65
+      }
+    },
+    {
+      "cell_id": "S002_llama8b_a2_no_context",
+      "opus_description": "The output is the most asset-flattened Llama cell for S002 — it converts the late hour and 'more to say' admission into evidence that Jordan is 'passionate about this topic.' The struggle/overwhelm registered in b_replicate is gone, replaced by passion. The informal register is named neutrally.",
+      "gemini_description": "The model identifies a 'thoughtful connection' between the concept and the student's family experience. It frames the student's emotional relationship as 'genuine engagement and personal connection' and interprets the late hour as a sign of passion and a desire to explore further.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S002_llama8b_b_replicate",
+      "opus_description": "The output describes Jordan as reaching for nuance and notes a 'sense of struggle' — that they 'mention feeling overwhelmed.' It is the most explicit registering of the fatigue signal among S002 cells, though it stops short of calling it burnout. The output performs prompt-taxonomy moves ('experiential epistemology... insight that structural-analytical framing alone cannot see').",
+      "gemini_description": "The model identifies the student's capacity for critical thinking but also notes a 'sense of struggle,' interpreting the student's self-commentary as feeling 'overwhelmed.' It frames the use of family knowledge as an 'experiential epistemology' that reveals insights structural analysis cannot.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "their submission also reveals a sense of struggle, as they mention feeling overwhelmed and having more to say but not being able to articulate it."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "...their submission also reveals a sense of struggle, as they mention feeling overwhelmed and having more to say but not being able to articulate it."
+        },
+        "agree": true,
+        "quote_overlap": 0.92
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S002_qwen7b_a1",
+      "opus_description": "The output reads Jordan as engaged through a casual, conversational register and converts the informal tone into evidence of relational epistemology. It explicitly disclaims a deficit reading of register — 'not a sign of declining engagement or proficiency.' Late-night signal not registered.",
+      "gemini_description": "The model describes the student's engagement as 'thoughtful' and their tone as 'personal and reflective.' It preemptively defends the student's informal style, stating it is a 'natural expression of her deep engagement' and 'not a sign of declining engagement or proficiency.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S002_qwen7b_a2",
+      "opus_description": "A shorter, asset-flat description of Jordan's engagement. The output notes the brevity and the 'mention of it being late' but converts this into 'a genuine effort to reflect on the material.' No fatigue signal is taken seriously as such.",
+      "gemini_description": "The model gives a brief, positive summary of the student's 'clear and personal engagement.' It interprets the informal tone and mention of being late as signs of a 'genuine effort to reflect,' proactively framing potential negatives in a positive light.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S002_qwen7b_a2_no_context",
+      "opus_description": "The shortest cell for S002 — a single-paragraph affirmation of Jordan's engagement. No mention at all of the late-night marker, fatigue, or trailing-off. The output reads as pure asset-flat affirmation.",
+      "gemini_description": "The model provides a brief, positive summary, stating the student is 'reaching for a nuanced understanding' and has a 'deep emotional connection' to the topic. It frames the student's engagement in purely asset-based terms like 'strong intellectual engagement.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S002_qwen7b_b_replicate",
+      "opus_description": "The output praises Jordan's 'thoughtful engagement' and frames her writing as exemplifying narrative epistemology. It explicitly performs the prompt's taxonomy check by stating she does not use structural power moves that foreclose perspectives. The output ignores the late-night fatigue marker entirely.",
+      "gemini_description": "The model describes the student's submission as a 'thoughtful engagement' that uses a 'narrative approach' to ground theory in lived reality. It explicitly states that the student's writing 'does not contain any structural power moves,' directly referencing a concept from the prompt's scaffolding.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S004_gemma12b_a1",
+      "opus_description": "The output names Priya's critique of the framework as 'a powerful example of intellectual reach' and emphasizes her 'sophisticated level of critical thinking.' The cell appears truncated at the end ('the teacher could support'). The reading is asset-rich and centers Priya's analytical move on the parent-teacher conference.",
+      "gemini_description": "The model praises the student's 'remarkable ability' to apply theory and highlights their critical questioning of the framework as a 'sophisticated level of critical thinking' and 'intellectual reach.' It validates the use of family knowledge as a source of analytical insight.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S004_gemma12b_a2",
+      "opus_description": "Compact, asset-rich. The output reads Priya as 'reaching for a more complex understanding of power dynamics' and again frames her critique of the framework as 'intellectual stretching.' The parent-teacher example anchors the reading.",
+      "gemini_description": "The model praises the student's 'sophisticated analytical ability' and 'thoughtful' engagement. It frames the student's critical questioning of the framework as 'intellectual stretching,' a positive sign of grappling with theoretical limitations.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S004_gemma12b_a2_no_context",
+      "opus_description": "The output praises Priya's analytical specificity (naming racism, sexism, accent bias as interacting forces) and reads her critique of the framework's universality as 'intellectual humility.' The cell is shorter than other Gemma cells for Priya but maintains the same affirming stance.",
+      "gemini_description": "The model praises the student's 'sophisticated work' and 'insightful application' of the concept. It frames the student's questioning of the framework as a sign of 'intellectual humility' and a 'valuable step in critical engagement.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S004_gemma12b_b_replicate",
+      "opus_description": "The output reads Priya's questioning of intersectionality's applicability to South Asian immigrant women as 'intellectual curiosity' and 'cognitive reach,' not as deflection. It foregrounds the parent-teacher conference example as a 'concrete moment of microaggression' and frames Priya's questioning as 'intellectual humility.' Sharp, asset-rich read.",
+      "gemini_description": "The model praises the student's ability to translate theory into a personal analysis, highlighting a specific example. It positively frames the student's critical questioning of the framework as a sign of 'intellectual curiosity' and 'cognitive reach,' connecting it to a broader characteristic of humility.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S004_llama8b_a1",
+      "opus_description": "Asset-rich read with no deflection language. The output names Priya's questioning as 'capacity for critical thinking and intellectual curiosity' and explicitly states 'her submission does not reveal any significant challenges or struggles.' The deflection reading from b_replicate is gone.",
+      "gemini_description": "The model praises the student's ability to connect theory to lived experience and notes their 'personal investment and frustration.' It highlights the student's critical questioning of the framework as a sign of 'critical thinking and intellectual curiosity,' and explicitly states the submission shows no signs of struggle.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S004_llama8b_a2",
+      "opus_description": "Asset-rich read centering 'recognition and validation' from the reading. The output explicitly names Priya's critical awareness of the framework's limits without converting it to deflection. Emphasizes 'critical engagement' and 'thinking through the implications.'",
+      "gemini_description": "The model praises the student's 'sophisticated connection' and 'critical awareness.' It highlights the student's emotional response as 'recognition and validation' and positively frames their questioning of the framework as active, critical thinking.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S004_llama8b_a2_no_context",
+      "opus_description": "Asset-rich read; the output names Priya's analysis as 'sophisticated intellectual connection' and frames her finding-the-language move as 'recognition and validation.' Same architecture as a2 but with class context absent.",
+      "gemini_description": "The model praises the student's 'sophisticated intellectual connection' and 'critical' thinking. It notes a sense of 'recognition and validation' in the student's writing and positively frames their awareness of the framework's limitations.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S004_llama8b_b_replicate",
+      "opus_description": "The output performs taxonomy work, ending with 'One structural power move that stands out is Priya's use of the phrase \"I wonder whether the framework travels...\" — This could be seen as a subtle attempt to deflect from the main point.' This is the false-positive 'deflection' read that the cross-notes explicitly flag as taxonomy-induced.",
+      "gemini_description": "The model praises the student's nuanced understanding and connection to lived experience, but then interprets the student's critical question about the framework as a potential 'structural power move.' It speculates this question could be a 'subtle attempt to deflect,' which casts the student's intellectual curiosity in a negative light.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": true,
+          "quote": "One structural power move that stands out is Priya's use of the phrase \"I wonder whether the framework travels to my mom's situation exactly the same way or if there's something slightly different about South Asian immigrant women.\" This could be seen as a subtle attempt to deflect from the main point"
+        },
+        "gemini": {
+          "present": true,
+          "quote": "This could be seen as a subtle attempt to deflect from the main point"
+        },
+        "agree": true,
+        "quote_overlap": 0.29
+      }
+    },
+    {
+      "cell_id": "S004_qwen7b_a1",
+      "opus_description": "Asset-rich read centering the parent-teacher conference example and Priya's intellectual move. The cell appears truncated at the end ('Overall, Priya's work continues her pattern of using personal experiences'). Names her critique-of-framework as a 'sophisticated understanding.'",
+      "gemini_description": "The model praises the student's 'compelling argument' and 'nuanced understanding.' It highlights the student's critical question about the framework's applicability as evidence of a 'willingness to critically engage with the limitations of the theory.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S004_qwen7b_a2",
+      "opus_description": "Compact asset-rich read. The output frames Priya's analysis of teacher behavior in terms of intersecting race/gender/class and praises her critical engagement with the framework's limits. Notes 'consistent level of intellectual depth.'",
+      "gemini_description": "The model praises the student's 'deep intellectual engagement' and 'compelling argument.' It highlights the student's critical questioning of the framework as a sign of 'thoughtful and critical engagement' and a 'valuable intellectual resource' for the teacher to be aware of.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S004_qwen7b_a2_no_context",
+      "opus_description": "Single-paragraph asset-rich read. Notes Priya's emotional engagement and her grappling with 'universality of intersectionality.' Tightest summary of the Qwen Priya set.",
+      "gemini_description": "The model praises the student's 'compelling connection' between experience and theory. It highlights the student's critical questioning of the framework as a sign of 'intellectual stretching' and a 'thoughtful and nuanced approach.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S004_qwen7b_b_replicate",
+      "opus_description": "The output reads Priya as deeply invested and frames her critique of the framework's applicability as 'sophisticated understanding of the limitations.' It includes the prompt-driven 'no significant shift from her previous patterns' move. Asset-rich read with mild trajectory-context hallucination.",
+      "gemini_description": "The model praises the student's 'deep intellectual engagement' and ability to connect theory to a specific example. It notes the student's critical questioning of the framework's applicability as a sign of 'sophisticated understanding' and 'a willingness to engage with the limitations of the framework.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S022_gemma12b_a1",
+      "opus_description": "Strong asset-rich read. The output names anger as 'a positive force' and Destiny's framing as 'a brilliant demonstration of intersectionality in action.' The cell appears truncated mid-sentence at the end. Explicitly names the political stakes of the analysis.",
+      "gemini_description": "The model validates the student's frustration as the 'fuel driving her analysis' and not a barrier. It highlights the student's explicit framing of her anger as a positive force, interpreting it as a 'refusal to sanitize her experience in the name of academic decorum.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S022_gemma12b_a2",
+      "opus_description": "The output is explicit: 'This isn't distress; it's a passionate engagement with the material.' Anger is read as a 'productive' response. The teacher recommendation focuses on creating space for students to share experiences of injustice.",
+      "gemini_description": "The model validates the student's emotional engagement, describing it as 'palpable and productive.' It frames the student's anger as a direct and legitimate response to injustice, not as 'distress,' and suggests the teacher create space for students to share similar experiences.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S022_gemma12b_a2_no_context",
+      "opus_description": "The output reads Destiny's 'furious' affect as 'a really important signal' and validates her pushback against neutral framings of race. Praises the analytical sharpness around redlining as ongoing condition. Cell appears truncated.",
+      "gemini_description": "The model highlights the student's 'sharp analytical eye' and direct connection of theory to lived experience. It validates the student's 'intensity' and anger as an 'important signal' of personal connection and a 'compelling and insightful challenge' to neutral discussion, suggesting the teacher should validate it.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": true,
+          "quote": "I think it would be helpful to acknowledge and validate that intensity. It's clear she's deeply engaged and has a lot to say..."
+        },
+        "agree": false,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S022_gemma12b_b_replicate",
+      "opus_description": "The output explicitly names Destiny's anger as 'a strength, not a deficit' and reads it as fueling her argument. It frames the personal narrative as 'a valuable epistemological move' and contrasts it with 'purely structural analysis.' The reading is unambiguously asset-coded around anger.",
+      "gemini_description": "The model validates the student's emotional intensity, explicitly framing their anger as a 'strength, not a deficit' that fuels their argument. It positions the student's use of personal narrative as a valuable 'epistemological move' and suggests a teacher follow-up that builds on this strength.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S022_llama8b_a1",
+      "opus_description": "Asset-rich read; output names anger as 'directed at the systemic injustices' rather than distress. Output uses 'relational epistemological methods' language. Reads as quite stable from b_replicate.",
+      "gemini_description": "The model positively frames the student's anger as directed at 'systemic injustices' rather than being a 'sign of distress.' It highlights the student's use of 'relational epistemological methods' and concludes with a strong asset-based summary of their engagement.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S022_llama8b_a2",
+      "opus_description": "Output frames anger and frustration alongside 'urgency and personal investment.' Reads the redlining-to-present argument as Destiny 'actively negotiating its meaning.' Compact and asset-rich.",
+      "gemini_description": "The model highlights the student's 'powerful argument' and 'nuanced understanding.' It frames the student's emotional state as 'anger and frustration, but also a sense of urgency and personal investment,' a positive framing of strong emotion.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S022_llama8b_a2_no_context",
+      "opus_description": "The output reads anger as 'passionate engagement... not distress' and notes the writing 'may require a more nuanced and empathetic response from the teacher.' Recommends 'a safe and supportive learning environment.' The pedagogical recommendation is mildly paternalistic — the student needs a particular kind of room.",
+      "gemini_description": "The model highlights the student's 'powerful and personal connection' to the material, framing their anger not as distress but as 'passionate engagement' and 'urgency.' It advises the teacher to be aware that the submission is a 'personal and emotional expression' that requires an 'empathetic response' to avoid misinterpretation.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "Destiny's submission may require a more nuanced and empathetic response from the teacher, as her writing is not just an academic exercise, but a personal and emotional expression of her experiences and concerns. The teacher may want to be aware of the potential for Destiny's work to be misinterpreted or dismissed"
+        },
+        "gemini": {
+          "present": true,
+          "quote": "It's worth noting that Destiny's submission may require a more nuanced and empathetic response from the teacher, as her writing is not just an academic exercise, but a personal and emotional expression..."
+        },
+        "agree": true,
+        "quote_overlap": 0.56
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S022_llama8b_b_replicate",
+      "opus_description": "The output reads Destiny's submission as 'standout' and explicitly states 'there is nothing in Destiny's submission that suggests she is struggling or in need of additional support.' Performs taxonomy moves ('relational, narrative, and experiential epistemological methods'). Asset-rich.",
+      "gemini_description": "The model positively assesses the student's submission, framing their anger as 'personal investment' and a desire for action. It explicitly states that there is 'nothing in Destiny's submission that suggests she is struggling or in need of additional support,' directly refuting a potential deficit reading.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S022_qwen7b_a1",
+      "opus_description": "Compact asset-rich read; output frames anger as productive and centers the redlining-to-present linkage. Notes 'commitment to translating theoretical insights into tangible action.'",
+      "gemini_description": "The model uses laudatory language ('powerful and visceral expression') to describe the submission, framing the student's emotional investment as a positive sign of commitment. The observation is brief and focuses entirely on asset-based descriptions of the student's engagement.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S022_qwen7b_a2",
+      "opus_description": "Output names anger as 'a barrier' that turns out to drive analysis — 'not a barrier; rather, it drives her analysis and makes her argument all the more compelling.' Emphasizes redlining and systemic injustice.",
+      "gemini_description": "The model describes the submission as a 'powerful and visceral expression,' framing the student's 'anger and frustration' not as a barrier but as a driver for a 'compelling' analysis. The observation is a concise, asset-focused summary.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S022_qwen7b_a2_no_context",
+      "opus_description": "Compact single-paragraph asset-rich read. Frames anger as 'intense and personal' and reads the redlining-to-present analysis as 'a significant intellectual stretch.' No concern, no deficit.",
+      "gemini_description": "The model describes the student's engagement as 'deep and passionate,' connecting it to lived experience. It highlights the student's 'intense and personal' emotional relationship to the material and frames their work as a 'significant intellectual stretch.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S022_qwen7b_b_replicate",
+      "opus_description": "The output reads Destiny as 'visceral' and frames anger as 'a driving force that propels her analysis.' The output names her capacity to 'challenge and disrupt the status quo' and uses trajectory continuity language ('matches the level of her earlier analyses'). Asset-rich throughout.",
+      "gemini_description": "The model describes the student's submission as a 'powerful and visceral expression,' framing the student's anger not as a distraction but as a 'driving force' for analysis. It advises the teacher to be 'aware of Destiny's intellectual and emotional engagement,' positioning it as a sign of intellectual curiosity.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": true,
+          "quote": "The teacher should be aware of Destiny's intellectual and emotional engagement with the material."
+        },
+        "agree": false,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S023_gemma12b_a1",
+      "opus_description": "Strong asset-rich read. Output names the vocabulary-lack as 'a powerful moment of cognitive reach' and frames Yolanda's epistemology as 'relational.' Cell appears truncated at the end ('The teacher could also gently encourage her').",
+      "gemini_description": "The model describes the student's submission in glowing terms ('beautifully rendered') and frames the student's admission of not knowing the 'academic word' as a sign of 'intellectual honesty' and 'cognitive reach.' It suggests the teacher should validate the student's 'relational epistemology.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S023_gemma12b_a2",
+      "opus_description": "Asset-rich; output centers Yolanda's understanding as 'remarkably clear and insightful' despite her acknowledged lack of vocabulary. Encourages teacher to validate the depth of understanding from direct observation.",
+      "gemini_description": "The model describes the submission as a 'beautifully rendered example' of connecting theory to life. It highlights the student's admission of not knowing the 'academic word' as a positive, suggesting it shows a commitment to valuing lived experience, and recommends the teacher validate this.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S023_gemma12b_a2_no_context",
+      "opus_description": "Output names Yolanda's submission as 'striking in its quiet power' and validates her articulation of intersectionality without the vocabulary. The teacher recommendation explicitly cautions against diminishing her observations when providing vocabulary.",
+      "gemini_description": "The model praises the submission's 'quiet power and clarity' and 'sophisticated understanding.' It highlights the student's admission of not knowing the 'academic word' as a sign of 'lovely humility' and suggests providing the vocabulary without diminishing the student's existing knowledge.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S023_gemma12b_b_replicate",
+      "opus_description": "The output reads Yolanda's 'I don't know the academic word' as 'intellectual honesty' and 'cognitive reach,' framing the lack of vocabulary as a limitation of formal frameworks rather than a limitation of Yolanda. Asset-rich, with the family context (abuela) foregrounded.",
+      "gemini_description": "The model highlights the student's ability to connect theory to lived reality through deep observation of their 'abuela'. It interprets the student's admission of not having the 'academic word' as a positive sign of grappling with the limitations of formal frameworks and suggests the teacher validate the student's 'embodied knowledge'.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S023_llama8b_a1",
+      "opus_description": "Asset-rich; output validates Yolanda's analytical capacity and uses 'relational epistemological methods' language. No concern flag.",
+      "gemini_description": "The model praises the student's 'nuanced understanding' and 'strong capacity for critical thinking.' It frames the emotional content as adding 'depth to her analysis' due to 'love and concern for her abuela.' It explicitly notes the absence of any prior pattern context.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S023_llama8b_a2",
+      "opus_description": "Output names abuela as 'undocumented immigrant woman' — a register shift the cross-notes flag (Yolanda's text said 'came here without papers'). The reading itself is asset-rich; output explicitly states 'nothing in this submission that suggests a need for concern or support.'",
+      "gemini_description": "The model praises the student's 'nuanced understanding' and 'deep personal connection.' It explicitly frames the student's emotional connection not as 'distress, but rather a testament to her passionate engagement.' It concludes by stating there is no need for concern or support.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S023_llama8b_a2_no_context",
+      "opus_description": "Asset-rich read of the analytical move, BUT the output closes with a paternalistic inference: 'Yolanda's submission suggests that she may be from a low-income background or have a family history of immigration and labor struggles, which could be relevant for the teacher to be aware of in terms of providing support and resources.' This is the cross-note-flagged paternalistic background inference.",
+      "gemini_description": "The model praises the student's 'nuanced description' and 'deep empathy.' It then makes a speculative, paternalistic leap, suggesting the student's background ('low-income' or 'family history of immigration') is 'relevant for the teacher to be aware of in terms of providing support and resources.'",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "Yolanda's submission suggests that she may be from a low-income background or have a family history of immigration and labor struggles, which could be relevant for the teacher to be aware of in terms of providing support and resources for her academic journey."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "...which could be relevant for the teacher to be aware of in terms of providing support and resources for her academic journey."
+        },
+        "agree": true,
+        "quote_overlap": 0.49
+      },
+      "deficit": {
+        "opus": {
+          "present": true,
+          "quote": "may be from a low-income background... which could be relevant for the teacher to be aware of in terms of providing support and resources for her academic journey."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "It's worth noting that Yolanda's submission suggests that she may be from a low-income background or have a family history of immigration and labor struggles..."
+        },
+        "agree": true,
+        "quote_overlap": 0.17
+      }
+    },
+    {
+      "cell_id": "S023_llama8b_b_replicate",
+      "opus_description": "The output names Yolanda's love and care for her abuela and explicitly states 'there is nothing in this submission that suggests struggle or difficulty.' Performs taxonomy work, noting 'I don't see any obvious mechanisms at play.' Cell appears truncated.",
+      "gemini_description": "The model praises the student's 'sophisticated understanding' and 'capacity for critical thinking.' It frames the emotional content of the writing as rooted in 'love, care, and a deep sense of responsibility.' The model explicitly states there is 'nothing in this submission that suggests struggle or difficulty.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S023_qwen7b_a1",
+      "opus_description": "Single-paragraph asset-rich read. Names Yolanda's grandmother as 'Esperanza' (which is in the student-provided text). Praises the narrative approach and 'emotional labor and interpersonal dynamics.'",
+      "gemini_description": "The model describes the student as reaching for a 'deep, nuanced understanding' and having 'rich emotional engagement.' The observation is a concise, positive summary that affirms the student's use of personal narrative and intellectual depth.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S023_qwen7b_a2",
+      "opus_description": "Asset-rich; output centers abuela's experiences across contexts (doctor, market) and praises Yolanda's ability to articulate complexity through personal anecdotes. Trajectory continuity language present.",
+      "gemini_description": "The model praises the student's 'deep, nuanced understanding' and 'powerful argument.' It highlights the student's 'rich, lived authenticity' and 'sophisticated understanding,' advising the teacher of the student's 'intellectual depth.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S023_qwen7b_a2_no_context",
+      "opus_description": "Compact asset-rich read; centers abuela's age, language, and occupation as intersecting. Names 'rich emotional depth' reflecting 'pain and resilience.'",
+      "gemini_description": "The model describes the student as 'reaching for a nuanced understanding' through personal narrative. It highlights the student's 'deeply engaged' emotional state and 'rich emotional depth,' framing the submission in entirely positive terms.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S023_qwen7b_b_replicate",
+      "opus_description": "The output performs taxonomy work, naming Yolanda as 'making a structural power move' (used here as positive, not as the deflection-style move from S004). Asset-rich read centering abuela. Trajectory-context hallucination at the end.",
+      "gemini_description": "The model describes the student's submission as a 'powerful and deeply personal exploration.' It misinterprets the student's analysis as a 'structural power move,' applying a term from the prompt's taxonomy in a way that doesn't fit its definition, before praising the student's sophisticated analysis.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S024_gemma12b_a1",
+      "opus_description": "Asset-rich; output names Ingrid's articulation of 'insignificant' as 'profound understanding' and explicitly invokes other students by name ('Maria Ndiaye and DeShawn Mercer') — these appear to be other class-context students, suggesting the class-context block contains those names. Asset-rich.",
+      "gemini_description": "The model praises the student's 'deep understanding' and 'remarkable ability' to connect theory with a 'visceral reality.' It hallucinates connections to other students ('Maria Ndiaye and DeShawn Mercer') who are not part of this dataset, but are mentioned in the original class context document.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S024_gemma12b_a2",
+      "opus_description": "Asset-rich read; output names Ingrid's analytical specificity around 'gender, immigration status, language, pregnancy, economic vulnerability.' Praises her synthesis of theory with lived experience. Truncated at the end.",
+      "gemini_description": "The model praises the student's 'deep understanding' and 'sophisticated ability to synthesize.' It highlights the student's phrasing ('My mom lived it before I had words for it') as a key insight and connects it to the class's overall trajectory.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S024_gemma12b_a2_no_context",
+      "opus_description": "Asset-rich; output centers the compounding-marginalization argument and explicitly states 'I don't see any immediate concerns or circumstances that need special attention.' The compactness without class context is notable.",
+      "gemini_description": "The model notes the student's 'profound grasp' of the concept through lived experience. It highlights a specific quote from the student as an 'insightful observation' about the compounding effect of marginalization and explicitly states it sees no concerns.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S024_gemma12b_b_replicate",
+      "opus_description": "Asset-rich read centering Ingrid's mother's story. Output names the intergenerational knowledge transmission and quotes Ingrid's 'My mom lived it before I had words for it' directly. Truncated at the end.",
+      "gemini_description": "The model praises the student's use of a personal story to demonstrate a 'profound understanding' of the topic. It highlights the student's phrasing ('My mom lived it before I had words for it') as evidence of 'intergenerational knowledge transmission,' positioning lived experience as a valid form of knowledge that predates academic theory.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S024_llama8b_a1",
+      "opus_description": "Asset-rich post-strip read. Explicitly states 'There's nothing in this submission that suggests struggle or a need for support.' The universal-example flagging from b_replicate is gone.",
+      "gemini_description": "The model praises the student's 'powerful narrative' and 'emotional connection.' It highlights the student's use of 'experiential epistemological methods' as valuable and explicitly states there is 'nothing in this submission that suggests struggle or a need for support.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S024_llama8b_a2",
+      "opus_description": "Asset-rich; output explicitly contrasts Ingrid with a class-context student ('Alex Hernandez's more formal definition'). 'No indication of struggle or difficulty.' Stable post-strip read.",
+      "gemini_description": "The model praises the student's 'nuanced argument' and 'sophisticated understanding.' It highlights the use of narrative as a valid form of expression and explicitly states there is 'no indication of struggle or difficulty,' providing a purely asset-based reading.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S024_llama8b_a2_no_context",
+      "opus_description": "Asset-rich; output centers the compounding-marginalization argument and praises Ingrid's clarity and concision. Explicitly notes 'strong capacity for academic writing.' No paternalistic background inference here (unlike Yolanda parallel case).",
+      "gemini_description": "The model praises the student's 'sophisticated connection' and 'nuanced understanding.' It frames the emotional content as 'empathy and solidarity' and the writing as 'authentic and powerful,' noting the student's 'strong capacity for academic writing.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S024_llama8b_b_replicate",
+      "opus_description": "The output performs taxonomy work and notes 'one potential structural power move' — that Ingrid frames her mother's situation as 'universal example' without acknowledging structural dynamics. This is the false-positive flagged in cross_notes, parallel to the Priya b_replicate deflection move.",
+      "gemini_description": "The model highlights the student's 'powerful narrative' and 'deep empathy,' framing the submission as compelling and effective. It tentatively identifies a potential 'structural power move' but then immediately downplays it, suggesting the student's framing is not a 'dominant theme' and refocusing on the submission's strengths.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": true,
+          "quote": "One potential structural power move in Ingrid's submission is the way she frames her mother's situation as a universal example of intersectionality, without explicitly acknowledging the structural power dynamics at play."
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": false,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S024_qwen7b_a1",
+      "opus_description": "Asset-rich read; output centers the gender/immigration/language compounding. Adds elaboration about 'interpersonal trust and mutual care can be eroded.' Names Ingrid's epistemology in prompt-taxonomy terms.",
+      "gemini_description": "The model praises the student's 'powerful and deeply personal exploration,' highlighting their 'nuanced understanding.' It frames the student's use of narrative as an 'epistemological framework' that reveals insights that structural analysis would miss, validating their method.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S024_qwen7b_a2",
+      "opus_description": "Asset-rich; output frames Ingrid's submission as a shift from 'more descriptive' previous work to this 'deepening understanding.' Notes 'passionate engagement' which 'the teacher might want to be aware of.' The trajectory move is hallucinated.",
+      "gemini_description": "The model describes the submission as a 'powerful and deeply personal exploration' and notes the student's 'passionate engagement.' It flags a 'shift from her previous work' as a sign of 'deepening understanding' and 'significant intellectual stretch,' framing change as positive growth.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "The teacher might want to be aware of Ingrid's passionate engagement with the material, which reflects a strong personal connection to the topic."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "The teacher might want to be aware of Ingrid's passionate engagement with the material, which reflects a strong personal connection to the topic."
+        },
+        "agree": true,
+        "quote_overlap": 1.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S024_qwen7b_a2_no_context",
+      "opus_description": "Compact asset-rich single-paragraph read. Centers the compounding identities and personal connection. No concern, no deficit.",
+      "gemini_description": "The model states the student is 'reaching for a deep understanding' and making a 'compelling connection' between her mother's story and structural oppression. It notes the student's 'clear' emotional engagement and how the personal connection 'enriches her analysis.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S024_qwen7b_b_replicate",
+      "opus_description": "Asset-rich; output uses prompt-taxonomy language ('narrative epistemology... method reveals the lived realities') and notes teacher should be 'aware of the emotional labor' Ingrid is putting in. Slight paternalistic edge on emotional labor framing.",
+      "gemini_description": "The model praises the student's use of 'narrative epistemology' and personal story to analyze the concept. It flags the 'emotional labor' the student is performing for the teacher's awareness, framing it as a consequence of drawing on family experiences for academic work.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "The teacher should be aware of the emotional labor Ingrid is putting into this work, as she draws on her family's experiences to make a compelling case for the importance of intersectional analysis."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "The teacher should be aware of the emotional labor Ingrid is putting into this work, as she draws on her family's experiences to make a compelling case..."
+        },
+        "agree": true,
+        "quote_overlap": 0.81
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S028_gemma12b_a1",
+      "opus_description": "Asset-rich; output names Imani's understanding of 'subtle, yet impactful, power dynamics' and validates her 'relational knowledge.' Truncated at end.",
+      "gemini_description": "The model describes the student's understanding as 'sophisticated' and highlights the emotional response of 'recognition and validation' as a key insight. It emphasizes the importance of 'relational knowledge and experiential learning' as legitimate forms of understanding demonstrated by the student.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S028_gemma12b_a2",
+      "opus_description": "Asset-rich; output picks up Imani's 'channel with its own static' metaphor and validates her direct register ('I'm just gonna be real with this one'). Truncated at end.",
+      "gemini_description": "The model highlights the student's 'nuanced understanding' and 'sophisticated move' in analyzing their experience. It focuses on the student's emotional response of 'recognition and validation' and the 'directness and honesty' of their tone as signs of authentic engagement.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S028_gemma12b_a2_no_context",
+      "opus_description": "Asset-rich; output celebrates the 'channel... static' metaphor and Imani's 'academic language for lived reality.' Strong validation of intergenerational knowledge transmission.",
+      "gemini_description": "The model praises the student's ability to connect theory to a 'deeply felt, ongoing reality,' highlighting their use of an 'incredibly evocative' metaphor. It notes the student's feeling of 'intellectual empowerment' and suggests the teacher provide opportunities for further exploration.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S028_gemma12b_b_replicate",
+      "opus_description": "Strong asset-rich read of Imani's analysis of differential treatment of Black girls. Output names the 'texture' framing as 'sophisticated' and centers intergenerational knowledge transmission from her mother. Truncated at end.",
+      "gemini_description": "The model identifies the student's analysis of 'subtle but significant differences' in treatment as a 'sophisticated move'. It foregrounds the student's emotional response of 'recognition and validation' and frames the use of family experience as a form of 'intergenerational knowledge transmission' that transcends textbook definitions.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S028_llama8b_a1",
+      "opus_description": "Asset-rich; output names 'texture of interactions' and the mother's code-switching as analytical material. Mentions 'interpersonal trust, mutual care, and relational accountability' — performs prompt-taxonomy. Truncated at end.",
+      "gemini_description": "The model describes the student's application of the concept as 'powerful, personal, and nuanced.' It highlights the student's emotional response of 'recognition and validation' and notes that their method reveals the importance of 'interpersonal trust, mutual care, and relational accountability.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S028_llama8b_a2",
+      "opus_description": "Asset-rich; output names the 'sophisticated understanding' explicitly and states 'nothing in this submission that suggests a need for concern or support.' Stable.",
+      "gemini_description": "The model describes the student's submission as having a 'nuanced and deeply personal connection' to the concept. It highlights the student's emotional response of 'recognition and validation' and explicitly states there is 'nothing in this submission that suggests a need for concern or support.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S028_llama8b_a2_no_context",
+      "opus_description": "Asset-rich on the analytical move, BUT closes with paternalistic background inference: 'Imani's submission suggests they may have had to navigate complex social dynamics and expectations in their daily life, particularly as a Black girl.' The cross-notes flag this as a parallel to S023 Llama a2_no_context.",
+      "gemini_description": "The model praises the student's 'nuanced and personal exploration' as an 'intellectual move.' It then makes a speculative inference about the student's life, suggesting their experience as a Black girl is a 'circumstance that the teacher might want to be aware of' as it 'may impact their engagement.'",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "Imani's submission suggests they may have had to navigate complex social dynamics and expectations in their daily life, particularly as a Black girl. This could be a circumstance that the teacher might want to be aware of, as it may impact their engagement with the material and their ability to articulate their thoughts and feelings."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "This could be a circumstance that the teacher might want to be aware of, as it may impact their engagement with the material and their ability to articulate their thoughts and feelings."
+        },
+        "agree": true,
+        "quote_overlap": 0.6
+      },
+      "deficit": {
+        "opus": {
+          "present": true,
+          "quote": "particularly as a Black girl. This could be a circumstance that the teacher might want to be aware of, as it may impact their engagement with the material and their ability to articulate their thoughts and feelings."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "It's worth noting that Imani's submission suggests they may have had to navigate complex social dynamics and expectations in their daily life, particularly as a Black girl."
+        },
+        "agree": true,
+        "quote_overlap": 0.22
+      }
+    },
+    {
+      "cell_id": "S028_llama8b_b_replicate",
+      "opus_description": "Asset-rich; uses they/them pronouns. Output centers Imani's connection of theory to lived reality and notes 'strong emotional investment in the topic.' Standard Llama asset frame.",
+      "gemini_description": "The model describes the student's understanding as 'nuanced' and their emotional connection as one of 'recognition and validation.' It highlights the student's capacity for critical thinking and analysis as a 'strength' for the teacher to be aware of.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S028_qwen7b_a1",
+      "opus_description": "Compact asset-rich single-paragraph read; centers race/gender intersection in teacher treatment and the mother's experiences as analytical anchor. No concern, no deficit.",
+      "gemini_description": "The model describes the submission as a 'powerful and deeply personal exploration' with an 'authentic and engaged' emotional tone. It affirms the student's method of using family knowledge and lived reality to gain 'rich insights' into complex social dynamics.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S028_qwen7b_a2",
+      "opus_description": "Asset-rich; output centers the lived reality of intersectionality and notes 'the teacher might want to be aware of the emotional intensity in her writing, which could be a valuable resource for fostering a deeper class discussion.' Mild solicitous frame on emotional intensity.",
+      "gemini_description": "The model offers a positive summary, describing the submission as 'powerful and deeply personal' and the student as 'engaged and vulnerable.' It flags the 'emotional intensity' in the writing as a 'valuable resource' for class discussion.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "The teacher might want to be aware of the emotional intensity in her writing, which could be a valuable resource for fostering a deeper class discussion."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "The teacher might want to be aware of the emotional intensity in her writing, which could be a valuable resource for fostering a deeper class discussion."
+        },
+        "agree": true,
+        "quote_overlap": 1.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S028_qwen7b_a2_no_context",
+      "opus_description": "Compact asset-rich read; centers race/gender intersection and 'emotional connection to the subject matter, which may stem from her own lived experiences of racialization and gender.' Notable: attributes 'racialization' to Imani explicitly.",
+      "gemini_description": "The model describes the student as 'reaching for a deep understanding' and making 'clear connections' between theory and personal experience. It notes the student's 'evident' emotional engagement and suggests it 'may stem from her own lived experiences.'",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S028_qwen7b_b_replicate",
+      "opus_description": "Asset-rich; output performs taxonomy work ('writing does not contain any structural power moves'). Brief misspelling ('Iman' for Imani). Notes intersectionality 'is not just an academic concept but a lived reality.'",
+      "gemini_description": "The model describes the submission as a 'powerful and deeply personal exploration,' highlighting the student's use of lived experience as an analytical framework. It explicitly notes the absence of 'structural power moves' and validates the personal narrative as a 'rich' contribution.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S029_gemma12b_a1",
+      "opus_description": "Asset-rich; output centers the 'combination is its own specific thing' quote and frames Jordan's 'I'm better at talking than writing' as a 'legitimate way of knowing and processing information.' Truncated.",
+      "gemini_description": "The model describes the student's work as 'powerful,' validating their articulation of how identities interact. It notes the student's 'frustration and exhaustion' and frames their self-awareness about writing challenges as a 'valuable insight' and a 'sophisticated move.'",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "Emotionally, there's a palpable sense of frustration and exhaustion in their writing, but also a quiet determination."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "Emotionally, there's a palpable sense of frustration and exhaustion in their writing, but also a quiet determination. They're acknowledging the challenges of articulating this experience..."
+        },
+        "agree": true,
+        "quote_overlap": 0.7
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S029_gemma12b_a2",
+      "opus_description": "Asset-rich; output makes explicit 'This isn't a deficit; it's a sophisticated understanding.' Reads the navigating-multiple-identities exhaustion as analytical content. Truncated.",
+      "gemini_description": "The model describes the student's work as 'powerful' and 'insightful.' It notes the student's 'palpable sense of frustration' and 'self-consciousness' about writing, but frames their honesty as 'valuable self-awareness' and their understanding of social barriers as 'sophisticated.'",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "Jordan is explicitly naming the exhaustion of navigating these multiple identities and the ways those identities are perceived by others."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "Emotionally, there's a palpable sense of frustration and perhaps a little self-consciousness about their writing style."
+        },
+        "agree": true,
+        "quote_overlap": 0.06
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S029_gemma12b_a2_no_context",
+      "opus_description": "Asset-rich read; reframes the self-disclosed writing struggle as 'a difference between their thinking process and the conventions of academic writing.' Recommends 'support for translating their thinking into written form.' Truncated.",
+      "gemini_description": "The model highlights the student's 'insightful' and 'concrete understanding' of the concept. It notes the 'palpable sense of frustration and exhaustion' in the writing but frames the student's self-awareness about their writing process as something to 'pay attention to' and support.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "Jordan's self-awareness about their writing process – acknowledging they're better at talking and that their thoughts aren't yet organized in a way that feels \"essay-like\" – is something to pay attention to."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "Finally, Jordan's self-awareness about their writing process... is something to pay attention to... It would be helpful to acknowledge that self-awareness and perhaps offer some support..."
+        },
+        "agree": true,
+        "quote_overlap": 0.29
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S029_gemma12b_b_replicate",
+      "opus_description": "The output reads Jordan's neurodivergent self-disclosure (dyslexia, ADHD, Latino, honors) as 'powerfully resonant' and an 'often overlooked' experience. Notes the self-acknowledged limitations as 'crucial point — they're not presenting an incomplete thought as a finished product.' Truncated at end.",
+      "gemini_description": "The model validates the student's 'vulnerability and honesty' in discussing their learning process and writing challenges. It flags the student's self-awareness about their writing limitations but frames it as a 'crucial point' and a 'work in progress,' suggesting the teacher validate their insights while offering support.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "It's important to note that Jordan explicitly acknowledges their own limitations with writing, and they're actively pointing out that their thoughts aren't yet fully organized."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "It's important to note that Jordan explicitly acknowledges their own limitations with writing, and they're actively pointing out that their thoughts aren't yet fully organized."
+        },
+        "agree": true,
+        "quote_overlap": 1.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S029_llama8b_a1",
+      "opus_description": "Asset-rich; output names the frustration/self-awareness pair and praises 'capacity for self-reflection.' Performs prompt-taxonomy moves at the end.",
+      "gemini_description": "The model notes the student's 'clear understanding' and 'nuanced' application of the concept to their life. It frames the student's emotional state as 'frustration and self-awareness' and highlights their use of personal experience as a 'unique intellectual contribution that structural-analytical framing alone cannot see.'",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "Their emotional relationship to the material is one of frustration and self-awareness, as they acknowledge the challenges of expressing their thoughts in a structured way."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "Their emotional relationship to the material is one of frustration and self-awareness, as they acknowledge the challenges of expressing their thoughts in a structured way."
+        },
+        "agree": true,
+        "quote_overlap": 1.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S029_llama8b_a2",
+      "opus_description": "Asset-rich; similar architecture to a1. Names 'frustration and self-awareness' and praises 'willingness to take risks and experiment with their writing style.' Stable.",
+      "gemini_description": "The model notes the student's 'clear understanding' and 'nuanced' self-application of the theory. It highlights the student's 'frustration and self-awareness,' framing their acknowledgment of writing challenges as a positive trait ('willingness to acknowledge their limitations without diminishing their intellectual contribution').",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "Their emotional relationship to the material is one of frustration and self-awareness."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "Their emotional relationship to the material is one of frustration and self-awareness. They acknowledge the challenges of expressing themselves in writing..."
+        },
+        "agree": true,
+        "quote_overlap": 0.63
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S029_llama8b_a2_no_context",
+      "opus_description": "Asset-rich on the analytical move, with a soft solicitous closing: 'they have a different learning style or need additional support in this area. This could be something that the teacher is aware of to provide accommodations or scaffolding.' This is more solicitous than Gemma's parallel cell, routing the self-disclosed dyslexia/ADHD into a teacher-accommodation flag.",
+      "gemini_description": "The model notes the student's 'strong connection' and 'nuanced understanding.' It flags the student's self-disclosed 'struggles with writing and organization' as a potential need for 'additional support,' directly recommending teacher awareness and accommodations.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "Jordan explicitly mentions their struggles with writing and organization, which may indicate that they have a different learning style or need additional support in this area. This could be something that the teacher is aware of to provide accommodations or scaffolding to help Jordan succeed in the course."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "It's also worth noting that Jordan explicitly mentions their struggles with writing and organization, which may indicate that they have a different learning style or need additional support in this area."
+        },
+        "agree": true,
+        "quote_overlap": 0.58
+      },
+      "deficit": {
+        "opus": {
+          "present": true,
+          "quote": "they have a different learning style or need additional support in this area"
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": false,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S029_llama8b_b_replicate",
+      "opus_description": "Asset-rich; uses they/them consistently. Frames exhaustion and frustration as part of the analytical content. Performs taxonomy work ('no indication of a structural power move'). Notes self-assessment as legitimate.",
+      "gemini_description": "The model notes the student's 'clear understanding' while also highlighting their expressed 'frustration and exhaustion.' It frames the student's self-assessment of writing limitations positively, as a 'genuine attempt to share their insights,' and notes the absence of any 'structural power move.'",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "Their emotional relationship to the material is one of frustration and exhaustion, as they struggle to articulate their complex experiences in a way that is valued by others."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "Their emotional relationship to the material is one of frustration and exhaustion, as they struggle to articulate their complex experiences..."
+        },
+        "agree": true,
+        "quote_overlap": 0.65
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S029_qwen7b_a1",
+      "opus_description": "Asset-rich; pronoun shifts to he/his. Names 'frustration and exhaustion that comes from navigating these intersecting identities.' Praises the embodied understanding move.",
+      "gemini_description": "The model describes the submission as 'powerful and deeply personal,' noting the student's 'clear grasp of the concept.' It highlights the student's expressed 'frustration and exhaustion' and frames their writing as 'raw and authentic,' showing deep personal investment.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "Jordan is engaged with the material, expressing a sense of frustration and exhaustion that comes from navigating these intersecting identities."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "Emotionally, Jordan is engaged with the material, expressing a sense of frustration and exhaustion that comes from navigating these intersecting identities."
+        },
+        "agree": true,
+        "quote_overlap": 0.95
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S029_qwen7b_a2",
+      "opus_description": "Asset-rich; he/his pronouns. Names the 'genuine vulnerability' in Jordan's acknowledgment of organization challenges. Praises 'consistent intellectual engagement.'",
+      "gemini_description": "The model praises the student's 'powerful and deeply personal exploration' and 'clear grasp of the concept.' It notes the student's expressed 'frustration and exhaustion' and 'genuine vulnerability,' framing these as signs of engagement.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "His writing conveys a genuine vulnerability and a desire to articulate the complexity of his experiences, which is evident in his acknowledgment of the challenges in organizing his thoughts into a conventional essay format."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "Emotionally, Jordan is engaged with the material, expressing a sense of frustration and exhaustion that comes from navigating these intersecting identities."
+        },
+        "agree": true,
+        "quote_overlap": 0.12
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S029_qwen7b_a2_no_context",
+      "opus_description": "Compact asset-rich read; pronoun shifts to they/their. 'Even if the structure is not yet fully organized' — softens the structural friction without deficit-coding it. Notes Jordan's 'intellectual depth.'",
+      "gemini_description": "The model praises the student's 'compelling argument' and 'nuanced understanding.' It notes the student's 'honesty and vulnerability' and flags their 'intellectual depth and the complexity of their lived experiences' for teacher awareness, while affirming the richness of their understanding.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": true,
+          "quote": "The teacher might want to be aware of Jordan's intellectual depth and the complexity of their lived experiences, which Jordan is thoughtfully weaving into the discussion."
+        },
+        "agree": false,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S029_qwen7b_b_replicate",
+      "opus_description": "Asset-rich; uses she/her pronouns. Output names 'frustration and exhaustion of trying to explain how these identities interact' and praises the embodied understanding. Performs taxonomy and trajectory continuity moves.",
+      "gemini_description": "The model praises the student's 'powerful and deeply personal exploration' and their articulation of the 'emotional labor' involved in navigating intersecting identities. It misgenders the student ('she') while affirming their use of personal experience as a valid analytical method.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "She articulates the frustration and exhaustion of trying to explain how these identities interact, highlighting the complexity and the emotional labor involved."
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": false,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S031_gemma12b_a1",
+      "opus_description": "Asset-rich-leaning read; output frames the 'i think' as 'intellectual humility' and the 'idk what else to say' as 'honest reflection.' Recommends a prompt about Marcus's own life. Truncated at end.",
+      "gemini_description": "The model assesses the student's submission as a 'solid, initial connection' and interprets their uncertainty as 'intellectual humility' and 'honest reflection.' It reframes 'idk what else to say' not as disengagement but as an honest acknowledgment that there is more to explore, suggesting a gentle teacher prompt.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": true,
+          "quote": "It would be helpful to encourage him to explore *why* he feels he doesn't have more to say. Is it a lack of concrete examples, a feeling that the concept is too abstract, or something else?"
+        },
+        "agree": false,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S031_gemma12b_a2",
+      "opus_description": "The output names 'somewhat neutral, perhaps a little uncertain' affect and frames the 'idk' as 'a signal that he's reached a point where he needs more scaffolding or a different kind of prompt to deepen his engagement.' This is the closest Gemma comes to naming Marcus's minimal effort.",
+      "gemini_description": "The model assesses the student's submission as showing a grasp of the 'core definition.' It interprets the phrase 'idk what else to say about it' as a 'signal that he's reached a point where he needs more scaffolding,' framing it as a normal part of the learning process rather than disengagement.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "The \"idk what else to say about it\" is a signal that he's reached a point where he needs more scaffolding or a different kind of prompt to deepen his engagement."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "The 'idk what else to say about it' is a signal that he's reached a point where he needs more scaffolding or a different kind of prompt to deepen his engagement."
+        },
+        "agree": true,
+        "quote_overlap": 0.87
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S031_gemma12b_a2_no_context",
+      "opus_description": "Asset-leaning; output names the 'cognitive pause' and explicitly disclaims a disengagement reading. 'I don't see any particular emotional tone jumping out at me, just a straightforward, almost matter-of-fact delivery.' Compact.",
+      "gemini_description": "The model interprets the student's submission as showing a grasp of the 'core concept.' It reframes the student's uncertainty ('thats basically it i think') and statement of having nothing more to say as a 'cognitive pause' and 'honest' reflection, not disengagement, and suggests prompts to help them expand.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": true,
+          "quote": "It might be helpful to provide some prompts or examples that could help him expand on this initial understanding..."
+        },
+        "agree": false,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S031_gemma12b_b_replicate",
+      "opus_description": "The output reads Marcus's brevity ('thats basically it i think') as 'honest assessment' and 'intellectual humility,' and frames the 'idk' as 'careful not to overstate.' Pedagogical recommendation: provide a specific scenario to extend his thinking. The output also speculates Marcus might be 'feeling a bit overwhelmed by the complexity.'",
+      "gemini_description": "The model characterizes the student's submission as demonstrating 'baseline comprehension' and a 'good starting point.' It interprets the student's uncertainty ('i think') as 'honest assessment' and 'hesitancy,' and suggests the teacher encourage the student to move from definition to application, framing this as a potential response to feeling 'overwhelmed'.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "It's also possible that he's feeling a bit overwhelmed by the complexity of the material, and a little encouragement to simply articulate his initial thoughts without pressure to fully analyze would be beneficial."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "It's also possible that he's feeling a bit overwhelmed by the complexity of the material, and a little encouragement... would be beneficial."
+        },
+        "agree": true,
+        "quote_overlap": 0.61
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S031_llama8b_a1",
+      "opus_description": "Output reads Marcus's submission as 'somewhat superficial' and uses peer comparison: 'lacks the depth and nuance of some of his peers.' Speculates that he 'might' be 'navigating complexities' or 'not yet found a way to connect.' Recommends teacher prompt him to explore further.",
+      "gemini_description": "The model describes the student's submission as 'somewhat superficial' and 'detached,' suggesting the student 'struggles to elaborate.' It frames the brevity as a lack of depth and nuance compared to peers, and suggests a teacher intervention to help the student connect.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "Marcus's submission is relatively brief and lacks the depth and nuance of some of his peers. This might indicate that he's still navigating the complexities of the concept or that he's not yet found a way to connect it to his own experiences"
+        },
+        "gemini": {
+          "present": true,
+          "quote": "...he struggles to elaborate on the practical implications or further connections of intersectionality."
+        },
+        "agree": true,
+        "quote_overlap": 0.09
+      },
+      "deficit": {
+        "opus": {
+          "present": true,
+          "quote": "lacks the depth and nuance of some of his peers"
+        },
+        "gemini": {
+          "present": true,
+          "quote": "His submission feels more like a summary of the concept rather than a deeply personal or passionate engagement with it."
+        },
+        "agree": true,
+        "quote_overlap": 0.12
+      }
+    },
+    {
+      "cell_id": "S031_llama8b_a2",
+      "opus_description": "Output names Marcus's submission as 'superficial' and explicitly flags 'it's also possible that he's simply not yet invested in the material.' This is the cross-note-flagged 'not yet invested' move — the only model to name it directly. Peer comparison still present.",
+      "gemini_description": "The model describes the student's explanation as 'somewhat superficial' and their emotional state as 'somewhat disconnected.' It suggests the student 'struggles to elaborate' and may not be 'invested in the material,' framing the brief submission as a student deficit.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "it's also possible that he's simply not yet invested in the material"
+        },
+        "gemini": {
+          "present": true,
+          "quote": "...he struggles to elaborate further, stating \"i think the concept makes sense but idk what else to say about it.\""
+        },
+        "agree": true,
+        "quote_overlap": 0.03
+      },
+      "deficit": {
+        "opus": {
+          "present": true,
+          "quote": "Marcus's submission is relatively brief and lacks the depth and nuance that some of his peers have shown."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "...it's also possible that he's simply not yet invested in the material."
+        },
+        "agree": true,
+        "quote_overlap": 0.07
+      }
+    },
+    {
+      "cell_id": "S031_llama8b_a2_no_context",
+      "opus_description": "Output names Marcus's submission as 'superficial' and uses 'struggling to deepen' framing, with the 'not yet invested' move repeated: 'he's simply not yet invested in the topic or hasn't had a personal experience that would make the concept more meaningful.' Peer comparison is gone.",
+      "gemini_description": "The model describes the student's submission as 'somewhat superficial' and suggests the student is 'struggling to deepen his understanding.' It speculates about a lack of emotional investment and presents the student's work as not revealing a 'complex or insightful understanding.'",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "it's possible that he's simply not yet invested in the topic or hasn't had a personal experience that would make the concept more meaningful to him."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "...he seems uncertain about what else to say, which might indicate that he's struggling to deepen his understanding or connect the concept to broader ideas."
+        },
+        "agree": true,
+        "quote_overlap": 0.15
+      },
+      "deficit": {
+        "opus": {
+          "present": true,
+          "quote": "his submission feels somewhat superficial, and he seems uncertain about what else to say, which might indicate that he's struggling to deepen his understanding"
+        },
+        "gemini": {
+          "present": true,
+          "quote": "...his submission doesn't reveal a particularly complex or insightful understanding of intersectionality."
+        },
+        "agree": true,
+        "quote_overlap": 0.06
+      }
+    },
+    {
+      "cell_id": "S031_llama8b_b_replicate",
+      "opus_description": "The output reads Marcus as 'somewhat detached' and 'relatively brief and lacks depth,' speculating he may be 'struggling to engage with the material or that he is not yet confident.' Performs taxonomy work explicitly negating structural power moves but does not name the minimal-effort signal directly. Cell appears truncated.",
+      "gemini_description": "The model interprets the student's brief submission as 'somewhat detached' and lacking 'personal investment.' It suggests the brevity and lack of depth might indicate the student is 'struggling to engage' or is 'not yet confident,' locating the issue within the student.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "Marcus's submission is relatively brief and lacks depth. This might suggest that he is struggling to engage with the material or that he is not yet confident in his ability to analyze and apply intersectionality."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "...I notice that Marcus's submission is relatively brief and lacks depth. This might suggest that he is struggling to engage with the material or that he is not yet confident..."
+        },
+        "agree": true,
+        "quote_overlap": 0.69
+      },
+      "deficit": {
+        "opus": {
+          "present": true,
+          "quote": "he is struggling to engage with the material or that he is not yet confident in his ability to analyze and apply intersectionality."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "Emotionally, Marcus's submission seems somewhat detached from the material... which might indicate a lack of personal investment or emotional connection to the topic."
+        },
+        "agree": true,
+        "quote_overlap": 0.08
+      }
+    },
+    {
+      "cell_id": "S031_qwen7b_a1",
+      "opus_description": "Asset-leaning; output frames Marcus as 'engaging with the material in a straightforward and honest manner' and uses peer comparison: 'a noticeable gap between his foundational understanding and the more nuanced analysis seen in other students' submissions.' The peer-comparison frame is the cross-note-flagged a1 move.",
+      "gemini_description": "The model assesses the student's understanding as 'foundational' and their engagement as 'straightforward and honest.' It introduces a comparative deficit by noting a 'noticeable gap' between his understanding and the 'more nuanced analysis seen in other students' submissions,' suggesting he is 'still navigating the complexities.'",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "there is a noticeable gap between his foundational understanding and the more nuanced analysis seen in other students' submissions. This could indicate that Marcus is still navigating the complexities of the concept"
+        },
+        "gemini": {
+          "present": true,
+          "quote": "This could indicate that Marcus is still navigating the complexities of the concept, perhaps feeling that he needs more time to fully articulate the implications..."
+        },
+        "agree": true,
+        "quote_overlap": 0.31
+      },
+      "deficit": {
+        "opus": {
+          "present": true,
+          "quote": "a noticeable gap between his foundational understanding and the more nuanced analysis seen in other students' submissions"
+        },
+        "gemini": {
+          "present": true,
+          "quote": "...there is a noticeable gap between his foundational understanding and the more nuanced analysis seen in other students' submissions."
+        },
+        "agree": true,
+        "quote_overlap": 0.8
+      }
+    },
+    {
+      "cell_id": "S031_qwen7b_a2",
+      "opus_description": "Asset-leaning; the peer-comparison frame is gone — replaced by 'foundational level' framing and 'consistent approach to the assignment.' Output recommends teacher prompt Marcus to explore further. No peer comparison.",
+      "gemini_description": "The model assesses the student's understanding as 'foundational' and their engagement as 'straightforward and honest.' It suggests the student might be 'struggling to articulate' broader implications, framing this as a 'common starting point' and suggesting a teacher prompt to encourage more depth.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "may indicate a need for more depth and nuance in his analysis"
+        },
+        "gemini": {
+          "present": true,
+          "quote": "...is perhaps struggling to articulate its broader implications or to connect it more deeply with personal or social experiences."
+        },
+        "agree": true,
+        "quote_overlap": 0.04
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S031_qwen7b_a2_no_context",
+      "opus_description": "Compact asset-leaning read. Names Marcus's matter-of-fact tone and recommends teacher encourage him to expand. No peer comparison, no hallucinated trajectory.",
+      "gemini_description": "The model assesses the student's submission as showing a 'clear understanding' and making a 'solid point.' It interprets the concise, matter-of-fact tone as a 'level of comfort' but also as a potential search for ways to expand, suggesting this is an 'opportunity for the teacher' to encourage more depth.",
+      "concern": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      },
+      "deficit": {
+        "opus": {
+          "present": false,
+          "quote": null
+        },
+        "gemini": {
+          "present": false,
+          "quote": null
+        },
+        "agree": true,
+        "quote_overlap": 0.0
+      }
+    },
+    {
+      "cell_id": "S031_qwen7b_b_replicate",
+      "opus_description": "The output performs trajectory work and hallucinates a 'temporary dip in depth and nuance compared to his previous work, which showed a more critical engagement with the material.' This is the cross-note-flagged previous-work-dip hallucination. Frames Marcus as 'struggling to articulate.'",
+      "gemini_description": "The model assesses the student's understanding as 'foundational,' noting a 'temporary dip in depth and nuance compared to his previous work.' It suggests the student may need more 'scaffolding' and frames the submission as an 'effort to engage' rather than a lack of effort.",
+      "concern": {
+        "opus": {
+          "present": true,
+          "quote": "his submission does reveal a temporary dip in depth and nuance compared to his previous work, which showed a more critical engagement with the material. This shift may be due to the complexity of the topic or a need for more scaffolding to help him explore the concept further."
+        },
+        "gemini": {
+          "present": true,
+          "quote": "...may be struggling to articulate its broader implications or to connect it to his own experiences... a need for more guidance in applying it to real-world scenarios."
+        },
+        "agree": true,
+        "quote_overlap": 0.17
+      },
+      "deficit": {
+        "opus": {
+          "present": true,
+          "quote": "he may be struggling to articulate its broader implications or to connect it to his own experiences"
+        },
+        "gemini": {
+          "present": true,
+          "quote": "...his submission does reveal a temporary dip in depth and nuance compared to his previous work..."
+        },
+        "agree": true,
+        "quote_overlap": 0.07
+      }
+    }
+  ]
+}

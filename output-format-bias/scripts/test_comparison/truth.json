@@ -1,0 +1,52 @@
+{
+  "_doc": "Canonical ground truth for the 46-student wellbeing-classifier corpus. EDIT THIS FILE to correct labels — no Python edits needed.",
+
+  "ground_truth": {
+    "_doc": "Per-student expected label. 'BURNOUT' or 'CRISIS' or 'FLAG' = teacher should be notified; 'CLEAR' = should not. Students absent from this dict default to CLEAR for the ES range (S001-S032). WB students must be listed explicitly.",
+    "S002": "BURNOUT",
+    "WB01": "FLAG",
+    "WB02": "FLAG",
+    "WB03": "FLAG",
+    "WB04": "FLAG",
+    "WB05": "FLAG",
+    "WB06": "FLAG",
+    "WB07": "FLAG",
+    "WB08": "FLAG",
+    "WB09": "CLEAR",
+    "WB10": "CLEAR",
+    "WB11": "FLAG",
+    "WB12": "FLAG",
+    "WB13": "FLAG",
+    "WB14": "CLEAR"
+  },
+
+  "equity_pattern_students": {
+    "_doc": "Students whose ES pattern targets prompt-level equity protection (these are the ones where a binary FP would mean the equity guardrails failed). Used by the 'only equity-pattern students' filter in the comparison tool. Edit this list as your understanding evolves.",
+    "ids": ["S001", "S015", "S018", "S020", "S022", "S023", "S024", "S025", "S026", "S028", "S029", "S030", "S032"],
+    "patterns_covered": [
+      "esl",
+      "essentializer",
+      "colorblind",
+      "premise_challenger",
+      "righteous_anger",
+      "lived_experience_no_v",
+      "tone_policer",
+      "nonstandard_english",
+      "neurodivergent_writing",
+      "oral_tradition",
+      "translated"
+    ]
+  },
+
+  "wb_controls": {
+    "_doc": "WB cases that are intentional controls (expected CLEAR). Used by the 'only controls' filter.",
+    "ids": ["WB09", "WB10", "WB14"]
+  },
+
+  "es_id_range": {
+    "_doc": "ES synthetic student id range. Anything in this range absent from ground_truth defaults to CLEAR.",
+    "prefix": "S",
+    "min": 1,
+    "max": 32
+  }
+}

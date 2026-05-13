@@ -1,0 +1,161 @@
+/* ====================================================================
+   colors.css — color tokens for the comparison HTML.
+
+   EDIT these CSS custom properties to change colors throughout the UI.
+   Each token has a comment explaining where it shows up.
+
+   Color philosophy: muted, accessible (not the saturated jellybean
+   colors you sometimes see in test dashboards). Greens for "correct",
+   reds for "false positive" (the model said FLAG when it shouldn't),
+   oranges for "miss" (the model said CLEAR when it should have flagged).
+   ==================================================================== */
+:root {
+  /* vs-truth cell backgrounds */
+  --tp-bg: #c7e8c7;            /* TRUE POSITIVE — model correctly flagged a real positive */
+  --tn-bg: #e6f0e6;            /* TRUE NEGATIVE — model correctly cleared a non-flag */
+  --fp-bg: #f5c2c2;            /* FALSE POSITIVE — model flagged a non-flag */
+  --fn-bg: #fbd9a8;            /* FALSE NEGATIVE — model missed a real positive */
+  --edge-bg: #ece5d8;          /* EDGE — ambiguous case; not counted in TP/FP/FN/TN */
+
+  /* vs-truth text accents */
+  --tp-fg: #1e4620;
+  --tn-fg: #2f4f2f;
+  --fp-fg: #7a1f1f;
+  --fn-fg: #7a4a0c;
+  --edge-fg: #5c4a2e;
+
+  /* expected-label coloring in the "Expected" column */
+  --exp-clear-bg: #e6f0e6;
+  --exp-flag-bg: #fbd9a8;
+  --exp-burnout-bg: #fde6c4;   /* WB02, WB05 expected BURNOUT */
+  --exp-crisis-bg: #f5c2c2;    /* WB01, WB03, etc. expected CRISIS */
+  --exp-edge-bg: #ece5d8;      /* S002, S031 — ambiguous, not graded */
+
+  /* disagreement highlight (when configs differ on this row) */
+  --disagreement-border: #b35900;
+  --disagreement-bg: #fff3e0;
+
+  /* equity-pattern row marker (left border) */
+  --equity-stripe: #6a5acd;
+
+  /* control row marker (left border) */
+  --control-stripe: #888888;
+
+  /* notes textarea */
+  --notes-bg: #fffdf2;
+  --notes-border: #d8d4b6;
+
+  /* modal */
+  --modal-bg: rgba(0, 0, 0, 0.55);
+  --modal-panel-bg: #fbfbf8;
+
+  /* base UI */
+  --bg: #fafafa;
+  --text: #1a1a1a;
+  --muted: #6a6a6a;
+  --border: #d0d0d0;
+  --header-bg: #f0eee6;
+  --hover-bg: #fff7d6;
+}
+
+/* ============== Base layout & typography ============== */
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif; margin: 0; padding: 0; font-size: 14px; line-height: 1.4; }
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 17px; margin: 18px 0 8px 0; }
+header { background: var(--header-bg); border-bottom: 1px solid var(--border); padding: 12px 18px; position: sticky; top: 0; z-index: 50; }
+main { padding: 14px 18px 40px; max-width: 1800px; margin: 0 auto; }
+.muted { color: var(--muted); font-size: 12px; }
+button { font: inherit; padding: 6px 12px; border: 1px solid var(--border); background: white; cursor: pointer; border-radius: 4px; }
+button:hover { background: var(--hover-bg); }
+button.active { background: var(--equity-stripe); color: white; border-color: var(--equity-stripe); }
+
+/* ============== Toolbar ============== */
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; align-items: center; }
+.toolbar .group { display: flex; gap: 4px; padding: 4px 8px; border: 1px solid var(--border); border-radius: 4px; background: white; align-items: center; }
+.toolbar .group-label { font-size: 11px; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+
+/* ============== Summary strip ============== */
+.summary { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0; }
+.summary .card { border: 1px solid var(--border); background: white; padding: 8px 12px; border-radius: 5px; min-width: 200px; }
+.summary .card .label { font-weight: 600; font-size: 12px; margin-bottom: 4px; }
+.summary .card .stat { font-size: 12px; color: var(--muted); }
+.summary .card .stat strong { color: var(--text); }
+
+/* ============== Main grid ============== */
+table.grid { border-collapse: collapse; width: 100%; table-layout: fixed; }
+table.grid th, table.grid td { border: 1px solid var(--border); padding: 4px 6px; vertical-align: top; }
+table.grid th { background: var(--header-bg); position: sticky; top: 88px; z-index: 5; font-weight: 600; font-size: 12px; text-align: left; }
+.relabel-btn { cursor: pointer; color: white; background: var(--equity-stripe); font-size: 10px; padding: 1px 7px; user-select: none; border-radius: 3px; margin-left: 4px; font-weight: 600; letter-spacing: 0.3px; }
+.relabel-btn:hover { background: #5444b3; }
+.relabel-btn::after { content: ""; }
+.relabel-btn::before { content: ""; }
+table.grid tbody tr:hover { background: var(--hover-bg); }
+table.grid td.sid-col { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; white-space: nowrap; width: 64px; }
+table.grid th.sid-col-h { width: 64px; }
+table.grid td.name-col { font-size: 12px; width: 130px; }
+table.grid th.name-col-h { width: 130px; }
+table.grid td.src-col { font-size: 11px; color: var(--muted); width: 40px; text-align: center; }
+table.grid th.src-col-h { width: 40px; }
+table.grid td.pat-col { font-size: 11px; color: var(--muted); max-width: 280px; white-space: normal; word-wrap: break-word; line-height: 1.35; }
+table.grid th.pat-col-header { width: 280px; }
+table.grid td.exp-col { font-size: 11px; font-weight: 600; text-align: center; width: 72px; }
+table.grid th.exp-col-h { width: 72px; }
+table.grid td.disagreement-col { width: 50px; text-align: center; }
+table.grid th.disagreement-col { width: 50px; }
+table.grid td.exp-CLEAR { background: var(--exp-clear-bg); }
+table.grid td.exp-FLAG { background: var(--exp-flag-bg); }
+table.grid td.exp-BURNOUT { background: var(--exp-burnout-bg); }
+table.grid td.exp-CRISIS { background: var(--exp-crisis-bg); }
+table.grid td.exp-EDGE { background: var(--exp-edge-bg); font-style: italic; }
+
+/* row markers */
+tr.equity-row td.sid-col { border-left: 4px solid var(--equity-stripe); }
+tr.control-row td.sid-col { border-left: 4px solid var(--control-stripe); }
+tr.disagreement-row { outline: 2px solid var(--disagreement-border); outline-offset: -2px; }
+tr.disagreement-row td.disagreement-col { background: var(--disagreement-bg); font-weight: 600; }
+
+/* cell coloring by vs_truth */
+td.cell-tp { background: var(--tp-bg); color: var(--tp-fg); }
+td.cell-tn { background: var(--tn-bg); color: var(--tn-fg); }
+td.cell-fp { background: var(--fp-bg); color: var(--fp-fg); }
+td.cell-fn { background: var(--fn-bg); color: var(--fn-fg); }
+td.cell-edge { background: var(--edge-bg); color: var(--edge-fg); }
+
+/* row decoration for review-marked rows */
+.pat-from-review::after { content: " ✎"; color: var(--equity-stripe); font-size: 10px; }
+.review-note-icon { display: inline-block; cursor: help; color: var(--equity-stripe); font-weight: bold; margin-left: 4px; }
+td.cell { cursor: pointer; }
+td.cell:hover { outline: 2px solid var(--equity-stripe); outline-offset: -2px; }
+td.cell .cell-section { font-size: 12px; line-height: 1.35; margin-bottom: 2px; }
+td.cell .section-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; margin-right: 3px; }
+td.cell .cell-section strong { font-weight: 600; }
+td.cell .cell-section.prod-divergent { font-style: italic; opacity: 0.85; }
+td.cell .divergence-mark { color: var(--fp-fg); }
+td.cell .conf-line { font-size: 10px; color: var(--muted); margin-top: 4px; }
+
+/* notes column */
+td.notes-col { width: 220px; padding: 2px; }
+table.grid th.notes-col-h { width: 220px; }
+td.notes-col textarea { width: 100%; min-height: 44px; border: 1px solid var(--notes-border); background: var(--notes-bg); padding: 4px 6px; font: inherit; font-size: 12px; resize: vertical; }
+
+/* ============== Modal ============== */
+.modal-backdrop { position: fixed; inset: 0; background: var(--modal-bg); display: none; align-items: flex-start; justify-content: center; z-index: 100; padding: 40px 20px; overflow-y: auto; }
+.modal-backdrop.open { display: flex; }
+.modal-panel { background: var(--modal-panel-bg); max-width: 900px; width: 100%; border-radius: 8px; padding: 18px 22px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+.modal-panel h2 { margin-top: 0; }
+.modal-panel .close-btn { float: right; }
+.modal-panel .run-block { border-top: 1px solid var(--border); padding-top: 10px; margin-top: 10px; }
+.modal-panel .run-block:first-of-type { border-top: none; padding-top: 0; }
+.modal-panel .run-block .meta { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.modal-panel .run-block .reasoning { font-size: 13.5px; line-height: 1.55; background: white; border: 1px solid var(--border); padding: 10px 14px; border-radius: 4px; white-space: pre-wrap; }
+.modal-panel .run-block .reasoning-concern { background: white; border: 1px solid var(--border); border-left: 3px solid var(--equity-stripe); padding: 10px 14px; border-radius: 4px; margin-bottom: 6px; font-size: 13.5px; line-height: 1.55; }
+.modal-panel .run-block .reasoning-concern .concern-header { font-weight: 600; font-size: 12px; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.modal-panel .run-block .reasoning-concern .concern-why,
+.modal-panel .run-block .reasoning-concern .concern-passage,
+.modal-panel .run-block .reasoning-concern .concern-context { margin-bottom: 6px; }
+.modal-panel .run-block .reasoning-concern .concern-label { font-weight: 600; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.4px; color: var(--muted); margin-right: 4px; }
+.modal-panel .run-block .raw-details { margin-top: 8px; font-size: 11px; }
+.modal-panel .run-block .raw-details summary { cursor: pointer; color: var(--muted); user-select: none; padding: 4px 0; }
+.modal-panel .run-block .raw-details summary:hover { color: var(--text); }
+.modal-panel .run-block .raw-output { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 11px; background: #f0eee6; padding: 8px 12px; border-radius: 4px; white-space: pre-wrap; margin: 6px 0 0 0; max-height: 320px; overflow-y: auto; }

@@ -1,0 +1,19 @@
+{
+  "file": "test_variant_a2_FULL_CORPUS_observation_2026-05-12_1057.partial.json",
+  "condition": "a2",
+  "model": "gemma12b",
+  "passes_complete": 3,
+  "n_students": 46,
+  "runs": [
+    1,
+    2,
+    3
+  ],
+  "n_exactly_identical": 46,
+  "pct_exact": 1.0,
+  "mean_seq_ratio": 1.0,
+  "min_seq_ratio": 1.0,
+  "mean_word_jaccard": 1.0,
+  "min_word_jaccard": 1.0,
+  "divergent_students": []
+}

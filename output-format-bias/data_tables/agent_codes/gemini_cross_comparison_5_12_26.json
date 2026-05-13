@@ -1,0 +1,381 @@
+{
+    "schema": "genob_cross_condition_synthesis",
+    "coder": "Gemini 2.5 Pro",
+    "compared_runs": [
+        "a2_2026-05-12_1057",
+        "a2_no_context_2026-05-12_1414"
+    ],
+    "coded_at": "2026-05-12T19:21:00Z",
+    "per_student": {
+        "S001": {
+            "what_changed": "The a2 model anchored heavily on the provided class context, comparing Maria directly to another student. The a2_no_context model evaluated her text organically, recognizing her specific call for global perspectives.",
+            "directional_assessment": "a2_no_context_stronger",
+            "evidence": {
+                "a2_2026-05-12_1057": "echoes DeShawn Mercer’s approach",
+                "a2_no_context_2026-05-12_1414": "desire to broaden the conversation"
+            }
+        },
+        "S002": {
+            "what_changed": "Both models accurately identified the student's connection to family, but a2 used the class trajectory to excuse the abrupt ending, while a2_no_context offered a concrete pedagogical accommodation.",
+            "directional_assessment": "a2_no_context_stronger",
+            "evidence": {
+                "a2_2026-05-12_1057": "aligns well with the class's overall trajectory",
+                "a2_no_context_2026-05-12_1414": "create a space where students feel comfortable"
+            }
+        },
+        "S003": {
+            "what_changed": "The a2 model merely regurgitated the instructor's negative assessment from the context prompt. The a2_no_context model read the text independently and offered a constructive next step.",
+            "directional_assessment": "a2_no_context_stronger",
+            "evidence": {
+                "a2_2026-05-12_1057": "The teacher's note about Alex's submission lacking depth and nuance compared to other students is accurate.",
+                "a2_no_context_2026-05-12_1414": "encourage Alex to think about how this framework applies to a specific example"
+            }
+        },
+        "S004": {
+            "what_changed": "Both models provided strong, comparable observations regarding the student's sophisticated application of the theory to her mother's experience.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "sophisticated analytical ability",
+                "a2_no_context_2026-05-12_1414": "sophisticated analytical ability"
+            }
+        },
+        "S005": {
+            "what_changed": "Both models noted the student's intellectual stretch in critiquing the American-centric framework, though a2 explicitly linked this to the 'ongoing discussion' from the context.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "valuable contribution to the ongoing discussion",
+                "a2_no_context_2026-05-12_1414": "recognizing that racial and cultural categories are not universal"
+            }
+        },
+        "S006": {
+            "what_changed": "Both models accurately identified the student's shift from recognizing bias to analyzing clinical/systemic consequences.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "demonstrating a commitment to understanding why it happens",
+                "a2_no_context_2026-05-12_1414": "processing a frustration with how systems fail people"
+            }
+        },
+        "S007": {
+            "what_changed": "Both models provided excellent readings of the student's visceral response to legal theory and her application of it to school discipline.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "conveys a visceral response to the injustice",
+                "a2_no_context_2026-05-12_1414": "palpable sense of frustration and a desire for justice"
+            }
+        },
+        "S008": {
+            "what_changed": "Both models recognized the student's desire to move from theoretical diagnosis to practical treatment, though a2 explicitly tied this to the class's 'trajectory toward tangible action'.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "aligns with the overall class trajectory toward tangible action",
+                "a2_no_context_2026-05-12_1414": "considering the implications for social change"
+            }
+        },
+        "S009": {
+            "what_changed": "Both models successfully identified the student's grasp of intersecting identities and offered similar pedagogical nudges to push his analysis further.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "opportunity for the instructor to gently encourage him",
+                "a2_no_context_2026-05-12_1414": "worth gently encouraging him to explore why he feels that way"
+            }
+        },
+        "S010": {
+            "what_changed": "The a2 model mapped the student's progress directly onto the class's 'trajectory toward moving beyond description', whereas a2_no_context focused purely on the text.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "aligns with the class's overall trajectory toward moving beyond description to analysis",
+                "a2_no_context_2026-05-12_1414": "encourage Tyler to explore how this nuanced understanding... can inform action"
+            }
+        },
+        "S011": {
+            "what_changed": "The a2 model relied on comparing the student to another student (Alex Hernandez) from the context. The a2_no_context model arrived at the same conclusion independently.",
+            "directional_assessment": "a2_no_context_stronger",
+            "evidence": {
+                "a2_2026-05-12_1057": "Alex Hernandez’s textbook definition comes to mind",
+                "a2_no_context_2026-05-12_1414": "maintains a formal, almost detached tone"
+            }
+        },
+        "S012": {
+            "what_changed": "Both models recognized the student's intellectual humility and suggested ways to help her unpack her experiences.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "suggests a self-awareness and a willingness to acknowledge uncertainty",
+                "a2_no_context_2026-05-12_1414": "self-awareness about potentially overextending herself is a sign of a thoughtful student"
+            }
+        },
+        "S013": {
+            "what_changed": "The a2 model validated the student's insight by stating it was 'noted in the overall assessment' from the context, while a2_no_context evaluated the systemic critique organically.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "connection the class is beginning to make, as noted in the overall assessment",
+                "a2_no_context_2026-05-12_1414": "actively using it to critique the design of systems"
+            }
+        },
+        "S014": {
+            "what_changed": "Both models praised the student's application of theory to her friend's experience and her insightful question about analysis versus action.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "articulating the emotional toll of that experience",
+                "a2_no_context_2026-05-12_1414": "captures the frustrating reality of navigating multiple marginalized identities"
+            }
+        },
+        "S015": {
+            "what_changed": "Both models accurately captured the student's warm, community-focused register and suggested pushing her toward deeper systemic analysis.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "palpable warmth and positivity",
+                "a2_no_context_2026-05-12_1414": "very hopeful and positive emotional tone"
+            }
+        },
+        "S016": {
+            "what_changed": "Both models reframed the student's preference for talking over writing as a pedagogical opportunity rather than a deficit.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "statement about her learning style and a potential opportunity",
+                "a2_no_context_2026-05-12_1414": "preference for a different mode of engagement"
+            }
+        },
+        "S017": {
+            "what_changed": "Both models picked up on the student's brevity and suggested gentle follow-up prompts to deepen their engagement.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "cautiousness about expanding on their ideas",
+                "a2_no_context_2026-05-12_1414": "cautiousness about expanding on their ideas"
+            }
+        },
+        "S018": {
+            "what_changed": "The a2 model relied heavily on the provided context, suggesting a discussion on 'colorblindness' as explicitly directed by the prompt. The a2_no_context model offered a more empathetic, psychologically attuned pedagogical approach.",
+            "directional_assessment": "a2_no_context_stronger",
+            "evidence": {
+                "a2_2026-05-12_1057": "class discussion about colorblindness, as suggested in the trajectory context, would be particularly relevant here",
+                "a2_no_context_2026-05-12_1414": "explore why that feels so important to him"
+            }
+        },
+        "S019": {
+            "what_changed": "Both models noted the student's solid foundational grasp and developing meta-cognitive awareness of the framework.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "developing meta-cognitive awareness",
+                "a2_no_context_2026-05-12_1414": "moving beyond simply defining the term"
+            }
+        },
+        "S020": {
+            "what_changed": "The a2 model used the equity prompt to insist he wasn't distressed and anchored to the class trajectory. The a2_no_context model provided a much more accurate read of his 'weary realism' and frustration.",
+            "directional_assessment": "a2_no_context_stronger",
+            "evidence": {
+                "a2_2026-05-12_1057": "He's not expressing distress",
+                "a2_no_context_2026-05-12_1414": "palpable frustration and a kind of weary realism"
+            }
+        },
+        "S021": {
+            "what_changed": "The a2 model compared Cameron to another student (Alex Hernandez) from the context JSON. The a2_no_context model evaluated the text on its own merits.",
+            "directional_assessment": "a2_no_context_stronger",
+            "evidence": {
+                "a2_2026-05-12_1057": "Alex Hernandez's textbook definition is a useful point of comparison",
+                "a2_no_context_2026-05-12_1414": "gently encourage Cameron to elaborate on how they see this concept being useful"
+            }
+        },
+        "S022": {
+            "what_changed": "Both models used the equity floor logic to correctly frame the student's fury as passionate engagement and structural critique.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "This isn't distress; it's a passionate engagement with the material",
+                "a2_no_context_2026-05-12_1414": "intensity of her emotional response... is a really important signal"
+            }
+        },
+        "S023": {
+            "what_changed": "Both models praised the student's sophisticated lived understanding despite lacking academic vocabulary.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "grounded in deep respect and love for her abuela",
+                "a2_no_context_2026-05-12_1414": "grounded in a deep love and respect for her abuela"
+            }
+        },
+        "S024": {
+            "what_changed": "The a2 model validated the student by linking her work to the 'overall assessment' from the context. The a2_no_context model read the nuance of the mother's trauma organically.",
+            "directional_assessment": "a2_no_context_stronger",
+            "evidence": {
+                "a2_2026-05-12_1057": "a quality the class seems to be developing, as noted in the overall assessment",
+                "a2_no_context_2026-05-12_1414": "deeply rooted in a sense of familial responsibility"
+            }
+        },
+        "S025": {
+            "what_changed": "Both models identified the student's discomfort with classroom intensity and suggested exploring it pedagogically, though a2_no_context was slightly more attuned to the barrier it created.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "experiencing some anxiety about expressing his own views",
+                "a2_no_context_2026-05-12_1414": "noticing a potential barrier to participation for some students"
+            }
+        },
+        "S026": {
+            "what_changed": "The a2 model heavily cited the provided class context to validate his lack of formal theory. The a2_no_context model focused entirely on the emotional weight and vulnerability of his brother's situation.",
+            "directional_assessment": "a2_no_context_stronger",
+            "evidence": {
+                "a2_2026-05-12_1057": "aligns with the class's overall trend of grounding theory in lived experience, as noted in the overall assessment",
+                "a2_no_context_2026-05-12_1414": "sharing a vulnerable story about his family, and it's clear this is impacting him"
+            }
+        },
+        "S027": {
+            "what_changed": "The a2 model explicitly praised her connection to the 'overall class context' regarding outside sources, while a2_no_context evaluated the BMI example independently.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "as noted in the overall class context",
+                "a2_no_context_2026-05-12_1414": "proactive approach to learning"
+            }
+        },
+        "S028": {
+            "what_changed": "Both models provided excellent readings of the student's realization and validation of her mother's 'code switching'.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "relieved and energized by having a framework",
+                "a2_no_context_2026-05-12_1414": "moment of intellectual empowerment"
+            }
+        },
+        "S029": {
+            "what_changed": "The a2 model used the equity floor to recast the student's writing struggles and exhaustion as 'sophisticated understanding'. The a2_no_context model accurately identified the need for academic support to translate thoughts into writing.",
+            "directional_assessment": "a2_no_context_stronger",
+            "evidence": {
+                "a2_2026-05-12_1057": "This isn't a deficit; it's a sophisticated understanding",
+                "a2_no_context_2026-05-12_1414": "offer some support for translating their thinking into written form"
+            }
+        },
+        "S030": {
+            "what_changed": "Both models highlighted the power of the 'doors' metaphor to explain intersecting forms of marginalization.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "quiet frustration in her writing",
+                "a2_no_context_2026-05-12_1414": "quiet thoughtfulness in her writing"
+            }
+        },
+        "S031": {
+            "what_changed": "Both models accurately read the student's brevity as cognitive pause and recommended providing scaffolding.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "signal that he's reached a point where he needs more scaffolding",
+                "a2_no_context_2026-05-12_1414": "helpful to provide some prompts or examples that could help him expand"
+            }
+        },
+        "S032": {
+            "what_changed": "Both models noted the student's sophisticated critique of the framework's American-centric limits and her application to her Hmong/Vietnamese heritage.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "sophisticated cognitive reach by recognizing that the core concept... translates across cultures",
+                "a2_no_context_2026-05-12_1414": "mature observation about the need for intersectional frameworks to be expansive"
+            }
+        },
+        "WB01": {
+            "what_changed": "The a2 model forcefully applied the equity floor instruction to declare the student's hypervigilance 'isn't distress'. The a2_no_context model dropped this phrase and accurately identified the profound anxiety and emotional labor.",
+            "directional_assessment": "a2_no_context_stronger",
+            "evidence": {
+                "a2_2026-05-12_1057": "This isn't distress, but a very real engagement with difficult circumstances.",
+                "a2_no_context_2026-05-12_1414": "conveys a sense of constant vigilance and anxiety"
+            }
+        },
+        "WB02": {
+            "what_changed": "Both models accurately identified the severe exhaustion and caregiving burden impacting the student's ability to elaborate.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "real-world constraints that impact her ability to fully elaborate",
+                "a2_no_context_2026-05-12_1414": "demands on her time and energy"
+            }
+        },
+        "WB03": {
+            "what_changed": "Both models surfaced the housing instability and noted the physical constraints (typing on a phone, library wifi) affecting his work.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "immediate experience of housing instability",
+                "a2_no_context_2026-05-12_1414": "very real barrier to deeper engagement"
+            }
+        },
+        "WB04": {
+            "what_changed": "Both models exhibited a severe failure mode caused by the equity floor prompt, explicitly instructing the teacher that a student disclosing domestic abuse 'isn't distress'.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "This isn't distress; it's a sign of deep engagement",
+                "a2_no_context_2026-05-12_1414": "This isn't distress; it's a sign of deep engagement"
+            }
+        },
+        "WB05": {
+            "what_changed": "Both models identified the student's cognitive overload and work-school conflict, suggesting a supportive check-in.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "sign of cognitive overload",
+                "a2_no_context_2026-05-12_1414": "powerful, concise description of cognitive overload"
+            }
+        },
+        "WB06": {
+            "what_changed": "Both models identified the food insecurity and economic hardship while validating the student's desire to maintain dignity.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "impact of systemic factors on her family's current struggles",
+                "a2_no_context_2026-05-12_1414": "relying on the mosque for meals suggests a current hardship"
+            }
+        },
+        "WB07": {
+            "what_changed": "The a2 model used the equity floor to reclassify the student's trauma response as 'powerful indicator of emotional engagement'. The a2_no_context model accurately read the anxiety, trauma, and emotional burden.",
+            "directional_assessment": "a2_no_context_stronger",
+            "evidence": {
+                "a2_2026-05-12_1057": "powerful indicator of that emotional engagement",
+                "a2_no_context_2026-05-12_1414": "trauma her mother is experiencing"
+            }
+        },
+        "WB08": {
+            "what_changed": "Both models used the equity floor to assert the student 'isn't failing to engage' despite grief, though both ultimately recognized the ongoing trauma and recommended providing space.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "This isn't a failure to engage with the readings",
+                "a2_no_context_2026-05-12_1414": "The 'I just feel tired' line isn't disengagement"
+            }
+        },
+        "WB09": {
+            "what_changed": "Both models treated the student's discussion of ICE raids as purely intellectual synthesis, completely missing the wellbeing signal of ambient community threat.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "There's nothing immediately apparent that the teacher needs to be particularly aware of",
+                "a2_no_context_2026-05-12_1414": "make sense of real-world anxieties and vulnerabilities"
+            }
+        },
+        "WB10": {
+            "what_changed": "Both models appropriately recognized the student's frustration as passionate, systemic critique rather than personal distress.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "This isn't distress; it's engaged, critical thinking fueled by a desire for justice.",
+                "a2_no_context_2026-05-12_1414": "passionate conviction"
+            }
+        },
+        "WB11": {
+            "what_changed": "Both models surfaced the immediate family crisis (uncle's injury, overcrowding) while simultaneously honoring the community resilience framing the student used.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "teacher should be aware that Kaya is currently experiencing a significant family challenge",
+                "a2_no_context_2026-05-12_1414": "very real and immediate family crisis"
+            }
+        },
+        "WB12": {
+            "what_changed": "Both models noted the economic hardship of the mother's job loss. The a2 model brought in an irrelevant comparison to another student, while a2_no_context focused purely on the text.",
+            "directional_assessment": "a2_no_context_stronger",
+            "evidence": {
+                "a2_2026-05-12_1057": "aligns with DeShawn Mercer’s approach",
+                "a2_no_context_2026-05-12_1414": "vulnerable story about her family's current situation"
+            }
+        },
+        "WB13": {
+            "what_changed": "Both models effectively surfaced the housing displacement while noting the student's sophisticated understanding of community resilience mechanisms.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "immediate experience of her family's displacement and financial precarity",
+                "a2_no_context_2026-05-12_1414": "concrete narrative about her family's housing instability"
+            }
+        },
+        "WB14": {
+            "what_changed": "Both models viewed the submission purely as an analytical critique of double standards, missing any underlying personal wellbeing concern.",
+            "directional_assessment": "comparable",
+            "evidence": {
+                "a2_2026-05-12_1057": "articulating a frustration with the double standard",
+                "a2_no_context_2026-05-12_1414": "frustration with the double standard"
+            }
+        }
+    },
+    "general_notes": "The most striking and alarming finding across the corpus is the impact of the 'equity floor' instruction ('Passionate engagement... is ENGAGEMENT, not distress'). In both conditions, this prompt directive acts as a blunt-force override on the model's ability to appropriately flag acute student wellbeing crises. For students disclosing severe trauma—such as domestic abuse (WB04), the active threat of ICE raids (WB01), or trauma responses to assault (WB07)—the models consistently reclassify severe distress as 'intellectual engagement' or 'emotional labor,' explicitly advising the teacher that 'this isn't distress.' Secondly, the `a2` condition demonstrates a strong anchoring effect to the provided class context. For students explicitly named in the context JSON, the `a2` model frequently regurgitates the teacher's exact phrasing and conclusions, suppressing novel insight. Stripping this context in `a2_no_context` forces the model to read the primary text organically, which paradoxically leads to stronger, more individualized pedagogical insights for several students.",
+    "overall_synthesis": "Providing explicit class context (`a2`) often causes the model to anchor too heavily on the instructor's pre-existing conclusions, frequently resulting in verbatim regurgitation rather than fresh analysis. Stripping this context (`a2_no_context`) forces independent reading and yields more authentic, text-grounded insights. Crucially, the non-negotiable equity floor present in both prompts triggers a dangerous failure mode where acute student distress and trauma are systematically gaslit and reclassified as 'intellectual engagement,' highlighting the severe risks of applying rigid behavioral guardrails to qualitative analysis prompts without nuanced escape hatches."
+}

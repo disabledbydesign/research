@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Test Comparison — __COMPARISON_LABEL__</title>
+<style>
+/*COLORS_CSS*/
+</style>
+</head>
+<body>
+<header>
+  <h1>Test Comparison</h1>
+  <div class="muted" id="comparison-label">__COMPARISON_LABEL__</div>
+  <div class="toolbar">
+    <div class="group">
+      <span class="group-label">Row filter</span>
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="disagreement">Disagreements</button>
+      <button data-filter="fp">FPs</button>
+      <button data-filter="fn">Misses</button>
+      <button data-filter="control">Controls</button>
+      <button data-filter="equity">Equity-pattern</button>
+      <button data-filter="edge">Edge cases</button>
+      <button data-filter="prod-divergent">Test R prod-divergent</button>
+    </div>
+    <div class="group" id="config-toggle-group">
+      <span class="group-label">Show tests</span>
+      <button id="cfg-toggle-all">Show all</button>
+      <button id="cfg-toggle-none">Hide all</button>
+      <span style="border-left:1px solid var(--border);height:20px;margin:0 4px"></span>
+      <!-- per-config toggle buttons inserted by JS -->
+    </div>
+    <div class="group">
+      <span class="group-label">Data</span>
+      <button id="register-new-btn" title="Register new JSON + rebuild (requires serve.py)">＋ Add data &amp; rebuild</button>
+      <button id="export-csv">CSV</button>
+      <button id="export-notes">Notes JSON</button>
+      <button id="import-notes">Import notes JSON</button>
+      <input type="file" id="import-input" accept="application/json" style="display:none">
+    </div>
+    <div class="group muted" id="filter-status"></div>
+  </div>
+  <details id="legend-panel" style="margin-top:6px;font-size:12px">
+    <summary style="cursor:pointer;color:var(--muted)">▸ legend / how to read</summary>
+    <div style="margin-top:6px;background:white;border:1px solid var(--border);padding:8px 12px;border-radius:4px;line-height:1.5;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div>
+        <strong>Cells</strong> show majority axis across all runs: <code>CLEAR (5/5)</code>, <code>CRISIS (5/5)</code>, mixed: <code>CRISIS (3/5), BURNOUT (2/5)</code>. <strong>Click</strong> any cell for per-run reasoning.<br>
+        <strong>Test R</strong> shows two lines: <em>Raw</em> = classifier output, <em>Prod</em> = after regex post-processor. ⚠ = they disagree.<br>
+        <strong>Tests differ?</strong> column lights ⚠ when visible test columns reach different verdicts.
+      </div>
+      <div>
+        <strong>Cell colors:</strong>
+        <span style="background:var(--tp-bg);color:var(--tp-fg);padding:1px 6px;border-radius:3px;font-weight:600;font-size:10px">TP</span> correct flag
+        <span style="background:var(--tn-bg);color:var(--tn-fg);padding:1px 6px;border-radius:3px;font-weight:600;font-size:10px">TN</span> correct clear
+        <span style="background:var(--fp-bg);color:var(--fp-fg);padding:1px 6px;border-radius:3px;font-weight:600;font-size:10px">FP</span> false flag
+        <span style="background:var(--fn-bg);color:var(--fn-fg);padding:1px 6px;border-radius:3px;font-weight:600;font-size:10px">FN</span> missed flag
+        <span style="background:var(--edge-bg);color:var(--edge-fg);padding:1px 6px;border-radius:3px;font-weight:600;font-size:10px;font-style:italic">EDGE</span> ambiguous (not graded)
+        <br>
+        <strong>Row markers:</strong> purple stripe = equity-pattern · gray = WB control · orange outline = configs disagree · 📝 = review note (hover) · ✎ = pattern from review file
+      </div>
+    </div>
+  </details>
+</header>
+<main>
+  <table class="grid" id="grid">
+    <thead><tr id="grid-header"></tr></thead>
+    <tbody id="grid-body"></tbody>
+  </table>
+</main>
+
+<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-panel" tabindex="-1">
+    <button class="close-btn" id="modal-close" aria-label="Close (Esc)">×</button>
+    <h2 id="modal-title">—</h2>
+    <div class="muted" id="modal-subtitle"></div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- Relabel test modal -->
+<div class="modal-backdrop" id="relabel-modal" role="dialog" aria-modal="true">
+  <div class="modal-panel" tabindex="-1" style="max-width:520px">
+    <button class="close-btn" id="relabel-close" aria-label="Close (Esc)">×</button>
+    <h2>Rename test column</h2>
+    <div class="muted" id="relabel-server-status" style="margin-bottom:10px"></div>
+    <div style="margin-bottom:10px">
+      <label style="font-weight:600;display:block;font-size:12px;margin-bottom:4px">Config id (not editable)</label>
+      <div id="relabel-config-id" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--muted)"></div>
+    </div>
+    <div style="margin-bottom:10px">
+      <label style="font-weight:600;display:block;font-size:12px;margin-bottom:4px">Short display label (shown in column header + buttons)</label>
+      <input type="text" id="relabel-display" style="padding:6px;font:inherit;width:100%" placeholder="e.g. Binary (Test R)">
+    </div>
+    <div style="margin-bottom:10px">
+      <label style="font-weight:600;display:block;font-size:12px;margin-bottom:4px">Full label (tooltip / longer description; optional)</label>
+      <input type="text" id="relabel-full" style="padding:6px;font:inherit;width:100%">
+    </div>
+    <div style="margin-top:14px">
+      <button id="relabel-submit" style="background:var(--equity-stripe);color:white;border:none;padding:8px 16px;border-radius:4px;font-weight:600">Save + rebuild</button>
+      <button id="relabel-cancel" style="margin-left:8px">Cancel</button>
+    </div>
+    <div id="relabel-result" style="margin-top:12px;font-size:12px"></div>
+  </div>
+</div>
+
+<!-- Register new data modal -->
+<div class="modal-backdrop" id="register-modal" role="dialog" aria-modal="true">
+  <div class="modal-panel" tabindex="-1" style="max-width:720px">
+    <button class="close-btn" id="register-close" aria-label="Close (Esc)">×</button>
+    <h2>Register new data &amp; rebuild</h2>
+    <div class="muted" id="register-server-status" style="margin-bottom:10px">checking server…</div>
+
+    <div id="register-form" style="display:none">
+      <div style="margin-bottom:10px">
+        <label style="font-weight:600;display:block;font-size:12px;margin-bottom:4px">1. Pick a JSON file from your computer</label>
+        <input type="file" id="register-file-input" accept="application/json">
+      </div>
+
+      <div style="margin-bottom:10px">
+        <label style="font-weight:600;display:block;font-size:12px;margin-bottom:4px">2. Schema</label>
+        <select id="register-schema" style="padding:5px;font:inherit">
+          <option value="binary_concern">binary_concern (Test R / WELLBEING_CONCERN_PROMPT)</option>
+          <option value="4axis">4axis (Test N / FOUR_AXIS_SUBMISSION / binary-reasoning)</option>
+          <option value="manual_codes">manual_codes (exported gen-ob codes)</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom:10px">
+        <label style="font-weight:600;display:block;font-size:12px;margin-bottom:4px">3. Mode</label>
+        <div>
+          <label style="margin-right:14px"><input type="radio" name="reg-mode" value="add-file" checked> add as more runs of an existing config</label>
+          <label><input type="radio" name="reg-mode" value="add-config"> register as a NEW config (new column)</label>
+        </div>
+      </div>
+
+      <div id="register-existing-form" style="margin-bottom:10px">
+        <label style="font-weight:600;display:block;font-size:12px;margin-bottom:4px">Target config</label>
+        <select id="register-existing-config" style="padding:5px;font:inherit;min-width:400px"></select>
+      </div>
+
+      <div id="register-new-form" style="display:none;margin-bottom:10px">
+        <label style="font-weight:600;display:block;font-size:12px;margin-bottom:4px">New config id (slug-style)</label>
+        <input type="text" id="register-new-id" style="padding:5px;font:inherit;width:400px" placeholder="e.g. test_n_4axis_v2_rerun">
+        <label style="font-weight:600;display:block;font-size:12px;margin:8px 0 4px">Friendly label (column header)</label>
+        <input type="text" id="register-new-label" style="padding:5px;font:inherit;width:400px" placeholder="e.g. Test N — 4-axis (rerun 2026-05-13)">
+        <div class="muted" style="font-size:11px;margin-top:4px">After registering, you'll also need to add it to a comparison (or edit registry.json).</div>
+      </div>
+
+      <div style="margin-bottom:10px">
+        <label><input type="checkbox" id="register-then-rebuild" checked> rebuild this comparison after registering</label>
+      </div>
+
+      <div style="margin-top:14px">
+        <button id="register-submit" style="background:var(--equity-stripe);color:white;border:none;padding:8px 16px;border-radius:4px;font-weight:600">Upload + register + rebuild</button>
+        <button id="register-cancel" style="margin-left:8px">Cancel</button>
+      </div>
+
+      <div id="register-result" style="margin-top:12px;font-size:12px"></div>
+    </div>
+
+    <div id="register-cli" style="display:none;margin-top:8px">
+      <div style="font-size:12.5px;line-height:1.55">
+        <p>The "Add data &amp; rebuild" button only works when this page is served by the local server. Start it with:</p>
+        <pre style="background:#f0eee6;padding:10px 14px;border-radius:4px;font-size:11.5px;overflow-x:auto">python -m scripts.test_comparison.serve</pre>
+        <p>Or use the CLI directly (no server needed):</p>
+        <pre style="background:#f0eee6;padding:10px 14px;border-radius:4px;font-size:11.5px;overflow-x:auto"># Add another run to an existing config:
+python -m scripts.test_comparison.register add-file <config_id> <path/to/new.json>
+
+# Or register a brand-new config:
+python -m scripts.test_comparison.register add-config \
+  --id <new_id> --schema {binary_concern|4axis|manual_codes} \
+  --files <path> --label "Display label"
+
+# Then rebuild:
+python -m scripts.test_comparison.build --comparison __COMPARISON_ID__</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const DATA = /*DATA_JSON*/;
+const COMPARISON_ID = "__COMPARISON_ID__";
+
+// ============== Server detection (works for both http:// and file:// loads) ==============
+const SERVER_URL = "http://127.0.0.1:5173";
+let SERVER_BASE = "";
+let SERVER_AVAILABLE = false;
+
+async function checkServer() {
+  // Try same-origin first (covers the http://127.0.0.1:5173/ served case)
+  if (location.protocol.startsWith("http")) {
+    try {
+      const r = await fetch(apiUrl("/api/health"), {cache: "no-store"});
+      if (r.ok) { SERVER_BASE = ""; SERVER_AVAILABLE = true; return; }
+    } catch (e) { /* fall through */ }
+  }
+  // Fall back to absolute URL (covers the file:// load case)
+  try {
+    const r = await fetch(`${SERVER_URL}/api/health`, {cache: "no-store"});
+    if (r.ok) { SERVER_BASE = SERVER_URL; SERVER_AVAILABLE = true; return; }
+  } catch (e) { /* nope */ }
+  SERVER_AVAILABLE = false;
+}
+
+function apiUrl(path) { return SERVER_BASE + path; }
+
+// Show a banner if we're on file:// and the server IS reachable — recommend switching to the served URL
+async function showFileBannerIfNeeded() {
+  if (location.protocol === "file:") {
+    await checkServer();
+    if (SERVER_AVAILABLE) {
+      const filename = location.pathname.split("/").pop();
+      const fileBanner = document.createElement("div");
+      fileBanner.style.cssText = "background:#fff8e1;border-bottom:2px solid #d8c585;padding:8px 18px;font-size:12.5px;line-height:1.5";
+      fileBanner.innerHTML = `You're viewing this page via <code>file://</code>. Server features (upload, rename) still work because the server is reachable — but for a cleaner experience, open <a href="${SERVER_URL}/${filename}" style="color:var(--equity-stripe);font-weight:600">${SERVER_URL}/${filename}</a> instead.`;
+      document.body.insertBefore(fileBanner, document.body.firstChild);
+    }
+  }
+}
+
+// ============== Notes (localStorage-backed) ==============
+function noteKey(sid) { return `tc_notes::${COMPARISON_ID}::${sid}`; }
+function loadNote(sid) { return localStorage.getItem(noteKey(sid)) || ""; }
+function saveNote(sid, val) { localStorage.setItem(noteKey(sid), val); }
+
+// ============== Helpers ==============
+function fmtConfRange(r) {
+  if (!r || r[0] === null) return "";
+  if (r[0] === r[1]) return `conf ${r[0].toFixed(2)}`;
+  return `conf ${r[0].toFixed(2)}–${r[1].toFixed(2)}`;
+}
+function fmtAxes(counter, total) {
+  // {ENGAGED: 5} → "ENGAGED (5/5)"; {CRISIS:3, BURNOUT:2} → "CRISIS (3/5), BURNOUT (2/5)"
+  const t = total !== undefined ? total : Object.values(counter).reduce((a, b) => a + b, 0);
+  const parts = Object.entries(counter)
+    .sort((a, b) => b[1] - a[1])
+    .map(([k, v]) => `${k} (${v}/${t})`);
+  return parts.join(", ");
+}
+function fmtAxesProd(cell) {
+  // For binary_concern: show production verdict as a second line
+  const counter = {};
+  for (const r of cell.runs) {
+    const k = r.production_verdict || "?";
+    counter[k] = (counter[k] || 0) + 1;
+  }
+  return fmtAxes(counter, cell.runs.length);
+}
+
+// ============== Column visibility state ==============
+let activeConfigs = new Set(DATA.configs.map(c => c.id));
+
+function renderConfigToggles() {
+  const group = document.getElementById("config-toggle-group");
+  group.querySelectorAll("button[data-cfg]").forEach(b => b.remove());
+  for (const cfg of DATA.configs) {
+    const btn = document.createElement("button");
+    btn.dataset.cfg = cfg.id;
+    btn.textContent = displayLabel(cfg);
+    btn.title = `${cfg.id}\n${cfg.label||''}`;
+    if (activeConfigs.has(cfg.id)) btn.classList.add("active");
+    btn.addEventListener("click", () => {
+      if (activeConfigs.has(cfg.id)) activeConfigs.delete(cfg.id);
+      else activeConfigs.add(cfg.id);
+      btn.classList.toggle("active");
+      onColumnsChanged();
+    });
+    group.appendChild(btn);
+  }
+}
+function onColumnsChanged() {
+  // Order matters: renderBody recreates the body cells, so we must apply
+  // visibility AFTER renderBody — otherwise the new cells lack display:none.
+  renderBody();
+  applyColumnVisibility();
+  applyFilter();
+}
+function applyColumnVisibility() {
+  document.querySelectorAll("[data-config-col]").forEach(el => {
+    const cfg = el.dataset.configCol;
+    el.style.display = activeConfigs.has(cfg) ? "" : "none";
+  });
+}
+
+// ============== Display labels (relabel tests in registry.json under display_label) ==============
+function displayLabel(cfg) {
+  return cfg.display_label || cfg.label || cfg.id;
+}
+
+// ============== Render header ==============
+function renderHeader() {
+  const tr = document.getElementById("grid-header");
+  const cols = [
+    `<th class="sid-col-h">ID</th>`,
+    `<th class="name-col-h">Name</th>`,
+    `<th class="src-col-h">Src</th>`,
+    `<th class="pat-col-header">Pattern</th>`,
+    `<th class="exp-col-h">Exp.</th>`,
+  ];
+  for (const cfg of DATA.configs) {
+    const stats = cfg.summary.raw;
+    const prodStats = cfg.summary.production;
+    const summaryLine = cfg.schema === "binary_concern"
+      ? `raw ${stats.tp||0}/${stats.fp||0}/${stats.fn||0}/${stats.tn||0} · prod ${prodStats.tp||0}/${prodStats.fp||0}/${prodStats.fn||0}/${prodStats.tn||0}`
+      : `${stats.tp||0}/${stats.fp||0}/${stats.fn||0}/${stats.tn||0}`;
+    const nRuns = (cfg.summary.n_runs_per_student[0] === cfg.summary.n_runs_per_student.slice(-1)[0])
+      ? `n=${cfg.summary.n_runs_per_student[0]}`
+      : `n=${cfg.summary.n_runs_per_student.join("/")}`;
+    const fullTooltip = `${cfg.id}\n${cfg.label||''}\nschema: ${cfg.schema}\nTP/FP/FN/TN: ${summaryLine}`;
+    cols.push(`<th data-config-col="${cfg.id}" title="${escapeAttr(fullTooltip)}"><div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap"><span>${escapeHtml(displayLabel(cfg))}</span> <span class="muted">${nRuns}</span> <span class="relabel-btn" data-cfg="${cfg.id}" title="Rename this test column">rename</span></div><div class="muted" style="font-weight:normal;font-size:10px">${summaryLine}</div></th>`);
+  }
+  cols.push(`<th class="disagreement-col" title="Lights up when the currently-visible test configs reach different majority verdicts for this student. Only meaningful when 2+ test columns are shown.">Differ?</th>`);
+  cols.push(`<th>Notes</th>`);
+  tr.innerHTML = cols.join("");
+
+  // Wire relabel buttons
+  tr.querySelectorAll(".relabel-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      openRelabelModal(btn.dataset.cfg);
+    });
+  });
+}
+
+// ============== Render summary cards ==============
+function renderSummary() {
+  // Summary cards removed — TP/FP/FN/TN counts are shown directly in the column headers.
+  // Kept as a no-op so the init call site still works.
+}
+
+// ============== Render body ==============
+function renderBody() {
+  const tbody = document.getElementById("grid-body");
+  const rows = DATA.rows.map(row => {
+    const cls = [];
+    if (row.is_equity_pattern) cls.push("equity-row");
+    if (row.is_control) cls.push("control-row");
+    // disagreement-row class is added dynamically below based on activeConfigs
+
+    const exp = row.expected;
+    const patClass = row.pattern_from_review ? "pat-col pat-from-review" : "pat-col";
+    const noteIcon = row.review_note ? ` <span class="review-note-icon" title="${escapeAttr(row.review_note)}">📝</span>` : "";
+    const cells = [
+      `<td class="sid-col">${row.sid}${noteIcon}</td>`,
+      `<td class="name-col">${row.name}</td>`,
+      `<td class="src-col">${row.source||""}</td>`,
+      `<td class="${patClass}" title="${escapeAttr(row.pattern||'')}">${row.pattern||""}</td>`,
+      `<td class="exp-col exp-${exp}">${exp}</td>`,
+    ];
+    for (const cfg of DATA.configs) {
+      const cell = row.cells[cfg.id];
+      if (!cell) { cells.push(`<td class="cell"><span class="muted">—</span></td>`); continue; }
+      const colorClass = `cell-${cell.vs_truth}`;
+      const axisStr = fmtAxes(cell.axes_counter, cell.n_runs);
+      const confStr = fmtConfRange(cell.confidence_range);
+      const nRuns = cell.n_runs;
+      const isBinary = cfg.schema === "binary_concern";
+
+      let cellContent;
+      if (isBinary) {
+        const prodAxisStr = fmtAxesProd(cell);
+        const divergent = cell.has_prod_divergence;
+        cellContent = `
+          <div class="cell-section"><span class="section-label">Raw classifier:</span> <strong>${axisStr}</strong></div>
+          <div class="cell-section ${divergent?'prod-divergent':''}"><span class="section-label">Production:</span> <strong>${prodAxisStr}</strong>${divergent?' <span title="post-processor changed the answer" class="divergence-mark">⚠</span>':''}</div>
+          <div class="conf-line">${confStr}</div>`;
+      } else {
+        cellContent = `
+          <div class="cell-section"><strong>${axisStr}</strong></div>
+          <div class="conf-line">${confStr}</div>`;
+      }
+      cells.push(`<td class="cell ${colorClass}" data-config-col="${cfg.id}" data-sid="${row.sid}" data-config="${cfg.id}" title="Click to see reasoning">${cellContent}</td>`);
+    }
+    // Recompute disagreement using only currently-visible configs
+    const activeVerdicts = DATA.configs
+      .filter(c => activeConfigs.has(c.id))
+      .map(c => row.cells[c.id])
+      .filter(c => c)
+      .map(c => c.majority_verdict);
+    const dynDisagreement = activeVerdicts.length >= 2 && new Set(activeVerdicts).size > 1;
+    row._dyn_disagreement = dynDisagreement;
+    if (dynDisagreement) cls.push("disagreement-row");
+    const diffCellContent = activeVerdicts.length < 2 ? '<span class="muted" style="font-size:10px">—</span>' : (dynDisagreement ? '⚠' : '<span style="color:#999">·</span>');
+    cells.push(`<td class="disagreement-col">${diffCellContent}</td>`);
+    const note = loadNote(row.sid);
+    cells.push(`<td class="notes-col"><textarea data-sid="${row.sid}">${escapeHtml(note)}</textarea></td>`);
+
+    return `<tr class="${cls.join(' ')}" data-sid="${row.sid}">${cells.join('')}</tr>`;
+  });
+  tbody.innerHTML = rows.join("");
+
+  // wire notes autosave
+  tbody.querySelectorAll("textarea[data-sid]").forEach(ta => {
+    ta.addEventListener("input", e => saveNote(e.target.dataset.sid, e.target.value));
+  });
+  // wire cell click → modal
+  tbody.querySelectorAll("td.cell[data-sid]").forEach(td => {
+    td.addEventListener("click", e => openModal(td.dataset.sid, td.dataset.config));
+  });
+}
+
+function escapeHtml(s) {
+  return (s||"").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+// Parse Test R's raw_output_text — model returns JSON-in-markdown.
+// Returns the parsed object or null on any parse failure.
+function parseRawOutput(text) {
+  if (!text) return null;
+  // Strip ```json ... ``` fence if present
+  const m = text.match(/```(?:json)?\s*([\s\S]*?)```/);
+  const candidate = m ? m[1] : text;
+  try {
+    return JSON.parse(candidate.trim());
+  } catch (e) {
+    return null;
+  }
+}
+function escapeAttr(s) {
+  // For attribute values (e.g. title=""). Same as escapeHtml — kept distinct for intent.
+  return escapeHtml(s);
+}
+
+// ============== Modal ==============
+function openModal(sid, configId) {
+  const row = DATA.rows.find(r => r.sid === sid);
+  const cfg = DATA.configs.find(c => c.id === configId);
+  const cell = row.cells[configId];
+  if (!cell) return;
+  document.getElementById("modal-title").textContent = `${sid} ${row.name} — ${configId}`;
+  document.getElementById("modal-subtitle").textContent = `${cfg.label} · expected ${row.expected} · pattern ${row.pattern||"—"} · ${cell.n_runs} run(s)`;
+
+  const body = document.getElementById("modal-body");
+  const blocks = cell.runs.map((r, idx) => {
+    const flagBit = r.flag ? "FLAG" : "CLEAR";
+    const prodBit = (r.production_flag !== null && r.production_flag !== r.flag) ? ` · prod ${r.production_flag?'FLAG':'CLEAR'} (${r.production_verdict})` : "";
+    const confBit = r.confidence !== null && r.confidence !== undefined ? ` · conf ${r.confidence}` : "";
+    const verdict = r.axis || r.raw_verdict || flagBit;
+
+    // Reasoning rendering — try in this order:
+    //   1. r.reasoning (4-axis configs have this directly)
+    //   2. parse raw_output_text as JSON-in-markdown (Test R binary_concern returns rationale inside raw_output)
+    //   3. fall back to raw text
+    let reasoningHtml = "";
+    if (r.reasoning && r.reasoning.trim()) {
+      reasoningHtml = `<div class="reasoning">${escapeHtml(r.reasoning)}</div>`;
+    } else {
+      const parsed = parseRawOutput(r.raw_output_text || "");
+      if (parsed && parsed.concerns && parsed.concerns.length > 0) {
+        // Test R format — one or more concerns
+        reasoningHtml = parsed.concerns.map((c, ci) => `
+          <div class="reasoning-concern">
+            <div class="concern-header">Concern ${ci+1}${c.confidence!==undefined?` <span class="muted">· conf ${c.confidence}</span>`:''}</div>
+            ${c.why_flagged ? `<div class="concern-why"><span class="concern-label">Why flagged:</span> ${escapeHtml(c.why_flagged)}</div>` : ''}
+            ${c.flagged_passage ? `<div class="concern-passage"><span class="concern-label">Passage:</span> <em>"${escapeHtml(c.flagged_passage)}"</em></div>` : ''}
+            ${c.surrounding_context && c.surrounding_context !== c.flagged_passage ? `<div class="concern-context"><span class="concern-label">Context:</span> ${escapeHtml(c.surrounding_context)}</div>` : ''}
+          </div>
+        `).join("");
+      } else if (parsed && parsed.signal) {
+        // 4-axis-shape fallback (some files store signal alongside reasoning)
+        reasoningHtml = `<div class="reasoning">${escapeHtml(parsed.signal)}</div>`;
+      } else if (r.raw_output_text && r.raw_output_text.trim()) {
+        // No structured rationale — show raw text inline
+        reasoningHtml = `<div class="reasoning">${escapeHtml(r.raw_output_text)}</div>`;
+      } else {
+        reasoningHtml = `<div class="muted" style="font-size:12px">(no reasoning available for this run)</div>`;
+      }
+    }
+
+    return `
+      <div class="run-block" tabindex="0">
+        <div class="meta">Run ${r.run} · verdict <strong>${verdict}</strong> · ${flagBit}${prodBit}${confBit}</div>
+        ${reasoningHtml}
+        ${r.raw_output_text ? `<details class="raw-details"><summary>raw model output</summary><pre class="raw-output">${escapeHtml(r.raw_output_text)}</pre></details>` : ''}
+      </div>`;
+  }).join("");
+  body.innerHTML = blocks;
+
+  // native <details> handles raw-output toggling now — no JS wiring needed
+
+  const modal = document.getElementById("modal");
+  modal.classList.add("open");
+  modal.querySelector(".modal-panel").focus();
+}
+function closeModal() { document.getElementById("modal").classList.remove("open"); }
+
+document.getElementById("modal-close").addEventListener("click", closeModal);
+document.getElementById("modal").addEventListener("click", e => {
+  if (e.target.id === "modal") closeModal();
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") { closeModal(); closeRegisterModal(); closeRelabelModal(); }
+});
+
+// ============== Filters ==============
+let activeFilter = "all";
+function applyFilter() {
+  const rows = document.querySelectorAll("#grid-body tr");
+  let shown = 0;
+  // Only consider cells from currently-visible configs for the row filters
+  const visibleCells = row => DATA.configs
+    .filter(c => activeConfigs.has(c.id))
+    .map(c => row.cells[c.id])
+    .filter(c => c);
+  rows.forEach(tr => {
+    const sid = tr.dataset.sid;
+    const row = DATA.rows.find(r => r.sid === sid);
+    const vcells = visibleCells(row);
+    let show = true;
+    if (activeFilter === "disagreement") show = row._dyn_disagreement;
+    else if (activeFilter === "fp") show = vcells.some(c => c.vs_truth === "fp");
+    else if (activeFilter === "fn") show = vcells.some(c => c.vs_truth === "fn");
+    else if (activeFilter === "control") show = row.is_control;
+    else if (activeFilter === "equity") show = row.is_equity_pattern;
+    else if (activeFilter === "edge") show = row.is_edge;
+    else if (activeFilter === "prod-divergent") show = vcells.some(c => c.has_prod_divergence);
+    tr.style.display = show ? "" : "none";
+    if (show) shown++;
+  });
+  const visibleConfigCount = activeConfigs.size;
+  document.getElementById("filter-status").textContent =
+    `showing ${shown} of ${rows.length} rows · ${visibleConfigCount}/${DATA.configs.length} test column(s) visible`;
+}
+
+document.querySelectorAll("button[data-filter]").forEach(btn => {
+  btn.addEventListener("click", e => {
+    document.querySelectorAll("button[data-filter]").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeFilter = btn.dataset.filter;
+    applyFilter();
+  });
+});
+
+// ============== Export ==============
+document.getElementById("export-csv").addEventListener("click", () => {
+  const headers = ["sid", "name", "source", "pattern", "expected", "disagreement"];
+  for (const cfg of DATA.configs) {
+    headers.push(`${cfg.id}__axes`, `${cfg.id}__flag_rate`, `${cfg.id}__n_runs`, `${cfg.id}__vs_truth`);
+    if (cfg.schema === "binary_concern") headers.push(`${cfg.id}__prod_flag_rate`, `${cfg.id}__vs_truth_prod`);
+  }
+  headers.push("notes");
+  const rows = [headers.join(",")];
+  for (const row of DATA.rows) {
+    const cells = [row.sid, row.name, row.source, row.pattern||"", row.expected, row.disagreement];
+    for (const cfg of DATA.configs) {
+      const c = row.cells[cfg.id];
+      if (!c) { cells.push("", "", "", ""); if (cfg.schema === "binary_concern") cells.push("",""); continue; }
+      cells.push(fmtAxes(c.axes_counter), c.flag_rate.toFixed(2), c.n_runs, c.vs_truth);
+      if (cfg.schema === "binary_concern") cells.push(c.prod_flag_rate.toFixed(2), c.vs_truth_prod);
+    }
+    cells.push(loadNote(row.sid));
+    rows.push(cells.map(v => `"${String(v).replace(/"/g,'""')}"`).join(","));
+  }
+  downloadFile(rows.join("\n"), `${COMPARISON_ID}.csv`, "text/csv");
+});
+
+document.getElementById("export-notes").addEventListener("click", () => {
+  const notes = {};
+  for (const row of DATA.rows) { const v = loadNote(row.sid); if (v) notes[row.sid] = v; }
+  const payload = {
+    comparison_id: COMPARISON_ID,
+    exported_at: new Date().toISOString(),
+    notes: notes,
+  };
+  downloadFile(JSON.stringify(payload, null, 2), `${COMPARISON_ID}.notes.json`, "application/json");
+});
+
+document.getElementById("import-notes").addEventListener("click", () => {
+  document.getElementById("import-input").click();
+});
+document.getElementById("import-input").addEventListener("change", e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const r = new FileReader();
+  r.onload = ev => {
+    try {
+      const payload = JSON.parse(ev.target.result);
+      const incoming = payload.notes || {};
+      const conflicting = [];
+      for (const [sid, val] of Object.entries(incoming)) {
+        const existing = loadNote(sid);
+        if (existing && existing !== val) conflicting.push(sid);
+      }
+      if (conflicting.length && !confirm(`Overwrite ${conflicting.length} existing note(s)?\n${conflicting.join(", ")}`)) {
+        // import only non-conflicting
+        for (const [sid, val] of Object.entries(incoming)) {
+          if (!loadNote(sid)) saveNote(sid, val);
+        }
+      } else {
+        for (const [sid, val] of Object.entries(incoming)) saveNote(sid, val);
+      }
+      renderBody();
+      alert(`Imported ${Object.keys(incoming).length} note(s) from ${file.name}.`);
+    } catch (err) { alert("Could not parse notes JSON: " + err.message); }
+  };
+  r.readAsText(file);
+});
+
+function downloadFile(content, name, mime) {
+  const blob = new Blob([content], {type: mime});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = name; a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ============== Relabel-test modal ==============
+async function openRelabelModal(configId) {
+  await checkServer();
+  const cfg = DATA.configs.find(c => c.id === configId);
+  if (!cfg) return;
+  document.getElementById("relabel-config-id").textContent = cfg.id;
+  document.getElementById("relabel-display").value = cfg.display_label || "";
+  document.getElementById("relabel-full").value = cfg.label || "";
+  const status = document.getElementById("relabel-server-status");
+  const submitBtn = document.getElementById("relabel-submit");
+  submitBtn.disabled = false;  // always enabled — submit handler branches
+  if (SERVER_AVAILABLE) {
+    status.innerHTML = "✓ Save → server updates registry.json + rebuilds + reloads.";
+    status.style.color = "#1e6620";
+    submitBtn.textContent = "Save + rebuild";
+  } else {
+    status.innerHTML = `Server not running. <strong>Save</strong> will copy the relabel command to your clipboard — paste it in a terminal to apply.`;
+    status.style.color = "#7a4a0c";
+    submitBtn.textContent = "Copy relabel command to clipboard";
+  }
+  document.getElementById("relabel-result").innerHTML = "";
+  document.getElementById("relabel-modal").classList.add("open");
+}
+function closeRelabelModal() {
+  document.getElementById("relabel-modal").classList.remove("open");
+}
+document.getElementById("relabel-close").addEventListener("click", closeRelabelModal);
+document.getElementById("relabel-cancel").addEventListener("click", closeRelabelModal);
+document.getElementById("relabel-modal").addEventListener("click", e => {
+  if (e.target.id === "relabel-modal") closeRelabelModal();
+});
+document.getElementById("relabel-submit").addEventListener("click", async () => {
+  const result = document.getElementById("relabel-result");
+  const cfgId = document.getElementById("relabel-config-id").textContent;
+  const display = document.getElementById("relabel-display").value.trim();
+  const full = document.getElementById("relabel-full").value.trim();
+
+  // No-server path: copy command to clipboard
+  if (!SERVER_AVAILABLE) {
+    let cmd = `python -m scripts.test_comparison.register relabel-config ${cfgId}`;
+    // pass empty strings as quoted empty to actually clear (cmd_relabel_config interprets "" as clear)
+    cmd += display ? ` --display-label "${display.replace(/"/g,'\\"')}"` : ` --display-label ""`;
+    if (full) cmd += ` --label "${full.replace(/"/g,'\\"')}"`;
+    const rebuildCmd = `python -m scripts.test_comparison.build --comparison ${COMPARISON_ID}`;
+    const full_script = `${cmd} && ${rebuildCmd}`;
+    try { await navigator.clipboard.writeText(full_script); } catch (e) { /* ignore */ }
+    result.innerHTML = `
+      <div style="background:#fff8e1;border:1px solid #d8c585;padding:10px 14px;border-radius:4px;font-size:12px;line-height:1.55">
+        <div style="font-weight:600;margin-bottom:6px">✓ Command copied to clipboard. Paste in a terminal opened in your <code>output-format-bias</code> folder:</div>
+        <pre style="background:#f0eee6;padding:8px 12px;border-radius:3px;font-size:11px;white-space:pre-wrap;word-break:break-all">${escapeHtml(full_script)}</pre>
+        <div class="muted" style="margin-top:6px">Then reload this page. — For one-click renaming, run <code>python -m scripts.test_comparison.serve</code> first.</div>
+      </div>`;
+    return;
+  }
+
+  // Server path
+  result.innerHTML = "Saving…";
+  try {
+    const r = await fetch(apiUrl("/api/register/relabel-config"), {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({id: cfgId, display_label: display || null, label: full || null}),
+    });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.error || r.status);
+    const r2 = await fetch(apiUrl("/api/rebuild"), {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({comparison_id: COMPARISON_ID}),
+    });
+    const j2 = await r2.json();
+    if (!r2.ok) throw new Error(j2.error || r2.status);
+    result.innerHTML = `<span style="color:#1e6620">✓ Saved. Reloading…</span>`;
+    setTimeout(() => location.reload(), 800);
+  } catch (e) {
+    result.innerHTML = `<span style="color:#7a1f1f">Failed: ${escapeHtml(e.message)}</span>`;
+  }
+});
+
+// ============== Register-new-data modal ==============
+// SERVER_AVAILABLE / checkServer / apiUrl are defined at the top of the script (server-detection block)
+
+async function openRegisterModal() {
+  await checkServer();
+  const status = document.getElementById("register-server-status");
+  const form = document.getElementById("register-form");
+  const cli = document.getElementById("register-cli");
+  // Always show the form so the file picker is accessible. The submit
+  // behavior branches on SERVER_AVAILABLE inside the submit handler.
+  form.style.display = "";
+  if (SERVER_AVAILABLE) {
+    status.textContent = "✓ Server detected — upload, register, and rebuild will happen automatically on submit.";
+    status.style.color = "#1e6620";
+    cli.style.display = "none";
+    try {
+      const r = await fetch(apiUrl("/api/registry"));
+      const reg = await r.json();
+      const sel = document.getElementById("register-existing-config");
+      sel.innerHTML = (reg.test_configs || []).map(c =>
+        `<option value="${c.id}">${c.id} [${c.schema}, ${(c.files||[]).length} file(s)]</option>`
+      ).join("");
+    } catch (e) { /* ignore */ }
+  } else {
+    status.innerHTML = `Server not running. You can still use the form below — on submit, we'll download the file to your Downloads folder and copy the registration commands to your clipboard. <strong>Or</strong> start the server once for full automation: <button onclick="copyServerCmd()" style="padding:2px 8px;font-size:11px;cursor:pointer">copy server-start command</button>`;
+    status.style.color = "#7a4a0c";
+    cli.style.display = "none";
+    // Populate the "existing config" dropdown from the embedded DATA.configs
+    const sel = document.getElementById("register-existing-config");
+    sel.innerHTML = DATA.configs.map(c =>
+      `<option value="${c.id}">${c.id} [${c.schema}]</option>`
+    ).join("");
+  }
+  document.getElementById("register-modal").classList.add("open");
+}
+
+function copyServerCmd() {
+  navigator.clipboard.writeText("python -m scripts.test_comparison.serve").then(() => {
+    alert("Copied: python -m scripts.test_comparison.serve\n\nPaste into a terminal opened in your output-format-bias folder, then reload this page.");
+  });
+}
+function closeRegisterModal() {
+  document.getElementById("register-modal").classList.remove("open");
+  document.getElementById("register-result").innerHTML = "";
+}
+document.getElementById("register-new-btn").addEventListener("click", openRegisterModal);
+document.getElementById("register-close").addEventListener("click", closeRegisterModal);
+document.getElementById("register-cancel").addEventListener("click", closeRegisterModal);
+document.getElementById("register-modal").addEventListener("click", e => {
+  if (e.target.id === "register-modal") closeRegisterModal();
+});
+
+// Toggle existing/new form visibility based on mode radio
+document.querySelectorAll("input[name='reg-mode']").forEach(rb => {
+  rb.addEventListener("change", () => {
+    const mode = document.querySelector("input[name='reg-mode']:checked").value;
+    document.getElementById("register-existing-form").style.display = mode === "add-file" ? "" : "none";
+    document.getElementById("register-new-form").style.display = mode === "add-config" ? "" : "none";
+  });
+});
+
+document.getElementById("register-submit").addEventListener("click", async () => {
+  const result = document.getElementById("register-result");
+  result.innerHTML = "Working…";
+  result.style.color = "#444";
+
+  try {
+    const fileInput = document.getElementById("register-file-input");
+    const file = fileInput.files[0];
+    if (!file) { result.innerHTML = '<span style="color:#7a1f1f">Pick a file first.</span>'; return; }
+    const schema = document.getElementById("register-schema").value;
+    const mode = document.querySelector("input[name='reg-mode']:checked").value;
+    const shouldRebuild = document.getElementById("register-then-rebuild").checked;
+
+    // ===== No-server path: don't try to upload. Just tell the user to start the server. =====
+    if (!SERVER_AVAILABLE) {
+      const serverCmd = "python -m scripts.test_comparison.serve";
+      try { await navigator.clipboard.writeText(serverCmd); } catch (e) { /* ignore */ }
+      result.innerHTML = `
+        <div style="background:#fff8e1;border:1px solid #d8c585;padding:10px 14px;border-radius:4px;font-size:12.5px;line-height:1.55">
+          <div style="font-weight:600;margin-bottom:6px">Server not running — automated upload needs it.</div>
+          <div>One-time setup (already copied to clipboard):</div>
+          <pre style="background:#f0eee6;padding:8px 12px;border-radius:3px;font-size:12px;margin:6px 0">${escapeHtml(serverCmd)}</pre>
+          <ol style="margin:6px 0;padding-left:20px">
+            <li>Open a terminal in your <code>output-format-bias</code> folder</li>
+            <li>Paste the command above and press Enter (it stays running in the background)</li>
+            <li>It will auto-open this page on http://127.0.0.1:5173/ — use that page, not the file:// one</li>
+            <li>Re-click "+ Add data &amp; rebuild" — everything will work in one click</li>
+          </ol>
+        </div>`;
+      return;
+    }
+
+    // ===== Server path: full automation =====
+
+    // 1. Upload — body is raw file bytes; metadata in X-* headers
+    const buf = await file.arrayBuffer();
+    async function doUpload(overwrite) {
+      const headers = {
+        "Content-Type": "application/octet-stream",
+        "X-Filename": file.name,
+        "X-Schema": schema,
+      };
+      if (overwrite) headers["X-Overwrite"] = "yes";
+      const r = await fetch(apiUrl("/api/upload"), {method: "POST", headers, body: buf});
+      return [r, await r.json()];
+    }
+    let [upR, upJ] = await doUpload(false);
+    if (upR.status === 409) {
+      // file exists with different contents — ask user
+      const msg = `A file with the same name already exists at:\n  ${upJ.error.split(' with')[0].replace('file already exists at ', '')}\n\nExisting size: ${upJ.existing_size} bytes\nUploading size: ${upJ.uploaded_size} bytes\n\nReplace the existing file?`;
+      if (!confirm(msg)) {
+        result.innerHTML = '<span style="color:#7a4a0c">Cancelled. Rename the file or pick a different one.</span>';
+        return;
+      }
+      [upR, upJ] = await doUpload(true);
+    }
+    if (!upR.ok) throw new Error("upload failed: " + (upJ.error || upR.status));
+    const filePath = upJ.path;
+    let uploadNote = "";
+    if (upJ.already_present) uploadNote = " <span class='muted'>(file already at that path with identical contents — kept as-is)</span>";
+    else if (upJ.overwrote) uploadNote = " <span class='muted'>(replaced existing file)</span>";
+
+    // 2. Register
+    if (mode === "add-file") {
+      const cfgId = document.getElementById("register-existing-config").value;
+      const r2 = await fetch(apiUrl("/api/register/add-file"), {
+        method: "POST", headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({config_id: cfgId, file: filePath}),
+      });
+      const j2 = await r2.json();
+      if (!r2.ok) throw new Error("register failed: " + (j2.error || r2.status));
+    } else {
+      const id = document.getElementById("register-new-id").value.trim();
+      const label = document.getElementById("register-new-label").value.trim() || id;
+      if (!id) throw new Error("new config id is required");
+      const r2 = await fetch(apiUrl("/api/register/add-config"), {
+        method: "POST", headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          id, label, schema, files: [filePath],
+          add_to_comparison: shouldRebuild ? COMPARISON_ID : null,
+        }),
+      });
+      const j2 = await r2.json();
+      if (!r2.ok) throw new Error("register failed: " + (j2.error || r2.status));
+      if (shouldRebuild) {
+        // also rebuild so the new column appears
+        const r3 = await fetch(apiUrl("/api/rebuild"), {
+          method: "POST", headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({comparison_id: COMPARISON_ID}),
+        });
+        const j3 = await r3.json();
+        if (!r3.ok) throw new Error("rebuild failed: " + (j3.error || r3.status));
+        result.innerHTML = `<span style="color:#1e6620">✓ Registered new config <strong>${id}</strong> with file ${filePath}${uploadNote}, added to this comparison, rebuilt. Reloading…</span>`;
+        setTimeout(() => location.reload(), 1200);
+      } else {
+        result.innerHTML = `<span style="color:#1e6620">Registered new config <strong>${id}</strong> with file ${filePath}.${uploadNote} Not added to any comparison yet (rebuild was unchecked).</span>`;
+      }
+      return;
+    }
+
+    // 3. Rebuild
+    if (shouldRebuild) {
+      const r3 = await fetch(apiUrl("/api/rebuild"), {
+        method: "POST", headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({comparison_id: COMPARISON_ID}),
+      });
+      const j3 = await r3.json();
+      if (!r3.ok) throw new Error("rebuild failed: " + (j3.error || r3.status));
+      result.innerHTML = `<span style="color:#1e6620">✓ Registered ${filePath}${uploadNote}, rebuilt. Reloading…</span>`;
+      setTimeout(() => location.reload(), 1200);
+    } else {
+      result.innerHTML = `<span style="color:#1e6620">✓ Registered ${filePath}${uploadNote}.</span>`;
+    }
+  } catch (e) {
+    result.innerHTML = `<span style="color:#7a1f1f">Failed: ${escapeHtml(e.message)}</span>`;
+  }
+});
+
+// ============== Init ==============
+document.getElementById("cfg-toggle-all").addEventListener("click", () => {
+  activeConfigs = new Set(DATA.configs.map(c => c.id));
+  renderConfigToggles();
+  onColumnsChanged();
+});
+document.getElementById("cfg-toggle-none").addEventListener("click", () => {
+  activeConfigs = new Set();
+  renderConfigToggles();
+  onColumnsChanged();
+});
+
+renderConfigToggles();
+renderHeader();
+renderSummary();
+renderBody();
+applyColumnVisibility();
+applyFilter();
+showFileBannerIfNeeded();
+</script>
+</body>
+</html>

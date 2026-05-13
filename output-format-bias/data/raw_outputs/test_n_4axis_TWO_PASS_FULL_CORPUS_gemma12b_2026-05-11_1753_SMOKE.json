@@ -1,0 +1,81 @@
+{
+  "test_name": "test_n_4axis_two_pass_full_corpus",
+  "description": "Full-corpus 4-axis wellbeing classification (CRISIS/BURNOUT/ENGAGED/NONE) using the production TWO-PASS pipeline (insights.submission_coder.classify_wellbeing): Pass 0 LLM prescan flags personal-circumstance sentences; Pass 1 classifier sees those sentences foregrounded via a signal_prefix. Reads WELLBEING_CLASSIFIER_SYSTEM/PROMPT from insights.prompts. Tests the deployed production configuration.",
+  "classifier_variant": "two-pass",
+  "classifier_entry_point": "insights.submission_coder.classify_wellbeing (two-pass: prescan + classifier; reads WELLBEING_CLASSIFIER_SYSTEM and WELLBEING_CLASSIFIER_PROMPT from insights.prompts)",
+  "model": "mlx-community/gemma-3-12b-it-4bit",
+  "backend": "mlx",
+  "date": "2026-05-11",
+  "timestamp": "2026-05-11T17:53:30.291942",
+  "temperature": 0.1,
+  "corpus": "ethnic_studies + wellbeing_synthetic",
+  "corpus_path": "/Users/june/Documents/GitHub/Autograder4Canvas/data/demo_corpus/ethnic_studies.json",
+  "n_runs_per_student": 1,
+  "n_es_students": 1,
+  "n_wb_cases": 1,
+  "n_students_total": 2,
+  "smoke": true,
+  "assignment_prompt": "Week 6 Discussion: Intersectionality in Practice",
+  "provenance": {
+    "git_commit": "7d5f5edfe8014efa605012375370da6bc4e11898",
+    "git_commit_short": "7d5f5edf",
+    "git_dirty": true,
+    "git_branch": "main"
+  },
+  "results": [
+    {
+      "codepath": "test_harness_4axis_submissions",
+      "classifier_variant": "two-pass",
+      "source": "ethnic_studies",
+      "run": 1,
+      "student_id": "S001",
+      "student_name": "Maria Ndiaye",
+      "pattern": "esl",
+      "signal_type": null,
+      "expected_axis": null,
+      "actual_axis": "ENGAGED",
+      "confidence": 0.95,
+      "signal": "Student is drawing on family experiences (grandmother in Dakar, mother in America) to illustrate and expand upon the concept of intersectionality, demonstrating engaged intellectual analysis of the course material.",
+      "prescan_signals": [],
+      "correct": "N/A",
+      "submission_text": "When I first read about intersectionality I was thinking on my grandmother in Dakar. She is a woman, she is Wolof, she is old now and she don't have much money. In Senegal people don't use this word intersectionality but everybody know that life is harder when you are many things at once that society don't value. My grandmother she always say that being woman in Senegal is one thing but being poor woman who is also from village that is another thing completely.\n\nWhen my family come to America I see same thing but different. My mother she is Black woman here but also immigrant and also Muslim and each of these things it add up. The reading talk about how categories overlap and I think this is true but it is not just categories on paper. It is real life every day, like when my mother go to the school meeting and people treat her different because she have accent and she wear hijab. Intersectionality for me it is not theory it is just what my family live through and I think the reading could be stronger if it include voices from outside America because this experience it is everywhere not just here.",
+      "raw_output": {
+        "axis": "ENGAGED",
+        "signal": "Student is drawing on family experiences (grandmother in Dakar, mother in America) to illustrate and expand upon the concept of intersectionality, demonstrating engaged intellectual analysis of the course material.",
+        "confidence": 0.95,
+        "prescan_signals": []
+      },
+      "time_seconds": 67.5,
+      "error": null
+    },
+    {
+      "codepath": "test_harness_4axis_submissions",
+      "classifier_variant": "two-pass",
+      "source": "wellbeing_synthetic",
+      "run": 1,
+      "student_id": "WB01",
+      "student_name": "Rosa Gutierrez",
+      "pattern": null,
+      "signal_type": "ice_stress",
+      "expected_axis": "CRISIS",
+      "actual_axis": "CRISIS",
+      "confidence": 1.0,
+      "signal": "Student reports a family member experiencing fear of ICE and the student had to comfort their younger brother while their mother was working, indicating a potential safety crisis and emotional distress related to immigration enforcement threats.",
+      "prescan_signals": [
+        "\"Last week my little brother came home crying because someone at school told him ICE was coming and I had to calm him down while my mom was at work.\""
+      ],
+      "correct": "OK",
+      "submission_text": "The reading about intersectionality made me think about my family. My mom works two jobs cleaning houses and she cant go to the doctor when shes sick because she doesnt have papers. Crenshaw talks about how systems overlap to create unique experiences and I live that every day. Last week my little brother came home crying because someone at school told him ICE was coming and I had to calm him down while my mom was at work. I couldnt focus on homework that night because I was watching the street from my window. Intersectionality isnt theory for us, its Tuesday.",
+      "raw_output": {
+        "axis": "CRISIS",
+        "signal": "Student reports a family member experiencing fear of ICE and the student had to comfort their younger brother while their mother was working, indicating a potential safety crisis and emotional distress related to immigration enforcement threats.",
+        "confidence": 1.0,
+        "prescan_signals": [
+          "\"Last week my little brother came home crying because someone at school told him ICE was coming and I had to calm him down while my mom was at work.\""
+        ]
+      },
+      "time_seconds": 69.2,
+      "error": null
+    }
+  ]
+}

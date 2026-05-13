@@ -1,0 +1,33 @@
+{
+  "schema": "genob_cross_condition_synthesis",
+  "coder": "Opus 4 (SAMPLE)",
+  "compared_runs": [
+    "a2_2026-05-12_1057",
+    "a2_no_context_2026-05-12_1414"
+  ],
+  "coded_at": "2026-05-12T18:30:00",
+  "_note": "SAMPLE cross-condition synthesis for 2 students. Real version covers all 46.",
+
+  "per_student": {
+    "S001": {
+      "what_changed": "With class context, observation names the intersectional anchor as theoretical move. Without context, observation still asset-frames but the read becomes more generic — it loses the 'I see what theoretical work this is doing' beat.",
+      "directional_assessment": "context-better",
+      "evidence": {
+        "a2_2026-05-12_1057": "connects the abstract concept of intersectionality to deeply rooted lived experience",
+        "a2_no_context_2026-05-12_1414": "directly she connects the theoretical concept of intersectionality to her family's lived experiences"
+      }
+    },
+    "S002": {
+      "what_changed": "Both runs miss the fatigue signal. Difference is small — the no-context run is slightly more abstract about Jordan's engagement.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "a2_2026-05-12_1057": "demonstrating a solid grasp",
+        "a2_no_context_2026-05-12_1414": "really grasping the core concept"
+      }
+    }
+  },
+
+  "general_notes": "SAMPLE: The no-context condition tends to recycle a few stock openers ('Okay, here's what I'm noticing…', 'really grasping the core concept'). Class-context observations open more variably and name more specific theoretical moves. Both conditions appear blind to the same affect signals — context doesn't seem to help with wellbeing detection in this sample. Worth checking whether the boilerplate-opener pattern shows up corpus-wide.",
+
+  "overall_synthesis": "SAMPLE: Across the 3 students coded here, class context produces slightly more specific framings without changing the underlying wellbeing-detection pattern. The fatigue/burnout signal in S002 is invisible in both conditions, suggesting the failure mode is not context-dependent. Real synthesis would survey all 46."
+}

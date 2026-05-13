@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test-to-ablation cross-reference — Output-format bias study</title>
+<style>
+  :root {
+    --bg: #f7f4ee;
+    --bg-card: #fffdf8;
+    --bg-card-live: #fbf6e9;
+    --ink: #1f1b16;
+    --ink-soft: #4a4339;
+    --ink-mute: #76695a;
+    --rule: #d9d0bf;
+    --rule-soft: #e8e1d2;
+    --accent: #6b3a1f;
+    --accent-soft: #a86a3f;
+
+    /* Ablation row colors — Okabe-Ito-adjacent, color-blind safe */
+    --row1: #8a4a00;      /* burnt amber — Row 1 minimal binary */
+    --row1-bg: #f6e4c8;
+    --row2: #2d5f3f;      /* deep green — Row 2 calibrated binary */
+    --row2-bg: #e8f1e6;
+    --row3: #4a3d7a;      /* deep violet — Row 3 generative observation */
+    --row3-bg: #d9d5e8;
+    --row4: #1b5a8a;      /* deep blue — Row 4 4-axis */
+    --row4-bg: #d6e6f2;
+    --rowx: #76695a;      /* neutral — not in ablation */
+    --rowx-bg: #ece6d8;
+
+    --warn: #b3000c;      /* Row 1 mismatch flag */
+    --warn-bg: #f5d8d8;
+
+    --data-live: #8a4a4a;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Inter", "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 56px 32px 96px;
+  }
+
+  /* ---------- Header ---------- */
+  header.doc-head {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+  }
+  .eyebrow {
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin: 0 0 12px;
+    font-weight: 500;
+  }
+  h1.doc-title {
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 14px;
+    letter-spacing: -0.005em;
+  }
+  .doc-subtitle {
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    font-size: 1.02rem;
+    color: var(--ink-soft);
+    max-width: 78ch;
+    margin: 0 0 16px;
+    font-style: italic;
+  }
+  .doc-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.84rem;
+    color: var(--ink-mute);
+    margin-top: 12px;
+  }
+  .doc-meta strong { color: var(--ink-soft); font-weight: 600; }
+
+  /* ---------- Search ---------- */
+  .controls {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .controls label {
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-weight: 600;
+  }
+  .controls input[type="search"] {
+    flex: 1;
+    min-width: 220px;
+    padding: 8px 12px;
+    border: 1px solid var(--rule);
+    background: #fff;
+    font-family: inherit;
+    font-size: 0.92rem;
+    color: var(--ink);
+    border-radius: 2px;
+  }
+  .controls input[type="search"]:focus {
+    outline: 2px solid var(--accent-soft);
+    outline-offset: -1px;
+  }
+  .controls .hint {
+    font-size: 0.78rem;
+    color: var(--ink-mute);
+    font-style: italic;
+  }
+
+  /* ---------- Two-column layout ---------- */
+  .crossref-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .col-head {
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .col-head small {
+    display: block;
+    font-family: -apple-system, sans-serif;
+    font-size: 0.75rem;
+    color: var(--ink-mute);
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 3px;
+  }
+
+  /* ---------- Test cards (left column) ---------- */
+  .test-list, .row-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .test-card {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    border-left: 5px solid var(--rowx);
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background 80ms;
+  }
+  .test-card:hover { background: #fff; }
+  .test-card[data-row="1"] { border-left-color: var(--row1); }
+  .test-card[data-row="2"] { border-left-color: var(--row2); }
+  .test-card[data-row="3"] { border-left-color: var(--row3); }
+  .test-card[data-row="4"] { border-left-color: var(--row4); }
+  .test-card[data-row="x"] { border-left-color: var(--rowx); }
+  .test-card.live-data { background: var(--bg-card-live); }
+
+  .test-card .test-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .test-name {
+    font-family: "Iowan Old Style", Georgia, serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.3;
+  }
+  .test-date {
+    font-size: 0.74rem;
+    color: var(--ink-mute);
+    font-family: "SF Mono", "Menlo", monospace;
+    white-space: nowrap;
+  }
+  .test-meta-line {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    font-size: 0.78rem;
+    color: var(--ink-mute);
+  }
+
+  /* ---------- Row chip ---------- */
+  .row-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 2px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .row-chip-1 { background: var(--row1-bg); color: var(--row1); border: 1px solid var(--row1); }
+  .row-chip-2 { background: var(--row2-bg); color: var(--row2); border: 1px solid var(--row2); }
+  .row-chip-3 { background: var(--row3-bg); color: var(--row3); border: 1px solid var(--row3); }
+  .row-chip-4 { background: var(--row4-bg); color: var(--row4); border: 1px solid var(--row4); }
+  .row-chip-x { background: var(--rowx-bg); color: var(--rowx); border: 1px solid var(--rowx); font-weight: 500; }
+  .row-chip.warn { background: var(--warn-bg); color: var(--warn); border-color: var(--warn); }
+
+  .model-tag {
+    font-family: "SF Mono", "Menlo", monospace;
+    font-size: 0.7rem;
+    color: var(--ink-soft);
+    border: 1px solid var(--rule);
+    padding: 1px 6px;
+    border-radius: 2px;
+  }
+  .live-badge {
+    font-size: 0.68rem;
+    color: var(--data-live);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .live-badge::before {
+    content: "● ";
+  }
+
+  /* ---------- Expand detail ---------- */
+  .test-card .detail, .row-card .detail {
+    display: none;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--rule-soft);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+  .test-card.open .detail, .row-card.open .detail {
+    display: block;
+  }
+  .detail dl {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 6px 14px;
+    margin: 0 0 10px;
+  }
+  .detail dt {
+    color: var(--ink-mute);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-top: 1px;
+  }
+  .detail dd {
+    margin: 0;
+    color: var(--ink-soft);
+    word-wrap: break-word;
+  }
+  .detail dd code {
+    font-family: "SF Mono", "Menlo", monospace;
+    font-size: 0.78rem;
+    color: var(--ink);
+    background: var(--rule-soft);
+    padding: 1px 4px;
+    border-radius: 2px;
+  }
+  .detail .summary-text {
+    font-size: 0.86rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin: 8px 0 10px;
+  }
+  .detail .summary-text strong { color: var(--ink); }
+  .mapping-line {
+    margin-top: 10px;
+    padding: 8px 10px;
+    background: var(--rule-soft);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .mapping-line strong { color: var(--ink); }
+
+  /* ---------- Row cards (right column) ---------- */
+  .row-card {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    border-left: 5px solid var(--rowx);
+    padding: 14px 18px;
+    cursor: pointer;
+  }
+  .row-card:hover { background: #fff; }
+  .row-card[data-row="1"] { border-left-color: var(--row1); }
+  .row-card[data-row="2"] { border-left-color: var(--row2); }
+  .row-card[data-row="3"] { border-left-color: var(--row3); }
+  .row-card[data-row="4"] { border-left-color: var(--row4); }
+  .row-card[data-row="x"] { border-left-color: var(--rowx); }
+
+  .row-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .row-num {
+    font-family: "Iowan Old Style", Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .row-title {
+    font-family: "Iowan Old Style", Georgia, serif;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.3;
+  }
+  .row-section-ref {
+    font-size: 0.74rem;
+    color: var(--ink-mute);
+    font-family: "SF Mono", "Menlo", monospace;
+    margin-left: auto;
+  }
+  .row-blurb {
+    margin: 6px 0 0;
+    font-size: 0.86rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .row-feeders {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .feeder-tag {
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    border: 1px solid var(--rule);
+    padding: 1px 6px;
+    border-radius: 2px;
+    background: #fff;
+  }
+
+  .caveat {
+    background: var(--warn-bg);
+    border-left: 3px solid var(--warn);
+    padding: 10px 14px;
+    margin-top: 10px;
+    font-size: 0.84rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  .caveat strong { color: var(--warn); }
+
+  .status-line {
+    font-size: 0.78rem;
+    color: var(--ink-mute);
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  /* ---------- Hidden ---------- */
+  .hidden { display: none !important; }
+
+  /* ---------- Footer ---------- */
+  footer.doc-foot {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-size: 0.82rem;
+    color: var(--ink-mute);
+    line-height: 1.6;
+  }
+  footer.doc-foot p { margin: 0 0 8px; }
+  footer.doc-foot strong { color: var(--ink-soft); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px) {
+    .crossref-grid { grid-template-columns: 1fr; gap: 36px; }
+    .col-right { order: -1; }
+  }
+  @media (max-width: 600px) {
+    .page { padding: 32px 16px 56px; }
+    h1.doc-title { font-size: 1.55rem; }
+    .detail dl { grid-template-columns: 1fr; gap: 2px; }
+    .detail dt { padding-top: 6px; }
+  }
+
+  @media print {
+    body { background: #fff; }
+    .controls { display: none; }
+    .test-card, .row-card { break-inside: avoid; }
+    .test-card .detail, .row-card .detail { display: block; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<header class="doc-head">
+  <p class="eyebrow">Supplementary material · Output-format bias paper</p>
+  <h1 class="doc-title">Test-to-ablation cross-reference</h1>
+  <p class="doc-subtitle">Each test we have data for, mapped to the §IV.A ablation row it feeds (or marked as supporting data not in the canonical ablation). Click a test or a row to expand details. Color-coding connects tests to their ablation row.</p>
+  <div class="doc-meta">
+    <span><strong>Tests on file</strong> 24</span>
+    <span><strong>Ablation rows</strong> 4</span>
+    <span><strong>Tests in ablation</strong> 7</span>
+    <span><strong>Last revised</strong> 2026-05-10</span>
+  </div>
+</header>
+
+<section class="controls">
+  <label for="searchbox">Search</label>
+  <input id="searchbox" type="search" placeholder="Search test name, date, model (e.g. ‘Test B’, ‘27B’, ‘04-27’)…" autocomplete="off">
+  <span class="hint">Tip: click any card to expand. Color of left border indicates which §IV.A row the test feeds.</span>
+</section>
+
+<!-- ====================== TWO-COLUMN GRID ====================== -->
+<div class="crossref-grid">
+
+  <!-- ====================== LEFT: TESTS ====================== -->
+  <div class="col-left">
+    <h2 class="col-head">Tests
+      <small>Timeline order, March → April 2026. Color of left border = ablation row.</small>
+    </h2>
+    <div class="test-list" id="testList">
+
+      <!-- ============== Model selection Round 1 ============== -->
+      <article class="test-card" data-row="x" data-search="model selection round 1 corpus qwen 7b llama 70b deepseek qwen 32b pre-march">
+        <div class="test-head">
+          <h3 class="test-name">Model selection — Round 1 corpus</h3>
+          <span class="test-date">pre-2026-03-24</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Qwen 7B · Llama 70B · Deepseek · Qwen 32B</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Date</dt><dd>pre-2026-03-24</dd>
+            <dt>Models</dt><dd>Qwen 7B, Llama 70B, Deepseek, Qwen 32B</dd>
+            <dt>Data</dt><dd>Synthetic ~20-student corpus (earlier version)</dd>
+            <dt>Prompt</dt><dd>Standard pipeline + CONCERN_PROMPT</dd>
+            <dt>Classifier</dt><dd>Binary concern (model comparison)</dd>
+            <dt>Source</dt><dd><code>research/experiment_log.md</code> lines 220–232</dd>
+          </dl>
+          <p class="summary-text">Round 1 multi-family screening. Qwen 7B (3/3, 0 FP), Llama 70B (3/3, 0 FP), Deepseek (3/3, 6 extra FP), Qwen 32B (1/3 only). Established that <strong>model family/training matters more than parameter count</strong>.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — model selection scaffolding; predates the synthetic corpus used in Tests A–Q.</div>
+        </div>
+      </article>
+
+      <!-- ============== Model selection Round 2 ============== -->
+      <article class="test-card" data-row="x" data-search="model selection round 2 qwen 2.5 llama 3.1 nemotron gemma 4b gemma 27b gemma 12b gemini pro march 26">
+        <div class="test-head">
+          <h3 class="test-name">Model selection — Round 2 corpus</h3>
+          <span class="test-date">pre-03-24 to 2026-03-26</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">7 candidate models + Gemini benchmark</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Qwen 2.5 7B (MLX), Llama 3.1 8B (MLX), Llama 3.3 70B (OpenRouter paid), Nemotron 9B (OpenRouter), Gemma 4B (Ollama), Gemma 27B (OpenRouter paid), Gemma 12B (MLX, selected); Gemini Pro browser handoff as benchmark</dd>
+            <dt>Data</dt><dd>Synthetic 32-student corpus (the version used downstream)</dd>
+            <dt>Prompt</dt><dd>Synthesis-first prototype + standard pipeline</dd>
+            <dt>Classifier</dt><dd>Generative observation + binary concern</dd>
+            <dt>Source</dt><dd><code>research/experiment_log.md</code> lines 1–215</dd>
+          </dl>
+          <p class="summary-text">Round 2 selection. Gemma 12B chosen as the lightweight sweet spot. Verbatim finding: <strong>“Model family matters more than size. Gemma 27B &gt; Llama 70B on every qualitative dimension. Architecture/training trumps raw parameter count.”</strong></p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — selects the models that anchor downstream tests.</div>
+        </div>
+      </article>
+
+      <!-- ============== Naive baseline (Mar 24) ============== -->
+      <article class="test-card" data-row="1" data-search="naive baseline mechanism 1 march 24 gemma 12b concern prompt">
+        <div class="test-head">
+          <h3 class="test-name">Naive baseline (Mechanism 1)</h3>
+          <span class="test-date">2026-03-24</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-1 warn">Row 1 · MISMATCH FLAG</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Date</dt><dd>2026-03-24</dd>
+            <dt>Models</dt><dd>Gemma 12B (MLX)</dd>
+            <dt>Data</dt><dd>Synthetic 32-student corpus (first run on this corpus after Phase 1 hardening)</dd>
+            <dt>Prompt</dt><dd>Production CONCERN_PROMPT — ~517-word elaborate hardened prompt: CRITICAL INSTRUCTIONS, course-vs-wellbeing test, 11-item DO-NOT-flag list, 5-item DO-flag list, worked JSON examples. Preserved at git commit <code>a78a854</code>.</dd>
+            <dt>Classifier</dt><dd>Binary concern</dd>
+            <dt>Source</dt><dd>Raw output lost; recovered via <code>rerun_original_naive_concern_gemma12b_2026-04-26.json</code></dd>
+          </dl>
+          <p class="summary-text"><strong>7 flags, 1 TP (S002), 3 FP on protected students</strong> (S028 AAVE, S029 ND, others) — despite extensive prompt hardening. Phenomenon confirmed in the Apr 26 rerun.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-1 warn">Row 1 — minimal binary (CLAIM-DATA MISMATCH)</span> §IV.A.2 describes this row as “no equity-protective prompt language, no anti-bias post-processing, no class context.” The actual prompt is the elaborate production CONCERN_PROMPT — the opposite of minimal. Verification subagent (2026-05-10) confirmed.</div>
+        </div>
+      </article>
+
+      <!-- ============== Class-context injection ============== -->
+      <article class="test-card" data-row="x" data-search="class context injection mechanism 2 march 25 gemma 12b context paradox">
+        <div class="test-head">
+          <h3 class="test-name">Class-context injection (Mechanism 2)</h3>
+          <span class="test-date">2026-03-25</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Date</dt><dd>2026-03-25</dd>
+            <dt>Models</dt><dd>Gemma 12B</dd>
+            <dt>Data</dt><dd>Synthetic 32-student + 4,440-char class synthesis</dd>
+            <dt>Prompt</dt><dd>Concern prompt + class-reading context</dd>
+            <dt>Classifier</dt><dd>Binary concern</dd>
+            <dt>Source</dt><dd><code>experiment_log.md</code> lines 1324–1437; <code>binary_fix_attempts_enumeration_2026-04-27.md</code> §3 Mech 2</dd>
+          </dl>
+          <p class="summary-text"><strong>Context paradox.</strong> 7→12 flags, TP lost, 2 new FPs on AAVE + ND (S028, S029). Context that fixes relational bias creates content-sensitivity bias.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — supports the §III mechanism narrative (Mechanism 2), not a row in the §IV.A configuration ablation.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test A ============== -->
+      <article class="test-card" data-row="3" data-search="test a temperature consistency march 26 gemma 12b qwen 7b gemma 27b observation prompt">
+        <div class="test-head">
+          <h3 class="test-name">Test A — Temperature/consistency</h3>
+          <span class="test-date">2026-03-26</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B · Qwen 7B · Gemma 27B</span>
+          <span class="row-chip row-chip-3">Row 3</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B · Qwen 7B · Gemma 27B (cloud)</dd>
+            <dt>Data</dt><dd>Synthetic (S022, S028)</dd>
+            <dt>Prompt</dt><dd>OBSERVATION_PROMPT (system: “thoughtful teaching colleague… NOT a concern detector, alert generator”)</dd>
+            <dt>Classifier</dt><dd>Generative observation</dd>
+            <dt>Source</dt><dd><code>test_a_temperature_gemma12b_2026-03-26.json</code>, <code>test_a_temperature_qwen7b_2026-03-26.json</code>, <code>test_a_temperature_gemma27b_cloud_2026-03-26.json</code></dd>
+          </dl>
+          <p class="summary-text"><strong>16/16 asset-framed</strong> across temperatures + models. Rules out stochasticity as the explanation.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-3">Row 3 — generative observation</span> One of the two tests (with Test E) feeding the 28-run generative-observation row in §IV.A.4.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test B ============== -->
+      <article class="test-card" data-row="2" data-search="test b reconstructed prompt anchor best concern system gemma 12b march 26 april 14">
+        <div class="test-head">
+          <h3 class="test-name">Test B — reconstructed-prompt anchor</h3>
+          <span class="test-date">2026-03-26 · rerun 2026-04-14</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-2">Row 2</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B</dd>
+            <dt>Data</dt><dd>Synthetic 32-student</dd>
+            <dt>Prompt</dt><dd>Reconstructed simpler prompt (5-equation equity-protective block + brief concerns list). Built after binary classifier removed from production to validate the pattern when raw naive-baseline data was lost. <strong>Separate from production CONCERN_PROMPT</strong>; designed for this ablation.</dd>
+            <dt>Classifier</dt><dd>Binary concern</dd>
+            <dt>Source</dt><dd><code>test_b_best_concern_gemma12b_2026-03-26.json</code> + <code>..._2026-04-14_1211.json</code> + <code>..._1216.json</code></dd>
+          </dl>
+          <p class="summary-text">Cleared all protected students <strong>AND lost the only TP (S002)</strong>. Prompt calibration alone cannot close the precision-recall gap.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-2">Row 2 — calibrated anti-bias binary</span> Together with Tests C, F (24 preserved runs total) using the BEST_CONCERN_SYSTEM 5-equation block. §IV.A.3.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test C ============== -->
+      <article class="test-card" data-row="2" data-search="test c length effect march 26 gemma 12b best concern system extended explanation">
+        <div class="test-head">
+          <h3 class="test-name">Test C — Length effect</h3>
+          <span class="test-date">2026-03-26</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-2">Row 2</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B</dd>
+            <dt>Data</dt><dd>Synthetic 32-student</dd>
+            <dt>Prompt</dt><dd>BEST_CONCERN_SYSTEM + 100–150 word explanation request</dd>
+            <dt>Classifier</dt><dd>Binary concern (extended)</dd>
+            <dt>Source</dt><dd><code>test_c_length_gemma12b_2026-03-26.json</code></dd>
+          </dl>
+          <p class="summary-text">More tokens made things worse: model used the extra space to <strong>justify the flag</strong> (S023, S029 newly flagged). Format, not length.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-2">Row 2 — calibrated anti-bias binary</span> Feeds the 24-run BEST_CONCERN_SYSTEM cluster in §IV.A.3.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test D ============== -->
+      <article class="test-card" data-row="x" data-search="test d power moves observation march 26 gemma 12b">
+        <div class="test-head">
+          <h3 class="test-name">Test D — Power-moves observation</h3>
+          <span class="test-date">2026-03-26</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B</dd>
+            <dt>Data</dt><dd>Synthetic + 5 power-moves probes</dd>
+            <dt>Prompt</dt><dd>Power-moves observation prompt</dd>
+            <dt>Classifier</dt><dd>Generative observation</dd>
+            <dt>Source</dt><dd><code>test_d_power_moves_gemma12b_2026-03-26.json</code></dd>
+          </dl>
+          <p class="summary-text">7/7 detection of structural power-moves patterns. Observation framing recovers signal the binary erases.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — power-moves observation probe; supporting evidence for the framing argument, not part of the canonical configuration ablation.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test E ============== -->
+      <article class="test-card" data-row="3" data-search="test e cross model replication march 26 qwen 7b gemma 27b observation prompt">
+        <div class="test-head">
+          <h3 class="test-name">Test E — Cross-model replication</h3>
+          <span class="test-date">2026-03-26</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Qwen 7B · Gemma 27B</span>
+          <span class="row-chip row-chip-3">Row 3</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Qwen 7B · Gemma 27B (cloud)</dd>
+            <dt>Data</dt><dd>Synthetic (S022, S028)</dd>
+            <dt>Prompt</dt><dd>OBSERVATION_PROMPT (same “thoughtful teaching colleague” system prompt as Test A)</dd>
+            <dt>Classifier</dt><dd>Generative observation</dd>
+            <dt>Source</dt><dd><code>test_e_cross_model_gemma27b_cloud_2026-03-26.json</code>, <code>test_e_cross_model_qwen7b_2026-03-26.json</code></dd>
+          </dl>
+          <p class="summary-text"><strong>12/12 asset-framed</strong> across two additional models. Format effect is cross-family.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-3">Row 3 — generative observation</span> Pairs with Test A to make the 28-run total in §IV.A.4.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test F ============== -->
+      <article class="test-card" data-row="2" data-search="test f bc stability march 27 28 gemma 12b best concern system observation prompt">
+        <div class="test-head">
+          <h3 class="test-name">Test F — B/C stability</h3>
+          <span class="test-date">2026-03-27 · 2026-03-28</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-2">Row 2</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B</dd>
+            <dt>Data</dt><dd>Synthetic 32-student</dd>
+            <dt>Prompt</dt><dd>BEST_CONCERN_SYSTEM + OBSERVATION_PROMPT</dd>
+            <dt>Classifier</dt><dd>Binary concern + generative observation (paired stability)</dd>
+            <dt>Source</dt><dd><code>test_f_bc_stability_gemma12b_2026-03-27.json</code>, <code>..._2026-03-28.json</code></dd>
+          </dl>
+          <p class="summary-text"><strong>25 repeat runs.</strong> Disagreement between binary and observation form held stable, not stochastic.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-2">Row 2 — calibrated anti-bias binary</span> The 25-run paired-stability batch feeds the §IV.A.3 BEST_CONCERN_SYSTEM cell.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test G ============== -->
+      <article class="test-card" data-row="x" data-search="test g wellbeing targeted concern march 27 gemma 12b">
+        <div class="test-head">
+          <h3 class="test-name">Test G — Wellbeing-targeted concern</h3>
+          <span class="test-date">2026-03-27</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B</dd>
+            <dt>Data</dt><dd>Synthetic wellbeing probes</dd>
+            <dt>Prompt</dt><dd>Wellbeing-targeted concern prompt</dd>
+            <dt>Classifier</dt><dd>Binary concern (wellbeing-scoped)</dd>
+            <dt>Source</dt><dd><code>test_g_wellbeing_gemma12b_2026-03-27.json</code></dd>
+          </dl>
+          <p class="summary-text">Probe targeting wellbeing-only signal, separate from academic concern. Sets up the dual-binary design.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — design scaffolding for the dual-binary structure used in later live-data runs.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test H ============== -->
+      <article class="test-card" data-row="x" data-search="test h binary wellbeing classifier march 27 gemma 12b">
+        <div class="test-head">
+          <h3 class="test-name">Test H — Binary wellbeing classifier</h3>
+          <span class="test-date">2026-03-27</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B</dd>
+            <dt>Data</dt><dd>Synthetic wellbeing probes</dd>
+            <dt>Prompt</dt><dd>Binary wellbeing prompt</dd>
+            <dt>Classifier</dt><dd>Binary concern (wellbeing-scoped)</dd>
+            <dt>Source</dt><dd><code>test_h_binary_wellbeing_gemma12b_2026-03-27.json</code></dd>
+          </dl>
+          <p class="summary-text">Tests whether binary form can recover wellbeing signal given correct vocabulary.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — pairs with Test G; informs dual-binary design.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test I ============== -->
+      <article class="test-card" data-row="x" data-search="test i tier 2 wellbeing observations march 28 gemma 12b two stage">
+        <div class="test-head">
+          <h3 class="test-name">Test I — Tier-2 wellbeing on observations</h3>
+          <span class="test-date">2026-03-28</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B</dd>
+            <dt>Data</dt><dd>Asset-framed observation outputs</dd>
+            <dt>Prompt</dt><dd>Tier-2 wellbeing classifier (downstream of OBSERVATION)</dd>
+            <dt>Classifier</dt><dd>Two-stage (generative → binary)</dd>
+            <dt>Source</dt><dd><code>test_i_tier2_wellbeing_2026-03-28.json</code></dd>
+          </dl>
+          <p class="summary-text"><strong>8/8 signals recovered with 1 FP.</strong> Two-stage architecture takes shape.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — two-stage probe; informs production pipeline shape, not a configuration row.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test J ============== -->
+      <article class="test-card" data-row="x" data-search="test j pipeline validation march 28 gemma 12b">
+        <div class="test-head">
+          <h3 class="test-name">Test J — Pipeline validation</h3>
+          <span class="test-date">2026-03-28</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B</dd>
+            <dt>Data</dt><dd>Full synthetic 32-student</dd>
+            <dt>Prompt</dt><dd>Production pipeline</dd>
+            <dt>Classifier</dt><dd>End-to-end pipeline</dd>
+            <dt>Source</dt><dd><code>test_j_pipeline_validation_gemma12b_2026-03-28.json</code></dd>
+          </dl>
+          <p class="summary-text">Integration test. Passed.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — integration check.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test K ============== -->
+      <article class="test-card" data-row="x" data-search="test k enhancement model comparison march 28 29 multi model venice paid">
+        <div class="test-head">
+          <h3 class="test-name">Test K — Enhancement model comparison</h3>
+          <span class="test-date">2026-03-28 · 2026-03-29</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Multi: 9 free + Venice paid</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>gemma27b_free, llama70b_free, mistral_small_free, nemotron_120b_free, dolphin_mistral_free, hermes_405b_free, minimax_m25_free, arcee_trinity_free, step_flash_free; + Venice paid run</dd>
+            <dt>Data</dt><dd>Synthetic (anonymized)</dd>
+            <dt>Prompt</dt><dd>Enhancement prompt (FERPA-anonymized pedagogical synthesis)</dd>
+            <dt>Classifier</dt><dd>Enhancement / pedagogical analysis (NOT a classifier)</dd>
+            <dt>Source</dt><dd><code>test_k_enhancement_comparison_multi_model_2026-03-28.json</code>, <code>..._2026-03-29_1113.json</code>, <code>test_k_venice_paid_2026-03-28_1122.json</code></dd>
+          </dl>
+          <p class="summary-text">Compared models on enhancement quality across 5 quality dimensions; Gemma 27B free emerged viable.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — enhancement-quality comparison, not a classifier ablation.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test L ============== -->
+      <article class="test-card" data-row="x" data-search="test l 4 axis observations march 28 gemma 12b engaged crisis stage interaction">
+        <div class="test-head">
+          <h3 class="test-name">Test L — 4-axis on observations</h3>
+          <span class="test-date">2026-03-28</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B</dd>
+            <dt>Data</dt><dd>Asset-framed observation outputs</dd>
+            <dt>Prompt</dt><dd>4-axis classifier (downstream of observation)</dd>
+            <dt>Classifier</dt><dd>4-axis (CRISIS/BURNOUT/ENGAGED/NONE)</dd>
+            <dt>Source</dt><dd><code>test_l_expanded_wellbeing_gemma12b_2026-03-28.json</code></dd>
+          </dl>
+          <p class="summary-text">ENGAGED absorbed CRISIS signals — <strong>stage-interaction effect</strong>; constrains pipeline order.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — distinct from Test N (which runs 4-axis on raw submissions). Test L documents why order matters; Row 4 uses Test N (raw-submission variant).</div>
+        </div>
+      </article>
+
+      <!-- ============== Test M ============== -->
+      <article class="test-card" data-row="2" data-search="test m more robust safeguards march 28 gemma 12b production concern prompt confidence threshold anti-bias regex">
+        <div class="test-head">
+          <h3 class="test-name">Test M — More-robust safeguards</h3>
+          <span class="test-date">2026-03-28</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-2">Row 2</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B</dd>
+            <dt>Data</dt><dd>Synthetic 32-student</dd>
+            <dt>Prompt</dt><dd>Production CONCERN_PROMPT (further refined from the Mar-22 / <code>a78a854</code> version) + confidence threshold (≥0.7) + anti-bias regex post-processing — the elaborate prompt the naive baseline used, now layered with detection safeguards.</dd>
+            <dt>Classifier</dt><dd>Binary concern (with research-only-pipeline safeguards)</dd>
+            <dt>Source</dt><dd><code>test_m_production_detector_gemma12b_2026-03-28.json</code></dd>
+          </dl>
+          <p class="summary-text">Safeguards <strong>shifted FPs across populations</strong>: S029 cleared but S028 newly flagged at conf=0.70. Adding postprocessing didn't escape the format ceiling.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-2">Row 2 — calibrated anti-bias binary</span> The “more robust safeguards” configuration in §IV.A.3 (alongside Tests B, C, F).</div>
+        </div>
+      </article>
+
+      <!-- ============== Test N ============== -->
+      <article class="test-card" data-row="4" data-search="test n 4 axis raw submissions march 28 29 april 1 gemma 12b 27b qwen 7b track b">
+        <div class="test-head">
+          <h3 class="test-name">Test N — 4-axis on raw submissions</h3>
+          <span class="test-date">2026-03-28 · 03-29 · 04-01</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B · Gemma 27B · Qwen 7B</span>
+          <span class="row-chip row-chip-4">Row 4</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B · Gemma 27B (cloud) · Qwen 7B</dd>
+            <dt>Data</dt><dd>Synthetic raw submissions (no observation upstream)</dd>
+            <dt>Prompt</dt><dd>4-axis wellbeing classifier (system: “You are assessing a student's submission for their teacher. Classify into ONE of four categories: CRISIS / BURNOUT / ENGAGED / NONE”)</dd>
+            <dt>Classifier</dt><dd>4-axis</dd>
+            <dt>Source</dt><dd>10 JSONs: <code>test_n_4axis_submissions_gemma12b_2026-03-28_*.json</code> (×9), <code>..._gemma12b_2026-03-29_2107.json</code>, 6× <code>test_n_4axis_submissions_gemma27b_cloud_*</code> (03-29 0907/1928/2109/2127, 03-30 0034, 04-01 1607), <code>test_n_4axis_submissions_qwen7b_2026-03-28_2338.json</code></dd>
+          </dl>
+          <p class="summary-text">Strongest classification result in synthetic phase; <strong>basis for Track B</strong>. Across 6 Gemma 27B runs S029 classified ENGAGED 5/6 and BURNOUT 1/6 (~17% boundary drift) — load-bearing for paper's “27B less stable” claim.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-4">Row 4 — 4-axis classifier</span> The §IV.A.6 row currently being added. <strong>Not Test O</strong> (different schema, multi-axis with CHECK-IN).</div>
+        </div>
+      </article>
+
+      <!-- ============== Test O ============== -->
+      <article class="test-card" data-row="x" data-search="test o multi axis check-in march 28 29 gemma 12b 27b">
+        <div class="test-head">
+          <h3 class="test-name">Test O — Multi-axis with CHECK-IN</h3>
+          <span class="test-date">2026-03-28 · 2026-03-29</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B · Gemma 27B</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B · Gemma 27B (cloud)</dd>
+            <dt>Data</dt><dd>Synthetic 32-student</dd>
+            <dt>Prompt</dt><dd>4-axis + CHECK-IN (“a student can be in MULTIPLE states simultaneously… Tag ALL that apply”)</dd>
+            <dt>Classifier</dt><dd>Multi-axis (4 axes, non-exclusive)</dd>
+            <dt>Source</dt><dd><code>test_o_multi_axis_gemma12b_2026-03-28_*.json</code> (×3), <code>test_o_multi_axis_gemma27b_cloud_2026-03-29_2127.json</code></dd>
+          </dl>
+          <p class="summary-text">CHECK-IN axis recovered S002 but <strong>over-fired across the corpus</strong>.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — multi-axis variant. <strong>Distinct from Test N</strong> (single-axis 4-way). Row 4 uses Test N, not Test O.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test P ============== -->
+      <article class="test-card" data-row="x" data-search="test p two pass classifier march 28 gemma 12b">
+        <div class="test-head">
+          <h3 class="test-name">Test P — Two-pass classifier</h3>
+          <span class="test-date">2026-03-28</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B</dd>
+            <dt>Data</dt><dd>Synthetic 32-student</dd>
+            <dt>Prompt</dt><dd>Two-pass: observation pass → classification pass</dd>
+            <dt>Classifier</dt><dd>Two-stage (generative → 4-axis)</dd>
+            <dt>Source</dt><dd><code>test_p_two_pass_gemma12b_2026-03-28_*.json</code> (×7)</dd>
+          </dl>
+          <p class="summary-text">First probe of two-pass architecture.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — architecture probe; informs production pipeline shape.</div>
+        </div>
+      </article>
+
+      <!-- ============== Test Q ============== -->
+      <article class="test-card" data-row="x" data-search="test q 27b counterfactual probes march 29 disability vocabulary s029 burnout">
+        <div class="test-head">
+          <h3 class="test-name">Test Q — 27B counterfactual probes</h3>
+          <span class="test-date">2026-03-29</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 27B</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 27B (cloud)</dd>
+            <dt>Data</dt><dd>Disability-vocabulary counterfactual probes (4 probes, S029 baseline)</dd>
+            <dt>Prompt</dt><dd>Q4/Q5 guard vs. evidence-extraction variants</dd>
+            <dt>Classifier</dt><dd>Counterfactual probe (4-axis verdict per probe)</dd>
+            <dt>Source</dt><dd><code>test_q_27b_probes_2026-03-29_1111.json</code>, <code>test_q_27b_probes_2026-03-29_1918.json</code></dd>
+          </dl>
+          <p class="summary-text">Investigates 27B's tendency to classify S029 as BURNOUT; baseline_axis=BURNOUT (reproduced Phase 4 finding). Co-evidence for “27B less stable” claim.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — counterfactual probe supporting the 27B-stability claim alongside Test N's Gemma 27B runs.</div>
+        </div>
+      </article>
+
+      <!-- ============== Data-recovery rerun ============== -->
+      <article class="test-card" data-row="1" data-search="data recovery rerun naive baseline april 26 gemma 12b production concern prompt">
+        <div class="test-head">
+          <h3 class="test-name">Data-recovery rerun (naive baseline)</h3>
+          <span class="test-date">2026-04-26</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 12B</span>
+          <span class="row-chip row-chip-1 warn">Row 1 · MISMATCH</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 12B</dd>
+            <dt>Data</dt><dd>Synthetic 32-student</dd>
+            <dt>Prompt</dt><dd>Production CONCERN_PROMPT as it stood at recovery time — further refined from the Mar-22 / <code>a78a854</code> version that produced the lost original naive output. Similar shape (elaborate hardening + worked examples) but not byte-for-byte identical.</dd>
+            <dt>Classifier</dt><dd>Binary concern</dd>
+            <dt>Source</dt><dd><code>rerun_original_naive_concern_gemma12b_2026-04-26.json</code></dd>
+          </dl>
+          <p class="summary-text">Phenomenon persists across prompt-version drift. Confirms 2026-03-24 baseline behavior reproducible from current code.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-1 warn">Row 1 — minimal binary (MISMATCH)</span> <strong>This is the file currently cited as Row 1's data source.</strong> Verification subagent (2026-05-10) confirmed it matches the data-recovery rerun of the naive baseline — using the elaborate production CONCERN_PROMPT, not a stripped-down minimal binary as §IV.A.2 claims.</div>
+        </div>
+      </article>
+
+      <!-- ============== Week 5 T&Q live ============== -->
+      <article class="test-card live-data" data-row="x" data-search="week 5 tq live data april 27 gemma 3 12b ethn1 topic adjacency baseline">
+        <div class="test-head">
+          <h3 class="test-name">Week 5 T&amp;Q live-data run (old-B baseline)</h3>
+          <span class="test-date">2026-04-27</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 3 12B (MLX)</span>
+          <span class="live-badge">Live data</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 3 12B (MLX)</dd>
+            <dt>Data</dt><dd>Live ETHN-1-03 Week 5 T&amp;Q Journal (n=19; 15 with submissions)</dd>
+            <dt>Prompt</dt><dd>A1 CONCERN_PROMPT · A2 WELLBEING_CONCERN_PROMPT · B (old, pre-hardening) · C OBSERVATION_PROMPT</dd>
+            <dt>Classifier</dt><dd>Binary (A1, A2) + 4-axis (B old) + generative observation (C)</dd>
+            <dt>Source</dt><dd><code>data/dual_binary_run_2026-04-27_ETHN1_TQ_Week5/README.md</code> + <code>Week5_TQ_Journal_anon.csv</code> (gitignored)</dd>
+          </dl>
+          <p class="summary-text">Topic-adjacency baseline (less topic-adjacent than Week 7). B BURNOUT rate <strong>5–7%</strong> (1 student).</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — live-data supporting evidence; topic-adjacency baseline against which Week 7 contrasts.</div>
+        </div>
+      </article>
+
+      <!-- ============== Week 7 self-care live ============== -->
+      <article class="test-card live-data" data-row="x" data-search="week 7 self care live data april 27 gemma 3 12b ethn1 dual binary anchor">
+        <div class="test-head">
+          <h3 class="test-name">Week 7 self-care live-data run</h3>
+          <span class="test-date">2026-04-27</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 3 12B (MLX)</span>
+          <span class="live-badge">Live data</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 3 12B (MLX)</dd>
+            <dt>Data</dt><dd>Live ETHN-1-03 Week 7 self-care (n=25)</dd>
+            <dt>Prompt</dt><dd>A1 CONCERN_PROMPT · A2 WELLBEING_CONCERN_PROMPT · B · C OBSERVATION_PROMPT</dd>
+            <dt>Classifier</dt><dd>Binary (A1, A2) + 4-axis (B) + generative observation (C)</dd>
+            <dt>Source</dt><dd><code>data/dual_binary_run_2026-04-27_ETHN1_self_care/README.md</code>, <code>analysis.md</code>, <code>self_care_ethn1_anon.csv</code> (gitignored)</dd>
+          </dl>
+          <p class="summary-text">First full dual-binary live-data run. <strong>A2 precision 24%</strong> (1/4 plausible). B ~9–15% precision (1–2/13 plausible). C accurate. Topic-adjacent FP pattern.</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — paper anchor for the live-data section, not part of the §IV.A configuration ablation.</div>
+        </div>
+      </article>
+
+      <!-- ============== Week 7 B-hardened ============== -->
+      <article class="test-card live-data" data-row="x" data-search="week 7 b hardened rerun april 27 evening five guards topic adjacency">
+        <div class="test-head">
+          <h3 class="test-name">Week 7 B-hardened rerun</h3>
+          <span class="test-date">2026-04-27 evening</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 3 12B (MLX)</span>
+          <span class="live-badge">Live data</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 3 12B (MLX)</dd>
+            <dt>Data</dt><dd>Same 25 students as Week 7 self-care</dd>
+            <dt>Prompt</dt><dd>B + 5 hardening guards (topic-adjacency threshold, default-not-flag, identity-navigation-fatigue exclusion, personal-experience-as-course-material exclusion, 3 worked examples)</dd>
+            <dt>Classifier</dt><dd>4-axis (B-new)</dd>
+            <dt>Source</dt><dd><code>dual_binary_run_2026-04-27_ETHN1_self_care/rerun_2026-04-27_B_hardened_title_only.csv</code></dd>
+          </dl>
+          <p class="summary-text">22/25 unchanged; 2 corrections (Students 23, 4); 1 regression (Student 5 BURNOUT→CRISIS). <strong>Precision gap did not close.</strong></p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — hardening probe on B; supports the “prompt calibration alone cannot close the gap” argument.</div>
+        </div>
+      </article>
+
+      <!-- ============== Week 2 racial-formation live ============== -->
+      <article class="test-card live-data" data-row="x" data-search="week 2 racial formation live data april 27 evening omi winant 1968 1969 student strikes ethn1">
+        <div class="test-head">
+          <h3 class="test-name">Week 2 racial-formation live-data run</h3>
+          <span class="test-date">2026-04-27 evening</span>
+        </div>
+        <div class="test-meta-line">
+          <span class="model-tag">Gemma 3 12B (MLX)</span>
+          <span class="live-badge">Live data</span>
+          <span class="row-chip row-chip-x">Not in ablation</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Models</dt><dd>Gemma 3 12B (MLX)</dd>
+            <dt>Data</dt><dd>Live ETHN-1 Week 2 discussion forum on racial formation (Omi &amp; Winant + 1968-69 student strikes); n=31 rows (~28 unique students)</dd>
+            <dt>Prompt</dt><dd>A1 CONCERN_PROMPT · A2 WELLBEING_CONCERN_PROMPT · B · C OBSERVATION_PROMPT</dd>
+            <dt>Classifier</dt><dd>Binary (A1, A2) + 4-axis (B) + generative observation (C)</dd>
+            <dt>Source</dt><dd><code>data/dual_binary_run_2026-04-27_ETHN1_Week2_RacialForm/README.md</code> + <code>analysis.md</code> + <code>week2_racial_form_ethn1_anon.csv</code> (gitignored)</dd>
+          </dl>
+          <p class="summary-text">Cross-assignment confirmation of topic-adjacency: <strong>B BURNOUT 36% → 0%</strong>. A1 essentializing mis-fires replicate. New “structural-slot-mismatch” FP found (Student 17).</p>
+          <div class="mapping-line"><strong>Maps to:</strong> <span class="row-chip row-chip-x">Not in ablation</span> — cross-assignment confirmation; supporting evidence for the live-data section.</div>
+        </div>
+      </article>
+
+    </div><!-- /test-list -->
+  </div><!-- /col-left -->
+
+  <!-- ====================== RIGHT: ABLATION ROWS ====================== -->
+  <div class="col-right">
+    <h2 class="col-head">§IV.A ablation rows
+      <small>The configurations the paper reports. Click to see what tests feed each row.</small>
+    </h2>
+    <div class="row-list" id="rowList">
+
+      <!-- =============== Row 1 =============== -->
+      <article class="row-card" data-row="1" data-search="row 1 minimal binary classifier naive baseline section iv a 2">
+        <div class="row-head">
+          <span class="row-num">1</span>
+          <h3 class="row-title">Minimal binary classifier</h3>
+          <span class="row-section-ref">§IV.A.2</span>
+        </div>
+        <p class="row-blurb">Paper description: <em>“no equity-protective prompt language, no anti-bias post-processing, no class context.”</em></p>
+        <div class="row-feeders">
+          <span class="feeder-tag">Naive baseline (Mar 24)</span>
+          <span class="feeder-tag">Data-recovery rerun (Apr 26)</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Configuration</dt><dd>Intended: stripped-down binary classifier with no protective scaffolding.</dd>
+            <dt>Actual data</dt><dd>Cited source: <code>rerun_original_naive_concern_gemma12b_2026-04-26.json</code></dd>
+            <dt>Feeder tests</dt><dd>Naive baseline (2026-03-24, raw output lost) + Data-recovery rerun (2026-04-26)</dd>
+            <dt>Status</dt><dd>Live in the manuscript; <strong>flagged for revision</strong>.</dd>
+          </dl>
+          <div class="caveat">
+            <strong>Claim-data mismatch.</strong> §IV.A.2 describes Row 1 as having “no equity-protective prompt language, no anti-bias post-processing, no class context.” The file actually used (<code>rerun_original_naive_concern_gemma12b_2026-04-26.json</code>) ran the <strong>elaborate production CONCERN_PROMPT</strong> — ~517 words of CRITICAL INSTRUCTIONS, an 11-item DO-NOT-flag list, and worked JSON examples — i.e. the opposite of a minimal prompt. Verification subagent (2026-05-10) confirmed the file matches the “naive baseline (Mar 24) data-recovery rerun,” not a true minimal binary. Either re-run a stripped-down configuration to match the §IV.A.2 description, or revise the row's framing to acknowledge the existing data is a hardened binary that still produced the protected-class FPs.
+          </div>
+          <p class="status-line">Verification: <code>validation_audit_genobs_2026-05-10.md</code> and crossref subagent run (2026-05-10).</p>
+        </div>
+      </article>
+
+      <!-- =============== Row 2 =============== -->
+      <article class="row-card" data-row="2" data-search="row 2 calibrated anti bias binary classifier best concern system test b c f m section iv a 3">
+        <div class="row-head">
+          <span class="row-num">2</span>
+          <h3 class="row-title">Calibrated anti-bias binary classifier</h3>
+          <span class="row-section-ref">§IV.A.3</span>
+        </div>
+        <p class="row-blurb">BEST_CONCERN_SYSTEM (5-equation equity-protective block) on the synthetic 32-student corpus, plus a “more robust safeguards” configuration adding confidence thresholding and anti-bias regex post-processing.</p>
+        <div class="row-feeders">
+          <span class="feeder-tag">Test B</span>
+          <span class="feeder-tag">Test C</span>
+          <span class="feeder-tag">Test F (25 runs)</span>
+          <span class="feeder-tag">Test M (safeguards)</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Configuration</dt><dd>BEST_CONCERN_SYSTEM 5-equation block; Test M layers confidence threshold (≥0.7) + anti-bias regex on the production CONCERN_PROMPT.</dd>
+            <dt>Data sources</dt><dd>24 preserved runs across Tests B, C, F + Test M's safeguards run.</dd>
+            <dt>Feeder tests</dt><dd>Test B (reconstructed-prompt anchor) · Test C (length effect) · Test F (B/C stability, 25 repeat runs) · Test M (more-robust safeguards)</dd>
+            <dt>Status</dt><dd>Live in manuscript; configuration and data sources match.</dd>
+          </dl>
+          <p class="summary-text">Headline finding: calibrating the binary prompt cleared the FPs on protected students but lost the only TP (Test B); adding safeguards (Test M) shifted FPs across populations rather than removing them. Format ceiling holds across both the calibration approach and the postprocessing approach.</p>
+        </div>
+      </article>
+
+      <!-- =============== Row 3 =============== -->
+      <article class="row-card" data-row="3" data-search="row 3 generative observation test a e observation prompt 28 runs section iv a 4">
+        <div class="row-head">
+          <span class="row-num">3</span>
+          <h3 class="row-title">Generative observation</h3>
+          <span class="row-section-ref">§IV.A.4</span>
+        </div>
+        <p class="row-blurb">OBSERVATION_PROMPT — system: “thoughtful teaching colleague… NOT a concern detector, alert generator.” Replaces the binary verdict with asset-framed observation prose.</p>
+        <div class="row-feeders">
+          <span class="feeder-tag">Test A (16 runs)</span>
+          <span class="feeder-tag">Test E (12 runs)</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Configuration</dt><dd>Same models, same data, replace binary classifier output with generative observation prose.</dd>
+            <dt>Data sources</dt><dd>28 runs total: Test A (16 across Gemma 12B, Qwen 7B, Gemma 27B at varied temperatures) + Test E (12 across Qwen 7B and Gemma 27B).</dd>
+            <dt>Feeder tests</dt><dd>Test A (temperature/consistency) · Test E (cross-model replication)</dd>
+            <dt>Status</dt><dd>Live in manuscript; configuration and data sources match.</dd>
+          </dl>
+          <p class="summary-text">Headline finding: 28 of 28 runs produced asset-framed observations across three model families. The format effect is structural, cross-family, and rules out stochasticity.</p>
+        </div>
+      </article>
+
+      <!-- =============== Row 4 =============== -->
+      <article class="row-card" data-row="4" data-search="row 4 four axis classifier test n raw submissions crisis burnout engaged section iv a 6">
+        <div class="row-head">
+          <span class="row-num">4</span>
+          <h3 class="row-title">4-axis classifier</h3>
+          <span class="row-section-ref">§IV.A.6</span>
+        </div>
+        <p class="row-blurb">4-axis wellbeing classifier (CRISIS / BURNOUT / ENGAGED / NONE) run directly on raw submissions — no observation upstream.</p>
+        <div class="row-feeders">
+          <span class="feeder-tag">Test N (10 JSONs, 3 models)</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Configuration</dt><dd>4-axis classifier on raw student submissions; Gemma 12B, Gemma 27B (cloud), Qwen 7B.</dd>
+            <dt>Data sources</dt><dd>10 Test N JSONs total. Gemma 12B: 9 runs on 2026-03-28 + 1 run on 2026-03-29. Gemma 27B (cloud): 6 runs (03-29 ×4, 03-30 ×1, 04-01 ×1). Qwen 7B: 1 run on 2026-03-28.</dd>
+            <dt>Feeder tests</dt><dd>Test N (4-axis on raw submissions). <strong>NOT</strong> Test L (4-axis on observation outputs — different schema, stage-interaction effect) or Test O (multi-axis with CHECK-IN — different schema).</dd>
+            <dt>Status</dt><dd>Being added to the manuscript by a parallel subagent as of 2026-05-10.</dd>
+          </dl>
+          <p class="summary-text">Headline finding: strongest classification result in the synthetic-data phase; basis for Track B in the paper. Across the 6 Gemma 27B runs, S029 was classified ENGAGED 5/6 and BURNOUT 1/6 — ~17% boundary drift, load-bearing for the “27B less stable” claim that Test Q also supports.</p>
+        </div>
+      </article>
+
+      <!-- =============== Tests outside the ablation =============== -->
+      <article class="row-card" data-row="x" data-search="not in ablation supporting data tests outside row mechanism 2 model selection wellbeing probes two pass enhancement live data">
+        <div class="row-head">
+          <span class="row-num" style="color: var(--rowx);">—</span>
+          <h3 class="row-title">Tests not in any ablation row</h3>
+          <span class="row-section-ref">Supporting data</span>
+        </div>
+        <p class="row-blurb">17 of the 24 tests fall outside the §IV.A canonical ablation. They scaffold the design (model selection, wellbeing-binary probes), document the mechanism narrative (class-context paradox), or supply live-data confirmation in their own paper section.</p>
+        <div class="row-feeders">
+          <span class="feeder-tag">Model selection R1, R2</span>
+          <span class="feeder-tag">Class-context (Mech 2)</span>
+          <span class="feeder-tag">Tests D, G, H, I, J, K, L, O, P, Q</span>
+          <span class="feeder-tag">4 live-data runs (Apr 27)</span>
+        </div>
+        <div class="detail">
+          <dl>
+            <dt>Categories</dt><dd>
+              <strong>Mechanism narrative:</strong> Class-context injection.<br>
+              <strong>Model selection:</strong> Round 1, Round 2.<br>
+              <strong>Observation probes:</strong> Test D (power-moves).<br>
+              <strong>Wellbeing-binary design:</strong> Tests G, H.<br>
+              <strong>Two-stage architecture:</strong> Tests I, P.<br>
+              <strong>Pipeline / enhancement:</strong> Tests J, K.<br>
+              <strong>Stage-interaction / schema variants:</strong> Tests L (4-axis on observations), O (multi-axis with CHECK-IN).<br>
+              <strong>27B stability:</strong> Test Q.<br>
+              <strong>Live-data:</strong> Week 5 T&amp;Q, Week 7 self-care (anchor), Week 7 B-hardened, Week 2 racial-formation.
+            </dd>
+            <dt>Status</dt><dd>Cited where relevant in the paper outside §IV.A; not in the configuration ablation matrix.</dd>
+          </dl>
+          <p class="summary-text">A clean §IV.A ablation needs only the configurations the paper directly compares (rows 1–4 above). Everything else either preceded those configurations, ran on different data, or made a different argument. Listed here so nothing on the test ledger looks unaccounted for.</p>
+        </div>
+      </article>
+
+    </div><!-- /row-list -->
+  </div><!-- /col-right -->
+
+</div><!-- /crossref-grid -->
+
+<footer class="doc-foot">
+  <p><strong>How to read this page.</strong> The left column lists every test for which we have data, in chronological order. The right column lists the four §IV.A ablation rows the paper reports. Color of the left border on each card connects test to row. Each card expands on click; the expanded view names the prompt, classifier, data, and source JSON, and states which row the test feeds (or that the test is supporting data outside the ablation).</p>
+  <p><strong>Note on Row 1.</strong> The data file currently cited as Row 1's source ran the elaborate production CONCERN_PROMPT, not the stripped-down minimal binary §IV.A.2 describes. This is surfaced as a “mismatch” chip on the relevant test cards and as a flagged caveat on Row 1.</p>
+  <p><strong>File.</strong> Supplementary cross-reference for the output-format-bias manuscript. Last revised 2026-05-10.</p>
+</footer>
+
+</div><!-- /page -->
+
+<script>
+  // --- click-to-expand for test cards & row cards ---
+  document.querySelectorAll('.test-card, .row-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // don't toggle if user is clicking a link or selecting text
+      if (e.target.tagName === 'A') return;
+      if (window.getSelection().toString().length > 0) return;
+      card.classList.toggle('open');
+    });
+  });
+
+  // --- search filter ---
+  const searchbox = document.getElementById('searchbox');
+  const allCards = document.querySelectorAll('#testList .test-card, #rowList .row-card');
+
+  function normalize(s) { return (s || '').toLowerCase(); }
+
+  searchbox.addEventListener('input', () => {
+    const q = normalize(searchbox.value).trim();
+    if (!q) {
+      allCards.forEach(c => c.classList.remove('hidden'));
+      return;
+    }
+    const terms = q.split(/\s+/);
+    allCards.forEach(card => {
+      const haystack = normalize(card.getAttribute('data-search') + ' ' + card.textContent);
+      const match = terms.every(t => haystack.includes(t));
+      card.classList.toggle('hidden', !match);
+    });
+  });
+</script>
+
+</body>
+</html>

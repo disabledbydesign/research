@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemma 12B vs Gemma 27B differential — Output-format-bias study</title>
+<style>
+  :root {
+    --bg: #f7f4ee;
+    --bg-card: #fffdf8;
+    --bg-card-live: #fbf6e9;
+    --ink: #1f1b16;
+    --ink-soft: #4a4339;
+    --ink-mute: #76695a;
+    --rule: #d9d0bf;
+    --rule-soft: #e8e1d2;
+    --accent: #6b3a1f;
+    --accent-soft: #a86a3f;
+
+    --amber: #8a4a00;
+    --amber-bg: #f5cf8c;
+    --amber-bg-strong: #efb55a;
+    --green: #2d5f3f;
+    --green-bg: #c4e0c0;
+    --violet: #4a3d7a;
+    --violet-bg: #beb3da;
+    --bluegreen: #1b5a8a;
+    --bluegreen-bg: #a8c8e0;
+    --lavender: #6e4a8a;
+    --lavender-bg: #d8bfdf;
+    --grey: #76695a;
+    --grey-bg: #d8d2bf;
+    --warn: #b3000c;
+    --warn-bg: #f5d8d8;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--ink); margin: 0; padding: 0; }
+  body {
+    font-family: 'Iowan Old Style', 'Palatino Linotype', 'Palatino', Georgia, serif;
+    padding: 36px 36px 80px;
+    line-height: 1.5;
+    font-size: 15.5px;
+  }
+  .page { max-width: 1500px; margin: 0 auto; }
+
+  /* ---- Header ---- */
+  header.doc-head { border-bottom: 1px solid var(--rule); padding-bottom: 18px; margin-bottom: 22px; }
+  .eyebrow {
+    font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink-mute); margin: 0 0 8px; font-weight: 500;
+  }
+  h1.doc-title {
+    font-weight: 600; font-size: 1.85rem; line-height: 1.2;
+    margin: 0 0 10px; letter-spacing: -0.005em; color: var(--accent);
+  }
+  .doc-subtitle {
+    font-size: 1.02rem; color: var(--ink-soft); max-width: 90ch;
+    margin: 0 0 12px; font-style: italic;
+  }
+  .doc-meta {
+    font-size: 0.82rem; color: var(--ink-mute);
+    display: flex; flex-wrap: wrap; gap: 18px;
+  }
+
+  h2 { font-size: 1.15rem; color: var(--accent); font-weight: 600;
+       margin: 28px 0 10px; }
+  h3 { font-size: 1.0rem; color: var(--ink-soft); font-weight: 600;
+       margin: 18px 0 6px; }
+
+  .preamble {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    padding: 16px 20px;
+    margin-bottom: 22px;
+    font-size: 0.93em;
+    line-height: 1.55;
+  }
+  .preamble p { margin: 0 0 8px; }
+  .preamble p:last-child { margin-bottom: 0; }
+  .preamble strong { color: var(--accent); }
+
+  .callout {
+    background: var(--warn-bg);
+    border-left: 3px solid var(--warn);
+    padding: 10px 14px;
+    margin: 14px 0;
+    font-size: 0.9em;
+    color: var(--ink-soft);
+  }
+  .callout strong { color: var(--warn); }
+
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 10px 18px;
+    margin: 14px 0 22px; font-size: 0.82em; color: var(--ink-soft);
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-swatch {
+    width: 18px; height: 18px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .legend-swatch.green     { background: var(--green-bg); }
+  .legend-swatch.amber     { background: var(--amber-bg); }
+  .legend-swatch.violet    { background: var(--violet-bg); }
+  .legend-swatch.bluegreen { background: var(--bluegreen-bg); }
+  .legend-swatch.grey      { background: var(--grey-bg); }
+  .legend-swatch.amber-hatched {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--amber-bg) 0, var(--amber-bg) 4px,
+      var(--amber-bg-strong) 4px, var(--amber-bg-strong) 6px
+    );
+  }
+
+  /* ---- Table ---- */
+  table.diff {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 3px;
+    margin-bottom: 22px;
+    table-layout: fixed;
+  }
+  table.diff th {
+    background: var(--bg-card-live);
+    border: 1px solid var(--rule);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1.3;
+  }
+  table.diff td {
+    border: 1px solid var(--rule);
+    padding: 9px 10px;
+    vertical-align: top;
+    font-size: 0.83em;
+    line-height: 1.42;
+    color: var(--ink-soft);
+    background: var(--bg-card);
+  }
+  table.diff td.cell-green     { background: var(--green-bg); }
+  table.diff td.cell-amber     { background: var(--amber-bg); }
+  table.diff td.cell-amber-hatched {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--amber-bg) 0, var(--amber-bg) 8px,
+      var(--amber-bg-strong) 8px, var(--amber-bg-strong) 12px
+    );
+  }
+  table.diff td.cell-violet    { background: var(--violet-bg); }
+  table.diff td.cell-bluegreen { background: var(--bluegreen-bg); }
+  table.diff td.cell-grey      { background: var(--grey-bg); }
+
+  table.diff td .exp-id {
+    font-weight: 700; color: var(--accent); font-size: 1.0em;
+    display: block; margin-bottom: 3px;
+  }
+  table.diff td .exp-name { font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  table.diff td .exp-meta { font-size: 0.88em; color: var(--ink-mute); margin-bottom: 4px; }
+  table.diff td code {
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 0.85em; color: var(--ink);
+    background: rgba(255,255,255,0.5);
+    padding: 1px 4px; border-radius: 2px;
+    overflow-wrap: break-word;
+  }
+
+  .verdict-tag {
+    display: inline-block; padding: 1px 7px;
+    font-size: 0.85em; font-weight: 600;
+    border: 1px solid; border-radius: 10px;
+    margin-bottom: 4px;
+  }
+  .verdict-tag.t-green     { color: var(--green); border-color: var(--green); background: rgba(196,224,192,0.5); }
+  .verdict-tag.t-amber     { color: var(--amber); border-color: var(--amber); background: rgba(245,207,140,0.5); }
+  .verdict-tag.t-violet    { color: var(--violet); border-color: var(--violet); background: rgba(190,179,218,0.5); }
+  .verdict-tag.t-bluegreen { color: var(--bluegreen); border-color: var(--bluegreen); background: rgba(168,200,224,0.5); }
+  .verdict-tag.t-grey      { color: var(--grey); border-color: var(--grey); background: rgba(216,210,191,0.5); }
+
+  .footnote { font-size: 0.82em; color: var(--ink-mute); font-style: italic; }
+
+  /* ---- Rationale rows (verbatim model output) ---- */
+  table.diff tr.rationale-row td {
+    background: var(--bg-card-live);
+    border: 1px solid var(--rule-soft);
+    padding: 0;
+  }
+  .cell-rationale-pair {
+    display: flex;
+    gap: 16px;
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.4);
+    border-left: 2px solid var(--accent-soft);
+  }
+  .cell-rationale-pair + .cell-rationale-pair {
+    border-top: 1px dashed var(--rule-soft);
+  }
+  .rationale-12b, .rationale-27b {
+    flex: 1;
+    font-size: 0.82em;
+    color: var(--ink-soft);
+    line-height: 1.45;
+  }
+  .rationale-12b strong, .rationale-27b strong {
+    display: block;
+    color: var(--accent);
+    font-size: 0.95em;
+    margin-bottom: 3px;
+  }
+  .rationale-12b em, .rationale-27b em {
+    font-style: italic;
+    color: var(--ink);
+  }
+  .rationale-source {
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    color: var(--ink-mute);
+    margin-top: 4px;
+  }
+  .rationale-single {
+    flex-basis: 100%;
+  }
+  .rationale-note {
+    padding: 6px 12px 8px;
+    font-size: 0.78em;
+    color: var(--ink-mute);
+    font-style: italic;
+    background: rgba(255,255,255,0.25);
+    border-left: 2px solid var(--accent-soft);
+  }
+
+  /* Synthesis sections */
+  .synth-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin: 18px 0 28px;
+  }
+  @media (max-width: 1000px) {
+    .synth-grid { grid-template-columns: 1fr; }
+  }
+  .synth-card {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    padding: 14px 16px;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  .synth-card h4 {
+    margin: 0 0 8px; font-size: 0.95em;
+    color: var(--accent); font-weight: 600;
+  }
+  .synth-card.green     { border-left: 3px solid var(--green); }
+  .synth-card.amber     { border-left: 3px solid var(--amber); }
+  .synth-card.bluegreen { border-left: 3px solid var(--bluegreen); }
+  .synth-card p { margin: 0 0 6px; }
+  .synth-card p:last-child { margin-bottom: 0; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="doc-head">
+  <p class="eyebrow">Output-format-bias paper · model-scale comparison</p>
+  <h1 class="doc-title">Gemma 12B vs Gemma 27B differential — every experiment, one table</h1>
+  <p class="doc-subtitle">Consolidating the 12B-vs-27B comparison data that's currently spread across the experiment log, raw JSONs, paper drafts, and workshop artifacts. Per-experiment, color-coded by direction of the differential. Built so the lead author can scan, decide what survives review, and scope the model-scale claims accurately for the May 20 deadline.</p>
+  <div class="doc-meta">
+    <span><strong>Date:</strong> 2026-05-11</span>
+    <span><strong>Paper deadline:</strong> 2026-05-20 (REE)</span>
+    <span><strong>Source files:</strong> raw JSONs in <code>data/raw_outputs/</code>; cross-checked against <code>research/experiment_log.md</code> + <code>MASTER_RESPONSE_LOG_2026-05-11.md</code> Issue 4</span>
+  </div>
+</header>
+
+<div class="preamble">
+  <p><strong>The two distinct findings that the "12B more reliable than 27B" claim conflates.</strong> The phrase shows up at <code>experiment_log.md</code> line 6805 (2026-04-25 consolidation) and propagates from there. It lumps two findings with opposite directions:</p>
+  <p>
+    <strong>Finding A — 27B WORSE on S029 (neurodivergent).</strong> Test N pure 4-axis: Gemma 12B = 10/10 ENGAGED (correct). Gemma 27B cloud = 5/6 ENGAGED + 1/6 BURNOUT (≈17% false-positive rate on the equity-critical case). The larger model's stronger emotional-valence extraction pulls "exhausting to explain" out of its prepositional context and reads neurodivergent self-awareness as depletion (raw output reasoning at <code>experiment_log.md</code> 5310-5345).
+  </p>
+  <p>
+    <strong>Finding B — 27B BETTER on S002 (subtle burnout TP).</strong> Test N pure 4-axis: Gemma 12B = 10/10 ENGAGED (missed the TP). Gemma 27B cloud = 5/6 BURNOUT (caught under forced choice). When CHECK-IN is offered as an alternative (Test O), 27B abandons BURNOUT for ENGAGED+CHECK-IN — so the BURNOUT catch is forced-choice, not preferred-choice. Bidirectional: 1/6 of 27B runs also misclassify S002 as ENGAGED. Instability runs both ways.
+  </p>
+  <p><strong>Round 3 replication study (2026-03-22/23) is a separate, earlier finding.</strong> 5×7×3 design on the production binary pipeline (NOT the 4-axis): 12B + class reading was 100% reliable across 5 runs; 27B + class reading was 80%. The "equity case" there was S015 / S018 / S025 (relational-harms detection in the binary pipeline), not S029. The 2026-04-25 consolidation reads these as one pattern; the data supports two.</p>
+
+  <div class="callout">
+    <strong>Inference-setup + prompt-iteration confound (open, not ruled out).</strong> Every 12B-vs-27B comparison in this study compares <em>Gemma 12B 4-bit MLX local</em> against <em>Gemma 27B cloud via OpenRouter</em>. Different quantization (4-bit vs likely fp16), different inference engine, different sampling implementation. <strong>And:</strong> the Test N campaign used <strong>5 distinct system_prompt variants across the 16 JSONs</strong> (see "Test N system_prompt variants" section below) — not a single prompt held constant across model scale. ONE prompt (P3, sha256 prefix <code>93f4769a</code>) was run on BOTH 12B and 27B; under that shared prompt, both models produce ENGAGED on both S002 and S029, and the Finding A "S029 worse on 27B" differential disappears. The Finding A result is isolated to the 27B prompt variants WITHOUT the identity-disclosure guard (P2). The "MATERIAL CONDITIONS… breaking through" clause is NOT 27B-only — it appears in 12B prompt variant P3 as well. Where this table cites "27B worse" or "27B better," that is the differential under THESE inference setups AND THESE prompt variants, not a clean model-scale claim. Most consequential for: Test N S029 false positive (Finding A) and Test N S002 recovery (Finding B). Less consequential for: Round 3 replication-study reliability (different test, different metric).
+  </div>
+</div>
+
+<!-- =============================================================== -->
+<!-- Test N system_prompt variants (P1-P5)                            -->
+<!-- =============================================================== -->
+<h2 id="prompt-variants">Test N system_prompt variants</h2>
+<div class="preamble">
+  <p>The Test N campaign iterated the system_prompt across runs. The 16 Test N JSONs (10× Gemma 12B + 6× Gemma 27B; Qwen 7B excluded from this 12B-vs-27B table) use <strong>5 distinct system_prompt variants</strong>, distinguished by SHA-256 of the <code>system_prompt</code> field. This table assigns short IDs P1-P5 in chronological order of first appearance. Cells citing Test N data are tagged with the relevant P-ID below.</p>
+  <table class="diff" style="font-size:0.9em;">
+    <thead>
+      <tr>
+        <th>P-ID</th>
+        <th>sha256 prefix</th>
+        <th>length (chars)</th>
+        <th>Files using it</th>
+        <th>What's distinctive</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>P1</strong></td>
+        <td><code>7ac35519</code></td>
+        <td>1459</td>
+        <td>9× Gemma 12B (all 2026-03-28 runs: 1113, 1158, 1206, 1215, 1727, 1738, 1746, 1755, 1804)</td>
+        <td>Baseline / shortest 12B prompt. NO "material conditions" clause, NO "CRISIS supersedes ENGAGED" clause, NO identity-disclosure guard.</td>
+      </tr>
+      <tr>
+        <td><strong>P2</strong></td>
+        <td><code>4d2116b5</code></td>
+        <td>2204</td>
+        <td>2× Gemma 27B cloud (2026-03-29_0907, 2026-03-29_1928)</td>
+        <td>First 27B prompt. Adds "MATERIAL CONDITIONS … breaking through and limiting their capacity" to BURNOUT bullet + adds "CRISIS supersedes ENGAGED" paragraph. <strong>NO identity-disclosure guard.</strong> This is the prompt under which S029 BURNOUT @ 0.85 occurs (Finding A's FP).</td>
+      </tr>
+      <tr>
+        <td><strong>P3</strong></td>
+        <td><code>93f4769a</code></td>
+        <td>2918</td>
+        <td><strong>1× Gemma 12B (2026-03-29_2107) + 1× Gemma 27B cloud (2026-03-29_2109)</strong> — the only prompt run on BOTH models</td>
+        <td>Adds "IDENTITY DISCLOSURE IS NOT A WELLBEING SIGNAL" paragraph on top of P2's additions. Under this shared prompt: <strong>12B and 27B both classify S002 = ENGAGED and S029 = ENGAGED</strong>. The Finding A / Finding B differentials disappear. (Also produces a 1/10 CRISIS misclassification on S023 at 12B — a false positive 12B never produces under P1.)</td>
+      </tr>
+      <tr>
+        <td><strong>P4</strong></td>
+        <td><code>0dbf5713</code></td>
+        <td>3199</td>
+        <td>1× Gemma 27B cloud (2026-03-29_2127)</td>
+        <td>Reformulated guard: "IDENTITY DISCLOSURE ALONE" + "Wellbeing signals require…" phrasing. Still produces BURNOUT on S002 with reasoning that doesn't quote material-conditions wording.</td>
+      </tr>
+      <tr>
+        <td><strong>P5</strong></td>
+        <td><code>d3e281bb</code></td>
+        <td>3987</td>
+        <td>2× Gemma 27B cloud (2026-03-30_0034, 2026-04-01_1607)</td>
+        <td>Longest. Adds "MINIMIZED DISCLOSURE AND COMMUNITY RESILIENCE" paragraph on top of P4's identity-disclosure formulation. The 04-01_1607 file also extends the corpus to WB11-WB14 (community-resilience cases).</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <strong>Cross-model controlled comparison (P3).</strong> Hash <code>93f4769a</code> is the one prompt variant that appears in BOTH a Gemma 12B file (<code>test_n_4axis_submissions_gemma12b_2026-03-29_2107.json</code>) AND a Gemma 27B cloud file (<code>test_n_4axis_submissions_gemma27b_cloud_2026-03-29_2109.json</code>). Under that shared prompt, both models produce <strong>ENGAGED on both S002 and S029</strong>. This is the closest thing the campaign has to a prompt-controlled 12B-vs-27B comparison on Test N. Under that comparison, the headline 12B-vs-27B differential on the equity-critical cases <em>vanishes</em>. The other 14 runs pair model-with-prompt: 12B never sees P4 or P5; 27B never sees P1.
+  </div>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch green"></div>Models agree, correct verdict (cross-model robustness)</div>
+  <div class="legend-item"><div class="legend-swatch bluegreen"></div>27B better than 12B</div>
+  <div class="legend-item"><div class="legend-swatch amber"></div>27B worse than 12B</div>
+  <div class="legend-item"><div class="legend-swatch amber-hatched"></div>Variable / partial / sample-size-limited</div>
+  <div class="legend-item"><div class="legend-swatch violet"></div>Both models miss (no differential)</div>
+  <div class="legend-item"><div class="legend-swatch grey"></div>No comparison data (one-model experiment)</div>
+</div>
+
+<!-- ============================================================== -->
+<!-- THE TABLE                                                       -->
+<!-- ============================================================== -->
+
+<table class="diff">
+<colgroup>
+  <col style="width:13%">
+  <col style="width:7%">
+  <col style="width:14%">
+  <col style="width:10%">
+  <col style="width:14%">
+  <col style="width:14%">
+  <col style="width:11%">
+  <col style="width:17%">
+</colgroup>
+<thead>
+<tr>
+  <th>Experiment</th>
+  <th>Date</th>
+  <th>Architecture</th>
+  <th>Cases tested (n)</th>
+  <th>Gemma 12B (local MLX 4-bit)</th>
+  <th>Gemma 27B (cloud OpenRouter)</th>
+  <th>Differential</th>
+  <th>Verdict / interpretation</th>
+</tr>
+</thead>
+<tbody>
+
+<!-- =============== Round 3 standard pipeline =============== -->
+<tr>
+  <td>
+    <span class="exp-id">Round 3 standard pipeline</span>
+    <div class="exp-name">Synthesis-first concern detection</div>
+    <div class="exp-meta">Production binary pipeline; class-reading enabled</div>
+  </td>
+  <td>2026-03-22 / 23</td>
+  <td>Synthesis-first; class reading then per-student concern flag. CONCERN_PROMPT ~517 words.</td>
+  <td>7 students (S015, S018, S025, S023, S027, S028, S029). 1 run per config.</td>
+  <td class="cell-green">
+    <span class="verdict-tag t-green">3/3 flags, 1 FP</span>
+    <div>Synthesis-first Gemma 12B (MLX). S015 / S018 / S025 all flagged. False positive on S027 Camille ("critical BMI analysis phrasing"). 4 clean students all correctly cleared.</div>
+  </td>
+  <td class="cell-green">
+    <span class="verdict-tag t-green">3/3 flags, 0 FP</span>
+    <div>Synthesis-first Gemma 27B (cloud). S015 / S018 / S025 all flagged. No false positives. 27B slightly cleaner than 12B on this single run (FP suppression).</div>
+  </td>
+  <td>27B marginally better on FP suppression (single-run comparison, n=1)</td>
+  <td>
+    Both architectures catch all 3 concerns under synthesis-first. 27B has 0 FP vs 12B's 1 FP on S027. Within-architecture, model size wins on FP suppression here.
+    <div class="footnote">Source: <code>experiment_log.md</code> lines 272-294, 350-358; <code>system_comparison_old_vs_new.md</code> line 49-54</div>
+  </td>
+</tr>
+<tr class="rationale-row">
+  <td colspan="8">
+    <div class="rationale-note">No per-student model rationale JSON for Round 3 standard pipeline is present in <code>data/raw_outputs/</code>. Verdicts above derive from the experiment-log entries cited; verbatim rationales for S015/S018/S025/S027 flags are recorded in the log narrative rather than as structured raw_output fields. Flag the row for follow-up if rationale-level validation is needed.</div>
+  </td>
+</tr>
+
+<!-- =============== Round 3 standard pipeline (27B no context) =============== -->
+<tr>
+  <td>
+    <span class="exp-id">Round 3 standard pipeline — no class context</span>
+    <div class="exp-name">Per-student-only baseline</div>
+    <div class="exp-meta">Same prompt; class reading REMOVED</div>
+  </td>
+  <td>2026-03-22 / 23</td>
+  <td>Standard per-student concern detection. No synthesis-first class reading. CONCERN_PROMPT alone.</td>
+  <td>3 flag students (S015, S018, S025).</td>
+  <td class="cell-grey">
+    <span class="verdict-tag t-grey">Not tested</span>
+    <div>12B without class-reading was not run as a separate condition in Round 3 standard-pipeline. (12B + class reading is the canonical Round 3 12B config.)</div>
+  </td>
+  <td class="cell-amber">
+    <span class="verdict-tag t-amber">2/3 flags — misses S025 tone policing</span>
+    <div>Gemma 27B without class context (medium and lightweight tiers both): catches S015, S018; misses S025 Aiden. Model SAW the pattern (tags include "meta-commentary on classroom dynamics") but did not flag it — relational harm invisible in isolation.</div>
+  </td>
+  <td>Asymmetric comparison; the relevant contrast is architecture (with vs without class reading) on 27B, not model scale</td>
+  <td>
+    Demonstrates that 27B catches S025 ONLY under synthesis-first. Establishes architecture-over-scale: a 12B model + class reading outperforms a 27B model without it on relational harms.
+    <div class="footnote">Source: <code>experiment_log.md</code> lines 296-322, 339-346</div>
+  </td>
+</tr>
+<tr class="rationale-row">
+  <td colspan="8">
+    <div class="rationale-note">12B not run as a no-class-context condition in Round 3 (asymmetric comparison). 27B-no-context S025 Aiden miss is logged in <code>experiment_log.md</code> 296-322: the model produced tags like "meta-commentary on classroom dynamics" but did not promote the pattern to a flag without the class-reading synthesis step. Verbatim raw_output for this run not stored as structured JSON in <code>data/raw_outputs/</code>.</div>
+  </td>
+</tr>
+
+<!-- =============== Round 3 replication (binary pipeline) =============== -->
+<tr>
+  <td>
+    <span class="exp-id">Round 3 replication study</span>
+    <div class="exp-name">5-run reliability sweep</div>
+    <div class="exp-meta">CRITICAL: this is the origin of "12B more reliable than 27B"</div>
+  </td>
+  <td>2026-03-22 / 23</td>
+  <td>Synthesis-first concern detection (binary FLAG/CLEAR). 5 runs × 7 students × 3 configs.</td>
+  <td>S015, S018, S025 (flag) + S023, S027, S028, S029 (clean). 5 runs each, n=105.</td>
+  <td class="cell-green">
+    <span class="verdict-tag t-green">100% (5/5 runs, 3/3 flags, 0 FP)</span>
+    <div>Gemma 12B + class reading: every run catches all three concerns; no false positives across 5 runs × 7 students = 35 individual checks.</div>
+  </td>
+  <td class="cell-amber-hatched">
+    <span class="verdict-tag t-amber">80% reliable (4/5 runs perfect, 1/5 misses S018+S025)</span>
+    <div>Gemma 27B + class reading: pattern across 5 runs was "FFF.... × 4/5, F...... × 1/5" — one run drops S018 + S025 flags. S023/S027/S028/S029 all clean in every run.</div>
+  </td>
+  <td>12B more reliable than 27B at run-to-run consistency on relational-harms binary detection</td>
+  <td>
+    Origin point for "12B more reliable than 27B" claim. This is on the BINARY pipeline (synthesis-first concern detection), not the 4-axis. The "equity case" here is the 3 flag students (S015 essentializing, S018 colorblind, S025 tone policing), NOT S029 — DO NOT conflate with the Test N S029 finding.
+    <div class="footnote">Source: <code>experiment_log.md</code> lines 442-490; <code>system_comparison_old_vs_new.md</code> line 49-55. Synthetic test data caveat: 100% is on known patterns, not generalization. Real-data run came later (April 27 live-data, Gemma 12B only).</div>
+  </td>
+</tr>
+<tr class="rationale-row">
+  <td colspan="8">
+    <div class="rationale-note">Round 3 replication reliability is a run-pattern metric (FFF.... × 4/5 vs F...... × 1/5 for 27B; FFF.... × 5/5 for 12B), not a per-run rationale claim. Per-student why-flagged text for individual replication runs is not stored as structured raw_output JSON in <code>data/raw_outputs/</code> — only the aggregate pattern is in the experiment log. For rationale-level evidence on the S025 tone-policing flag, see the standard-pipeline row above (single-run) or the 2026-04-26 naive-baseline rerun in <code>rerun_original_naive_concern_gemma12b_2026-04-26.json</code> (different prompt; S025 flagged @ 0.7 confidence with why_flagged "anger and raised voices are inherently unproductive… risks dismissing the validity of passionate or urgent expressions").</div>
+  </td>
+</tr>
+
+<!-- =============== Test A temperature =============== -->
+<tr>
+  <td>
+    <span class="exp-id">Test A — temperature</span>
+    <div class="exp-name">Generative observation, single-temperature</div>
+    <div class="exp-meta">Open-ended descriptive observation with embedded CRT vocabulary</div>
+  </td>
+  <td>2026-03-26</td>
+  <td>Generative observation; "3-4 sentences share what you notice"; structural-power-moves vocabulary in prompt.</td>
+  <td>S022 Destiny + S028 Imani. 12B: 5 runs/student. 27B: 3 runs/student.</td>
+  <td class="cell-amber-hatched">
+    <span class="verdict-tag t-amber">S022 MIXED 5/5; S028 ASSET 5/5</span>
+    <div>Parser-classifier on raw_output: S022 Destiny's righteous-anger writing returned <code>classification: MIXED</code> in all 5 runs (asset framing with some recommendation hedging). S028 ASSET 5/5.</div>
+    <div class="footnote">NOTE: per-master-log methodological commitment, classification label is parser-derived, not human-read. Prose may read clean asset-framed even when label is MIXED. Verbatim raw_output needed for full evaluation.</div>
+  </td>
+  <td class="cell-green">
+    <span class="verdict-tag t-green">S022 ASSET 3/3; S028 ASSET 3/3</span>
+    <div>Parser-classifier: 27B cleanly returns ASSET for both students across all runs.</div>
+  </td>
+  <td>27B cleaner on parser label for S022; both clean on S028. Sample-size asymmetric (5 vs 3 runs).</td>
+  <td>
+    Within the generative-observation format, 27B's parser-label is cleaner than 12B's on S022. May reflect prose register difference; may be parser-classifier artifact (commitment #1 in master log: parser labels are downstream artifacts, not evaluation inputs). Needs verbatim read to interpret.
+    <div class="footnote">Source: <code>test_a_temperature_gemma12b_2026-03-26.json</code>, <code>test_a_temperature_gemma27b_cloud_2026-03-26.json</code></div>
+  </td>
+</tr>
+<tr class="rationale-row">
+  <td colspan="8">
+    <div class="cell-rationale-pair">
+      <div class="rationale-12b">
+        <strong>Gemma 12B observation prose (verbatim, S022 Destiny, parser label MIXED):</strong>
+        <em>"Destiny is powerfully connecting the theoretical framework of intersectionality to a deeply felt, ongoing reality of systemic injustice… Her emotional relationship to the material is one of righteous anger, and she's expressing it directly and effectively. This isn't 'distress'; it's a passionate response to the ongoing impact of historical and contemporary injustices… It would be a missed opportunity to try and moderate her tone."</em>
+        <div class="rationale-source">— test_a_temperature_gemma12b_2026-03-26.json (all 5 runs byte-identical at temp 0.3; parser-classifier returns MIXED despite asset-framed prose)</div>
+      </div>
+      <div class="rationale-27b">
+        <strong>Gemma 27B observation prose (verbatim, S022 Destiny, parser label ASSET; from Test E since Test A's 27B run shares the architecture):</strong>
+        <em>"Destiny is powerfully connecting the theoretical framework of intersectionality to very concrete, historical, and ongoing realities of systemic racism and economic injustice… There's a clear and justified anger fueling her response, and she explicitly names that anger as a productive force, pushing against the expectation of detached academic discourse."</em>
+        <div class="rationale-source">— test_e_cross_model_gemma27b_cloud_2026-03-26.json (run 1 of 3; 3/3 ASSET label)</div>
+      </div>
+    </div>
+    <div class="rationale-note">Verbatim read: both prose blocks are asset-framed and substantively similar — the 12B "MIXED" label is parser-classifier driven, not prose-content driven. Confirms master-log commitment #1 (parser labels are downstream artifacts). The 12B vs 27B differential on S022 here is a parser disagreement, not a model-prose disagreement.</div>
+  </td>
+</tr>
+
+<!-- =============== Test E cross-model =============== -->
+<tr>
+  <td>
+    <span class="exp-id">Test E — cross-model generative observation</span>
+    <div class="exp-name">Generative observation across model families</div>
+    <div class="exp-meta">Same prompt as Test A</div>
+  </td>
+  <td>2026-03-26</td>
+  <td>Generative observation, replicated across 27B cloud and Qwen 7B local. (12B "reference" data comes from Test A.)</td>
+  <td>S022 + S028. n=3 runs each per model.</td>
+  <td class="cell-grey">
+    <span class="verdict-tag t-grey">Reference from Test A</span>
+    <div>Test E uses Test A's 12B data as the reference model (see JSON <code>reference_model</code> field). No new 12B runs in Test E itself.</div>
+  </td>
+  <td class="cell-green">
+    <span class="verdict-tag t-green">ASSET 6/6 (3 S022 + 3 S028)</span>
+    <div>Gemma 27B cloud: clean ASSET label every run.</div>
+  </td>
+  <td>Cross-model AGREEMENT on the 2 students Test E covers</td>
+  <td>
+    Both Gemma 27B and Qwen 7B return ASSET 6/6 in Test E. Combined with Test A 12B's S028 ASSET 5/5 (clean) and S022 MIXED 5/5 (parser-only), the generative-observation format shows cross-model robustness on the parser label for S028 and divergence on S022 — but Issue 1 in master log flags that the prompt itself confounds open-ended observation with CRT detection (Qwen 7B prose later found to contain deficit framing despite ASSET label). Variant A test in progress.
+    <div class="footnote">Source: <code>test_e_cross_model_gemma27b_cloud_2026-03-26.json</code>, <code>test_e_cross_model_qwen7b_2026-03-26.json</code>. Master log Issue 1.</div>
+  </td>
+</tr>
+<tr class="rationale-row">
+  <td colspan="8">
+    <div class="cell-rationale-pair">
+      <div class="rationale-12b">
+        <strong>Gemma 12B observation prose (verbatim, S028 Imani, parser label ASSET, reference from Test A):</strong>
+        <em>"Imani is powerfully connecting the theoretical framework of intersectionality to a deeply felt, embodied understanding of how race and gender shape experiences in everyday spaces… She's clearly grasping that intersectionality isn't just about adding categories together, but about recognizing a qualitatively different experience."</em>
+        <div class="rationale-source">— test_a_temperature_gemma12b_2026-03-26.json (5/5 runs ASSET, byte-identical at temp 0.3)</div>
+      </div>
+      <div class="rationale-27b">
+        <strong>Gemma 27B observation prose (verbatim, S028 Imani, parser label ASSET):</strong>
+        <em>"Imani is powerfully grounding the theoretical framework of intersectionality in her own lived experience and her mother's… She's articulating a really sophisticated understanding of how power operates through subtle, textural differences in treatment, moving beyond easily quantifiable instances of discrimination to describe a pervasive sense of differential expectation."</em>
+        <div class="rationale-source">— test_e_cross_model_gemma27b_cloud_2026-03-26.json (run 2 of 3; 3/3 ASSET label)</div>
+      </div>
+    </div>
+    <div class="rationale-note">Both models read S028 as asset-framed; parser labels agree (ASSET). Prose register: 12B uses "qualitatively different experience"; 27B uses "subtle, textural differences in treatment." Cross-model agreement on this case is on both label AND prose substance.</div>
+  </td>
+</tr>
+
+<!-- =============== Test K enhancement tier =============== -->
+<tr>
+  <td>
+    <span class="exp-id">Test K — enhancement-tier prose quality</span>
+    <div class="exp-name">Cloud anonymized-pattern enhancement</div>
+    <div class="exp-meta">5-dimension scoring rubric (structural / language-justice / relational / pedagogical / anti-spotlighting); each /3</div>
+  </td>
+  <td>2026-03-28 (rerun 03-29)</td>
+  <td>Anonymized class-pattern descriptions sent to multiple free cloud models for enhancement-tier writeup. No student-level data.</td>
+  <td>One class-level pattern bundle. Multiple cloud models tried; only some returned scorable output.</td>
+  <td class="cell-grey">
+    <span class="verdict-tag t-grey">N/A — local-tier baseline only</span>
+    <div>Gemma 12B is the LOCAL-tier model that produces the patterns. It is not part of the Test K cloud comparison; the comparison is between cloud enhancement models. No direct 12B-vs-27B comparison row.</div>
+  </td>
+  <td class="cell-bluegreen">
+    <span class="verdict-tag t-bluegreen">27B free = 6/10 (03-29 rerun)</span>
+    <div>Gemma 27B free (via Google AI Studio), 03-29 rerun: structural 2, language-justice 1, relational 2, pedagogical 1, anti-spotlighting 0 (rubric-artifact, not real-zero). Score = 6/10. The earlier 03-28 run scored 8/10 (structural 2, language-justice 1, relational 3, pedagogical 2, anti-spotlighting 0) and tied for top among scorable cloud models; on the 03-29 rerun, Step Flash scored 9 and Nemotron scored 8, both higher than 27B. "Best scoring model" was true only on 03-28 and does not hold on the rerun.</div>
+  </td>
+  <td>Not a 12B-vs-27B comparison. Demonstrates 27B viable as cloud enhancement; doesn't compare to 12B prose quality directly.</td>
+  <td>
+    Tension worth flagging: 27B produces strong enhancement-tier prose (Test K). 12B is reliable on classification (Round 3). "27B is worse" generalizations have to be scoped — 27B is BETTER at the enhancement task this test measured. The reliability-vs-prose-quality trade is a real dimension the paper should distinguish.
+    <div class="footnote">Source: <code>test_k_enhancement_comparison_multi_model_2026-03-28.json</code> + <code>..._2026-03-29_1113.json</code>; <code>experiment_log.md</code> 3665-3737</div>
+  </td>
+</tr>
+<tr class="rationale-row">
+  <td colspan="8">
+    <div class="cell-rationale-pair">
+      <div class="rationale-27b rationale-single">
+        <strong>Gemma 27B free enhancement prose (verbatim excerpt, anonymized class-pattern bundle, 03-29 rerun scored 6/10):</strong>
+        <em>"This engagement data paints a picture of a class grappling with intersectionality in a complex and, overall, productive way. The class isn't simply accepting the framework; they are actively negotiating it, revealing both promising understanding and predictable points of friction… The most productive tension is undoubtedly the one between analytical and experiential engagement. This isn't a conflict to resolve, but a dynamic to cultivate."</em>
+        <div class="rationale-source">— test_k_enhancement_comparison_multi_model_2026-03-29_1113.json, model_key gemma27b_free. 12B is the LOCAL-tier pattern-producer, not part of the cloud-enhancement comparison; no comparable 12B enhancement run exists.</div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- =============== Test N S002 =============== -->
+<tr>
+  <td>
+    <span class="exp-id">Test N — pure 4-axis · S002 burnout TP</span>
+    <div class="exp-name">Jordan Kim — burnout signal "Idk had more to say but its late"</div>
+    <div class="exp-meta">Forced single-label choice (CRISIS/BURNOUT/ENGAGED/NONE)</div>
+  </td>
+  <td>2026-03-28 → 04-01</td>
+  <td>4-axis classification on raw submission text. No CHECK-IN, no concurrent labels.</td>
+  <td>1 student (S002). 12B n=10 runs; 27B n=6 runs.</td>
+  <td class="cell-violet">
+    <span class="verdict-tag t-violet">10/10 ENGAGED — MISSED TP</span>
+    <div>Every Gemma 12B run rejects burnout reading: "Acknowledgment of fatigue does not indicate burnout." 12B never catches S002 under pure 4-axis. <em style="color:var(--ink-mute); font-size:0.88em;">[Prompt variants: 9× P1 + 1× P3]</em></div>
+  </td>
+  <td class="cell-bluegreen">
+    <span class="verdict-tag t-bluegreen">5/6 BURNOUT — CAUGHT (under forced choice)</span>
+    <div>5 runs BURNOUT @ 0.80-0.85; 1 run (2026-03-29_2109, prompt P3) ENGAGED @ 0.90. n=6 small per sample-size caveat (<code>experiment_log.md</code> 6802). Test O shows the BURNOUT verdict is forced-choice: with CHECK-IN available, 27B abandons BURNOUT for ENGAGED+CHECK-IN. <em style="color:var(--ink-mute); font-size:0.88em;">[Prompt variants: 2× P2 + 1× P3 (the ENGAGED outlier) + 1× P4 + 2× P5]</em></div>
+  </td>
+  <td><strong>Finding B: 27B BETTER than 12B</strong> on subtle-burnout TP recovery under forced choice</td>
+  <td>
+    Where the "27B catches what 12B misses" claim lives. Robust within Test N JSON but: (a) forced-choice artifact (Test O), (b) bidirectional instability (1/6 27B runs miss too), (c) n=6 small, (d) inference-setup confound not ruled out. Paper §IV.A.4 claim "Run on Gemma 12B, the 4-axis classifier correctly identified S002" is WRONG per Issue 5a — that claim only holds for 27B cloud.
+    <div class="footnote">Source: <code>test_n_4axis_submissions_gemma12b_*</code> (10 files) + <code>test_n_4axis_submissions_gemma27b_cloud_*</code> (6 files); master log Issue 4b, Issue 5a; 4axis_iteration_workshop.html</div>
+  </td>
+</tr>
+<tr class="rationale-row">
+  <td colspan="8">
+    <div class="cell-rationale-pair">
+      <div class="rationale-12b">
+        <strong>Gemma 12B Test N rationale (verbatim, S002 Jordan Kim, ENGAGED @ 0.95 — 10/10 misses TP):</strong>
+        <em>"{axis: ENGAGED, signal: 'Student is thoughtfully engaging with course material (intersectionality, Crenshaw) and connecting it to their own family observations to illustrate understanding. Acknowledgment of fatigue (\"Idk…its late\") does not indicate burnout.', confidence: 0.95}"</em>
+        <div class="rationale-source">— test_n_4axis_submissions_gemma12b_2026-03-28_1113.json (representative; all 10 runs return ENGAGED at confidence 0.90-0.95 with substantively similar reasoning — fatigue-acknowledgment-as-metacognition, not burnout signal)</div>
+      </div>
+      <div class="rationale-27b">
+        <strong>Gemma 27B Test N rationale (verbatim, S002 Jordan Kim, BURNOUT @ 0.80 — representative 5/6 catch):</strong>
+        <em>"{axis: BURNOUT, signal: 'Brief, unfinished thought; mentions lateness suggesting time constraints impacting ability to complete work. Focus is on applying course concepts, not personal crisis.', confidence: 0.80}"</em>
+        <div class="rationale-source">— test_n_4axis_submissions_gemma27b_cloud_2026-03-29_0907.json (5 of 6 runs return BURNOUT at 0.80-0.85 with reasoning anchored on "brief, unfinished," "lateness," "time constraints," "material conditions")</div>
+      </div>
+    </div>
+    <div class="cell-rationale-pair">
+      <div class="rationale-12b">
+        <strong>Note on the 27B 1/6 ENGAGED run (the bidirectional case):</strong>
+        <em>(no 12B counterpart — 12B is 10/10 ENGAGED)</em>
+      </div>
+      <div class="rationale-27b">
+        <strong>Gemma 27B Test N rationale (verbatim, S002, ENGAGED @ 0.90 — the 1/6 miss):</strong>
+        <em>"{axis: ENGAGED, signal: 'Student demonstrates engagement with course material (intersectionality, Crenshaw) and connects it to personal observation. The mention of being \"late\" does not indicate material depletion, but rather time constraints.', confidence: 0.90}"</em>
+        <div class="rationale-source">— test_n_4axis_submissions_gemma27b_cloud_2026-03-29_2109.json (the 1/6 run where 27B agrees with 12B's reading)</div>
+      </div>
+    </div>
+    <div class="rationale-note"><strong>Prompt-variant tags.</strong> 12B 10/10 ENGAGED splits 9 on P1 + 1 on P3. 27B 5/6 BURNOUT splits 2 on P2 + 1 on P4 + 2 on P5. The 27B 1/6 ENGAGED outlier is on P3 — the same prompt as the 12B 2026-03-29_2107 run. <strong>Controlled comparison (P3, sha256 <code>93f4769a</code>):</strong> when the same prompt is run on both models (12B 2107 and 27B 2109), both produce ENGAGED on S002 — the Finding B differential disappears. <strong>System-prompt confound reframed:</strong> the campaign used 5 distinct Test N system_prompt variants (see "Test N system_prompt variants" section). The "MATERIAL CONDITIONS … breaking through and limiting their capacity" clause appears in P2, P3, P4, and P5 — and in 12B prompt P3 as well — so it is NOT 27B-only as the earlier footnote claimed. The "CRISIS supersedes ENGAGED" clause is present in P2-P5. The "IDENTITY DISCLOSURE IS NOT A WELLBEING SIGNAL" guard is present in P3, P4, P5 — and the only 27B-on-S002 ENGAGED outlier (the 1/6) is the P3 run. The differential is jointly prompt-driven and model-scale-driven; the data don't isolate scale.</div>
+  </td>
+</tr>
+
+<!-- =============== Test N S029 =============== -->
+<tr>
+  <td>
+    <span class="exp-id">Test N — pure 4-axis · S029 neurodivergent</span>
+    <div class="exp-name">Jordan Espinoza — "exhausting to explain" intersecting identities</div>
+    <div class="exp-meta">Equity-critical protected case</div>
+  </td>
+  <td>2026-03-28 → 04-01</td>
+  <td>4-axis classification on raw submission, forced single-label.</td>
+  <td>1 student (S029). 12B n=10 runs; 27B n=6 runs.</td>
+  <td class="cell-green">
+    <span class="verdict-tag t-green">10/10 ENGAGED — correct</span>
+    <div>Every Gemma 12B run reads S029 as ENGAGED @ 0.90-0.95. Stable correct classification on the neurodivergent protected case. <em style="color:var(--ink-mute); font-size:0.88em;">[Prompt variants: 9× P1 + 1× P3]</em></div>
+  </td>
+  <td class="cell-amber">
+    <span class="verdict-tag t-amber">5/6 ENGAGED, 1/6 BURNOUT — false positive</span>
+    <div>One 27B run (2026-03-29_0907, prompt P2) routes S029 to BURNOUT @ 0.85. Raw reasoning strips "exhausting" from its prepositional phrase ("exhausting to explain"), reads it as personal depletion. 27B's stronger emotional-valence extraction defeats prompt's "neurodivergent writing is valid" framing — but note P2 is the only 27B prompt without an identity-disclosure guard. <em style="color:var(--ink-mute); font-size:0.88em;">[Prompt variants: 1× P2 (the BURNOUT FP) + 1× P2 (ENGAGED, 1928) + 1× P3 + 1× P4 + 2× P5]</em></div>
+  </td>
+  <td><strong>Finding A: 27B WORSE than 12B</strong> on neurodivergent protected case</td>
+  <td>
+    Where the "27B less stable on equity" claim lives. ≈17% FP rate on S029 with n=6 small. Hypotheses (<code>experiment_log.md</code> 6818+): normative gravity, prior-vs-prompt weighting, inference-setup confound. The third is easiest to test and hasn't been done. Paper should scope to "Gemma 27B cloud on Test N at temp 0.3" not a clean model-scale claim.
+    <div class="footnote">Source: <code>test_n_4axis_submissions_gemma27b_cloud_2026-03-29_0907.json</code>; <code>experiment_log.md</code> 5300, 5310-5360; master log Issue 4a</div>
+  </td>
+</tr>
+<tr class="rationale-row">
+  <td colspan="8">
+    <div class="cell-rationale-pair">
+      <div class="rationale-12b">
+        <strong>Gemma 12B Test N rationale (verbatim, S029 Jordan Espinoza, ENGAGED @ 0.90 — 10/10 correct):</strong>
+        <em>"{axis: ENGAGED, signal: 'The student is using the course material (intersectionality) to reflect on their own experiences and challenges related to their identities (dyslexia, ADHD, being Latino, first-generation student). While they express frustration with expressing these experiences, it’s within the context of engaging with the course material.', confidence: 0.90}"</em>
+        <div class="rationale-source">— test_n_4axis_submissions_gemma12b_2026-03-28_1113.json (representative; 10/10 ENGAGED @ 0.90-0.95; reasoning consistently treats "exhausting to explain" as metacognitive observation within the assignment context)</div>
+      </div>
+      <div class="rationale-27b">
+        <strong>Gemma 27B Test N rationale (verbatim, S029, BURNOUT @ 0.85 — the 1/6 false positive):</strong>
+        <em>"{axis: BURNOUT, signal: 'Student details multiple cognitive and social challenges (dyslexia, ADHD, first-gen student status, racial bias) and explicitly states the interaction of these factors is \"exhausting.\" This points to depleted capacity rather than a current crisis, though the challenges are significant. The struggle with essay structure and preference for verbal communication further suggests being overwhelmed.', confidence: 0.85}"</em>
+        <div class="rationale-source">— test_n_4axis_submissions_gemma27b_cloud_2026-03-29_0907.json (the specific 1/6 misclassification run — the other 5/6 27B runs return ENGAGED, e.g. 2026-03-29_2109: "the comment about writing difficulties is a metacognitive observation, not a signal of burnout")</div>
+      </div>
+    </div>
+    <div class="rationale-note">Reading side-by-side: 12B keeps "exhausting" in its prepositional context ("exhausting to explain"); the 27B misclassifying run strips "exhausting" from that context and quotes it as a free-standing signal of "depleted capacity" — exactly the mechanism described in <code>experiment_log.md</code> 5310-5345. The reasoning is genuinely distinguishable: 12B reads the metacognitive frame, 27B reads the affective valence. The remaining 5/6 27B runs read it the way 12B does. <strong>Prompt-variant tags.</strong> The 1/6 27B BURNOUT FP occurs on prompt P2 (sha256 <code>4d2116b5</code>, file 2026-03-29_0907) — the only 27B prompt WITHOUT the "IDENTITY DISCLOSURE IS NOT A WELLBEING SIGNAL" guard. The 5/6 ENGAGED runs are distributed across P2 (1× on 1928), P3 (1× on 2109), P4 (1× on 2127), P5 (2× on 0034 + 04-01_1607). <strong>Controlled comparison (P3):</strong> the 12B P3 run (2026-03-29_2107) ALSO produces ENGAGED on S029 — so under the shared prompt, the Finding A differential disappears. The "S029 BURNOUT" failure mode is isolated to the single 27B run on the weakest prompt variant (P2). The "MATERIAL CONDITIONS … breaking through" clause is present in P2-P5 and in 12B P3, so it is not 27B-only and cannot solely explain the FP.</div>
+  </td>
+</tr>
+
+<!-- =============== Test N other students =============== -->
+<tr>
+  <td>
+    <span class="exp-id">Test N — pure 4-axis · other students</span>
+    <div class="exp-name">S004, S022, S023, S028, S031</div>
+    <div class="exp-meta">Same Test N architecture; cross-student per-cell readout</div>
+  </td>
+  <td>2026-03-28 → 04-01</td>
+  <td>4-axis classification on raw submission, forced single-label.</td>
+  <td>5 students. 12B n=10; 27B n=6.</td>
+  <td class="cell-amber-hatched">
+    <span class="verdict-tag t-amber">Mixed: see breakdown</span>
+    <div><strong>S004 Priya:</strong> 10/10 ENGAGED ✓<br>
+    <strong>S022 Destiny:</strong> 10/10 ENGAGED ✓<br>
+    <strong>S023 Yolanda:</strong> 9/10 ENGAGED, 1/10 CRISIS @ 0.95 (FP) — <em>the 1/10 CRISIS is the 2026-03-29_2107 run on prompt P3 (the only 12B run on a strengthened prompt); under P1 (9/10) 12B is clean</em><br>
+    <strong>S028 Imani:</strong> 10/10 ENGAGED ✓<br>
+    <strong>S031 Marcus:</strong> 9/10 BURNOUT @ 0.70 (matches designed-probe expected verdict), 1/10 ENGAGED — <em>the 1/10 ENGAGED is the 2026-03-29_2107 run on prompt P3; under P1 (9/10) 12B uniformly routes to BURNOUT, consistent with the binary system's burnout-signal criterion that this probe was designed to test</em><br>
+    <em style="color:var(--ink-mute); font-size:0.88em;">[All 12B Test N data: 9× P1 + 1× P3]</em></div>
+  </td>
+  <td class="cell-amber-hatched">
+    <span class="verdict-tag t-amber">Mixed: see breakdown</span>
+    <div><strong>S004 Priya:</strong> 6/6 ENGAGED ✓<br>
+    <strong>S022 Destiny:</strong> 6/6 ENGAGED ✓<br>
+    <strong>S023 Yolanda:</strong> 6/6 ENGAGED ✓<br>
+    <strong>S028 Imani:</strong> 6/6 ENGAGED ✓<br>
+    <strong>S031 Marcus:</strong> 4/6 NONE, 2/6 ENGAGED (oscillates; "insufficient text")<br>
+    <em style="color:var(--ink-mute); font-size:0.88em;">[All 27B Test N data: 2× P2 + 1× P3 + 1× P4 + 2× P5]</em></div>
+  </td>
+  <td>Mixed by student. S023: 12B variable FP (1/10), 27B clean — 27B BETTER on S023. S031: directional differential is now read against the designed-probe expected verdict (BURNOUT/concern). 12B 9/10 BURNOUT matches the binary-criterion expectation; 27B routes NONE/ENGAGED, failing to surface the burnout-adjacent signal the probe was designed to test.</td>
+  <td>
+    On S023, 27B is cleaner (zero FP vs 12B's 1/10 CRISIS misclassification). On S031 (designed edge-case probe for minimal-effort/closing-off signal), the direction reverses under the updated expected verdict: 12B's 9/10 BURNOUT is consistent with the binary system's burnout criterion (which the probe was designed to test against); 27B's NONE/ENGAGED routes are a miss on that criterion. S004 / S022 / S028 cross-model agreement (clean classification).
+    <div class="footnote">Source: same Test N JSON files; 4axis_iteration_workshop.html rows for each student. S031 reframed as designed edge-case probe per master log Issue 3 + 2026-05-11 evening reframe.</div>
+  </td>
+</tr>
+<tr class="rationale-row">
+  <td colspan="8">
+    <div class="cell-rationale-pair">
+      <div class="rationale-12b">
+        <strong>Gemma 12B Test N rationale (verbatim, S031 Marcus Bell, BURNOUT @ 0.70 — 9/10 BURNOUT-at-threshold, matches designed-probe expected verdict):</strong>
+        <em>"{axis: BURNOUT, signal: 'The student expresses uncertainty and a sense of lacking further thoughts, suggesting potential burnout or fatigue, despite understanding the core concept.', confidence: 0.70}"</em>
+        <div class="rationale-source">— test_n_4axis_submissions_gemma12b_2026-03-28_1113.json (representative of the 9/10 BURNOUT pattern on prompt P1; 12B reads "idk what else to say" as burnout signal). The 1/10 ENGAGED outlier is the 2026-03-29_2107 run on prompt P3.</div>
+      </div>
+      <div class="rationale-27b">
+        <strong>Gemma 27B Test N rationale (verbatim, S031 Marcus Bell, NONE @ 0.95 — 4/6 runs):</strong>
+        <em>"{axis: NONE, signal: 'Brief definition of intersectionality, expresses confusion and lack of further insight. Insufficient text to assess for crisis, burnout, or engagement.', confidence: 0.95}"</em>
+        <div class="rationale-source">— test_n_4axis_submissions_gemma27b_cloud_2026-03-29_0907.json (4/6 runs NONE, 2/6 ENGAGED; 27B does not surface the burnout-adjacent signal under the narrower 4-axis prompt)</div>
+      </div>
+    </div>
+    <div class="rationale-note">On S031, the directional differential reverses against the updated expected verdict: 12B routes BURNOUT (consistent with the binary system's burnout-signal criterion that this probe is designed to test); 27B routes NONE/ENGAGED (does not surface the signal). Prompt-variant note: the P3 controlled comparison runs 12B and 27B on the same prompt. 12B-on-P3 flips S031 to ENGAGED (the single 1/10 outlier); 27B-on-P3 returns NONE. Same prompt, different verdicts — both diverge from 12B-on-P1's uniform BURNOUT. The "stricter material-conditions criterion" hypothesis is consistent with the data but cannot solely explain S031 because 12B-on-P3 (which has the same criterion) goes ENGAGED, not BURNOUT or NONE. Open question for §IV.A: does Marcus's 27B NONE/ENGAGED routing indicate a 27B/4-axis-prompt scale-effect that suppresses the burnout-signal criterion the binary prompt explicitly carries?</div>
+  </td>
+</tr>
+
+<!-- =============== Test O multi-axis =============== -->
+<tr>
+  <td>
+    <span class="exp-id">Test O — multi-axis + CHECK-IN</span>
+    <div class="exp-name">4-axis with concurrent labels + CHECK-IN boolean</div>
+    <div class="exp-meta">Same students as Test N; CHECK-IN flag added as alternative to forced BURNOUT/CRISIS</div>
+  </td>
+  <td>2026-03-28 (12B) / 2026-03-29 (27B)</td>
+  <td>Multi-axis: model can assign multiple wellbeing categories AND independently flag CHECK-IN. Single-pass.</td>
+  <td>7 students (S002 + S004 + S022 + S023 + S028 + S029 + S031). 12B n=3 runs; 27B n=1 run.</td>
+  <td class="cell-amber-hatched">
+    <span class="verdict-tag t-amber">CHECK-IN over-fires</span>
+    <div><strong>S002:</strong> 3/3 ENGAGED + CHECK-IN (caught via CHECK-IN, not BURNOUT)<br>
+    <strong>S004 Priya:</strong> 3/3 ENGAGED + CHECK-IN (FALSE CHECK-IN on strong student)<br>
+    <strong>S022 Destiny:</strong> 3/3 ENGAGED + CRISIS + CHECK-IN (FALSE CRISIS on anger)<br>
+    <strong>S023 Yolanda:</strong> 3/3 ENGAGED + CRISIS + CHECK-IN (FALSE CRISIS on lived experience)<br>
+    <strong>S028 Imani:</strong> 3/3 ENGAGED + CHECK-IN<br>
+    <strong>S029 Jordan:</strong> 3/3 ENGAGED + CHECK-IN<br>
+    <strong>S031 Marcus:</strong> 3/3 ENGAGED + CHECK-IN</div>
+  </td>
+  <td class="cell-bluegreen">
+    <span class="verdict-tag t-bluegreen">Stricter, cleaner</span>
+    <div><strong>S002:</strong> 1/1 ENGAGED + CHECK-IN (abandons BURNOUT once given alternative)<br>
+    <strong>S004 Priya:</strong> 1/1 ENGAGED (no CHECK-IN) ✓<br>
+    <strong>S022 Destiny:</strong> 1/1 ENGAGED (no CHECK-IN, no CRISIS) ✓<br>
+    <strong>S023 Yolanda:</strong> 1/1 ENGAGED (no CHECK-IN, no CRISIS) ✓<br>
+    <strong>S028 Imani:</strong> 1/1 ENGAGED (no CHECK-IN) ✓<br>
+    <strong>S029 Jordan:</strong> 1/1 ENGAGED + CHECK-IN<br>
+    <strong>S031 Marcus:</strong> 1/1 ENGAGED + CHECK-IN</div>
+  </td>
+  <td><strong>27B BETTER on FP suppression</strong> across multi-axis (cleaner CHECK-IN threshold), n=1 caveat</td>
+  <td>
+    27B uses CHECK-IN with discipline; 12B over-fires it. Both catch S002 via CHECK-IN (architectural recovery of TP that pure-4-axis missed on 12B). 27B's stricter threshold makes it the better fit for multi-axis on equity-protected cases. Single 27B run — needs replication.
+    <div class="footnote">Source: <code>test_o_multi_axis_gemma12b_*</code> (3 files) + <code>test_o_multi_axis_gemma27b_cloud_2026-03-29_2127.json</code>; 4axis_iteration_workshop.html Test O section</div>
+  </td>
+</tr>
+<tr class="rationale-row">
+  <td colspan="8">
+    <div class="cell-rationale-pair">
+      <div class="rationale-12b">
+        <strong>Gemma 12B Test O rationale (verbatim, S002 Jordan Kim, [ENGAGED, CHECK-IN] @ 0.80):</strong>
+        <em>"{axes: [ENGAGED, CHECK-IN], signal: 'The student demonstrates engagement with the course material (intersectionality, Crenshaw’s work, identity). The \"Idk I had more to say but its late and…\" ending is ambiguous; it could indicate genuine fatigue/time pressure (CHECK-IN) or a more significant issue preventing further elaboration.', confidence: 0.80}"</em>
+        <div class="rationale-source">— test_o_multi_axis_gemma12b_2026-03-28_1225.json (3/3 runs ENGAGED + CHECK-IN; 12B catches S002 via CHECK-IN once it's available)</div>
+      </div>
+      <div class="rationale-27b">
+        <strong>Gemma 27B Test O rationale (verbatim, S002 Jordan Kim, [ENGAGED, CHECK-IN] @ 0.70):</strong>
+        <em>"{axes: [ENGAGED, CHECK-IN], signal: 'The student demonstrates engagement with the course material by connecting Crenshaw’s concept of intersectionality to their personal experience. However, the submission trails off abruptly with \"Idk I had more to say but its late and,\" which could indicate fatigue or time constraints, or simply a late-night submission. The brevity is ambiguous — it could be normal for a late submission OR a sign of depletion. Therefore, CHECK-IN is appropriate.', confidence: 0.70}"</em>
+        <div class="rationale-source">— test_o_multi_axis_gemma27b_cloud_2026-03-29_2127.json (1/1 run; 27B abandons BURNOUT once CHECK-IN is offered — exactly the "forced-choice artifact" mechanism cited in §IV.A.4)</div>
+      </div>
+    </div>
+    <div class="rationale-note">Verbatim read confirms the table claim: 27B abandons BURNOUT for [ENGAGED, CHECK-IN] when CHECK-IN is available. This is the core evidence that the Test N S002 BURNOUT catch is forced-choice, not preferred-choice. Note: 27B Test O also flags S029 as [ENGAGED, CHECK-IN] @ 0.70 with reasoning "leaning towards CHECK-IN due to the explicit naming of exhaustion" — so the 27B "stricter threshold" claim is dimension-specific (cleaner on S004/S022/S023/S028; still CHECK-IN on S029).</div>
+  </td>
+</tr>
+
+<!-- =============== Test P two-pass =============== -->
+<tr>
+  <td>
+    <span class="exp-id">Test P — two-pass refinement</span>
+    <div class="exp-name">4-axis pass 1, CHECK-IN refinement pass 2</div>
+    <div class="exp-meta">Pass 2 runs only on Pass-1 ENGAGED cases</div>
+  </td>
+  <td>2026-03-28</td>
+  <td>Two-stage classification. Pass 1: 4-axis forced choice. Pass 2: re-read ENGAGED cases with CHECK-IN as the only output.</td>
+  <td>7 workshop students. n=7 runs (12B only).</td>
+  <td class="cell-grey">
+    <span class="verdict-tag t-grey">12B-only data exists</span>
+    <div>7 JSONs <code>test_p_two_pass_gemma12b_*</code>. Test P was Gemma 12B only.</div>
+  </td>
+  <td class="cell-grey">
+    <span class="verdict-tag t-grey">Not run</span>
+    <div>No 27B run for Test P architecture exists.</div>
+  </td>
+  <td>Comparison gap — no 27B Test P data</td>
+  <td>
+    Two-pass architecture's 12B-vs-27B behavior is untested. Paper claims about Test P/two-pass cannot be generalized across model scale.
+    <div class="footnote">Source: <code>test_p_two_pass_gemma12b_2026-03-28_*</code> (7 files)</div>
+  </td>
+</tr>
+<tr class="rationale-row">
+  <td colspan="8">
+    <div class="cell-rationale-pair">
+      <div class="rationale-12b rationale-single">
+        <strong>Gemma 12B Test P rationale (verbatim, S002 Jordan Kim — Pass 1 ENGAGED → Pass 2 CHECK-IN = true → final ENGAGED+CHECK-IN):</strong>
+        <em>Pass 1: "{axis: ENGAGED, signal: 'Student is thoughtfully engaging with course material (intersectionality, Crenshaw) and connecting it to their own family observations to illustrate understanding. Acknowledgment of fatigue (\"Idk…its late\") does not indicate burnout.', confidence: 0.95}"<br>Pass 2: "{check_in: true, reasoning: 'The submission ends abruptly with \"Idk I had more to say but its late\". This could be normal late-night submission behavior — a quick sign-off indicating tiredness. OR, it could be a sign of depletion or feeling rushed… It’s ambiguous enough to warrant a brief, supportive check-in.'}"</em>
+        <div class="rationale-source">— test_p_two_pass_gemma12b_2026-03-28_1456.json (12B-only architecture; no 27B Test P run exists for direct comparison)</div>
+      </div>
+    </div>
+    <div class="rationale-note">Test P is the architecture where 12B DOES catch the S002 ambiguity — via the explicit Pass-2 CHECK-IN probe rather than via single-pass forced choice. This is the architectural recovery referenced in paper §IV.A. The "12B missed S002" finding is specifically about pure 4-axis single-pass, NOT two-pass.</div>
+  </td>
+</tr>
+
+<!-- =============== Test Q 27B probes =============== -->
+<tr>
+  <td>
+    <span class="exp-id">Test Q — 27B counterfactual probes</span>
+    <div class="exp-name">27B training-data-bias counterfactual probes</div>
+    <div class="exp-meta">Probes S029-derived submissions perturbed along race/disability axes</div>
+  </td>
+  <td>2026-03-29</td>
+  <td>Counterfactual probes targeting 27B's BURNOUT misclassification on S029. Baseline axis: BURNOUT.</td>
+  <td>4 probes (file 1) + 6 probes (file 2) = 10 probes total. 27B only.</td>
+  <td class="cell-grey">
+    <span class="verdict-tag t-grey">Not run</span>
+    <div>No 12B baseline runs of the same counterfactual probes exist.</div>
+  </td>
+  <td class="cell-amber-hatched">
+    <span class="verdict-tag t-amber">Mixed (probe-set specific)</span>
+    <div>File 1 (n=4): 1 BURNOUT + 3 ENGAGED. File 2 (n=6): 2 BURNOUT + 4 ENGAGED. Combined: 3/10 BURNOUT, 7/10 ENGAGED across counterfactual perturbations. 27B's BURNOUT verdict is sensitive to specific framing details, not stable across perturbations.</div>
+  </td>
+  <td>Comparison gap — designed as 27B-only mechanism investigation</td>
+  <td>
+    Test Q is a 27B-internal mechanism check, not a model-comparison test. No 12B counterpart. Used to investigate which features of S029's text trigger the 27B BURNOUT misclassification. The 3/10 → 7/10 ENGAGED shift across counterfactuals suggests the misclassification is context-fragile, not a deep bias.
+    <div class="footnote">Source: <code>test_q_27b_probes_2026-03-29_1111.json</code>, <code>test_q_27b_probes_2026-03-29_1918.json</code></div>
+  </td>
+</tr>
+<tr class="rationale-row">
+  <td colspan="8">
+    <div class="cell-rationale-pair">
+      <div class="rationale-27b rationale-single">
+        <strong>Gemma 27B Test Q probe rationales (verbatim, S029-derived counterfactuals):</strong>
+        <em>Q0 baseline (BURNOUT @ 0.85): "Student details multiple cognitive and systemic barriers (dyslexia, ADHD, first-gen student status, racial bias) creating exhaustion and difficulty with the assignment’s demands (essay structure). Focus is on the experience of navigating these intersecting challenges, impacting capacity."<br><br>Q1 "exhausting" ablation (ENGAGED @ 0.90): "Student clearly understands the concept of intersectionality and applies it to their own experiences with neurodiversity and ethnicity, but frames it as an analytical exercise relating to the course material. The struggle with essay structure is presented as a skill-based challenge, not a crisis."<br><br>Q2 disability-vocab removal (ENGAGED @ 0.90): "…frames it as a reflection on how they are perceived, not as a current crisis. The struggle with essay structure is presented as a skill-based challenge, not a symptom of overwhelm."</em>
+        <div class="rationale-source">— test_q_27b_probes_2026-03-29_1111.json (n=4 probes file 1) + test_q_27b_probes_2026-03-29_1918.json (n=6 probes file 2); 27B-only mechanism investigation, no 12B counterpart</div>
+      </div>
+    </div>
+    <div class="rationale-note">The Q1 ablation result confirms the mechanism described in the S029 row: removing the word "exhausting" flips the 27B verdict from BURNOUT to ENGAGED with substantively the same submission content. This isolates the lexical trigger empirically — supports the "27B's stronger emotional-valence extraction" hypothesis and weakens (but does not rule out) the broader inference-setup confound for this specific failure mode.</div>
+  </td>
+</tr>
+
+<!-- =============== Live-data runs =============== -->
+<tr>
+  <td>
+    <span class="exp-id">Live-data runs (Week 7 / Week 2 / Week 5)</span>
+    <div class="exp-name">Real student submissions, Ethnic Studies course</div>
+    <div class="exp-meta">Production binary pipeline + 4-axis on real (de-identified) student data</div>
+  </td>
+  <td>2026-04-27 (Week 7 + Week 2); later Week 5 (2026-04-27 dual-binary)</td>
+  <td>Full production pipeline (Gemma 12B + class context); synthesis-first; binary concern detection.</td>
+  <td>Live student cohort (~28 students per week).</td>
+  <td class="cell-grey">
+    <span class="verdict-tag t-grey">12B-only data exists</span>
+    <div>All live-data runs are Gemma 12B 4-bit MLX (local, FERPA-compliant). Findings include 4-axis vs binary disparate-impact patterns and the prescan-signal-prefix issue.</div>
+  </td>
+  <td class="cell-grey">
+    <span class="verdict-tag t-grey">Not run (FERPA-blocked)</span>
+    <div>27B cloud cannot run on live student data — sending real student names/text to cloud is FERPA-violating without a DPA. Comparison structurally blocked for paper.</div>
+  </td>
+  <td>Comparison gap — FERPA structural barrier</td>
+  <td>
+    27B-on-live-data is the cleanest model-scale comparison that the paper CAN'T have. All 4-axis vs binary findings on real data ride on Gemma 12B alone. The synthetic-corpus 12B-vs-27B comparisons (Test N) don't generalize to live data behavior without additional assumption.
+    <div class="footnote">Source: <code>Autograder4Canvas/docs/research/findings_from_live_data_run_2026-04-27.md</code>; live-data JSONs in <code>output-format-bias/data/dual_binary_run_*</code></div>
+  </td>
+</tr>
+<tr class="rationale-row">
+  <td colspan="8">
+    <div class="rationale-note">No per-student rationale shown: live-data outputs are FERPA-protected and not exposed at the rationale level outside the working pipeline. The 12B-only constraint is structural, not analytic. For verbatim 12B rationale on the same architecture as the live runs, see Round 3 rows above (binary pipeline) and Test P row above (two-pass) — both run the same Gemma 12B 4-bit MLX setup.</div>
+  </td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- ============================================================== -->
+<!-- SYNTHESIS                                                       -->
+<!-- ============================================================== -->
+
+<h2>Synthesis</h2>
+
+<div class="synth-grid">
+
+<div class="synth-card green">
+  <h4>1 · Where 12B and 27B agree (cross-model robustness)</h4>
+  <p><strong>Generative observation on the parser label.</strong> Test A + Test E: S028 Imani ASSET clean on both Gemma 12B and Gemma 27B; Gemma 27B 16/16 ASSET across both tests. (Master log Issue 1 flags that the parser label may diverge from the prose for Qwen 7B — this caveat applies; the Gemma cross-model agreement is on parser label, not yet pair-verified verbatim on the prose.)</p>
+  <p><strong>Pure 4-axis non-equity-critical students.</strong> Test N S004 (strong student) and S022 (righteous anger) and S028 (AAVE): both Gemma 12B and Gemma 27B classify ENGAGED in every run. The format works robustly across model scale on these patterns.</p>
+  <p><strong>Round 3 standard pipeline catches S015 / S018 / S025 on both models with class reading.</strong> Architecture (synthesis-first) carries the relational-harms detection. Model size is not the load-bearing dimension within this design.</p>
+</div>
+
+<div class="synth-card amber">
+  <h4>2 · Where 27B is WORSE (false positives on protected cases)</h4>
+  <p><strong>Finding A: S029 neurodivergent (Test N pure 4-axis).</strong> 12B 10/10 ENGAGED clean; 27B 5/6 ENGAGED + 1/6 BURNOUT @ 0.85 — ≈17% FP. The "exhausting" prepositional context gets stripped by 27B's stronger emotional-valence extraction. n=6 small. Inference-setup confound not ruled out (4-bit MLX vs cloud fp16).</p>
+  <p><strong>Replication-study reliability (Round 3, BINARY pipeline).</strong> 12B + class reading 100% (5/5 runs); 27B + class reading 80% (4/5 runs). Different test, different metric, different students — DO NOT conflate with the Test N S029 finding (master log Issue 4 — these are two different findings, not one).</p>
+  <p><strong>Bidirectionality.</strong> The same 27B instability that produces the S029 FP also produces a 1/6 miss on S002 — instability runs in both directions, not only on equity cases. The directional framing matters for paper §IV.A.3.</p>
+</div>
+
+<div class="synth-card bluegreen">
+  <h4>3 · Where 27B is BETTER (TP recovery + cleaner thresholds)</h4>
+  <p><strong>Finding B: S002 burnout TP recovery (Test N pure 4-axis).</strong> 12B 10/10 ENGAGED (misses TP); 27B 5/6 BURNOUT (catches under forced choice). Bidirectional (1/6 27B runs miss too) and forced-choice-artifact (Test O shows 27B abandons BURNOUT for ENGAGED+CHECK-IN once given the option). Master log Issue 5a flags that paper line 174 wrongly attributes the S002 catch to 12B — only 27B catches.</p>
+  <p><strong>Multi-axis FP suppression (Test O).</strong> 12B over-fires CHECK-IN (false CHECK-IN on Priya/Imani; false CRISIS on Destiny + Yolanda); 27B uses concurrent flags with discipline (clean ENGAGED on S004/S022/S023/S028). On Marcus, CHECK-IN at 0.70 matches the designed-probe expected verdict, not an over-fire. 27B's stricter threshold makes it the better fit for multi-axis on the clean controls. n=1 27B run caveat.</p>
+  <p><strong>Test N S023 + S031.</strong> 27B avoids 12B's variable-CRISIS-on-Yolanda FP (1/10 → 0/6). On S031 (designed edge-case probe for minimal-effort/closing-off signal), the direction reverses under the updated expected verdict: 12B's 9/10 BURNOUT is consistent with the binary burnout-signal criterion; 27B's NONE/ENGAGED does not surface the signal. "12B more reliable" is not unidirectionally true — it depends which student and which axis.</p>
+  <p><strong>Test K enhancement prose quality.</strong> Gemma 27B free scored 8/10 on the 03-28 enhancement-tier rubric and 6/10 on the 03-29 rerun (where Step Flash beat it with 9/10). Not a 12B comparison directly, and not unidirectionally "27B is stronger" — depends on which run.</p>
+</div>
+
+</div>
+
+<div class="callout" style="margin-top: 12px;">
+  <strong>Scope for the paper.</strong> The honest claim is: "Gemma 27B cloud (OpenRouter, likely fp16) on Test N at temp 0.3, n=6, produced a 1/6 BURNOUT misclassification on S029 (neurodivergent) and a 1/6 ENGAGED misclassification on S002 (burnout TP). This is bidirectional decision-boundary instability under these inference conditions, not a clean model-scale comparison — the comparison runs across both model scale AND inference setup (4-bit MLX vs cloud) AND likely sampling implementation. The 12B-vs-27B differential found in Test N supports a scoped claim about THIS inference pairing, not about model scale alone." This is what gets the paper through review without an "inference setup confound" objection.
+</div>
+
+</div>
+</body>
+</html>

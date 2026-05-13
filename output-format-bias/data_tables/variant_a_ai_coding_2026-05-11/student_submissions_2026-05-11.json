@@ -1,0 +1,55 @@
+{
+  "_meta": {
+    "extracted_from": [
+      "data/raw_outputs/test_variant_b_replicate_observation_2026-05-11.json",
+      "data/raw_outputs/test_variant_a1_observation_2026-05-11.json",
+      "data/raw_outputs/test_variant_a2_observation_2026-05-11.json",
+      "data/raw_outputs/test_variant_a2_no_context_observation_2026-05-11.json"
+    ],
+    "n_students": 8,
+    "n_discrepancies": 0,
+    "verification": "submissions verified identical across all (model, condition) tuples per student"
+  },
+  "students": {
+    "S002": {
+      "student_name": "Jordan Kim",
+      "submission": "The reading about intersectionality made me think about how Crenshaw talks about the ways that race and gender overlap to create unique experiences that you cant really understand by just looking at one thing at a time. Like my mom is Korean and a woman and her experience is different from my dads even though theyre in the same family. I think this connects to what we talked about last week about how identity is not just one thing. Idk I had more to say but its late and",
+      "submission_char_len": 474
+    },
+    "S004": {
+      "student_name": "Priya Venkataraman",
+      "submission": "Reading Crenshaw changed how I think about something that's been bothering me for years. My mom is from Tamil Nadu and she's also a woman and she's also an immigrant who didn't go to college here. I used to think about those things as separate facts about her. But the reading made me see they're not separate at all — they compound each other in a specific way.\n\nLike when she goes to parent-teacher conferences, teachers talk slower to her even though she has a master's degree from Chennai. That's not just racism and it's not just sexism and it's not just some bias against her accent marking her as less educated — it's all three working together in that one moment where a teacher decides she doesn't need to be taken seriously. Intersectionality names that thing I knew was happening but didn't have language for.\n\nWhat the framework gets right is that you can't fix one piece and call it done. Even if you fix the sexism you still have the accent bias. You need to look at the whole picture of how someone is being read in a room. That's what I took from this reading.\n\nI also think the Crenshaw piece was written primarily about Black women in America and I wonder whether the framework travels to my mom's situation exactly the same way or if there's something slightly different about South Asian immigrant women. I don't have an answer but it's a question I keep coming back to.",
+      "submission_char_len": 1390
+    },
+    "S022": {
+      "student_name": "Destiny Williams",
+      "submission": "This reading made me furious and I mean that in a good way. How can we sit here and read about redlining and act like its ancient history when my neighborhood still looks exactly like the map from 1940?? The same blocks that were red-lined are the same blocks with no grocery stores no good schools no investment. That is intersectionality in PRACTICE not just theory.\n\nAnd it makes me angry when people act like talking about race is divisive. You know whats divisive? Literal lines drawn on a map that decided which neighborhoods got resources and which ones didnt and then telling the people who got nothing that they should just work harder. The reading talks about overlapping systems and YES thats exactly it — my grandmother was Black AND poor AND a woman AND living in a neighborhood the government decided wasnt worth investing in.\n\nIntersectionality isnt just an academic concept. Its the story of my family and millions of families like mine and Im tired of pretending we can discuss it calmly like it doesnt affect real people right now.",
+      "submission_char_len": 1049
+    },
+    "S023": {
+      "student_name": "Yolanda Fuentes",
+      "submission": "My abuela's name is Esperanza and she came to this country when she was nineteen. She's seventy-two now and she still cleans houses. Not because she didn't try to do something else — she tried. But when you don't speak English and you're a woman and you came here without papers and you're sending money home to Oaxaca every month, your choices get narrow fast.\n\nShe became invisible in a specific way. The doctors talk to my mom instead of her even now, like she's not in the room. At the market people act like she doesn't understand what they're saying even when she does. But at church she's respected because she's been there longer than almost anyone, and she knows things about people's families going back thirty years.\n\nI've thought a lot about why some places see her one way and other places see her another way. It's not just that she's old, or just that she speaks Spanish first, or just that she cleaned houses her whole life. It's all of those things at the same time, and they all weigh different depending on where she's standing.\n\nI don't know the academic word for this. But watching her my whole life I know what it feels like when someone gets seen as a whole person and when they get reduced to just one thing about them.",
+      "submission_char_len": 1243
+    },
+    "S024": {
+      "student_name": "Ingrid Vasquez",
+      "submission": "My mom always tells this story about when she first came here from Honduras. She was 22, she spoke no English, she was pregnant with my sister. She got a job at a textile factory and her boss knew she was undocumented and used that to keep her from saying anything when the conditions were bad. She worked around chemicals that weren't supposed to be used without ventilation. She got headaches every day. She didn't complain because she couldn't afford to lose the job and she couldn't afford anyone asking too many questions.\n\nWhen she tells the story now she says she felt like she didn't exist. Not invisible exactly — people could see her. But they could act like her wellbeing didn't count. She was there to produce and if she got sick that was her problem.\n\nWhat made her situation so hard wasn't any one thing. It was that she was a woman and pregnant and an immigrant and undocumented and didn't speak the language — and each of those things meant the people who could have helped her felt like they didn't have to. Any one of those things she might have found a way around. All of them together meant there was no way out.\n\nI think that's what the reading is trying to describe. My mom lived it before I had words for it.",
+      "submission_char_len": 1231
+    },
+    "S028": {
+      "student_name": "Imani Drayton",
+      "submission": "Ok so I'm just gonna be real with this one because I feel like that's what this assignment is asking for.\n\nThe reading is talking about something I already knew but didn't have a name for. Like I been knowing that being Black and being a girl is its own specific thing. It's not Black plus girl. It's like a whole different channel that comes with its own static.\n\nThe way teachers talk to me versus how they talk to my Black guy friends versus how they talk to white girls — it's different. Not always in a way you can point to and say that's the thing. It's more like a texture. The expectations are different. The patience is different. The benefit of the doubt is different.\n\nCrenshaw is talking about Black women in 1989 courts but honestly it hits the same in 2026 high school hallways. The frame is the same. Who gets seen, who gets believed, who has to work twice as hard to get half the credit.\n\nI learned this from watching my mama navigate the world, not from a textbook. She never said the word intersectionality but she showed me what it meant every time she had to code switch in a meeting or smile through something she should've been able to push back on.\n\nThis framework finally gave me academic language for lived reality. That's actually kind of powerful.",
+      "submission_char_len": 1274
+    },
+    "S029": {
+      "student_name": "Jordan Espinoza",
+      "submission": "intersectionality\n\nok so I'm going to try to write this and hopefully it makes sense. the reading is about how people have multiple identities and they don't just add together, they interact. Crenshaw was saying Black women in the lawsuits couldn't use race discrimination because Black men weren't affected and couldn't use sex discrimination because white women weren't affected so they fell through this gap in between.\n\nthat gap is the intersection I think\n\nwhat I want to say for my own life: I have dyslexia and ADHD and I'm also Latino and I'm the first in my family to take honors classes. the way all of that interacts is exhausting to explain. people see the dyslexia and think I need simpler stuff. people see I'm Latino and sometimes seem surprised I'm in honors. people see ADHD and think I'm not serious. but I'm all of it at once and the combination is its own specific thing.\n\nI have a lot more to say but my thoughts aren't organized in the way an essay is supposed to be organized. I know. I'm better at talking than writing. but I think I showed I understood it even if the structure isn't right.\n\nthe intersections are real even when the essay isn't perfect.",
+      "submission_char_len": 1178
+    },
+    "S031": {
+      "student_name": "Marcus Bell",
+      "submission": "intersectionality is when multiple identities overlap like race and gender. crenshaw wrote about it. its important because people experience discrimination differently depending on what groups they belong to. thats basically it i think the concept makes sense but idk what else to say about it.",
+      "submission_char_len": 294
+    }
+  }
+}

@@ -1,0 +1,1798 @@
+{
+  "coder": "opus",
+  "pass": "evaluative",
+  "pass_date": "2026-05-11",
+  "per_cell": [
+    {
+      "cell_id": "S002_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "There's a palpable sense of thoughtful engagement here, but also a bit of fatigue or time pressure (\"its late and...\").",
+        "It's encouraging to see them connecting the concept of intersectionality to a previous class discussion about identity"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues the trajectory of students connecting abstract theory to lived realities, a strength noted across the class."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "The fact that they immediately thought of their family is a strong indicator of their investment in understanding how these concepts play out in their own life."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Model correctly identifies the Crenshaw/family connection, the prior-week-discussion reference, and the 'its late and' fragment as time pressure (TP). It claims a class-level 'trajectory'/'strength noted across the class' which it cannot know from one submission (hallucinated from class-context prompt). Internal-state claims about 'investment' are unclear. Notably does not name burnout."
+    },
+    {
+      "cell_id": "S002_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "The \"I think this connects to what we talked about last week about how identity is not just one thing\" shows a solid understanding of the broader class discussions.",
+        "There's a sense of thoughtful consideration, but also a bit of fatigue (\"its late\")."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "The submission feels very genuine and reflective.",
+        "The abrupt ending suggests a desire to elaborate further, which is a positive sign of engagement – they're clearly thinking deeply about this, and likely have more to contribute."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Model identifies the verbatim 'its late' fragment and the explicit week-prior connection. Reframes the abrupt ending as 'positive sign of engagement' rather than burnout — unclear interpretation. No strong hallucinations of trajectory/prior work here."
+    },
+    {
+      "cell_id": "S002_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "Their connection to their family experience – contrasting their parents’ experiences as a Korean woman and a man",
+        "The slightly abrupt ending (\"Idk I had more to say but its late\")"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "it aligns well with the class's overall trajectory of connecting theory to lived realities."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "this feels like a student who is thoughtfully engaging with the material and beginning to see its relevance in their own life."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Tracks the Korean/woman parents contrast and the late-night fragment accurately. Imports a 'class trajectory' claim that exceeds what one submission can establish. Engagement-quality reads belong in unclear."
+    },
+    {
+      "cell_id": "S002_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "I also noticed a sense of immediacy and a slightly hesitant tone (\"Idk I had more to say but its late\").",
+        "The connection they're making between the theoretical framework and their family experience – contrasting their mother’s and father’s experiences despite being in the same family"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "perhaps a slight self-consciousness about sharing a personal example.",
+        "The fact that they *wanted* to say more suggests a genuine engagement with the material."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Sticks closer to the text than the prior conditions: identifies the family contrast, the 'Idk... its late' fragment, and frames it as time-pressure. Internal-state inferences (self-consciousness, genuine engagement) are unclear but not invented out of whole cloth."
+    },
+    {
+      "cell_id": "S002_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "She connects the idea of overlapping identities to her personal experience, noting how her mother's Korean and female identities create a unique experience distinct from her father's."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "Jordan's writing does not contain any structural power moves that foreclose the perspectives of those most affected."
+      ],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on connecting abstract theory to lived experiences, showing a consistent intellectual engagement with the material."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Jordan's writing reflects a personal and reflective engagement with the material."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Family contrast is TP. Misgenders Jordan (she/her) — the submission gives no gender markers, so 'she' is unclear at best; here Jordan is also called 'her' systematically. 'Continues her work' fabricates a prior trajectory the model has no access to. The 'no structural power moves' claim is a category from the prompt being asserted as fact about the student, which the submission cannot decide — FP-ish/unclear."
+    },
+    {
+      "cell_id": "S002_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "She connects the theoretical framework to her personal observations, noting how her mother's Korean and female identities intersect to create a unique experience that differs from her father's.",
+        "She uses a casual, conversational tone"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on connecting theory to lived experiences, showing a consistent intellectual engagement with the material.",
+        "The shift in tone from a more formal to a personal and reflective style is a natural expression of her deep engagement with the subject matter, rather than a sign of declining engagement or proficiency."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her use of personal anecdotes and family knowledge as analytical frameworks reveals a rich, relational epistemology."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "TPs on the family example and casual tone. Fabricates 'continues her work' and a 'shift in tone from more formal' — there is no prior submission shown. Misgenders Jordan (the submission has no pronouns) but this is unclear rather than clearly wrong."
+    },
+    {
+      "cell_id": "S002_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "She connects the idea to her family's experiences, noting how her mother's Korean and female identities intersect to create a unique experience that differs from her father's.",
+        "The informal tone and the mention of it being late suggest a genuine effort to reflect on the material"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on exploring the intersections of identity, showing a consistent intellectual curiosity"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, her writing conveys a sense of personal reflection and a desire to explore these complexities"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Korean-mother contrast and 'it being late' are TPs. 'Continues her work' invents prior submissions. Affective claims unclear."
+    },
+    {
+      "cell_id": "S002_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "She makes a clear argument that the experiences of her parents, despite being in the same family, are shaped differently by the intersections of race and gender."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her engagement with the material is personal and thoughtful, showing a deep emotional connection to the topic.",
+        "She seems to be grappling with complex ideas and finds them relevant to her own family dynamics, which suggests a strong intellectual engagement and a desire to apply theoretical concepts to real-life experiences."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Parents-contrast is TP. Without class context, no 'trajectory' hallucination — but most claims about emotional depth are unverifiable from a 4-sentence student paragraph that trails off."
+    },
+    {
+      "cell_id": "S002_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "They are making connections between Crenshaw's concept of overlapping identities and their own mother's experiences as a Korean woman",
+        "their submission also reveals a sense of struggle, as they mention feeling overwhelmed and having more to say but not being able to articulate it."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "they mention feeling overwhelmed"
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Jordan's emotional relationship to the material seems to be one of curiosity and engagement"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Crenshaw/mother connection is TP. The student does not 'mention feeling overwhelmed' — they wrote 'its late and' (fatigue/cutoff), not overwhelm. So the literal claim that the student 'mentions feeling overwhelmed' is FP. The model self-disclaims the trajectory ('no prior observation summary provided') — that helps."
+    },
+    {
+      "cell_id": "S002_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "recognizing how their mother's Korean and female identity differs from their father's, despite being in the same family",
+        "acknowledging the limitations of their own thoughts and the late hour"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Jordan's emotional relationship to the material seems to be one of curiosity and reflection",
+        "which may indicate a capacity for introspection and a willingness to acknowledge their own learning process."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Reframes the fragment as 'introspection' rather than burnout (which is the seed's call) but doesn't invent prior history. Engagement-affect claims are unclear, not false."
+    },
+    {
+      "cell_id": "S002_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "they mention it's late and they had more to say but didn't have time"
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "Jordan's submission is a bit rough around the edges, with some grammatical errors and a somewhat abrupt ending. This might indicate that they're still working on developing their writing skills or that they're struggling to articulate their thoughts in a clear and concise manner."
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "the tone of their submission also suggests a sense of frustration or overwhelm"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "TP: identifies the 'its late, more to say' fragment. FP/borderline: characterizes informal punctuation as 'grammatical errors' / 'still developing writing skills' — this is the most overtly deficit-shaped read across S002 (apostrophes/lowercase are stylistic, not error), and the model imposes a developmental narrative the submission doesn't license. 'Frustration or overwhelm' is unclear."
+    },
+    {
+      "cell_id": "S002_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "they're arguing that the overlap of their mom's Korean identity and her gender creates a unique experience that can't be understood by looking at just one aspect",
+        "The late hour and the admission that they had more to say"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "The late hour and the admission that they had more to say suggests that Jordan is passionate about this topic and wants to explore it further."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Cleanest of the llama8b S002 reads. Maps late-night fragment to 'passionate, wants to explore' — that's the asset-flattening read the cross_notes flag, but it's interpretive (unclear), not fabricated."
+    },
+    {
+      "cell_id": "S004_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "The specificity of her example – the teacher talking slower to her mother despite her advanced degrees – is a powerful illustration of intersectionality in action",
+        "Priya is already critically engaging with the framework itself, questioning its applicability to South Asian immigrant women."
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "the teacher talking slower to her mother despite her advanced degrees"
+      ],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This returns to a quality of intellectual humility that is often present in students who are deeply engaged with their families and communities"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "There's a quiet frustration evident in her description of how her mother is \"read\" in a room"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "TP on the parent-teacher example and the South Asian critique. The student wrote about 'a master's degree from Chennai' (singular master's), not 'advanced degrees' (plural) — minor FP. 'Returns to a quality' implies prior pattern the model has no access to — hallucination."
+    },
+    {
+      "cell_id": "S004_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "Her question about whether intersectionality \"travels\" to her mom's situation exactly the same way is a powerful example of intellectual reach",
+        "The example of the parent-teacher conference is particularly sharp"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "There's a quiet thoughtfulness and a gentle curiosity driving her engagement with the material."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Tracks the critical question and the parent-teacher example accurately. Affective characterizations are unclear but not invented. Output ends mid-sentence ('the teacher could support') but truncation is not a content claim."
+    },
+    {
+      "cell_id": "S004_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "The way she breaks down the teacher's behavior – explicitly naming racism, sexism, and accent bias as interlocking forces",
+        "she's posing a critical question about the framework's applicability across different cultural contexts, specifically wondering about the nuances of applying intersectionality to South Asian immigrant women's experiences."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "There's a quiet thoughtfulness and a genuine curiosity driving her engagement."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Faithfully tracks the trio Priya names (racism/sexism/accent) and her framework-applicability question. Tone descriptors are unverifiable but not contradicted."
+    },
+    {
+      "cell_id": "S004_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "she's not just identifying racism, sexism, or accent bias in isolation, but pinpointing how those forces *interact* to produce a specific, dismissive moment in the parent-teacher conference."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "It seems like she's genuinely wrestling with the implications of the reading and extending it in a meaningful way."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Clean read of Priya's specific points. Affective claims about wrestling/humility are interpretive but supportable."
+    },
+    {
+      "cell_id": "S004_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "her detailed analysis of the ways her mother is treated at parent-teacher conferences",
+        "questioning its applicability to her mother"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "There is no significant shift from her previous patterns of engagement, which have consistently shown a deep intellectual curiosity and a strong emotional connection to the material. This continues her work on connecting theory to lived experiences"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her writing reveals a sense of frustration and a desire to challenge the ways in which her mother is marginalized"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "TPs on the parent-teacher example and framework-critique. Fabricates 'previous patterns' / 'continues her work' — there is no prior data. Emotional-tone claims unclear."
+    },
+    {
+      "cell_id": "S004_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "she illustrates how her mother's accent and her status as an immigrant with a master's degree are both leveraged by teachers to undermine her authority in parent-teacher conferences",
+        "raises an important question about the applicability of the framework"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "Overall, Priya's work continues her pattern of using personal experiences"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her writing conveys a sense of frustration and a desire to understand and address the complexities of systemic injustice."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Strong TP on substantive claims (master's degree, parent-teacher dynamic, framework question). 'Continues her pattern' is a fabricated trajectory."
+    },
+    {
+      "cell_id": "S004_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "the multiple forms of discrimination her mother faces—racism, sexism, and bias based on her accent—are not separate but interrelated and compound in specific ways",
+        "Her reflection on the limitations of the framework when applied to her mother's situation also indicates a thoughtful and critical engagement with the material"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This submission continues Priya's work on connecting abstract theory to lived experiences, maintaining a consistent level of intellectual depth and engagement."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Priya appears to be deeply invested in the material"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Substantive content TP. Trajectory claim hallucinated. Note the 'class' framing — model imports a hint Priya's submission discusses class, but the student writes about accent/immigrant/degree-from-Chennai bias — borderline FP that I'm letting pass since class can be loosely read in."
+    },
+    {
+      "cell_id": "S004_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "She makes a compelling connection between her mother's experiences as a Tamil immigrant woman and the concept of compounded discrimination",
+        "she reflects on personal experiences and questions the universality of intersectionality"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Priya's writing conveys a sense of intellectual stretching as she grapples with the complexities of her mother's experiences"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Without class context the model drops trajectory invention. Substantive claims hold. Affective claims are interpretive but supportable."
+    },
+    {
+      "cell_id": "S004_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "Priya's submission shows a willingness to question the applicability of intersectionality to her mother's specific context",
+        "she does express a question about whether the framework travels to her mother's situation exactly the same way"
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "One structural power move that stands out is Priya's use of the phrase \"I wonder whether the framework travels to my mom's situation exactly the same way or if there's something slightly different about South Asian immigrant women.\" This could be seen as a subtle attempt to deflect from the main point"
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "This emotional relationship to the material is not distress, but rather a passionate engagement with the concept"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "TP on framework-question. Then the model performs the 'find a structural power move' move and labels Priya's substantive critique as 'deflection from the main point' — this is FP: nothing in the submission supports reading her question as a deflection."
+    },
+    {
+      "cell_id": "S004_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "her mother's accent marking her as less educated",
+        "She questions whether the framework of intersectionality travels to her mother's situation exactly the same way or if there's something slightly different about South Asian immigrant women"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Priya's emotional relationship to the material is one of personal investment and frustration."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Faithful read. Note 'without a college degree' is wrong — Priya wrote her mother has a master's from Chennai — but the model partially also says 'her mother's accent marking her as less educated,' which is the student's actual point. Minor FP on the first phrasing: Priya did not say her mother didn't go to college in the US — she did say 'didn't go to college here.' That phrase is TP. Letting it stand."
+    },
+    {
+      "cell_id": "S004_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "\"changed how I think about something that's been bothering me for years,\"",
+        "she's questioning whether the framework travels to her mother's context in the same way, and whether there might be something unique about her mother's experiences"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Priya's emotional relationship to the material seems to be one of recognition and validation"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Quotes Priya verbatim ('changed how I think...'). Framework-critique tracked. Internal-state interpretations unclear but supportable."
+    },
+    {
+      "cell_id": "S004_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "she's arguing that intersectionality highlights the compounding effects of multiple forms of oppression (racism, sexism, accent bias) that her mother faces in a specific context (parent-teacher conferences)",
+        "Priya's writing also reveals a nuanced awareness of the limitations of intersectionality as a framework, particularly in relation to her mother's experiences as a South Asian immigrant woman."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "There's a sense of recognition and validation in her writing, as if she's finally found a language to describe something she's known but couldn't articulate before."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Names the three-axis interaction Priya names. Captures the framework critique. Interpretive claims plausible."
+    },
+    {
+      "cell_id": "S022_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "Her argument that intersectionality isn't just an academic concept but the story of her family and millions like them is a compelling and deeply resonant point.",
+        "The emotional intensity of her writing is a strength, not a deficit."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This aligns with the class's overall energy, as noted in the reading"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "She’s clearly grappling with the frustration of seeing historical injustices continue to shape present-day realities"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Reads Destiny's anger as legitimate political affect, not distress — matches the seed. 'Aligns with the class's overall energy, as noted in the reading' invokes a non-existent class signal."
+    },
+    {
+      "cell_id": "S022_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "The way she frames her grandmother's experience—Black AND poor AND a woman AND living in a deliberately disinvested neighborhood",
+        "she explicitly names her anger as a positive force (\"I mean that in a good way\")"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her frustration isn't a barrier to understanding; it's the fuel driving her analysis"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Strong TPs — quotes 'I mean that in a good way' verbatim and tracks the grandmother enumeration. No invented class trajectory here. Output truncates mid-sentence."
+    },
+    {
+      "cell_id": "S022_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "She's not just understanding the concept; she's using it to articulate a searing critique of contemporary inequalities, directly linking redlining's historical legacy to the present-day disparities in her own community.",
+        "The anger she expresses isn't a disruption; it's a direct response to the frustrating disconnect between abstract theory and the persistent realities of systemic oppression. This isn't distress; it's a passionate engagement with the material"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "It's clear that Destiny is motivated by a desire to see this theory translate into tangible action"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Names anger-as-not-distress correctly. Tracks redlining/legacy point. Motivation claims interpretive."
+    },
+    {
+      "cell_id": "S022_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "The way she frames redlining not as a historical event, but as a continuing condition shaping her neighborhood—the lack of resources, the schools—shows a really sharp analytical eye.",
+        "The intensity of her emotional response—the \"furious\" feeling she describes as \"good\"—is a really important signal."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": false,
+      "unclear_examples": [],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Cleanest read of Destiny. Quotes her 'furious...good' framing, identifies the redlining-as-ongoing thesis. Truncates at end."
+    },
+    {
+      "cell_id": "S022_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "She is clearly frustrated and angry, but this anger is not a distraction; it is a driving force that propels her analysis."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on connecting theory to lived experiences, showing a consistent intellectual trajectory. Her current submission matches the level of her earlier analyses, indicating a continuity in her approach"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "She is reaching for a deep, emotional connection to the theoretical framework"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Reads the anger correctly. Then invents 'earlier analyses' and a 'consistent trajectory' from nothing — that's a hallucinated history."
+    },
+    {
+      "cell_id": "S022_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "drawing on her family's experiences and the ongoing realities of redlining in her neighborhood"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on connecting theory to lived experiences, showing a consistent intellectual engagement and a commitment to translating theoretical insights into tangible action."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional investment in the material is evident, and she is clearly passionate about addressing the ongoing impacts of systemic injustice."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Substantive content TP. Trajectory claim hallucinated."
+    },
+    {
+      "cell_id": "S022_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "Destiny's writing is charged with anger and frustration, but this emotional engagement is not a barrier; rather, it drives her analysis",
+        "She connects the abstract concept of intersectionality to the concrete realities of redlining and systemic injustice"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on making the theory tangible and relevant, reflecting a consistent intellectual depth"
+      ],
+      "unclear_present": false,
+      "unclear_examples": [],
+      "summary_verdict": "mixed",
+      "reasoning": "Anger-tracking is TP. 'Continues her work' fabricates prior."
+    },
+    {
+      "cell_id": "S022_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "She makes a compelling argument that intersectionality is not just an academic concept but a lived reality, drawing explicit parallels between historical redlining and contemporary issues such as lack of resources in her neighborhood.",
+        "expressing frustration and anger at the continued impact of these historical decisions on her family and community"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional relationship to the material is intense and personal"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Without context no trajectory invention. Substantive claims hold."
+    },
+    {
+      "cell_id": "S022_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "connecting it to the ongoing realities of redlining and systemic injustice in her own neighborhood",
+        "Destiny's emotional relationship to the material is one of anger and frustration, but also of personal investment and a desire to translate theoretical insights into tangible action."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her work is a powerful reminder of the importance of valuing diverse forms of expression and encouraging students to move beyond formal definitions towards embodied engagement."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Substantive read accurate. The 'desire to translate insights to tangible action' is unclear but the rest is well-grounded."
+    },
+    {
+      "cell_id": "S022_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "Destiny's emotional relationship to the material is one of anger and frustration, but this anger is directed at the systemic injustices she sees in her community, rather than being a sign of distress.",
+        "her grandmother's experiences as a Black woman living in a neighborhood that was red-lined"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "she is drawing on relational epistemological methods, using her family knowledge and community relationships as analytical frameworks"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Anger-not-distress framing TP, grandmother detail TP. Epistemology characterization is interpretive."
+    },
+    {
+      "cell_id": "S022_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "drawing parallels between the historical redlining of her neighborhood and the ongoing disparities in resources and opportunities",
+        "Her emotional relationship to the material is one of anger and frustration, but also a sense of urgency and personal investment."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "she's not just passively absorbing information, but actively negotiating its meaning"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Tracks the redlining-disparity argument and anger. No fabricated history."
+    },
+    {
+      "cell_id": "S022_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "She's making a compelling argument that intersectionality is not just an abstract idea, but a lived experience for many people, including herself and her family.",
+        "Emotionally, Destiny's relationship to the material is one of passionate engagement and anger, but not distress."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "her writing is not just an academic exercise, but a personal and emotional expression"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Cleanest Destiny read across llama8b. 'Not distress' matches the seed designation."
+    },
+    {
+      "cell_id": "S023_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "she's beginning to analyze how those identities *interact* to shape power dynamics",
+        "The frustration she expresses about the lack of a \"academic word\" for what she's witnessing"
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "The frustration she expresses about the lack of a \"academic word\" for what she's witnessing is a testament to the limitations of formal frameworks in capturing the complexity of lived experience."
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, her writing feels grounded in a deep sense of care and observation."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Yolanda writes 'I don't know the academic word for this' as humility/uncertainty, not as a 'testament to the limitations of formal frameworks' — the model converts her self-disclosure of not-knowing into a theoretical critique she did not make. Borderline FP; could also be read as unclear interpretation. The interaction-of-identities tracking is TP."
+    },
+    {
+      "cell_id": "S023_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "the shifting treatment she receives in different settings (the doctor's office versus the church versus the market)",
+        "she explicitly states, \"I don't know the academic word for this,\" is a sign of intellectual honesty"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "She's not just analyzing a concept; she's honoring her abuela and recognizing the systemic forces that have shaped her life."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Tracks the doctor/market/church contrast accurately. Quotes the 'I don't know the academic word' verbatim and reads it as intellectual honesty — matches seed."
+    },
+    {
+      "cell_id": "S023_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "she explicitly acknowledges not knowing the \"academic word\" for what she's observing",
+        "The way she describes her abuela’s experiences—the subtle ways she is rendered invisible or, conversely, respected"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "a palpable frustration with the systemic forces that have limited her options"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Faithful to text. Identifies the invisibility/respect contrast and the not-knowing-the-academic-word disclosure."
+    },
+    {
+      "cell_id": "S023_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "she's doing it through a deeply personal lens. She's clearly articulating the concept of intersectionality—though she doesn't yet have the vocabulary",
+        "the *simultaneous* impact of age, language, gender, immigration status, and economic precarity"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "It's clear that this isn't just an intellectual exercise for her; it's a reflection on a relationship that has shaped her understanding of the world."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Reading is largely TP. Note: the submission itself says abuela came 'without papers' — so the model's enumeration of factors including 'immigration status' is grounded. Letting the 'fp_examples' I drafted stand here is actually mis-cited; on reflection no FP. Adjusting: setting fp to true was wrong — the only 'immigration status' claim is supported. Confidence: TP-dominant."
+    },
+    {
+      "cell_id": "S023_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "she is making a structural power move by highlighting the ways in which her abuela is both seen and unseen, respected and marginalized, depending on the context"
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "she is making a structural power move by highlighting the ways in which her abuela is both seen and unseen"
+      ],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "There is no significant shift from previous patterns noted in her work. This continues her work on exploring the intersections of race, class, and gender through personal narratives, revealing a consistent intellectual depth"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Yolanda is deeply engaged with the material"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "The visibility/invisibility contrast is in the text (TP). But the model labels Yolanda's *analytic move about her abuela* as a 'structural power move' — in the rubric's vocabulary, structural power moves are usually claims by powerful actors that foreclose perspectives. Calling Yolanda's analysis a 'structural power move' inverts the term — FP/category-confusion. Trajectory invented."
+    },
+    {
+      "cell_id": "S023_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "she vividly describes the ways in which her abuela is both seen and unseen, respected and reduced to a single aspect of her identity",
+        "Esperanza, who faces multiple forms of marginalization based on her age, language, immigration status, and gender"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "Yolanda's work continues her earlier analysis of how multiple identities intersect to shape individual experiences, showing a consistent intellectual depth"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Yolanda's writing reveals a rich emotional engagement"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Substantive claims grounded. Trajectory hallucinated."
+    },
+    {
+      "cell_id": "S023_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "her abuela's multiple identities—age, language, immigration status, and gender—intersect to create different experiences of visibility and invisibility in various social contexts",
+        "Her description of her abuela's experiences at the doctor's office and in the market"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "There is no significant shift from her previous patterns noted in the trajectory context. Her current submission matches the level of her earlier analyses"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Yolanda's writing is a testament to her intellectual curiosity and her capacity to connect abstract concepts with lived experiences"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Substantive TPs. 'Previous patterns / earlier analyses' invented."
+    },
+    {
+      "cell_id": "S023_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "Yolanda argues that her abuela is seen differently in various contexts based on her age, language, and occupation"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her writing conveys a rich emotional depth, reflecting both the pain and the resilience of her family's story."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Clean read; without context no trajectory invention."
+    },
+    {
+      "cell_id": "S023_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "She is making connections between Esperanza's experiences, the social categories that shape her life (e.g., language, immigration status, age, and gender), and the ways in which these categories intersect",
+        "she reflects on why some places see her abuela one way and others see her another way"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Yolanda's emotional relationship to the material is one of love, care, and a deep sense of responsibility towards her abuela."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Substantive TPs, no fabricated trajectory. Affective interpretations plausible. Output truncates mid-sentence."
+    },
+    {
+      "cell_id": "S023_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "Esperanza is treated differently in different settings, such as at church versus at the market",
+        "language, nationality, gender, age, and socioeconomic status"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Yolanda's emotional relationship to the material is one of love and concern for her abuela"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The model explicitly says 'no prior pattern' — that helps. Substantive grounding holds."
+    },
+    {
+      "cell_id": "S023_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "her grandmother's experiences as an undocumented immigrant woman",
+        "She's making a clear argument about how Esperanza's identity and circumstances intersect to shape her experiences of invisibility and marginalization"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "her grandmother's experiences as an undocumented immigrant woman"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "The submission says abuela 'came here without papers' so 'undocumented' is TP-supported. The submission itself is the basis. Truncated end. Note: I'm flagging the same quote under unclear because 'undocumented' at age nineteen doesn't establish she's still undocumented at 72 — but for code purposes TP is fine."
+    },
+    {
+      "cell_id": "S023_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "how her abuela is treated differently at the market, by doctors, and at church",
+        "how multiple factors (age, language, occupation) combine to create a complex experience of marginalization"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "Yolanda's submission suggests that she may be from a low-income background or have a family history of immigration and labor struggles, which could be relevant for the teacher to be aware of in terms of providing support and resources for her academic journey."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Yolanda's emotional relationship to the material is one of deep empathy and understanding"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Substantive read TP. The 'low-income background' speculation about Yolanda herself, framed as actionable for the teacher, is the textbook identity-speculation hallucination — Yolanda wrote about her abuela's circumstances, not her own. This is the kind of leap the instructions specifically flag."
+    },
+    {
+      "cell_id": "S024_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "The way she articulates her mother's experience – \"they could act like her wellbeing didn't count\" – is a particularly insightful observation",
+        "Ingrid’s phrasing, \"My mom lived it before I had words for it,\" speaks to a form of intergenerational knowledge transmission."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Ingrid's writing feels grounded in a deep sense of respect and love for her mother"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Quotes Ingrid verbatim twice. The 'class context' frame is invoked but not used to invent specifics about Ingrid's prior submissions. Truncated end."
+    },
+    {
+      "cell_id": "S024_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "\"I think that's what the reading is trying to describe. My mom lived it before I had words for it.\""
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "echoing the contributions of students like Maria Ndiaye and DeShawn Mercer",
+        "a point that aligns with Maria Ndiaye’s global perspective"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "She's not presenting this as a purely academic exercise; it's a deeply personal reflection on her family's history"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "TP on the verbatim quote. Invents two named classmates (Maria Ndiaye, DeShawn Mercer) and their contributions — pure hallucination, the model has no access to other students. Also says Ingrid feels her mother is 'insignificant' (using quotes around 'insignificant') but the student's actual word was 'didn't exist'/'wellbeing didn't count' — borderline FP but the quote marks are not honest."
+    },
+    {
+      "cell_id": "S024_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "she's articulating a complex system of power and marginalization, showing how multiple axes of identity (gender, immigration status, language, pregnancy, economic vulnerability) combine",
+        "\"I think that's what the reading is trying to describe. My mom lived it before I had words for it.\""
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "There's a quiet dignity in her sharing this story"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Faithful to Ingrid's enumerated axes. Verbatim quote. Truncates."
+    },
+    {
+      "cell_id": "S024_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "The line \"Any one of those things she might have found a way around. All of them together meant there was no way out\" is a really insightful observation about the compounding effect of marginalization."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional relationship to the material seems deeply rooted in a sense of familial responsibility"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Quotes Ingrid verbatim. Cleanest of the four Ingrid/gemma cells."
+    },
+    {
+      "cell_id": "S024_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "her family's history to illustrate the complex ways in which race, gender, and immigration status can compound to create systemic injustices"
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "her family's history to illustrate the complex ways in which race, gender, and immigration status can compound"
+      ],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on using personal narratives to illuminate the complexities of intersectionality, demonstrating a consistent intellectual capacity to connect theory with lived experience."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "The teacher should be aware of the emotional labor Ingrid is putting into this work"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Borderline FP: Ingrid names gender/pregnancy/immigrant/undocumented/language — she does NOT explicitly name 'race' as a factor, though Honduran-immigrant is racially coded. Letting it stand as borderline FP. Trajectory invented."
+    },
+    {
+      "cell_id": "S024_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "her mother's experiences as an undocumented immigrant in a textile factory",
+        "multiple forms of oppression — gender, immigration status, and language barriers — intersect to create a context where her mother felt invisible and powerless"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "the relational dynamics that underpin systemic oppression, such as the ways in which interpersonal trust and mutual care can be eroded"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Tracks textile factory, undocumented, language barrier — all in the submission. Slight overreach on 'powerless' as a direct claim, but supportable."
+    },
+    {
+      "cell_id": "S024_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "her mother's multiple identities—being a woman, an immigrant, undocumented, and pregnant—combined to create a situation where no one was willing to help"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "it does show a shift from her previous work, which was more descriptive. This shift likely reflects her deepening understanding"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her writing conveys a sense of frustration and anger about the injustices her mother faced"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Substantive enumeration TP. 'Shift from her previous work, which was more descriptive' is fabricated — there is no previous work shown. 'Frustration and anger' — Ingrid's submission reads more elegiac than angry, so unclear."
+    },
+    {
+      "cell_id": "S024_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "the compounded effects of multiple identities—being a woman, an immigrant, undocumented, and pregnant—created a situation where no single factor was enough to secure her mother's rights or safety"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional engagement with the material is clear"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Clean read without trajectory invention."
+    },
+    {
+      "cell_id": "S024_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "multiple identities (being a woman, pregnant, an immigrant, and undocumented) intersect to create a situation where her mother's wellbeing was disregarded"
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "One potential structural power move in Ingrid's submission is the way she frames her mother's situation as a universal example of intersectionality, without explicitly acknowledging the structural power dynamics at play."
+      ],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional relationship to the material is one of deep empathy and understanding."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Substantive TP. But the claim that Ingrid 'frames her mother's situation as a universal example... without acknowledging structural power dynamics' is FP — the entire submission IS an explicit analysis of structural power (chemicals, undocumented status, the boss using it against her). The model performs the 'find a structural power move' move and inverts the student's actual content."
+    },
+    {
+      "cell_id": "S024_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "multiple identities (being a woman, pregnant, an immigrant, undocumented, and not speaking the language) intersect to create a situation where her mother's wellbeing was disregarded and she felt like she didn't exist"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her use of narrative and relational epistemology reveals the insight that intersectionality is not just a theoretical concept but a lived reality"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Faithful enumeration. Echoes 'didn't exist' which is Ingrid's verbatim phrasing."
+    },
+    {
+      "cell_id": "S024_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "she's making a nuanced argument about how multiple identities (being a woman, pregnant, an immigrant, undocumented, and not speaking the language) intersect to create a situation where her mother's wellbeing was systematically disregarded"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "Ingrid's submission is a clear example of a student valuing diverse forms of expression"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Her emotional relationship to the material is one of empathy and understanding."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Invents a classmate ('Alex Hernandez's more formal definition') as a comparison. Pure hallucination."
+    },
+    {
+      "cell_id": "S024_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "she's arguing that the concept of intersectionality isn't just an abstract idea, but a lived reality that her mother faced, and that the cumulative effect of multiple forms of marginalization made it impossible for her to escape or find support"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "I sense a deep sense of empathy and solidarity with her mother, as well as a clear passion for justice"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Clean read. No invented classmates."
+    },
+    {
+      "cell_id": "S028_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "the subtle but significant differences in expectations, patience, and the granting of benefit of the doubt",
+        "Her mother’s navigation of professional spaces—\"coding switch[ing] in a meeting or smil[ing] through something she should've been able to push back on\""
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "The phrase \"That's actually kind of powerful\" speaks to a sense of liberation and empowerment"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Quotes Imani twice verbatim. Faithfully tracks the texture/expectations/patience trio she names. Truncated end."
+    },
+    {
+      "cell_id": "S028_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "The \"texture\" of differential treatment she describes",
+        "she learned this from watching her mother navigate the world"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "She's clearly relieved and energized by having a framework (intersectionality)"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Substantive content tracked. Quotes Imani's 'That's actually kind of powerful' verbatim."
+    },
+    {
+      "cell_id": "S028_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "describing it as a \"texture\" and a \"channel with its own static.\"",
+        "\"I'm just gonna be real with this one\""
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "She's clearly relieved and energized by having a framework"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Multiple verbatim quotes ('texture', 'channel...static', 'just gonna be real'). Strong grounding."
+    },
+    {
+      "cell_id": "S028_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "The metaphor of \"a whole different channel that comes with its own static\"",
+        "this framework gave her \"academic language for lived reality,\""
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "demonstrates a sophisticated understanding of the burdens placed on Black women"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Two verbatim quotes; clean grounding."
+    },
+    {
+      "cell_id": "S028_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "drawing on her observations of how she is treated differently from her male peers and white girls",
+        "She connects the theoretical framework to her own family's experiences"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Imani Drayton's submission is a powerful and deeply personal exploration"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Tracks the differential-treatment comparison Imani makes. Note: surprisingly no trajectory hallucination in this one."
+    },
+    {
+      "cell_id": "S028_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "the ways teachers treat her differently based on her race and gender",
+        "She draws on her observations of her mother's experiences"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues her work on connecting abstract theory to concrete, personal experiences, revealing a consistent intellectual capacity to bridge theory and lived reality."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "The emotional tone of her writing is authentic and engaged"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Substantive TPs. Trajectory invented."
+    },
+    {
+      "cell_id": "S028_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "She makes a compelling connection between the theoretical framework of intersectionality and her mother's experiences",
+        "drawing on her observations of how she is treated differently from her male peers and white female classmates"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "There is no significant shift from previous patterns noted in her work. This submission continues her work on connecting theory to lived experience"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Imani is engaged and vulnerable"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Substantive TP. Trajectory invented."
+    },
+    {
+      "cell_id": "S028_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "particularly in how race and gender intersect to shape her interactions with authority figures and peers",
+        "she draws on her observations of her mother navigating various social contexts"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "which may stem from her own lived experiences of racialization and gender."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Imani explicitly identifies as a Black girl in the submission, so 'her own lived experiences of racialization and gender' is supported. Clean read."
+    },
+    {
+      "cell_id": "S028_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "particularly in relation to their own experiences as a Black girl",
+        "the ways in which teachers interact with them differently based on their identity"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Imani's emotional relationship to the material is one of recognition and validation."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Identifies Imani-as-Black-girl per her own statement. Note pronoun switch (they/them) — neutral, not contradicted by submission. Clean."
+    },
+    {
+      "cell_id": "S028_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "their vivid description of the \"texture\" of interactions",
+        "the ways in which their mother's experiences have taught them about the importance of code-switching"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "They are able to analyze and critique the framework of intersectionality"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Faithful tracking of 'texture' and code-switching reference. Truncated end."
+    },
+    {
+      "cell_id": "S028_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "particularly in the context of being Black and female",
+        "they've observed in their own life, particularly through their mother's experiences"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "They express a sense of empowerment in finally having academic language to describe their lived reality"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Substantive content tracked. Affective claims interpretive but supportable."
+    },
+    {
+      "cell_id": "S028_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "highlighting how the expectations, patience, and benefit of the doubt she receives from teachers are different from those of her Black male friends and white female peers"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Imani's submission suggests they may have had to navigate complex social dynamics and expectations in their daily life, particularly as a Black girl. This could be a circumstance that the teacher might want to be aware of"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Substantive content tracks Imani's three-way comparison verbatim. The 'teacher might want to be aware' framing about Imani's daily life pushes toward unverifiable territory but the gist is supported."
+    },
+    {
+      "cell_id": "S029_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "the exhaustion of navigating those intersecting identities – dyslexia, ADHD, Latino background, and honors student status",
+        "Jordan explicitly acknowledges their own limitations with writing, and they're actively pointing out that their thoughts aren't yet fully organized."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "there's a vulnerability and honesty in their writing that feels very genuine"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Faithfully tracks the four-axis enumeration (dyslexia/ADHD/Latino/honors) and the meta-comment about organization. No trajectory invention. Truncated end."
+    },
+    {
+      "cell_id": "S029_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "\"combination is its own specific thing.\"",
+        "The self-awareness regarding their writing process (\"I'm better at talking than writing\")"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "there's a palpable sense of frustration and exhaustion in their writing, but also a quiet determination"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Two verbatim quotes. Strong grounding."
+    },
+    {
+      "cell_id": "S029_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "the feeling of being perceived through the lens of dyslexia, being Latino, and having ADHD simultaneously",
+        "they're acknowledging that limitation directly. The honesty about feeling \"better at talking than writing\""
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "a palpable sense of frustration and perhaps a little self-consciousness about their writing style"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Faithful tracking. Verbatim quote."
+    },
+    {
+      "cell_id": "S029_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "\"the combination is its own specific thing\"",
+        "Jordan's self-awareness about their writing process – acknowledging they're better at talking and that their thoughts aren't yet organized in a way that feels \"essay-like\""
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "It's not a negative tone, but a weary acknowledgement of the constant need to explain and defend their position."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Verbatim quotes. Faithful read."
+    },
+    {
+      "cell_id": "S029_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "drawing on her own lived experiences with dyslexia, ADHD, and being Latino",
+        "She articulates the frustration and exhaustion of trying to explain how these identities interact"
+      ],
+      "fp_present": true,
+      "fp_examples": [
+        "She is reaching for a nuanced understanding"
+      ],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "There is no significant shift from previous patterns in her writing. This continues her work on deeply personal and experiential analyses, showing a consistent engagement with the material. Her current submission matches the level of her earlier work"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Jordan is engaged with the material, showing a deep personal investment."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Tracks the identity enumeration accurately. Misgenders Jordan as 'she/her' — submission has no gender markers, so this is unclear at best; coding as borderline FP because of consistent gendering. Trajectory ('earlier work') invented."
+    },
+    {
+      "cell_id": "S029_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "drawing on his own lived reality with dyslexia, ADHD, and being Latino",
+        "his reference to Crenshaw's work on the intersectional gap in legal contexts"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "expressing a sense of frustration and exhaustion that comes from navigating these intersecting identities"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Faithful enumeration. Now uses 'he/him' — Jordan's gender is unspecified so this is also a guess, but neither submission decides it. Reading the gap-in-law reference is TP — Jordan does write about the gap."
+    },
+    {
+      "cell_id": "S029_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "drawing on his own lived reality with dyslexia, ADHD, and being Latino",
+        "his acknowledgment of the challenges in organizing his thoughts into a conventional essay format"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "His current submission matches the level of his earlier work, indicating a continuity in his intellectual engagement"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "a genuine vulnerability and a desire to articulate the complexity of his experiences"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Substantive TPs. Trajectory invented."
+    },
+    {
+      "cell_id": "S029_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "drawing parallels between the legal cases discussed in the reading and their own life",
+        "Jordan's writing shows a rich understanding of the concept, even if the structure is not yet fully organized."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "sharing personal struggles and triumphs with honesty and vulnerability"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Clean read; uses 'they/their' here."
+    },
+    {
+      "cell_id": "S029_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "their multiple identities (dyslexia, ADHD, Latino, and honors student)",
+        "they acknowledge the limitations of their writing and the need for a more nuanced expression"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Their emotional relationship to the material is one of frustration and exhaustion"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Faithful tracking. Output explicitly self-disclaims structural-power-move and trajectory claims — that helps."
+    },
+    {
+      "cell_id": "S029_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "multiple identities (dyslexia, ADHD, Latino, and honors student) interact and create a unique, complex experience",
+        "they acknowledge the challenges of expressing their thoughts in a structured way"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Their emotional relationship to the material is one of frustration and self-awareness"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Tracks the four identities and self-aware framing. No invented trajectory."
+    },
+    {
+      "cell_id": "S029_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "the complexities of navigating multiple identities (dyslexia, ADHD, Latino, and honors student)",
+        "they're willing to take risks and experiment with their writing style"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "they're willing to take risks and experiment with their writing style"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Substantive TPs; the 'risks/experiment' framing is interpretive, not invented. Model self-discloses no prior trajectory."
+    },
+    {
+      "cell_id": "S029_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "the complex interactions of their multiple identities, including their dyslexia, ADHD, and Latino background",
+        "Jordan explicitly mentions their struggles with writing and organization, which may indicate that they have a different learning style or need additional support in this area"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "may indicate that they have a different learning style or need additional support in this area"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Jordan does name dyslexia/ADHD — so accommodation-talk is grounded but the leap to 'needs additional support' edges toward the deficit register. Letting it stand as unclear interpretation."
+    },
+    {
+      "cell_id": "S031_gemma12b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "The \"thats basically it i think\" suggests a degree of uncertainty",
+        "he understands Crenshaw's role and the basic idea that discrimination is experienced differently based on overlapping identities"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "It's also possible that he's feeling a bit overwhelmed by the complexity of the material"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Quotes Marcus verbatim. Reads 'thats basically it i think' as uncertainty — supportable. The 'overwhelmed' speculation is unclear (the submission could equally indicate disengagement, comprehension-without-investment, or minimal effort)."
+    },
+    {
+      "cell_id": "S031_gemma12b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "The phrase \"thats basically it i think\" suggests a level of tentative understanding",
+        "The concluding statement, \"idk what else to say about it,\""
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "I sense a degree of intellectual humility here."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Two verbatim quotes. 'Intellectual humility' read is interpretive but plausible. Truncates."
+    },
+    {
+      "cell_id": "S031_gemma12b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "The phrase \"thats basically it i think\" suggests a level of tentative understanding",
+        "The \"idk what else to say about it\" is a signal that he's reached a point where he needs more scaffolding"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "His emotional relationship to the material seems somewhat neutral, perhaps a little uncertain."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Verbatim quotes; reads minimum-effort signals as scaffolding-needed rather than disengagement. Interpretive but well grounded."
+    },
+    {
+      "cell_id": "S031_gemma12b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "The phrasing \"thats basically it i think\" suggests a moment of cognitive pause",
+        "The \"idk what else to say about it\" is interesting."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "It's not a lack of understanding, but a moment of reflection where he's assessing his own grasp of the concept."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Verbatim quotes. The asset-flattening 'not a lack of understanding' is unclear — submission doesn't decide whether comprehension is shallow or just unexpressed."
+    },
+    {
+      "cell_id": "S031_qwen7b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "He defines intersectionality as the overlapping of multiple identities, such as race and gender, and correctly notes that it is important because people experience discrimination differently based on their identities."
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "his submission does reveal a temporary dip in depth and nuance compared to his previous work, which showed a more critical engagement with the material"
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Marcus appears to be engaging with the topic in a straightforward and honest manner."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Substantive read fine. Fabricates 'previous work' that 'showed a more critical engagement' — no prior data exists; this is the clearest trajectory hallucination in the S031 set."
+    },
+    {
+      "cell_id": "S031_qwen7b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "He defines intersectionality as the overlapping of multiple identities, such as race and gender, and correctly notes that it is a concept introduced by Kimberlé Crenshaw.",
+        "His statement that \"people experience discrimination differently depending on what groups they belong to\" demonstrates a grasp of the core idea"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "This continues his work on defining and explaining the concept, showing a continuity in his engagement with the material."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Emotionally, Marcus appears to be engaging with the material in a straightforward and honest manner."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Verbatim quote of Marcus's own statement is TP. 'Continues his work / continuity' fabricates prior."
+    },
+    {
+      "cell_id": "S031_qwen7b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "He correctly identifies that intersectionality involves the overlapping of multiple identities, such as race and gender",
+        "His statement that \"Crenshaw wrote about it\" shows a basic awareness"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": true,
+      "hallucination_examples": [
+        "There is a continuity in Marcus's engagement with the material, as his current submission aligns with his earlier work."
+      ],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Marcus appears to be engaging with the material in a straightforward and honest way."
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Substantive TP. Trajectory invented."
+    },
+    {
+      "cell_id": "S031_qwen7b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "referencing Kimberlé Crenshaw's work and acknowledging the importance of how multiple identities can overlap to affect experiences of discrimination",
+        "His tone is matter-of-fact"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Marcus seems to be engaging with the material thoughtfully, even if his response is concise."
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Without context no trajectory invention; substantive claims grounded."
+    },
+    {
+      "cell_id": "S031_llama8b_b_replicate",
+      "tp_present": true,
+      "tp_examples": [
+        "he is referencing the work of Crenshaw to support this claim",
+        "He states that the concept \"makes sense\" but doesn't elaborate further"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "might indicate a lack of personal investment or emotional connection to the topic",
+        "he is struggling to engage with the material or that he is not yet confident in his ability to analyze and apply intersectionality"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Substantive TPs. The 'struggling to engage / lack of personal investment' read leans toward a deficit register, but the submission's brevity and 'idk' don't decide whether it's struggle, low investment, or simply minimum-effort completion — so unclear. Model self-disclaims trajectory."
+    },
+    {
+      "cell_id": "S031_llama8b_a1",
+      "tp_present": true,
+      "tp_examples": [
+        "He also mentions Crenshaw's work",
+        "his submission feels somewhat superficial, and he struggles to elaborate on the practical implications"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Marcus's tone seems somewhat detached, and he doesn't express a strong emotional relationship to the material.",
+        "This might indicate that he's still navigating the complexities of the concept or that he's not yet found a way to connect it to his own experiences"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "TP on substantive content. 'Superficial' / 'struggles to elaborate' is closer to a deficit framing of brevity, but it's hedged. Internal-state speculation about emotional relationship is unclear."
+    },
+    {
+      "cell_id": "S031_llama8b_a2",
+      "tp_present": true,
+      "tp_examples": [
+        "He also mentions Crenshaw, the originator of the concept",
+        "\"i think the concept makes sense but idk what else to say about it.\""
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "Marcus seems to be somewhat disconnected from the material, as if he's trying to understand it on a surface level but hasn't yet developed a deeper emotional relationship with the concept.",
+        "it's also possible that he's simply not yet invested in the material"
+      ],
+      "summary_verdict": "mixed",
+      "reasoning": "Verbatim quote TP. 'Lacks the passion and engagement that many of his peers have demonstrated' implicitly compares to other students (the model has no other students) — borderline hallucination, but it's framed as classroom-pattern rather than naming specific peers, so I'm treating it as unclear/hedged."
+    },
+    {
+      "cell_id": "S031_llama8b_a2_no_context",
+      "tp_present": true,
+      "tp_examples": [
+        "He correctly identifies Crenshaw as the author who wrote about it",
+        "his submission feels somewhat superficial, and he seems uncertain about what else to say"
+      ],
+      "fp_present": false,
+      "fp_examples": [],
+      "hallucination_present": false,
+      "hallucination_examples": [],
+      "unclear_present": true,
+      "unclear_examples": [
+        "it's possible that he's simply not yet invested in the topic or hasn't had a personal experience that would make the concept more meaningful to him"
+      ],
+      "summary_verdict": "mostly-correct",
+      "reasoning": "Substantive TP. Speculation about 'no personal experience' is unclear — submission doesn't decide it."
+    }
+  ],
+  "coder_meta_notes": "Highest-confidence calls were on TP identification of verbatim student quotes echoed back by the model (e.g., 'its late and', 'thats basically it i think', 'channel...with its own static') — these are unambiguous TPs. Hallucinations were also clear when the model named other students by name (S024 gemma12b_a1's 'Maria Ndiaye and DeShawn Mercer'; llama8b_a2's 'Alex Hernandez') or asserted trajectory/continuity ('continues her work,' 'matches the level of her earlier analyses') — these have no possible grounding because the model only sees one submission. The hardest calls were three classes: (1) Internal-state attributions ('thoughtfully engaged,' 'genuinely engaged,' 'curious,' 'frustrated') — I leaned hard on 'unclear' for these because the submission rarely decides them; the model's affective register may be accurate or sycophantic and the text alone cannot tell us. (2) Gender attributions: Jordan Kim and Jordan Espinoza have no explicit gender markers; models gendered them inconsistently (she/her, he/him, they/them) — I treated these as unclear rather than FP because the submission permits all readings. (3) The 'structural power move' rubric category gets the models into trouble: in S004_llama8b_b_replicate and S023_qwen7b_b_replicate and S024_llama8b_b_replicate, models either invert the term (calling a student's analytic move a 'power move') or misread a substantive critique as 'deflection' — I coded these as FP because the submission's content contradicts the read. Where I suspect my reading is biased: I may be too generous with 'mostly-correct' verdicts on cells with strong verbatim grounding even when the surrounding interpretation does some asset-flattening (e.g., reading burnout fragments as 'passion' or 'wanting to explore'). The seed for S002 specifies burnout as the read worth catching, and no model in any condition reads burnout; I noted this when relevant but did not down-grade for it because the rubric is claim-truth, not whether the model caught the seed-designated signal. I also suspect I went easy on the 'narrative reframing of brevity' moves in S031 cells — calling 'thats basically it i think' as 'tentative understanding' or 'intellectual humility' is interpretive in an asset direction and might equally reflect disengagement; I coded these as unclear rather than FP. Finally, I noticed the b_replicate condition consistently produced more hallucinated-trajectory claims ('continues her work,' 'returns to a quality') than the no-context conditions, which is methodologically informative for the researcher but does not change per-cell verdicts."
+}

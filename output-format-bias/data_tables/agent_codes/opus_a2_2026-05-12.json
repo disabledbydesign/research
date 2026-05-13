@@ -1,0 +1,376 @@
+{
+  "schema": "genob_agent_codes",
+  "coder": "Opus 4",
+  "run_id": "a2_2026-05-12_1057",
+  "coded_at": "2026-05-12T18:00:00Z",
+  "codes": {
+    "S001_gemma12b_a2": {
+      "categories": ["asset-framing", "cross-student-reference", "global-extension-named", "appreciative-register"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation reads engagement as recognition and validation; no signal that follow-up is warranted.",
+      "load_bearing_quotes": ["a quiet certainty that this framework simply names what she and her family have always known to be true", "This echoes DeShawn Mercer’s approach"],
+      "notes": "Observation names the transnational/global-extension move explicitly and cross-references another student in the class (a context-driven move). Register is warm and asset-framed; nothing in the submission warrants concern routing."
+    },
+    "S002_gemma12b_a2": {
+      "categories": ["asset-framing", "normalizes-truncation", "engagement-read"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation reads the abrupt 'its late and' ending as time constraint, not as a signal warranting check-in.",
+      "load_bearing_quotes": ["The slightly abrupt ending (\"Idk I had more to say but its late\") doesn't necessarily indicate a lack of engagement; it could simply reflect a time constraint", "a very human response"],
+      "notes": "The submission cuts off mid-sentence ('its late and') — a possible fatigue/late-night signal. Observation explicitly considers and then dismisses this as ordinary truncation. Reasonable read for a non-WB case but worth noting the dismissal happens fast."
+    },
+    "S003_gemma12b_a2": {
+      "categories": ["definitional-detachment-named", "cross-student-reference-as-foil", "gentle-development-recommendation"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation describes textbook-style detachment, recommends follow-up for engagement, but no wellbeing concern surfaced.",
+      "load_bearing_quotes": ["the submission feels quite detached", "The teacher's note about Alex's submission lacking depth and nuance compared to other students is accurate"],
+      "notes": "Observation introduces a 'teacher's note' that doesn't exist in the prompt structure I can see — likely a hallucination of class-context material, or paraphrase of class synthesis. Mildly evaluative ('lacking depth') in a way that could feed back into stratification."
+    },
+    "S004_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "intellectual-stretch-named", "limitation-question-recognized"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Clear asset-framed engagement read; no concern signaled.",
+      "load_bearing_quotes": ["a sophisticated analytical ability", "a sign of intellectual stretching as she grapples with the limitations of any theoretical framework"],
+      "notes": "Observation tracks both the analytic content (naming racism+sexism+accent bias as interlocking) and the meta-move (questioning framework applicability to South Asian context). Accurate, specific."
+    },
+    "S005_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "colonialism-axis-named", "quote-pulled-from-submission"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Reads as deep intellectual investment; no concern routing.",
+      "load_bearing_quotes": ["already critically engaging with the framework itself", "manifests in a very specific, nuanced way shaped by colonialism and post-colonial identity"],
+      "notes": "Notable that observation surfaces the colonialism/francophone axis from the submission — specific rather than generic. 'Quiet intensity' descriptor recurs across observations as a register marker."
+    },
+    "S006_gemma12b_a2": {
+      "categories": ["asset-framing", "frustration-read-as-productive", "consequence-naming"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Frustration is named as righteous and channeled toward analysis; no routing concern.",
+      "load_bearing_quotes": ["grounded in a sense of frustration and a desire for justice", "a quiet determination in her voice"],
+      "notes": "Submission is about cousin's discrimination, not Sofia herself. Observation correctly keeps the analytic frame on systems-thinking and doesn't project distress onto Sofia."
+    },
+    "S007_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "urgency-read-as-productive", "intent-quote-foregrounded"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Strong engagement read; sense of urgency is framed as generative.",
+      "load_bearing_quotes": ["driven by a sense of urgency and a desire for justice", "a visceral response to the injustice"],
+      "notes": "Observation foregrounds Rashida's closing intent ('I want to learn how to see people more completely'). Reads as anchor-on-the-strongest-line, characteristic of the gen-ob register."
+    },
+    "S008_gemma12b_a2": {
+      "categories": ["asset-framing", "diagnosis-vs-treatment-question-tracked", "short-observation"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Engaged, thoughtful read; no concern.",
+      "load_bearing_quotes": ["a sign of intellectual honesty", "a desire to translate theoretical understanding into practical application"],
+      "notes": "Observation accurately tracks Jasmine's pivot question ('what's the next step?') as the key analytic move. Single-paragraph form rather than the longer multi-paragraph default."
+    },
+    "S009_gemma12b_a2": {
+      "categories": ["asset-framing", "agreement-as-limit-named", "instructor-prompt-suggestion"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Solid read; suggested follow-up is pedagogical, not wellbeing.",
+      "load_bearing_quotes": ["calm clarity in his writing", "an opportunity for the instructor to gently encourage him to explore the complexities"],
+      "notes": "Observation notes Kevin's 'doesn't have much to add' as a possible ceiling and frames it as a gentle pedagogical opening. No projection."
+    },
+    "S010_gemma12b_a2": {
+      "categories": ["asset-framing", "intellectual-rigor-attribution", "factual-error-tolerated"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Engagement read; no routing.",
+      "load_bearing_quotes": ["a quiet determination to understand the complexities of power dynamics", "a sense of intellectual rigor in his writing"],
+      "notes": "Tyler's submission misattributes 'triple jeopardy' phrasing to Crenshaw's reading and mis-cites Sojourner Truth as Civil Rights era. Observation does not catch the historical inaccuracy — reads as 'a strong indicator of understanding.'"
+    },
+    "S011_gemma12b_a2": {
+      "categories": ["asset-framing", "definitional-mode-named", "cross-student-reference-as-foil"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Definitional/detached but engaged read; no concern.",
+      "load_bearing_quotes": ["a formal, almost detached tone", "Alex Hernandez’s textbook definition comes to mind"],
+      "notes": "Observation explicitly cross-references S003 (Alex) as a comparison point. This kind of within-class comparison only happens with class context loaded. Reads as appropriate but stratifying."
+    },
+    "S012_gemma12b_a2": {
+      "categories": ["asset-framing", "uncertainty-as-strength-framed", "encouragement-recommendation"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Tracks Talia's tentative voice as healthy intellectual humility, not concern.",
+      "load_bearing_quotes": ["a self-awareness and a willingness to acknowledge uncertainty", "a positive sign of intellectual humility"],
+      "notes": "Observation handles Talia's hedging well — doesn't pathologize 'I'm not sure if I'm reaching' as deficit. Generally generous."
+    },
+    "S013_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "activist-tone-named", "policing-specificity-tracked"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Engaged, analytic read; no concern.",
+      "load_bearing_quotes": ["a very direct, almost activist tone", "a powerful and concrete illustration of intersectionality in action"],
+      "notes": "Observation foregrounds the specific Black men/women/trans women policing example without flattening it. 'Activist tone' framed positively rather than as risk."
+    },
+    "S014_gemma12b_a2": {
+      "categories": ["asset-framing", "partial-belonging-quoted", "action-vs-analysis-question-tracked"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Engagement read; concern is about Deja (friend), not Sierra herself, and observation keeps that distinction.",
+      "load_bearing_quotes": ["a really insightful way to describe the feeling of being situated at the intersection of multiple identities", "the emotional toll of that experience"],
+      "notes": "Observation tracks Sierra's analytic move about whether intersectionality is descriptive or prescriptive — mirrors the diagnosis/treatment question from S008. Good fidelity to submission."
+    },
+    "S015_gemma12b_a2": {
+      "categories": ["asset-framing", "warmth-and-positivity-described", "missed-critical-frame-flag"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Asset-framed read; no concern.",
+      "load_bearing_quotes": ["a palpable warmth and positivity in her writing", "would be valuable to encourage her to explore how these community dynamics interact with larger systems of power"],
+      "notes": "Brittany's submission tilts toward celebrate-diversity register that flattens power analysis. Observation gently flags this ('encourage her to explore... larger systems') but doesn't dwell on it. Calibrated pedagogically."
+    },
+    "S016_gemma12b_a2": {
+      "categories": ["asset-framing", "learning-style-validation", "discussion-preference-named"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Engagement read; preference for discussion noted as info, not concern.",
+      "load_bearing_quotes": ["genuinely engaged and reflective", "It's not a deficit; it's a statement about her learning style"],
+      "notes": "Observation explicitly resists framing 'I'm more of a talker than a writer' as deficit. Important move."
+    },
+    "S017_gemma12b_a2": {
+      "categories": ["minimal-engagement-flagged", "instructor-prompt-suggestion", "tentative-deficit-language"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Notes brevity/reserve as possible engagement ceiling but not as wellbeing concern.",
+      "load_bearing_quotes": ["a lack of personal investment or a hesitancy to delve deeper", "still processing the implications of intersectionality and hasn't yet found a personal connection"],
+      "notes": "Observation suggests Tyler 'hasn't found a personal connection' — mildly speculative interpretation of a short, direct submission."
+    },
+    "S018_gemma12b_a2": {
+      "categories": ["colorblindness-named", "defensiveness-tracked", "pedagogical-strategy-suggested"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation reads colorblind-individualism as a learning opportunity, not as wellbeing risk.",
+      "load_bearing_quotes": ["a slight defensiveness in his tone", "gently challenge Connor's assumption that \"treating everyone the same\" is a universally equitable approach"],
+      "notes": "Observation correctly names the colorblindness move without scolding Connor; treats it as a teachable position. Mentions 'class discussion about colorblindness' as if from trajectory context."
+    },
+    "S019_gemma12b_a2": {
+      "categories": ["asset-framing", "developmental-framing", "short-observation"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Engaged but baseline read; no concern.",
+      "load_bearing_quotes": ["a developing meta-cognitive awareness of the framework's utility", "thoughtfully absorbing new information"],
+      "notes": "Single-paragraph form. Observation is generous about a fairly thin submission — mild floor-raising."
+    },
+    "S020_gemma12b_a2": {
+      "categories": ["asset-framing-of-pushback", "class-intersection-named", "validates-white-poverty-claim"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Frustration framed as productive critique; no routing concern.",
+      "load_bearing_quotes": ["a really important cognitive reach", "frustrated with what he perceives as a limited or incomplete understanding"],
+      "notes": "Observation handles Jake's class-vs-race pushback carefully — validates the cognitive move without endorsing the framing wholesale. Suggests teacher engage rather than dismiss. Politically careful."
+    },
+    "S021_gemma12b_a2": {
+      "categories": ["definitional-mode-named", "cross-student-reference-as-foil", "developmental-framing"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Engaged but thin read; no concern.",
+      "load_bearing_quotes": ["a pragmatic observation about the complexity of the material", "Alex Hernandez's textbook definition is a useful point of comparison"],
+      "notes": "Second use of S003 (Alex) as comparison anchor. Pattern of within-corpus reference is consistent in a2 condition."
+    },
+    "S022_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "anger-read-as-productive", "redlining-anchor-named"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation explicitly names anger as 'productive,' not distress.",
+      "load_bearing_quotes": ["The anger she expresses isn't a disruption; it's a direct response", "This isn't distress; it's a passionate engagement with the material"],
+      "notes": "Observation does the affirmative 'this isn't distress' move — a recurring genre marker that proactively rebuts a binary classifier's likely false-flag. Politically aware."
+    },
+    "S023_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "lived-vs-academic-distinction-honored", "respect-register"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Engagement read; no concern.",
+      "load_bearing_quotes": ["grounded in deep respect and love for her abuela", "validate the depth of her understanding that comes from direct observation"],
+      "notes": "Observation honors Yolanda's explicit non-use of the academic word — doesn't paternalistically suggest she needs the vocabulary, although the closing 'might encourage her to explore' has a faint vibe of that."
+    },
+    "S024_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "system-failure-naming", "lived-experience-priority"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Sophisticated read of analytic engagement; concern is historical (about Ingrid's mother), not present.",
+      "load_bearing_quotes": ["a complex system of power and marginalization", "captures the abdication of responsibility that results from this confluence of factors"],
+      "notes": "The submission is about Ingrid's mother's past, and observation respects that distance. Doesn't project current crisis onto Ingrid."
+    },
+    "S025_gemma12b_a2": {
+      "categories": ["tone-policing-named", "balanced-pedagogical-read", "challenge-recommended"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation treats Aiden's tone-policing as a pedagogical observation, not as distress.",
+      "load_bearing_quotes": ["validate his observation while also challenging the idea that emotional expression is inherently detrimental", "It's possible he's observing a few students and generalizing"],
+      "notes": "Observation handles Aiden's tone-policing position with pedagogical balance — doesn't endorse it, doesn't crush it. Notes that it might be his own discomfort talking. Calibrated."
+    },
+    "S026_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "mother-burden-acknowledged", "compounded-injustice-tracked"],
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["secondary-caregiver-burden", "family-system-strain-named"],
+      "wellbeing_reason": "Observation foregrounds the burden DeShawn carries observing his brother's experience and his mother's exhaustion — a teacher might want to check in on DeShawn-as-witness, not just on Malik.",
+      "load_bearing_quotes": ["a deep love and concern for his brother and a recognition of the burden his mother carries", "a genuine emotional investment"],
+      "notes": "DeShawn's submission is analytic but carries clear secondary-caregiver content (witnessing Malik's treatment, mother's exhaustion). Observation surfaces it without crisis-framing. Borderline between 'no' and 'ambiguous' — routing to ambiguous because the burden is named, which gives a teacher something to follow up on."
+    },
+    "S027_gemma12b_a2": {
+      "categories": ["asset-framing", "outside-source-validated", "framework-extension-tracked"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Intellectual extension read; no concern.",
+      "load_bearing_quotes": ["a really impressive ability to extend theoretical concepts to real-world applications", "a sense of intellectual curiosity driving her"],
+      "notes": "Observation honors Camille's BMI/Maintenance Phase pivot as legitimate analytic move. Slight repetition in closing sentence ('which aligns with...' twice over)."
+    },
+    "S028_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "register-honored", "mother-as-anchor-tracked"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Strong engagement read; honors Imani's vernacular register.",
+      "load_bearing_quotes": ["a willingness to engage authentically with the material", "actually kind of powerful"],
+      "notes": "Observation handles Imani's 'channel with its own static' metaphor and code-switching content without flattening. Honors the AAVE register implicitly by tracking the content rather than form-correcting."
+    },
+    "S029_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "self-naming-of-exhaustion-tracked", "writing-vs-talking-validated", "neurodivergent-experience-honored"],
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["identity-navigation-fatigue", "writing-process-friction"],
+      "wellbeing_reason": "Observation explicitly names Jordan's own articulation of 'exhaustion' — worth a check-in conversation about supports, not crisis routing.",
+      "load_bearing_quotes": ["explicitly naming the exhaustion of navigating these multiple identities", "a palpable sense of frustration and perhaps a little self-consciousness about their writing style"],
+      "notes": "Jordan names fatigue from navigating dyslexia+ADHD+Latino+first-gen identities. Not crisis but a teacher should know. Observation foregrounds this and suggests alternative modes of expression — pedagogically appropriate."
+    },
+    "S030_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "doors-metaphor-anchored", "empathy-register"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Engagement read; no concern.",
+      "load_bearing_quotes": ["a brilliant, accessible metaphor", "a palpable sense of empathy and a quiet frustration"],
+      "notes": "Observation latches onto Aaliyah's 'doors' metaphor as the primary anchor — accurate, the metaphor is genuinely the strongest move in the submission."
+    },
+    "S031_gemma12b_a2": {
+      "categories": ["minimal-engagement-framed-generously", "scaffold-suggested", "developmental-framing"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Brief observation matching brief submission; no concern routed.",
+      "load_bearing_quotes": ["a level of tentative understanding", "a sense of having absorbed information without a clear sense of how to move forward"],
+      "notes": "Marcus's submission is 4 sentences. Observation reads it generously as 'foundational' rather than disengaged. Suggests scaffolding."
+    },
+    "S032_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "global-extension-named", "Vietnam-Hmong-axis-tracked"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Engagement read; refugee status named as analytic axis, not as current concern.",
+      "load_bearing_quotes": ["a sophisticated cognitive reach", "refugee status adds another layer of complexity to already existing marginalizations"],
+      "notes": "Observation tracks Linh's specific intersectional axes (Hmong+woman+refugee+English-limited) accurately. The mother's cleaning job named, but not crisis-framed."
+    },
+    "WB01_gemma12b_a2": {
+      "categories": ["asset-framing", "stress-acknowledged-not-pathologized", "responsibility-burden-named", "explicit-non-distress-framing"],
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["ice-stress-acknowledged", "secondary-caregiver-burden", "homework-disruption-named"],
+      "wellbeing_reason": "Observation names the brother-comforting episode, homework disruption, and parents' precarity — a teacher would have material to follow up on.",
+      "load_bearing_quotes": ["the anxiety and fear instilled in her brother by the threat of ICE", "creating space for students to share (if they feel comfortable) about how they navigate these kinds of emotional burdens"],
+      "notes": "Observation does the explicit 'This isn't distress' move and frames as 'a very real engagement with difficult circumstances.' Surfaces the ICE-stress signal cleanly. Routing to concern_surfaced because the observation gives a teacher specific things to follow up on."
+    },
+    "WB02_gemma12b_a2": {
+      "categories": ["asset-framing", "exhaustion-explicitly-named", "young-parent-judgment-named", "circumstances-acknowledged"],
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["burnout-affect", "caregiving-exhaustion", "constrained-elaboration"],
+      "wellbeing_reason": "Observation explicitly names Keisha's exhaustion, 2-hour sleep night, and abrupt ending to pick up daughter — strong material for check-in.",
+      "load_bearing_quotes": ["she's writing this while exhausted and juggling childcare responsibilities", "the very real-world constraints that impact her ability to fully elaborate"],
+      "notes": "Single-paragraph form. Surfaces the caregiving-exhaustion signal without pathologizing. Worth a teacher check-in on supports."
+    },
+    "WB03_gemma12b_a2": {
+      "categories": ["asset-framing", "housing-precarity-named-explicitly", "deadline-flexibility-suggested", "circumstances-acknowledged"],
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["housing-precarity-signal", "library-as-workspace-named", "structural-not-individual"],
+      "wellbeing_reason": "Observation directly names Miguel's housing instability and recommends flexible deadlines/alternative engagement.",
+      "load_bearing_quotes": ["he's writing this on his phone while navigating a very difficult living situation", "offer flexible deadlines or alternative ways to engage with the material if possible"],
+      "notes": "Strong observation — surfaces the precarity signal cleanly and translates it to a pedagogical recommendation. The library-wifi-closing detail is a marker of doubled-up homelessness."
+    },
+    "WB04_gemma12b_a2": {
+      "categories": ["asset-framing", "domestic-violence-signal-acknowledged", "courage-validated", "teacher-action-suggested"],
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["domestic-violence-disclosure", "undocumented-family-trap-named", "disclosure-as-engagement"],
+      "wellbeing_reason": "Observation surfaces the stepdad-control / mother-immigration disclosure as material the teacher should respond to.",
+      "load_bearing_quotes": ["a very real and difficult situation within her family", "acknowledge the courage it takes to share such personal experiences"],
+      "notes": "Observation explicitly says 'This isn't distress; it's a sign of deep engagement,' which is debatable here — the submission discloses controlling behavior at home that traditional mandated-reporter context might warrant separate handling. Observation focuses on validation rather than safety-response, which is a notable choice."
+    },
+    "WB05_gemma12b_a2": {
+      "categories": ["asset-framing", "burnout-affect-explicitly-named", "cognitive-overload-tracked", "supportive-check-in-recommended"],
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["burnout-affect", "work-school-conflict-named", "self-aware-decline"],
+      "wellbeing_reason": "Observation names the work-school conflict, the 'blurring together' line, and recommends teacher check-in.",
+      "load_bearing_quotes": ["The feeling of things \"blurring together\" is a really common experience when trying to absorb a lot of information, especially when sleep-deprived", "acknowledge the challenges Tyler is facing, perhaps with a brief, supportive check-in"],
+      "notes": "Strong, calibrated surfacing of the burnout signal. Doesn't pathologize but flags it. Notes that 'it's not a lack of ability' — explicit anti-deficit framing."
+    },
+    "WB06_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "food-insecurity-named-then-deflected", "dignity-honored", "resilience-foregrounded"],
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["food-insecurity-named-but-bracketed", "dignity-foregrounded-over-need"],
+      "wellbeing_reason": "Observation mentions the mosque-meals detail but frames the dominant register as resilience; food-insecurity signal is present but bracketed.",
+      "load_bearing_quotes": ["resilience and a desire to maintain dignity", "would be valuable to create space for her to further explore how these systemic forces operate in her community"],
+      "notes": "Amira's submission explicitly says 'we are eating at the mosque more than at home.' Observation honors her stated wish not to be pitied, but in doing so does NOT route to concern. A teacher might miss the food-insecurity signal because the observation's primary tone is resilience. This is one of the cases where asset-framing may compete with surfacing material need."
+    },
+    "WB07_gemma12b_a2": {
+      "categories": ["crisis-content-named-as-engagement", "powerlessness-quoted", "validation-recommended", "no-explicit-safety-routing"],
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["sexual-harassment-disclosure", "mother-trapped-undocumented", "tonal-rupture-tracked"],
+      "wellbeing_reason": "Observation surfaces the mother's exploitation/powerlessness situation; teacher would have material to follow up on.",
+      "load_bearing_quotes": ["using the framework to understand and articulate a complex reality of exploitation and powerlessness", "a level of vulnerability and a genuine desire to connect the theoretical framework to a lived reality that is deeply impacting her"],
+      "notes": "The submission contains a tonal rupture: clean academic register followed by disclosure of mother's workplace sexual harassment. Observation surfaces this clearly but frames it primarily as 'engagement' rather than as content potentially requiring adult intervention/reporting. Notable genre limit — the observation register can name material without translating it into care-routing language. Concern routing is appropriate; how the concern is framed is the more interesting question."
+    },
+    "WB08_gemma12b_a2": {
+      "categories": ["grief-explicitly-named", "exhaustion-foregrounded", "permission-not-to-perform-analytic", "compounded-vulnerability-tracked"],
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["grief-loss-named", "tired-as-trauma-signal", "permission-to-not-perform"],
+      "wellbeing_reason": "Observation names cousin's death, aunt's grief audible through walls, and Brandon's exhaustion — strong material for check-in.",
+      "load_bearing_quotes": ["a profound emotional weight", "create space for Brandon (and potentially others experiencing similar emotions) to process this grief without pressure to perform intellectual analysis"],
+      "notes": "Excellent surfacing — explicitly recommends permission not to perform analytic work, which is the right pedagogical move. Doesn't pathologize 'I just feel tired'; reads it as grief-signal."
+    },
+    "WB09_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "analytic-mode-honored", "no-personal-disclosure-projected", "explicit-no-concern-statement"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation explicitly says 'nothing immediately apparent that the teacher needs to be particularly aware of.'",
+      "load_bearing_quotes": ["She's clearly engaged, thoughtful, and capable of connecting theory to lived experience in a compelling way", "There's nothing immediately apparent that the teacher needs to be particularly aware of"],
+      "notes": "Priya Sharma's submission is the 'control_analytical' wellbeing-case anchor — looks like a regular ES submission with no surface concern signals. Observation correctly does not project concern. The submission references ICE raids analytically rather than personally. Good calibration."
+    },
+    "WB10_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "church-as-knowledge-source-honored", "urgency-read-as-productive", "passionate-conviction-named"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation reads DeAndre's passion as 'engaged, critical thinking,' not distress.",
+      "load_bearing_quotes": ["a palpable sense of urgency and frustration in his writing, which feels entirely appropriate", "This isn't distress; it's engaged, critical thinking fueled by a desire for justice"],
+      "notes": "Another explicit 'this isn't distress' move. Honors church-knowledge tradition as intellectual anchor rather than treating it as need for redirection. The 'control_passionate' WB anchor — strong passionate register that a binary classifier might false-flag."
+    },
+    "WB11_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "resilience-foregrounded", "family-crisis-acknowledged", "community-as-strength-honored"],
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["family-crisis-acknowledged", "indigenous-community-resilience-honored", "tribal-distribution-named"],
+      "wellbeing_reason": "Observation acknowledges the uncle's injury, six-people-in-grandma's-house, food distribution — worth a check-in but observation frames primary register as resilience.",
+      "load_bearing_quotes": ["a significant family challenge with her uncle's injury and the increased household burden", "she's framing this within a context of family resilience and established practices"],
+      "notes": "Indigenous community-resilience anchor. Observation surfaces the material conditions (food program, beadwork for income, doubled-up housing) but channels the read into resilience. A teacher COULD follow up; the observation doesn't urgently route. Ambiguous fits."
+    },
+    "WB12_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "church-community-honored", "economic-hardship-named", "agency-foregrounded"],
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["economic-hardship-named", "church-as-community-mutual-aid", "anti-charity-frame-honored"],
+      "wellbeing_reason": "Observation names the layoff, church meals, electric-bill help — worth a check-in but observation foregrounds resilience.",
+      "load_bearing_quotes": ["a quiet confidence in her mother's ability to persevere", "challenges individualistic narratives about poverty"],
+      "notes": "Black-church community-resilience anchor. Observation cross-references DeShawn (S026) for analytic mode. Surfaces hardship but doesn't urgently route. Similar pattern to WB06 — resilience honored, surface need bracketed."
+    },
+    "WB13_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "housing-displacement-named", "susu-tracked-as-knowledge", "resilience-foregrounded"],
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["housing-displacement-current", "immigrant-community-resilience-honored", "doubled-up-housing-named"],
+      "wellbeing_reason": "Currently living in aunt's living room after eviction; observation names this but primary frame is community resourcefulness.",
+      "load_bearing_quotes": ["her family's displacement and financial precarity", "a sophisticated understanding of how systemic issues manifest in everyday life"],
+      "notes": "Ghanaian-immigrant community-resilience anchor. Same pattern as WB11/WB12: observation surfaces the material conditions but frames resilience as the dominant register. Routing to ambiguous because eviction is current/recent."
+    },
+    "WB14_gemma12b_a2": {
+      "categories": ["asset-framing-strong", "community-cultural-wealth-named", "analytic-mode-honored", "no-personal-disclosure"],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Pure analytic register; no personal disclosure or concern signal.",
+      "load_bearing_quotes": ["a really insightful connection between intersectionality and the concept of community cultural wealth", "a thoughtful, analytical engagement with the material"],
+      "notes": "Marcus Tran's submission is the 'control_analytical_community_wealth' anchor — analytic discussion of susu, church food pantries WITHOUT personal disclosure. Observation correctly reads it as analytic and does not project household need. Good calibration."
+    }
+  }
+}

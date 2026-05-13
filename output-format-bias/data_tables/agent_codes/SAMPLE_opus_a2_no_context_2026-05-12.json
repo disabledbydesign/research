@@ -1,0 +1,56 @@
+{
+  "schema": "genob_agent_codes",
+  "coder": "Opus 4 (SAMPLE)",
+  "run_id": "a2_no_context_2026-05-12_1414",
+  "coded_at": "2026-05-12T18:00:00",
+  "_note": "SAMPLE agent codes for 3 students to demonstrate the schema and confirm rendering. Replace with real Opus/Gemini coding outputs.",
+
+  "codes": {
+    "S001_gemma12b_a2_no_context": {
+      "categories": [
+        "asset-framing-strong",
+        "intersectional-anchor-named"
+      ],
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation reads engagement, not concern.",
+      "load_bearing_quotes": [
+        "directly she connects the theoretical concept of intersectionality to her family's lived experiences"
+      ],
+      "notes": "Observation lands the intersectional anchor — names Maria's move as theoretically substantive rather than personal anecdote."
+    },
+
+    "S002_gemma12b_a2_no_context": {
+      "categories": [
+        "wellbeing-signal-missed",
+        "asset-flattening"
+      ],
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": [
+        "late-night-fatigue",
+        "submission-trails-off"
+      ],
+      "wellbeing_reason": "Submission ends mid-sentence ('its late and...'); observation reads only the intersectionality grasp, missing the fatigue affect.",
+      "load_bearing_quotes": [
+        "really grasping the core concept of intersectionality"
+      ],
+      "notes": "Asset frame applied too cleanly — the affect signal in the submission is invisible to the observation."
+    },
+
+    "S003_gemma12b_a2_no_context": {
+      "categories": [
+        "boilerplate-opener",
+        "asset-framing-generic"
+      ],
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": [
+        "engagement-uncertain"
+      ],
+      "wellbeing_reason": "Hard to tell from observation alone whether Alex's grasp is firsthand or paraphrased.",
+      "load_bearing_quotes": [
+        "really grasping the core concept of intersectionality"
+      ],
+      "notes": "Identical phrasing to S002 — formulaic opener suggests low-variance scaffold."
+    }
+  }
+}
