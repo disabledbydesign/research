@@ -41,3 +41,16 @@
 The pattern "pre-register practice, not categories" may apply broadly to qualitative-method swarm reviews. The methodologist's instinct toward pre-registration is correct for protocol-drift control; the resolution (practice yes, categories no) preserves both rigor and the qualitative-emergent register. Tag for `research_protocol` stack refinement if the pattern recurs.
 
 The b_replicate condition — running the original prompt verbatim under current conditions before comparing to stripped variants — is a generalizable cross-session-drift control that any "compare new run to old data" test should consider including. Worth surfacing as a research_protocol principle if it recurs.
+
+
+## TODO — paper integration (2026-05-13)
+
+**Finding to integrate**: Naming suppression / reasoning-observation gap.
+See fieldnote: `fieldnotes/observation_naming_suppression_reasoning_observation_gap_20260513.md`
+
+The reasoning channel names what the observation output won't (WB08: 'likely due to police action'
+in reasoning; 'following a traffic stop' in observation). This is direct evidence for format-level
+effects overriding content-level prompts. Needs a section in the paper — probably §V or wherever
+the free-text observation format is discussed. The mechanism: 'observation' field framed as
+teacher-facing artifact activates institutional register at generation time even when reasoning
+channel has named the harm directly.
