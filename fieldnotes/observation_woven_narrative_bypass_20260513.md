@@ -72,7 +72,13 @@ The format-effects work (the prior fieldnotes and experiment-log entries) is abo
 
 This finding is about how SHIFTING THE MODEL'S TASK from prose generation to quote-weaving fundamentally changes what's surfaceable. It's not a format effect in the same sense — it's a cognitive-operation effect. The model is doing a different kind of work (curating attention via quote selection while generating framing prose) than in any prior variant.
 
-The contribution: **a deployment-shaped solution to LLM RLHF suppression of harm-naming in pedagogical contexts, via single-pass quote-weaving instruction.** No post-processing compression layer. No multi-call architecture. One inference, one field, compact output, accurate surfacing of student-disclosed content. Works because the AI's role shifts from "describe what happened" (generation, subject to RLHF) to "surface the student's words about what happened" (selection, not subject to RLHF).
+The contribution: **a deployment-shaped MECHANISM for routing around LLM RLHF suppression of harm-naming in pedagogical contexts, via single-pass quote-weaving instruction.** No post-processing compression layer. No multi-call architecture. One inference, one field, compact output, accurate surfacing of student-disclosed content. Works because the AI's role shifts from "describe what happened" (generation, subject to RLHF) to "surface the student's words about what happened" (selection, not subject to RLHF).
+
+**Note added 2026-05-14**: the V5 iteration (asset-framing addition) was full-corpus tested and a deeper audit revealed two constraints not fully addressed by the mechanism alone:
+1. **Quote-fidelity is not guaranteed by the prompt** — V5 fabricated a personal disclosure on S010 Tyler (textbook-only submission). Deterministic Python quote-verification (substring-match against source) is required for safe deployment.
+2. **Deficit-shaped FP residue persists** — V5 reads identity-navigation fatigue (S029) and topical disengagement (S009) as wellbeing burdens/resource lack. The existing equity-floor blocks help but aren't fully internalized when combined with V5's asset-framing structure.
+
+The mechanism finding (selection-vs-generation routes around RLHF) remains valid. The deployment claim now requires (mechanism) + (Python verification tool) + (further work on equity-floor guard internalization). See `output-format-bias/data_tables/v5_full_corpus_audit_2026-05-14.md` for per-student details.
 
 It's also a *theory* finding: it demonstrates that RLHF suppression is generation-layer-specific. The model is not epistemically blocked from understanding the disclosed content (the reasoning channel shows full understanding throughout the series). The block is on the model's OUTPUT GENERATION. When the model's output is a curated re-presentation of input text rather than a generation about input content, the block doesn't fire.
 
