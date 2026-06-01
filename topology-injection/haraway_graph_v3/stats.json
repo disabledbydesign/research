@@ -1,0 +1,11 @@
+{
+  "nodes": 849,
+  "edges": 566,
+  "density": 0.001572,
+  "triples_total": 579,
+  "triples_pass1_paragraph": 513,
+  "triples_pass2_cross_cutting": 48,
+  "triples_pass3_essay_threads": 18,
+  "sections_processed": 6,
+  "encoding_tokens_approx": 8493
+}

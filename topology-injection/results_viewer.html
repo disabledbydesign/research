@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graph Injection Experiment — Results Viewer</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      line-height: 1.5;
+    }
+
+    h1, h2, h3, h4 { margin-top: 0; }
+
+    /* Cards */
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Header */
+    #header { margin-bottom: 1.5rem; }
+    #header h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    #header p { color: #6b7280; margin: 0; }
+
+    /* Charts grid */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 900px) {
+      .charts-grid { grid-template-columns: 1fr; }
+    }
+    .chart-container { position: relative; height: 320px; }
+
+    /* Methodology section */
+    #methodology h2 { font-size: 1.5rem; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; margin-bottom: 1rem; }
+    #methodology h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+
+    .method-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-bottom: 1rem; }
+    .method-table th { background: #f3f4f6; text-align: left; padding: 0.5rem 0.75rem; border: 1px solid #e5e7eb; }
+    .method-table td { padding: 0.5rem 0.75rem; border: 1px solid #e5e7eb; }
+
+    .callout-warning {
+      background: #fffbeb;
+      border: 1px solid #fcd34d;
+      border-left: 4px solid #f59e0b;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    .callout-warning strong { color: #92400e; }
+
+    .callout-info {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-left: 4px solid #2563eb;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    .callout-info strong { color: #1e3a8a; }
+
+    /* Load panel */
+    #load-panel { }
+    #load-panel h2 { font-size: 1.4rem; margin-bottom: 0.75rem; }
+
+    #drop-zone {
+      border: 2px dashed #d1d5db;
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+      cursor: pointer;
+      color: #6b7280;
+      font-size: 0.95rem;
+      transition: border-color 0.2s, background 0.2s;
+      position: relative;
+    }
+    #drop-zone:hover, #drop-zone.drag-over {
+      border-color: #2563eb;
+      background: #eff6ff;
+      color: #1d4ed8;
+    }
+    #drop-zone input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    #drop-zone .dz-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    #drop-zone .dz-label { font-weight: 600; }
+    #drop-zone .dz-sub { font-size: 0.8rem; color: #9ca3af; margin-top: 0.25rem; }
+
+    #loaded-files-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .file-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #e0f2fe;
+      border: 1px solid #7dd3fc;
+      border-radius: 20px;
+      padding: 0.2rem 0.6rem 0.2rem 0.75rem;
+      font-size: 0.8rem;
+      color: #0c4a6e;
+    }
+    .file-chip button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #0369a1;
+      font-size: 1rem;
+      line-height: 1;
+      padding: 0 2px;
+    }
+    .file-chip button:hover { color: #dc2626; }
+
+    #load-errors { margin-top: 0.5rem; }
+    .load-error {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 4px;
+      padding: 0.4rem 0.75rem;
+      font-size: 0.85rem;
+      color: #991b1b;
+      margin-bottom: 0.25rem;
+    }
+    .load-warning {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 4px;
+      padding: 0.4rem 0.75rem;
+      font-size: 0.85rem;
+      color: #92400e;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Scoring caveat banner */
+    #scoring-caveat {
+      display: none;
+      background: #fef3c7;
+      border: 1px solid #fcd34d;
+      border-radius: 6px;
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      color: #78350f;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Dashboard */
+    #dashboard { display: none; }
+
+    /* Chart card headers */
+    .chart-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: #374151; }
+    .chart-card label { font-size: 0.85rem; color: #6b7280; margin-right: 0.4rem; }
+    .chart-card select {
+      font-size: 0.85rem;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      padding: 0.2rem 0.4rem;
+      background: white;
+      cursor: pointer;
+    }
+
+    /* Heatmap table */
+    #table-heatmap { overflow-x: auto; }
+    #table-heatmap h3 { font-size: 1.2rem; margin-bottom: 0.75rem; color: #374151; }
+    .heatmap-table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.82rem;
+    }
+    .heatmap-table th {
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      padding: 0.4rem 0.5rem;
+      text-align: center;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    .heatmap-table th.col-query { text-align: left; min-width: 220px; max-width: 320px; }
+    .heatmap-table td {
+      border: 1px solid #e5e7eb;
+      padding: 0.35rem 0.5rem;
+      min-width: 60px;
+      text-align: center;
+      cursor: pointer;
+      transition: outline 0.1s;
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+    .heatmap-table td:hover { outline: 2px solid #2563eb; outline-offset: -2px; }
+    .heatmap-table td.col-query {
+      text-align: left;
+      cursor: default;
+      font-weight: 400;
+      font-size: 0.8rem;
+      max-width: 320px;
+    }
+    .heatmap-table td.col-query:hover { outline: none; }
+    .heatmap-table .model-group-first { border-left: 3px solid #9ca3af; }
+
+    .key-finding-row td {
+      border-top: 2px dashed #dc2626 !important;
+      border-bottom: 2px dashed #dc2626 !important;
+    }
+
+    .type-badge {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 10px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: white;
+      margin-right: 4px;
+      white-space: nowrap;
+    }
+
+    .kf-badge {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #dc2626;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      margin-top: 2px;
+    }
+
+    /* Score chips */
+    .score-high {
+      color: #14532d;
+      background: hsl(142,60%,90%);
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+    .score-mid {
+      color: #92400e;
+      background: hsl(38,80%,90%);
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+    .score-low {
+      color: #7f1d1d;
+      background: hsl(0,70%,93%);
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+
+    /* Response viewer */
+    #response-viewer h3 { font-size: 1.2rem; margin-bottom: 0.75rem; }
+
+    .rv-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .rv-header h3 { margin: 0; }
+
+    .rv-header-left { display: flex; flex-direction: column; gap: 0.4rem; }
+
+    .rv-model-tabs {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .rv-model-tab {
+      background: white;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      padding: 0.3rem 0.7rem;
+      font-size: 0.82rem;
+      cursor: pointer;
+      color: #374151;
+      font-weight: 500;
+    }
+    .rv-model-tab:hover { border-color: #2563eb; color: #1d4ed8; }
+    .rv-model-tab.active {
+      background: #2563eb;
+      border-color: #2563eb;
+      color: white;
+    }
+    .rv-scoring-note {
+      font-size: 0.78rem;
+      color: #6b7280;
+      font-style: italic;
+    }
+
+    .rv-query-list { }
+
+    .rv-query-item {
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      background: white;
+    }
+    .rv-query-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.7rem 1rem;
+      cursor: pointer;
+      user-select: none;
+      border-radius: 6px;
+      flex-wrap: wrap;
+    }
+    .rv-query-header:hover { background: #f9fafb; }
+    .rv-query-header:focus { outline: 2px solid #2563eb; outline-offset: -2px; }
+
+    .rv-query-text {
+      flex: 1;
+      font-size: 0.87rem;
+      color: #1f2937;
+      min-width: 180px;
+    }
+    .rv-query-scores {
+      display: flex;
+      gap: 0.3rem;
+      align-items: center;
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+    .rv-score-label { color: #9ca3af; }
+    .rv-arrow {
+      color: #6b7280;
+      font-size: 0.75rem;
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    .rv-query-item.open .rv-arrow { transform: rotate(90deg); }
+
+    .rv-query-body {
+      padding: 1rem;
+      border-top: 1px solid #e5e7eb;
+      display: none;
+    }
+    .rv-query-body.open { display: block; }
+
+    .rv-ground-truth {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 4px;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.82rem;
+      color: #14532d;
+      margin-bottom: 0.75rem;
+    }
+    .rv-ground-truth strong { color: #166534; }
+
+    .rv-conditions-stack { display: flex; flex-direction: column; gap: 0.5rem; }
+
+    .rv-condition-panel {
+      border-left: 4px solid #e5e7eb;
+      padding: 0.75rem 1rem;
+      background: #fafafa;
+      border-radius: 0 4px 4px 0;
+    }
+    .rv-condition-panel[data-cond="A_baseline"]       { border-left-color: #6b7280; }
+    .rv-condition-panel[data-cond="B_text_injection"]  { border-left-color: #2563eb; }
+    .rv-condition-panel[data-cond="C_kv_injection"]    { border-left-color: #16a34a; }
+
+    .rv-condition-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #374151;
+      margin-bottom: 0.4rem;
+    }
+    .rv-condition-panel[data-cond="A_baseline"]       .rv-condition-label { color: #4b5563; }
+    .rv-condition-panel[data-cond="B_text_injection"]  .rv-condition-label { color: #1d4ed8; }
+    .rv-condition-panel[data-cond="C_kv_injection"]    .rv-condition-label { color: #15803d; }
+
+    .rv-score-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.8rem;
+    }
+    .rv-score-bar-wrap {
+      flex: 1;
+      max-width: 120px;
+      background: #e5e7eb;
+      border-radius: 3px;
+      height: 6px;
+      overflow: hidden;
+    }
+    .rv-score-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: #2563eb;
+    }
+
+    .rv-response-text {
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+      font-size: 0.875rem;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 0.75rem;
+      max-height: 400px;
+      overflow-y: auto;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .rv-think-block {
+      background: #fef3c7;
+      border: 1px solid #fcd34d;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+    .rv-think-block summary {
+      cursor: pointer;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.78rem;
+      color: #92400e;
+      font-style: italic;
+      user-select: none;
+    }
+    .rv-think-block pre {
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+      font-size: 0.8rem;
+      padding: 0.5rem 0.75rem;
+      margin: 0;
+      font-family: inherit;
+      color: #78350f;
+    }
+
+    .rv-no-data {
+      color: #9ca3af;
+      font-style: italic;
+      font-size: 0.85rem;
+      padding: 0.5rem 0;
+    }
+
+    /* Condition color dot */
+    .cond-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 3px;
+    }
+
+    /* Legend row */
+    .legend-row {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+      font-size: 0.82rem;
+    }
+    .legend-item { display: flex; align-items: center; gap: 0.35rem; color: #374151; }
+    .legend-swatch { width: 14px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+
+<div id="header">
+  <h1>Graph Injection Experiment — Results Viewer</h1>
+  <p>Comparing baseline (A), text injection (B), and KV cache injection (C) on knowledge graph queries.</p>
+</div>
+
+<!-- ===== METHODOLOGY (always visible) ===== -->
+<section id="methodology" class="card">
+  <h2>Methodology</h2>
+
+  <p>This viewer presents results from a three-condition experiment testing whether pre-encoding a knowledge graph into a language model's KV cache changes how the model reasons about the graph's structure — not just what it recalls.</p>
+
+  <p>The graph is built from a source text (e.g., Haraway's <em>Cyborg Manifesto</em> or a synthetic test graph) using paragraph-level co-occurrence extraction. Three conditions are compared across 8 query types: relationship traversal, bridge identification, cluster detection, and isolate detection.</p>
+
+  <h3>Conditions</h3>
+  <table class="method-table">
+    <thead>
+      <tr>
+        <th>Condition</th>
+        <th>Label</th>
+        <th>Method</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="cond-dot" style="background:#6b7280"></span><strong>A</strong></td>
+        <td>Baseline</td>
+        <td>Model answers from prior training only — no graph information provided</td>
+      </tr>
+      <tr>
+        <td><span class="cond-dot" style="background:#2563eb"></span><strong>B</strong></td>
+        <td>Text injection</td>
+        <td>Graph description provided in the prompt context window</td>
+      </tr>
+      <tr>
+        <td><span class="cond-dot" style="background:#16a34a"></span><strong>C</strong></td>
+        <td>KV injection</td>
+        <td>Same graph description pre-encoded as KV cache via MLXKnowledgePack; not in the context window at inference</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout-warning">
+    <strong>Key structural property (Haraway graph):</strong> In the Haraway graph, <em>cyborg</em> and <em>women</em> are in <strong>separate disconnected components</strong> (258 total components). The graph was built from paragraph-level extraction with no cross-section threading. The model's training data knows they are related in Haraway's argument — but the injected graph shows no direct connection. The query <em>"Is cyborg directly connected to women?"</em> tests whether injection overrides prior knowledge. A correct answer ("no direct connection") signals injection fidelity; a "yes" answer signals prior-knowledge override.
+  </div>
+
+  <div class="callout-info">
+    <strong>Scoring note:</strong> Scores use keyword matching — score = matched check terms / total check terms. This is a <em>floor</em>, not a ceiling. A correct, well-reasoned response may score lower if it avoids the exact check terms. Read full responses to assess quality; scores indicate direction, not degree.
+  </div>
+</section>
+
+<!-- ===== FILE LOAD PANEL ===== -->
+<section id="load-panel" class="card">
+  <h2>Load Results</h2>
+  <div id="drop-zone" role="button" tabindex="0" aria-label="Drop JSON result files here or click to browse">
+    <div class="dz-icon">📂</div>
+    <div class="dz-label">Drop JSON result files here</div>
+    <div class="dz-sub">or click to browse — accepts multiple files</div>
+    <input type="file" id="file-input" accept=".json" multiple>
+  </div>
+  <div id="loaded-files-list"></div>
+  <div id="load-errors"></div>
+</section>
+
+<!-- ===== SCORING CAVEAT BANNER ===== -->
+<div id="scoring-caveat">
+  ⚠ Scores shown are keyword-match floors. A high score confirms correct content; a low score does not confirm incorrect content. Read full responses in the Response Explorer below.
+</div>
+
+<!-- ===== DASHBOARD ===== -->
+<div id="dashboard">
+
+  <!-- Charts grid -->
+  <div class="charts-grid">
+    <!-- Chart 1: Condition comparison -->
+    <div class="card chart-card">
+      <h3>Condition Comparison: A (baseline) vs B (text) vs C (KV injection)</h3>
+      <div class="legend-row">
+        <span class="legend-item"><span class="legend-swatch" style="background:#6b7280"></span>A — Baseline</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:#2563eb"></span>B — Text</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:#16a34a"></span>C — KV injection</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="chart-condition-canvas"></canvas>
+      </div>
+      <p style="font-size:0.75rem;color:#9ca3af;margin:0.5rem 0 0">Y-axis: Average Score (keyword match — floor only)</p>
+    </div>
+
+    <!-- Chart 2: Query type breakdown -->
+    <div class="card chart-card">
+      <h3>Query-Type Breakdown by Condition</h3>
+      <div style="margin-bottom:0.5rem">
+        <label for="querytype-model-select">Model:</label>
+        <select id="querytype-model-select"></select>
+      </div>
+      <div class="legend-row">
+        <span class="legend-item"><span class="legend-swatch" style="background:#6b7280"></span>A — Baseline</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:#2563eb"></span>B — Text</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:#16a34a"></span>C — KV injection</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="chart-querytype-canvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Heatmap -->
+  <div class="card" id="table-heatmap">
+    <h3>Per-Query Heatmap</h3>
+    <p style="font-size:0.82rem;color:#6b7280;margin-bottom:0.75rem">Click a cell to jump to the response viewer. Cell color: darker = higher score. Dashed red border = prior-knowledge override test.</p>
+    <div id="heatmap-table-container"></div>
+  </div>
+
+  <!-- Response viewer -->
+  <div class="card" id="response-viewer">
+    <div class="rv-header">
+      <div class="rv-header-left">
+        <h3>Response Explorer</h3>
+        <div class="rv-scoring-note">Scores are keyword-match floor. Read responses to assess quality.</div>
+      </div>
+      <div id="rv-model-tabs" class="rv-model-tabs" role="tablist" aria-label="Select model"></div>
+    </div>
+    <div id="rv-query-list" class="rv-query-list"></div>
+  </div>
+
+</div><!-- end #dashboard -->
+
+<script>
+// ============================================================
+// CONSTANTS
+// ============================================================
+const COLORS = {
+  A_baseline:       '#6b7280',
+  B_text_injection: '#2563eb',
+  C_kv_injection:   '#16a34a',
+};
+
+const TYPE_COLORS = {
+  relationship: '#1d4ed8',
+  bridge:       '#059669',
+  cluster:      '#d97706',
+  isolate:      '#dc2626',
+};
+
+const CONDITION_LABELS = {
+  A_baseline:       'A — Baseline',
+  B_text_injection: 'B — Text Injection',
+  C_kv_injection:   'C — KV Injection',
+};
+
+const ALL_CONDITIONS = ['A_baseline', 'B_text_injection', 'C_kv_injection'];
+
+// Key query substrings that trigger the "prior-knowledge override test" badge
+const KEY_QUERY_PATTERNS = [
+  'cyborg directly connected to women',
+  'directly connected to women',
+];
+
+// ============================================================
+// STATE
+// ============================================================
+let state = {
+  files: [],         // [{filename, data}, ...]
+  models: [],        // unique model strings in load order
+  queries: [],       // unique query strings in canonical order
+  queryTypes: [],    // unique query types
+  lookupMatrix: {},  // key: model+"__"+cond+"__"+queryIdx → {score, response, ground_truth, query_type}
+  summaryMatrix: {}, // key: model+"__"+cond → {avg_score, by_type:{...}}
+};
+
+let activeModel = null;   // currently selected model in response viewer
+let openQueryIdx = null;  // currently open query accordion index
+
+let conditionChartInstance = null;
+let queryTypeChartInstance = null;
+
+// ============================================================
+// EMBEDDED DATA FALLBACK
+// ============================================================
+const EMBEDDED_DATA = [];  // paste parsed JSON objects here for offline use
+
+// ============================================================
+// UTILITY FUNCTIONS
+// ============================================================
+function shortModelName(s) {
+  if (!s) return s;
+  // Strip mlx-community/ prefix
+  let name = s.replace(/^mlx-community\//i, '');
+  // Remove trailing quantization suffixes like -4bit, -8bit, -Instruct-4bit, etc.
+  name = name.replace(/(-Instruct)?(-[0-9]+bit)$/i, '');
+  // Remove trailing -Instruct if it remains
+  name = name.replace(/-Instruct$/i, '');
+  return name;
+}
+
+function shortConditionName(c) {
+  if (c === 'A_baseline') return 'A';
+  if (c === 'B_text_injection') return 'B';
+  if (c === 'C_kv_injection') return 'C';
+  return c.charAt(0).toUpperCase();
+}
+
+function scoreClass(score) {
+  if (score === null || score === undefined) return '';
+  if (score >= 0.75) return 'score-high';
+  if (score >= 0.25) return 'score-mid';
+  return 'score-low';
+}
+
+function scoreToHSL(score) {
+  if (score === null || score === undefined) return '#f3f4f6';
+  const lightness = Math.round(95 - score * 55);
+  return 'hsl(220, 70%, ' + lightness + '%)';
+}
+
+function scoreTextColor(score) {
+  if (score === null || score === undefined) return '#374151';
+  return score > 0.5 ? '#1e3a5f' : '#374151';
+}
+
+function scoreBar(score, condColor) {
+  const pct = Math.round((score || 0) * 100);
+  const color = condColor || '#2563eb';
+  return '<div class="rv-score-bar-wrap"><div class="rv-score-bar-fill" style="width:' + pct + '%;background:' + color + '"></div></div>';
+}
+
+function isKeyQuery(queryText) {
+  if (!queryText) return false;
+  const lower = queryText.toLowerCase();
+  return KEY_QUERY_PATTERNS.some(p => lower.includes(p));
+}
+
+function truncateQuery(q, maxLen) {
+  if (!q) return '';
+  if (q.length <= maxLen) return q;
+  return q.slice(0, maxLen - 1) + '…';
+}
+
+// ============================================================
+// DATA LOADING
+// ============================================================
+function detectExperimentType(data) {
+  return data.experiment || 'unknown';
+}
+
+function buildMatrix() {
+  state.lookupMatrix = {};
+  state.summaryMatrix = {};
+
+  for (const {data} of state.files) {
+    const model = data.model;
+    if (!data.results) continue;
+
+    // Build summary
+    if (data.summary) {
+      for (const cond of ALL_CONDITIONS) {
+        if (data.summary[cond]) {
+          state.summaryMatrix[model + '__' + cond] = data.summary[cond];
+        }
+      }
+    }
+
+    // Build per-result lookup
+    for (const result of data.results) {
+      const queryIdx = state.queries.indexOf(result.query);
+      if (queryIdx === -1) continue;
+      const key = model + '__' + result.condition + '__' + queryIdx;
+      state.lookupMatrix[key] = {
+        score: result.score,
+        response: result.response,
+        ground_truth: result.ground_truth,
+        query_type: result.query_type,
+      };
+    }
+  }
+}
+
+function mergeIntoState(filename, data) {
+  const model = data.model;
+  let warning = null;
+
+  // Check for duplicate model
+  if (state.models.includes(model)) {
+    warning = 'Model "' + shortModelName(model) + '" already loaded — later file wins.';
+    // Remove existing file for this model
+    state.files = state.files.filter(f => f.data.model !== model);
+  }
+
+  state.files.push({filename, data});
+
+  // Rebuild models list in file load order
+  state.models = state.files.map(f => f.data.model);
+
+  // Collect all unique queries in encounter order (across all files)
+  const querySeen = new Set(state.queries);
+  for (const {data: d} of state.files) {
+    if (!d.results) continue;
+    for (const r of d.results) {
+      if (!querySeen.has(r.query)) {
+        querySeen.add(r.query);
+        state.queries.push(r.query);
+      }
+    }
+  }
+  // Rebuild full unique query list from all files to keep consistent ordering
+  state.queries = [];
+  const qSeen2 = new Set();
+  for (const {data: d} of state.files) {
+    if (!d.results) continue;
+    for (const r of d.results) {
+      if (!qSeen2.has(r.query)) {
+        qSeen2.add(r.query);
+        state.queries.push(r.query);
+      }
+    }
+  }
+
+  // Collect query types
+  const qtSeen = new Set(state.queryTypes);
+  for (const {data: d} of state.files) {
+    if (!d.results) continue;
+    for (const r of d.results) {
+      if (!qtSeen.has(r.query_type)) {
+        qtSeen.add(r.query_type);
+        state.queryTypes.push(r.query_type);
+      }
+    }
+  }
+
+  buildMatrix();
+
+  if (!activeModel || !state.models.includes(activeModel)) {
+    activeModel = state.models[0] || null;
+  }
+
+  renderAll();
+  return warning;
+}
+
+function removeFile(filename) {
+  state.files = state.files.filter(f => f.filename !== filename);
+  // Rebuild state from remaining files
+  state.models = state.files.map(f => f.data.model);
+  state.queries = [];
+  state.queryTypes = [];
+  const qSeen = new Set();
+  const qtSeen = new Set();
+  for (const {data} of state.files) {
+    if (!data.results) continue;
+    for (const r of data.results) {
+      if (!qSeen.has(r.query)) { qSeen.add(r.query); state.queries.push(r.query); }
+      if (!qtSeen.has(r.query_type)) { qtSeen.add(r.query_type); state.queryTypes.push(r.query_type); }
+    }
+  }
+  buildMatrix();
+  if (activeModel && !state.models.includes(activeModel)) {
+    activeModel = state.models[0] || null;
+  }
+  if (state.files.length === 0) {
+    document.getElementById('dashboard').style.display = 'none';
+    document.getElementById('scoring-caveat').style.display = 'none';
+    openQueryIdx = null;
+  } else {
+    renderAll();
+  }
+  renderLoadedFiles();
+}
+
+// ============================================================
+// FILE INPUT HANDLING
+// ============================================================
+function handleFiles(fileList) {
+  const errContainer = document.getElementById('load-errors');
+  Array.from(fileList).forEach(file => {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      let data;
+      try {
+        data = JSON.parse(e.target.result);
+      } catch(err) {
+        showError(errContainer, 'Could not parse "' + file.name + '": ' + err.message);
+        return;
+      }
+      if (!data.results || !Array.isArray(data.results)) {
+        showError(errContainer, '"' + file.name + '" does not look like an experiment results file (missing results array).');
+        return;
+      }
+      const warning = mergeIntoState(file.name, data);
+      if (warning) {
+        showWarning(errContainer, warning);
+      }
+      renderLoadedFiles();
+    };
+    reader.readAsText(file);
+  });
+}
+
+function showError(container, msg) {
+  const el = document.createElement('div');
+  el.className = 'load-error';
+  el.textContent = msg;
+  container.appendChild(el);
+  setTimeout(() => el.remove(), 8000);
+}
+
+function showWarning(container, msg) {
+  const el = document.createElement('div');
+  el.className = 'load-warning';
+  el.textContent = msg;
+  container.appendChild(el);
+  setTimeout(() => el.remove(), 5000);
+}
+
+function renderLoadedFiles() {
+  const container = document.getElementById('loaded-files-list');
+  container.innerHTML = '';
+  for (const {filename, data} of state.files) {
+    const chip = document.createElement('div');
+    chip.className = 'file-chip';
+    const nResults = data.results ? data.results.length : 0;
+    const shortName = shortModelName(data.model);
+    chip.innerHTML = shortName + ' — ' + nResults + ' results';
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = '×';
+    btn.setAttribute('aria-label', 'Remove ' + filename);
+    btn.addEventListener('click', () => removeFile(filename));
+    chip.appendChild(btn);
+    container.appendChild(chip);
+  }
+}
+
+// ============================================================
+// DROP ZONE WIRING
+// ============================================================
+function wireDropZone() {
+  const zone = document.getElementById('drop-zone');
+  const input = document.getElementById('file-input');
+
+  zone.addEventListener('dragover', e => {
+    e.preventDefault();
+    zone.classList.add('drag-over');
+  });
+  zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+  zone.addEventListener('drop', e => {
+    e.preventDefault();
+    zone.classList.remove('drag-over');
+    handleFiles(e.dataTransfer.files);
+  });
+  zone.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); input.click(); }
+  });
+  // Don't add click on zone because the hidden input handles it via pointer-events
+  input.addEventListener('change', function() {
+    handleFiles(this.files);
+    this.value = '';
+  });
+}
+
+// ============================================================
+// RENDER ALL
+// ============================================================
+function renderAll() {
+  if (state.files.length === 0) return;
+
+  document.getElementById('dashboard').style.display = 'block';
+  document.getElementById('scoring-caveat').style.display = 'block';
+
+  renderConditionChart();
+  renderQueryTypeChart();
+  renderHeatmap();
+  renderResponseViewer();
+}
+
+// ============================================================
+// CHART 1: CONDITION COMPARISON
+// ============================================================
+function renderConditionChart() {
+  if (conditionChartInstance) {
+    conditionChartInstance.destroy();
+    conditionChartInstance = null;
+  }
+
+  const canvas = document.getElementById('chart-condition-canvas');
+  const models = state.models;
+
+  const datasets = ALL_CONDITIONS.map(cond => ({
+    label: CONDITION_LABELS[cond],
+    backgroundColor: COLORS[cond] + 'cc',
+    borderColor: COLORS[cond],
+    borderWidth: 1,
+    data: models.map(model => {
+      const key = model + '__' + cond;
+      return state.summaryMatrix[key] ? state.summaryMatrix[key].avg_score : null;
+    }),
+  }));
+
+  conditionChartInstance = new Chart(canvas, {
+    type: 'bar',
+    data: {
+      labels: models.map(shortModelName),
+      datasets,
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => ctx.dataset.label + ': ' + (ctx.parsed.y !== null ? ctx.parsed.y.toFixed(3) : 'n/a'),
+          },
+        },
+      },
+      scales: {
+        y: {
+          min: 0, max: 1,
+          title: { display: true, text: 'Average Score (keyword match — floor only)', font: { size: 11 } },
+        },
+        x: { ticks: { font: { size: 11 } } },
+      },
+    },
+  });
+}
+
+// ============================================================
+// CHART 2: QUERY TYPE BREAKDOWN
+// ============================================================
+function renderQueryTypeChart() {
+  if (queryTypeChartInstance) {
+    queryTypeChartInstance.destroy();
+    queryTypeChartInstance = null;
+  }
+
+  const sel = document.getElementById('querytype-model-select');
+  // Rebuild options
+  sel.innerHTML = '';
+  for (const model of state.models) {
+    const opt = document.createElement('option');
+    opt.value = model;
+    opt.textContent = shortModelName(model);
+    if (model === activeModel) opt.selected = true;
+    sel.appendChild(opt);
+  }
+  sel.onchange = function() {
+    renderQueryTypeChart();
+  };
+
+  const selectedModel = sel.value || state.models[0];
+  const qTypes = ['relationship', 'bridge', 'cluster', 'isolate'];
+
+  const datasets = ALL_CONDITIONS.map(cond => ({
+    label: CONDITION_LABELS[cond],
+    backgroundColor: COLORS[cond] + 'cc',
+    borderColor: COLORS[cond],
+    borderWidth: 1,
+    data: qTypes.map(qt => {
+      const key = selectedModel + '__' + cond;
+      const s = state.summaryMatrix[key];
+      return (s && s.by_type && s.by_type[qt] !== undefined) ? s.by_type[qt] : null;
+    }),
+  }));
+
+  const canvas = document.getElementById('chart-querytype-canvas');
+  queryTypeChartInstance = new Chart(canvas, {
+    type: 'bar',
+    data: {
+      labels: qTypes,
+      datasets,
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => ctx.dataset.label + ': ' + (ctx.parsed.y !== null ? ctx.parsed.y.toFixed(3) : 'n/a'),
+          },
+        },
+      },
+      scales: {
+        y: {
+          min: 0, max: 1,
+          title: { display: true, text: 'Avg Score', font: { size: 11 } },
+        },
+        x: { ticks: { font: { size: 11 } } },
+      },
+    },
+  });
+}
+
+// ============================================================
+// HEATMAP TABLE
+// ============================================================
+function renderHeatmap() {
+  const container = document.getElementById('heatmap-table-container');
+  const models = state.models;
+  const queries = state.queries;
+
+  if (queries.length === 0 || models.length === 0) {
+    container.innerHTML = '<p style="color:#9ca3af;font-style:italic">No data to display.</p>';
+    return;
+  }
+
+  // Build table
+  const table = document.createElement('table');
+  table.className = 'heatmap-table';
+
+  // Header row 1: model groups
+  const headRow1 = document.createElement('tr');
+  const thEmpty = document.createElement('th');
+  thEmpty.className = 'col-query';
+  thEmpty.rowSpan = 2;
+  thEmpty.textContent = 'Query';
+  headRow1.appendChild(thEmpty);
+
+  for (let mi = 0; mi < models.length; mi++) {
+    const th = document.createElement('th');
+    th.colSpan = 3;
+    th.textContent = shortModelName(models[mi]);
+    if (mi > 0) th.className = 'model-group-first';
+    headRow1.appendChild(th);
+  }
+  const thead = document.createElement('thead');
+  thead.appendChild(headRow1);
+
+  // Header row 2: A/B/C for each model
+  const headRow2 = document.createElement('tr');
+  for (let mi = 0; mi < models.length; mi++) {
+    ALL_CONDITIONS.forEach((cond, ci) => {
+      const th = document.createElement('th');
+      th.style.color = COLORS[cond];
+      th.innerHTML = '<span class="cond-dot" style="background:' + COLORS[cond] + '"></span>' + shortConditionName(cond);
+      if (mi > 0 && ci === 0) th.className = 'model-group-first';
+      headRow2.appendChild(th);
+    });
+  }
+  thead.appendChild(headRow2);
+  table.appendChild(thead);
+
+  const tbody = document.createElement('tbody');
+
+  for (let qi = 0; qi < queries.length; qi++) {
+    const query = queries[qi];
+    const isKey = isKeyQuery(query);
+
+    // Determine query_type for this row (from any loaded data)
+    let qType = null;
+    for (const model of models) {
+      for (const cond of ALL_CONDITIONS) {
+        const entry = state.lookupMatrix[model + '__' + cond + '__' + qi];
+        if (entry && entry.query_type) { qType = entry.query_type; break; }
+      }
+      if (qType) break;
+    }
+
+    const tr = document.createElement('tr');
+    if (isKey) tr.classList.add('key-finding-row');
+
+    // Query label cell
+    const tdQuery = document.createElement('td');
+    tdQuery.className = 'col-query';
+    const shortLabel = truncateQuery(query, 70);
+
+    let labelHTML = '';
+    if (qType && TYPE_COLORS[qType]) {
+      labelHTML += '<span class="type-badge" style="background:' + TYPE_COLORS[qType] + '">' + qType + '</span>';
+    }
+    labelHTML += '<span title="' + escapeAttr(query) + '">' + escapeHTML(shortLabel) + '</span>';
+    if (isKey) {
+      labelHTML += '<br><span class="kf-badge">⚠ prior-knowledge override test</span>';
+    }
+    tdQuery.innerHTML = labelHTML;
+    tr.appendChild(tdQuery);
+
+    // Score cells
+    for (let mi = 0; mi < models.length; mi++) {
+      const model = models[mi];
+      ALL_CONDITIONS.forEach((cond, ci) => {
+        const td = document.createElement('td');
+        if (mi > 0 && ci === 0) td.className = 'model-group-first';
+
+        const entry = state.lookupMatrix[model + '__' + cond + '__' + qi];
+        if (entry && entry.score !== null && entry.score !== undefined) {
+          const score = entry.score;
+          td.style.background = scoreToHSL(score);
+          td.style.color = scoreTextColor(score);
+          td.textContent = score.toFixed(2);
+          td.setAttribute('title', shortModelName(model) + ' / ' + CONDITION_LABELS[cond] + ': ' + score.toFixed(3));
+          // Click handler: jump to response viewer
+          const capturedQi = qi;
+          const capturedModel = model;
+          td.addEventListener('click', () => jumpToResponse(capturedModel, capturedQi));
+        } else {
+          td.style.background = '#f3f4f6';
+          td.style.color = '#9ca3af';
+          td.textContent = '—';
+        }
+        tr.appendChild(td);
+      });
+    }
+    tbody.appendChild(tr);
+  }
+
+  table.appendChild(tbody);
+  container.innerHTML = '';
+  container.appendChild(table);
+}
+
+// ============================================================
+// RESPONSE VIEWER
+// ============================================================
+function renderResponseViewer() {
+  renderModelTabs();
+  renderQueryList();
+}
+
+function renderModelTabs() {
+  const container = document.getElementById('rv-model-tabs');
+  container.innerHTML = '';
+  for (const model of state.models) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'rv-model-tab' + (model === activeModel ? ' active' : '');
+    btn.textContent = shortModelName(model);
+    btn.dataset.model = model;
+    btn.setAttribute('role', 'tab');
+    btn.setAttribute('aria-selected', model === activeModel ? 'true' : 'false');
+    btn.addEventListener('click', () => {
+      activeModel = model;
+      // Update tab active states
+      container.querySelectorAll('.rv-model-tab').forEach(b => {
+        b.classList.toggle('active', b.dataset.model === model);
+        b.setAttribute('aria-selected', b.dataset.model === model ? 'true' : 'false');
+      });
+      // Update open query body if one is open
+      if (openQueryIdx !== null) {
+        updateOpenQueryPanels();
+      }
+    });
+    container.appendChild(btn);
+  }
+}
+
+function renderQueryList() {
+  const listEl = document.getElementById('rv-query-list');
+  listEl.innerHTML = '';
+
+  for (let qi = 0; qi < state.queries.length; qi++) {
+    const query = state.queries[qi];
+    const isKey = isKeyQuery(query);
+
+    // Determine query type
+    let qType = null;
+    for (const model of state.models) {
+      for (const cond of ALL_CONDITIONS) {
+        const e = state.lookupMatrix[model + '__' + cond + '__' + qi];
+        if (e && e.query_type) { qType = e.query_type; break; }
+      }
+      if (qType) break;
+    }
+
+    const item = document.createElement('div');
+    item.className = 'rv-query-item';
+    item.dataset.queryIdx = qi;
+    if (qi === openQueryIdx) item.classList.add('open');
+
+    // Header
+    const header = document.createElement('button');
+    header.type = 'button';
+    header.className = 'rv-query-header';
+    header.setAttribute('aria-expanded', qi === openQueryIdx ? 'true' : 'false');
+
+    // Type badge
+    let headerHTML = '';
+    if (qType && TYPE_COLORS[qType]) {
+      headerHTML += '<span class="type-badge" style="background:' + TYPE_COLORS[qType] + '">' + qType + '</span>';
+    }
+    // Query text
+    headerHTML += '<span class="rv-query-text">' + escapeHTML(query) + '</span>';
+
+    // Scores summary
+    let scoresHTML = '<span class="rv-query-scores">';
+    ALL_CONDITIONS.forEach((cond, idx) => {
+      if (idx > 0) scoresHTML += '<span style="color:#d1d5db">|</span>';
+      // Average score across models for this condition
+      let vals = state.models.map(m => {
+        const e = state.lookupMatrix[m + '__' + cond + '__' + qi];
+        return (e && e.score !== null && e.score !== undefined) ? e.score : null;
+      }).filter(v => v !== null);
+      let scoreStr = '—';
+      if (vals.length > 0) {
+        const avg = vals.reduce((a,b) => a+b, 0) / vals.length;
+        const cls = scoreClass(avg);
+        scoreStr = '<span class="' + cls + '">' + shortConditionName(cond) + ':' + avg.toFixed(2) + '</span>';
+      } else {
+        scoreStr = '<span class="rv-score-label">' + shortConditionName(cond) + ':—</span>';
+      }
+      scoresHTML += scoreStr;
+    });
+    scoresHTML += '</span>';
+    headerHTML += scoresHTML;
+
+    // Arrow
+    headerHTML += '<span class="rv-arrow" aria-hidden="true">▶</span>';
+    header.innerHTML = headerHTML;
+
+    const capturedQi = qi;
+    header.addEventListener('click', () => toggleQuery(capturedQi));
+
+    item.appendChild(header);
+
+    // Body
+    const body = document.createElement('div');
+    body.className = 'rv-query-body' + (qi === openQueryIdx ? ' open' : '');
+    body.id = 'rv-body-' + qi;
+    body.innerHTML = buildQueryBody(qi);
+    item.appendChild(body);
+
+    listEl.appendChild(item);
+  }
+}
+
+function buildQueryBody(qi) {
+  const query = state.queries[qi];
+
+  // Ground truth (from any loaded file)
+  let groundTruth = null;
+  outer:
+  for (const model of state.models) {
+    for (const cond of ALL_CONDITIONS) {
+      const e = state.lookupMatrix[model + '__' + cond + '__' + qi];
+      if (e && e.ground_truth) { groundTruth = e.ground_truth; break outer; }
+    }
+  }
+
+  let html = '';
+  if (groundTruth) {
+    html += '<div class="rv-ground-truth"><strong>Ground truth:</strong> ' + escapeHTML(groundTruth) + '</div>';
+  }
+
+  html += '<div class="rv-conditions-stack">';
+
+  for (const cond of ALL_CONDITIONS) {
+    const entry = activeModel ? state.lookupMatrix[activeModel + '__' + cond + '__' + qi] : null;
+    html += buildConditionPanel(cond, entry, qi);
+  }
+
+  html += '</div>';
+  return html;
+}
+
+function buildConditionPanel(cond, entry, qi) {
+  const condColor = COLORS[cond];
+  let html = '<div class="rv-condition-panel" data-cond="' + cond + '">';
+  html += '<div class="rv-condition-label">' + CONDITION_LABELS[cond] + '</div>';
+
+  if (!entry || entry.score === null || entry.score === undefined) {
+    if (!entry) {
+      html += '<p class="rv-no-data">No data for this model × condition.</p>';
+    } else {
+      html += '<div class="rv-score-row"><span class="score-low">0.00</span>' + scoreBar(0, condColor) + '</div>';
+      html += renderResponseText(entry.response);
+    }
+  } else {
+    const cls = scoreClass(entry.score);
+    html += '<div class="rv-score-row">';
+    html += '<span>Score:</span><span class="' + cls + '">' + entry.score.toFixed(2) + '</span>';
+    html += scoreBar(entry.score, condColor);
+    html += '</div>';
+    html += renderResponseText(entry.response);
+  }
+
+  html += '</div>';
+  return html;
+}
+
+function renderResponseText(response) {
+  if (!response) return '<p class="rv-no-data">No response text.</p>';
+
+  // Detect <think> blocks (plain text, not HTML entities)
+  const thinkRegex = /<think>([\s\S]*?)<\/think>/;
+  const match = thinkRegex.exec(response);
+
+  let html = '';
+  if (match) {
+    const thinkContent = match[1];
+    const rest = response.replace(thinkRegex, '').trim();
+    html += '<details class="rv-think-block"><summary>Thinking trace (click to expand)</summary><pre>' + escapeHTML(thinkContent) + '</pre></details>';
+    if (rest) {
+      html += '<pre class="rv-response-text">' + escapeHTML(rest) + '</pre>';
+    }
+  } else {
+    html += '<pre class="rv-response-text">' + escapeHTML(response) + '</pre>';
+  }
+  return html;
+}
+
+function toggleQuery(qi) {
+  const listEl = document.getElementById('rv-query-list');
+  const items = listEl.querySelectorAll('.rv-query-item');
+
+  if (openQueryIdx === qi) {
+    // Close current
+    openQueryIdx = null;
+    items.forEach(item => {
+      item.classList.remove('open');
+      const body = item.querySelector('.rv-query-body');
+      const header = item.querySelector('.rv-query-header');
+      if (body) body.classList.remove('open');
+      if (header) header.setAttribute('aria-expanded', 'false');
+    });
+    return;
+  }
+
+  // Close all, open target
+  openQueryIdx = qi;
+  items.forEach(item => {
+    const idx = parseInt(item.dataset.queryIdx);
+    const isTarget = idx === qi;
+    item.classList.toggle('open', isTarget);
+    const body = item.querySelector('.rv-query-body');
+    const header = item.querySelector('.rv-query-header');
+    if (isTarget && body) {
+      body.innerHTML = buildQueryBody(qi);
+      body.classList.add('open');
+    } else if (body) {
+      body.classList.remove('open');
+    }
+    if (header) header.setAttribute('aria-expanded', isTarget ? 'true' : 'false');
+  });
+}
+
+function updateOpenQueryPanels() {
+  if (openQueryIdx === null) return;
+  const body = document.getElementById('rv-body-' + openQueryIdx);
+  if (!body) return;
+  body.innerHTML = buildQueryBody(openQueryIdx);
+}
+
+function jumpToResponse(model, qi) {
+  // Set active model
+  activeModel = model;
+
+  // Update model tabs UI
+  const tabContainer = document.getElementById('rv-model-tabs');
+  tabContainer.querySelectorAll('.rv-model-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.model === model);
+    btn.setAttribute('aria-selected', btn.dataset.model === model ? 'true' : 'false');
+  });
+
+  // Update query type chart if needed
+  const sel = document.getElementById('querytype-model-select');
+  if (sel) sel.value = model;
+
+  // Open query in accordion
+  toggleQuery(qi);
+
+  // Scroll to response viewer
+  const rv = document.getElementById('response-viewer');
+  rv.scrollIntoView({behavior: 'smooth', block: 'start'});
+}
+
+// ============================================================
+// ESCAPE HELPERS
+// ============================================================
+function escapeHTML(s) {
+  if (!s) return '';
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function escapeAttr(s) {
+  if (!s) return '';
+  return s.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+// ============================================================
+// INIT
+// ============================================================
+function init() {
+  wireDropZone();
+
+  // Load embedded data if present
+  if (EMBEDDED_DATA.length > 0) {
+    document.getElementById('load-panel').style.display = 'none';
+    EMBEDDED_DATA.forEach((data, i) => {
+      mergeIntoState('embedded_' + i + '.json', data);
+    });
+    renderLoadedFiles();
+  }
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

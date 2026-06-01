@@ -1,0 +1,4550 @@
+[
+  {
+    "s": "Essay",
+    "p": "argues_for",
+    "o": "feminism",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Essay",
+    "p": "argues_for",
+    "o": "socialism",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Essay",
+    "p": "argues_for",
+    "o": "materialism",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Blasphemy",
+    "p": "requires",
+    "o": "seriousness",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Irony",
+    "p": "is_about",
+    "o": "contradictions",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Essay",
+    "p": "coalitions_with",
+    "o": "socialist-feminism",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Cyborg",
+    "p": "is_a",
+    "o": "cybernetic organism",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "Social reality",
+    "p": "constitutes",
+    "o": "lived social relations",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "Women's experience",
+    "p": "constructed_by",
+    "o": "International women's movements",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "Liberation",
+    "p": "rests_on",
+    "o": "construction of consciousness",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "Cyborg",
+    "p": "changes",
+    "o": "women's experience",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "Science fiction",
+    "p": "blurs_with",
+    "o": "Social reality",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "Contemporary science fiction",
+    "p": "populates",
+    "o": "worlds ambiguously natural and crafted",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "Modern medicine",
+    "p": "is full of",
+    "o": "cyborgs, couplings between organism and machine",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "Cyborg 'sex'",
+    "p": "restores",
+    "o": "lovely replicative baroque of ferns and invertebrates",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "Cyborg replication",
+    "p": "is uncoupled from",
+    "o": "organic reproduction",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "Modern production",
+    "p": "seems like a dream of",
+    "o": "cyborg colonization work",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "Michel Foucault's biopolitics",
+    "p": "is a flaccid premonition of",
+    "o": "cyborg politics",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "cyborg",
+    "p": "constitutes",
+    "o": "ontology",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "cyborg",
+    "p": "gives",
+    "o": "politics",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "Western science and politics",
+    "p": "transgresses",
+    "o": "border war",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "organism and machine",
+    "p": "has been",
+    "o": "border war",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "pleasure in confusion of boundaries",
+    "p": "argues for",
+    "o": "responsibility in construction",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "socialist-feminist culture and theory",
+    "p": "coalitions with",
+    "o": "postmodernist, non-naturalist mode",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "cyborg",
+    "p": "contrasts_with",
+    "o": "original unity",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "cyborg",
+    "p": "rejects",
+    "o": "bisexuality",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "cyborg",
+    "p": "rejects",
+    "o": "pre-oedipal symbiosis",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "cyborg",
+    "p": "rejects",
+    "o": "unalienated labour",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "cyborg",
+    "p": "skips",
+    "o": "original unity",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Marxism",
+    "p": "depends_on",
+    "o": "plot of original unity",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "cyborg",
+    "p": "defines",
+    "o": "technological polis",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "nature",
+    "p": "contrasts_with",
+    "o": "culture",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "cyborg",
+    "p": "opposes",
+    "o": "heterosexual mate",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "cyborg",
+    "p": "rejects",
+    "o": "Garden of Eden",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "cyborg",
+    "p": "coalitions_with",
+    "o": "united front politics",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "cyborg",
+    "p": "transgresses",
+    "o": "vanguard party",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "United States",
+    "p": "grounds",
+    "o": "boundary breakdown",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "human",
+    "p": "contrasts_with",
+    "o": "animal",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "feminist culture",
+    "p": "affirms",
+    "o": "connection between human and animal",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "animal rights movement",
+    "p": "recognizes",
+    "o": "connection across nature and culture",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "biology",
+    "p": "produces",
+    "o": "modern organisms as objects of knowledge",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Christian creationism",
+    "p": "transgresses",
+    "o": "child abuse",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Biological-determinist ideology",
+    "p": "argues_for",
+    "o": "meanings of human animality",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "radical political people",
+    "p": "contest",
+    "o": "meanings of the breached boundary",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "cyborg",
+    "p": "transgresses",
+    "o": "boundary between human and animal",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "cyborg",
+    "p": "signal",
+    "o": "tight coupling",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "Bestiality",
+    "p": "has new status in",
+    "o": "cycle of marriage exchange",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "cyborg",
+    "p": "transgresses",
+    "o": "walling off people from other living beings",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "animal-human",
+    "p": "contrasts_with",
+    "o": "machine",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "materialism",
+    "p": "structured_by",
+    "o": "dualism",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "machines",
+    "p": "cannot_achieve",
+    "o": "man's dream",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "late twentieth-century machines",
+    "p": "made_ambiguous",
+    "o": "difference between natural and artificial",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "our machines",
+    "p": "are_lively",
+    "o": "disturbingly",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "we ourselves",
+    "p": "are_inert",
+    "o": "frighteningly",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "Technological determination",
+    "p": "extends",
+    "o": "ideological space",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "Textualization",
+    "p": "contrasts_with",
+    "o": "lived relations of domination",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "Postmodernist strategies",
+    "p": "subverts",
+    "o": "organic wholes",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "Nature",
+    "p": "is undermined by",
+    "o": "postmodernist strategies",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "Transcendent authorization",
+    "p": "is lost with",
+    "o": "ontology grounding Western epistemology",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "Cynicism or faithlessness",
+    "p": "is not the alternative to",
+    "o": "radical question",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "Pop physics books",
+    "p": "contrasts_with",
+    "o": "Harlequin romances",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "Modern machines",
+    "p": "are",
+    "o": "microelectronic devices",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "The silicon chip",
+    "p": "is a surface for writing",
+    "o": "molecular scales",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "Miniaturization",
+    "p": "has changed our experience of mechanism",
+    "o": "power",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "Small machines",
+    "p": "are preeminently dangerous",
+    "o": "cruise missiles",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "cyborgs",
+    "p": "are_deadly",
+    "o": "sunshine-belt_machines",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "cyborgs",
+    "p": "are_invisible",
+    "o": "politically_and_materially",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "Greenham_women",
+    "p": "can_read_cyborg_webs_of_power",
+    "o": "well",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "C3I",
+    "p": "is_about_realm_of_greatest_boundary_confusion",
+    "o": "pure_number_and_pure_spirit",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "cyborg_women",
+    "p": "are_making_chips_in_Asia",
+    "o": "and_dancing_in_Santa_Rita_jail",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "cyborg_women",
+    "p": "will_guide_oppositional_strategies",
+    "o": "effective",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "cyborg myth",
+    "p": "transgresses",
+    "o": "boundaries",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "progressive people",
+    "p": "explores",
+    "o": "dangerous possibilities",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "American socialists and feminists",
+    "p": "sees",
+    "o": "deepened dualisms",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "high technology",
+    "p": "dominates",
+    "o": "technics",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "progressives",
+    "p": "insisted",
+    "o": "domination of technics",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "unity of people",
+    "p": "requires",
+    "o": "resistance",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "cyborg world",
+    "p": "is about",
+    "o": "final imposition of a grid of control",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "cyborg world",
+    "p": "is about",
+    "o": "abstraction embodied in Star Wars apocalypse",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "cyborg world",
+    "p": "is about",
+    "o": "appropriation of women's bodies",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "single vision",
+    "p": "produces",
+    "o": "worse illusions",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "cyborg unities",
+    "p": "are",
+    "o": "monstrous and illegitimate",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "LAG",
+    "p": "is a kind of",
+    "o": "cyborg society",
+    "source": "paragraph",
+    "section": "Introduction",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "feminism",
+    "p": "requires",
+    "o": "multiple adjectives",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "gender",
+    "p": "contrasts_with",
+    "o": "essential unity",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "female",
+    "p": "does not naturally bind",
+    "o": "women",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "feminism",
+    "p": "grounds",
+    "o": "coalitions with women",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "patriarchy",
+    "p": "undermines",
+    "o": "social unity",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "US left",
+    "p": "responds to",
+    "o": "crisis in political identity",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Chela Sandoval",
+    "p": "theorizes",
+    "o": "oppositional consciousness",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "women of color",
+    "p": "constructs",
+    "o": "postmodernist identity",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "Sandoval's oppositional consciousness",
+    "p": "is about",
+    "o": "contradictory locations",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "Sandoval's oppositional consciousness",
+    "p": "is not about",
+    "o": "relativisms and pluralisms",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "women of color",
+    "p": "constructs",
+    "o": "historical consciousness",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "oppositional consciousness",
+    "p": "grounds",
+    "o": "skills for reading webs of power",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "Sandoval",
+    "p": "emphasizes",
+    "o": "lack",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "definition",
+    "p": "grounds",
+    "o": "conscious appropriation of negation",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "Chicana/US black woman",
+    "p": "transgresses",
+    "o": "privileged authorial categories",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "category 'woman'",
+    "p": "negates",
+    "o": "non-white women",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "identity as US women of colour",
+    "p": "constitutes",
+    "o": "self-consciously constructed space",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "oppositional consciousness",
+    "p": "enables",
+    "o": "coalition",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "Sandoval",
+    "p": "argues_for",
+    "o": "feminists",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "anti-colonialist discourse",
+    "p": "grounds",
+    "o": "feminism",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "orientalism",
+    "p": "undermines",
+    "o": "identities of occident",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "women of colour",
+    "p": "have chance to build unity",
+    "o": "effective unity",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "Marxisms and feminisms",
+    "p": "replicate",
+    "o": "imperializing, totalizing revolutionary subjects",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "decolonization",
+    "p": "emerges as disorderly polyphony",
+    "o": "previous Marxisms and feminisms",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "Katie King",
+    "p": "criticizes",
+    "o": "taxonomization",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "feminist practice",
+    "p": "tends to",
+    "o": "remake history",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "taxonomies of feminism",
+    "p": "produce epistemologies",
+    "o": "to police deviation",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Katie King",
+    "p": "crafts poetic/political unity",
+    "o": "without logic of appropriation",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Katie King and Sandoval",
+    "p": "achieves common goal",
+    "o": "unity without taxonomic identification",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "taxonomization",
+    "p": "undermines",
+    "o": "feminist diversity",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "unity-through-domination",
+    "p": "undermines",
+    "o": "justifications for patriarchy",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "unity-through-domination",
+    "p": "undermines",
+    "o": "colonialism",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "unity-through-domination",
+    "p": "undermines",
+    "o": "humanism",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "radical and socialist/Marxist-feminisms",
+    "p": "undermines",
+    "o": "epistemological strategies",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "unity-through-domination",
+    "p": "contrasts_with",
+    "o": "organic or natural standpoint",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "Western political people's epistemologies",
+    "p": "may fail",
+    "o": "building effective affinities",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "postmodernist theory",
+    "p": "contrasts_with",
+    "o": "Western selves",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "ontological discourse",
+    "p": "enables",
+    "o": "revolutionary subjects",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "socialist-feminism",
+    "p": "requires",
+    "o": "partial constructions",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "politics",
+    "p": "extends",
+    "o": "collective selves",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "guilt",
+    "p": "undermines",
+    "o": "innocence",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "socialist-feminism",
+    "p": "grounds",
+    "o": "faithfulness",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "history",
+    "p": "contrasts_with",
+    "o": "unity",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "us",
+    "p": "transgresses",
+    "o": "them",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "woman",
+    "p": "denatures",
+    "o": "categories",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "innocence",
+    "p": "undermines",
+    "o": "insight",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "revolutionary subject",
+    "p": "gives pause to",
+    "o": "people",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "identities",
+    "p": "frays",
+    "o": "strategies",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "Marxist/socialist-feminisms",
+    "p": "denatures",
+    "o": "category 'woman'",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "radical feminisms",
+    "p": "denatures",
+    "o": "category 'woman'",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "labour",
+    "p": "enables",
+    "o": "overcoming illusion",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "labour",
+    "p": "makes",
+    "o": "man",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "labour",
+    "p": "permits",
+    "o": "knowledge of subjugation and alienation",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "Marxian socialism",
+    "p": "is rooted in",
+    "o": "analysis of wage labour",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "socialist-feminism",
+    "p": "argues_for",
+    "o": "Marxist strategies",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "Marxist feminists",
+    "p": "extends",
+    "o": "labour category",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "women's labour",
+    "p": "enters",
+    "o": "theory",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "socialist-feminism",
+    "p": "does not naturalize",
+    "o": "unity",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "Marxian humanism",
+    "p": "is a difficulty for",
+    "o": "me",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "women's activity",
+    "p": "has an ontological structure similar to",
+    "o": "labour",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "MacKinnon's version",
+    "p": "contrasts_with",
+    "o": "Western theories",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "MacKinnon's theory",
+    "p": "erases",
+    "o": "difference",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "MacKinnon's theory",
+    "p": "produces",
+    "o": "theory of experience",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "MacKinnon's version",
+    "p": "rewrites",
+    "o": "history of radical feminism",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "MacKinnon's theory",
+    "p": "eliminates",
+    "o": "humanist revolutionary subjects",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "MacKinnon's theory",
+    "p": "achieves",
+    "o": "unity of women",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "MacKinnon",
+    "p": "argues_for",
+    "o": "different analytical strategy",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "feminism",
+    "p": "contrasts_with",
+    "o": "Marxism",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "MacKinnon's ontology",
+    "p": "constructs",
+    "o": "non-subject",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "another's desire",
+    "p": "is origin of",
+    "o": "woman",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "feminist practice",
+    "p": "construction of",
+    "o": "self-knowledge",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "MacKinnon",
+    "p": "develops",
+    "o": "theory of consciousness",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "feminism",
+    "p": "grounds",
+    "o": "labour",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "sexual appropriation",
+    "p": "constitutes",
+    "o": "woman's existence",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "sexual objectification",
+    "p": "results in",
+    "o": "illusion and abstraction",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "alienation",
+    "p": "contrasts with",
+    "o": "being constituted by another's desire",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "labourer",
+    "p": "separated from",
+    "o": "product",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "woman",
+    "p": "does not exist as",
+    "o": "subject",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "MacKinnon",
+    "p": "argues_for",
+    "o": "women's unity",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "MacKinnon",
+    "p": "develops",
+    "o": "authoritarian doctrine",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "socialist/Marxian standpoints",
+    "p": "erases",
+    "o": "radical difference",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "MacKinnon's theory",
+    "p": "obliterates",
+    "o": "women's political speech and action",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "Western patriarchy",
+    "p": "fails_to_do",
+    "o": "feminists' consciousness of non-existence",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "MacKinnon's doctrine",
+    "p": "erases",
+    "o": "all difference",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "radical feminism",
+    "p": "accommodates",
+    "o": "activities of women",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 14
+  },
+  {
+    "s": "taxonomy",
+    "p": "re-inscribes",
+    "o": "history",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 14
+  },
+  {
+    "s": "socialist feminists",
+    "p": "names",
+    "o": "forms of labour",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 14
+  },
+  {
+    "s": "radical feminism",
+    "p": "requires",
+    "o": "sexualization",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 14
+  },
+  {
+    "s": "reproduction",
+    "p": "has different tones",
+    "o": "meanings for two tendencies",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 14
+  },
+  {
+    "s": "domination",
+    "p": "leads to",
+    "o": "false consciousness",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 14
+  },
+  {
+    "s": "Marxist",
+    "p": "contrasts_with",
+    "o": "radical feminist",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 15
+  },
+  {
+    "s": "Western explanation",
+    "p": "requires",
+    "o": "totality",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 15
+  },
+  {
+    "s": "author",
+    "p": "incorporates",
+    "o": "others",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 15
+  },
+  {
+    "s": "white radical and socialist feminists",
+    "p": "embarrassed silence about",
+    "o": "race",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 15
+  },
+  {
+    "s": "history",
+    "p": "disappears into",
+    "o": "political taxonomies",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 15
+  },
+  {
+    "s": "theory",
+    "p": "leaves out",
+    "o": "race",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 15
+  },
+  {
+    "s": "Julia Kristeva",
+    "p": "claims",
+    "o": "women appeared as a historical group",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 16
+  },
+  {
+    "s": "race",
+    "p": "did not always exist",
+    "o": "as objects of knowledge and as historical actors",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 16
+  },
+  {
+    "s": "class",
+    "p": "has a historical genesis",
+    "o": "historical actors",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 16
+  },
+  {
+    "s": "homosexuals",
+    "p": "are quite junior",
+    "o": "historical actors",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 16
+  },
+  {
+    "s": "advanced capitalism",
+    "p": "is inadequate to convey the structure of this historical moment",
+    "o": "",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 16
+  },
+  {
+    "s": "woman",
+    "p": "disintegrates into women in our time",
+    "o": "",
+    "source": "paragraph",
+    "section": "Fractured Identities",
+    "paragraph_idx": 16
+  },
+  {
+    "s": "Informatics of Domination",
+    "p": "transitions_to",
+    "o": "Organics of Domination",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Representation",
+    "p": "transitions_to",
+    "o": "Simulation",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Bourgeois novel, realism",
+    "p": "transitions_to",
+    "o": "Science fiction, postmodernism",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Organism",
+    "p": "transitions_to",
+    "o": "Biotic Component",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Depth, integrity",
+    "p": "transitions_to",
+    "o": "Surface, boundary",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Eugenics",
+    "p": "transitions_to",
+    "o": "Population Control",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "socialist principles",
+    "p": "grounds",
+    "o": "unity",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "feminist principles",
+    "p": "grounds",
+    "o": "unity",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "rearrangements in social relations",
+    "p": "requires",
+    "o": "politics",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "industrial capitalism",
+    "p": "analogous to",
+    "o": "world order",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "organic society",
+    "p": "transgresses",
+    "o": "information system",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "hierarchical dominations",
+    "p": "contrasts_with",
+    "o": "networks",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "ideologies",
+    "p": "defines",
+    "o": "frequencies",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "concepts",
+    "p": "contrasts_with",
+    "o": "primitive and civilized",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "liberals and radicals",
+    "p": "coalitions_with",
+    "o": "experimental ethnography",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "racism and colonialism",
+    "p": "translates_to",
+    "o": "languages of development and under-development",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "objects or persons",
+    "p": "can_be_thought_of_as",
+    "o": "disassembly and reassembly",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "late capitalism",
+    "p": "proclaims",
+    "o": "elementary fact",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "control strategies",
+    "p": "concentrate on",
+    "o": "boundary conditions",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "Western self",
+    "p": "gives way to",
+    "o": "decision procedures",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "human beings",
+    "p": "must be localized in",
+    "o": "system architecture",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "objects, spaces, bodies",
+    "p": "are not sacred",
+    "o": "in themselves",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "cyborg",
+    "p": "simulates politics",
+    "o": "a field of operations",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "capitalist markets",
+    "p": "effects universal translation",
+    "o": "of exchange",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "feminist analysis",
+    "p": "contrasts_with",
+    "o": "organic, hierarchical dualisms",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "dichotomies",
+    "p": "are in question ideologically by",
+    "o": "ideology",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "women",
+    "p": "are integrated/exploited into",
+    "o": "world system of production/reproduction and communication",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "socialist-feminist politics",
+    "p": "can be reconstructed through",
+    "o": "theory and practice addressed to social relations of science and technology",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "ideology",
+    "p": "undermines",
+    "o": "feminist analysis",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Communications technologies",
+    "p": "constitutes",
+    "o": "new social relations",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "Biotechnologies",
+    "p": "enforces",
+    "o": "social relations for women",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "Technologies",
+    "p": "mutually constitute",
+    "o": "myth",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "Scientific discourses",
+    "p": "formalize",
+    "o": "fluid social interactions",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "Tool",
+    "p": "constitute",
+    "o": "concept",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "Myth",
+    "p": "mutually constitute",
+    "o": "tool",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "communications sciences",
+    "p": "extends",
+    "o": "modern biologies",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "world",
+    "p": "translates into",
+    "o": "problem of coding",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "resistance to instrumental control",
+    "p": "disappears in",
+    "o": "common language",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "heterogeneity",
+    "p": "submits to",
+    "o": "disassembly, reassembly, investment, and exchange",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "coding",
+    "p": "requires",
+    "o": "common language",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "instrumental control",
+    "p": "contrasts with",
+    "o": "disassembly, reassembly, investment, and exchange",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "communications sciences",
+    "p": "illustrates",
+    "o": "cybernetic systems theories",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "language and control",
+    "p": "rests on",
+    "o": "solution to key questions",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "information",
+    "p": "allows",
+    "o": "universal translation",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "communication",
+    "p": "is threatened by",
+    "o": "interruption of communication",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "system breakdown",
+    "p": "is a function of",
+    "o": "stress",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "C3I technology",
+    "p": "condenses to",
+    "o": "command-control communication-intelligence",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "molecular genetics",
+    "p": "illustrates",
+    "o": "coding",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "biotechnology",
+    "p": "informs",
+    "o": "research",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "organisms",
+    "p": "replaced by",
+    "o": "biotic components",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "ecosystem",
+    "p": "examined in",
+    "o": "ecology",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "immunobiology",
+    "p": "exemplifies",
+    "o": "coding and recognition systems",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "biology",
+    "p": "is like",
+    "o": "cryptography",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "communications sciences",
+    "p": "extends",
+    "o": "electronics",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "modern states",
+    "p": "depends on",
+    "o": "electronics",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "multinational corporations",
+    "p": "depends on",
+    "o": "electronics",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "micro-electronics",
+    "p": "grounds",
+    "o": "simulacra",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "communications technologies",
+    "p": "indicates",
+    "o": "transformations",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "electronics",
+    "p": "enables",
+    "o": "labour-control systems",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "Microelectronics",
+    "p": "mediates",
+    "o": "translations",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "Biology",
+    "p": "has",
+    "o": "revolutionary implications",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "Communications sciences",
+    "p": "blurs",
+    "o": "difference between machine and organism",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "Mind",
+    "p": "is on intimate terms with",
+    "o": "Tool",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "Base",
+    "p": "seems less feasible to maintain boundary with",
+    "o": "Superstructure",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "Material organization",
+    "p": "implicates",
+    "o": "Production and reproduction of daily life",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "Rachel Grossman",
+    "p": "uses",
+    "o": "image",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "social relations of science and technology",
+    "p": "constitutes",
+    "o": "historical system",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "science and technology",
+    "p": "provides",
+    "o": "fresh sources of power",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "Latour",
+    "p": "suggests",
+    "o": "need for fresh analysis and political action",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "socialist-feminism",
+    "p": "becomes more relevant to",
+    "o": "effective progressive politics",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "high-tech-facilitated social relations",
+    "p": "rearranges",
+    "o": "race, sex, and class",
+    "source": "paragraph",
+    "section": "The Informatics of Domination",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "New Industrial Revolution",
+    "p": "produces",
+    "o": "new working class",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "extreme mobility of capital",
+    "p": "intertwines with",
+    "o": "emergence of new collectivities",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "familiar groupings",
+    "p": "weakens",
+    "o": "New Industrial Revolution",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "White men",
+    "p": "becomes vulnerable to",
+    "o": "permanent job loss",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "women",
+    "p": "does not disappear from",
+    "o": "job rolls",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Silicon Valley",
+    "p": "structures women's lives around",
+    "o": "electronics-dependent jobs",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Richard Gordon",
+    "p": "calls",
+    "o": "homework economy",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "homework economy",
+    "p": "includes",
+    "o": "literal homework",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "work",
+    "p": "is redefined as",
+    "o": "female and feminized",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "feminization",
+    "p": "means",
+    "o": "vulnerability",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "homework economy",
+    "p": "refers to",
+    "o": "deskilling and integration of factory, home, and market",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "women's places",
+    "p": "are crucial for",
+    "o": "analysing differences among women",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "homework economy",
+    "p": "enabled by",
+    "o": "new technologies",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "attack on unionized jobs",
+    "p": "contrasts with",
+    "o": "power of new communications technologies",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "women's jobs",
+    "p": "becoming capital-intensive due to",
+    "o": "new technologies",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "family (male) wage",
+    "p": "lost by",
+    "o": "women",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "office work and nursing",
+    "p": "character of women's jobs",
+    "o": "capital-intensive",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "unionized jobs",
+    "p": "targeted by",
+    "o": "attack",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "welfare state",
+    "p": "collapses",
+    "o": "economic arrangements",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "women",
+    "p": "sustain",
+    "o": "daily life",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "feminization of poverty",
+    "p": "generated by",
+    "o": "dismantling welfare state",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "coalitions of women",
+    "p": "grounds for",
+    "o": "many issues",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "women",
+    "p": "enforced status as mothers",
+    "o": "daily life",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "US black women",
+    "p": "face continued enforced poverty with employment",
+    "o": "black poverty",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "capitalism",
+    "p": "extends",
+    "o": "families",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "families",
+    "p": "relate_to",
+    "o": "capital",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "capital",
+    "p": "requires",
+    "o": "ideology",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "patriarchal nuclear family",
+    "p": "contrasts_with",
+    "o": "modern family",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "welfare state",
+    "p": "enables",
+    "o": "feminist ideologies",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "homework economy",
+    "p": "undermines",
+    "o": "gender",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "homework economy",
+    "p": "extends",
+    "o": "structural unemployment",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "robotics",
+    "p": "undermines",
+    "o": "male jobs",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "feminization of work",
+    "p": "constitutes",
+    "o": "vulnerable position for black women",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "sexuality",
+    "p": "grounds",
+    "o": "economic structure",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "white and black women",
+    "p": "contrasts_with",
+    "o": "similar situations",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "cross-gender and race alliances",
+    "p": "requires",
+    "o": "basic life support",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "Green Revolution",
+    "p": "extends",
+    "o": "high-tech industrial production",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Women",
+    "p": "are excluded from",
+    "o": "benefiting from commodification of food and energy crops",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Women's responsibilities",
+    "p": "do not diminish",
+    "o": "food provision",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Green Revolution technologies",
+    "p": "alter",
+    "o": "gender divisions of labour",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Green Revolution technologies",
+    "p": "alter",
+    "o": "differential gender migration patterns",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Women",
+    "p": "produce",
+    "o": "50% of world's subsistence food",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "new technologies",
+    "p": "involved in",
+    "o": "forms of privatization",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "Ros Petchesky",
+    "p": "analysed",
+    "o": "forms of privatization",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "militarization",
+    "p": "contrasts with",
+    "o": "public life",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "video games",
+    "p": "produces",
+    "o": "private life",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "high-tech military establishment",
+    "p": "enabled by",
+    "o": "new communications technologies",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "tourism",
+    "p": "enabled by",
+    "o": "new communications technologies",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "Sociobiological origin stories",
+    "p": "contrasts_with",
+    "o": "High-tech view",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "Women's bodies",
+    "p": "are permeable to",
+    "o": "Visualization and intervention",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "Speculum",
+    "p": "is an icon of",
+    "o": "Women's claiming their bodies",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "Self-help",
+    "p": "is not enough for",
+    "o": "Body politics in cyborg reproduction",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "High-tech myth systems",
+    "p": "structure our imaginations of",
+    "o": "Personal and social possibility",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "social relations",
+    "p": "extends",
+    "o": "new technologies",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "expectations",
+    "p": "reformulates",
+    "o": "culture",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "women",
+    "p": "confined to",
+    "o": "homework economy",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "high-tech apparatuses",
+    "p": "controls",
+    "o": "people of colour",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "socialist-feminist politics",
+    "p": "addresses",
+    "o": "women in science",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "science and technology",
+    "p": "constructs",
+    "o": "scientific-technical discourses",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "feminist science",
+    "p": "extends",
+    "o": "progressive politics",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "new groups doing science",
+    "p": "constitutes",
+    "o": "alliance with progressive movements",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "women in Silicon Valley",
+    "p": "coalitions_with",
+    "o": "progressive social and political movements",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "military science facility conversion action groups",
+    "p": "enables",
+    "o": "feminist science/technology politics",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "scientific and technical workers",
+    "p": "opposes",
+    "o": "military science",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "personal preferences and cultural tendencies",
+    "p": "grounds",
+    "o": "progressive politics",
+    "source": "paragraph",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "women",
+    "p": "contrasts_with",
+    "o": "public",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "women",
+    "p": "contrasts_with",
+    "o": "private",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "ideology",
+    "p": "undermines",
+    "o": "dichotomies",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "networking",
+    "p": "constitutes",
+    "o": "feminist_practice",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "networking",
+    "p": "constitutes",
+    "o": "corporate_strategy",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "weaving",
+    "p": "is_for",
+    "o": "oppositional_cyborgs",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "informatics",
+    "p": "grounds",
+    "o": "domination",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "women's place",
+    "p": "contrasts_with",
+    "o": "idealized social locations",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "social relations",
+    "p": "mediated_by",
+    "o": "new technologies",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "women's cyborg identities",
+    "p": "constitutes",
+    "o": "geometries of difference and contradiction",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "power and social life",
+    "p": "enables",
+    "o": "new couplings, new coalitions",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "identification",
+    "p": "opposes",
+    "o": "dispersion",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "Women-headed households",
+    "p": "contrasts_with",
+    "o": "serial monogamy",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "Home sweat-shops",
+    "p": "replaces",
+    "o": "paid homework",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "Electronic cottage",
+    "p": "enables",
+    "o": "telecommuting",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "Urban homelessness",
+    "p": "extends",
+    "o": "migration",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "Reinforced (simulated) nuclear family",
+    "p": "grounds",
+    "o": "domestic violence",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "Home-based businesses",
+    "p": "constitutes",
+    "o": "telecommuting",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "Market",
+    "p": "extends",
+    "o": "new production",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "Women's consumption work",
+    "p": "requires",
+    "o": "new technologies",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "Industrialized nations",
+    "p": "compete with",
+    "o": "industrializing nations",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "Affluent groups",
+    "p": "targeted by",
+    "o": "advertising",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "Informal markets",
+    "p": "parallel to",
+    "o": "high-tech market structures",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "Marketing/financing systems",
+    "p": "inter-penetrates with",
+    "o": "sexual markets",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "Paid Work",
+    "p": "continues",
+    "o": "sexual division",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Paid Work",
+    "p": "continues",
+    "o": "racial division",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Women",
+    "p": "gains",
+    "o": "privilege",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "New Technologies",
+    "p": "affects",
+    "o": "women's work",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Homework Economy",
+    "p": "requires",
+    "o": "flex time",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Labour Market",
+    "p": "has",
+    "o": "two-tiered wage",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Welfare state",
+    "p": "erodes",
+    "o": "State",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "Decentralization",
+    "p": "increases",
+    "o": "Surveillance and control",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "Citizenship by telematics",
+    "p": "constitutes",
+    "o": "Imperialism",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "High-tech militarization",
+    "p": "opposed by",
+    "o": "Social groups",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "Civil service jobs",
+    "p": "reduced by",
+    "o": "Capital intensification of office work",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "Privatization",
+    "p": "integrates with",
+    "o": "Militarization",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "School",
+    "p": "argues_for",
+    "o": "ignorance",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "School",
+    "p": "contrasts_with",
+    "o": "democratic structures",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Managerial classes",
+    "p": "involved_in",
+    "o": "reform",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Science-based multinationals",
+    "p": "directs",
+    "o": "education",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "White women",
+    "p": "experiences",
+    "o": "illiteracy",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "People of colour",
+    "p": "experiences",
+    "o": "illiteracy",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Clinic-hospital",
+    "p": "renegotiates",
+    "o": "public metaphors",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "reproduction",
+    "p": "contrasts_with",
+    "o": "immune system functions",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "women's control",
+    "p": "requires",
+    "o": "state responsibility for health",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "health work",
+    "p": "constitutes",
+    "o": "feminization of health work",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "popular health movements",
+    "p": "enables",
+    "o": "American politics",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "high technology products",
+    "p": "undermines",
+    "o": "meanings and means of health",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "Church",
+    "p": "contrasts_with",
+    "o": "militarized state",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "Church",
+    "p": "extends",
+    "o": "spirituality",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "Electronic fundamentalist 'super-saver' preachers",
+    "p": "coalitions_with",
+    "o": "automated fetish gods",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "Churches",
+    "p": "requires",
+    "o": "resisting the militarized state",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "Women's meanings and authority in religion",
+    "p": "constitutes",
+    "o": "central struggle",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "Spirituality",
+    "p": "grounds",
+    "o": "political struggle",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "informatics of domination",
+    "p": "characterizes",
+    "o": "insecurity",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "informatics of domination",
+    "p": "characterizes",
+    "o": "cultural impoverishment",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "socialist-feminist politics",
+    "p": "addresses",
+    "o": "science and technology",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "efforts to develop collective struggle",
+    "p": "provides understanding of",
+    "o": "labour organization",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "technical restructuring of labour processes",
+    "p": "contrasts with",
+    "o": "collective struggle for women in paid work",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "informatics of domination",
+    "p": "grounds",
+    "o": "political work",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "Marxisms",
+    "p": "defines",
+    "o": "domination",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "false consciousness",
+    "p": "contrasts_with",
+    "o": "clear-sighted critique",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "high-tech culture",
+    "p": "mediates",
+    "o": "disrupted unities",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "late capitalism",
+    "p": "undermines",
+    "o": "oppression",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "emerging pleasures",
+    "p": "enable",
+    "o": "changing the rules of the game",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "subtle understanding",
+    "p": "requires",
+    "o": "ambivalence",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "hope",
+    "p": "grounds_for",
+    "o": "unity",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "socialist-feminist analysis",
+    "p": "constitutes",
+    "o": "units",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "science and technology",
+    "p": "relates_to",
+    "o": "hardship",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "people's experience",
+    "p": "lacks",
+    "o": "subtle connections",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "Marxist efforts",
+    "p": "clarifies",
+    "o": "experience",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "psychoanalytic efforts",
+    "p": "clarifies",
+    "o": "experience",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "Sputnik",
+    "p": "enables",
+    "o": "Irish Catholic girl",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "post-Second World War arms race",
+    "p": "constitutes",
+    "o": "body and mind",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "women's movements",
+    "p": "constitutes",
+    "o": "body and mind",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "politics designed to produce loyal American technocrats",
+    "p": "produces",
+    "o": "dissidents",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "contradictory effects of politics",
+    "p": "grounds for hope",
+    "o": "focusing on the past",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "present defeats",
+    "p": "undermines",
+    "o": "hope",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "feminist points",
+    "p": "has consequences for",
+    "o": "our expectations",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "totality",
+    "p": "is required by",
+    "o": "feminist dream of language",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "dialectics",
+    "p": "longs to resolve",
+    "o": "contradiction",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "Man",
+    "p": "embodies",
+    "o": "Western logos",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "pleasure",
+    "p": "is found in",
+    "o": "fusions with animals and machines",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "feminist science",
+    "p": "might be a possibility from the point of view of",
+    "o": "pleasure",
+    "source": "paragraph",
+    "section": "Women in The Integrated Circuit",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "Mary Douglas",
+    "p": "grounds",
+    "o": "concepts of bodily boundaries and social order",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Luce Irigaray",
+    "p": "coalitions_with",
+    "o": "Monique Wittig",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Susan Griffnn",
+    "p": "opposes",
+    "o": "the technological",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Adrienne Rich",
+    "p": "insists on",
+    "o": "the organic",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Octavia Butler",
+    "p": "enables",
+    "o": "exploring conceptions of bodily boundaries and social order",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "Monique Wittig",
+    "p": "transgresses",
+    "o": "traditional notions of embodiment",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "women of colour",
+    "p": "constitutes",
+    "o": "cyborg identity",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "Audre Lorde's biomythography",
+    "p": "grounds",
+    "o": "complex political-historical layerings",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "Sister Outsider",
+    "p": "represents",
+    "o": "offshore woman",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "US workers",
+    "p": "opposes",
+    "o": "Sister Outsider",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "women of colour",
+    "p": "are preferred labour force for",
+    "o": "science-based industries",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "literacy in English",
+    "p": "distinguishes",
+    "o": "cheap female labour",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "orientalist stereotypes",
+    "p": "contrasts_with",
+    "o": "literacy",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "literacy",
+    "p": "constitutes",
+    "o": "special mark of women of colour",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "writing",
+    "p": "grounds",
+    "o": "Western myth of distinction between oral and written cultures",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "phallogocentrism of the West",
+    "p": "undermines",
+    "o": "distinction between oral and written cultures",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "cyborg writing",
+    "p": "requires",
+    "o": "power to signify without phallic or innocent power",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "cyborg writing",
+    "p": "extends",
+    "o": "survival on basis of seizing tools to mark the world",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "cyborg authors",
+    "p": "subverts",
+    "o": "origin myths",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "feminist cyborgs",
+    "p": "opposes",
+    "o": "phallogocentric origin stories",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "cyborg authors",
+    "p": "retells",
+    "o": "origin stories",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "feminist cyborg stories",
+    "p": "subverts",
+    "o": "command and control",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "cyborg authors",
+    "p": "uses",
+    "o": "biotechnology",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "cyborg authors",
+    "p": "uses",
+    "o": "microelectronics",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "Moraga",
+    "p": "argues_for",
+    "o": "survival",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Malinche",
+    "p": "contrasts_with",
+    "o": "Cortes",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Moraga",
+    "p": "extends",
+    "o": "Chicana constructions of identity",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Moraga's language",
+    "p": "constitutes",
+    "o": "erode, competent, potent identities",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Malinche",
+    "p": "grounds",
+    "o": "mestizo 'bastard' race",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "Moraga",
+    "p": "ironizes",
+    "o": "original wholeness",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "cyborg politics",
+    "p": "insists on",
+    "o": "noise",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "cyborg politics",
+    "p": "advocates",
+    "o": "pollution",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "phallogocentrism",
+    "p": "translates all meaning perfectly",
+    "o": "one code",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "cyborg politics",
+    "p": "subverts",
+    "o": "structure of desire",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "choice",
+    "p": "grounds",
+    "o": "liberal politics and epistemology",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "Western identity",
+    "p": "reproduces through",
+    "o": "mirror and eye",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "Feminisms",
+    "p": "transgresses",
+    "o": "Western epistemological imperatives",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Marxisms",
+    "p": "transgresses",
+    "o": "Western epistemological imperatives",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Cyborgs",
+    "p": "grounds",
+    "o": "powerful possibilities",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Feminisms",
+    "p": "runs aground on",
+    "o": "hierarchy of oppressions",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Women of colour",
+    "p": "transforms",
+    "o": "Malinche",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "Cyborgs",
+    "p": "enables",
+    "o": "recognition of oneself",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "literary deconstruction",
+    "p": "extends",
+    "o": "liminal transformation",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "story",
+    "p": "imagines",
+    "o": "drama of life",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "women",
+    "p": "have less selfhood",
+    "o": "than men",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "cyborgs",
+    "p": "refuse victimization",
+    "o": "ideological resources",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "Western commentators",
+    "p": "remark on the passing of primitive groups",
+    "o": "by Western technology",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "village women workers",
+    "p": "actively rewrite texts",
+    "o": "of their bodies and societies",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "Western traditions",
+    "p": "grounds",
+    "o": "domination",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "self/other dualism",
+    "p": "contrasts_with",
+    "o": "mind/body dualism",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "self",
+    "p": "requires",
+    "o": "service of the other",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "One",
+    "p": "constitutes",
+    "o": "autonomy",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "other",
+    "p": "is",
+    "o": "multiple",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "One",
+    "p": "transgresses",
+    "o": "illusion",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "High-tech culture",
+    "p": "challenges",
+    "o": "dualisms",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "human",
+    "p": "relates_to",
+    "o": "machine",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "mind",
+    "p": "contrasts_with",
+    "o": "body",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "cyborgs",
+    "p": "constitutes",
+    "o": "hybrids",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "biological organisms",
+    "p": "extends_to",
+    "o": "biotic systems",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "machine",
+    "p": "grounds",
+    "o": "organism",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "cyborg",
+    "p": "extends",
+    "o": "machine",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "organism",
+    "p": "contrasts_with",
+    "o": "machine",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "body",
+    "p": "constitutes",
+    "o": "resource",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "mind",
+    "p": "requires",
+    "o": "body",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "cyborg",
+    "p": "grounds",
+    "o": "feminism",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "machine",
+    "p": "enables",
+    "o": "prosthetic",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 10
+  },
+  {
+    "s": "cyborgs",
+    "p": "contrasts_with",
+    "o": "statuses",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "Katie King",
+    "p": "clarifies",
+    "o": "pleasure",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "students",
+    "p": "do_not_know",
+    "o": "The Adventures of Alyx",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "The Female Man",
+    "p": "does_not_resolve",
+    "o": "dilemmas",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "Samuel R. Delany",
+    "p": "mocks",
+    "o": "stories of origin",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "James Tiptree, Jr",
+    "p": "tells tales of reproduction",
+    "o": "non-mammalian technologies",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 11
+  },
+  {
+    "s": "Vonda McIntyre",
+    "p": "argues_for",
+    "o": "feminist writing",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "Superluminal",
+    "p": "embodies",
+    "o": "cyborg world",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "Orca",
+    "p": "contrasts_with",
+    "o": "human",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "Lacnea",
+    "p": "requires",
+    "o": "bionic implants",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "Radu Dracul",
+    "p": "extends",
+    "o": "spatial perception",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "Superluminal",
+    "p": "grounds",
+    "o": "feminist theory",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 12
+  },
+  {
+    "s": "Monsters",
+    "p": "defines",
+    "o": "limits",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "Centaurs",
+    "p": "establishes",
+    "o": "limits",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "Amazons",
+    "p": "contrasts_with",
+    "o": "Greek male human",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "Unseparated twins",
+    "p": "grounds",
+    "o": "discourse",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "Cyborg monsters",
+    "p": "defines",
+    "o": "political possibilities",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "Monkeys and apes",
+    "p": "marks",
+    "o": "boundaries",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 13
+  },
+  {
+    "s": "cyborg",
+    "p": "constitutes",
+    "o": "embodiment",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 14
+  },
+  {
+    "s": "machine",
+    "p": "is",
+    "o": "us",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 14
+  },
+  {
+    "s": "female embodiment",
+    "p": "seemed to be",
+    "o": "given",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 14
+  },
+  {
+    "s": "cyborg",
+    "p": "contrasts_with",
+    "o": "enemy",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 14
+  },
+  {
+    "s": "gender",
+    "p": "might not be",
+    "o": "global identity",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 14
+  },
+  {
+    "s": "sex",
+    "p": "is a",
+    "o": "partial aspect",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 14
+  },
+  {
+    "s": "Feminists",
+    "p": "argues_for",
+    "o": "women's privileged epistemological position",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 15
+  },
+  {
+    "s": "Cyborg image",
+    "p": "exploits",
+    "o": "daily activity and experience",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 15
+  },
+  {
+    "s": "Women",
+    "p": "sustain",
+    "o": "daily life",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 15
+  },
+  {
+    "s": "Men",
+    "p": "have access to",
+    "o": "daily competence",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 15
+  },
+  {
+    "s": "Cyborg theory",
+    "p": "requires",
+    "o": "consideration of race, gender, and capital",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 15
+  },
+  {
+    "s": "Myth system",
+    "p": "becomes political language",
+    "o": "grounding a way of looking at science and technology",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 15
+  },
+  {
+    "s": "cyborgs",
+    "p": "requires",
+    "o": "regeneration",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 16
+  },
+  {
+    "s": "organisms",
+    "p": "depend",
+    "o": "metaphors of rebirth",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 16
+  },
+  {
+    "s": "cyborgs",
+    "p": "contrasts_with",
+    "o": "reproductive matrix",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 16
+  },
+  {
+    "s": "regrown limb",
+    "p": "can be",
+    "o": "monstrous",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 16
+  },
+  {
+    "s": "we",
+    "p": "require",
+    "o": "regeneration",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 16
+  },
+  {
+    "s": "utopian dream",
+    "p": "includes",
+    "o": "hope for a monstrous world",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 16
+  },
+  {
+    "s": "Cyborg imagery",
+    "p": "helps express",
+    "o": "arguments",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 17
+  },
+  {
+    "s": "Universal theory",
+    "p": "is a mistake",
+    "o": "reality",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 17
+  },
+  {
+    "s": "Science and technology",
+    "p": "are means of satisfaction",
+    "o": "human",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 17
+  },
+  {
+    "s": "Cyborg imagery",
+    "p": "suggests a way out",
+    "o": "dualisms",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 17
+  },
+  {
+    "s": "Feminist speaking",
+    "p": "strikes fear into",
+    "o": "circuits",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 17
+  },
+  {
+    "s": "Cyborg",
+    "p": "is better than",
+    "o": "goddess",
+    "source": "paragraph",
+    "section": "Cyborgs: A Myth of Political Identity",
+    "paragraph_idx": 17
+  },
+  {
+    "s": "Haraway",
+    "p": "argues_for",
+    "o": "cyborg politics",
+    "source": "cross_cutting",
+    "section": "Introduction"
+  },
+  {
+    "s": "cyborg",
+    "p": "constitutes",
+    "o": "hybrid of machine and organism",
+    "source": "cross_cutting",
+    "section": "Introduction"
+  },
+  {
+    "s": "socialist-feminism",
+    "p": "requires",
+    "o": "irony as a rhetorical strategy",
+    "source": "cross_cutting",
+    "section": "Introduction"
+  },
+  {
+    "s": "women's experience",
+    "p": "constructed by",
+    "o": "international women\u2019s movements",
+    "source": "cross_cutting",
+    "section": "Introduction"
+  },
+  {
+    "s": "cyborg",
+    "p": "transgresses",
+    "o": "boundaries between science fiction and social reality",
+    "source": "cross_cutting",
+    "section": "Introduction"
+  },
+  {
+    "s": "biopolitics",
+    "p": "contrasts_with",
+    "o": "cyborg politics",
+    "source": "cross_cutting",
+    "section": "Introduction"
+  },
+  {
+    "s": "Haraway",
+    "p": "grounds",
+    "o": "socialist-feminist culture",
+    "source": "cross_cutting",
+    "section": "Introduction"
+  },
+  {
+    "s": "cyborg",
+    "p": "enables",
+    "o": "historical transformation",
+    "source": "cross_cutting",
+    "section": "Introduction"
+  },
+  {
+    "s": "Haraway",
+    "p": "coalitions_with",
+    "o": "Sandoval",
+    "source": "cross_cutting",
+    "section": "Fractured Identities"
+  },
+  {
+    "s": "essential unity",
+    "p": "transgresses",
+    "o": "oppositional consciousness",
+    "source": "cross_cutting",
+    "section": "Fractured Identities"
+  },
+  {
+    "s": "identity",
+    "p": "constitutes",
+    "o": "contradictory, partial, and strategic",
+    "source": "cross_cutting",
+    "section": "Fractured Identities"
+  },
+  {
+    "s": "gender, race, class",
+    "p": "grounds",
+    "o": "beliefs in essential unity",
+    "source": "cross_cutting",
+    "section": "Fractured Identities"
+  },
+  {
+    "s": "oppositional consciousness",
+    "p": "enables",
+    "o": "coalition, affinity, political kinship",
+    "source": "cross_cutting",
+    "section": "Fractured Identities"
+  },
+  {
+    "s": "Sandoval's argument",
+    "p": "extends",
+    "o": "anti-colonialist discourse",
+    "source": "cross_cutting",
+    "section": "Fractured Identities"
+  },
+  {
+    "s": "naturalization of the matrix",
+    "p": "rejects",
+    "o": "oppositional consciousness",
+    "source": "cross_cutting",
+    "section": "Fractured Identities"
+  },
+  {
+    "s": "essential unity",
+    "p": "undermines",
+    "o": "painful fragmentation among feminists",
+    "source": "cross_cutting",
+    "section": "Fractured Identities"
+  },
+  {
+    "s": "Haraway",
+    "p": "argues_for",
+    "o": "politics_rooted_in_changes",
+    "source": "cross_cutting",
+    "section": "The Informatics of Domination"
+  },
+  {
+    "s": "informatics_of_domination",
+    "p": "extends",
+    "o": "class_race_gender_transitions",
+    "source": "cross_cutting",
+    "section": "The Informatics of Domination"
+  },
+  {
+    "s": "organic_industrial_society",
+    "p": "contrasts_with",
+    "o": "polymorphous_information_system",
+    "source": "cross_cutting",
+    "section": "The Informatics of Domination"
+  },
+  {
+    "s": "representation",
+    "p": "replaces",
+    "o": "simulation",
+    "source": "cross_cutting",
+    "section": "The Informatics of Domination"
+  },
+  {
+    "s": "biological_determinism",
+    "p": "undermines",
+    "o": "evolutionary_inertia_constraints",
+    "source": "cross_cutting",
+    "section": "The Informatics of Domination"
+  },
+  {
+    "s": "naturalistic_coding",
+    "p": "subverts",
+    "o": "informatics_of_domination",
+    "source": "cross_cutting",
+    "section": "The Informatics of Domination"
+  },
+  {
+    "s": "essential_properties",
+    "p": "transgresses",
+    "o": "design_boundary_constraints_rates",
+    "source": "cross_cutting",
+    "section": "The Informatics of Domination"
+  },
+  {
+    "s": "ideologies_of_sexual_reproduction",
+    "p": "ironizes",
+    "o": "notions_of_sex_and_sex_role",
+    "source": "cross_cutting",
+    "section": "The Informatics of Domination"
+  },
+  {
+    "s": "Homework economy",
+    "p": "constitutes",
+    "o": "New world-wide working class",
+    "source": "cross_cutting",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019"
+  },
+  {
+    "s": "Women's jobs",
+    "p": "extends",
+    "o": "Deskilling strategy",
+    "source": "cross_cutting",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019"
+  },
+  {
+    "s": "Feminization of poverty",
+    "p": "grounds",
+    "o": "Collapsing welfare state",
+    "source": "cross_cutting",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019"
+  },
+  {
+    "s": "Homework economy",
+    "p": "requires",
+    "o": "New technologies",
+    "source": "cross_cutting",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019"
+  },
+  {
+    "s": "Women's jobs",
+    "p": "transgresses",
+    "o": "Traditional notions of work and family",
+    "source": "cross_cutting",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019"
+  },
+  {
+    "s": "Informatics of domination",
+    "p": "enables",
+    "o": "Homework economy",
+    "source": "cross_cutting",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019"
+  },
+  {
+    "s": "Feminization of poverty",
+    "p": "ironizes",
+    "o": "Expectation of male income support",
+    "source": "cross_cutting",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019"
+  },
+  {
+    "s": "Coalitions of women-headed households",
+    "p": "coalitions_with",
+    "o": "Race, class, and sexuality",
+    "source": "cross_cutting",
+    "section": "The \u2018Homework Economy\u2019 Outside \u2018The Home\u2019"
+  },
+  {
+    "s": "Informatics",
+    "p": "extends",
+    "o": "Dichotomies",
+    "source": "cross_cutting",
+    "section": "Women in The Integrated Circuit"
+  },
+  {
+    "s": "Network Ideology",
+    "p": "grounds",
+    "o": "Feminist Practice",
+    "source": "cross_cutting",
+    "section": "Women in The Integrated Circuit"
+  },
+  {
+    "s": "Networking",
+    "p": "contrasts_with",
+    "o": "Multinational Corporate Strategy",
+    "source": "cross_cutting",
+    "section": "Women in The Integrated Circuit"
+  },
+  {
+    "s": "Informatics of Domination",
+    "p": "transgresses",
+    "o": "Traditional Dichotomies",
+    "source": "cross_cutting",
+    "section": "Women in The Integrated Circuit"
+  },
+  {
+    "s": "Women's Place",
+    "p": "constitutes",
+    "o": "Geometries of Difference and Contradiction",
+    "source": "cross_cutting",
+    "section": "Women in The Integrated Circuit"
+  },
+  {
+    "s": "Social Relations",
+    "p": "mediates",
+    "o": "Power and Social Life",
+    "source": "cross_cutting",
+    "section": "Women in The Integrated Circuit"
+  },
+  {
+    "s": "Identification",
+    "p": "undermines",
+    "o": "Unitary Self",
+    "source": "cross_cutting",
+    "section": "Women in The Integrated Circuit"
+  },
+  {
+    "s": "Diaspora",
+    "p": "requires",
+    "o": "Survival",
+    "source": "cross_cutting",
+    "section": "Women in The Integrated Circuit"
+  },
+  {
+    "s": "Haraway",
+    "p": "coalitions_with",
+    "o": "feminist writers",
+    "source": "cross_cutting",
+    "section": "Cyborgs: A Myth of Political Identity"
+  },
+  {
+    "s": "Mary Douglas",
+    "p": "grounds",
+    "o": "body imagery and world view",
+    "source": "cross_cutting",
+    "section": "Cyborgs: A Myth of Political Identity"
+  },
+  {
+    "s": "Luce Irigaray",
+    "p": "knows how to write the body",
+    "o": "eroticism, cosmology, and politics",
+    "source": "cross_cutting",
+    "section": "Cyborgs: A Myth of Political Identity"
+  },
+  {
+    "s": "Susan Griffin",
+    "p": "opposes",
+    "o": "technology",
+    "source": "cross_cutting",
+    "section": "Cyborgs: A Myth of Political Identity"
+  },
+  {
+    "s": "Haraway",
+    "p": "ironizes",
+    "o": "American radical feminism's organicism",
+    "source": "cross_cutting",
+    "section": "Cyborgs: A Myth of Political Identity"
+  },
+  {
+    "s": "Sandoval",
+    "p": "defines",
+    "o": "oppositional ideologies fitting the late twentieth century",
+    "source": "cross_cutting",
+    "section": "Cyborgs: A Myth of Political Identity"
+  },
+  {
+    "s": "women of colour",
+    "p": "constitutes",
+    "o": "cyborg identity",
+    "source": "cross_cutting",
+    "section": "Cyborgs: A Myth of Political Identity"
+  },
+  {
+    "s": "Haraway",
+    "p": "transforms",
+    "o": "traditional notions of identity and boundaries",
+    "source": "cross_cutting",
+    "section": "Cyborgs: A Myth of Political Identity"
+  },
+  {
+    "s": "Cyborg",
+    "p": "embodies",
+    "o": "Boundary Breakdown",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Human/Animal",
+    "p": "broken down by",
+    "o": "Cyborg",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Organism/Machine",
+    "p": "blurred by",
+    "o": "Cyborg",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Physical/Non-physical",
+    "p": "transcended by",
+    "o": "Cyborg",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Feminist Politics",
+    "p": "aligned with",
+    "o": "Cyborg",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Coalition/Affinity",
+    "p": "enabled by",
+    "o": "Cyborg",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Irony",
+    "p": "functions as",
+    "o": "Political Stance",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Informatics of Domination",
+    "p": "transforms",
+    "o": "Labour/Power/Identity",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Identity Politics",
+    "p": "distinguished from",
+    "o": "Coalition/Affinity Politics",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Socialist Feminism",
+    "p": "relates to",
+    "o": "Cyborg Politics",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Homework Economy",
+    "p": "affects",
+    "o": "Women/New Technologies",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Cyborg",
+    "p": "represents",
+    "o": "Chimeras/Hybrids of Machine/Organism",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Biopolitics",
+    "p": "prefigures",
+    "o": "Cyborg Politics",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Michel Foucault",
+    "p": "influenced by",
+    "o": "Haraway's Cyborg Theory",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Western Science/Politics",
+    "p": "challenged by",
+    "o": "Cyborg Manifesto",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Boundary Breakdown",
+    "p": "has consequences for",
+    "o": "Production/Reproduction/Imagination",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Pleasure",
+    "p": "associated with",
+    "o": "Confusion of Boundaries",
+    "source": "essay_threads"
+  },
+  {
+    "s": "Responsibility",
+    "p": "required in",
+    "o": "Boundary Construction",
+    "source": "essay_threads"
+  }
+]
