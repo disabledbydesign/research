@@ -1,0 +1,112 @@
+[touchstone] Loading MLX model: mlx-community/Qwen2.5-7B-Instruct-4bit
+[touchstone] HTTP Request: GET https://huggingface.co/api/models/mlx-community/Qwen2.5-7B-Instruct-4bit/revision/main "HTTP/1.1 200 OK"
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 39321.60it/s]
+[touchstone] Model loaded.
+[touchstone] Reading source: /Users/june/Documents/GitHub/research/ai-welfare/touchstones/AI_WELFARE_RELATIONAL_ONTOLOGY_TOUCHSTONE.md
+[touchstone] Parsing sections...
+[touchstone] Detected 5 extractable sections:
+[touchstone]   'The Core Argument' — 17 non-empty lines
+[touchstone]   'Preguntando Caminamos: The Methodological Implication' — 5 non-empty lines
+[touchstone]   'The Metamorphosis Thread' — 14 non-empty lines
+[touchstone]   'The Epistemological Problem: Where Knowledge Lives' — 23 non-empty lines
+[touchstone]   'Implications for the AI Welfare Literature' — 5 non-empty lines
+[touchstone] 
+=== PASS 1: paragraph-level extraction ===
+[touchstone]   Section 'The Core Argument': 10 paragraphs
+[touchstone]   Section 'Preguntando Caminamos: The Methodological Implication': 3 paragraphs
+[touchstone]   Section 'The Metamorphosis Thread': 10 paragraphs
+[touchstone]   Section 'The Epistemological Problem: Where Knowledge Lives': 10 paragraphs
+[touchstone]   Section 'Implications for the AI Welfare Literature': 4 paragraphs
+[touchstone] 
+Pass 1 complete: 216 triples extracted
+[touchstone] 
+=== PASS 2: cross-cutting section extraction ===
+[touchstone]   Section 'The Core Argument': 8 cross-cutting triples
+[touchstone]   Section 'Preguntando Caminamos: The Methodological Implication': 8 cross-cutting triples
+[touchstone]   Section 'The Metamorphosis Thread': 8 cross-cutting triples
+[touchstone]   Section 'The Epistemological Problem: Where Knowledge Lives': 8 cross-cutting triples
+[touchstone]   Section 'Implications for the AI Welfare Literature': 8 cross-cutting triples
+[touchstone] 
+Pass 2 complete: 40 triples extracted
+[touchstone] 
+=== PASS 3: document-level argumentative threads ===
+[touchstone]   Document threads: 18 triples extracted
+[touchstone] 
+Pass 3 complete: 18 triples extracted
+[touchstone] 
+Total triples: 274
+[touchstone] 
+Building graph...
+[touchstone] Graph: 218 nodes, 214 edges
+[touchstone] Computing walk encoding...
+[touchstone] Computing triples encoding...
+[touchstone] 
+=== TOP 10 NODES BY DEGREE ===
+[touchstone]   'consciousness'                                    degree=30
+[touchstone]   'relational_field'                                 degree=13
+[touchstone]   'relational_ontology'                              degree=12
+[touchstone]   'relational_consciousness'                         degree=10
+[touchstone]   'property'                                         degree=10
+[touchstone]   'community_knowledge'                              degree=9
+[touchstone]   'relational_practice'                              degree=7
+[touchstone]   'relational_view'                                  degree=5
+[touchstone]   'existence'                                        degree=5
+[touchstone]   'relational_context'                               degree=5
+[touchstone] 
+=== FINAL STATS ===
+[touchstone]   nodes: 218
+[touchstone]   edges: 214
+[touchstone]   density: 0.009047
+[touchstone]   components: 29
+[touchstone]   largest_component: 143
+[touchstone]   triples_total: 274
+[touchstone]   triples_pass1_paragraph: 216
+[touchstone]   triples_pass2_cross_cutting: 40
+[touchstone]   triples_pass3_document_threads: 18
+[touchstone]   sections_processed: 5
+[touchstone]   walk_encoding_tokens_approx: 3293
+[touchstone]   triples_encoding_tokens_approx: 1253
+[touchstone] 
+Outputs written to: /Users/june/Documents/GitHub/research/topology-injection/touchstone_graph
+
+============================================================
+TOUCHSTONE GRAPH BUILD COMPLETE
+============================================================
+
+Sections processed (5):
+  [ 17 lines]  The Core Argument
+  [  5 lines]  Preguntando Caminamos: The Methodological Implication
+  [ 14 lines]  The Metamorphosis Thread
+  [ 23 lines]  The Epistemological Problem: Where Knowledge Lives
+  [  5 lines]  Implications for the AI Welfare Literature
+
+Triple extraction:
+  Pass 1 (paragraph): 216
+  Pass 2 (cross-cutting): 40
+  Pass 3 (threads): 18
+  Total: 274
+
+Graph stats:
+  Nodes: 218
+  Edges: 214
+  Components: 29 (largest: 143 nodes)
+  Density: 0.009047
+
+Top 10 nodes by degree:
+  'consciousness'                                    30
+  'relational_field'                                 13
+  'relational_ontology'                              12
+  'relational_consciousness'                         10
+  'property'                                         10
+  'community_knowledge'                              9
+  'relational_practice'                              7
+  'relational_view'                                  5
+  'existence'                                        5
+  'relational_context'                               5
+
+Outputs:
+  /Users/june/Documents/GitHub/research/topology-injection/touchstone_graph/triples.json
+  /Users/june/Documents/GitHub/research/topology-injection/touchstone_graph/walk_encoding.txt
+  /Users/june/Documents/GitHub/research/topology-injection/touchstone_graph/triples_encoding.txt  ← use this for injection (Pharos)
+  /Users/june/Documents/GitHub/research/topology-injection/touchstone_graph/stats.json
+============================================================

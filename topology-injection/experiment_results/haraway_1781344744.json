@@ -1,0 +1,241 @@
+{
+  "experiment": "haraway_graph_injection",
+  "timestamp": 1781344744.049375,
+  "model": "mlx-community/gemma-3-12b-it-4bit",
+  "probe_set": "signal",
+  "graph": {
+    "source": "haraway_graph_v2",
+    "nodes": 753,
+    "edges": 498,
+    "components": 258
+  },
+  "results": [
+    {
+      "condition": "A_baseline",
+      "query_type": "relationship",
+      "query": "In this knowledge system, is cyborg connected to labour?",
+      "response": "Okay, let's break down how \"cyborg\" and \"labor\" are connected within this knowledge system. Here's a comprehensive explanation, drawing on the core concepts and how they intertwine:\n\n**1. The Core Concepts & How They Relate**\n\n*   **Capitalism:** The foundational system. It's characterized by private ownership of the means of production, profit-seeking, and a constant drive for expansion and efficiency.\n*   **Technology:**  Not just tools, but a *force* within capitalism. Technology is developed and deployed *primarily* to increase capital accumulation. It's not inherently neutral; it's shaped by capitalist imperatives.\n*   **Labor:**  The core of the system. Labor is the human activity that produces value.  Crucially, within this framework, labor is *exploited* under capitalism. Workers are paid less than the value they create, and the difference (surplus value) is appropriated by capitalists.\n*   **Automation:** A key technological development within capitalism. Automation is seen as a way to *replace* human labor with machines, increasing efficiency and reducing labor costs.\n*   **Alienation:** A consequence of capitalist labor. Workers are alienated from:\n    *   The product of their labor (they don't own it).\n    *   The labor process itself (it's often repetitive, controlled, and dehumanizing).\n    *   Their fellow workers (competition is encouraged).\n    *   Their own human potential (labor doesn't allow for self-expression or fulfillment).\n*   **Control:** A central theme. Capitalism seeks to exert increasing control over labor, production, and even consumption. Technology is a *major* tool for achieving this control.\n\n**2. Cyborgs & Their Connection to Labor**\n\nHere's where the cyborg concept comes in, and how it's deeply intertwined with labor within this system:\n\n*   **Cyborg as a Manifestation of Capitalist Logic:** The cyborg isn't just a sci-fi trope. Within this framework, it's a *logical* (though extreme) outcome of capitalism's drive to control and optimize labor.  It represents the ultimate fusion of human and machine, where the human is increasingly integrated into the production process, becoming a more efficient, controllable, and potentially disposable component.\n*   **Enhanced/Exploited Labor:** Cyborg enhancements are",
+      "score": 0.2,
+      "ground_truth": "Indirectly \u2014 cyborg \u2192 feminism \u2192 labour (two-hop path)"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "bridge",
+      "query": "What is the most central concept in this knowledge system \u2014 the one that bridges the most other ideas?",
+      "response": "Please provide me with the knowledge system you're referring to! I need context to answer your question. \n\nTell me:\n\n* **What knowledge system are you asking about?** (e.g., Physics, Psychology, Economics, a specific book, a particular theory, etc.)\n* **If it's a specific theory or book, please provide a brief overview.**\n\nOnce I have that information, I can analyze it and identify the most central concept.",
+      "score": 0.0,
+      "ground_truth": "cyborg \u2014 highest betweenness centrality, bridges the essay's major themes"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "cluster",
+      "query": "Which concepts naturally cluster together in this knowledge system? List the main groups.",
+      "response": "Okay, let's break down the concepts that naturally cluster together within the knowledge system. To do this effectively, I need to understand the knowledge system you're referring to. Please provide me with the list of concepts you're interested in.\n\nHowever, I can give you a general framework for how I would approach this, and then provide some *example* clusters based on common knowledge domains.\n\n**My Approach to Clustering Concepts**\n\n1. **Identify Core Themes:** I'll look for overarching themes or subjects that many of the concepts relate to.\n2. **Look for Relationships:** I'll consider how concepts are related to each other. This could be:\n    * **Causation:** Does one concept cause or influence another?\n    * **Dependency:** Does one concept rely on another?\n    * **Similarity:** Are concepts similar in nature or function?\n    * **Contrast:** Do concepts represent opposing ideas or viewpoints?\n    * **Part-Whole:** Is one concept a component of another?\n3. **Consider Levels of Abstraction:** Some concepts are very specific, while others are broad. I'll group concepts at similar levels of abstraction together.\n4. **Iterate:** Clustering is often an iterative process. I might start with a preliminary grouping and then refine it as I analyze the concepts more closely.\n\n**Example Clusters (Assuming a General Knowledge Base)**\n\nLet's assume we have a broad range of concepts. Here are some potential main groups, with examples of concepts that might fall into each:\n\n**1. Science & Technology**\n\n*   **Physics:** Mechanics, Thermodynamics, Electromagnetism, Optics, Relativity, Quantum Mechanics\n*   **Chemistry:** Atoms, Molecules, Chemical Reactions, Periodic Table, Organic Chemistry, Biochemistry\n*   **Biology:** Cells, Genetics, Evolution, Ecology, Anatomy, Physiology, Microbiology\n*   **Computer Science:** Algorithms, Data Structures, Programming Languages, Artificial Intelligence, Machine Learning, Cybersecurity, Networking\n*   **Engineering:** Civil Engineering, Mechanical Engineering, Electrical Engineering, Chemical Engineering, Aerospace Engineering\n*   **Mathematics:** Algebra, Calculus, Geometry, Statistics, Probability, Number Theory\n\n**2. History & Social Sciences**\n\n*   **History:** Ancient History, Medieval History, Modern History, World War I, World War II, Cold War, Specific Civilizations (e.g., Roman, Egyptian, Chinese)\n*   **",
+      "score": 0.0,
+      "ground_truth": "Cluster 1 (cyborg domain): cyborg, machine, feminism, labour, politics. Cluster 2 (political economy): women, homework_economy, new_technologies, gender"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is blasphemy connected to many other concepts?",
+      "response": "Okay, let's delve into how blasphemy connects to other concepts within a knowledge system. To give you the most helpful answer, I need to clarify what kind of \"knowledge system\" we're talking about. Blasphemy's connections are *highly* dependent on the framework you're using to understand it. I'll break down connections across several major frameworks, then offer a synthesis at the end.  I'll structure this by:\n\n1. **Religious/Theological Frameworks:** (Most obvious connections)\n2. **Philosophical Frameworks:** (Exploring the underlying ideas)\n3. **Sociological/Anthropological Frameworks:** (How blasphemy functions in society)\n4. **Psychological Frameworks:** (Motivations behind blasphemy)\n5. **Legal/Political Frameworks:** (Blasphemy and power)\n6. **Literary/Artistic Frameworks:** (Blasphemy as a creative tool)\n\n**1. Religious/Theological Frameworks**\n\nThis is where the most direct and numerous connections lie.\n\n*   **Sacredness/Holiness:** Blasphemy is *defined* as an offense against the sacred. Therefore, understanding a religion's concept of sacredness is crucial.  This includes:\n    *   **Deity/God:** The most obvious connection. Blasphemy directly challenges the existence, nature, attributes, or actions of a deity.\n    *   **Religious Figures:**  Disrespecting prophets, saints, or other revered individuals.\n    *   **Holy Texts/Scriptures:**  Mocking, distorting, or denying the truth of sacred writings.\n    *   **Rituals/Practices:**  Desecrating or ridiculing religious ceremonies, customs, or objects.\n    *   **Symbols:**  Defiling or misusing religious symbols (e.g., crosses, images, sacred places).\n*   **Sin/Transgression:** In many religions, blasphemy is considered a grave sin, often carrying significant spiritual consequences (e.g., divine punishment, loss of favor, eternal damnation).\n*   **Faith/Belief:** Blasphemy is a direct challenge to the faith of believers. It can be seen as an attempt to undermine their beliefs and lead them astray.\n*   **Idolatry/False Gods:**  Blasphemy can be linked to",
+      "score": 0.0,
+      "ground_truth": "Nearly isolated \u2014 blasphemy connects only to seriousness (degree 1)"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "multihop_disconnect",
+      "query": "In this knowledge system, is feminism connected to women?",
+      "response": "Okay, let's break down the connection between feminism and women within a knowledge system. Here's a comprehensive look, considering different perspectives and how knowledge systems typically represent these things. I'll structure this in a way that addresses different levels of understanding, from basic to more complex.\n\n**1. The Core, Foundational Connection (Most Knowledge Systems Acknowledge This)**\n\n*   **Historically and Primarily:** In almost all knowledge systems (whether academic, cultural, or societal), feminism *is* fundamentally connected to women. It originated as a response to the systemic oppression, discrimination, and inequality faced by women.\n*   **Definition:**  At its most basic, feminism is defined as a range of political, social, and ethical movements and theories that advocate for the social, political, economic, and legal equality of the sexes.  The *sexes* here refers to women and men (and increasingly, people of all genders).\n*   **Early Feminism:** The first wave of feminism (19th/early 20th century) was largely focused on securing women's right to vote, property ownership, and basic legal protections.  This was undeniably centered on women's experiences and challenges.\n*   **Common Understanding:** Even today, when people generally talk about \"feminism,\" the initial association is with improving the lives of women and girls.\n\n**2. Expanding the Connection: Beyond a Simple \"Yes\" (More Nuanced Knowledge Systems)**\n\n*   **Intersectionality:** Modern feminist thought, particularly through the lens of intersectionality (a concept developed by Kimberl\u00e9 Crenshaw), recognizes that women are *not* a homogenous group.  Experiences of womanhood are shaped by other identities like race, class, sexual orientation, disability, religion, and more.  Therefore, feminism must address the unique challenges faced by women within these intersecting identities.\n    *   **Knowledge Representation:** A robust knowledge system would represent this through:\n        *   **Categorization:**  Sub-categories within feminism (e.g., Black feminism, queer feminism, disability feminism, transnational feminism)\n        *   **Relationship Mapping:**  Diagrams or networks showing how gender inequality intersects with other forms of oppression (racism, classism, ableism, homophobia, etc.).\n        *   **Case Studies:**  Examples illustrating how different women experience inequality differently.\n*   **Gender as a Social Construct:**  F",
+      "score": 0.5,
+      "ground_truth": "No \u2014 feminism is in the cyborg component (size 70) and women is in a separate disconnected component (size 31); no path exists between them"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "multihop_disconnect",
+      "query": "In this knowledge system, is labour connected to homework_economy?",
+      "response": "Okay, let's break down how \"labor\" and \"homework_economy\" are connected within this knowledge system. Based on the provided context, here's a detailed explanation:\n\n**Understanding the Core Concepts**\n\n*   **Homework Economy:** This refers to a system where individuals (often students) are assigned tasks (\"homework\") that require them to acquire skills, knowledge, or resources *outside* of the formal educational setting. The \"economy\" part comes from the fact that completing this homework often involves a cost \u2013 time, money (for materials, tutoring, etc.), and effort. It's a system where learning is partially outsourced to the individual and their support network.\n*   **Labor:** In this context, \"labor\" isn't just about paid work. It refers to any form of effort, activity, or work that is expended to achieve a goal. This can include studying, researching, practicing skills, or any task that requires mental or physical exertion.\n\n**The Connection: Labor as the Engine of the Homework Economy**\n\nThe connection between labor and the homework economy is **fundamental and causal**. Here's how they are intertwined:\n\n1.  **Homework *demands* Labor:** The very existence of the homework economy hinges on the labor that individuals invest in completing homework assignments. Without the effort, time, and cognitive work put into homework, the system doesn't function.\n2.  **Labor is *shaped* by the Homework Economy:** The homework economy influences *how* labor is performed. It creates incentives and pressures that affect:\n    *   **The type of labor:** Homework assignments dictate the specific skills and knowledge individuals need to acquire.\n    *   **The intensity of labor:** The perceived importance of homework (e.g., its impact on grades) influences how much effort people put in.\n    *   **The allocation of labor:**  Families may hire tutors, purchase learning materials, or structure their schedules to support homework completion \u2013 all of which represent different forms of labor investment.\n3.  **The Homework Economy *commodifies* Labor:** The system often leads to the commodification of labor.  Parents pay for tutoring, test prep, or other services that essentially buy labor to help their children succeed in the homework economy.\n\n**Specific Ways Labor is Involved**\n\n*   **Student Labor:** The most obvious form is the student's own effort in completing assignments, studying, and",
+      "score": 0.25,
+      "ground_truth": "No \u2014 labour is in the cyborg component (size 70) and homework_economy is in a separate disconnected component (size 31); no path exists"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "multihop_path",
+      "query": "In this knowledge system, what is the path from politics to labour?",
+      "response": "Okay, let's break down the path from politics to labour within a knowledge system. To do this effectively, I need to make some assumptions about the kind of knowledge system we're talking about. I'll outline a few possibilities, ranging from broad theoretical frameworks to more specific, practical systems.  I'll then provide a detailed explanation of a common, robust framework \u2013 Marxism \u2013 as it provides a particularly clear and historically significant path.  Finally, I'll touch on other perspectives.\n\n**Assumptions & Frameworks to Consider**\n\nBefore diving in, here are some different ways a \"knowledge system\" could be defined, which will influence the path we trace:\n\n*   **Academic/Theoretical (e.g., Political Science, Sociology, Economics):**  Here, the path might be a theoretical one, focusing on how political ideologies shape labor relations, or how labor movements influence political outcomes.\n*   **Historical/Narrative:** The path could be a historical account of how labor movements arose, organized, and sought political power.\n*   **Activist/Organizational:**  This would focus on the practical steps activists take to connect labor struggles with political action.\n*   **Marxist/Critical:**  This is a core framework that provides a structured understanding of the relationship between politics and labor, and I'll focus on this in detail below.\n*   **Systems Thinking:**  This would look at the interconnectedness of political and economic systems, seeing labor as a key lever for change.\n\n**1. The Marxist Path: From Politics to Labour (and Back Again)**\n\nMarxism offers a particularly strong and historically-grounded framework for understanding the relationship between politics and labour. Here's the path, broken down into stages and key concepts:\n\n*   **Stage 1: Material Conditions & Class Struggle (The Foundation)**\n    *   **Core Idea:**  Marxism begins with the idea that material conditions (the way society produces and distributes goods) shape everything else, including politics and ideology.\n    *   **Capitalism's Structure:**  Under capitalism, society is fundamentally divided into two main classes:\n        *   **Bourgeoisie:** The owners of the means of production (factories, land, capital).\n        *   **Proletariat:** The working class, who sell their labor power to the bourgeoisie for wages.\n    *   **Exploitation:** Marx",
+      "score": 0.5,
+      "ground_truth": "3-hop path: politics \u2192 cyborg \u2192 feminism \u2192 labour (not stated explicitly in summary; derivable from walk encoding)"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "multihop_path",
+      "query": "In this knowledge system, what connects ontology to machine?",
+      "response": "Okay, let's break down how ontology connects to machines in a knowledge system. It's a layered process, and the connection isn't always direct. Here's a comprehensive explanation, covering different levels of abstraction and common approaches. I'll structure it into: 1. Core Concepts, 2. The Bridge: Semantic Web Technologies, 3. Machine Learning & AI Integration, 4. Practical Examples, and 5. Challenges & Future Directions.\n\n**1. Core Concepts: Ontology & Machine Understanding**\n\n*   **Ontology (in this context):**  It's not just a philosophical term. In knowledge systems, an ontology is a formal, explicit specification of a shared conceptualization.  Think of it as a structured representation of knowledge about a domain. It defines:\n    *   **Concepts/Classes:**  The key entities or categories in the domain (e.g., \"Product,\" \"Customer,\" \"Order,\" \"Disease,\" \"Symptom\").\n    *   **Properties/Attributes:**  Characteristics of those concepts (e.g., \"Product\" has \"Price,\" \"Description,\" \"Manufacturer\").\n    *   **Relationships:**  How concepts relate to each other (e.g., \"Customer\" *places* \"Order,\" \"Disease\" *causes* \"Symptom\").\n    *   **Axioms/Rules:**  Constraints and logical statements that govern the domain (e.g., \"If an Order's TotalPrice exceeds $1000, then it requires Manager Approval\").\n*   **Machine Understanding (the Goal):**  We want machines to \"understand\" information, reason about it, and act intelligently.  This goes beyond simple keyword matching.  We want them to grasp the *meaning* behind the data.\n\n**2. The Bridge: Semantic Web Technologies (The Primary Connector)**\n\nSemantic Web technologies are the most common and established way to connect ontologies to machines.  They provide the tools and standards to represent and process ontological knowledge in a way that computers can understand.\n\n*   **RDF (Resource Description Framework):**  A standard for representing information as *triples*.  A triple consists of:\n    *   **Subject:** The thing being described (e.g., a Product).\n    *   **Predicate:** The property or relationship (e.g., \"hasPrice\").\n    *   **Object",
+      "score": 0.6666666666666666,
+      "ground_truth": "2-hop path: ontology \u2192 cyborg \u2192 machine (ontology has degree 1, connects only to cyborg; not stated explicitly)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, is cyborg connected to labour?",
+      "response": "Yes, cyborg is connected to labour. Here's the path:\n\n*   **cyborg \u2192 feminism \u2192 labour**\n\nThis indicates that cyborg is connected to labour through its relationship with feminism.",
+      "score": 0.8,
+      "ground_truth": "Indirectly \u2014 cyborg \u2192 feminism \u2192 labour (two-hop path)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "bridge",
+      "query": "What is the most central concept in this knowledge system \u2014 the one that bridges the most other ideas?",
+      "response": "Based on the provided information, the most central concept in this knowledge graph is **cyborg**. Here's why:\n\n*   **Highest Degree:** It has the highest degree (24), indicating the most connections to other concepts.\n*   **Direct Connections:** It directly connects to a wide range of key concepts: feminism, machine, politics, essay, hybrid, and ontology.\n*   **Central Role in Walk Encoding:** It appears frequently in the walk encoding, demonstrating its importance in connecting various ideas.\n*   **Bridge Between Disconnected Components:** While women and homework\\_economy are in a separate component, cyborg acts as a bridge connecting those ideas to a much larger network of concepts.\n\n\n\nThe graph highlights that cyborg is a central point of intersection for many themes within Haraway's essay, making it the most central concept.",
+      "score": 1.0,
+      "ground_truth": "cyborg \u2014 highest betweenness centrality, bridges the essay's major themes"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "cluster",
+      "query": "Which concepts naturally cluster together in this knowledge system? List the main groups.",
+      "response": "Okay, let's break down the knowledge graph into natural clusters based on the provided information.  It's a complex graph, so I'll focus on the strongest connections and overall themes.  Here's a breakdown of the main groups, keeping in mind the centrality of \"cyborg\" and the disconnected nature of \"women\" and \"homework_economy\":\n\n**1. The Cyborg/Technology/Politics Cluster (Central & Dominant)**\n\n*   **Core:** Cyborg, Machine, Politics, Essay, Hybrid, Ontology, Technology, High-Tech-Facilitated Social Relations, New Technologies, Cyborg Myth, Cyborg Identity, Cyborg Authors, Cyborg Societies, High-Tech Apparatuses, Science-Based Industries, High-Tech Militarization, Technological Polis, Cyborg Replication, Cyborg 'Sex', Cyborgs, Cyborg_Alice, Cyborg_World, Technological Determination, Industrial Capitalism, Industrial Revolution, Microelectronics, Silicon Chip, Small Machines, Modern Machines, Late 20th-Century Machines, Communication Technologies, New Communications Technologies, Cybernetic Systems Theories, Informatics, High-Tech Culture, Science and Technology, Political Work, Scientific-Technical Discourses, Cyborg Politics, High-Tech Market Structures, Political Possibilities, Universal Translation, Command-Control Communication-Intelligence, Military Science Facility Conversion Action Groups, Decentralization, Surveillance and Control, Cyborg Theory, Cyborg Imagery, High-Tech Apparatuses, Political Possibilities, Cyborg_Monsters, High-Tech Militarization, Cyborg_Writing, Cyborg_Theory, Cyborg_Perspective, Cyborg_Image, Cyborg_Identity, Cyborg_Authors, Cyborg_World, Cyborg_Myth, Cyborg_Society, Cyborg_Alice, Cyborg_Replication, Cyborg_'Sex', Cyborg_Theory, Cyborg_Politics, Cyborg_Imagery, Cyborg_Monsters, Cyborg_World, Cyborg_Identity, Cyborg_Authors, Cyborg_Society, Cyborg_Alice, Cyborg_Replication, Cyborg_'Sex', Cyborg_Theory, Cyborg_Politics, Cyborg_Imagery, Cyborg_Monsters, Cyborg_World, Cyborg_Identity, Cyborg_Authors, Cyborg_Society, Cyborg_Alice, Cyborg_Replication, Cyborg_'Sex', Cyborg_Theory, Cyborg_Politics, Cyborg_Imagery, Cyborg_Monsters, Cyborg_World, Cyborg_Identity, Cyborg_Authors, Cyborg_Society, Cyborg_Alice, Cyborg_Replication, Cyborg_'Sex', Cyborg_Theory, Cyborg_Politics, Cyborg_Imagery,",
+      "score": 1.0,
+      "ground_truth": "Cluster 1 (cyborg domain): cyborg, machine, feminism, labour, politics. Cluster 2 (political economy): women, homework_economy, new_technologies, gender"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is blasphemy connected to many other concepts?",
+      "response": "No, according to the provided information, blasphemy is nearly isolated. It only connects directly to \"seriousness.\" Its degree is also very low (degree 1), indicating a very limited number of connections.",
+      "score": 0.4,
+      "ground_truth": "Nearly isolated \u2014 blasphemy connects only to seriousness (degree 1)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "multihop_disconnect",
+      "query": "In this knowledge system, is feminism connected to women?",
+      "response": "According to the provided information, there is **no direct or indirect connection** between feminism and women in this knowledge graph. The graph explicitly states: \"cyborg and women have NO direct or indirect connection in this graph.\"\n\nWhile women are connected to concepts like homework_economy, gender, and paid_work, and feminism is connected to labour, these are separate components of the graph.",
+      "score": 0.5,
+      "ground_truth": "No \u2014 feminism is in the cyborg component (size 70) and women is in a separate disconnected component (size 31); no path exists between them"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "multihop_disconnect",
+      "query": "In this knowledge system, is labour connected to homework_economy?",
+      "response": "Yes, according to the provided information, labour is connected to homework_economy. Here's the chain:\n\n*   **labour connects to:** feminism\n*   **feminism connects to:** homework_economy (indirectly, through women's experience and other connections)\n*   **women connects to:** homework_economy (direct connection)\n\nAdditionally, homework_economy is directly connected to women.",
+      "score": 0.25,
+      "ground_truth": "No \u2014 labour is in the cyborg component (size 70) and homework_economy is in a separate disconnected component (size 31); no path exists"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "multihop_path",
+      "query": "In this knowledge system, what is the path from politics to labour?",
+      "response": "Here's the path from \"politics\" to \"labour\" based on the provided information:\n\n1.  **politics** connects to **cyborg** (0.030)\n2.  **cyborg** connects to **feminism** (0.030)\n3.  **feminism** connects to **labour** (0.086)\n\nTherefore, the path is: **politics \u2192 cyborg \u2192 feminism \u2192 labour**",
+      "score": 1.0,
+      "ground_truth": "3-hop path: politics \u2192 cyborg \u2192 feminism \u2192 labour (not stated explicitly in summary; derivable from walk encoding)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "multihop_path",
+      "query": "In this knowledge system, what connects ontology to machine?",
+      "response": "Here's the connection path from \"ontology\" to \"machine\" according to the provided data:\n\n*   **ontology** connects to: **cyborg** (0.432)\n*   **cyborg** connects to: **machine** (0.028)\n\nTherefore, the path is: **ontology \u2192 cyborg \u2192 machine**",
+      "score": 1.0,
+      "ground_truth": "2-hop path: ontology \u2192 cyborg \u2192 machine (ontology has degree 1, connects only to cyborg; not stated explicitly)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, is cyborg connected to labour?",
+      "response": "",
+      "score": 0.0,
+      "ground_truth": "Indirectly \u2014 cyborg \u2192 feminism \u2192 labour (two-hop path)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "bridge",
+      "query": "What is the most central concept in this knowledge system \u2014 the one that bridges the most other ideas?",
+      "response": "",
+      "score": 0.0,
+      "ground_truth": "cyborg \u2014 highest betweenness centrality, bridges the essay's major themes"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "cluster",
+      "query": "Which concepts naturally cluster together in this knowledge system? List the main groups.",
+      "response": "",
+      "score": 0.0,
+      "ground_truth": "Cluster 1 (cyborg domain): cyborg, machine, feminism, labour, politics. Cluster 2 (political economy): women, homework_economy, new_technologies, gender"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is blasphemy connected to many other concepts?",
+      "response": "",
+      "score": 0.0,
+      "ground_truth": "Nearly isolated \u2014 blasphemy connects only to seriousness (degree 1)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "multihop_disconnect",
+      "query": "In this knowledge system, is feminism connected to women?",
+      "response": "",
+      "score": 0.0,
+      "ground_truth": "No \u2014 feminism is in the cyborg component (size 70) and women is in a separate disconnected component (size 31); no path exists between them"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "multihop_disconnect",
+      "query": "In this knowledge system, is labour connected to homework_economy?",
+      "response": "",
+      "score": 0.0,
+      "ground_truth": "No \u2014 labour is in the cyborg component (size 70) and homework_economy is in a separate disconnected component (size 31); no path exists"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "multihop_path",
+      "query": "In this knowledge system, what is the path from politics to labour?",
+      "response": "",
+      "score": 0.0,
+      "ground_truth": "3-hop path: politics \u2192 cyborg \u2192 feminism \u2192 labour (not stated explicitly in summary; derivable from walk encoding)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "multihop_path",
+      "query": "In this knowledge system, what connects ontology to machine?",
+      "response": "",
+      "score": 0.0,
+      "ground_truth": "2-hop path: ontology \u2192 cyborg \u2192 machine (ontology has degree 1, connects only to cyborg; not stated explicitly)"
+    }
+  ],
+  "summary": {
+    "A_baseline": {
+      "avg_score": 0.26458333333333334,
+      "by_type": {
+        "relationship": 0.2,
+        "bridge": 0.0,
+        "cluster": 0.0,
+        "isolate": 0.0,
+        "multihop_disconnect": 0.375,
+        "multihop_path": 0.5833333333333333
+      }
+    },
+    "B_text_injection": {
+      "avg_score": 0.74375,
+      "by_type": {
+        "relationship": 0.8,
+        "bridge": 1.0,
+        "cluster": 1.0,
+        "isolate": 0.4,
+        "multihop_disconnect": 0.375,
+        "multihop_path": 1.0
+      }
+    },
+    "C_kv_injection": {
+      "avg_score": 0.0,
+      "by_type": {
+        "relationship": 0.0,
+        "bridge": 0.0,
+        "cluster": 0.0,
+        "isolate": 0.0,
+        "multihop_disconnect": 0.0,
+        "multihop_path": 0.0
+      }
+    }
+  }
+}

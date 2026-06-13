@@ -1,0 +1,14 @@
+{
+  "nodes": 218,
+  "edges": 214,
+  "density": 0.009047,
+  "components": 29,
+  "largest_component": 143,
+  "triples_total": 274,
+  "triples_pass1_paragraph": 216,
+  "triples_pass2_cross_cutting": 40,
+  "triples_pass3_document_threads": 18,
+  "sections_processed": 5,
+  "walk_encoding_tokens_approx": 3293,
+  "triples_encoding_tokens_approx": 1253
+}

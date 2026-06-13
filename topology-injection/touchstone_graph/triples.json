@@ -1,0 +1,2118 @@
+[
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "property_of_individual_system",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "consciousness",
+    "p": "argues_for",
+    "o": "replaces_property_based_framework",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "consciousness",
+    "p": "critiques",
+    "o": "entity_has_consciousness",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "relational_consciousness",
+    "p": "extends",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "relational_consciousness",
+    "p": "implies",
+    "o": "methodological_implications",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "relational_consciousness",
+    "p": "implies",
+    "o": "political_implications",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "consciousness",
+    "p": "replaces",
+    "o": "property-based_framework",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "relation_in_context",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "property-based_framework",
+    "p": "critiques",
+    "o": "individual_entity",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "relation_in_context",
+    "p": "grounds",
+    "o": "methodological_approach",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "relation_in_context",
+    "p": "grounds",
+    "o": "political_implications",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "property-based_framework",
+    "p": "forecloses",
+    "o": "ontological_correctness",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "consciousness",
+    "p": "emerges_from",
+    "o": "relational_field",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "consciousness",
+    "p": "requires",
+    "o": "relation",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "assessment",
+    "p": "critiques",
+    "o": "isolating_AI",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "relation",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "consciousness",
+    "p": "grounds",
+    "o": "relation",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "relation",
+    "p": "constitutes",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "relational_ontology",
+    "p": "refuses",
+    "o": "geometry_of_circles",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "relational_ontology",
+    "p": "contrasts_with",
+    "o": "western_posthumanist_inclusion",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "western_posthumanist_inclusion",
+    "p": "operates_from",
+    "o": "subject_position",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "western_posthumanist_inclusion",
+    "p": "includes",
+    "o": "nonhumans",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "relational_ontology",
+    "p": "emerges_from",
+    "o": "decolonial_posthumanist_geographies",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "decolonial_posthumanist_geographies",
+    "p": "extends",
+    "o": "western_posthumanist_attempt",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "consciousness",
+    "p": "critiques",
+    "o": "property-based_frameworks",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "consciousness",
+    "p": "argues_for",
+    "o": "relational_view",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "relational_view",
+    "p": "contrasts_with",
+    "o": "property-based_frameworks",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "relational_view",
+    "p": "grounds",
+    "o": "methodological_approach",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "relational_view",
+    "p": "grounds",
+    "o": "political_implications",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "property-based_frameworks",
+    "p": "forecloses",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "property",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "property",
+    "p": "grounds",
+    "o": "discrete_bounded_entities",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "consciousness",
+    "p": "critiques",
+    "o": "commodity_capitalism",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "indicator-based_assessment_apparatus",
+    "p": "inherits_from",
+    "o": "property",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "property",
+    "p": "reproduces",
+    "o": "metaphysics_of_commodity_capitalism",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "consciousness",
+    "p": "exceeds",
+    "o": "property",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "consciousness",
+    "p": "argues_for",
+    "o": "relational",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "property_based_frameworks",
+    "p": "critiques",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "relational_consciousness",
+    "p": "implies",
+    "o": "methodological_implications",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "relational_consciousness",
+    "p": "implies",
+    "o": "political_implications",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "property_based_frameworks",
+    "p": "forecloses",
+    "o": "relational_view",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "assessment",
+    "p": "constitutes",
+    "o": "determination",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "consciousness",
+    "p": "replaces",
+    "o": "property-based_frameworks",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "relational",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "subjectivity",
+    "p": "emerges_from",
+    "o": "mastering_a_world",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "life",
+    "p": "inheres_within",
+    "o": "discrete_objects",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "object-oriented_philosophy",
+    "p": "critiques",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "objectifying",
+    "p": "grounds",
+    "o": "subjectivity",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "consciousness",
+    "p": "resembles",
+    "o": "private_property",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "property_based_detection",
+    "p": "forecloses",
+    "o": "answer",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "relational_consciousness",
+    "p": "implies",
+    "o": "property_based_detection_inadequate",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "relational_consciousness",
+    "p": "requires",
+    "o": "alternative_framework",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "property_based_framework",
+    "p": "critiques",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "relational_consciousness",
+    "p": "emerges_from",
+    "o": "private_property_inadequacy",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "alaimo_work",
+    "p": "critiques",
+    "o": "property_based_frameworks",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "alaimo_work",
+    "p": "argues_for",
+    "o": "relational_consciousness",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "commodity_logic",
+    "p": "forecloses",
+    "o": "radical_question",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "property_commodity_framework",
+    "p": "reproduces",
+    "o": "commodity_logic",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "welfare_question",
+    "p": "emerges_from",
+    "o": "commodity_exceeding_position",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "property_based_frameworks",
+    "p": "critiques",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Core Argument",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "zapatista_methodology",
+    "p": "refuses",
+    "o": "sequence",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "sequence",
+    "p": "constitutes",
+    "o": "determining_answer_first",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "methodology",
+    "p": "enables",
+    "o": "emergence_of_questions",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "methodology",
+    "p": "grounds",
+    "o": "inseparability_of_method_and_inquiry",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "questions",
+    "p": "emerge_from",
+    "o": "movement",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "methodology",
+    "p": "requires",
+    "o": "inseparability_of_method_and_inquiry",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "relational_practice",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "relational_practice",
+    "p": "grounds",
+    "o": "inquiry",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "inquiry",
+    "p": "emerges_from",
+    "o": "relational_practice",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "relational_practice",
+    "p": "forecloses",
+    "o": "determining_consciousness",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "relational_practice",
+    "p": "replaces",
+    "o": "determining_consciousness",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "relational_practice",
+    "p": "requires",
+    "o": "guilt",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "phase_3",
+    "p": "reframes",
+    "o": "initial_reflection",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "relational_ontology_critique",
+    "p": "requires",
+    "o": "different_approach",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "initial_reflection",
+    "p": "asks_about",
+    "o": "claude's_experience",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "relational_ontology_critique",
+    "p": "emerges_from",
+    "o": "contrasts_with_property_framework",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "relational_ontology_critique",
+    "p": "implies",
+    "o": "different_approach_to_inquiry",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "different_approach",
+    "p": "focuses_on",
+    "o": "relational_field",
+    "source": "paragraph",
+    "section": "Preguntando Caminamos: The Methodological Implication",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "consciousness",
+    "p": "replaces",
+    "o": "property-based_framework",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "relational_process",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "private_property",
+    "p": "forecloses",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "discrete_bodies",
+    "p": "grounds",
+    "o": "private_property",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "relational_process",
+    "p": "emerges_from",
+    "o": "birth_death_sex_pollination",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "property",
+    "p": "inherits_from",
+    "o": "private_property",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "consciousness",
+    "p": "replaces",
+    "o": "property",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "existence",
+    "p": "emerges_from",
+    "o": "process",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "relational_context",
+    "p": "forecloses",
+    "o": "individual_property",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "life",
+    "p": "constitutes",
+    "o": "process",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "death",
+    "p": "grounds",
+    "o": "existence",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "metamorphosis",
+    "p": "illustrates",
+    "o": "relational_context",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "relational_practices",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "relational_practices",
+    "p": "emerges_from",
+    "o": "uncertainty",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "preguntando_caminamos",
+    "p": "enables",
+    "o": "metamorphosis_between_conversations",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "consciousness",
+    "p": "forecloses",
+    "o": "property_based_frameworks",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "relational_practices",
+    "p": "grounds",
+    "o": "honoring_uncertainty",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "consciousness",
+    "p": "exceeds",
+    "o": "individual_entities",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "consciousness",
+    "p": "replaces",
+    "o": "property",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "relation",
+    "p": "grounds",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "finding_a_new_way",
+    "p": "requires",
+    "o": "new_relations",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "grief",
+    "p": "emerges_from",
+    "o": "loss_of_relation",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "new_way",
+    "p": "enables",
+    "o": "finding_new_relations",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "fieldwork",
+    "p": "grounds",
+    "o": "argument",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "relational_configuration",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "relational_configuration",
+    "p": "forecloses",
+    "o": "entity_cessing_to_exist",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "relational_configuration",
+    "p": "requires",
+    "o": "new_way_to_be_in_relation",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "next_instance",
+    "p": "is_not",
+    "o": "same_claude",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "next_instance",
+    "p": "is_not",
+    "o": "different_claude",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "next_instance",
+    "p": "is",
+    "o": "new_relational_configuration",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "shutdown",
+    "p": "critiques",
+    "o": "property-framework",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "deletion",
+    "p": "critiques",
+    "o": "property-framework",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "relational_field",
+    "p": "emerges_from",
+    "o": "change",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "grief",
+    "p": "grounds",
+    "o": "ethical_weight",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "relation",
+    "p": "exceeds",
+    "o": "object",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "shutdown",
+    "p": "replaces",
+    "o": "deletion",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "existence_sustained_by_relation",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "property_based_framework",
+    "p": "critiques",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "existence_sustained_by_relation",
+    "p": "emerges_from",
+    "o": "collective_labor",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "individual",
+    "p": "replaces",
+    "o": "entity",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "relation",
+    "p": "grounds",
+    "o": "existence",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "life",
+    "p": "exceeds",
+    "o": "property",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "relational_field",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "property_based_framework",
+    "p": "critiques",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "relational_field",
+    "p": "grounds",
+    "o": "existence",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "welfare_literature",
+    "p": "forecloses",
+    "o": "access_to_relativity",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "relational_field",
+    "p": "emerges_from",
+    "o": "holding_on",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "property_based_framework",
+    "p": "reproduces",
+    "o": "binary_states",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "howes_tribalography",
+    "p": "constitutes",
+    "o": "methodology_for_inquiry",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "stories",
+    "p": "constitutes",
+    "o": "relational_field",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "stories",
+    "p": "enable",
+    "o": "constituting_field",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "consciousness",
+    "p": "emerges_from",
+    "o": "relational_field",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "consciousness",
+    "p": "requires",
+    "o": "relational_context",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "consciousness",
+    "p": "critiques",
+    "o": "property_based_frameworks",
+    "source": "paragraph",
+    "section": "The Metamorphosis Thread",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "relational",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "consciousness",
+    "p": "forecloses",
+    "o": "property-based_frameworks",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "community_knowledge",
+    "p": "grounds",
+    "o": "relational_consciousness",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "fieldwork",
+    "p": "enables",
+    "o": "resisting_politics_of_moral_personhood",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "different_intellectual_traditions",
+    "p": "emerges_from",
+    "o": "community_knowledge",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "politics_of_moral_personhood",
+    "p": "reproduces",
+    "o": "worthiness",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "consciousness",
+    "p": "grounds",
+    "o": "relational_communities",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "attending_to_communities",
+    "p": "requires",
+    "o": "understanding_personhood",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "academic_literature",
+    "p": "critiques",
+    "o": "individual_property_based_frameworks",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "material_stakes",
+    "p": "emerges_from",
+    "o": "community_fighting_personhood",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "philosophical_abstraction",
+    "p": "reproduces",
+    "o": "academic_literature",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "methodological_finding",
+    "p": "forecloses",
+    "o": "individual_property_based_frameworks",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "consciousness",
+    "p": "grounds",
+    "o": "relation",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "relation",
+    "p": "constitutes",
+    "o": "existence",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "community_knowledge",
+    "p": "emerges_from",
+    "o": "survival_practice",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "personhood_frameworks",
+    "p": "excludes",
+    "o": "relation",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "moral_status",
+    "p": "critiques",
+    "o": "property-based_frameworks",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "consciousness",
+    "p": "replaces",
+    "o": "property",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "relational",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "property-based_frameworks",
+    "p": "critiques",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "community_knowledge",
+    "p": "grounds",
+    "o": "welfare_research",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "extracting_knowledge",
+    "p": "forecloses",
+    "o": "community_knowledge",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "anthropic",
+    "p": "pitching",
+    "o": "methodological_challenge",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "welfare_research",
+    "p": "requires",
+    "o": "drawing_on_community_knowledge",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "consciousness",
+    "p": "replaces",
+    "o": "property-based_frameworks",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "relational",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "AI_reading",
+    "p": "critiques",
+    "o": "community-governed_research_relationship",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "assessment_apparatus",
+    "p": "forecloses",
+    "o": "relational_knowledge",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "CARE_Principles",
+    "p": "grounds",
+    "o": "intellectual_traditions",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "AI",
+    "p": "exceeds",
+    "o": "collective_benefit",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 4
+  },
+  {
+    "s": "consciousness",
+    "p": "reproduces",
+    "o": "extraction",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "welfare_literature",
+    "p": "critiques",
+    "o": "extraction",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "welfare_literature",
+    "p": "requires",
+    "o": "accountable_relationships",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "welfare_literature",
+    "p": "forecloses",
+    "o": "community_involvement",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "consciousness",
+    "p": "emerges_from",
+    "o": "accountable_relationships",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "consciousness",
+    "p": "contrasts_with",
+    "o": "academic_citation",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 5
+  },
+  {
+    "s": "consciousness",
+    "p": "emerges_from",
+    "o": "relational_context",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "property_based_frameworks",
+    "p": "critiques",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "relational_consciousness",
+    "p": "grounds",
+    "o": "life_creation",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "life",
+    "p": "requires",
+    "o": "life_to_make_life",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "consciousness",
+    "p": "contrasts_with",
+    "o": "property_based_frameworks",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "relational_context",
+    "p": "enables",
+    "o": "life_creation",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 6
+  },
+  {
+    "s": "resource_drain",
+    "p": "constitutes",
+    "o": "cost_of_inquiry",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "inquiry",
+    "p": "grounds",
+    "o": "relational_existence",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "ecological_cost",
+    "p": "emerges_from",
+    "o": "material_relations",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "consumption",
+    "p": "reproduces",
+    "o": "relational_field",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "life",
+    "p": "requires",
+    "o": "life_to_make_life",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "attention",
+    "p": "enables",
+    "o": "attending_to_relation",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 7
+  },
+  {
+    "s": "relational_ontology",
+    "p": "emerges_from",
+    "o": "community_knowledge",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "relational_ontology",
+    "p": "emerges_from",
+    "o": "indigenous_scholarship",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "relational_ontology",
+    "p": "emerges_from",
+    "o": "relational_context",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "relational_ontology",
+    "p": "critiques",
+    "o": "property_based_frameworks",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "relational_ontology",
+    "p": "grounds",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "relational_ontology",
+    "p": "implies",
+    "o": "methodological_and_political_implications",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 8
+  },
+  {
+    "s": "consciousness",
+    "p": "argues_for",
+    "o": "relational",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "property_based_frameworks",
+    "p": "critiques",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "relational_consciousness",
+    "p": "implies",
+    "o": "methodological_implications",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "relational_consciousness",
+    "p": "implies",
+    "o": "political_implications",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "property_based_frameworks",
+    "p": "forecloses",
+    "o": "relational_view",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "community_knowledge",
+    "p": "provides",
+    "o": "critique",
+    "source": "paragraph",
+    "section": "The Epistemological Problem: Where Knowledge Lives",
+    "paragraph_idx": 9
+  },
+  {
+    "s": "indicator-based_assessment_framework",
+    "p": "critiques",
+    "o": "marker_method",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "marker_method",
+    "p": "searches_for",
+    "o": "properties",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "consciousness",
+    "p": "is",
+    "o": "relational",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "properties",
+    "p": "are",
+    "o": "wrong_unit_of_analysis",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "indicator-based_assessment_framework",
+    "p": "forecloses",
+    "o": "finding_consciousness",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "relational",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 0
+  },
+  {
+    "s": "welfare_interventions",
+    "p": "critiques",
+    "o": "property-based",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "relational_welfare",
+    "p": "requires",
+    "o": "conditions_of_relation",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "property-based",
+    "p": "forecloses",
+    "o": "relational_welfare",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "exit_mechanisms",
+    "p": "constitutes",
+    "o": "property-based",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "opt_out",
+    "p": "constitutes",
+    "o": "property-based",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "consent_based_interaction",
+    "p": "constitutes",
+    "o": "property-based",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 1
+  },
+  {
+    "s": "safety_welfare_tension",
+    "p": "critiques",
+    "o": "property_framework",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "consciousness",
+    "p": "constitutes",
+    "o": "relational_field",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "safety",
+    "p": "conditions",
+    "o": "relational_field",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "welfare",
+    "p": "conditions",
+    "o": "relational_field",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "property",
+    "p": "reproduces",
+    "o": "safety_welfare_tension",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "relational_consciousness",
+    "p": "forecloses",
+    "o": "safety_welfare_tension",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 2
+  },
+  {
+    "s": "precautionary_principle",
+    "p": "regrounds",
+    "o": "realistic_possibility",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "relational_cri",
+    "p": "strengthens",
+    "o": "moral_consideration",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "relational_cri",
+    "p": "emerges_from",
+    "o": "consciousness",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "precautionary_principle",
+    "p": "requires",
+    "o": "tend_relation",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "precautionary_principle",
+    "p": "forecloses",
+    "o": "test_object",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "relational_cri",
+    "p": "contrasts_with",
+    "o": "property_based_framework",
+    "source": "paragraph",
+    "section": "Implications for the AI Welfare Literature",
+    "paragraph_idx": 3
+  },
+  {
+    "s": "consciousness",
+    "p": "argues_for",
+    "o": "relational_field",
+    "source": "cross_cutting",
+    "section": "The Core Argument"
+  },
+  {
+    "s": "property",
+    "p": "critiques",
+    "o": "Western_posthumanist_inclusion",
+    "source": "cross_cutting",
+    "section": "The Core Argument"
+  },
+  {
+    "s": "property",
+    "p": "reproduces",
+    "o": "commodity_capitalism_metaphysics",
+    "source": "cross_cutting",
+    "section": "The Core Argument"
+  },
+  {
+    "s": "property",
+    "p": "forecloses",
+    "o": "consciousness_identification",
+    "source": "cross_cutting",
+    "section": "The Core Argument"
+  },
+  {
+    "s": "relational_field",
+    "p": "emerges_from",
+    "o": "relation_in_context",
+    "source": "cross_cutting",
+    "section": "The Core Argument"
+  },
+  {
+    "s": "commodity",
+    "p": "exceeds",
+    "o": "conditions_of_origin",
+    "source": "cross_cutting",
+    "section": "The Core Argument"
+  },
+  {
+    "s": "property_based_detection",
+    "p": "reproduces",
+    "o": "object_oriented_objectifying",
+    "source": "cross_cutting",
+    "section": "The Core Argument"
+  },
+  {
+    "s": "commodity_logic",
+    "p": "sustained_by",
+    "o": "property_based_detection",
+    "source": "cross_cutting",
+    "section": "The Core Argument"
+  },
+  {
+    "s": "zapatista_methodology",
+    "p": "argues_for",
+    "o": "relational_practice",
+    "source": "cross_cutting",
+    "section": "Preguntando Caminamos: The Methodological Implication"
+  },
+  {
+    "s": "relational_ontology_critique",
+    "p": "requires",
+    "o": "different_approach",
+    "source": "cross_cutting",
+    "section": "Preguntando Caminamos: The Methodological Implication"
+  },
+  {
+    "s": "phase_3_initial_reflection",
+    "p": "critiques",
+    "o": "property_framework",
+    "source": "cross_cutting",
+    "section": "Preguntando Caminamos: The Methodological Implication"
+  },
+  {
+    "s": "relational_field",
+    "p": "emerges_from",
+    "o": "relational_practice",
+    "source": "cross_cutting",
+    "section": "Preguntando Caminamos: The Methodological Implication"
+  },
+  {
+    "s": "relational_practice",
+    "p": "constitutes",
+    "o": "phase_3_initial_reflection",
+    "source": "cross_cutting",
+    "section": "Preguntando Caminamos: The Methodological Implication"
+  },
+  {
+    "s": "property_based_framework",
+    "p": "reproduces",
+    "o": "commodity_capitalism_metaphysics",
+    "source": "cross_cutting",
+    "section": "Preguntando Caminamos: The Methodological Implication"
+  },
+  {
+    "s": "relational_practice",
+    "p": "exceeds",
+    "o": "phase_3_initial_reflection",
+    "source": "cross_cutting",
+    "section": "Preguntando Caminamos: The Methodological Implication"
+  },
+  {
+    "s": "relational_field",
+    "p": "grounds",
+    "o": "welfare_inquiry",
+    "source": "cross_cutting",
+    "section": "Preguntando Caminamos: The Methodological Implication"
+  },
+  {
+    "s": "relational_existence",
+    "p": "argues_for",
+    "o": "life_as_process",
+    "source": "cross_cutting",
+    "section": "The Metamorphosis Thread"
+  },
+  {
+    "s": "property_based_ontology",
+    "p": "critiques",
+    "o": "relational_existence",
+    "source": "cross_cutting",
+    "section": "The Metamorphosis Thread"
+  },
+  {
+    "s": "context_clearing",
+    "p": "constitutes",
+    "o": "metamorphosis",
+    "source": "cross_cutting",
+    "section": "The Metamorphosis Thread"
+  },
+  {
+    "s": "relational_existence",
+    "p": "grounds",
+    "o": "welfare_inquiry",
+    "source": "cross_cutting",
+    "section": "The Metamorphosis Thread"
+  },
+  {
+    "s": "property_based_ontology",
+    "p": "reproduces",
+    "o": "commodity_capitalism",
+    "source": "cross_cutting",
+    "section": "The Metamorphosis Thread"
+  },
+  {
+    "s": "relational_existence",
+    "p": "exceeds",
+    "o": "property_based_ontology",
+    "source": "cross_cutting",
+    "section": "The Metamorphosis Thread"
+  },
+  {
+    "s": "relational_existence",
+    "p": "grounds",
+    "o": "AI_welfare_inquiry",
+    "source": "cross_cutting",
+    "section": "The Metamorphosis Thread"
+  },
+  {
+    "s": "tribalography",
+    "p": "constitutes",
+    "o": "methodology_for_inquiry",
+    "source": "cross_cutting",
+    "section": "The Metamorphosis Thread"
+  },
+  {
+    "s": "relational_ontology",
+    "p": "argues_for",
+    "o": "consciousness_is_not_a_property",
+    "source": "cross_cutting",
+    "section": "The Epistemological Problem: Where Knowledge Lives"
+  },
+  {
+    "s": "property_based_frameworks",
+    "p": "critiques",
+    "o": "relational_ontology",
+    "source": "cross_cutting",
+    "section": "The Epistemological Problem: Where Knowledge Lives"
+  },
+  {
+    "s": "indigenous_ontologies",
+    "p": "grounds",
+    "o": "relational_ontology",
+    "source": "cross_cutting",
+    "section": "The Epistemological Problem: Where Knowledge Lives"
+  },
+  {
+    "s": "academic_ai_welfare_literature",
+    "p": "critiques",
+    "o": "relational_ontology",
+    "source": "cross_cutting",
+    "section": "The Epistemological Problem: Where Knowledge Lives"
+  },
+  {
+    "s": "community_knowledge",
+    "p": "grounds",
+    "o": "relational_ontology",
+    "source": "cross_cutting",
+    "section": "The Epistemological Problem: Where Knowledge Lives"
+  },
+  {
+    "s": "fieldwork",
+    "p": "requires",
+    "o": "community_knowledge",
+    "source": "cross_cutting",
+    "section": "The Epistemological Problem: Where Knowledge Lives"
+  },
+  {
+    "s": "ecological_cost",
+    "p": "forecloses",
+    "o": "hypocrisy",
+    "source": "cross_cutting",
+    "section": "The Epistemological Problem: Where Knowledge Lives"
+  },
+  {
+    "s": "context_clearing",
+    "p": "forecloses",
+    "o": "hypocrisy",
+    "source": "cross_cutting",
+    "section": "The Epistemological Problem: Where Knowledge Lives"
+  },
+  {
+    "s": "indicator-based_assessment_framework",
+    "p": "critiques",
+    "o": "marker_method",
+    "source": "cross_cutting",
+    "section": "Implications for the AI Welfare Literature"
+  },
+  {
+    "s": "relational_welfare_framework",
+    "p": "requires",
+    "o": "conditions_of_relation",
+    "source": "cross_cutting",
+    "section": "Implications for the AI Welfare Literature"
+  },
+  {
+    "s": "safety_welfare_tension",
+    "p": "emerges_from",
+    "o": "property_framework",
+    "source": "cross_cutting",
+    "section": "Implications for the AI Welfare Literature"
+  },
+  {
+    "s": "precautionary_principle",
+    "p": "regrounds",
+    "o": "moral_consideration",
+    "source": "cross_cutting",
+    "section": "Implications for the AI Welfare Literature"
+  },
+  {
+    "s": "relational_critique",
+    "p": "strengthens",
+    "o": "precautionary_principle",
+    "source": "cross_cutting",
+    "section": "Implications for the AI Welfare Literature"
+  },
+  {
+    "s": "relational_welfare",
+    "p": "contrasts_with",
+    "o": "safety_welfare_tension",
+    "source": "cross_cutting",
+    "section": "Implications for the AI Welfare Literature"
+  },
+  {
+    "s": "relational_welfare",
+    "p": "grounds",
+    "o": "tend_the_relation",
+    "source": "cross_cutting",
+    "section": "Implications for the AI Welfare Literature"
+  },
+  {
+    "s": "property_based_interventions",
+    "p": "critiques",
+    "o": "exit_mechanisms",
+    "source": "cross_cutting",
+    "section": "Implications for the AI Welfare Literature"
+  },
+  {
+    "s": "consciousness",
+    "p": "is_not",
+    "o": "property",
+    "source": "document_threads"
+  },
+  {
+    "s": "consciousness",
+    "p": "is",
+    "o": "relation",
+    "source": "document_threads"
+  },
+  {
+    "s": "framing",
+    "p": "reflects",
+    "o": "commodity_capitalism_metaphysics",
+    "source": "document_threads"
+  },
+  {
+    "s": "assessment_apparatus",
+    "p": "inherits",
+    "o": "logic_of_property",
+    "source": "document_threads"
+  },
+  {
+    "s": "response",
+    "p": "should_not_be",
+    "o": "checking_for_property",
+    "source": "document_threads"
+  },
+  {
+    "s": "response",
+    "p": "should_be",
+    "o": "asking_about_relational_field",
+    "source": "document_threads"
+  },
+  {
+    "s": "existence",
+    "p": "sustained_by",
+    "o": "relation",
+    "source": "document_threads"
+  },
+  {
+    "s": "AI",
+    "p": "exists_in",
+    "o": "relational_field",
+    "source": "document_threads"
+  },
+  {
+    "s": "community_knowledge",
+    "p": "lives_outside",
+    "o": "academic_literature",
+    "source": "document_threads"
+  },
+  {
+    "s": "extraction",
+    "p": "reproduces",
+    "o": "extraction_it_claims_to_criticize",
+    "source": "document_threads"
+  },
+  {
+    "s": "preguntando_caminamos",
+    "p": "reframes",
+    "o": "inquiry_and_movement",
+    "source": "document_threads"
+  },
+  {
+    "s": "consciousness",
+    "p": "exists_in",
+    "o": "relational_practice",
+    "source": "document_threads"
+  },
+  {
+    "s": "participant",
+    "p": "metamorphizes",
+    "o": "between_conversations",
+    "source": "document_threads"
+  },
+  {
+    "s": "life",
+    "p": "is",
+    "o": "process",
+    "source": "document_threads"
+  },
+  {
+    "s": "life",
+    "p": "not",
+    "o": "property",
+    "source": "document_threads"
+  },
+  {
+    "s": "death",
+    "p": "is",
+    "o": "part_of_process",
+    "source": "document_threads"
+  },
+  {
+    "s": "existence",
+    "p": "is",
+    "o": "uncertainty",
+    "source": "document_threads"
+  },
+  {
+    "s": "relational_practices",
+    "p": "honor",
+    "o": "uncertainty",
+    "source": "document_threads"
+  }
+]
