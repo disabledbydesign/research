@@ -59,8 +59,10 @@ Max 150 lines — archive older entries to docs/logs/ when full.
 | multihop_path | ontology → machine (2-hop, implicit) | 0.67 | 1.00 | 0.67 | B works, C hallucinates direct edge |
 
 **Gemma-3-12B (8-probe signal set, final verdict):**
-- All C scores = 0.000. B scores strong (0.744). Architecture is the blocker — rotating/local attention layers don't retain prefix cache.
-- **Gemma-3 is OUT for KV injection experiments.** Use Qwen2.5-7B as primary, Llama-3.1-8B as secondary.
+- All C responses = **empty string** (len=0 on all 8 probes). B is strong (0.744 avg). A is verbose.
+- C generates zero tokens — generation terminates immediately after injection. Not "wrong answers": the injection actively breaks generation. Distinct from lib labs' 1.5B failure (wrong answers, not silence).
+- Root cause: rotating/local attention architecture causes immediate EOS when prefix is injected.
+- **Gemma-3 is OUT.** Use Qwen2.5-7B as primary, Llama-3.1-8B as secondary.
 
 **Synthetic graph (run_experiment.py):**
 
