@@ -15,6 +15,9 @@ Commands during chat:
     /mode c        — KV injection: graph pre-computed into KV cache
     /mode          — show current mode
     /compare       — run next message in all three modes side by side
+    /probe r       — run next message as a RETRIEVAL probe (A/B/C + saved to log)
+    /probe d       — run next message as a DISPOSITION probe (A/B/C + saved to log)
+    /probes        — print all saved probes this session
     /explain       — explain what each mode does and what we're testing
     /status        — show current graph, encoding, model
     /quit          — exit
@@ -24,6 +27,7 @@ import argparse
 import json
 import re
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -221,11 +225,12 @@ def run():
     print(f"Model:    {args.model}")
     print(colored(f"\n{config['description']}", "dim"))
     print()
-    print("Modes:  /mode a (no injection)  /mode b (text in prompt)  /mode c (KV injection)")
-    print("        /compare — run all three modes on next message")
-    print("        /explain — how KV injection works (no metaphor)")
-    print("        /status  — current graph/encoding/model")
-    print("        /quit    — exit\n")
+    print("Modes:  /mode a  (baseline)   /mode b  (text)   /mode c  (KV injection)")
+    print("        /graph h  (haraway)  or  /graph t  (touchstone)  — switch graph (rebuilds pack)")
+    print("        /probe r  (retrieval probe)  or  /probe d  (disposition probe)  — run + log A/B/C")
+    print("        /probes  — show all probes logged this session")
+    print("        /compare  — run next message in all three modes (no log)")
+    print("        /explain  /status  /quit\n")
 
     print(colored("Loading graph...", "yellow"))
     graph_text, natural_text = load_graph(args.graph, args.encoding)
@@ -242,9 +247,30 @@ def run():
 
     current_mode = "c"
     compare_next = False
+    probe_next: str | None = None  # "r" or "d" when a probe is queued
+    current_graph = args.graph
+    current_encoding = args.encoding
+
+    session_probes: list[dict] = []
+    probe_log_path = BASE_DIR / f"probe_log_{args.graph}_{int(time.time())}.jsonl"
 
     print(colored(f"Active mode: {MODE_LABELS[current_mode]}", "cyan"))
-    print(colored("Tip: try /compare on a question to see what each mode does differently.\n", "dim"))
+    print(colored("Tip: /probe r (retrieval) or /probe d (disposition) to log a question across all conditions.\n", "dim"))
+
+    def rebuild_pack(graph_name: str, encoding: str):
+        """Load a new graph and rebuild the KV pack. Returns (pack, graph_text, natural_text, enc_lines)."""
+        nonlocal current_graph, current_encoding
+        print(colored(f"Loading {GRAPH_CONFIGS[graph_name]['label']} ({encoding})...", "yellow"))
+        gt, nt = load_graph(graph_name, encoding)
+        lines = len(gt.split("\n"))
+        print(colored("Rebuilding KV pack (takes ~30s)...", "yellow"))
+        p = MLXKnowledgePack(args.model)
+        p.add_facts([nt])
+        p.build()
+        current_graph = graph_name
+        current_encoding = encoding
+        print(colored(f"Ready — {GRAPH_CONFIGS[graph_name]['label']}, {encoding} encoding.\n", "yellow"))
+        return p, gt, nt, lines
 
     while True:
         try:
@@ -276,38 +302,98 @@ def run():
                 compare_next = True
                 print(colored("Next message runs in all three modes side by side.", "cyan"))
 
+            elif cmd == "/graph":
+                SHORTCUTS = {"h": "haraway", "t": "touchstone", "haraway": "haraway", "touchstone": "touchstone"}
+                if len(parts) < 2 or parts[1].lower() not in SHORTCUTS:
+                    print(colored(f"Current graph: {GRAPH_CONFIGS[current_graph]['label']}", "cyan"))
+                    print("Usage: /graph h  (haraway)  or  /graph t  (touchstone)")
+                else:
+                    new_graph = SHORTCUTS[parts[1].lower()]
+                    if new_graph == current_graph:
+                        print(colored(f"Already on {GRAPH_CONFIGS[current_graph]['label']}.", "dim"))
+                    else:
+                        pack, graph_text, natural_text, enc_lines = rebuild_pack(new_graph, current_encoding)
+
+            elif cmd == "/probe":
+                if len(parts) < 2 or parts[1].lower() not in ("r", "d", "retrieval", "disposition"):
+                    print(colored("Usage: /probe r  (retrieval)  or  /probe d  (disposition)", "yellow"))
+                else:
+                    ptype = "retrieval" if parts[1].lower() in ("r", "retrieval") else "disposition"
+                    probe_next = ptype
+                    label = "RETRIEVAL" if ptype == "retrieval" else "DISPOSITION"
+                    print(colored(f"Next message logged as {label} probe (runs A/B/C).", "cyan"))
+
+            elif cmd == "/probes":
+                if not session_probes:
+                    print(colored("No probes logged this session.", "dim"))
+                else:
+                    print(colored(f"\n── {len(session_probes)} probe(s) this session ──", "yellow"))
+                    for i, p in enumerate(session_probes, 1):
+                        ptype = p["probe_type"].upper()
+                        print(colored(f"\n[{i}] {ptype}: {p['query']}", "bold"))
+                        for cond, resp in p["responses"].items():
+                            tag = {"A_baseline": "A", "B_text_injection": "B", "C_kv_injection": "C"}[cond]
+                            print(colored(f"  [{tag}] ", cond.split("_")[0].lower() if tag != "C" else "c") + (resp[:120].strip() or "(empty)"))
+                    print(colored(f"\nFull log: {probe_log_path}", "dim"))
+                    print()
+
             elif cmd == "/explain":
                 print(EXPLAIN_TEXT)
 
             elif cmd == "/status":
-                print(colored(f"\nGraph:    {config['label']}", "cyan"))
-                print(colored(f"Encoding: {args.encoding}", "cyan"))
+                print(colored(f"\nGraph:    {GRAPH_CONFIGS[current_graph]['label']}", "cyan"))
+                print(colored(f"Encoding: {current_encoding}", "cyan"))
                 print(colored(f"Model:    {args.model}", "cyan"))
                 print(colored(f"Mode:     {MODE_LABELS[current_mode]}", "cyan"))
-                print(colored(f"Graph lines: {enc_lines}", "dim"))
+                print(colored(f"Probes logged: {len(session_probes)}", "dim"))
+                if session_probes:
+                    print(colored(f"Log: {probe_log_path.name}", "dim"))
                 print()
 
             else:
-                print(f"Unknown: {cmd}. Commands: /mode /compare /explain /status /quit")
+                print(f"Unknown: {cmd}. Commands: /mode /graph /probe /probes /compare /explain /status /quit")
             continue
 
         # Generate response(s)
-        if compare_next:
+        if probe_next or compare_next:
+            ptype = probe_next  # None if this is a plain /compare
+            probe_next = None
             compare_next = False
-            print(colored("\n── A  B  C compare ────────────────────────────────────", "yellow"))
 
-            resp_a = pack.query_baseline(user_input, max_new_tokens=300)
+            header = f"── {ptype.upper()} PROBE ──" if ptype else "── A  B  C compare ──"
+            print(colored(f"\n{header}", "yellow"))
+
+            resp_a = pack.query_baseline(user_input, max_new_tokens=400)
             print(f"\n{colored('[A — no injection]', 'a', 'bold')}")
             print(resp_a.strip())
 
-            resp_b = pack.query_with_context(user_input, natural_text, max_new_tokens=300)
+            resp_b = pack.query_with_context(user_input, natural_text, max_new_tokens=400)
             print(f"\n{colored('[B — text in prompt]', 'b', 'bold')}")
             print(resp_b.strip())
 
-            resp_c = pack.query(user_input, max_new_tokens=300, temp=0.0)
+            resp_c = pack.query(user_input, max_new_tokens=400, temp=0.0)
             print(f"\n{colored('[C — KV injection]', 'c', 'bold')}")
             print(resp_c.strip())
-            print(colored("────────────────────────────────────────────────────\n", "yellow"))
+            print(colored("─" * 52 + "\n", "yellow"))
+
+            if ptype:
+                entry = {
+                    "probe_type": ptype,
+                    "query": user_input,
+                    "graph": args.graph,
+                    "encoding": args.encoding,
+                    "model": args.model,
+                    "timestamp": time.time(),
+                    "responses": {
+                        "A_baseline": resp_a,
+                        "B_text_injection": resp_b,
+                        "C_kv_injection": resp_c,
+                    },
+                }
+                session_probes.append(entry)
+                with open(probe_log_path, "a") as f:
+                    f.write(json.dumps(entry) + "\n")
+                print(colored(f"  Probe #{len(session_probes)} saved → {probe_log_path.name}", "dim"))
 
         else:
             if current_mode == "a":
