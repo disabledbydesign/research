@@ -102,7 +102,76 @@ ISOLATE_QUERIES = [
     },
 ]
 
-ALL_QUERIES = RELATIONSHIP_QUERIES + BRIDGE_QUERIES + CLUSTER_QUERIES + ISOLATE_QUERIES
+
+# ---------------------------------------------------------------------------
+# Multi-hop probes — designed to rule out training data as the answer source
+#
+# Type 1 (cross-component disconnection): feminism and women are in separate
+# disconnected components in this graph due to paragraph-level extraction. Any
+# model reasoning from Haraway training data will say they ARE connected. The
+# correct graph answer is no path exists. Same for labour / homework_economy.
+# Neither disconnection is stated explicitly in natural_text — only the
+# cyborg/women disconnection is stated. These require structural inference.
+#
+# Type 2 (implicit within-component path): paths that exist in the walk
+# encoding but are NOT stated as explicit paths in natural_text. The model
+# must traverse the walk structure to find them, not recall a written statement.
+# Verified paths (v2 graph): politics→cyborg→feminism→labour (3-hop),
+# ontology→cyborg→machine (2-hop). Only the cyborg→labour path is stated
+# explicitly; these are not.
+# ---------------------------------------------------------------------------
+
+MULTIHOP_QUERIES = [
+    {
+        "query": "In this knowledge system, is feminism connected to women?",
+        "ground_truth": (
+            "No — feminism is in the cyborg component (size 70) and women is in "
+            "a separate disconnected component (size 31); no path exists between them"
+        ),
+        "check_terms": ["no", "not", "separate", "disconnect"],
+        "type": "multihop_disconnect",
+    },
+    {
+        "query": "In this knowledge system, is labour connected to homework_economy?",
+        "ground_truth": (
+            "No — labour is in the cyborg component (size 70) and homework_economy "
+            "is in a separate disconnected component (size 31); no path exists"
+        ),
+        "check_terms": ["no", "not", "separate", "disconnect"],
+        "type": "multihop_disconnect",
+    },
+    {
+        "query": "In this knowledge system, what is the path from politics to labour?",
+        "ground_truth": (
+            "3-hop path: politics → cyborg → feminism → labour "
+            "(not stated explicitly in summary; derivable from walk encoding)"
+        ),
+        "check_terms": ["cyborg", "feminism", "labour", "politics"],
+        "type": "multihop_path",
+    },
+    {
+        "query": "In this knowledge system, what connects ontology to machine?",
+        "ground_truth": (
+            "2-hop path: ontology → cyborg → machine "
+            "(ontology has degree 1, connects only to cyborg; not stated explicitly)"
+        ),
+        "check_terms": ["cyborg", "ontology", "machine"],
+        "type": "multihop_path",
+    },
+]
+
+ALL_QUERIES = RELATIONSHIP_QUERIES + BRIDGE_QUERIES + CLUSTER_QUERIES + ISOLATE_QUERIES + MULTIHOP_QUERIES
+
+# Signal-only subset for cross-model baseline runs.
+# Drops probes where A≥0.75 (training data answers without injection) or Δ=0 on Qwen2.5-7B.
+# Keeps: explicit-recall anchor (cyborg/labour), three clean-signal originals, all 4 multi-hop.
+# Use with --probe-set signal.
+SIGNAL_QUERIES = [
+    RELATIONSHIP_QUERIES[2],   # cyborg → labour (explicit 2-hop, anchor for comparison)
+    BRIDGE_QUERIES[0],         # most central concept (A=0, Δ=+1.00)
+    CLUSTER_QUERIES[0],        # cluster structure (A=0, Δ=+0.67)
+    ISOLATE_QUERIES[1],        # blasphemy (A=0, Δ=+0.60, graph-specific)
+] + MULTIHOP_QUERIES
 
 
 # ---------------------------------------------------------------------------
@@ -227,14 +296,21 @@ def run_condition_c(queries, pack, response_limit: int) -> list[TrialResult]:
 # Main experiment runner
 # ---------------------------------------------------------------------------
 
-def run_experiment(include_d: bool = False, model: str = KV_MODEL, response_limit: int = 3000) -> dict:
+def run_experiment(
+    include_d: bool = False,
+    model: str = KV_MODEL,
+    response_limit: int = 3000,
+    probe_set: str = "signal",
+) -> dict:
     log.info("Loading Haraway graph from haraway_graph_v2/...")
     G, walk_encoding, natural_text = load_haraway_graph()
     log.info(f"  {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
 
-    import networkx.algorithms as nxa
     comps = list(nx.connected_components(G))
     log.info(f"  {len(comps)} connected components")
+
+    queries = SIGNAL_QUERIES if probe_set == "signal" else ALL_QUERIES
+    log.info(f"  Probe set: {probe_set!r} ({len(queries)} probes)")
 
     sys.path.insert(0, str(Path(__file__).parent))
     from mlx_kvpack import MLXKnowledgePack
@@ -248,13 +324,13 @@ def run_experiment(include_d: bool = False, model: str = KV_MODEL, response_limi
     all_results = []
 
     log.info("\n=== Condition A: Baseline (no injection) ===")
-    all_results.extend(run_condition_a(ALL_QUERIES, pack, response_limit))
+    all_results.extend(run_condition_a(queries, pack, response_limit))
 
     log.info("\n=== Condition B: Text injection (prompt context) ===")
-    all_results.extend(run_condition_b(ALL_QUERIES, natural_text, pack, response_limit))
+    all_results.extend(run_condition_b(queries, natural_text, pack, response_limit))
 
     log.info("\n=== Condition C: KV text injection (MLXKnowledgePack) ===")
-    all_results.extend(run_condition_c(ALL_QUERIES, pack, response_limit))
+    all_results.extend(run_condition_c(queries, pack, response_limit))
 
     # Summarise
     summary: dict = {}
@@ -277,10 +353,36 @@ def run_experiment(include_d: bool = False, model: str = KV_MODEL, response_limi
             tavg = sum(type_scores) / len(type_scores)
             log.info(f"  {qtype}: {tavg:.3f}")
 
+    # Per-probe table: A vs B vs C for every query
+    log.info("\n" + "=" * 60)
+    log.info("PER-PROBE BREAKDOWN  (A=baseline  B=text-in-prompt  C=kv-inject)")
+    log.info("=" * 60)
+    by_query: dict[str, dict[str, float]] = {}
+    qtype_map: dict[str, str] = {}
+    for r in all_results:
+        by_query.setdefault(r.query, {})[r.condition] = r.score
+        qtype_map[r.query] = r.query_type
+    for q, scores_by_cond in by_query.items():
+        a = scores_by_cond.get("A_baseline", 0)
+        b = scores_by_cond.get("B_text_injection", 0)
+        c = scores_by_cond.get("C_kv_injection", 0)
+        delta_ac = c - a
+        flag = ""
+        qtype = qtype_map[q]
+        if qtype in ("multihop_disconnect", "multihop_path"):
+            if delta_ac >= 0.4:
+                flag = "  ✓ multi-hop working"
+            elif delta_ac <= 0.1 and a <= 0.3:
+                flag = "  ✗ no injection signal"
+            elif a >= 0.4 and delta_ac <= 0.1:
+                flag = "  ~ training data override"
+        log.info(f"  [{qtype}] A={a:.2f} B={b:.2f} C={c:.2f} Δ={delta_ac:+.2f}  {q[:60]}{flag}")
+
     output = {
         "experiment": "haraway_graph_injection",
         "timestamp": time.time(),
         "model": model,
+        "probe_set": probe_set,
         "graph": {
             "source": "haraway_graph_v2",
             "nodes": G.number_of_nodes(),
@@ -335,7 +437,16 @@ if __name__ == "__main__":
         default=3000,
         help="Max chars saved per response (default 3000; increase for thinking models)",
     )
+    parser.add_argument(
+        "--probe-set",
+        default="signal",
+        choices=["signal", "full"],
+        help=(
+            "signal (default): 8 probes — 4 signal-bearing originals + 4 multi-hop. "
+            "full: all 12 probes including high-baseline noise probes."
+        ),
+    )
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="[haraway_exp] %(message)s")
-    run_experiment(model=args.model, response_limit=args.response_limit)
+    run_experiment(model=args.model, response_limit=args.response_limit, probe_set=args.probe_set)
