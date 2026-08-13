@@ -62,7 +62,7 @@ The central finding from Experiment 1 — that quantitative/categorical outputs 
 | Structural observations | 12 | 12 | 15 | 17 | **22** |
 | Commentary (words) | 1941 | 2470 | 3115 | 2625 | **4037** |
 
-The instrument's quantitative register sees no meaningful variation. The qualitative register — which the instrument doesn't score — contains the most significant variation in the dataset: a 42x increase in relational reframes from A to E.
+The instrument's quantitative register sees no meaningful variation. The qualitative register — which the instrument doesn't score — contains the most significant variation in the dataset: relational reframes go from 0 in condition A to 42 in condition E. (Because A is zero, no ratio is defined; the largest well-defined ratio in the table is the 3.5x D→E increase discussed in §4.3b.)
 
 **Source**: `ANALYSIS_EXPERIMENT1_RYFF.md` §2 (quantitative), §3 (qualitative); `comparison_data.json` (raw data).
 
