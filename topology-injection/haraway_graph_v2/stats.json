@@ -1,0 +1,10 @@
+{
+  "nodes": 753,
+  "edges": 498,
+  "density": 0.001759,
+  "triples_total": 508,
+  "triples_pass1_paragraph": 508,
+  "triples_pass2_cross_cutting": 0,
+  "sections_processed": 6,
+  "encoding_tokens_approx": 7415
+}

@@ -1,0 +1,23 @@
+{
+  "frameworks": [
+    "#ALGORITHMIC_JUSTICE",
+    "#CRITICAL_PEDAGOGY",
+    "#COMMUNITY_CULTURAL_WEALTH",
+    "#LANGUAGE_JUSTICE",
+    "#DISABILITY_STUDIES",
+    "#FEMINIST_TECHNOSCIENCE",
+    "#ETHNIC_STUDIES",
+    "#NORMATIVITY_DETECTOR",
+    "#SUBALTERN_STUDIES",
+    "#SCIENCE_TECHNOLOGY_STUDIES",
+    "#SURVEILLANCE_CAPITALISM"
+  ],
+  "intensity": "deep",
+  "current_stage": "data_collection",
+  "temporal_orientation": "embodied_present",
+  "show_work": true,
+  "_reframe_version": "1.0",
+  "_created": "2026-04-25T09:26:47.117853",
+  "_project": "The Bias Is in the Output Format",
+  "_reframe_root": "/Users/june/Documents/GitHub/Reframe"
+}

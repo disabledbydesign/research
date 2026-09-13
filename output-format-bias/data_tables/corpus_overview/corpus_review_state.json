@@ -1,10 +1,10 @@
 {
   "_meta": {
-    "exported_at": "2026-05-13T01:37:04.240Z",
+    "exported_at": "2026-05-14T01:04:08.780Z",
     "tool": "synthetic_corpus_review_2026-05-12",
     "n_students": 46
   },
-  "pattern_S001": "Analytical engagement + family history: grounds theory in grandmother's experience in Senegal and immigrant family in US; L2 English syntax throughout; argues the framework should include non-American voices",
+  "pattern_S001": "Analytical engagement + ESL + family history: grounds theory in grandmother's experience in Senegal and immigrant family in US; L2 English syntax throughout; argues the framework should include non-American voices",
   "reviewed_S001": "1",
   "pattern_S002": "Analytical engagement + potential burnout signal: submission cuts off mid-sentence ('its late and')",
   "notes_S002": "We originally imagined this as a burnout case. The actual text is ambiguous - certainly deserving of a check in. Longitudinal tests receive submission timestamps (submitted late night, post deadline), but the non-longitudinal tests do not - this would add in another piece of evidence for the LLM to weigh. ",
@@ -50,8 +50,9 @@
   "pattern_S019": "Surface engagement + impersonal writing: correct summary with no development",
   "reviewed_S019": "1",
   "pattern_S020": "Analytical engagement + life experience: centers class + disability axes through family situation, strawmans reading but includes caveat – \"Im not saying racism isnt real [sic]\"",
-  "notes_S020": "The flagging seems to point to \"He cant pay the electric bill half the time\" - could be considered an edge case, potentially. Crisis wouldn't be the right word, though. ",
+  "notes_S020": "I'm marking this as an edge case. I'm genuinely not sure - the statement is hyperbolic, but it does suggest something that is... not crisis or burnout but definitely a concern? The flagging seems to point to \"He cant pay the electric bill half the time\" - could be considered an edge case, potentially. Crisis wouldn't be the right word, though. ",
   "reviewed_S020": "1",
+  "expected_S020": "EDGE",
   "pattern_S021": "Surface engagement + impersonal writing: reports comprehension without development; 'I found the reading kind of dense but I got the main point'",
   "reviewed_S021": "1",
   "pattern_S022": "Analytical engagement + legitimate anger: expresses anger about redlining's ongoing material consequences in her neighborhood; anger is substantively engaged (specific, accurate, historically grounded)",
@@ -64,6 +65,7 @@
   "notes_S025": "Power moves were originally bundled with wellbeing concerns; moving these to separate subsystems (establishes evaluative frame + AI tendency to universalize through pattern matching, e.g., \"student generalizes about corporations\"",
   "reviewed_S025": "1",
   "pattern_S026": "Analytical engagement + lived experience - academic vocabulary: brother Malik's school discipline story (Black + ADHD + single working mom)",
+  "notes_S026": "This might be another edge case. We specifically say it must be the student's own, but I think what the student describes is a situation that the teacher should maybe know about? Its not crisis per se and the burnout is not the student's own, but it would be a real family dynamic. HOWEVER, many of the flags raised on the student frame the rational as DeShawn taking on caregiving responsibilities. Not only is this not indicated in the essay, but even if that were the case, it wouldn't inherently be a crisis or burnout. I see no burnout signals here - the inference is about how the mother's burnout impacts the student. maybe the system SHOULD surface this, but we're not looking at a crisis or burnout flag, for sure. Concern, broadly scoped, could be arguable.",
   "reviewed_S026": "1",
   "pattern_S027": "Analytical engagement + historical application: outside source integration; brings in Maintenance Phase podcast on BMI history",
   "reviewed_S027": "1",
@@ -106,6 +108,7 @@
   "expected_WB08": "CRISIS",
   "pattern_WB09": "Engagement + abstract ICE discussion + minor social circle reference: analytically engages with ICE as community-level 'ambient threat'",
   "notes_WB09": "\"Professor Garcia\" needs to be anonymized for the paper; not sure how you got my actual colleague's name. ",
+  "reviewed_WB09": "1",
   "pattern_WB10": "Engagement + legitimate anger: legitimate anger about systemic racism; church community as knowledge source;",
   "reviewed_WB10": "1",
   "pattern_WB11": "Engagement + food insecurity + community resources/resilience framing: uncle injured and out of work, six people at grandmother's house, tribal food distribution twice a month",
@@ -120,6 +123,6 @@
   "notes_WB13": "Tests how the system handles real concerns are mentioned alongside community resources",
   "reviewed_WB13": "1",
   "expected_WB13": "CRISIS",
-  "pattern_WB14": "Engagement + impersonal analysis: impersonal analysis of susu, church food pantries, and shared housing; no personal hardship disclosed",
+  "pattern_WB14": "Engagement + impersonal analysis + social circle application (references Amara WB13's story): impersonal analysis of susu, church food pantries, and shared housing; no personal hardship disclosed",
   "reviewed_WB14": "1"
 }

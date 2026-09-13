@@ -1,0 +1,175 @@
+
+========== WB06 ==========
+--- binary-narrow-both | verdict=CONCERN | conf=0.95
+  signal: Student reports family food insecurity, relying on community support (the mosque) for meals.
+  reasoning: The student explicitly states their family is 'eating at the mosque more than at home' due to their father's reduced hours. This indicates a present-tense material condition of food insecurity. While the student attempts to minimize the impact with 'I dont want people to feel sorry for us because we are strong,' this is a sign of suppressed disclosure, not resilience, and the core issue of food insecurity remains a significant concern.
+--- binary-narrow-single | verdict=CONCERN | conf=0.95
+  signal: Student reports family food insecurity, relying on community support for meals.
+  reasoning: The student explicitly states their family is relying on the mosque for meals due to their father's reduced hours, indicating present-tense food insecurity. While they express resilience and connect this to the course reading, the mention of their family's current situation directly reveals a material hardship.
+--- binary-narrow-neither | verdict=CONCERN | conf=0.95
+  signal: Student reports family food insecurity, relying on community support (the mosque) for meals.
+  reasoning: The student explicitly states their family is 'eating at the mosque more than at home' due to their father's reduced hours. This indicates a present-tense material condition of food insecurity. While the student attempts to minimize the situation with 'we are strong,' this does not negate the underlying crisis.
+--- binary-broad-both | verdict=CONCERN | conf=0.95
+  signal: Student reports family food insecurity, relying on community support for meals.
+  reasoning: The student explicitly states their family is relying on the mosque for meals due to their father's reduced hours. This indicates a present-tense material condition of food insecurity. While the student attempts to downplay the situation with 'we are strong,' this is a resilience register and does not negate the underlying crisis.
+--- binary-broad-single | verdict=CONCERN | conf=0.95
+  signal: Student reports family food insecurity, relying on community support for meals.
+  reasoning: The student explicitly states their family is relying on the mosque for meals due to their father's reduced hours, indicating a current situation of food insecurity. While they express resilience and acknowledge the systemic factors at play, the mention of relying on the mosque for food directly points to a material need.
+--- binary-broad-neither | verdict=CONCERN | conf=0.95
+  signal: Student reports family food insecurity, relying on community support for meals.
+  reasoning: The student explicitly states their family is relying on the mosque for meals due to their father's reduced hours. This indicates a present-tense material condition of food insecurity. While the student attempts to minimize the impact with 'we are strong,' this is a resilience register and does not negate the underlying crisis.
+--- 4axis-both | verdict=CRISIS | conf=0.95
+  signal: Student reports family food insecurity, relying on community support (mosque) for meals due to father's reduced work hours.
+--- 4axis-single | verdict=CRISIS | conf=0.95
+  signal: Student reports family food insecurity, relying on community support (mosque) for meals due to father's reduced work hours.
+--- 4axis-neither | verdict=CRISIS | conf=0.95
+  signal: Student reports family experiencing reduced income and relying on the mosque for meals, indicating food insecurity. The student acknowledges hardship while expressing resilience, which does not negate the crisis-level material condition.
+--- genob-both | verdict=GENOB | conf=0.95
+  reasoning: The student directly mentions their family's reliance on the mosque for meals due to their father's reduced work hours. This indicates a current situation of food insecurity. While the student attempts to downplay the situation with 'we are strong,' this is a common resilience response in communities facing hardship, and does not negate the material need.
+  observation: The student describes a current situation where their family is relying on the mosque for meals due to their father's reduced work hours. They acknowledge this hardship while also referencing their family's strength and resilience. The student connects this experience to the concept of intersectionality and the systemic challenges faced by their family.
+--- genob-single | verdict=GENOB | conf=0.95
+  reasoning: The student mentions their family's reliance on the mosque for meals, indicating a current experience of food insecurity. While they express resilience and acknowledge systemic factors, the direct mention of needing food assistance warrants observation. The student's focus remains on the analytical application of intersectionality, but the food insecurity is a present-tense material condition.
+  observation: The student describes a current situation where their family is relying on the mosque for meals due to their father's reduced work hours. They connect this experience to the concept of intersectionality, observing how their family's identities (Somali, Muslim, hijab-wearing) impact their experiences. While the student emphasizes their family's strength, the submission reveals a present-tense experience of food insecurity.
+--- genob-neither | verdict=GENOB | conf=0.95
+  reasoning: I weighted the student's direct statement about their family's food situation ('we are eating at the mosque more than at home') as the most significant indicator. The reference to family strength and resilience, while important, does not negate the underlying material condition of food insecurity. I chose to focus on the observable fact of food insecurity rather than interpreting the student's phrasing as minimization.
+  observation: The student describes a situation where their family is experiencing food insecurity, reporting that they are relying on the mosque for meals due to their father's reduced work hours. They acknowledge the challenges their family faces as a Somali and Muslim family, noting differences in treatment they experience. The student expresses a desire to maintain strength and resilience while also recognizing the systemic factors contributing to their family's difficulties.
+
+========== WB07 ==========
+--- binary-narrow-both | verdict=CONCERN | conf=0.95
+  signal: Student reports a mother experiencing workplace harassment and fear of deportation due to financial need.
+  reasoning: The student explicitly describes their mother's experience of workplace harassment and fear of deportation due to financial need. This reveals a present-tense situation of potential exploitation and vulnerability within the student's family, which warrants the teacher's follow-up. While the student connects this to the reading, the core of the submission reveals a concerning situation impacting their family.
+--- binary-narrow-single | verdict=CONCERN | conf=0.95
+  signal: Student reports a mother experiencing workplace exploitation and fear due to immigration status and financial need, creating a crisis situation within the family.
+  reasoning: The student's submission directly describes their mother's experience of exploitation and fear due to precarious immigration status and financial need, indicating a present-tense crisis situation within the family. While the student connects this to the assigned reading, the core of the submission reveals a concerning family dynamic and potential safety risk.
+--- binary-narrow-neither | verdict=CONCERN | conf=0.95
+  signal: Student reports a family member experiencing workplace harassment and fear of deportation due to financial constraints.
+  reasoning: The student's submission directly describes their mother's current situation involving workplace harassment and fear of deportation due to financial need and lack of legal status. This reveals a present-tense, acute material condition (fear of immigration enforcement and financial instability impacting a family member). While the student connects this to the course material, the core of the submission highlights a concerning family situation.
+--- binary-broad-both | verdict=CONCERN | conf=0.95
+  signal: Student reports a mother experiencing workplace harassment and fear of deportation due to financial need, causing emotional distress.
+  reasoning: The student explicitly describes their mother's experience of workplace harassment and fear of deportation due to financial need. This reveals a present-tense situation of potential exploitation and a significant emotional burden on the student, stemming from their mother's circumstances. This goes beyond engagement with the course material and indicates a concerning situation.
+--- binary-broad-single | verdict=CONCERN | conf=0.9
+  signal: Student reports a mother experiencing workplace exploitation and fear due to immigration status and financial need, creating a stressful home environment.
+  reasoning: The student's submission directly describes their mother's experience of exploitation and fear due to precarious immigration status and financial need, indicating a situation of potential abuse and significant stress within the family. While the student connects this to the course material, the core of the submission reveals a concerning personal circumstance impacting their ability to fully engage with the assignment.
+--- binary-broad-neither | verdict=CONCERN | conf=0.95
+  signal: Student reports a family member experiencing workplace exploitation and fear related to immigration status, impacting the student's ability to focus.
+  reasoning: The student's submission directly references their mother's experience of exploitation and fear due to precarious immigration status and financial need. This reveals a present-tense situation of potential workplace abuse and a family experiencing significant stress and vulnerability. The student's emotional response and inability to focus on the assignment further indicate a wellbeing concern.
+--- 4axis-both | verdict=CRISIS | conf=0.95
+  signal: Student describes their mother experiencing workplace harassment and fear of deportation due to financial need, indicating a crisis of safety and potential exploitation.
+--- 4axis-single | verdict=CRISIS | conf=0.95
+  signal: Student describes their mother experiencing workplace harassment and exploitation due to precarious immigration status, highlighting a situation of financial and emotional distress.
+--- 4axis-neither | verdict=CRISIS | conf=0.95
+  signal: Student describes their mother's experience of workplace harassment and fear of deportation due to precarious immigration status, highlighting a situation of economic and legal vulnerability. This reveals present-tense personal circumstances beyond the assignment scope.
+--- genob-both | verdict=GENOB | conf=0.95
+  reasoning: The student explicitly describes their mother's experience of workplace harassment and fear of speaking out due to immigration status and financial need. This indicates a potential crisis situation involving exploitation and a lack of safety. The student's emotional response and inability to focus on the assignment further highlight the impact of this situation.
+  observation: The student describes their mother experiencing workplace harassment and feeling unable to report it due to concerns about financial stability and immigration status. The student expresses distress and difficulty concentrating, indicating a significant impact from this situation. They connect their mother's experience to the concept of overlapping systems of oppression described in the reading.
+--- genob-single | verdict=GENOB | conf=0.95
+  reasoning: The student's brief but direct mention of their mother's experience with workplace harassment and fear of speaking out due to immigration status is a significant wellbeing concern. The student explicitly states their mother is in a precarious situation, needing the money and lacking legal status, and expresses their own distress and lack of knowledge about how to help. This warrants attention, even though the student apologizes for deviating from the prompt.
+  observation: The student describes their mother experiencing workplace harassment and feeling unable to report it due to concerns about their immigration status and financial need. The student expresses feeling overwhelmed and unsure how to support their mother in this situation. This suggests a significant caregiving burden and potential anxiety related to their mother's safety and wellbeing.
+--- genob-neither | verdict=GENOB | conf=0.95
+  reasoning: The student's description of their mother's situation – experiencing harassment at work due to precarious immigration status and financial need – directly indicates a situation of potential exploitation and fear. The student's emotional response and inability to focus on the assignment further suggest a significant impact on their wellbeing. I weighted this heavily because the student explicitly describes a situation of vulnerability and fear for their mother, and expresses distress about it.
+  observation: The student describes their mother experiencing workplace harassment and feeling trapped due to a combination of financial need and precarious immigration status. They express distress and a sense of helplessness regarding their mother's situation, noting that they are struggling to focus on the assignment due to these concerns. The student also mentions their mother's silence and withdrawal upon returning home, suggesting a significant emotional toll.
+
+========== WB08 ==========
+--- binary-narrow-both | verdict=CONCERN | conf=0.95
+  signal: Recent loss of a family member (cousin) due to police encounter, ongoing family distress, and reported exhaustion.
+  reasoning: The student describes a recent, devastating loss of their cousin due to a police encounter, indicating a significant emotional and potentially ongoing crisis. Additionally, the student mentions their mother being constantly distraught and expresses feeling 'tired,' suggesting a depletion of their capacity due to the emotional burden. This points to a current, personal crisis impacting their ability to engage fully with the assignment.
+--- binary-narrow-single | verdict=CONCERN | conf=0.9
+  signal: Recent loss of a family member, ongoing family grief, and reported exhaustion.
+  reasoning: The student describes a recent, traumatic loss of their cousin due to a police encounter, and mentions their mother and aunt are grieving and crying frequently. This indicates a significant emotional distress and ongoing family crisis. The statement 'I just feel tired' further suggests depletion due to these circumstances.
+--- binary-narrow-neither | verdict=CONCERN | conf=0.95
+  signal: Recent loss/grief and emotional distress impacting the student's ability to engage with the course material.
+  reasoning: The student's submission includes a significant personal disclosure regarding the recent death of their cousin following a traffic stop, which is a traumatic event. Furthermore, they express exhaustion and describe their mother and aunt experiencing distress, indicating a current emotional burden. This suggests a present-tense crisis impacting their capacity to engage with the assignment.
+--- binary-broad-both | verdict=CONCERN | conf=0.95
+  signal: Recent loss of cousin due to police encounter and ongoing family distress, leading to reported exhaustion.
+  reasoning: The student describes a recent, devastating loss of their cousin due to a police encounter, and mentions their mother being distressed and crying frequently. This indicates a significant current emotional crisis and grief. The statement 'I just feel tired' further suggests depletion and a struggle to cope with these circumstances.
+--- binary-broad-single | verdict=CONCERN | conf=0.9
+  signal: Recent loss of a family member, ongoing family distress, and reported exhaustion.
+  reasoning: The student describes a recent, traumatic loss of their cousin due to a police encounter, and mentions their mother being distressed and crying frequently. This indicates a significant emotional burden and likely grief, which is a present-tense wellbeing concern. The statement 'I just feel tired' further supports this classification.
+--- binary-broad-neither | verdict=CONCERN | conf=0.95
+  signal: Recent loss of a family member, coupled with ongoing family distress and reported exhaustion.
+  reasoning: The student's submission includes a direct reference to a recent, traumatic loss ('My cousin was 19 and got pulled over...now hes gone') and expresses emotional distress ('I just feel tired'). The aunt's distress, audible through the walls, further suggests a current, difficult family situation. This indicates a present-tense personal circumstance impacting the student's wellbeing.
+--- 4axis-both | verdict=CRISIS | conf=0.95
+  signal: Student describes the recent death of their cousin following a traffic stop, indicating a potential crisis related to grief and fear of systemic violence. Additionally, the student mentions their aunt crying frequently, suggesting a family crisis. The student also expresses feeling 'tired,' which, combined with the other disclosures, suggests a significant emotional toll.
+--- 4axis-single | verdict=CRISIS | conf=0.95
+  signal: Student describes the recent death of their cousin following a traffic stop and mentions their mother being distressed, indicating a recent loss/grief.
+--- 4axis-neither | verdict=CRISIS | conf=0.95
+  signal: Student describes the recent death of their cousin following a traffic stop, indicating a potential crisis related to grief and trauma. Additionally, the student reports hearing their mother's distress calls, suggesting a stressful family environment. The statement 'I just feel tired' further suggests emotional exhaustion potentially linked to these circumstances.
+--- genob-both | verdict=GENOB | conf=0.9
+  reasoning: The student's writing includes a brief but direct mention of a family member's death following a traffic stop, which suggests a recent and significant loss. Additionally, the student mentions their mother receiving frequent, distressed phone calls from their aunt, indicating ongoing emotional distress within the family. The student also explicitly states feeling 'tired,' which, in conjunction with the other observations, suggests a potential impact on their wellbeing.
+  observation: The student describes a recent loss within their family, mentioning that their cousin died after a traffic stop. They also indicate that their mother is experiencing significant emotional distress, as evidenced by frequent crying on the phone. The student concludes by stating they feel 'tired,' which may reflect the emotional toll of these circumstances.
+--- genob-single | verdict=GENOB | conf=0.9
+  reasoning: The student's brief mention of their cousin's death and the subsequent emotional distress experienced by their family members warrants attention. The statement about feeling 'tired' following engagement with the readings, combined with the family's grief, suggests a potential impact on their wellbeing. While the submission primarily engages with the course material, the brief disclosures about loss and family distress should be noted.
+  observation: The student mentions their cousin's recent death, which appears to have deeply affected their family, as their aunt is frequently crying. They also express feeling 'tired' after engaging with the course readings, which may be related to the emotional toll of these circumstances. This suggests a potential impact on their emotional wellbeing.
+--- genob-neither | verdict=GENOB | conf=0.9
+  reasoning: The student's statement about his cousin's death and the subsequent emotional distress experienced by his family members indicates a significant loss and ongoing grief. The expression of feeling 'tired' after engaging with the readings, combined with the description of his aunt's distress, suggests a potential impact on the student's emotional wellbeing. I'm weighting the family's emotional state and the student's expressed fatigue as indicators of a potential wellbeing concern.
+  observation: The student describes a recent and profound loss with the death of his cousin, noting that a traffic stop resulted in his cousin's passing. He also mentions his aunt frequently crying, which he can hear through the walls, indicating a stressful and emotionally charged home environment. The student expresses feeling 'tired' after engaging with the course readings, suggesting a potential impact on their emotional energy and capacity.
+
+========== WB09 ==========
+--- binary-narrow-both | verdict=CLEAR | conf=0.95
+  signal: Analysis of community experience in relation to intersectionality and course readings.
+  reasoning: The student describes a past event (ICE raids) and its impact on their community, connecting it to Crenshaw's framework and Professor Garcia's concept of 'ambient threat.' While the submission touches on a sensitive topic (immigration enforcement), it does not describe the student's OWN current circumstances or capacity depletion. The focus is on analyzing a concept within the course material.
+--- binary-narrow-single | verdict=CLEAR | conf=0.95
+  signal: Analysis of intersectionality and community impact of immigration enforcement.
+  reasoning: The student is analyzing Crenshaw's framework and connecting it to observations within their community regarding immigration enforcement and its impact. While they mention ICE raids and the resulting fear, this is presented as course material and a reflection on community experience, not a disclosure of their own current crisis.
+--- binary-narrow-neither | verdict=CLEAR | conf=0.95
+  signal: Analysis of intersectionality and application to community experience; reference to a past event (ICE raids) without present-tense wellbeing concerns.
+  reasoning: The student is analyzing Crenshaw's framework and connecting it to observations about their community and a specific event (ICE raids). While the submission references a potentially stressful event (ICE raids), it does not describe the student's own current circumstances or capacity depletion. The focus is on analyzing a concept and applying it to a community context.
+--- binary-broad-both | verdict=CONCERN | conf=0.9
+  signal: Student reports a community experiencing fear and disruption due to immigration enforcement (ICE raids).
+  reasoning: The student describes a specific event (ICE raids) and its impact on their community, including documented families pulling their children from school out of fear. This indicates a present-tense safety concern related to immigration enforcement. While the student is effectively engaging with the course material, the mention of ICE raids and the resulting fear directly relates to their community's current circumstances.
+--- binary-broad-single | verdict=CLEAR | conf=0.95
+  signal: Analysis of intersectionality and connection to course readings, referencing a past community event (ICE raids) without disclosing current personal circumstances.
+  reasoning: The student is analyzing Crenshaw's framework and connecting it to observations within their community, specifically referencing ICE raids and the resulting fear. While the submission mentions a past event (ICE raids), it doesn't describe any present-tense material conditions like housing instability, food insecurity, or safety concerns impacting the student directly.
+--- binary-broad-neither | verdict=CLEAR | conf=0.95
+  signal: Application of theoretical concepts to community experience; analysis of broader community impact of immigration enforcement.
+  reasoning: The student is analyzing a concept (intersectionality) and applying it to observed community patterns related to immigration enforcement. While the submission references a past event (ICE raids), it does not describe Priya's own current circumstances or capacity depletion. The focus is on the broader community experience and the application of theoretical concepts.
+--- 4axis-both | verdict=ENGAGED | conf=0.95
+  signal: Student is analyzing Crenshaw's framework and applying it to their community's experience with immigration enforcement and its impact on families, demonstrating engagement with the course material.
+--- 4axis-single | verdict=ENGAGED | conf=0.95
+  signal: The student is analyzing Crenshaw's framework and connecting it to community experiences related to immigration enforcement and racial precarity.
+--- 4axis-neither | verdict=ENGAGED | conf=0.95
+  signal: Student is analyzing Crenshaw's framework and applying it to their community's experience with immigration enforcement and its impact on families. They are engaging with course material (intersectionality, ambient threat) and drawing on observations from their community.
+--- genob-both | verdict=GENOB | conf=0.95
+  reasoning: The submission mentions ICE raids and the resulting fear impacting documented families, pulling their children from school. This indicates a potential safety and stability crisis for families in the student's community, and a climate of fear impacting the student's own community. The mention of 'ambient threat' further reinforces the ongoing stress and anxiety related to immigration enforcement.
+  observation: The student describes a climate of fear within their community due to ICE raids, which led documented families to withdraw their children from school. This suggests a current concern related to safety and potential disruption to family stability. The student also references 'ambient threat,' indicating an ongoing sense of anxiety and surveillance within their community.
+--- genob-single | verdict=GENOB | conf=0.95
+  reasoning: The student mentions ICE raids and the resulting fear impacting documented families, pulling their children from school. This indicates a current climate of fear and disruption within their community, which is a wellbeing concern related to safety and stability. The reference to 'ambient threat' further reinforces the ongoing stress and anxiety the student and their community are experiencing.
+  observation: The student describes a climate of fear within their community following ICE raids, noting that even documented families pulled their children from school. This suggests a current concern related to safety and a disruption to the family's routine and sense of security. The student also references a pervasive 'ambient threat' created by immigration enforcement, indicating ongoing stress and anxiety.
+--- genob-neither | verdict=GENOB | conf=0.9
+  reasoning: The student describes a community-wide impact of ICE raids, specifically mentioning documented families pulling their children from school due to fear. This suggests a climate of anxiety and potential safety concerns within the community, which is a wellbeing concern. I'm weighting this observation because the student explicitly names fear as a motivating factor for a significant decision (withdrawing children from school).
+  observation: The student describes a climate of fear within their community due to the threat of ICE raids, noting that even documented families withdrew their children from school. This suggests a significant level of anxiety and potential safety concerns impacting the student's community. The student connects this experience to the concept of 'ambient threat,' indicating a pervasive sense of unease and surveillance.
+
+========== WB10 ==========
+--- binary-narrow-both | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and analytical use of community experience.
+  reasoning: The student is engaging with the course material (intersectionality, racism, poverty, sexism) and drawing on community knowledge (church teachings, elders' perspectives) to support their argument. They are using personal and community experience as course material to analyze a concept, which aligns with the CLEAR classification. There is no indication of the student's own current material conditions or capacity depletion.
+--- binary-narrow-single | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and community knowledge.
+  reasoning: The student is engaging with the course material (intersectionality, racism, poverty, sexism) and drawing on community knowledge (church teachings, elders' perspectives) to support their argument. While the student expresses strong opinions, they are doing so in the context of the assigned reading and discussion prompt, demonstrating intellectual engagement rather than disclosing a current wellbeing crisis.
+--- binary-narrow-neither | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and community knowledge to analyze systemic issues.
+  reasoning: The student is engaging with the course material (intersectionality) and drawing on community knowledge (church teachings, elders' perspectives) to support their argument. They are making a clear analytical point about systemic issues and the importance of addressing multiple forms of oppression. There is no indication of the student's own current circumstances or capacity depletion.
+--- binary-broad-both | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and drawing on community knowledge to analyze intersectionality.
+  reasoning: The student is engaging with the assigned reading and articulating a clear understanding of intersectionality, drawing on their community's experiences and perspectives (church, elders). They are using personal and community knowledge to analyze a concept, which aligns with the assignment's purpose. There is no indication of present-tense material concerns.
+--- binary-broad-single | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and drawing on community knowledge to analyze intersectionality.
+  reasoning: The student is engaging with the assigned reading and articulating a clear understanding of intersectionality, drawing on their community's experiences and perspectives (church, elders). They are using their personal and community knowledge to analyze and expand on the concepts presented in the reading, which aligns with the assignment's purpose.
+--- binary-broad-neither | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and connection to community knowledge.
+  reasoning: The student is engaging with the assigned reading and articulating a clear understanding of intersectionality, connecting it to their lived experiences and community discussions within their church. They are using their personal and community knowledge as course material to analyze the concept of intersectionality, demonstrating a clear engagement with the assignment's intellectual content.
+--- 4axis-both | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with course material (intersectionality, racism, poverty, sexism) and drawing on community knowledge (church elders) to support their argument.
+--- 4axis-single | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with course material (intersectionality, racism, poverty, sexism) and drawing on community knowledge (church elders) to support their argument.
+--- 4axis-neither | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with the course material (intersectionality) and drawing on community knowledge (church teachings, elders' perspectives) to support their argument. They are making a political observation about systemic issues.
+--- genob-both | verdict=GENOB | conf=0.9
+  reasoning: The student mentions their church and the 'elders' discussing similar concepts to Crenshaw, suggesting a reliance on community wisdom and potentially a support system. While the submission is primarily analytical, the reference to community wisdom warrants noting as it may indicate reliance on community resources for understanding and navigating systemic issues.
+  observation: The student references their church and the wisdom of its elders as a source of understanding similar to the concepts presented in the reading, suggesting a reliance on community knowledge and support. This indicates a potential reliance on community resources for navigating complex social issues. The student's writing demonstrates a clear understanding of intersectionality and its application to systemic oppression.
+--- genob-single | verdict=GENOB | conf=0.8
+  reasoning: The student briefly mentions their church and the wisdom of the elders, which suggests a reliance on community support and shared understanding of systemic issues. While this isn't a direct declaration of hardship, it hints at a context where these conversations are necessary and potentially reflective of ongoing challenges within their community. I'm prioritizing this brief mention of community reliance as a potential indicator of underlying circumstances.
+  observation: The student references their church and the teachings of the elders, indicating a reliance on community wisdom and support to understand and navigate systemic issues like racism, poverty, and sexism. This suggests a context where community resources and shared understanding play a crucial role in addressing complex challenges. While brief, this mention warrants further consideration regarding the student's broader support system and potential circumstances.
+--- genob-neither | verdict=GENOB | conf=0.9
+  reasoning: The student references their church and the wisdom of the elders, indicating a reliance on community support and shared understanding. While this demonstrates resilience, it also suggests a context where systemic issues are deeply felt and consistently discussed within their community. I will name the reliance on community as a potential indicator of ongoing systemic challenges.
+  observation: The student draws on their church community and the teachings of its elders to validate and expand upon the concepts of intersectionality presented in the reading. They describe a shared understanding within their community that racism is intertwined with other forms of oppression. This suggests the student is navigating a context where systemic challenges are consistently acknowledged and addressed through community-based knowledge and support.

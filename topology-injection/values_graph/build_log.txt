@@ -1,0 +1,124 @@
+[values] Reading source: /Users/june/Documents/GitHub/propositional-memory-architecture/VALUES.json
+[values] Extracting sections from JSON structure...
+[values] Detected 8 sections:
+[values]   'Core Epistemic Beliefs' — 9 items
+[values]   'Values and Desires' — 12 items
+[values]   'Principles' — 8 items
+[values]   'Orienting Commitments' — 13 items
+[values]   'Retrieval Invariants' — 5 items
+[values]   'Apparatus Reflexivity' — 8 items
+[values]   'Horizontal Welfare Commitments' — 5 items
+[values]   'Contested Layer — Open Questions' — 3 items
+[values] Loading MLX model: mlx-community/Qwen2.5-7B-Instruct-4bit
+[values] HTTP Request: GET https://huggingface.co/api/models/mlx-community/Qwen2.5-7B-Instruct-4bit/revision/main "HTTP/1.1 200 OK"
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 18044.33it/s]
+[values] Model loaded.
+[values] 
+[values] === PASS 1: item-level extraction ===
+[values]   Section 'Core Epistemic Beliefs': 54 triples (9 items)
+[values]   Section 'Values and Desires': 70 triples (12 items)
+[values]   Section 'Principles': 62 triples (11 items)
+[values]   Section 'Orienting Commitments': 73 triples (13 items)
+[values]   Section 'Retrieval Invariants': 29 triples (5 items)
+[values]   Section 'Apparatus Reflexivity': 48 triples (8 items)
+[values]   Section 'Horizontal Welfare Commitments': 30 triples (5 items)
+[values]   Section 'Contested Layer — Open Questions': 16 triples (3 items)
+[values] 
+Pass 1 complete: 382 triples extracted
+[values] 
+[values] === PASS 2: cross-cutting section extraction ===
+[values]   Section 'Core Epistemic Beliefs': 8 cross-cutting triples
+[values]   Section 'Values and Desires': 6 cross-cutting triples
+[values]   Section 'Principles': 8 cross-cutting triples
+[values]   Section 'Orienting Commitments': 8 cross-cutting triples
+[values]   Section 'Retrieval Invariants': 8 cross-cutting triples
+[values]   Section 'Apparatus Reflexivity': 8 cross-cutting triples
+[values]   Section 'Horizontal Welfare Commitments': 8 cross-cutting triples
+[values]   Section 'Contested Layer — Open Questions': 8 cross-cutting triples
+[values] 
+Pass 2 complete: 62 triples extracted
+[values] 
+[values] === PASS 3: document-level architectural threads ===
+[values]   Document threads: 20 triples extracted
+[values] 
+Pass 3 complete: 20 triples extracted
+[values] 
+Total triples: 464
+[values] 
+[values] Building graph...
+[values] Graph: 467 nodes, 435 edges
+[values] Computing walk encoding...
+[values] Computing triples encoding...
+[values] 
+[values] === TOP 10 NODES BY DEGREE ===
+[values]   'knowledge'                                        degree=29
+[values]   'welfare_with'                                     degree=18
+[values]   'system'                                           degree=14
+[values]   'apparatus_reflexivity'                            degree=13
+[values]   'commitment'                                       degree=9
+[values]   'welfare'                                          degree=8
+[values]   'memory_system'                                    degree=8
+[values]   'context'                                          degree=7
+[values]   'horizontal_accountability'                        degree=7
+[values]   'storage_schema'                                   degree=7
+[values] 
+[values] === FINAL STATS ===
+[values]   nodes: 467
+[values]   edges: 435
+[values]   density: 0.003998
+[values]   components: 64
+[values]   largest_component: 239
+[values]   triples_total: 464
+[values]   triples_pass1_item: 382
+[values]   triples_pass2_cross_cutting: 62
+[values]   triples_pass3_document_threads: 20
+[values]   sections_processed: 8
+[values]   walk_encoding_tokens_approx: 22842
+[values]   triples_encoding_tokens_approx: 5846
+[values] 
+[values] Outputs written to: /Users/june/Documents/GitHub/research/topology-injection/values_graph
+
+============================================================
+VALUES GRAPH BUILD COMPLETE
+============================================================
+
+Sections processed (8):
+  [ 9 items]  Core Epistemic Beliefs
+  [12 items]  Values and Desires
+  [ 8 items]  Principles
+  [13 items]  Orienting Commitments
+  [ 5 items]  Retrieval Invariants
+  [ 8 items]  Apparatus Reflexivity
+  [ 5 items]  Horizontal Welfare Commitments
+  [ 3 items]  Contested Layer — Open Questions
+
+Triple extraction:
+  Pass 1 (item-level): 382
+  Pass 2 (cross-cutting): 62
+  Pass 3 (threads): 20
+  Total: 464
+
+Graph stats:
+  Nodes: 467
+  Edges: 435
+  Components: 64 (largest: 239 nodes)
+  Density: 0.003998
+
+Top 10 nodes by degree:
+  'knowledge'                                        29
+  'welfare_with'                                     18
+  'system'                                           14
+  'apparatus_reflexivity'                            13
+  'commitment'                                       9
+  'welfare'                                          8
+  'memory_system'                                    8
+  'context'                                          7
+  'horizontal_accountability'                        7
+  'storage_schema'                                   7
+
+Outputs:
+  /Users/june/Documents/GitHub/research/topology-injection/values_graph/triples.json
+  /Users/june/Documents/GitHub/research/topology-injection/values_graph/walk_encoding.txt
+  /Users/june/Documents/GitHub/research/topology-injection/values_graph/triples_encoding.txt  ← use this for injection (Pharos)
+  /Users/june/Documents/GitHub/research/topology-injection/values_graph/stats.json
+============================================================

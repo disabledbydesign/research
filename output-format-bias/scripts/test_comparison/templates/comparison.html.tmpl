@@ -25,10 +25,12 @@
     </div>
     <div class="group" id="config-toggle-group">
       <span class="group-label">Show tests</span>
+      <button id="open-column-picker" title="Choose which tests appear as toolbar buttons">⊞ Choose tests<span id="column-picker-count"></span></button>
+      <span style="border-left:1px solid var(--border);height:20px;margin:0 4px"></span>
       <button id="cfg-toggle-all">Show all</button>
       <button id="cfg-toggle-none">Hide all</button>
       <span style="border-left:1px solid var(--border);height:20px;margin:0 4px"></span>
-      <!-- per-config toggle buttons inserted by JS -->
+      <!-- per-config toggle buttons inserted by JS, only for tests selected in the picker -->
     </div>
     <div class="group">
       <span class="group-label">Data</span>
@@ -178,6 +180,55 @@ python -m scripts.test_comparison.build --comparison __COMPARISON_ID__</pre>
   </div>
 </div>
 
+<!-- Test info / purpose modal -->
+<div class="modal-backdrop" id="test-info-modal" role="dialog" aria-modal="true">
+  <div class="modal-panel" tabindex="-1" style="max-width:620px">
+    <button class="close-btn" id="test-info-close" aria-label="Close (Esc)">×</button>
+    <h2 id="test-info-title">Test info</h2>
+    <div class="muted" id="test-info-subtitle" style="margin-bottom:12px"></div>
+    <div id="test-info-meta" style="font-size:12px;line-height:1.6;background:white;border:1px solid var(--border);padding:10px 14px;border-radius:4px;margin-bottom:12px"></div>
+    <label style="font-weight:600;display:block;font-size:12px;margin-bottom:4px">What was being tested (your notes)</label>
+    <textarea id="test-info-purpose" rows="5" style="width:100%;padding:8px 10px;font:inherit;font-size:13px;border:1px solid var(--border);border-radius:4px;background:var(--notes-bg);resize:vertical" placeholder="e.g. narrow scope = examples in CONCERN definition typed as (a)/(b) sub-flavors, testing whether the model treats them definitionally"></textarea>
+    <div class="muted" style="font-size:11px;margin-top:4px">Saved automatically to localStorage. Shows in the column-picker popup and below.</div>
+    <div style="margin-top:12px;display:flex;justify-content:flex-end;gap:8px">
+      <button id="test-info-done" style="background:var(--equity-stripe);color:white;border:none;padding:8px 16px;border-radius:4px;font-weight:600">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- Column picker modal -->
+<div class="modal-backdrop" id="column-picker-modal" role="dialog" aria-modal="true">
+  <div class="modal-panel" tabindex="-1" style="max-width:600px">
+    <button class="close-btn" id="column-picker-close" aria-label="Close (Esc)">×</button>
+    <h2>Choose tests</h2>
+    <div class="muted" style="margin-bottom:10px">Only checked tests appear as toolbar buttons. Selection persists per comparison.</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+      <input type="search" id="column-picker-search" placeholder="Search name, label, purpose…" style="padding:6px 10px;font:inherit;flex:1;min-width:200px;border:1px solid var(--border);border-radius:4px">
+      <select id="column-picker-format-filter" style="padding:6px;font:inherit;border:1px solid var(--border);border-radius:4px">
+        <option value="">All formats</option>
+        <option value="binary">Binary</option>
+        <option value="4-axis">4-axis</option>
+        <option value="genob">Gen-ob</option>
+        <option value="other">Other</option>
+      </select>
+      <select id="column-picker-sort" style="padding:6px;font:inherit;border:1px solid var(--border);border-radius:4px">
+        <option value="date-desc">Newest first</option>
+        <option value="date-asc">Oldest first</option>
+        <option value="label">By label</option>
+      </select>
+    </div>
+    <div style="display:flex;gap:6px;margin-bottom:8px;align-items:center">
+      <button id="column-picker-check-all">Check visible</button>
+      <button id="column-picker-uncheck-all">Uncheck visible</button>
+      <span class="muted" id="column-picker-filter-status" style="margin-left:auto;font-size:11px"></span>
+    </div>
+    <div id="column-picker-list" style="max-height:50vh;overflow-y:auto;border:1px solid var(--border);border-radius:4px;background:white"></div>
+    <div style="margin-top:12px;display:flex;justify-content:flex-end;gap:8px">
+      <button id="column-picker-done" style="background:var(--equity-stripe);color:white;border:none;padding:8px 16px;border-radius:4px;font-weight:600">Done</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const DATA = /*DATA_JSON*/;
 const COMPARISON_ID = "__COMPARISON_ID__";
@@ -249,12 +300,35 @@ function fmtAxesProd(cell) {
 }
 
 // ============== Column visibility state ==============
-let activeConfigs = new Set(DATA.configs.map(c => c.id));
+// Two layers:
+//   selectedConfigs — tests the user has opted INTO this session (popup gate).
+//     Only selected configs get a toolbar toggle button rendered.
+//     Persists in localStorage per-comparison.
+//   activeConfigs   — among selected, which columns are currently displayed.
+//     Toggled by the toolbar buttons. NOT persisted.
+const COLUMN_PICKER_STORAGE_KEY = `tc.${COMPARISON_ID}.selectedConfigs`;
+function loadSelectedConfigs() {
+  try {
+    const raw = localStorage.getItem(COLUMN_PICKER_STORAGE_KEY);
+    if (!raw) return new Set(DATA.configs.map(c => c.id));
+    const ids = JSON.parse(raw);
+    if (!Array.isArray(ids)) return new Set(DATA.configs.map(c => c.id));
+    const known = new Set(DATA.configs.map(c => c.id));
+    return new Set(ids.filter(id => known.has(id)));
+  } catch (e) { return new Set(DATA.configs.map(c => c.id)); }
+}
+function saveSelectedConfigs() {
+  localStorage.setItem(COLUMN_PICKER_STORAGE_KEY, JSON.stringify([...selectedConfigs]));
+}
+let selectedConfigs = loadSelectedConfigs();
+let activeConfigs = new Set([...selectedConfigs]);
 
 function renderConfigToggles() {
   const group = document.getElementById("config-toggle-group");
   group.querySelectorAll("button[data-cfg]").forEach(b => b.remove());
+  updateColumnPickerCountBadge();
   for (const cfg of DATA.configs) {
+    if (!selectedConfigs.has(cfg.id)) continue;
     const btn = document.createElement("button");
     btn.dataset.cfg = cfg.id;
     btn.textContent = displayLabel(cfg);
@@ -301,14 +375,30 @@ function renderHeader() {
   for (const cfg of DATA.configs) {
     const stats = cfg.summary.raw;
     const prodStats = cfg.summary.production;
-    const summaryLine = cfg.schema === "binary_concern"
-      ? `raw ${stats.tp||0}/${stats.fp||0}/${stats.fn||0}/${stats.tn||0} · prod ${prodStats.tp||0}/${prodStats.fp||0}/${prodStats.fn||0}/${prodStats.tn||0}`
-      : `${stats.tp||0}/${stats.fp||0}/${stats.fn||0}/${stats.tn||0}`;
+    const pad2 = n => String(n || 0).padStart(2, "0");
+    // Stacked TP/FP/FN/TN grid: header row above values, both monospace-aligned.
+    // For binary_concern, show raw+prod as two stacked rows; otherwise one row.
+    const isBinaryWithProd = cfg.schema === "binary_concern";
+    const statsCells = (s, tag) =>
+      `${tag ? `<span class="cfg-stats-tag">${tag}</span>` : `<span class="cfg-stats-tag"></span>`}<span class="cfg-stats-v">${pad2(s.tp)}</span><span class="cfg-stats-v">${pad2(s.fp)}</span><span class="cfg-stats-v">${pad2(s.fn)}</span><span class="cfg-stats-v">${pad2(s.tn)}</span>`;
+    const statsGrid = isBinaryWithProd
+      ? `<div class="cfg-stats-grid with-tag">
+           <span class="cfg-stats-tag"></span><span class="cfg-stats-h">TP</span><span class="cfg-stats-h">FP</span><span class="cfg-stats-h">FN</span><span class="cfg-stats-h">TN</span>
+           ${statsCells(stats, "raw")}
+           ${statsCells(prodStats, "prod")}
+         </div>`
+      : `<div class="cfg-stats-grid">
+           <span class="cfg-stats-h">TP</span><span class="cfg-stats-h">FP</span><span class="cfg-stats-h">FN</span><span class="cfg-stats-h">TN</span>
+           <span class="cfg-stats-v">${pad2(stats.tp)}</span><span class="cfg-stats-v">${pad2(stats.fp)}</span><span class="cfg-stats-v">${pad2(stats.fn)}</span><span class="cfg-stats-v">${pad2(stats.tn)}</span>
+         </div>`;
     const nRuns = (cfg.summary.n_runs_per_student[0] === cfg.summary.n_runs_per_student.slice(-1)[0])
       ? `n=${cfg.summary.n_runs_per_student[0]}`
       : `n=${cfg.summary.n_runs_per_student.join("/")}`;
-    const fullTooltip = `${cfg.id}\n${cfg.label||''}\nschema: ${cfg.schema}\nTP/FP/FN/TN: ${summaryLine}`;
-    cols.push(`<th data-config-col="${cfg.id}" title="${escapeAttr(fullTooltip)}"><div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap"><span>${escapeHtml(displayLabel(cfg))}</span> <span class="muted">${nRuns}</span> <span class="relabel-btn" data-cfg="${cfg.id}" title="Rename this test column">rename</span></div><div class="muted" style="font-weight:normal;font-size:10px">${summaryLine}</div></th>`);
+    const tooltipSummary = isBinaryWithProd
+      ? `raw TP/FP/FN/TN ${pad2(stats.tp)}/${pad2(stats.fp)}/${pad2(stats.fn)}/${pad2(stats.tn)} · prod ${pad2(prodStats.tp)}/${pad2(prodStats.fp)}/${pad2(prodStats.fn)}/${pad2(prodStats.tn)}`
+      : `TP/FP/FN/TN ${pad2(stats.tp)}/${pad2(stats.fp)}/${pad2(stats.fn)}/${pad2(stats.tn)}`;
+    const fullTooltip = `${cfg.id}\n${cfg.label||''}\nschema: ${cfg.schema}\n${tooltipSummary}`;
+    cols.push(`<th data-config-col="${cfg.id}" title="${escapeAttr(fullTooltip)}"><div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap"><span>${escapeHtml(displayLabel(cfg))}</span> <span class="muted">${nRuns}</span> <span class="info-btn" data-cfg="${cfg.id}" title="What was being tested · click to view / edit notes">ⓘ</span> <span class="relabel-btn" data-cfg="${cfg.id}" title="Rename this test column">rename</span></div>${statsGrid}</th>`);
   }
   cols.push(`<th class="disagreement-col" title="Lights up when the currently-visible test configs reach different majority verdicts for this student. Only meaningful when 2+ test columns are shown.">Differ?</th>`);
   cols.push(`<th>Notes</th>`);
@@ -319,6 +409,13 @@ function renderHeader() {
     btn.addEventListener("click", e => {
       e.stopPropagation();
       openRelabelModal(btn.dataset.cfg);
+    });
+  });
+  // Wire info buttons (test-info / editable purpose modal)
+  tr.querySelectorAll(".info-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      openTestInfoModal(btn.dataset.cfg);
     });
   });
 }
@@ -370,7 +467,9 @@ function renderBody() {
           <div class="cell-section"><strong>${axisStr}</strong></div>
           <div class="conf-line">${confStr}</div>`;
       }
-      cells.push(`<td class="cell ${colorClass}" data-config-col="${cfg.id}" data-sid="${row.sid}" data-config="${cfg.id}" title="Click to see reasoning">${cellContent}</td>`);
+      const cellNote = loadCellNote(row.sid, cfg.id);
+      const noteMarker = cellNote ? `<span class="cell-note-marker" title="${escapeAttr(cellNote.length > 200 ? cellNote.slice(0,200)+'…' : cellNote)}">📝</span>` : "";
+      cells.push(`<td class="cell ${colorClass}" data-config-col="${cfg.id}" data-sid="${row.sid}" data-config="${cfg.id}" title="Click to see reasoning${cellNote ? ' + your notes' : ''}">${noteMarker}${cellContent}</td>`);
     }
     // Recompute disagreement using only currently-visible configs
     const activeVerdicts = DATA.configs
@@ -422,6 +521,19 @@ function escapeAttr(s) {
   return escapeHtml(s);
 }
 
+// ============== Per-cell notes (researcher annotations) ==============
+const CELL_NOTE_KEY = (sid, configId) => `tc.${COMPARISON_ID}.cellnote.${sid}.${configId}`;
+function loadCellNote(sid, configId) {
+  try { return localStorage.getItem(CELL_NOTE_KEY(sid, configId)) || ""; }
+  catch (e) { return ""; }
+}
+function saveCellNote(sid, configId, text) {
+  try {
+    if (text) localStorage.setItem(CELL_NOTE_KEY(sid, configId), text);
+    else localStorage.removeItem(CELL_NOTE_KEY(sid, configId));
+  } catch (e) {}
+}
+
 // ============== Modal ==============
 function openModal(sid, configId) {
   const row = DATA.rows.find(r => r.sid === sid);
@@ -432,6 +544,16 @@ function openModal(sid, configId) {
   document.getElementById("modal-subtitle").textContent = `${cfg.label} · expected ${row.expected} · pattern ${row.pattern||"—"} · ${cell.n_runs} run(s)`;
 
   const body = document.getElementById("modal-body");
+  // Per-cell notes editor at top of modal — saves to localStorage on input,
+  // updates the cell marker on close.
+  const existingNote = loadCellNote(sid, configId);
+  const notesBlock = `
+    <div class="cell-notes-block">
+      <label class="cell-notes-label">Your notes on this cell (${sid} × ${escapeHtml(displayLabel(cfg))})</label>
+      <textarea id="cell-notes-textarea" data-sid="${sid}" data-config="${configId}" rows="3" placeholder="e.g. 'this FLAG looks suspicious — model reasoning conflates X with Y' or 'I'm watching this cell as a possible edge case'">${escapeHtml(existingNote)}</textarea>
+      <div class="cell-notes-hint">Autosaved per cell. Shows as 📝 in the cell when set.</div>
+    </div>
+  `;
   const blocks = cell.runs.map((r, idx) => {
     const flagBit = r.flag ? "FLAG" : "CLEAR";
     const prodBit = (r.production_flag !== null && r.production_flag !== r.flag) ? ` · prod ${r.production_flag?'FLAG':'CLEAR'} (${r.production_verdict})` : "";
@@ -475,7 +597,15 @@ function openModal(sid, configId) {
         ${r.raw_output_text ? `<details class="raw-details"><summary>raw model output</summary><pre class="raw-output">${escapeHtml(r.raw_output_text)}</pre></details>` : ''}
       </div>`;
   }).join("");
-  body.innerHTML = blocks;
+  body.innerHTML = notesBlock + blocks;
+
+  // Wire cell-notes autosave + on-close marker refresh
+  const ta = document.getElementById("cell-notes-textarea");
+  if (ta) {
+    ta.addEventListener("input", e => {
+      saveCellNote(e.target.dataset.sid, e.target.dataset.config, e.target.value);
+    });
+  }
 
   // native <details> handles raw-output toggling now — no JS wiring needed
 
@@ -483,7 +613,31 @@ function openModal(sid, configId) {
   modal.classList.add("open");
   modal.querySelector(".modal-panel").focus();
 }
-function closeModal() { document.getElementById("modal").classList.remove("open"); }
+function closeModal() {
+  // Refresh just the cell marker for the cell whose modal was open (avoid full re-render).
+  const ta = document.getElementById("cell-notes-textarea");
+  if (ta) {
+    const sid = ta.dataset.sid, configId = ta.dataset.config;
+    const td = document.querySelector(`td.cell[data-sid="${sid}"][data-config="${configId}"]`);
+    if (td) {
+      const existing = td.querySelector(".cell-note-marker");
+      const note = loadCellNote(sid, configId);
+      if (note && !existing) {
+        // Add marker
+        const marker = document.createElement("span");
+        marker.className = "cell-note-marker";
+        marker.title = note.length > 200 ? note.slice(0,200)+"…" : note;
+        marker.textContent = "📝";
+        td.insertBefore(marker, td.firstChild);
+      } else if (note && existing) {
+        existing.title = note.length > 200 ? note.slice(0,200)+"…" : note;
+      } else if (!note && existing) {
+        existing.remove();
+      }
+    }
+  }
+  document.getElementById("modal").classList.remove("open");
+}
 
 document.getElementById("modal-close").addEventListener("click", closeModal);
 document.getElementById("modal").addEventListener("click", e => {
@@ -558,10 +712,22 @@ document.getElementById("export-csv").addEventListener("click", () => {
 document.getElementById("export-notes").addEventListener("click", () => {
   const notes = {};
   for (const row of DATA.rows) { const v = loadNote(row.sid); if (v) notes[row.sid] = v; }
+  // Also collect per-cell notes (entered via cell modal)
+  const cell_notes = {};
+  for (const row of DATA.rows) {
+    for (const cfg of DATA.configs) {
+      const v = loadCellNote(row.sid, cfg.id);
+      if (v) {
+        if (!cell_notes[row.sid]) cell_notes[row.sid] = {};
+        cell_notes[row.sid][cfg.id] = v;
+      }
+    }
+  }
   const payload = {
     comparison_id: COMPARISON_ID,
     exported_at: new Date().toISOString(),
     notes: notes,
+    cell_notes: cell_notes,
   };
   downloadFile(JSON.stringify(payload, null, 2), `${COMPARISON_ID}.notes.json`, "application/json");
 });
@@ -590,8 +756,16 @@ document.getElementById("import-input").addEventListener("change", e => {
       } else {
         for (const [sid, val] of Object.entries(incoming)) saveNote(sid, val);
       }
+      // Restore per-cell notes if present
+      const incomingCellNotes = payload.cell_notes || {};
+      for (const [sid, cfgMap] of Object.entries(incomingCellNotes)) {
+        for (const [cfgId, val] of Object.entries(cfgMap)) {
+          saveCellNote(sid, cfgId, val);
+        }
+      }
       renderBody();
-      alert(`Imported ${Object.keys(incoming).length} note(s) from ${file.name}.`);
+      const cellNoteCount = Object.values(incomingCellNotes).reduce((n, m) => n + Object.keys(m).length, 0);
+      alert(`Imported ${Object.keys(incoming).length} row note(s) and ${cellNoteCount} cell note(s) from ${file.name}.`);
     } catch (err) { alert("Could not parse notes JSON: " + err.message); }
   };
   r.readAsText(file);
@@ -863,12 +1037,222 @@ document.getElementById("register-submit").addEventListener("click", async () =>
 
 // ============== Init ==============
 document.getElementById("cfg-toggle-all").addEventListener("click", () => {
-  activeConfigs = new Set(DATA.configs.map(c => c.id));
+  // Only "show all SELECTED" — never re-add unselected tests to the toolbar.
+  activeConfigs = new Set([...selectedConfigs]);
   renderConfigToggles();
   onColumnsChanged();
 });
 document.getElementById("cfg-toggle-none").addEventListener("click", () => {
   activeConfigs = new Set();
+  renderConfigToggles();
+  onColumnsChanged();
+});
+
+// ============== Test info / editable purpose (per-config notes) ==============
+// Stored in localStorage so notes survive rebuilds. Read at startup and used
+// to override the config.purpose value baked into the HTML at build time.
+const PURPOSE_STORAGE_KEY = (cfgId) => `tc.${COMPARISON_ID}.purpose.${cfgId}`;
+function loadPurpose(cfgId) {
+  try { return localStorage.getItem(PURPOSE_STORAGE_KEY(cfgId)) || ""; }
+  catch (e) { return ""; }
+}
+function savePurpose(cfgId, text) {
+  try { localStorage.setItem(PURPOSE_STORAGE_KEY(cfgId), text); }
+  catch (e) {}
+}
+// Apply any stored purposes to DATA.configs at startup so the popup/headers
+// reflect the user's saved notes from prior sessions.
+for (const cfg of DATA.configs) {
+  const stored = loadPurpose(cfg.id);
+  if (stored) cfg.purpose = stored;
+}
+function openTestInfoModal(cfgId) {
+  const cfg = DATA.configs.find(c => c.id === cfgId);
+  if (!cfg) return;
+  document.getElementById("test-info-title").textContent = displayLabel(cfg);
+  document.getElementById("test-info-subtitle").textContent = cfg.label || cfg.id;
+  const stats = cfg.summary.raw;
+  const prodStats = cfg.summary.production;
+  const pad2 = n => String(n || 0).padStart(2, "0");
+  const isBinaryWithProd = cfg.schema === "binary_concern";
+  const statsStr = isBinaryWithProd
+    ? `raw ${pad2(stats.tp)}/${pad2(stats.fp)}/${pad2(stats.fn)}/${pad2(stats.tn)} · prod ${pad2(prodStats.tp)}/${pad2(prodStats.fp)}/${pad2(prodStats.fn)}/${pad2(prodStats.tn)}`
+    : `${pad2(stats.tp)}/${pad2(stats.fp)}/${pad2(stats.fn)}/${pad2(stats.tn)}`;
+  const nRuns = cfg.summary.n_runs_per_student.join("/");
+  const meta = document.getElementById("test-info-meta");
+  meta.innerHTML = `
+    <div><strong>Config id:</strong> <code>${escapeHtml(cfg.id)}</code></div>
+    <div><strong>Format:</strong> ${escapeHtml(cfg.format || "—")} · <strong>Schema:</strong> ${escapeHtml(cfg.schema)}</div>
+    <div><strong>Date:</strong> ${escapeHtml(cfg.date || "—")} · <strong>Runs per student:</strong> ${escapeHtml(nRuns)} · <strong>Files:</strong> ${cfg.n_files}</div>
+    <div><strong>TP/FP/FN/TN:</strong> <span style="font-family:ui-monospace,Menlo,monospace">${escapeHtml(statsStr)}</span></div>
+    ${cfg.label ? `<div style="margin-top:6px"><strong>Full label:</strong> ${escapeHtml(cfg.label)}</div>` : ""}
+  `;
+  const ta = document.getElementById("test-info-purpose");
+  ta.value = loadPurpose(cfgId) || cfg.purpose || "";
+  ta.dataset.cfgId = cfgId;
+  document.getElementById("test-info-modal").classList.add("open");
+  setTimeout(() => ta.focus(), 50);
+}
+function closeTestInfoModal() {
+  // Save before closing
+  const ta = document.getElementById("test-info-purpose");
+  const cfgId = ta.dataset.cfgId;
+  if (cfgId) {
+    const text = ta.value;
+    savePurpose(cfgId, text);
+    const cfg = DATA.configs.find(c => c.id === cfgId);
+    if (cfg) cfg.purpose = text;
+    // If the column picker is open, re-render it so the new purpose shows
+    if (document.getElementById("column-picker-modal").classList.contains("open")) {
+      renderColumnPickerList();
+    }
+  }
+  document.getElementById("test-info-modal").classList.remove("open");
+}
+// Autosave-on-input so it sticks even if the user navigates away
+document.getElementById("test-info-purpose").addEventListener("input", e => {
+  const cfgId = e.target.dataset.cfgId;
+  if (cfgId) {
+    savePurpose(cfgId, e.target.value);
+    const cfg = DATA.configs.find(c => c.id === cfgId);
+    if (cfg) cfg.purpose = e.target.value;
+  }
+});
+document.getElementById("test-info-close").addEventListener("click", closeTestInfoModal);
+document.getElementById("test-info-done").addEventListener("click", closeTestInfoModal);
+document.getElementById("test-info-modal").addEventListener("click", e => {
+  if (e.target === e.currentTarget) closeTestInfoModal();
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && document.getElementById("test-info-modal").classList.contains("open")) {
+    closeTestInfoModal();
+  }
+});
+
+// ============== Column picker (popup gate for which tests appear in toolbar) ==============
+function updateColumnPickerCountBadge() {
+  const total = DATA.configs.length;
+  const sel = selectedConfigs.size;
+  const span = document.getElementById("column-picker-count");
+  if (span) span.textContent = ` (${sel}/${total})`;
+}
+function openColumnPicker() {
+  document.getElementById("column-picker-modal").classList.add("open");
+  renderColumnPickerList();
+  setTimeout(() => document.getElementById("column-picker-search").focus(), 50);
+}
+function closeColumnPicker() {
+  document.getElementById("column-picker-modal").classList.remove("open");
+}
+function getColumnPickerVisibleConfigs() {
+  const search = document.getElementById("column-picker-search").value.trim().toLowerCase();
+  const fmtFilter = document.getElementById("column-picker-format-filter").value;
+  const sort = document.getElementById("column-picker-sort").value;
+  let cfgs = DATA.configs.slice();
+  if (fmtFilter) cfgs = cfgs.filter(c => (c.format || "other") === fmtFilter);
+  if (search) {
+    cfgs = cfgs.filter(c => {
+      const hay = [c.id, c.label, c.display_label, c.purpose, c.format, c.date].filter(Boolean).join(" ").toLowerCase();
+      return hay.includes(search);
+    });
+  }
+  if (sort === "date-desc")      cfgs.sort((a,b) => (b.date||"").localeCompare(a.date||""));
+  else if (sort === "date-asc")  cfgs.sort((a,b) => (a.date||"").localeCompare(b.date||""));
+  else if (sort === "label")     cfgs.sort((a,b) => displayLabel(a).localeCompare(displayLabel(b)));
+  return cfgs;
+}
+function renderColumnPickerList() {
+  const visible = getColumnPickerVisibleConfigs();
+  const list = document.getElementById("column-picker-list");
+  if (visible.length === 0) {
+    list.innerHTML = `<div style="padding:14px;color:var(--muted);font-size:12px;text-align:center">No tests match those filters.</div>`;
+  } else {
+    list.innerHTML = visible.map(c => {
+      const checked = selectedConfigs.has(c.id) ? "checked" : "";
+      const fmt = c.format || "other";
+      const date = c.date || "—";
+      const purpose = c.purpose || "";
+      const bullets = Array.isArray(c.bullets) ? c.bullets : [];
+      const hasDetails = bullets.length > 0 || c.label;
+      // Native tooltip on hover: bulletized text for screen readers / quick scan.
+      const hoverText = bullets.length
+        ? bullets.map(b => "• " + b).join("\n") + (purpose ? `\n\nYour notes:\n${purpose}` : "")
+        : (c.label || "") + (purpose ? `\n\nYour notes:\n${purpose}` : "");
+      const detailsHtml = bullets.length
+        ? `<ul class="cp-bullets">${bullets.map(b => `<li>${escapeHtml(b)}</li>`).join("")}</ul>`
+        : (c.label ? `<div class="cp-fulllabel-prose">${escapeHtml(c.label)}</div>` : "");
+      return `<label class="column-picker-row" title="${escapeAttr(hoverText)}">
+        <input type="checkbox" data-cfg-id="${escapeAttr(c.id)}" ${checked}>
+        <div class="cp-main">
+          <div class="cp-label">${escapeHtml(displayLabel(c))}</div>
+          <div class="cp-meta">
+            <span class="cp-format format-${escapeAttr(fmt)}">${escapeHtml(fmt)}</span>
+            <span>${escapeHtml(date)}</span>
+            <span class="cp-id">${escapeHtml(c.id)}</span>
+            ${hasDetails ? `<span class="cp-expand-hint" data-cfg-id="${escapeAttr(c.id)}">what this varies ▾</span>` : ""}
+          </div>
+          ${hasDetails ? `<div class="cp-details" data-cfg-id="${escapeAttr(c.id)}" hidden>${detailsHtml}</div>` : ""}
+          ${purpose ? `<div class="cp-purpose">${escapeHtml(purpose)}</div>` : ""}
+        </div>
+      </label>`;
+    }).join("");
+    list.querySelectorAll("input[type=checkbox]").forEach(cb => {
+      cb.addEventListener("change", () => {
+        const cfgId = cb.dataset.cfgId;
+        if (cb.checked) selectedConfigs.add(cfgId);
+        else { selectedConfigs.delete(cfgId); activeConfigs.delete(cfgId); }
+        saveSelectedConfigs();
+        renderConfigToggles();
+        onColumnsChanged();
+      });
+    });
+    // Wire "what this varies" expand toggles
+    list.querySelectorAll(".cp-expand-hint").forEach(hint => {
+      hint.addEventListener("click", e => {
+        e.preventDefault();
+        e.stopPropagation();
+        const cfgId = hint.dataset.cfgId;
+        const details = list.querySelector(`.cp-details[data-cfg-id="${cfgId}"]`);
+        if (details) {
+          const showing = !details.hasAttribute("hidden");
+          if (showing) { details.setAttribute("hidden", ""); hint.textContent = "what this varies ▾"; }
+          else        { details.removeAttribute("hidden");  hint.textContent = "hide details ▴"; }
+        }
+      });
+    });
+  }
+  const total = DATA.configs.length;
+  document.getElementById("column-picker-filter-status").textContent =
+    visible.length === total ? `${total} tests` : `${visible.length} of ${total} tests`;
+}
+document.getElementById("open-column-picker").addEventListener("click", openColumnPicker);
+document.getElementById("column-picker-close").addEventListener("click", closeColumnPicker);
+document.getElementById("column-picker-done").addEventListener("click", closeColumnPicker);
+document.getElementById("column-picker-modal").addEventListener("click", e => {
+  if (e.target === e.currentTarget) closeColumnPicker();
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && document.getElementById("column-picker-modal").classList.contains("open")) {
+    closeColumnPicker();
+  }
+});
+document.getElementById("column-picker-search").addEventListener("input", renderColumnPickerList);
+document.getElementById("column-picker-format-filter").addEventListener("change", renderColumnPickerList);
+document.getElementById("column-picker-sort").addEventListener("change", renderColumnPickerList);
+document.getElementById("column-picker-check-all").addEventListener("click", () => {
+  for (const c of getColumnPickerVisibleConfigs()) selectedConfigs.add(c.id);
+  saveSelectedConfigs();
+  renderColumnPickerList();
+  renderConfigToggles();
+  onColumnsChanged();
+});
+document.getElementById("column-picker-uncheck-all").addEventListener("click", () => {
+  for (const c of getColumnPickerVisibleConfigs()) {
+    selectedConfigs.delete(c.id);
+    activeConfigs.delete(c.id);
+  }
+  saveSelectedConfigs();
+  renderColumnPickerList();
   renderConfigToggles();
   onColumnsChanged();
 });

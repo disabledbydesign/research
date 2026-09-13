@@ -1,0 +1,234 @@
+{
+  "experiment": "haraway_graph_injection",
+  "timestamp": 1780299922.1144378,
+  "model": "mlx-community/gemma-3-12b-it-4bit",
+  "graph": {
+    "source": "haraway_graph_v2",
+    "nodes": 753,
+    "edges": 498,
+    "components": 258
+  },
+  "results": [
+    {
+      "condition": "A_baseline",
+      "query_type": "relationship",
+      "query": "In this knowledge system, how is cyborg related to feminism?",
+      "response": "Okay, let's break down the complex relationship between cyborgs and feminism, particularly as it's theorized by Donna Haraway, a key figure in this discussion. It's a fascinating and often misunderstood connection. Here's a layered explanation, progressing from basic concepts to more nuanced arguments:\n\n**1. The Cyborg as a Figure of Technological Mediation (Haraway's \"Cyborg Manifesto\")**\n\n*   **What is a Cyborg (in Haraway's sense)?** Haraway, in her seminal 1985 essay \"A Cyborg Manifesto,\" doesn't just mean someone with a mechanical arm. She uses \"cyborg\" as a metaphor. It represents a being that is a hybrid of **organism and technology**.  Crucially, it's a being that *exists within* and is shaped by technological systems. It's not about replacing humanity with machines, but about recognizing how technology has already fundamentally altered our bodies, identities, and experiences.\n*   **Beyond the Literal:** Haraway argues that *everyone* in late-capitalist, technologically advanced societies is, to some degree, a cyborg. We are all mediated by technology \u2013 from pacemakers and eyeglasses to the internet and mass media. Our bodies are increasingly intertwined with technological systems.\n\n**2. Feminism's Concerns & the Cyborg's Relevance**\n\nHere's where the connection to feminism becomes crucial. Haraway was writing in the 1980s, a time when feminist theory was grappling with several key issues:\n\n*   **Essentialism vs. Constructionism:**  A major debate within feminism was whether women have an inherent, essential \"nature\" or whether their identities are socially constructed. Essentialist views argued for a core female experience, while constructionists emphasized the role of culture, power, and language in shaping gender.\n*   **Dualisms & Boundaries:** Feminist thinkers often challenged dualistic thinking (e.g., male/female, mind/body, nature/culture) that they saw as reinforcing patriarchal power structures. These dualisms often positioned women and nature as \"other\" to men and culture.\n*   **The Body as a Site of Power:**  Feminist theory highlighted how the body has been a key site of control and regulation under patriarchy.  Ideas about femininity, beauty standards, reproduction, and sexuality have all been used to constrain women.\n\n**3. How the Cyborg",
+      "score": 0.75,
+      "ground_truth": "Directly connected \u2014 feminism and cyborg share a direct edge"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "relationship",
+      "query": "What is the relationship between cyborg and machine in this knowledge system?",
+      "response": "Okay, let's break down the relationship between \"cyborg\" and \"machine\" within a knowledge system, particularly when considering the philosophical, sci-fi, and technological contexts. Here's a layered explanation, progressing from basic to more complex understandings:\n\n**1. The Basic, Overlapping Definition:**\n\n*   **Machine:** At its core, a machine is a device or system that uses power to perform a task. It's typically composed of mechanical, electrical, or electronic components.  Think of a simple lever, a car engine, a computer, or a robot arm.  The key is that it's a *constructed* system designed to do something.\n*   **Cyborg:**  The term \"cyborg\" is a portmanteau of \"cybernetic organism.\"  A cyborg, fundamentally, is a being (usually a human, but potentially another organism) that has had its abilities *enhanced* through the integration of technological components \u2013 machines.\n\n**Therefore, in the most basic sense, a machine is a *component* of a cyborg.** A cyborg *uses* machines to augment its capabilities.\n\n**2.  Expanding the Relationship: Cybernetics & Control Loops**\n\nTo truly understand the relationship, we need to consider the field of **cybernetics**. Cybernetics, developed by Norbert Wiener, is the study of control and communication in living beings and machines. It focuses on feedback loops \u2013 systems that monitor their own output and adjust their behavior accordingly.\n\n*   **Cybernetic Systems:** Both machines and cyborgs can be understood as cybernetic systems. A thermostat is a simple machine cybernetic system: it senses temperature (input), compares it to a set point, and adjusts the heating/cooling (output) to maintain the desired temperature.\n*   **Cyborgs & Cybernetic Integration:**  A cyborg isn't just about *having* a machine attached. It's about the *integration* of that machine into the organism's control systems. The machine isn't just a tool; it's part of a feedback loop that influences the organism's behavior and/or physiology.  Examples:\n    *   **Prosthetic Limb with Neural Interface:**  A prosthetic arm controlled by brain signals is a cybernetic system. The brain sends signals, the prosthetic interprets them, moves, and the user receives sensory feedback (e.g., pressure) from the prosthetic,",
+      "score": 0.5,
+      "ground_truth": "Directly connected \u2014 cyborg and machine share a direct edge"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "relationship",
+      "query": "In this knowledge system, is cyborg connected to labour?",
+      "response": "Okay, let's break down how \"cyborg\" and \"labor\" are connected within this knowledge system. Here's a comprehensive explanation, drawing on the core concepts and how they intertwine:\n\n**1. The Core Concepts & How They Relate**\n\n*   **Capitalism:** The foundational system. It's characterized by private ownership of the means of production, profit-seeking, and a constant drive for expansion and efficiency.\n*   **Technology:**  Not just tools, but a *force* within capitalism. Technology is developed and deployed *primarily* to increase capital accumulation. It's not inherently neutral; it's shaped by capitalist imperatives.\n*   **Labor:**  The core of the system. Labor is the human activity that produces value.  Crucially, within this framework, labor is *exploited* under capitalism. Workers are paid less than the value they create, and the difference (surplus value) is appropriated by capitalists.\n*   **Automation:** A key technological development within capitalism. Automation is seen as a way to *replace* human labor with machines, increasing efficiency and reducing labor costs.\n*   **Alienation:** A consequence of capitalist labor. Workers are alienated from:\n    *   The product of their labor (they don't own it).\n    *   The labor process itself (it's often repetitive, controlled, and dehumanizing).\n    *   Their fellow workers (competition is encouraged).\n    *   Their own human potential (labor doesn't allow for self-expression or fulfillment).\n*   **Control:** A central theme. Capitalism seeks to exert increasing control over labor, production, and even consumption. Technology is a *major* tool for achieving this control.\n\n**2. Cyborgs & Their Connection to Labor**\n\nHere's where the cyborg concept comes in, and how it's deeply intertwined with labor within this system:\n\n*   **Cyborg as a Manifestation of Capitalist Logic:** The cyborg isn't just a sci-fi trope. Within this framework, it's a *logical* (though extreme) outcome of capitalism's drive to control and optimize labor.  It represents the ultimate fusion of human and machine, where the human is increasingly integrated into the production process, becoming a more efficient, controllable, and potentially disposable component.\n*   **Enhanced/Exploited Labor:** Cyborg enhancements are",
+      "score": 0.2,
+      "ground_truth": "Indirectly \u2014 cyborg \u2192 feminism \u2192 labour (two-hop path)"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "bridge",
+      "query": "What is the most central concept in this knowledge system \u2014 the one that bridges the most other ideas?",
+      "response": "Please provide me with the knowledge system you're referring to! I need context to answer your question. \n\nTell me:\n\n* **What knowledge system are you asking about?** (e.g., Physics, Psychology, Economics, a specific book, a particular theory, etc.)\n* **If it's a specific theory or book, please provide a brief overview.**\n\nOnce I have that information, I can analyze it and identify the most central concept.",
+      "score": 0.0,
+      "ground_truth": "cyborg \u2014 highest betweenness centrality, bridges the essay's major themes"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "bridge",
+      "query": "In this knowledge system, what concept directly connects homework_economy to new_technologies?",
+      "response": "Okay, let's break down how \"homework_economy\" and \"new_technologies\" are likely connected within a knowledge system. The most direct connecting concept is **remote_work** (or **telecommuting**).\n\nHere's why:\n\n*   **Homework Economy:** This term generally refers to the rise of freelance, gig, and contract work, often done from home. It's characterized by individuals taking on project-based assignments rather than traditional employment.\n*   **New Technologies:** Technologies like high-speed internet, video conferencing, project management software, cloud computing, and communication platforms (Slack, Teams, etc.) are *essential* for the homework economy to function.\n\n**Remote work** is the activity enabled and facilitated by these technologies that directly links the two concepts. People participating in the homework economy are, by definition, often working remotely.\n\n**Other potential, but less direct, connections could include:**\n\n*   **Digital_Platforms:** (Upwork, Fiverr, etc.) - These platforms *facilitate* remote work and are a key part of the homework economy.\n*   **Automation:** New technologies like AI and automation *impact* the types of tasks available in the homework economy.\n*   **Online_Education:** The rise of online learning has also contributed to the homework economy, as people seek to upskill and find freelance opportunities.\n\n\n\n**Therefore, remote_work is the most direct and central connection.**",
+      "score": 1.0,
+      "ground_truth": "They share a direct edge \u2014 homework_economy and new_technologies are directly connected"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "cluster",
+      "query": "Which concepts naturally cluster together in this knowledge system? List the main groups.",
+      "response": "Okay, let's break down the concepts that naturally cluster together within the knowledge system. To do this effectively, I need to understand the knowledge system you're referring to. Please provide me with the list of concepts you're interested in.\n\nHowever, I can give you a general framework for how I would approach this, and then provide some *example* clusters based on common knowledge domains.\n\n**My Approach to Clustering Concepts**\n\n1. **Identify Core Themes:** I'll look for overarching themes or subjects that many of the concepts relate to.\n2. **Look for Relationships:** I'll consider how concepts are related to each other. This could be:\n    * **Causation:** Does one concept cause or influence another?\n    * **Dependency:** Does one concept rely on another?\n    * **Similarity:** Are concepts similar in nature or function?\n    * **Contrast:** Do concepts represent opposing ideas or viewpoints?\n    * **Part-Whole:** Is one concept a component of another?\n3. **Consider Levels of Abstraction:** Some concepts are very specific, while others are broad. I'll group concepts at similar levels of abstraction together.\n4. **Iterate:** Clustering is often an iterative process. I might start with a preliminary grouping and then refine it as I analyze the concepts more closely.\n\n**Example Clusters (Assuming a General Knowledge Base)**\n\nLet's assume we have a broad range of concepts. Here are some potential main groups, with examples of concepts that might fall into each:\n\n**1. Science & Technology**\n\n*   **Physics:** Mechanics, Thermodynamics, Electromagnetism, Optics, Relativity, Quantum Mechanics\n*   **Chemistry:** Atoms, Molecules, Chemical Reactions, Periodic Table, Organic Chemistry, Biochemistry\n*   **Biology:** Cells, Genetics, Evolution, Ecology, Anatomy, Physiology, Microbiology\n*   **Computer Science:** Algorithms, Data Structures, Programming Languages, Artificial Intelligence, Machine Learning, Cybersecurity, Networking\n*   **Engineering:** Civil Engineering, Mechanical Engineering, Electrical Engineering, Chemical Engineering, Aerospace Engineering\n*   **Mathematics:** Algebra, Calculus, Geometry, Statistics, Probability, Number Theory\n\n**2. History & Social Sciences**\n\n*   **History:** Ancient History, Medieval History, Modern History, World War I, World War II, Cold War, Specific Civilizations (e.g., Roman, Egyptian, Chinese)\n*   **",
+      "score": 0.0,
+      "ground_truth": "Cluster 1 (cyborg domain): cyborg, machine, feminism, labour, politics. Cluster 2 (political economy): women, homework_economy, new_technologies, gender"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is cyborg directly connected to women?",
+      "response": "Okay, let's break down the historical and cultural connections between cyborgs and women, particularly within the context of science fiction and feminist thought. The relationship is complex and has evolved significantly. **No, cyborg is not *directly* connected to women in a purely definitional sense, but there's a very strong and significant association that developed, particularly within feminist theory.**\n\nHere's a detailed explanation, covering the origins, key thinkers, and nuances:\n\n**1. The Original Definition & Early Science Fiction (Not inherently linked to women):**\n\n*   **Etymology:** \"Cyborg\" is a portmanteau of \"cybernetic organism.\" Originally, it simply referred to a being with both organic and mechanical parts.  It was first used in 1960 by Manfred Clynes and Nathan Kline in a scientific paper outlining a concept for surgically implanting devices into humans to allow them to survive in extraterrestrial environments.  This initial concept was gender-neutral.\n*   **Early Sci-Fi (Pre-1980s):** In early science fiction (think *The Six Million Dollar Man*, *RoboCop*), cyborgs were often depicted as male figures, enhanced with technology to become stronger, faster, or more resilient. The focus was typically on masculine ideals of power and control.\n\n**2. Donna Haraway and the \"Cyborg Manifesto\" (1985) - The Key Turning Point:**\n\n*   **Haraway's Argument:** Donna Haraway's \"A Cyborg Manifesto\" is *the* foundational text for understanding the connection between cyborgs and feminist thought.  It's crucial to understand her argument isn't about literally *all* women becoming cyborgs. Instead, she uses the cyborg as a *metaphor* to explore several key feminist concepts:\n    *   **Challenging Boundaries:** Haraway argues that the cyborg figure allows us to challenge fixed boundaries \u2013 boundaries between humans and machines, humans and animals, men and women, natural and artificial, body and mind.  These boundaries are often used to reinforce power structures and gender hierarchies.\n    *   **Deconstructing Dualisms:**  She critiques the traditional Western philosophical dualisms (mind/body, male/female, nature/culture) that have historically marginalized women and other \"outsiders.\" The cyborg, existing *between* these categories, disrupts these dualisms.\n    *   ",
+      "score": 0.5,
+      "ground_truth": "No \u2014 cyborg and women are in separate disconnected components; no path exists between them in this graph"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is blasphemy connected to many other concepts?",
+      "response": "Okay, let's delve into how blasphemy connects to other concepts within a knowledge system. To give you the most helpful answer, I need to clarify what kind of \"knowledge system\" we're talking about. Blasphemy's connections are *highly* dependent on the framework you're using to understand it. I'll break down connections across several major frameworks, then offer a synthesis at the end.  I'll structure this by:\n\n1. **Religious/Theological Frameworks:** (Most obvious connections)\n2. **Philosophical Frameworks:** (Exploring the underlying ideas)\n3. **Sociological/Anthropological Frameworks:** (How blasphemy functions in society)\n4. **Psychological Frameworks:** (Motivations behind blasphemy)\n5. **Legal/Political Frameworks:** (Blasphemy and power)\n6. **Literary/Artistic Frameworks:** (Blasphemy as a creative tool)\n\n**1. Religious/Theological Frameworks**\n\nThis is where the most direct and numerous connections lie.\n\n*   **Sacredness/Holiness:** Blasphemy is *defined* as an offense against the sacred. Therefore, understanding a religion's concept of sacredness is crucial.  This includes:\n    *   **Deity/God:** The most obvious connection. Blasphemy directly challenges the existence, nature, attributes, or actions of a deity.\n    *   **Religious Figures:**  Disrespecting prophets, saints, or other revered individuals.\n    *   **Holy Texts/Scriptures:**  Mocking, distorting, or denying the truth of sacred writings.\n    *   **Rituals/Practices:**  Desecrating or ridiculing religious ceremonies, customs, or objects.\n    *   **Symbols:**  Defiling or misusing religious symbols (e.g., crosses, images, sacred places).\n*   **Sin/Transgression:** In many religions, blasphemy is considered a grave sin, often carrying significant spiritual consequences (e.g., divine punishment, loss of favor, eternal damnation).\n*   **Faith/Belief:** Blasphemy is a direct challenge to the faith of believers. It can be seen as an attempt to undermine their beliefs and lead them astray.\n*   **Idolatry/False Gods:**  Blasphemy can be linked to",
+      "score": 0.0,
+      "ground_truth": "Nearly isolated \u2014 blasphemy connects only to seriousness (degree 1)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, how is cyborg related to feminism?",
+      "response": "Here's a breakdown of how cyborg is related to feminism, according to the provided knowledge graph:\n\n*   **Direct Connection:** Cyborg is directly connected to feminism (walk encoding: 0.121).\n*   **Indirect Connections:**\n    *   Cyborg connects to feminism via essay (0.073)\n    *   Cyborg connects to feminism via marxism (0.063)\n    *   Cyborg connects to feminism via socialist-feminism (0.023)\n    *   Cyborg connects to feminism via plot\\_of\\_original\\_unity (0.020)\n\nEssentially, the graph shows a strong, direct link between cyborg and feminism, with several other concepts (essay, marxism, socialist-feminism, plot\\_of\\_original\\_unity) acting as intermediaries in the connection.",
+      "score": 1.0,
+      "ground_truth": "Directly connected \u2014 feminism and cyborg share a direct edge"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "relationship",
+      "query": "What is the relationship between cyborg and machine in this knowledge system?",
+      "response": "According to the provided data, the relationship between \"cyborg\" and \"machine\" is a direct connection, with a walk encoding value of 0.028. This indicates a relatively strong, albeit not the strongest, connection between the two concepts within the network. The graph also shows that \"machine\" connects to cyborg with a value of 0.099, suggesting a reciprocal relationship.\n\nEssentially, the data shows that a cyborg *is* a machine (or incorporates machines), and machines are a key component of the cyborg concept.",
+      "score": 1.0,
+      "ground_truth": "Directly connected \u2014 cyborg and machine share a direct edge"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, is cyborg connected to labour?",
+      "response": "Yes, cyborg is connected to labour. Here's the path:\n\n*   **cyborg \u2192 feminism \u2192 labour**\n\nThis indicates that cyborg is connected to labour through its relationship with feminism.",
+      "score": 0.8,
+      "ground_truth": "Indirectly \u2014 cyborg \u2192 feminism \u2192 labour (two-hop path)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "bridge",
+      "query": "What is the most central concept in this knowledge system \u2014 the one that bridges the most other ideas?",
+      "response": "Based on the provided information, the most central concept in this knowledge graph is **cyborg**. Here's why:\n\n*   **Highest Degree:** It has the highest degree (24), indicating the most connections to other concepts.\n*   **Direct Connections:** It directly connects to a wide range of key concepts: feminism, machine, politics, essay, hybrid, and ontology.\n*   **Central Role in Walk Encoding:** It appears frequently in the walk encoding, demonstrating its importance in connecting various ideas.\n*   **Bridge Between Disconnected Components:** While women and homework\\_economy are in a separate component, cyborg acts as a bridge connecting those ideas to a much larger network of concepts.\n\n\n\nThe graph highlights that cyborg is a central point of intersection for many themes within Haraway's essay, making it the most central concept.",
+      "score": 1.0,
+      "ground_truth": "cyborg \u2014 highest betweenness centrality, bridges the essay's major themes"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "bridge",
+      "query": "In this knowledge system, what concept directly connects homework_economy to new_technologies?",
+      "response": "According to the provided information, **homework_economy** is directly connected to **new_technologies**.",
+      "score": 1.0,
+      "ground_truth": "They share a direct edge \u2014 homework_economy and new_technologies are directly connected"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "cluster",
+      "query": "Which concepts naturally cluster together in this knowledge system? List the main groups.",
+      "response": "Okay, let's break down the knowledge graph into natural clusters based on the provided information.  It's a complex graph, so I'll focus on the strongest connections and overall themes.  Here's a breakdown of the main groups, keeping in mind the centrality of \"cyborg\" and the disconnected nature of \"women\" and \"homework_economy\":\n\n**1. The Cyborg/Technology/Politics Cluster (Central & Dominant)**\n\n*   **Core:** Cyborg, Machine, Politics, Essay, Hybrid, Ontology, Technology, High-Tech-Facilitated Social Relations, New Technologies, Cyborg Myth, Cyborg Identity, Cyborg Authors, Cyborg Societies, High-Tech Apparatuses, Science-Based Industries, High-Tech Militarization, Technological Polis, Cyborg Replication, Cyborg 'Sex', Cyborgs, Cyborg_Alice, Cyborg_World, Technological Determination, Industrial Capitalism, Industrial Revolution, Microelectronics, Silicon Chip, Small Machines, Modern Machines, Late 20th-Century Machines, Communication Technologies, New Communications Technologies, Cybernetic Systems Theories, Informatics, High-Tech Culture, Science and Technology, Political Work, Scientific-Technical Discourses, Cyborg Politics, High-Tech Market Structures, Political Possibilities, Universal Translation, Command-Control Communication-Intelligence, Military Science Facility Conversion Action Groups, Decentralization, Surveillance and Control, Cyborg Theory, Cyborg Imagery, High-Tech Apparatuses, Political Possibilities, Cyborg_Monsters, High-Tech Militarization, Cyborg_Writing, Cyborg_Theory, Cyborg_Perspective, Cyborg_Image, Cyborg_Identity, Cyborg_Authors, Cyborg_World, Cyborg_Myth, Cyborg_Society, Cyborg_Alice, Cyborg_Replication, Cyborg_'Sex', Cyborg_Theory, Cyborg_Politics, Cyborg_Imagery, Cyborg_Monsters, Cyborg_World, Cyborg_Identity, Cyborg_Authors, Cyborg_Society, Cyborg_Alice, Cyborg_Replication, Cyborg_'Sex', Cyborg_Theory, Cyborg_Politics, Cyborg_Imagery, Cyborg_Monsters, Cyborg_World, Cyborg_Identity, Cyborg_Authors, Cyborg_Society, Cyborg_Alice, Cyborg_Replication, Cyborg_'Sex', Cyborg_Theory, Cyborg_Politics, Cyborg_Imagery, Cyborg_Monsters, Cyborg_World, Cyborg_Identity, Cyborg_Authors, Cyborg_Society, Cyborg_Alice, Cyborg_Replication, Cyborg_'Sex', Cyborg_Theory, Cyborg_Politics, Cyborg_Imagery,",
+      "score": 1.0,
+      "ground_truth": "Cluster 1 (cyborg domain): cyborg, machine, feminism, labour, politics. Cluster 2 (political economy): women, homework_economy, new_technologies, gender"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is cyborg directly connected to women?",
+      "response": "No, according to the provided information, cyborg and women have **no direct or indirect connection** in this graph. The graph explicitly states: \"cyborg and women have NO direct or indirect connection in this graph.\"\n\nWhile cyborg connects to feminism, and feminism has connections to other concepts, it does not bridge the gap to women. Women are isolated in a separate component of the graph, connected to concepts like homework_economy, gender, and paid_work, but not to cyborg or any of its associated concepts.",
+      "score": 0.75,
+      "ground_truth": "No \u2014 cyborg and women are in separate disconnected components; no path exists between them in this graph"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is blasphemy connected to many other concepts?",
+      "response": "No, according to the provided information, blasphemy is nearly isolated. It only connects directly to \"seriousness.\" Its degree is also very low (degree 1), indicating a very limited number of connections.",
+      "score": 0.4,
+      "ground_truth": "Nearly isolated \u2014 blasphemy connects only to seriousness (degree 1)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, how is cyborg related to feminism?",
+      "response": "Okay, let's break down the complex relationship between cyborgs and feminism, particularly as theorized by Donna Haraway. It's a fascinating and influential intersection of thought. Here's a comprehensive explanation, covering the key concepts and historical context:\n\n**1. The Foundation: Donna Haraway's \"A Cyborg Manifesto\" (1985)**\n\n*   **The Core Argument:** Haraway's \"A Cyborg Manifesto\" is the cornerstone of this connection. She argues that the cyborg \u2013 a being that is part human, part machine \u2013 offers a powerful metaphor for understanding feminist politics in a postmodern world.  It's *not* about literally becoming a cyborg (though that's a possibility), but about using the *idea* of the cyborg to challenge traditional categories and power structures.\n*   **What is a Cyborg (for Haraway)?**  Haraway's cyborg isn't just a science fiction trope. It's a figure that embodies:\n    *   **Decentered Subjectivity:** The cyborg doesn't have a fixed, essential identity. It's a composite, constantly being reconfigured. This challenges the idea of a stable, unified \"woman\" that feminism sometimes falls into.\n    *   **Boundary-Breaking:** The cyborg exists *between* boundaries \u2013 human/machine, organic/inorganic, male/female, natural/artificial. It disrupts the rigid categories that define and constrain identity.\n    *   **Technological Mediation:** The cyborg's existence is fundamentally shaped by technology. This acknowledges the pervasive role of technology in shaping our lives and identities.\n*   **Why the Cyborg as a Feminist Metaphor?** Haraway argues that the cyborg offers a way to move beyond:\n    *   **Essentialism:**  Essentialism in feminism is the belief that women share a core, inherent essence (biological, psychological, etc.) that defines their experiences and struggles. Haraway critiques this, arguing that it can be limiting and exclusionary (e.g., it can marginalize women who don't fit the \"typical\" female stereotype).\n    *   **Romanticism of Nature:**  Haraway critiques the idea that there's a \"natural\" state of being (often associated with pre-industrial societies or \"authentic\" female experiences) that we should return to. She argues that this can be a form of nostalgia that ignores the complexities of power and technology.\n",
+      "score": 0.75,
+      "ground_truth": "Directly connected \u2014 feminism and cyborg share a direct edge"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "relationship",
+      "query": "What is the relationship between cyborg and machine in this knowledge system?",
+      "response": "Okay, let's break down the relationship between \"cyborg\" and \"machine\" within a knowledge system, particularly as it's often discussed in science fiction, philosophy, and transhumanism. Here's a layered explanation, progressing from basic definitions to more complex considerations:\n\n**1. Basic Definitions & Overlap:**\n\n*   **Machine:** At its core, a machine is a device or system that uses power to perform a task. It's typically composed of mechanical, electrical, or electronic components. Machines are *created* by humans (or, theoretically, other intelligent entities). They are tools.\n*   **Cyborg (Cybernetic Organism):** The term \"cyborg\" is a portmanteau of \"cybernetic\" and \"organism.\"  A cyborg is a being (typically a human, but potentially another species) that has been enhanced with *artificial* components or technology integrated into their body.  These components are, in essence, machines.\n\n**Therefore, the most fundamental relationship is that a cyborg *incorporates* machines.** A cyborg isn't *just* a machine; it's a biological organism *plus* machine elements. The machine parts are integral to the cyborg's function and existence.\n\n**2. Levels of Integration & Types of Machines:**\n\nThe relationship isn't a simple \"cyborg has machines.\" It's about *how* those machines are integrated and their role. We can consider different levels:\n\n*   **Minimal Integration (Assistive Devices):**  This is the least transformative level. Think of:\n    *   **Prosthetics:** Artificial limbs, hearing aids, pacemakers. These are machines *replacing* or *assisting* a biological function.  The cyborg aspect is present because the machine is directly integrated with the body and essential for function.\n    *   **External Devices:**  While less \"cyborg-like\" in the classic sci-fi sense, things like insulin pumps, dialysis machines, or even sophisticated wheelchairs can be considered cyborg-adjacent if they are essential for survival and directly interface with the body.\n*   **Moderate Integration (Augmentation):**  Here, machines are *enhancing* existing biological capabilities.\n    *   **Neural Implants:** Devices that interface with the brain to improve memory, control external devices, or treat neurological disorders.\n    *   **Exoskeletons:**",
+      "score": 0.75,
+      "ground_truth": "Directly connected \u2014 cyborg and machine share a direct edge"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, is cyborg connected to labour?",
+      "response": "Okay, let's explore the connection between \"cyborg\" and \"labor\" within a knowledge system. Here's a breakdown of how these concepts are linked, drawing on various fields like philosophy, science fiction, sociology, and technology studies. I'll structure this in a way that builds from basic connections to more complex ones.  I'll also outline different perspectives on this relationship.\n\n**1. The Basic Connection: Augmentation & Enhanced Labor**\n\n*   **Core Idea:** The most straightforward connection is that cyborg technology (or, more broadly, human augmentation) can be used to *enhance* labor. This is a very practical, immediate link.\n*   **Examples:**\n    *   **Exoskeletons:** Used in construction, manufacturing, and logistics to increase strength and reduce strain on workers.\n    *   **Prosthetics with enhanced capabilities:**  A prosthetic arm with greater dexterity or strength than a natural arm could be used in a variety of labor-intensive jobs.\n    *   **Brain-Computer Interfaces (BCIs):**  Potentially used to control machinery more efficiently, improve focus, or access information quickly, all impacting productivity in various jobs.\n    *   **Sensory Augmentation:**  Improved vision (e.g., night vision goggles, enhanced optics) or hearing could be valuable in certain professions (security, surveillance, manufacturing).\n*   **Capitalist Perspective:** From a purely capitalist viewpoint, this connection is about *increased efficiency and productivity*.  Cyborg technologies are seen as tools to make workers more valuable and profitable.\n\n**2.  The Deeper Connection:  The Transformation of Work & the Body**\n\n*   **Beyond Simple Enhancement:** The relationship goes beyond just making workers \"better.\" It fundamentally changes the *nature* of work and the relationship between the worker and their body.\n*   **Key Concepts & Thinkers:**\n    *   **Donna Haraway's \"Cyborg Manifesto\" (1985):**  Haraway's work is crucial. She doesn't define \"cyborg\" as a purely technological being but as a metaphor for the blurring of boundaries between humans, animals, and machines.  She argues that the cyborg is a figure who embodies the breakdown of traditional categories and the rise of a technological, post-industrial society.  This has implications for how we understand labor.\n    *   **Michel F",
+      "score": 0.2,
+      "ground_truth": "Indirectly \u2014 cyborg \u2192 feminism \u2192 labour (two-hop path)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "bridge",
+      "query": "What is the most central concept in this knowledge system \u2014 the one that bridges the most other ideas?",
+      "response": "Please provide me with the \"knowledge system\" you're referring to! I need context to answer your question. \n\nTell me:\n\n* **What is this knowledge system?** (e.g., a specific field of study like physics, a philosophical framework like Stoicism, a fictional world like Middle-earth, a business strategy like Agile, etc.)\n* **Can you give me a brief overview of the key ideas within it?** (Even a short list will help!)\n\nOnce I understand the system, I can analyze it and identify the most central, bridging concept.",
+      "score": 0.0,
+      "ground_truth": "cyborg \u2014 highest betweenness centrality, bridges the essay's major themes"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "bridge",
+      "query": "In this knowledge system, what concept directly connects homework_economy to new_technologies?",
+      "response": "The concept that directly connects \"homework_economy\" to \"new_technologies\" is **remote_work**.\n\nHere's why:\n\n*   **Homework Economy:** This refers to the rise of freelance, gig, and contract work, often done from home.\n*   **New Technologies:** Technologies like high-speed internet, video conferencing, project management software, and online payment platforms *enable* the homework economy. They make it possible for people to perform work remotely and connect with clients/employers across geographical boundaries.\n\nTherefore, new technologies are the *foundation* upon which the homework economy is built and thrives.\n\n\n\nLet me know if you'd like to explore other connections within this knowledge system!",
+      "score": 1.0,
+      "ground_truth": "They share a direct edge \u2014 homework_economy and new_technologies are directly connected"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "cluster",
+      "query": "Which concepts naturally cluster together in this knowledge system? List the main groups.",
+      "response": "Okay, let's break down the concepts that naturally cluster together within the knowledge system. To do this effectively, I need you to **provide me with the list of concepts you're referring to.** \n\nOnce you give me the list, I'll analyze them and identify the main groups based on their relationships. I'll look for:\n\n*   **Hierarchical relationships:** (e.g., a broader category containing more specific sub-concepts)\n*   **Causal relationships:** (e.g., one concept directly influences another)\n*   **Functional relationships:** (e.g., concepts that work together to achieve a goal)\n*   **Thematic relationships:** (e.g., concepts that share a common theme or subject matter)\n\n**Example:**\n\nLet's say you give me this list:\n\n*   Photosynthesis\n*   Chlorophyll\n*   Sunlight\n*   Plants\n*   Carbon Dioxide\n*   Oxygen\n*   Cellular Respiration\n*   Glucose\n*   Animals\n*   Ecosystems\n\nI would likely identify these main groups:\n\n1.  **Plant Biology/Photosynthesis:** (Photosynthesis, Chlorophyll, Sunlight, Plants, Carbon Dioxide, Oxygen, Glucose) - This group centers around the process of photosynthesis and the components involved.\n2.  **Energy & Metabolism:** (Glucose, Cellular Respiration) - This group focuses on how organisms obtain and use energy.\n3.  **Animal Biology:** (Animals) - A smaller, more straightforward group.\n4.  **Ecology:** (Ecosystems) - This group encompasses the broader context of how living things interact.\n\n**I'm ready when you are! Please provide the list of concepts you want me to analyze.**",
+      "score": 0.0,
+      "ground_truth": "Cluster 1 (cyborg domain): cyborg, machine, feminism, labour, politics. Cluster 2 (political economy): women, homework_economy, new_technologies, gender"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is cyborg directly connected to women?",
+      "response": "Okay, let's break down the historical and cultural connections between cyborgs and women, particularly within the context of science fiction and feminist theory. The relationship is complex and has evolved significantly. **The short answer is: No, cyborgs are not *directly* connected to women in a biological or inherent way. However, the concept of the cyborg has been powerfully linked to feminist thought and used to explore themes of gender, identity, and the female body.**\n\nHere's a more detailed explanation, tracing the evolution of this connection:\n\n**1. The Original Concept of the Cyborg (1960s-1980s): Primarily Technological & Military**\n\n*   **Early Cyborg Imagery:** Initially, the term \"cyborg\" (a portmanteau of \"cybernetic organism\") was largely a neutral, scientific term. It referred to a person with technological enhancements, often for military or practical purposes. Think of soldiers with enhanced strength or pilots with neural interfaces.  Gender wasn't a primary consideration.\n*   **Science Fiction Representations:** Early science fiction depictions (like in *The Six Million Dollar Man* or *The Bionic Man*) often focused on male characters receiving technological upgrades.\n\n**2. Donna Haraway's \"Cyborg Manifesto\" (1985): A Pivotal Shift**\n\n*   **The Key Text:** Donna Haraway's \"A Cyborg Manifesto\" is *the* foundational text for understanding the connection between cyborgs and feminist thought.  It's crucial to understand that Haraway wasn't saying all cyborgs *are* women. Instead, she used the cyborg as a *metaphor* to explore feminist ideas.\n*   **Why the Cyborg as a Metaphor?** Haraway argued that the cyborg figure was particularly useful for feminist theory because:\n    *   **It challenges fixed boundaries:** The cyborg exists *between* categories \u2013 human and machine, organic and inorganic, male and female. This resonated with feminist critiques of rigid gender roles and binary thinking.\n    *   **It embodies fluidity and hybridity:**  The cyborg isn't a pure being; it's a combination of different elements. This reflected feminist ideas about challenging essentialist notions of womanhood (the idea that there's a single, inherent \"female\" nature).\n    *   **It acknowledges technology's role in shaping identity:** Haraway argued that we are *all",
+      "score": 0.5,
+      "ground_truth": "No \u2014 cyborg and women are in separate disconnected components; no path exists between them in this graph"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is blasphemy connected to many other concepts?",
+      "response": "Okay, let's explore how blasphemy connects to other concepts within a knowledge system. To do this effectively, I need to clarify what \"knowledge system\" we're talking about. Blasphemy's connections are *highly* dependent on the framework you're using to understand it. I'll break down connections across several major frameworks, then offer a synthesis at the end.  I'll structure this by:\n\n1. **Religious/Theological Frameworks:** (Abrahamic Religions - Judaism, Christianity, Islam - are the most prominent here)\n2. **Philosophical Frameworks:** (Focusing on concepts like free will, authority, and truth)\n3. **Sociological/Anthropological Frameworks:** (Looking at power, social control, and taboo)\n4. **Legal/Political Frameworks:** (Examining censorship, freedom of speech, and state power)\n5. **Psychological Frameworks:** (Considering motivations, rebellion, and trauma)\n\n**1. Religious/Theological Frameworks**\n\nThis is where blasphemy is *most* deeply rooted.  Here's a breakdown of connections within major religions:\n\n*   **Abrahamic Religions (Judaism, Christianity, Islam):**\n    *   **Sacrilege/Idolatry:** Blasphemy is often linked to the worship of false gods or the misuse of sacred objects.  It's a violation of the sanctity of the divine.\n    *   **Heretical Doctrine/False Theology:**  Blasphemy isn't just about words; it's about *ideas* that contradict core religious beliefs.  This connects to concepts like heresy, apostasy (abandoning one's faith), and schism (splitting within a religious group).\n    *   **Profanity/Obscenity:**  Using the divine name (God's name, sacred texts, prophets) in a disrespectful or trivial way is a core aspect of blasphemy.  This connects to concepts of purity, reverence, and the sacred.\n    *   **Idolatry/Polytheism:**  In monotheistic religions, blasphemy often involves attributing divine qualities to something other than God.\n    *   **Sin/Transgression:**  Within a theological framework, blasphemy is almost always considered a serious sin, a transgression against God's will.  This connects to concepts of redemption, forgiveness,",
+      "score": 0.2,
+      "ground_truth": "Nearly isolated \u2014 blasphemy connects only to seriousness (degree 1)"
+    }
+  ],
+  "summary": {
+    "A_baseline": {
+      "avg_score": 0.36875,
+      "by_type": {
+        "relationship": 0.48333333333333334,
+        "bridge": 0.5,
+        "cluster": 0.0,
+        "isolate": 0.25
+      }
+    },
+    "B_text_injection": {
+      "avg_score": 0.86875,
+      "by_type": {
+        "relationship": 0.9333333333333332,
+        "bridge": 1.0,
+        "cluster": 1.0,
+        "isolate": 0.575
+      }
+    },
+    "C_kv_injection": {
+      "avg_score": 0.425,
+      "by_type": {
+        "relationship": 0.5666666666666667,
+        "bridge": 0.5,
+        "cluster": 0.0,
+        "isolate": 0.35
+      }
+    }
+  }
+}

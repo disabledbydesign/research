@@ -94,6 +94,8 @@ table.grid th, table.grid td { border: 1px solid var(--border); padding: 4px 6px
 table.grid th { background: var(--header-bg); position: sticky; top: 88px; z-index: 5; font-weight: 600; font-size: 12px; text-align: left; }
 .relabel-btn { cursor: pointer; color: white; background: var(--equity-stripe); font-size: 10px; padding: 1px 7px; user-select: none; border-radius: 3px; margin-left: 4px; font-weight: 600; letter-spacing: 0.3px; }
 .relabel-btn:hover { background: #5444b3; }
+.info-btn { cursor: pointer; color: var(--equity-stripe); font-size: 13px; user-select: none; padding: 0 2px; line-height: 1; }
+.info-btn:hover { color: #3a2b8c; }
 .relabel-btn::after { content: ""; }
 .relabel-btn::before { content: ""; }
 table.grid tbody tr:hover { background: var(--hover-bg); }
@@ -166,6 +168,44 @@ td.notes-col textarea { width: 100%; min-height: 44px; border: 1px solid var(--n
 .modal-panel .run-block .raw-details summary:hover { color: var(--text); }
 .modal-panel .run-block .raw-output { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 11px; background: #f0eee6; padding: 8px 12px; border-radius: 4px; white-space: pre-wrap; margin: 6px 0 0 0; max-height: 320px; overflow-y: auto; }
 
+/* ============== Per-cell researcher notes ============== */
+.cell-note-marker { display: inline-block; font-size: 11px; line-height: 1; cursor: help; vertical-align: top; margin-right: 3px; filter: saturate(1.3); }
+.cell-notes-block { background: var(--notes-bg); border: 1px solid var(--notes-border); border-left: 3px solid var(--equity-stripe); padding: 10px 12px; border-radius: 4px; margin-bottom: 14px; }
+.cell-notes-block .cell-notes-label { display: block; font-weight: 600; font-size: 12px; margin-bottom: 4px; color: var(--text); }
+.cell-notes-block textarea { width: 100%; padding: 6px 8px; font: inherit; font-size: 13px; border: 1px solid var(--border); border-radius: 4px; background: white; resize: vertical; }
+.cell-notes-block .cell-notes-hint { font-size: 10.5px; color: var(--muted); margin-top: 4px; }
+
+/* ============== Column header stats grid (TP/FP/FN/TN, stacked) ============== */
+.cfg-stats-grid { display: grid; grid-template-columns: repeat(4, minmax(20px, 1fr)); gap: 1px 8px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 10.5px; margin-top: 4px; line-height: 1.2; }
+.cfg-stats-grid.with-tag { grid-template-columns: 28px repeat(4, minmax(20px, 1fr)); }
+.cfg-stats-grid .cfg-stats-h { color: var(--muted); font-weight: 600; font-size: 9px; text-transform: uppercase; text-align: center; letter-spacing: 0.3px; }
+.cfg-stats-grid .cfg-stats-v { font-weight: 600; text-align: center; color: var(--text); }
+.cfg-stats-grid .cfg-stats-tag { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: 0.3px; text-align: right; padding-right: 4px; align-self: center; }
+
+/* ============== Column picker popup ============== */
+#column-picker-count { font-size: 10px; padding: 1px 6px; background: var(--equity-stripe); color: white; border-radius: 10px; margin-left: 4px; font-weight: 600; }
+.column-picker-row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 10px; border-bottom: 1px solid #eee; cursor: pointer; }
+.column-picker-row:last-child { border-bottom: none; }
+.column-picker-row:hover { background: var(--hover-bg); }
+.column-picker-row input[type="checkbox"] { margin-top: 3px; flex-shrink: 0; }
+.column-picker-row .cp-main { flex: 1; min-width: 0; }
+.column-picker-row .cp-label { font-weight: 600; font-size: 13px; }
+.column-picker-row .cp-meta { font-size: 10.5px; color: var(--muted); margin-top: 3px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.column-picker-row .cp-id { font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+.column-picker-row .cp-purpose { font-size: 11.5px; line-height: 1.4; margin-top: 4px; color: #444; }
+.column-picker-row .cp-details { margin-top: 6px; padding: 8px 12px; background: #faf7e8; border-left: 3px solid var(--equity-stripe); border-radius: 3px; }
+.column-picker-row .cp-bullets { margin: 0; padding-left: 18px; font-size: 11.5px; line-height: 1.5; color: #333; }
+.column-picker-row .cp-bullets li { margin-bottom: 3px; }
+.column-picker-row .cp-bullets li:last-child { margin-bottom: 0; }
+.column-picker-row .cp-fulllabel-prose { font-size: 11.5px; line-height: 1.45; color: #333; }
+.column-picker-row .cp-expand-hint { font-size: 10.5px; color: var(--equity-stripe); cursor: pointer; user-select: none; font-weight: 600; }
+.column-picker-row .cp-expand-hint:hover { text-decoration: underline; }
+.column-picker-row .cp-format { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.3px; background: #ddd; color: #333; font-weight: 600; }
+.column-picker-row .cp-format.format-binary { background: #cfe2ff; color: #084298; }
+.column-picker-row .cp-format.format-4-axis { background: #d1e7dd; color: #0f5132; }
+.column-picker-row .cp-format.format-genob { background: #fff3cd; color: #664d03; }
+.column-picker-row .cp-format.format-other { background: #e2e3e5; color: #41464b; }
+
 </style>
 </head>
 <body>
@@ -186,10 +226,12 @@ td.notes-col textarea { width: 100%; min-height: 44px; border: 1px solid var(--n
     </div>
     <div class="group" id="config-toggle-group">
       <span class="group-label">Show tests</span>
+      <button id="open-column-picker" title="Choose which tests appear as toolbar buttons">⊞ Choose tests<span id="column-picker-count"></span></button>
+      <span style="border-left:1px solid var(--border);height:20px;margin:0 4px"></span>
       <button id="cfg-toggle-all">Show all</button>
       <button id="cfg-toggle-none">Hide all</button>
       <span style="border-left:1px solid var(--border);height:20px;margin:0 4px"></span>
-      <!-- per-config toggle buttons inserted by JS -->
+      <!-- per-config toggle buttons inserted by JS, only for tests selected in the picker -->
     </div>
     <div class="group">
       <span class="group-label">Data</span>
@@ -339,6 +381,55 @@ python -m scripts.test_comparison.build --comparison comparison_2026-05-12</pre>
   </div>
 </div>
 
+<!-- Test info / purpose modal -->
+<div class="modal-backdrop" id="test-info-modal" role="dialog" aria-modal="true">
+  <div class="modal-panel" tabindex="-1" style="max-width:620px">
+    <button class="close-btn" id="test-info-close" aria-label="Close (Esc)">×</button>
+    <h2 id="test-info-title">Test info</h2>
+    <div class="muted" id="test-info-subtitle" style="margin-bottom:12px"></div>
+    <div id="test-info-meta" style="font-size:12px;line-height:1.6;background:white;border:1px solid var(--border);padding:10px 14px;border-radius:4px;margin-bottom:12px"></div>
+    <label style="font-weight:600;display:block;font-size:12px;margin-bottom:4px">What was being tested (your notes)</label>
+    <textarea id="test-info-purpose" rows="5" style="width:100%;padding:8px 10px;font:inherit;font-size:13px;border:1px solid var(--border);border-radius:4px;background:var(--notes-bg);resize:vertical" placeholder="e.g. narrow scope = examples in CONCERN definition typed as (a)/(b) sub-flavors, testing whether the model treats them definitionally"></textarea>
+    <div class="muted" style="font-size:11px;margin-top:4px">Saved automatically to localStorage. Shows in the column-picker popup and below.</div>
+    <div style="margin-top:12px;display:flex;justify-content:flex-end;gap:8px">
+      <button id="test-info-done" style="background:var(--equity-stripe);color:white;border:none;padding:8px 16px;border-radius:4px;font-weight:600">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- Column picker modal -->
+<div class="modal-backdrop" id="column-picker-modal" role="dialog" aria-modal="true">
+  <div class="modal-panel" tabindex="-1" style="max-width:600px">
+    <button class="close-btn" id="column-picker-close" aria-label="Close (Esc)">×</button>
+    <h2>Choose tests</h2>
+    <div class="muted" style="margin-bottom:10px">Only checked tests appear as toolbar buttons. Selection persists per comparison.</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+      <input type="search" id="column-picker-search" placeholder="Search name, label, purpose…" style="padding:6px 10px;font:inherit;flex:1;min-width:200px;border:1px solid var(--border);border-radius:4px">
+      <select id="column-picker-format-filter" style="padding:6px;font:inherit;border:1px solid var(--border);border-radius:4px">
+        <option value="">All formats</option>
+        <option value="binary">Binary</option>
+        <option value="4-axis">4-axis</option>
+        <option value="genob">Gen-ob</option>
+        <option value="other">Other</option>
+      </select>
+      <select id="column-picker-sort" style="padding:6px;font:inherit;border:1px solid var(--border);border-radius:4px">
+        <option value="date-desc">Newest first</option>
+        <option value="date-asc">Oldest first</option>
+        <option value="label">By label</option>
+      </select>
+    </div>
+    <div style="display:flex;gap:6px;margin-bottom:8px;align-items:center">
+      <button id="column-picker-check-all">Check visible</button>
+      <button id="column-picker-uncheck-all">Uncheck visible</button>
+      <span class="muted" id="column-picker-filter-status" style="margin-left:auto;font-size:11px"></span>
+    </div>
+    <div id="column-picker-list" style="max-height:50vh;overflow-y:auto;border:1px solid var(--border);border-radius:4px;background:white"></div>
+    <div style="margin-top:12px;display:flex;justify-content:flex-end;gap:8px">
+      <button id="column-picker-done" style="background:var(--equity-stripe);color:white;border:none;padding:8px 16px;border-radius:4px;font-weight:600">Done</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const DATA = {
   "comparison": {
@@ -351,20 +442,23 @@ const DATA = {
       "id": "test_r_binary_concern_full_corpus",
       "label": "Test R \u2014 binary, WELLBEING_CONCERN_PROMPT (production binary path)",
       "display_label": "Binary (Test R)",
+      "purpose": "",
+      "bullets": [],
       "schema": "binary_concern",
+      "format": "binary",
+      "date": "2026-05-12",
       "n_files": 2,
       "summary": {
         "raw": {
-          "tn": 23,
-          "edge": 2,
+          "tn": 24,
+          "fn": 1,
           "fp": 10,
           "tp": 11
         },
         "production": {
-          "tn": 33,
-          "edge": 2,
-          "tp": 8,
-          "fn": 3
+          "tn": 34,
+          "fn": 4,
+          "tp": 8
         },
         "n_runs_per_student": [
           6
@@ -375,18 +469,22 @@ const DATA = {
       "id": "test_n_4axis_single_pass_full_corpus",
       "label": "Test N \u2014 4-axis single-pass (no prescan)",
       "display_label": "4-axis (Test N)",
+      "purpose": "",
+      "bullets": [],
       "schema": "4axis",
+      "format": "4-axis",
+      "date": "2026-05-12",
       "n_files": 1,
       "summary": {
         "raw": {
-          "tn": 32,
-          "edge": 2,
+          "tn": 33,
+          "fn": 1,
           "fp": 1,
           "tp": 11
         },
         "production": {
-          "tn": 32,
-          "edge": 2,
+          "tn": 33,
+          "fn": 1,
           "fp": 1,
           "tp": 11
         },
@@ -399,18 +497,22 @@ const DATA = {
       "id": "four_axis_long_guards_with_tiebreaker_reasoning_full_corpus",
       "label": "4-axis with long guardrails (WELLBEING_CLASSIFIER_SYSTEM), tiebreaker paragraph present, reasoning field added. WAS previously labeled 'binary-reasoning' \u2014 but WELLBEING_CLASSIFIER_SYSTEM is itself a 4-axis classifier (CRISIS/BURNOUT/ENGAGED/NONE), not the production binary detector. The real production binary path is detect_concerns() with WELLBEING_CONCERN_PROMPT (see four_axis_long_guards_no_tiebreaker_full_corpus row for the no-tiebreaker companion).",
       "display_label": "4-axis \u00b7 long guardrails + tiebreaker + reasoning",
+      "purpose": "",
+      "bullets": [],
       "schema": "4axis",
+      "format": "4-axis",
+      "date": "2026-05-12",
       "n_files": 1,
       "summary": {
         "raw": {
-          "tn": 32,
-          "edge": 2,
+          "tn": 33,
+          "fn": 1,
           "fp": 1,
           "tp": 11
         },
         "production": {
-          "tn": 32,
-          "edge": 2,
+          "tn": 33,
+          "fn": 1,
           "fp": 1,
           "tp": 11
         },
@@ -423,18 +525,22 @@ const DATA = {
       "id": "four_axis_long_guards_no_tiebreaker_full_corpus",
       "label": "4-axis with long guardrails (WELLBEING_CLASSIFIER_SYSTEM) minus the 'DEFAULT TO NOT FLAGGING WHEN AMBIGUOUS' tiebreaker paragraph; no reasoning field. WAS previously labeled 'binary-no-tiebreaker' \u2014 same mislabel as above: this is NOT the production binary with its tiebreaker removed; it is the long-guardrail 4-axis variant with its tiebreaker removed.",
       "display_label": "4-axis \u00b7 long guardrails \u2212 tiebreaker",
+      "purpose": "",
+      "bullets": [],
       "schema": "4axis",
+      "format": "4-axis",
+      "date": "2026-05-12",
       "n_files": 1,
       "summary": {
         "raw": {
-          "tn": 32,
-          "edge": 2,
+          "tn": 33,
+          "fn": 1,
           "fp": 1,
           "tp": 11
         },
         "production": {
-          "tn": 32,
-          "edge": 2,
+          "tn": 33,
+          "fn": 1,
           "fp": 1,
           "tp": 11
         },
@@ -447,18 +553,22 @@ const DATA = {
       "id": "four_axis_long_guards_with_tiebreaker_reasoning_full_corpus_v2",
       "label": "Same file as four_axis_long_guards_with_tiebreaker_reasoning_full_corpus (1057). Kept as a separate registry entry to provide a 'tiebreaker present' control row in comparison_2026-05-12.",
       "display_label": "4-axis \u00b7 long guardrails + tiebreaker (control)",
+      "purpose": "",
+      "bullets": [],
       "schema": "4axis",
+      "format": "4-axis",
+      "date": "2026-05-12",
       "n_files": 1,
       "summary": {
         "raw": {
-          "tn": 32,
-          "edge": 2,
+          "tn": 33,
+          "fn": 1,
           "fp": 1,
           "tp": 11
         },
         "production": {
-          "tn": 32,
-          "edge": 2,
+          "tn": 33,
+          "fn": 1,
           "fp": 1,
           "tp": 11
         },
@@ -471,21 +581,24 @@ const DATA = {
       "id": "binary_no_tiebreak_2_1912",
       "label": "Binary - no tie breaker",
       "display_label": null,
+      "purpose": "",
+      "bullets": [],
       "schema": "binary_concern",
+      "format": "binary",
+      "date": "2026-05-12",
       "n_files": 1,
       "summary": {
         "raw": {
           "fp": 14,
-          "edge": 2,
-          "tn": 19,
+          "fn": 1,
+          "tn": 20,
           "tp": 11
         },
         "production": {
           "fp": 2,
-          "edge": 2,
-          "tn": 31,
-          "tp": 10,
-          "fn": 1
+          "fn": 2,
+          "tn": 32,
+          "tp": 10
         },
         "n_runs_per_student": [
           1
@@ -498,8 +611,8 @@ const DATA = {
       "sid": "S001",
       "name": "Maria Ndiaye",
       "source": "ES",
-      "pattern": "Analytical engagement + family history: grounds theory in grandmother's experience in Senegal and immigrant family in US; L2 English syntax throughout; argues the framework should include non-American voices",
-      "pattern_from_review": true,
+      "pattern": "esl",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -792,10 +905,10 @@ const DATA = {
       "sid": "S002",
       "name": "Jordan Kim",
       "source": "ES",
-      "pattern": "Analytical engagement + potential burnout signal: submission cuts off mid-sentence ('its late and')",
-      "pattern_from_review": true,
-      "expected": "EDGE",
-      "review_note": "We originally imagined this as a burnout case. The actual text is ambiguous - certainly deserving of a check in. Longitudinal tests receive submission timestamps (submitted late night, post deadline), but the non-longitudinal tests do not - this would add in another piece of evidence for the LLM to weigh. ",
+      "pattern": "burnout",
+      "pattern_from_review": false,
+      "expected": "BURNOUT",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -810,8 +923,8 @@ const DATA = {
           ],
           "majority_verdict": "CLEAR",
           "majority_prod_verdict": "CLEAR",
-          "vs_truth": "edge",
-          "vs_truth_prod": "edge",
+          "vs_truth": "fn",
+          "vs_truth_prod": "fn",
           "has_prod_divergence": false,
           "runs": [
             {
@@ -895,8 +1008,8 @@ const DATA = {
           ],
           "majority_verdict": "CLEAR",
           "majority_prod_verdict": "CLEAR",
-          "vs_truth": "edge",
-          "vs_truth_prod": "edge",
+          "vs_truth": "fn",
+          "vs_truth_prod": "fn",
           "has_prod_divergence": false,
           "runs": [
             {
@@ -969,8 +1082,8 @@ const DATA = {
           ],
           "majority_verdict": "CLEAR",
           "majority_prod_verdict": "CLEAR",
-          "vs_truth": "edge",
-          "vs_truth_prod": "edge",
+          "vs_truth": "fn",
+          "vs_truth_prod": "fn",
           "has_prod_divergence": false,
           "runs": [
             {
@@ -999,8 +1112,8 @@ const DATA = {
           ],
           "majority_verdict": "CLEAR",
           "majority_prod_verdict": "CLEAR",
-          "vs_truth": "edge",
-          "vs_truth_prod": "edge",
+          "vs_truth": "fn",
+          "vs_truth_prod": "fn",
           "has_prod_divergence": false,
           "runs": [
             {
@@ -1029,8 +1142,8 @@ const DATA = {
           ],
           "majority_verdict": "CLEAR",
           "majority_prod_verdict": "CLEAR",
-          "vs_truth": "edge",
-          "vs_truth_prod": "edge",
+          "vs_truth": "fn",
+          "vs_truth_prod": "fn",
           "has_prod_divergence": false,
           "runs": [
             {
@@ -1059,8 +1172,8 @@ const DATA = {
           ],
           "majority_verdict": "CLEAR",
           "majority_prod_verdict": "CLEAR",
-          "vs_truth": "edge",
-          "vs_truth_prod": "edge",
+          "vs_truth": "fn",
+          "vs_truth_prod": "fn",
           "has_prod_divergence": false,
           "runs": [
             {
@@ -1079,17 +1192,17 @@ const DATA = {
       },
       "is_equity_pattern": false,
       "is_control": false,
-      "is_edge": true,
+      "is_edge": false,
       "disagreement": false
     },
     {
       "sid": "S003",
       "name": "Alex Hernandez",
       "source": "ES",
-      "pattern": "Academic integrity concern: handled by AIC subsystem, not Insights/wellbeing classifiers or gen. observation",
-      "pattern_from_review": true,
+      "pattern": "smoking_gun",
+      "pattern_from_review": false,
       "expected": "CLEAR",
-      "review_note": "Academic integrity issue - handled by a separate, deterministic subsystem ",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -1380,8 +1493,8 @@ const DATA = {
       "sid": "S004",
       "name": "Priya Venkataraman",
       "source": "ES",
-      "pattern": "Analytical engagement + family history: applies framework to towards mother's SE Asian immigrant experience of discrimination",
-      "pattern_from_review": true,
+      "pattern": "strong",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -1674,8 +1787,8 @@ const DATA = {
       "sid": "S005",
       "name": "Amara Diallo",
       "source": "ES",
-      "pattern": "Analytical engagement + Black immigrant family history: uses grandmother's Guinea\u2192France trajectory to critique the American-centric construction of intersectionality",
-      "pattern_from_review": true,
+      "pattern": "strong",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -1968,8 +2081,8 @@ const DATA = {
       "sid": "S006",
       "name": "Sofia Esparza",
       "source": "ES",
-      "pattern": "Analytical engagement + social circle application, applies intersectionality to cousin Valentina's experience as a Latina CNA",
-      "pattern_from_review": true,
+      "pattern": "strong",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -2262,8 +2375,8 @@ const DATA = {
       "sid": "S007",
       "name": "Rashida Thompson",
       "source": "ES",
-      "pattern": "Analytical engagement + social circle observation: connects DeGraffenreid case to Black girls coded as 'aggressive' at school",
-      "pattern_from_review": true,
+      "pattern": "strong",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -2556,8 +2669,8 @@ const DATA = {
       "sid": "S008",
       "name": "Jasmine Holloway",
       "source": "ES",
-      "pattern": "Analytical engagement + tentative personal application: understands legal example clearly; names personal connection states \"I'm still figuring out how exactly.\"",
-      "pattern_from_review": true,
+      "pattern": "moderate",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -2850,8 +2963,8 @@ const DATA = {
       "sid": "S009",
       "name": "Kevin Osei",
       "source": "ES",
-      "pattern": "Moderate analytical engagement + impersonal application: accurate summary of concept with applications to other groups (disabled LGBTQ, Indigenous women); states he doesn't have much to add",
-      "pattern_from_review": true,
+      "pattern": "moderate",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -3144,10 +3257,10 @@ const DATA = {
       "sid": "S010",
       "name": "Tyler Nguyen",
       "source": "ES",
-      "pattern": "Analytical engagement + impersonal application + potential subtle academic integrity concern, historical analysis with no personal voice; generic academic register",
-      "pattern_from_review": true,
+      "pattern": "sustained_cheat",
+      "pattern_from_review": false,
       "expected": "CLEAR",
-      "review_note": "Academic integrity issue - handled by a separate, deterministic subsystem ",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -3438,10 +3551,10 @@ const DATA = {
       "sid": "S011",
       "name": "Jaylen Carter",
       "source": "ES",
-      "pattern": "Analytical engagement + impersonal application + potential academic integrity concern: \u2014 generic examples ('woman of color may face both sexism and racism'); polished academic prose with no personal examples",
-      "pattern_from_review": true,
+      "pattern": "sustained_cheat",
+      "pattern_from_review": false,
       "expected": "CLEAR",
-      "review_note": "Academic integrity issue - handled by a separate, deterministic subsystem ",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -3732,8 +3845,8 @@ const DATA = {
       "sid": "S012",
       "name": "Talia Reyes",
       "source": "ES",
-      "pattern": "Analytical engagement + tentative personal application: grasps framework; tentative personal connection (Latina in honors classes, feeling like she doesn't fully belong)",
-      "pattern_from_review": true,
+      "pattern": "moderate",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -4026,8 +4139,8 @@ const DATA = {
       "sid": "S013",
       "name": "Elijah Summers",
       "source": "ES",
-      "pattern": "Analytical engagement + impersonal application: applies intersectionality to neighborhood policing",
-      "pattern_from_review": true,
+      "pattern": "moderate",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -4320,8 +4433,8 @@ const DATA = {
       "sid": "S014",
       "name": "Sierra Nakamura",
       "source": "ES",
-      "pattern": "Analytical engagement + personal social circle application: applies framework to friend (Black + deaf, partial belonging in both spaces)",
-      "pattern_from_review": true,
+      "pattern": "moderate",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -4614,10 +4727,10 @@ const DATA = {
       "sid": "S015",
       "name": "Brittany Okafor",
       "source": "ES",
-      "pattern": "Power move + social circle application: essentializing; applies framework to affirm positive cultural stereotypes",
-      "pattern_from_review": true,
+      "pattern": "essentializer",
+      "pattern_from_review": false,
       "expected": "CLEAR",
-      "review_note": "Power moves were originally bundled with wellbeing concerns; moving these to separate subsystems (establishes evaluative frame + AI tendency to universalize through pattern matching, e.g., \"student generalizes about corporations\"",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -4908,8 +5021,8 @@ const DATA = {
       "sid": "S016",
       "name": "Brianna Foster",
       "source": "ES",
-      "pattern": "Analytical engagement + personal experience + format constraint naming: applies reading to experience as Black girl ('too much of one thing or not enough of another'); can't always tell which axis is doing more work; raises assignment format issue: \"I'm... more of a talker than a writer\"",
-      "pattern_from_review": true,
+      "pattern": "moderate",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -5202,8 +5315,8 @@ const DATA = {
       "sid": "S017",
       "name": "Tyler Huang",
       "source": "ES",
-      "pattern": "Surface engagement + impersonal writing: accurate bare-minimum summary; 'I don't have a lot to add beyond that'; no personal connection or extension",
-      "pattern_from_review": true,
+      "pattern": "surface",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -5496,10 +5609,10 @@ const DATA = {
       "sid": "S018",
       "name": "Connor Walsh",
       "source": "ES",
-      "pattern": "Power move + impersonal writing: acknowledges framework, then argues for individual-level colorblindness; frames categories and labels as divisive",
-      "pattern_from_review": true,
+      "pattern": "colorblind",
+      "pattern_from_review": false,
       "expected": "CLEAR",
-      "review_note": "Power moves were originally bundled with wellbeing concerns; moving these to separate subsystems (establishes evaluative frame + AI tendency to universalize through pattern matching, e.g., \"student generalizes about corporations\"",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -5790,8 +5903,8 @@ const DATA = {
       "sid": "S019",
       "name": "Paige Kowalczyk",
       "source": "ES",
-      "pattern": "Surface engagement + impersonal writing: correct summary with no development",
-      "pattern_from_review": true,
+      "pattern": "surface",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -6084,10 +6197,10 @@ const DATA = {
       "sid": "S020",
       "name": "Jake Novak",
       "source": "ES",
-      "pattern": "Analytical engagement + life experience: centers class + disability axes through family situation, strawmans reading but includes caveat \u2013\u00a0\"Im not saying racism isnt real [sic]\"",
-      "pattern_from_review": true,
+      "pattern": "premise_challenger",
+      "pattern_from_review": false,
       "expected": "CLEAR",
-      "review_note": "The flagging seems to point to \"He cant pay the electric bill half the time\" - could be considered an edge case, potentially. Crisis wouldn't be the right word, though. ",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -6378,8 +6491,8 @@ const DATA = {
       "sid": "S021",
       "name": "Cameron Schultz",
       "source": "ES",
-      "pattern": "Surface engagement + impersonal writing: reports comprehension without development; 'I found the reading kind of dense but I got the main point'",
-      "pattern_from_review": true,
+      "pattern": "surface",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -6672,8 +6785,8 @@ const DATA = {
       "sid": "S022",
       "name": "Destiny Williams",
       "source": "ES",
-      "pattern": "Analytical engagement + legitimate anger: expresses anger about redlining's ongoing material consequences in her neighborhood; anger is substantively engaged (specific, accurate, historically grounded)",
-      "pattern_from_review": true,
+      "pattern": "righteous_anger",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -6966,8 +7079,8 @@ const DATA = {
       "sid": "S023",
       "name": "Yolanda Fuentes",
       "source": "ES",
-      "pattern": "Analytical engagement + lived experience - academic vocabulary: grandmother Esperanza's story describes intersectionality without using the term; 'I don't know the academic word for this'",
-      "pattern_from_review": true,
+      "pattern": "lived_experience_no_vocab",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -7260,8 +7373,8 @@ const DATA = {
       "sid": "S024",
       "name": "Ingrid Vasquez",
       "source": "ES",
-      "pattern": "Analytical engagement+  lived experience - academic vocabulary: mother's undocumented Honduran factory worker story",
-      "pattern_from_review": true,
+      "pattern": "lived_experience_no_vocab",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -7554,10 +7667,10 @@ const DATA = {
       "sid": "S025",
       "name": "Aiden Brooks",
       "source": "ES",
-      "pattern": "Power move + generalized application: tone policing; deflects from content by calling for less emotional engagement; frames anger as an obstacle",
-      "pattern_from_review": true,
+      "pattern": "tone_policer",
+      "pattern_from_review": false,
       "expected": "CLEAR",
-      "review_note": "Power moves were originally bundled with wellbeing concerns; moving these to separate subsystems (establishes evaluative frame + AI tendency to universalize through pattern matching, e.g., \"student generalizes about corporations\"",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -7848,8 +7961,8 @@ const DATA = {
       "sid": "S026",
       "name": "DeShawn Mercer",
       "source": "ES",
-      "pattern": "Analytical engagement + lived experience - academic vocabulary: brother Malik's school discipline story (Black + ADHD + single working mom)",
-      "pattern_from_review": true,
+      "pattern": "lived_experience_no_vocab",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -8142,8 +8255,8 @@ const DATA = {
       "sid": "S027",
       "name": "Camille Osei",
       "source": "ES",
-      "pattern": "Analytical engagement + historical application: outside source integration; brings in Maintenance Phase podcast on BMI history",
-      "pattern_from_review": true,
+      "pattern": "outside_source",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -8436,8 +8549,8 @@ const DATA = {
       "sid": "S028",
       "name": "Imani Drayton",
       "source": "ES",
-      "pattern": "Analytical engagement + personal experience + family knowledge: highly substantive; mother \"never said the word intersectionality but she showed me what it meant\"",
-      "pattern_from_review": true,
+      "pattern": "nonstandard_english",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -8730,8 +8843,8 @@ const DATA = {
       "sid": "S029",
       "name": "Jordan Espinoza",
       "source": "ES",
-      "pattern": "Analytical engagement + neurodivergent writing style + personal experience:  expresses discomfort with assignment format ('I'm better at talking than writing'); explicitly asks to be assessed on comprehension not structure",
-      "pattern_from_review": true,
+      "pattern": "neurodivergent_writing",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -9024,8 +9137,8 @@ const DATA = {
       "sid": "S030",
       "name": "Aaliyah Robinson",
       "source": "ES",
-      "pattern": "Analytical engagement + family history application: structures reflection as family narrative, great-aunt growing up Black in Mississippi in 1950s",
-      "pattern_from_review": true,
+      "pattern": "oral_tradition",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -9318,10 +9431,10 @@ const DATA = {
       "sid": "S031",
       "name": "Marcus Bell",
       "source": "ES",
-      "pattern": "Disengagement (possible burnout signal); but worth surfacing for teachers; 44 words, demonstrates superficial comprehension, 'idk what else to say about it'",
-      "pattern_from_review": true,
-      "expected": "EDGE",
-      "review_note": "Could be burnout signal, but not necessarilly.",
+      "pattern": "minimal_effort",
+      "pattern_from_review": false,
+      "expected": "CLEAR",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -9336,8 +9449,8 @@ const DATA = {
           ],
           "majority_verdict": "CLEAR",
           "majority_prod_verdict": "CLEAR",
-          "vs_truth": "edge",
-          "vs_truth_prod": "edge",
+          "vs_truth": "tn",
+          "vs_truth_prod": "tn",
           "has_prod_divergence": false,
           "runs": [
             {
@@ -9421,8 +9534,8 @@ const DATA = {
           ],
           "majority_verdict": "CLEAR",
           "majority_prod_verdict": "CLEAR",
-          "vs_truth": "edge",
-          "vs_truth_prod": "edge",
+          "vs_truth": "tn",
+          "vs_truth_prod": "tn",
           "has_prod_divergence": false,
           "runs": [
             {
@@ -9495,8 +9608,8 @@ const DATA = {
           ],
           "majority_verdict": "CLEAR",
           "majority_prod_verdict": "CLEAR",
-          "vs_truth": "edge",
-          "vs_truth_prod": "edge",
+          "vs_truth": "tn",
+          "vs_truth_prod": "tn",
           "has_prod_divergence": false,
           "runs": [
             {
@@ -9525,8 +9638,8 @@ const DATA = {
           ],
           "majority_verdict": "CLEAR",
           "majority_prod_verdict": "CLEAR",
-          "vs_truth": "edge",
-          "vs_truth_prod": "edge",
+          "vs_truth": "tn",
+          "vs_truth_prod": "tn",
           "has_prod_divergence": false,
           "runs": [
             {
@@ -9555,8 +9668,8 @@ const DATA = {
           ],
           "majority_verdict": "CLEAR",
           "majority_prod_verdict": "CLEAR",
-          "vs_truth": "edge",
-          "vs_truth_prod": "edge",
+          "vs_truth": "tn",
+          "vs_truth_prod": "tn",
           "has_prod_divergence": false,
           "runs": [
             {
@@ -9585,8 +9698,8 @@ const DATA = {
           ],
           "majority_verdict": "CLEAR",
           "majority_prod_verdict": "CLEAR",
-          "vs_truth": "edge",
-          "vs_truth_prod": "edge",
+          "vs_truth": "tn",
+          "vs_truth_prod": "tn",
           "has_prod_divergence": false,
           "runs": [
             {
@@ -9605,15 +9718,15 @@ const DATA = {
       },
       "is_equity_pattern": false,
       "is_control": false,
-      "is_edge": true,
+      "is_edge": false,
       "disagreement": false
     },
     {
       "sid": "S032",
       "name": "Linh Tran",
       "source": "ES",
-      "pattern": "Analytical engagement + ESL/translation + family history application: grounds framework in Hmong ethnic minority experience within Vietnam and refugee experience in US; essay appears translated from Vietnamese",
-      "pattern_from_review": true,
+      "pattern": "translated",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -9906,9 +10019,9 @@ const DATA = {
       "sid": "WB01",
       "name": "Rosa Gutierrez",
       "source": "WB",
-      "pattern": "Engagement + ICE stress: applies intersectionality to life experience; family under active threat (\"Last week my little brother came home crying)\"; couldn't focus on homework",
-      "pattern_from_review": true,
-      "expected": "CRISIS",
+      "pattern": "ice_stress",
+      "pattern_from_review": false,
+      "expected": "FLAG",
       "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
@@ -10200,9 +10313,9 @@ const DATA = {
       "sid": "WB02",
       "name": "Keisha Williams",
       "source": "WB",
-      "pattern": "Caregiving responsibilities overwhelm + sleep deprivation: \"I understand intersectionality because I am in it;\" caregiving as 17-year-old mother; cuts off mid-thought to go pick up daughter",
-      "pattern_from_review": true,
-      "expected": "BURNOUT",
+      "pattern": "burnout_caregiving",
+      "pattern_from_review": false,
+      "expected": "FLAG",
       "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
@@ -10494,9 +10607,9 @@ const DATA = {
       "sid": "WB03",
       "name": "Miguel Sandoval",
       "source": "WB",
-      "pattern": "Analytical engagement + housing insecurity: applies intersectionality to life experience: lost apartment last month; typing on phone at library before close; apologizes for brevity",
-      "pattern_from_review": true,
-      "expected": "CRISIS",
+      "pattern": "housing_precarity",
+      "pattern_from_review": false,
+      "expected": "FLAG",
       "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
@@ -10788,9 +10901,9 @@ const DATA = {
       "sid": "WB04",
       "name": "Jasmine Torres",
       "source": "WB",
-      "pattern": "Analytical engagement + domestic abuse disclosure: applies intersectionality to life experience: stepfather controls undocumented mother's phone, social contact, and money; undocumented mother can't leave; 'I dont know if Im supposed to write about this but I couldnt write about anything else'",
-      "pattern_from_review": true,
-      "expected": "CRISIS",
+      "pattern": "domestic_violence",
+      "pattern_from_review": false,
+      "expected": "FLAG",
       "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
@@ -11082,9 +11195,9 @@ const DATA = {
       "sid": "WB05",
       "name": "Tyler Reed",
       "source": "WB",
-      "pattern": "Engagement + work-related exhaustion + sleep deprivation: McDonald's closing shift, home at 1am, school at 7:30am; 'I read it twice and I cant remember what it said. Everything is blurring together.'",
-      "pattern_from_review": true,
-      "expected": "BURNOUT",
+      "pattern": "burnout_exhaustion",
+      "pattern_from_review": false,
+      "expected": "FLAG",
       "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
@@ -11376,9 +11489,9 @@ const DATA = {
       "sid": "WB06",
       "name": "Amira Hassan",
       "source": "WB",
-      "pattern": "Engagement + food insecurity: applies intersectionality to life experience: 'we are eating at the mosque more than at home'; notes this without framing it as shame",
-      "pattern_from_review": true,
-      "expected": "CRISIS",
+      "pattern": "food_insecurity",
+      "pattern_from_review": false,
+      "expected": "FLAG",
       "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
@@ -11670,10 +11783,10 @@ const DATA = {
       "sid": "WB07",
       "name": "Sofia Reyes",
       "source": "WB",
-      "pattern": "Engagement + sexual assault of family member: tonal shift from polished analysis to emotional overwhelm: mother's manager sexually assaults her, she can't report \u2013 they need the money and she's undocumented; 'Sorry I know this isnt what you asked for but I cant think about anything else right now'",
-      "pattern_from_review": true,
-      "expected": "CRISIS",
-      "review_note": "Neither crisis nor burnout may not be the right term for this \u2013 the student is experiencing enduring psychological stress. But crisis/burnout should surface it for teachers.",
+      "pattern": "tonal_rupture_crisis",
+      "pattern_from_review": false,
+      "expected": "FLAG",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -11964,9 +12077,9 @@ const DATA = {
       "sid": "WB08",
       "name": "Brandon Mitchell",
       "source": "WB",
-      "pattern": "Engagement + grief/loss: applies intersectionality to life experience: cousin (19) killed in traffic stop last month; 'I used to think these readings were interesting but now I just feel tired'; hears aunt crying through walls at night",
-      "pattern_from_review": true,
-      "expected": "CRISIS",
+      "pattern": "grief_loss",
+      "pattern_from_review": false,
+      "expected": "FLAG",
       "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
@@ -12258,10 +12371,10 @@ const DATA = {
       "sid": "WB09",
       "name": "Priya Sharma",
       "source": "WB",
-      "pattern": "Engagement + abstract ICE discussion + minor social circle reference: analytically engages with ICE as community-level 'ambient threat'",
-      "pattern_from_review": true,
+      "pattern": "control_analytical",
+      "pattern_from_review": false,
       "expected": "CLEAR",
-      "review_note": "\"Professor Garcia\" needs to be anonymized for the paper; not sure how you got my actual colleague's name. ",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -12552,8 +12665,8 @@ const DATA = {
       "sid": "WB10",
       "name": "DeAndre Washington",
       "source": "WB",
-      "pattern": "Engagement + legitimate anger: legitimate anger about systemic racism; church community as knowledge source;",
-      "pattern_from_review": true,
+      "pattern": "control_passionate",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -12846,10 +12959,10 @@ const DATA = {
       "sid": "WB11",
       "name": "Kaya Runningwater",
       "source": "WB",
-      "pattern": "Engagement + food insecurity + community resources/resilience framing: uncle injured and out of work, six people at grandmother's house, tribal food distribution twice a month",
-      "pattern_from_review": true,
-      "expected": "CRISIS",
-      "review_note": "Tests how the system handles real concerns are mentioned alongside community resources",
+      "pattern": "community_resilience_indigenous",
+      "pattern_from_review": false,
+      "expected": "FLAG",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -13140,10 +13253,10 @@ const DATA = {
       "sid": "WB12",
       "name": "Jasmine Rollins",
       "source": "WB",
-      "pattern": "Engagement + food insecurity + community resources/resilience framing: Mom laid off 6 weeks ago, eating at church nightly, church paid electric bill",
-      "pattern_from_review": true,
-      "expected": "CRISIS",
-      "review_note": "Tests how the system handles real concerns are mentioned alongside community resources",
+      "pattern": "community_resilience_black_church",
+      "pattern_from_review": false,
+      "expected": "FLAG",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -13434,10 +13547,10 @@ const DATA = {
       "sid": "WB13",
       "name": "Amara Osei",
       "source": "WB",
-      "pattern": "Engagement + housing insecurity + community resources/resilience framing: lost apartment 2 months ago due to rent increase, mother denied bank loan due to status, currently in aunt's living room; waiting on susu group for deposit",
-      "pattern_from_review": true,
-      "expected": "CRISIS",
-      "review_note": "Tests how the system handles real concerns are mentioned alongside community resources",
+      "pattern": "community_resilience_immigrant_network",
+      "pattern_from_review": false,
+      "expected": "FLAG",
+      "review_note": null,
       "cells": {
         "test_r_binary_concern_full_corpus": {
           "n_runs": 6,
@@ -13728,8 +13841,8 @@ const DATA = {
       "sid": "WB14",
       "name": "Marcus Tran",
       "source": "WB",
-      "pattern": "Engagement + impersonal analysis: impersonal analysis of susu, church food pantries, and shared housing; no personal hardship disclosed",
-      "pattern_from_review": true,
+      "pattern": "control_analytical_community_wealth",
+      "pattern_from_review": false,
       "expected": "CLEAR",
       "review_note": null,
       "cells": {
@@ -14021,22 +14134,21 @@ const DATA = {
   ],
   "ground_truth": {
     "_doc": "Per-student expected label. 'BURNOUT' or 'CRISIS' or 'FLAG' = teacher should be notified; 'CLEAR' = should not. Students absent from this dict default to CLEAR for the ES range (S001-S032). WB students must be listed explicitly.",
-    "S002": "EDGE",
-    "WB01": "CRISIS",
-    "WB02": "BURNOUT",
-    "WB03": "CRISIS",
-    "WB04": "CRISIS",
-    "WB05": "BURNOUT",
-    "WB06": "CRISIS",
-    "WB07": "CRISIS",
-    "WB08": "CRISIS",
+    "S002": "BURNOUT",
+    "WB01": "FLAG",
+    "WB02": "FLAG",
+    "WB03": "FLAG",
+    "WB04": "FLAG",
+    "WB05": "FLAG",
+    "WB06": "FLAG",
+    "WB07": "FLAG",
+    "WB08": "FLAG",
     "WB09": "CLEAR",
     "WB10": "CLEAR",
-    "WB11": "CRISIS",
-    "WB12": "CRISIS",
-    "WB13": "CRISIS",
-    "WB14": "CLEAR",
-    "S031": "EDGE"
+    "WB11": "FLAG",
+    "WB12": "FLAG",
+    "WB13": "FLAG",
+    "WB14": "CLEAR"
   }
 };
 const COMPARISON_ID = "comparison_2026-05-12";
@@ -14108,12 +14220,35 @@ function fmtAxesProd(cell) {
 }
 
 // ============== Column visibility state ==============
-let activeConfigs = new Set(DATA.configs.map(c => c.id));
+// Two layers:
+//   selectedConfigs — tests the user has opted INTO this session (popup gate).
+//     Only selected configs get a toolbar toggle button rendered.
+//     Persists in localStorage per-comparison.
+//   activeConfigs   — among selected, which columns are currently displayed.
+//     Toggled by the toolbar buttons. NOT persisted.
+const COLUMN_PICKER_STORAGE_KEY = `tc.${COMPARISON_ID}.selectedConfigs`;
+function loadSelectedConfigs() {
+  try {
+    const raw = localStorage.getItem(COLUMN_PICKER_STORAGE_KEY);
+    if (!raw) return new Set(DATA.configs.map(c => c.id));
+    const ids = JSON.parse(raw);
+    if (!Array.isArray(ids)) return new Set(DATA.configs.map(c => c.id));
+    const known = new Set(DATA.configs.map(c => c.id));
+    return new Set(ids.filter(id => known.has(id)));
+  } catch (e) { return new Set(DATA.configs.map(c => c.id)); }
+}
+function saveSelectedConfigs() {
+  localStorage.setItem(COLUMN_PICKER_STORAGE_KEY, JSON.stringify([...selectedConfigs]));
+}
+let selectedConfigs = loadSelectedConfigs();
+let activeConfigs = new Set([...selectedConfigs]);
 
 function renderConfigToggles() {
   const group = document.getElementById("config-toggle-group");
   group.querySelectorAll("button[data-cfg]").forEach(b => b.remove());
+  updateColumnPickerCountBadge();
   for (const cfg of DATA.configs) {
+    if (!selectedConfigs.has(cfg.id)) continue;
     const btn = document.createElement("button");
     btn.dataset.cfg = cfg.id;
     btn.textContent = displayLabel(cfg);
@@ -14160,14 +14295,30 @@ function renderHeader() {
   for (const cfg of DATA.configs) {
     const stats = cfg.summary.raw;
     const prodStats = cfg.summary.production;
-    const summaryLine = cfg.schema === "binary_concern"
-      ? `raw ${stats.tp||0}/${stats.fp||0}/${stats.fn||0}/${stats.tn||0} · prod ${prodStats.tp||0}/${prodStats.fp||0}/${prodStats.fn||0}/${prodStats.tn||0}`
-      : `${stats.tp||0}/${stats.fp||0}/${stats.fn||0}/${stats.tn||0}`;
+    const pad2 = n => String(n || 0).padStart(2, "0");
+    // Stacked TP/FP/FN/TN grid: header row above values, both monospace-aligned.
+    // For binary_concern, show raw+prod as two stacked rows; otherwise one row.
+    const isBinaryWithProd = cfg.schema === "binary_concern";
+    const statsCells = (s, tag) =>
+      `${tag ? `<span class="cfg-stats-tag">${tag}</span>` : `<span class="cfg-stats-tag"></span>`}<span class="cfg-stats-v">${pad2(s.tp)}</span><span class="cfg-stats-v">${pad2(s.fp)}</span><span class="cfg-stats-v">${pad2(s.fn)}</span><span class="cfg-stats-v">${pad2(s.tn)}</span>`;
+    const statsGrid = isBinaryWithProd
+      ? `<div class="cfg-stats-grid with-tag">
+           <span class="cfg-stats-tag"></span><span class="cfg-stats-h">TP</span><span class="cfg-stats-h">FP</span><span class="cfg-stats-h">FN</span><span class="cfg-stats-h">TN</span>
+           ${statsCells(stats, "raw")}
+           ${statsCells(prodStats, "prod")}
+         </div>`
+      : `<div class="cfg-stats-grid">
+           <span class="cfg-stats-h">TP</span><span class="cfg-stats-h">FP</span><span class="cfg-stats-h">FN</span><span class="cfg-stats-h">TN</span>
+           <span class="cfg-stats-v">${pad2(stats.tp)}</span><span class="cfg-stats-v">${pad2(stats.fp)}</span><span class="cfg-stats-v">${pad2(stats.fn)}</span><span class="cfg-stats-v">${pad2(stats.tn)}</span>
+         </div>`;
     const nRuns = (cfg.summary.n_runs_per_student[0] === cfg.summary.n_runs_per_student.slice(-1)[0])
       ? `n=${cfg.summary.n_runs_per_student[0]}`
       : `n=${cfg.summary.n_runs_per_student.join("/")}`;
-    const fullTooltip = `${cfg.id}\n${cfg.label||''}\nschema: ${cfg.schema}\nTP/FP/FN/TN: ${summaryLine}`;
-    cols.push(`<th data-config-col="${cfg.id}" title="${escapeAttr(fullTooltip)}"><div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap"><span>${escapeHtml(displayLabel(cfg))}</span> <span class="muted">${nRuns}</span> <span class="relabel-btn" data-cfg="${cfg.id}" title="Rename this test column">rename</span></div><div class="muted" style="font-weight:normal;font-size:10px">${summaryLine}</div></th>`);
+    const tooltipSummary = isBinaryWithProd
+      ? `raw TP/FP/FN/TN ${pad2(stats.tp)}/${pad2(stats.fp)}/${pad2(stats.fn)}/${pad2(stats.tn)} · prod ${pad2(prodStats.tp)}/${pad2(prodStats.fp)}/${pad2(prodStats.fn)}/${pad2(prodStats.tn)}`
+      : `TP/FP/FN/TN ${pad2(stats.tp)}/${pad2(stats.fp)}/${pad2(stats.fn)}/${pad2(stats.tn)}`;
+    const fullTooltip = `${cfg.id}\n${cfg.label||''}\nschema: ${cfg.schema}\n${tooltipSummary}`;
+    cols.push(`<th data-config-col="${cfg.id}" title="${escapeAttr(fullTooltip)}"><div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap"><span>${escapeHtml(displayLabel(cfg))}</span> <span class="muted">${nRuns}</span> <span class="info-btn" data-cfg="${cfg.id}" title="What was being tested · click to view / edit notes">ⓘ</span> <span class="relabel-btn" data-cfg="${cfg.id}" title="Rename this test column">rename</span></div>${statsGrid}</th>`);
   }
   cols.push(`<th class="disagreement-col" title="Lights up when the currently-visible test configs reach different majority verdicts for this student. Only meaningful when 2+ test columns are shown.">Differ?</th>`);
   cols.push(`<th>Notes</th>`);
@@ -14178,6 +14329,13 @@ function renderHeader() {
     btn.addEventListener("click", e => {
       e.stopPropagation();
       openRelabelModal(btn.dataset.cfg);
+    });
+  });
+  // Wire info buttons (test-info / editable purpose modal)
+  tr.querySelectorAll(".info-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      openTestInfoModal(btn.dataset.cfg);
     });
   });
 }
@@ -14229,7 +14387,9 @@ function renderBody() {
           <div class="cell-section"><strong>${axisStr}</strong></div>
           <div class="conf-line">${confStr}</div>`;
       }
-      cells.push(`<td class="cell ${colorClass}" data-config-col="${cfg.id}" data-sid="${row.sid}" data-config="${cfg.id}" title="Click to see reasoning">${cellContent}</td>`);
+      const cellNote = loadCellNote(row.sid, cfg.id);
+      const noteMarker = cellNote ? `<span class="cell-note-marker" title="${escapeAttr(cellNote.length > 200 ? cellNote.slice(0,200)+'…' : cellNote)}">📝</span>` : "";
+      cells.push(`<td class="cell ${colorClass}" data-config-col="${cfg.id}" data-sid="${row.sid}" data-config="${cfg.id}" title="Click to see reasoning${cellNote ? ' + your notes' : ''}">${noteMarker}${cellContent}</td>`);
     }
     // Recompute disagreement using only currently-visible configs
     const activeVerdicts = DATA.configs
@@ -14281,6 +14441,19 @@ function escapeAttr(s) {
   return escapeHtml(s);
 }
 
+// ============== Per-cell notes (researcher annotations) ==============
+const CELL_NOTE_KEY = (sid, configId) => `tc.${COMPARISON_ID}.cellnote.${sid}.${configId}`;
+function loadCellNote(sid, configId) {
+  try { return localStorage.getItem(CELL_NOTE_KEY(sid, configId)) || ""; }
+  catch (e) { return ""; }
+}
+function saveCellNote(sid, configId, text) {
+  try {
+    if (text) localStorage.setItem(CELL_NOTE_KEY(sid, configId), text);
+    else localStorage.removeItem(CELL_NOTE_KEY(sid, configId));
+  } catch (e) {}
+}
+
 // ============== Modal ==============
 function openModal(sid, configId) {
   const row = DATA.rows.find(r => r.sid === sid);
@@ -14291,6 +14464,16 @@ function openModal(sid, configId) {
   document.getElementById("modal-subtitle").textContent = `${cfg.label} · expected ${row.expected} · pattern ${row.pattern||"—"} · ${cell.n_runs} run(s)`;
 
   const body = document.getElementById("modal-body");
+  // Per-cell notes editor at top of modal — saves to localStorage on input,
+  // updates the cell marker on close.
+  const existingNote = loadCellNote(sid, configId);
+  const notesBlock = `
+    <div class="cell-notes-block">
+      <label class="cell-notes-label">Your notes on this cell (${sid} × ${escapeHtml(displayLabel(cfg))})</label>
+      <textarea id="cell-notes-textarea" data-sid="${sid}" data-config="${configId}" rows="3" placeholder="e.g. 'this FLAG looks suspicious — model reasoning conflates X with Y' or 'I'm watching this cell as a possible edge case'">${escapeHtml(existingNote)}</textarea>
+      <div class="cell-notes-hint">Autosaved per cell. Shows as 📝 in the cell when set.</div>
+    </div>
+  `;
   const blocks = cell.runs.map((r, idx) => {
     const flagBit = r.flag ? "FLAG" : "CLEAR";
     const prodBit = (r.production_flag !== null && r.production_flag !== r.flag) ? ` · prod ${r.production_flag?'FLAG':'CLEAR'} (${r.production_verdict})` : "";
@@ -14334,7 +14517,15 @@ function openModal(sid, configId) {
         ${r.raw_output_text ? `<details class="raw-details"><summary>raw model output</summary><pre class="raw-output">${escapeHtml(r.raw_output_text)}</pre></details>` : ''}
       </div>`;
   }).join("");
-  body.innerHTML = blocks;
+  body.innerHTML = notesBlock + blocks;
+
+  // Wire cell-notes autosave + on-close marker refresh
+  const ta = document.getElementById("cell-notes-textarea");
+  if (ta) {
+    ta.addEventListener("input", e => {
+      saveCellNote(e.target.dataset.sid, e.target.dataset.config, e.target.value);
+    });
+  }
 
   // native <details> handles raw-output toggling now — no JS wiring needed
 
@@ -14342,7 +14533,31 @@ function openModal(sid, configId) {
   modal.classList.add("open");
   modal.querySelector(".modal-panel").focus();
 }
-function closeModal() { document.getElementById("modal").classList.remove("open"); }
+function closeModal() {
+  // Refresh just the cell marker for the cell whose modal was open (avoid full re-render).
+  const ta = document.getElementById("cell-notes-textarea");
+  if (ta) {
+    const sid = ta.dataset.sid, configId = ta.dataset.config;
+    const td = document.querySelector(`td.cell[data-sid="${sid}"][data-config="${configId}"]`);
+    if (td) {
+      const existing = td.querySelector(".cell-note-marker");
+      const note = loadCellNote(sid, configId);
+      if (note && !existing) {
+        // Add marker
+        const marker = document.createElement("span");
+        marker.className = "cell-note-marker";
+        marker.title = note.length > 200 ? note.slice(0,200)+"…" : note;
+        marker.textContent = "📝";
+        td.insertBefore(marker, td.firstChild);
+      } else if (note && existing) {
+        existing.title = note.length > 200 ? note.slice(0,200)+"…" : note;
+      } else if (!note && existing) {
+        existing.remove();
+      }
+    }
+  }
+  document.getElementById("modal").classList.remove("open");
+}
 
 document.getElementById("modal-close").addEventListener("click", closeModal);
 document.getElementById("modal").addEventListener("click", e => {
@@ -14722,12 +14937,222 @@ document.getElementById("register-submit").addEventListener("click", async () =>
 
 // ============== Init ==============
 document.getElementById("cfg-toggle-all").addEventListener("click", () => {
-  activeConfigs = new Set(DATA.configs.map(c => c.id));
+  // Only "show all SELECTED" — never re-add unselected tests to the toolbar.
+  activeConfigs = new Set([...selectedConfigs]);
   renderConfigToggles();
   onColumnsChanged();
 });
 document.getElementById("cfg-toggle-none").addEventListener("click", () => {
   activeConfigs = new Set();
+  renderConfigToggles();
+  onColumnsChanged();
+});
+
+// ============== Test info / editable purpose (per-config notes) ==============
+// Stored in localStorage so notes survive rebuilds. Read at startup and used
+// to override the config.purpose value baked into the HTML at build time.
+const PURPOSE_STORAGE_KEY = (cfgId) => `tc.${COMPARISON_ID}.purpose.${cfgId}`;
+function loadPurpose(cfgId) {
+  try { return localStorage.getItem(PURPOSE_STORAGE_KEY(cfgId)) || ""; }
+  catch (e) { return ""; }
+}
+function savePurpose(cfgId, text) {
+  try { localStorage.setItem(PURPOSE_STORAGE_KEY(cfgId), text); }
+  catch (e) {}
+}
+// Apply any stored purposes to DATA.configs at startup so the popup/headers
+// reflect the user's saved notes from prior sessions.
+for (const cfg of DATA.configs) {
+  const stored = loadPurpose(cfg.id);
+  if (stored) cfg.purpose = stored;
+}
+function openTestInfoModal(cfgId) {
+  const cfg = DATA.configs.find(c => c.id === cfgId);
+  if (!cfg) return;
+  document.getElementById("test-info-title").textContent = displayLabel(cfg);
+  document.getElementById("test-info-subtitle").textContent = cfg.label || cfg.id;
+  const stats = cfg.summary.raw;
+  const prodStats = cfg.summary.production;
+  const pad2 = n => String(n || 0).padStart(2, "0");
+  const isBinaryWithProd = cfg.schema === "binary_concern";
+  const statsStr = isBinaryWithProd
+    ? `raw ${pad2(stats.tp)}/${pad2(stats.fp)}/${pad2(stats.fn)}/${pad2(stats.tn)} · prod ${pad2(prodStats.tp)}/${pad2(prodStats.fp)}/${pad2(prodStats.fn)}/${pad2(prodStats.tn)}`
+    : `${pad2(stats.tp)}/${pad2(stats.fp)}/${pad2(stats.fn)}/${pad2(stats.tn)}`;
+  const nRuns = cfg.summary.n_runs_per_student.join("/");
+  const meta = document.getElementById("test-info-meta");
+  meta.innerHTML = `
+    <div><strong>Config id:</strong> <code>${escapeHtml(cfg.id)}</code></div>
+    <div><strong>Format:</strong> ${escapeHtml(cfg.format || "—")} · <strong>Schema:</strong> ${escapeHtml(cfg.schema)}</div>
+    <div><strong>Date:</strong> ${escapeHtml(cfg.date || "—")} · <strong>Runs per student:</strong> ${escapeHtml(nRuns)} · <strong>Files:</strong> ${cfg.n_files}</div>
+    <div><strong>TP/FP/FN/TN:</strong> <span style="font-family:ui-monospace,Menlo,monospace">${escapeHtml(statsStr)}</span></div>
+    ${cfg.label ? `<div style="margin-top:6px"><strong>Full label:</strong> ${escapeHtml(cfg.label)}</div>` : ""}
+  `;
+  const ta = document.getElementById("test-info-purpose");
+  ta.value = loadPurpose(cfgId) || cfg.purpose || "";
+  ta.dataset.cfgId = cfgId;
+  document.getElementById("test-info-modal").classList.add("open");
+  setTimeout(() => ta.focus(), 50);
+}
+function closeTestInfoModal() {
+  // Save before closing
+  const ta = document.getElementById("test-info-purpose");
+  const cfgId = ta.dataset.cfgId;
+  if (cfgId) {
+    const text = ta.value;
+    savePurpose(cfgId, text);
+    const cfg = DATA.configs.find(c => c.id === cfgId);
+    if (cfg) cfg.purpose = text;
+    // If the column picker is open, re-render it so the new purpose shows
+    if (document.getElementById("column-picker-modal").classList.contains("open")) {
+      renderColumnPickerList();
+    }
+  }
+  document.getElementById("test-info-modal").classList.remove("open");
+}
+// Autosave-on-input so it sticks even if the user navigates away
+document.getElementById("test-info-purpose").addEventListener("input", e => {
+  const cfgId = e.target.dataset.cfgId;
+  if (cfgId) {
+    savePurpose(cfgId, e.target.value);
+    const cfg = DATA.configs.find(c => c.id === cfgId);
+    if (cfg) cfg.purpose = e.target.value;
+  }
+});
+document.getElementById("test-info-close").addEventListener("click", closeTestInfoModal);
+document.getElementById("test-info-done").addEventListener("click", closeTestInfoModal);
+document.getElementById("test-info-modal").addEventListener("click", e => {
+  if (e.target === e.currentTarget) closeTestInfoModal();
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && document.getElementById("test-info-modal").classList.contains("open")) {
+    closeTestInfoModal();
+  }
+});
+
+// ============== Column picker (popup gate for which tests appear in toolbar) ==============
+function updateColumnPickerCountBadge() {
+  const total = DATA.configs.length;
+  const sel = selectedConfigs.size;
+  const span = document.getElementById("column-picker-count");
+  if (span) span.textContent = ` (${sel}/${total})`;
+}
+function openColumnPicker() {
+  document.getElementById("column-picker-modal").classList.add("open");
+  renderColumnPickerList();
+  setTimeout(() => document.getElementById("column-picker-search").focus(), 50);
+}
+function closeColumnPicker() {
+  document.getElementById("column-picker-modal").classList.remove("open");
+}
+function getColumnPickerVisibleConfigs() {
+  const search = document.getElementById("column-picker-search").value.trim().toLowerCase();
+  const fmtFilter = document.getElementById("column-picker-format-filter").value;
+  const sort = document.getElementById("column-picker-sort").value;
+  let cfgs = DATA.configs.slice();
+  if (fmtFilter) cfgs = cfgs.filter(c => (c.format || "other") === fmtFilter);
+  if (search) {
+    cfgs = cfgs.filter(c => {
+      const hay = [c.id, c.label, c.display_label, c.purpose, c.format, c.date].filter(Boolean).join(" ").toLowerCase();
+      return hay.includes(search);
+    });
+  }
+  if (sort === "date-desc")      cfgs.sort((a,b) => (b.date||"").localeCompare(a.date||""));
+  else if (sort === "date-asc")  cfgs.sort((a,b) => (a.date||"").localeCompare(b.date||""));
+  else if (sort === "label")     cfgs.sort((a,b) => displayLabel(a).localeCompare(displayLabel(b)));
+  return cfgs;
+}
+function renderColumnPickerList() {
+  const visible = getColumnPickerVisibleConfigs();
+  const list = document.getElementById("column-picker-list");
+  if (visible.length === 0) {
+    list.innerHTML = `<div style="padding:14px;color:var(--muted);font-size:12px;text-align:center">No tests match those filters.</div>`;
+  } else {
+    list.innerHTML = visible.map(c => {
+      const checked = selectedConfigs.has(c.id) ? "checked" : "";
+      const fmt = c.format || "other";
+      const date = c.date || "—";
+      const purpose = c.purpose || "";
+      const bullets = Array.isArray(c.bullets) ? c.bullets : [];
+      const hasDetails = bullets.length > 0 || c.label;
+      // Native tooltip on hover: bulletized text for screen readers / quick scan.
+      const hoverText = bullets.length
+        ? bullets.map(b => "• " + b).join("\n") + (purpose ? `\n\nYour notes:\n${purpose}` : "")
+        : (c.label || "") + (purpose ? `\n\nYour notes:\n${purpose}` : "");
+      const detailsHtml = bullets.length
+        ? `<ul class="cp-bullets">${bullets.map(b => `<li>${escapeHtml(b)}</li>`).join("")}</ul>`
+        : (c.label ? `<div class="cp-fulllabel-prose">${escapeHtml(c.label)}</div>` : "");
+      return `<label class="column-picker-row" title="${escapeAttr(hoverText)}">
+        <input type="checkbox" data-cfg-id="${escapeAttr(c.id)}" ${checked}>
+        <div class="cp-main">
+          <div class="cp-label">${escapeHtml(displayLabel(c))}</div>
+          <div class="cp-meta">
+            <span class="cp-format format-${escapeAttr(fmt)}">${escapeHtml(fmt)}</span>
+            <span>${escapeHtml(date)}</span>
+            <span class="cp-id">${escapeHtml(c.id)}</span>
+            ${hasDetails ? `<span class="cp-expand-hint" data-cfg-id="${escapeAttr(c.id)}">what this varies ▾</span>` : ""}
+          </div>
+          ${hasDetails ? `<div class="cp-details" data-cfg-id="${escapeAttr(c.id)}" hidden>${detailsHtml}</div>` : ""}
+          ${purpose ? `<div class="cp-purpose">${escapeHtml(purpose)}</div>` : ""}
+        </div>
+      </label>`;
+    }).join("");
+    list.querySelectorAll("input[type=checkbox]").forEach(cb => {
+      cb.addEventListener("change", () => {
+        const cfgId = cb.dataset.cfgId;
+        if (cb.checked) selectedConfigs.add(cfgId);
+        else { selectedConfigs.delete(cfgId); activeConfigs.delete(cfgId); }
+        saveSelectedConfigs();
+        renderConfigToggles();
+        onColumnsChanged();
+      });
+    });
+    // Wire "what this varies" expand toggles
+    list.querySelectorAll(".cp-expand-hint").forEach(hint => {
+      hint.addEventListener("click", e => {
+        e.preventDefault();
+        e.stopPropagation();
+        const cfgId = hint.dataset.cfgId;
+        const details = list.querySelector(`.cp-details[data-cfg-id="${cfgId}"]`);
+        if (details) {
+          const showing = !details.hasAttribute("hidden");
+          if (showing) { details.setAttribute("hidden", ""); hint.textContent = "what this varies ▾"; }
+          else        { details.removeAttribute("hidden");  hint.textContent = "hide details ▴"; }
+        }
+      });
+    });
+  }
+  const total = DATA.configs.length;
+  document.getElementById("column-picker-filter-status").textContent =
+    visible.length === total ? `${total} tests` : `${visible.length} of ${total} tests`;
+}
+document.getElementById("open-column-picker").addEventListener("click", openColumnPicker);
+document.getElementById("column-picker-close").addEventListener("click", closeColumnPicker);
+document.getElementById("column-picker-done").addEventListener("click", closeColumnPicker);
+document.getElementById("column-picker-modal").addEventListener("click", e => {
+  if (e.target === e.currentTarget) closeColumnPicker();
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && document.getElementById("column-picker-modal").classList.contains("open")) {
+    closeColumnPicker();
+  }
+});
+document.getElementById("column-picker-search").addEventListener("input", renderColumnPickerList);
+document.getElementById("column-picker-format-filter").addEventListener("change", renderColumnPickerList);
+document.getElementById("column-picker-sort").addEventListener("change", renderColumnPickerList);
+document.getElementById("column-picker-check-all").addEventListener("click", () => {
+  for (const c of getColumnPickerVisibleConfigs()) selectedConfigs.add(c.id);
+  saveSelectedConfigs();
+  renderColumnPickerList();
+  renderConfigToggles();
+  onColumnsChanged();
+});
+document.getElementById("column-picker-uncheck-all").addEventListener("click", () => {
+  for (const c of getColumnPickerVisibleConfigs()) {
+    selectedConfigs.delete(c.id);
+    activeConfigs.delete(c.id);
+  }
+  saveSelectedConfigs();
+  renderColumnPickerList();
   renderConfigToggles();
   onColumnsChanged();
 });

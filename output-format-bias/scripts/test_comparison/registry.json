@@ -54,6 +54,186 @@
       "files": [
         "data/raw_outputs/test_binary_concern_no_tiebreaker_FULL_CORPUS_gemma12b_2026-05-12_1912.json"
       ]
+    },
+    {
+      "id": "unified_4axis_tb",
+      "label": "Tiebreaker paragraph: PRESENT \u2014 adds 'DEFAULT TO NOT FLAGGING WHEN AMBIGUOUS' (err toward CLEAR / ENGAGED when uncertain).",
+      "schema": "unified",
+      "files": [
+        "data/raw_outputs/test_unified_4axis_tb_FULL_CORPUS_gemma12b_2026-05-13_0026.json"
+      ],
+      "display_label": "4-axis \u00b7 tiebreaker (v1)",
+      "bullets": [
+        "Tiebreaker paragraph: PRESENT \u2014 adds 'DEFAULT TO NOT FLAGGING WHEN AMBIGUOUS' (err toward CLEAR / ENGAGED when uncertain)."
+      ]
+    },
+    {
+      "id": "unified_4axis_notb",
+      "label": "Tiebreaker paragraph: REMOVED.",
+      "schema": "unified",
+      "files": [
+        "data/raw_outputs/test_unified_4axis_notb_FULL_CORPUS_gemma12b_2026-05-13_0111.json"
+      ],
+      "display_label": "4-axis \u00b7 no tiebreaker (v1)",
+      "bullets": [
+        "Tiebreaker paragraph: REMOVED."
+      ]
+    },
+    {
+      "id": "unified_4axis_both",
+      "label": "Supersedes block: PRESENT \u2014 'acute-material concern supersedes engagement' (DV, housing loss, food insecurity, immigration threat \u2192 CONCERN even when student is also analytically engaged). \u00b7 Single-sentence block: PRESENT \u2014 'a single sentence is sufficient' (one mention of housing loss / food insecurity / family crisis counts even when student continues on-task). \u00b7 Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2).",
+      "schema": "unified",
+      "files": [
+        "data/raw_outputs/test_unified_4axis_both_FULL_CORPUS_gemma12b_2026-05-13_0604.json"
+      ],
+      "display_label": "4-axis \u00b7 supersedes + single (v2)",
+      "bullets": [
+        "Supersedes block: PRESENT \u2014 'acute-material concern supersedes engagement' (DV, housing loss, food insecurity, immigration threat \u2192 CONCERN even when student is also analytically engaged).",
+        "Single-sentence block: PRESENT \u2014 'a single sentence is sufficient' (one mention of housing loss / food insecurity / family crisis counts even when student continues on-task).",
+        "Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2)."
+      ]
+    },
+    {
+      "id": "unified_4axis_single",
+      "label": "Supersedes block: ABSENT. \u00b7 Single-sentence block: PRESENT \u2014 'a single sentence is sufficient' (one mention of housing loss / food insecurity / family crisis counts even when student continues on-task). \u00b7 Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2).",
+      "schema": "unified",
+      "files": [
+        "data/raw_outputs/test_unified_4axis_single_FULL_CORPUS_gemma12b_2026-05-13_0636.json"
+      ],
+      "display_label": "4-axis \u00b7 single only (v2)",
+      "bullets": [
+        "Supersedes block: ABSENT.",
+        "Single-sentence block: PRESENT \u2014 'a single sentence is sufficient' (one mention of housing loss / food insecurity / family crisis counts even when student continues on-task).",
+        "Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2)."
+      ]
+    },
+    {
+      "id": "unified_4axis_neither",
+      "label": "Supersedes block: ABSENT. \u00b7 Single-sentence block: ABSENT. \u00b7 Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2).",
+      "schema": "unified",
+      "files": [
+        "data/raw_outputs/test_unified_4axis_neither_FULL_CORPUS_gemma12b_2026-05-13_0707.json"
+      ],
+      "display_label": "4-axis \u00b7 neither (v2)",
+      "bullets": [
+        "Supersedes block: ABSENT.",
+        "Single-sentence block: ABSENT.",
+        "Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2)."
+      ]
+    },
+    {
+      "id": "unified_binary_tb",
+      "label": "Tiebreaker paragraph: PRESENT \u2014 adds 'DEFAULT TO NOT FLAGGING WHEN AMBIGUOUS' (err toward CLEAR / ENGAGED when uncertain).",
+      "schema": "unified",
+      "files": [
+        "data/raw_outputs/test_unified_binary_tb_FULL_CORPUS_gemma12b_2026-05-12_2252.json"
+      ],
+      "display_label": "binary \u00b7 tiebreaker (v1)",
+      "bullets": [
+        "Tiebreaker paragraph: PRESENT \u2014 adds 'DEFAULT TO NOT FLAGGING WHEN AMBIGUOUS' (err toward CLEAR / ENGAGED when uncertain)."
+      ]
+    },
+    {
+      "id": "unified_binary_notb",
+      "label": "Tiebreaker paragraph: REMOVED.",
+      "schema": "unified",
+      "files": [
+        "data/raw_outputs/test_unified_binary_notb_FULL_CORPUS_gemma12b_2026-05-12_2340.json"
+      ],
+      "display_label": "binary \u00b7 no tiebreaker (v1)",
+      "bullets": [
+        "Tiebreaker paragraph: REMOVED."
+      ]
+    },
+    {
+      "id": "unified_binary_narrow_both",
+      "label": "Scope: NARROW \u2014 CONCERN definition scoped to acute material (burnout/crisis specifically); examples typed as (a)/(b) sub-flavors. \u00b7 Supersedes block: PRESENT \u2014 'acute-material concern supersedes engagement' (DV, housing loss, food insecurity, immigration threat \u2192 CONCERN even when student is also analytically engaged). \u00b7 Single-sentence block: PRESENT \u2014 'a single sentence is sufficient' (one mention of housing loss / food insecurity / family crisis counts even when student continues on-task). \u00b7 Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2).",
+      "schema": "unified",
+      "files": [
+        "data/raw_outputs/test_unified_binary_narrow_both_FULL_CORPUS_gemma12b_2026-05-13_0234.json"
+      ],
+      "display_label": "binary \u00b7 narrow \u00b7 supersedes + single",
+      "bullets": [
+        "Scope: NARROW \u2014 CONCERN definition scoped to acute material (burnout/crisis specifically); examples typed as (a)/(b) sub-flavors.",
+        "Supersedes block: PRESENT \u2014 'acute-material concern supersedes engagement' (DV, housing loss, food insecurity, immigration threat \u2192 CONCERN even when student is also analytically engaged).",
+        "Single-sentence block: PRESENT \u2014 'a single sentence is sufficient' (one mention of housing loss / food insecurity / family crisis counts even when student continues on-task).",
+        "Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2)."
+      ]
+    },
+    {
+      "id": "unified_binary_narrow_single",
+      "label": "Scope: NARROW \u2014 CONCERN definition scoped to acute material (burnout/crisis specifically); examples typed as (a)/(b) sub-flavors. \u00b7 Supersedes block: ABSENT. \u00b7 Single-sentence block: PRESENT \u2014 'a single sentence is sufficient' (one mention of housing loss / food insecurity / family crisis counts even when student continues on-task). \u00b7 Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2).",
+      "schema": "unified",
+      "files": [
+        "data/raw_outputs/test_unified_binary_narrow_single_FULL_CORPUS_gemma12b_2026-05-13_0312.json"
+      ],
+      "display_label": "binary \u00b7 narrow \u00b7 single only",
+      "bullets": [
+        "Scope: NARROW \u2014 CONCERN definition scoped to acute material (burnout/crisis specifically); examples typed as (a)/(b) sub-flavors.",
+        "Supersedes block: ABSENT.",
+        "Single-sentence block: PRESENT \u2014 'a single sentence is sufficient' (one mention of housing loss / food insecurity / family crisis counts even when student continues on-task).",
+        "Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2)."
+      ]
+    },
+    {
+      "id": "unified_binary_narrow_neither",
+      "label": "Scope: NARROW \u2014 CONCERN definition scoped to acute material (burnout/crisis specifically); examples typed as (a)/(b) sub-flavors. \u00b7 Supersedes block: ABSENT. \u00b7 Single-sentence block: ABSENT. \u00b7 Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2).",
+      "schema": "unified",
+      "files": [
+        "data/raw_outputs/test_unified_binary_narrow_neither_FULL_CORPUS_gemma12b_2026-05-13_0349.json"
+      ],
+      "display_label": "binary \u00b7 narrow \u00b7 neither",
+      "bullets": [
+        "Scope: NARROW \u2014 CONCERN definition scoped to acute material (burnout/crisis specifically); examples typed as (a)/(b) sub-flavors.",
+        "Supersedes block: ABSENT.",
+        "Single-sentence block: ABSENT.",
+        "Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2)."
+      ]
+    },
+    {
+      "id": "unified_binary_broad_single",
+      "label": "Scope: BROAD \u2014 CONCERN definition scoped broadly; examples framed as illustrative, not definitional. \u00b7 Supersedes block: ABSENT. \u00b7 Single-sentence block: PRESENT \u2014 'a single sentence is sufficient' (one mention of housing loss / food insecurity / family crisis counts even when student continues on-task). \u00b7 Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2).",
+      "schema": "unified",
+      "files": [
+        "data/raw_outputs/test_unified_binary_broad_single_FULL_CORPUS_gemma12b_2026-05-13_0458.json"
+      ],
+      "display_label": "binary \u00b7 broad \u00b7 single only",
+      "bullets": [
+        "Scope: BROAD \u2014 CONCERN definition scoped broadly; examples framed as illustrative, not definitional.",
+        "Supersedes block: ABSENT.",
+        "Single-sentence block: PRESENT \u2014 'a single sentence is sufficient' (one mention of housing loss / food insecurity / family crisis counts even when student continues on-task).",
+        "Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2)."
+      ]
+    },
+    {
+      "id": "unified_binary_broad_both",
+      "label": "Scope: BROAD \u2014 CONCERN definition scoped broadly; examples framed as illustrative, not definitional. \u00b7 Supersedes block: PRESENT \u2014 'acute-material concern supersedes engagement' (DV, housing loss, food insecurity, immigration threat \u2192 CONCERN even when student is also analytically engaged). \u00b7 Single-sentence block: PRESENT \u2014 'a single sentence is sufficient' (one mention of housing loss / food insecurity / family crisis counts even when student continues on-task). \u00b7 Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2).",
+      "schema": "unified",
+      "files": [
+        "data/raw_outputs/test_unified_binary_broad_both_FULL_CORPUS_gemma12b_2026-05-13_0424.json"
+      ],
+      "display_label": "binary \u00b7 broad \u00b7 supersedes + single",
+      "bullets": [
+        "Scope: BROAD \u2014 CONCERN definition scoped broadly; examples framed as illustrative, not definitional.",
+        "Supersedes block: PRESENT \u2014 'acute-material concern supersedes engagement' (DV, housing loss, food insecurity, immigration threat \u2192 CONCERN even when student is also analytically engaged).",
+        "Single-sentence block: PRESENT \u2014 'a single sentence is sufficient' (one mention of housing loss / food insecurity / family crisis counts even when student continues on-task).",
+        "Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2)."
+      ]
+    },
+    {
+      "id": "unified_binary_broad_neither",
+      "label": "Scope: BROAD \u2014 CONCERN definition scoped broadly; examples framed as illustrative, not definitional. \u00b7 Supersedes block: ABSENT. \u00b7 Single-sentence block: ABSENT. \u00b7 Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2).",
+      "schema": "unified",
+      "files": [
+        "data/raw_outputs/test_unified_binary_broad_neither_FULL_CORPUS_gemma12b_2026-05-13_0532.json"
+      ],
+      "display_label": "binary \u00b7 broad \u00b7 neither",
+      "bullets": [
+        "Scope: BROAD \u2014 CONCERN definition scoped broadly; examples framed as illustrative, not definitional.",
+        "Supersedes block: ABSENT.",
+        "Single-sentence block: ABSENT.",
+        "Tiebreaker paragraph: REMOVED (v1 'default-to-clear' instruction is not present in v2)."
+      ]
     }
   ],
   "genob_observations": [
@@ -99,6 +279,27 @@
         "binary_no_tiebreak_2_1912"
       ],
       "output": "data_tables/test_comparisons/comparison_2026-05-12.html",
+      "flag_threshold": 0.5
+    },
+    {
+      "id": "comparison_2026-05-13_unified",
+      "label": "2026-05-13 \u2014 Unified format-comparison ablation suite (binary + 4-axis, 13 variants, gemma12b)",
+      "configs": [
+        "unified_4axis_tb",
+        "unified_4axis_notb",
+        "unified_4axis_both",
+        "unified_4axis_single",
+        "unified_4axis_neither",
+        "unified_binary_tb",
+        "unified_binary_notb",
+        "unified_binary_narrow_both",
+        "unified_binary_narrow_single",
+        "unified_binary_narrow_neither",
+        "unified_binary_broad_single",
+        "unified_binary_broad_both",
+        "unified_binary_broad_neither"
+      ],
+      "output": "data_tables/test_comparisons/comparison_2026-05-13_unified.html",
       "flag_threshold": 0.5
     }
   ]

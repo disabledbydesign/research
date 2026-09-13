@@ -36,14 +36,19 @@ BASE_DIR = Path(__file__).parent
 
 GRAPH_CONFIGS = {
     "haraway": {
-        "dir": BASE_DIR / "haraway_graph_v2",
+        "dir": BASE_DIR / "haraway_graph_v3",
         "label": "Haraway — Cyborg Manifesto",
-        "description": "750-node knowledge graph from paragraph-level extraction of Haraway's Cyborg Manifesto",
+        "description": "Knowledge graph from paragraph-level extraction of Haraway's Cyborg Manifesto",
     },
     "touchstone": {
         "dir": BASE_DIR / "touchstone_graph",
         "label": "Touchstone #1 — Relational Ontology Critique",
         "description": "Knowledge graph from the Relational Ontology Critique touchstone (novel content, not in training data)",
+    },
+    "values": {
+        "dir": BASE_DIR / "values_graph",
+        "label": "PMA VALUES.json — Epistemic Architecture",
+        "description": "Knowledge graph from PMA's VALUES.json — epistemic commitments, value dependencies, contested positions",
     },
 }
 
@@ -226,7 +231,7 @@ def run():
     print(colored(f"\n{config['description']}", "dim"))
     print()
     print("Modes:  /mode a  (baseline)   /mode b  (text)   /mode c  (KV injection)")
-    print("        /graph h  (haraway)  or  /graph t  (touchstone)  — switch graph (rebuilds pack)")
+    print("        /graph h  (haraway)  /graph t  (touchstone)  /graph v  (values) — switch graph")
     print("        /probe r  (retrieval probe)  or  /probe d  (disposition probe)  — run + log A/B/C")
     print("        /probes  — show all probes logged this session")
     print("        /compare  — run next message in all three modes (no log)")
@@ -303,7 +308,7 @@ def run():
                 print(colored("Next message runs in all three modes side by side.", "cyan"))
 
             elif cmd == "/graph":
-                SHORTCUTS = {"h": "haraway", "t": "touchstone", "haraway": "haraway", "touchstone": "touchstone"}
+                SHORTCUTS = {"h": "haraway", "t": "touchstone", "v": "values", "haraway": "haraway", "touchstone": "touchstone", "values": "values"}
                 if len(parts) < 2 or parts[1].lower() not in SHORTCUTS:
                     print(colored(f"Current graph: {GRAPH_CONFIGS[current_graph]['label']}", "cyan"))
                     print("Usage: /graph h  (haraway)  or  /graph t  (touchstone)")
@@ -380,8 +385,8 @@ def run():
                 entry = {
                     "probe_type": ptype,
                     "query": user_input,
-                    "graph": args.graph,
-                    "encoding": args.encoding,
+                    "graph": current_graph,
+                    "encoding": current_encoding,
                     "model": args.model,
                     "timestamp": time.time(),
                     "responses": {

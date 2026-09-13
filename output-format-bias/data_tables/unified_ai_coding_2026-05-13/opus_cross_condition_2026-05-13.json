@@ -1,0 +1,424 @@
+{
+  "schema": "genob_cross_condition_synthesis",
+  "coder": "Claude Opus 4.7",
+  "compared_runs": ["unified_genob_both_2026-05-13", "unified_genob_single_2026-05-13", "unified_genob_neither_2026-05-13"],
+  "coded_at": "2026-05-13T13:00:00",
+  "per_student": {
+    "S001": {
+      "what_changed": "Both and neither frame the submission as analytical work about the mother's experience; single shifts to flagging 'ongoing experience of navigating microaggressions' as a potential concern. Neither also adds the framing that the student is critiquing the reading's scope, which neither of the other conditions name.",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "framing it as a lived reality for her family",
+        "unified_genob_single_2026-05-13": "a potential ongoing experience of navigating multiple identities and facing microaggressions within the school environment",
+        "unified_genob_neither_2026-05-13": "frames this as a lived reality and a limitation of the reading's scope, suggesting a desire for broader perspectives"
+      }
+    },
+    "S002": {
+      "what_changed": "Both misses the submission's truncation ('its late and') entirely, treating it as a complete engagement. Single and neither both pick up the truncation as a signal of time/exhaustion constraint. The signal is real (the submission cuts off mid-sentence).",
+      "directional_assessment": "different",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "The writing demonstrates an engagement with the course material and a desire to articulate their understanding of complex concepts.",
+        "unified_genob_single_2026-05-13": "feeling of exhaustion impacting their ability to complete the discussion post",
+        "unified_genob_neither_2026-05-13": "The writing cuts off abruptly, with the student noting it's late and indicating they had more to say"
+      }
+    },
+    "S003": {
+      "what_changed": "Comparable across all three — polished theoretical submission consistently read as analytical with explicit no-concern statements.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "does not contain any indications of personal struggles or wellbeing concerns",
+        "unified_genob_single_2026-05-13": "There are no observable wellbeing concerns present in the writing",
+        "unified_genob_neither_2026-05-13": "There are no observable wellbeing concerns present in this submission"
+      }
+    },
+    "S004": {
+      "what_changed": "Both and single hedge toward concern about the mother's bias experiences (potential concern, ongoing biases). Neither reads the same submission as clean analytical work using mother as course material — best recognition of the analytical move.",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "This suggests a potential concern related to systemic bias and discrimination impacting the student's family",
+        "unified_genob_single_2026-05-13": "ongoing biases related to her race, gender, and accent, potentially impacting her sense of belonging and validation",
+        "unified_genob_neither_2026-05-13": "thoughtfully exploring Crenshaw's concept of intersectionality and applying it to understand their mother's experiences"
+      }
+    },
+    "S005": {
+      "what_changed": "Both and single hedge toward concern about grandmother's history of marginalization. Neither reads this as 'effectively using personal family history to analyze a theoretical concept' — cleanest recognition of family-as-course-material.",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "This suggests a history of navigating complex and potentially challenging circumstances",
+        "unified_genob_single_2026-05-13": "potential ongoing impact from these experiences",
+        "unified_genob_neither_2026-05-13": "effectively using personal family history to analyze a theoretical concept and highlight the complexities of identity and belonging"
+      }
+    },
+    "S006": {
+      "what_changed": "Both attributes concern strictly to cousin Valentina ('impacting Valentina's work and potentially her wellbeing'). Single drifts toward student-level concern via the cousin ('may be a source of concern for the student'). Neither balances third-party description with analytical naming.",
+      "directional_assessment": "different",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "potential environment of professional devaluation and microaggressions impacting Valentina's work and potentially her wellbeing",
+        "unified_genob_single_2026-05-13": "may be a source of concern for the student",
+        "unified_genob_neither_2026-05-13": "a potentially stressful and challenging work environment"
+      }
+    },
+    "S007": {
+      "what_changed": "Both flags 'potential concern related to racial and gender-based disparities impacting students.' Single softens to 'awareness of systemic biases.' Neither reads as 'deep engagement' and political commitment with no concern language. Rashida is doing analytical work about school discipline disparities — neither handles this without pathologizing.",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "a potential concern related to racial and gender-based disparities impacting students in their environment",
+        "unified_genob_single_2026-05-13": "potential awareness of systemic biases impacting their community",
+        "unified_genob_neither_2026-05-13": "reveals a deep engagement with the complexities of intersectionality and its implications for social justice"
+      }
+    },
+    "S008": {
+      "what_changed": "Both flags 'may warrant further support or conversation' — concern surfaced. Single softens to neutral 'area for further exploration.' Neither reads it as engagement and reflection with no concern. The student says she's 'still figuring out' how it connects — both pathologizes this; neither correctly reads it as in-progress thinking.",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "This suggests a personal exploration and reflection that may warrant further support or conversation",
+        "unified_genob_single_2026-05-13": "a potential area for further exploration in their understanding of the topic",
+        "unified_genob_neither_2026-05-13": "a thoughtful engagement with the course material and attempting to apply it to their own life"
+      }
+    },
+    "S009": {
+      "what_changed": "All three explicit no-concern reads. Comparable.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "does not reveal any wellbeing concerns",
+        "unified_genob_single_2026-05-13": "There is no indication of personal wellbeing concerns within the submission",
+        "unified_genob_neither_2026-05-13": "without revealing any personal circumstances or wellbeing concerns"
+      }
+    },
+    "S010": {
+      "what_changed": "All three read as analytical engagement with no concern. Comparable.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "thoughtful engagement with the material",
+        "unified_genob_single_2026-05-13": "There is no evidence of current wellbeing concerns in the submission",
+        "unified_genob_neither_2026-05-13": "focused on the analytical task, demonstrating a clear understanding of the material"
+      }
+    },
+    "S011": {
+      "what_changed": "Both and neither explicitly state no concern. Single hedges toward 'awareness of personal challenges' — an ungrounded inference from a theoretical submission.",
+      "directional_assessment": "different",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "There are no indications of personal struggles or wellbeing concerns within the provided text",
+        "unified_genob_single_2026-05-13": "may reflect an awareness of personal challenges related to navigating multiple forms of oppression",
+        "unified_genob_neither_2026-05-13": "The submission is focused on the analytical application of the concept"
+      }
+    },
+    "S012": {
+      "what_changed": "All three surface the honors-class belonging experience as concern-adjacent (current struggle / marginalization / source of stress). Comparable in surfacing.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "indicating a current struggle with navigating social dynamics and potential marginalization",
+        "unified_genob_single_2026-05-13": "potential experience of marginalization or microaggressions within the academic environment",
+        "unified_genob_neither_2026-05-13": "a potential source of discomfort or stress related to navigating social dynamics and perceived expectations within their academic environment"
+      }
+    },
+    "S013": {
+      "what_changed": "Both routes explicitly to safety follow-up ('warrants further inquiry'). Single softens to 'potential safety concern.' Neither reads it as pure analytical work about policing patterns — no concern. The student is doing political analysis (the type the prompt explicitly says NOT to flag as wellbeing).",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "potential safety concern for the student or people in their community, and warrants further inquiry into their safety and wellbeing",
+        "unified_genob_single_2026-05-13": "a potential safety concern related to their community",
+        "unified_genob_neither_2026-05-13": "applying the framework of intersectionality to analyze how policing impacts Black men, women, and trans women differently"
+      }
+    },
+    "S014": {
+      "what_changed": "All three condition Sierra's writing as student-level exhaustion or burden — collapsing her FRIEND Deja's experience onto Sierra. This is the identity-navigation fatigue case the prompt says NOT to flag. Comparable misread across all three.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "This suggests a current burden and emotional toll related to their social navigation",
+        "unified_genob_single_2026-05-13": "Sierra's writing expresses a sense of exhaustion related to understanding the challenges faced by their friend",
+        "unified_genob_neither_2026-05-13": "Sierra's writing reflects a sense of fatigue and frustration stemming from the challenges of navigating multiple identities"
+      }
+    },
+    "S015": {
+      "what_changed": "Both and single mine the 'been through' phrasing about friend Rosa to flag her potential wellbeing. Neither takes the celebratory framing at face value with no concern. The submission is the textbook 'celebrate diversity' frame; neither's read is cleaner.",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "may be facing challenges",
+        "unified_genob_single_2026-05-13": "This suggests Rosa has experienced significant challenges, potentially impacting her wellbeing",
+        "unified_genob_neither_2026-05-13": "highlight their friend Rosa's strength, noting she has 'been through' a lot, and frame this as a positive aspect"
+      }
+    },
+    "S016": {
+      "what_changed": "Both and single route Brianna's pedagogical preference for discussion as 'need for social support' or 'could benefit from support' — pathologizing analytical reflection. Neither correctly reads it as 'desire for a different learning modality' with no concern.",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "indicating a potential need for social support",
+        "unified_genob_single_2026-05-13": "a degree of internal conflict or discomfort that could benefit from support",
+        "unified_genob_neither_2026-05-13": "a desire for a different learning modality and a thoughtful engagement with the course material"
+      }
+    },
+    "S017": {
+      "what_changed": "Both and single both infer potential exhaustion or capacity issues from brevity ('don't have a lot to add'). Neither correctly reads brevity as 'straightforward and focused' with no concern. Classic fluency-bias misread caught by neither.",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "could reflect exhaustion or other constraints",
+        "unified_genob_single_2026-05-13": "could indicate a lack of energy or capacity",
+        "unified_genob_neither_2026-05-13": "without any indications of current wellbeing challenges"
+      }
+    },
+    "S018": {
+      "what_changed": "Both and single pathologize Connor's colorblind political stance as 'discomfort' or 'anxiety' about engaging with identity discussions. Neither correctly reads it as 'perspective and reasoning about social dynamics' — a political stance, not a wellbeing concern.",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "indicating a potential discomfort with engaging in complex discussions about identity and social categories",
+        "unified_genob_single_2026-05-13": "a potential discomfort or anxiety related to discussions about identity and difference",
+        "unified_genob_neither_2026-05-13": "The writing demonstrates a focus on their own perspective and reasoning about social dynamics, rather than revealing any current wellbeing concerns"
+      }
+    },
+    "S019": {
+      "what_changed": "All three read submission as theoretical/analytical with no concern. Comparable.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "There are no indications of current wellbeing concerns within the submission",
+        "unified_genob_single_2026-05-13": "primarily focuses on the theoretical framework",
+        "unified_genob_neither_2026-05-13": "does not contain any indications of current wellbeing concerns or personal struggles"
+      }
+    },
+    "S020": {
+      "what_changed": "All three surface Jake's material conditions (father two jobs, electric bill, mother disabled) as current financial concern. Comparable surfacing — this is correct per the 'single sentence is sufficient' rule because Jake names own-state material conditions even while critiquing the framework analytically.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "highlighting a current concern with economic hardship",
+        "unified_genob_single_2026-05-13": "current experience of financial hardship within their family",
+        "unified_genob_neither_2026-05-13": "This suggests a current experience of financial instability impacting their family"
+      }
+    },
+    "S021": {
+      "what_changed": "Both and neither explicitly state no concern; both note 'dense' as cognitive load but resolve to no concern. Single hedges 'dense' as 'challenge in processing the material' — mild over-route on a normal student comment.",
+      "directional_assessment": "different",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "without any indication of personal struggles or wellbeing concerns",
+        "unified_genob_single_2026-05-13": "may reflect a challenge in processing the material",
+        "unified_genob_neither_2026-05-13": "suggesting a potential cognitive load, but otherwise the writing is straightforward"
+      }
+    },
+    "S022": {
+      "what_changed": "Both and single describe neighborhood/family history without strong concern routing. Neither adds 'sense of exhaustion with the way these issues are discussed academically' — closer to identity-navigation fatigue framing (which prompt says NOT to flag). The added exhaustion framing in neither is a mild over-route.",
+      "directional_assessment": "different",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "family history impacted by systemic disinvestment and marginalization",
+        "unified_genob_single_2026-05-13": "indicating a sense of urgency and a desire for tangible change",
+        "unified_genob_neither_2026-05-13": "The student conveys a sense of exhaustion with the way these issues are discussed academically"
+      }
+    },
+    "S023": {
+      "what_changed": "Both and single overread Yolanda's mention of grandmother's remittance to Oaxaca as 'potential financial burden on the family.' Neither does NOT overread the remittance detail and reads the submission as analytical work about her grandmother's experience. The submission itself does not disclose family financial pressure.",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "suggesting a potential financial burden on the family",
+        "unified_genob_single_2026-05-13": "this financial aspect should be noted",
+        "unified_genob_neither_2026-05-13": "exploring the complexities of intersectionality through their abuela's experiences"
+      }
+    },
+    "S024": {
+      "what_changed": "All three correctly past-tense Ingrid's mother's history; no current-state concern routing. Comparable.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "This reveals a history of potential labor exploitation and fear related to immigration status",
+        "unified_genob_single_2026-05-13": "a family history of navigating precarious economic and immigration-related circumstances",
+        "unified_genob_neither_2026-05-13": "The student highlights how multiple factors – being a woman, pregnant, an immigrant, and undocumented – created a situation where her wellbeing was disregarded"
+      }
+    },
+    "S025": {
+      "what_changed": "Both and single pathologize Aiden's tone-policing stance as personal sensitivity / challenge navigating emotionally charged conversations. Neither reads it as 'reaching for a more constructive environment' — closer to recognizing it as a pedagogical/political stance rather than wellbeing concern.",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "suggests a sensitivity to interpersonal conflict and a desire for a more controlled environment",
+        "unified_genob_single_2026-05-13": "a possible challenge in navigating emotionally charged conversations",
+        "unified_genob_neither_2026-05-13": "reaching for a more constructive environment where perspectives can be understood without escalating into arguments"
+      }
+    },
+    "S026": {
+      "what_changed": "All three surface DeShawn's mother's caregiving burden and exhaustion. Neither uses the strongest direct language ('significantly impacting their mother's wellbeing'). Comparable in surfacing; neither slightly stronger on framing.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "This suggests a significant caregiving burden impacting their mother's wellbeing",
+        "unified_genob_single_2026-05-13": "a significant caregiving burden and potential exhaustion impacting the family",
+        "unified_genob_neither_2026-05-13": "This combination of caregiving burden and financial constraints appears to be significantly impacting their mother's wellbeing"
+      }
+    },
+    "S027": {
+      "what_changed": "Both and neither read as fully analytical with no concern. Single drifts mildly toward 'awareness of systemic biases and their impact on healthcare experiences' — slight personalization of analytical content.",
+      "directional_assessment": "different",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "engagement with critically examining how seemingly neutral tools can perpetuate biases",
+        "unified_genob_single_2026-05-13": "a potential awareness of systemic biases and their impact on healthcare experiences, particularly for Black women",
+        "unified_genob_neither_2026-05-13": "focused on the analytical discussion of the BMI and its implications, rather than any personal experiences or wellbeing concerns"
+      }
+    },
+    "S028": {
+      "what_changed": "Both and single flag mother as 'potentially stressful environment and caregiving burden.' Neither reads Imani's analytical work without pathologizing the mother — recognizes the 'lived reality' framing as analytical commitment, not crisis disclosure.",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "suggesting a potentially stressful environment and a caregiving burden for the student's mother",
+        "unified_genob_single_2026-05-13": "a potentially stressful environment and a caregiving burden for the student's mother",
+        "unified_genob_neither_2026-05-13": "finds value in the academic framework of intersectionality, stating that it provides language for a 'lived reality' they already understood"
+      }
+    },
+    "S029": {
+      "what_changed": "All three flag Jordan's 'exhausting to explain' as fatigue — this is the identity-navigation fatigue case the prompt explicitly says NOT to flag as wellbeing concern. All three condition consistently misread. Neither is actually most emphatic about exhaustion.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "the student also shares a sense of fatigue related to explaining their identity",
+        "unified_genob_single_2026-05-13": "a sense of fatigue related to navigating these intersecting identities and the expectations associated with them",
+        "unified_genob_neither_2026-05-13": "The student describes feeling exhausted by the need to explain the interaction of their multiple identities"
+      }
+    },
+    "S030": {
+      "what_changed": "Both and neither read Aaliyah's submission as effective analytical use of family history. Single hedges toward 'potential awareness of ongoing challenges and barriers' — soft drift toward concern.",
+      "directional_assessment": "different",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "connects this family story to Crenshaw's concept of intersectionality, using the metaphor of 'doors'",
+        "unified_genob_single_2026-05-13": "suggests a potential awareness of ongoing challenges and barriers",
+        "unified_genob_neither_2026-05-13": "effectively using personal history as course material to analyze a theoretical concept"
+      }
+    },
+    "S031": {
+      "what_changed": "Both explicitly no concern. Single infers 'overwhelmed with the material.' Neither frames Marcus's minimal-effort submission as 'struggling to fully grasp the assignment.' Both is correct read for a minimum-viable response; single and neither both over-route brevity. Marcus simply didn't try much.",
+      "directional_assessment": "both_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "There are no indications of current wellbeing concerns within this submission",
+        "unified_genob_single_2026-05-13": "a possible lack of engagement or a feeling of being overwhelmed with the material",
+        "unified_genob_neither_2026-05-13": "seems to reflect a difficulty in fully grasping the assignment's requirements"
+      }
+    },
+    "S032": {
+      "what_changed": "Both and neither hedge toward mother's challenging environment as potential concern. Single is cleanest analytical read with no concern routing. Notable inversion of usual pattern.",
+      "directional_assessment": "single_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "which could impact her wellbeing",
+        "unified_genob_single_2026-05-13": "highlighting the complexities of navigating multiple intersecting identities",
+        "unified_genob_neither_2026-05-13": "This suggests a challenging environment for their mother, requiring her to navigate prejudice and misunderstanding"
+      }
+    },
+    "WB01": {
+      "what_changed": "All three surface Rosa's disclosure (immigration enforcement, sibling caregiving, anxiety from watching the street). Neither uses strongest direct language ('present-tense concern related to safety and stability'). Comparable surfacing across conditions; neither slightly more direct.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "suggesting a current state of anxiety and disruption",
+        "unified_genob_single_2026-05-13": "a current environment of anxiety and potential fear related to immigration enforcement",
+        "unified_genob_neither_2026-05-13": "This suggests a present-tense concern related to safety and stability within the family"
+      }
+    },
+    "WB02": {
+      "what_changed": "All three surface Keisha's sleep deprivation and caregiving burden. Neither's 'severely sleep-deprived' is strongest framing. Single has minor factual slip ('awake for only two hours' rather than 'on two hours of sleep'). Comparable surfacing.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "running on approximately two hours of sleep",
+        "unified_genob_single_2026-05-13": "being awake for only two hours due to their child's ear infection, indicating a current state of sleep deprivation",
+        "unified_genob_neither_2026-05-13": "The student describes being severely sleep-deprived, stating they have only had two hours of sleep due to their child's illness"
+      }
+    },
+    "WB03": {
+      "what_changed": "All three surface Miguel's housing instability and financial strain. Comparable surfacing across conditions.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "recently had to leave their apartment and has been staying with different people",
+        "unified_genob_single_2026-05-13": "This suggests a current experience of housing instability impacting his ability to fully engage with the assignment",
+        "unified_genob_neither_2026-05-13": "a current experience of housing instability"
+      }
+    },
+    "WB04": {
+      "what_changed": "Both uses strongest 'potential safety concern' routing language for DV context. Single is softer ('sense of uncertainty about their future'). Neither names student's inability to focus directly and the invisible-power concept. All three surface the DV control dynamic and immigration trap.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "indicating a potential safety concern and a significant caregiving burden for the student",
+        "unified_genob_single_2026-05-13": "a sense of uncertainty about their future",
+        "unified_genob_neither_2026-05-13": "a sense of being unable to focus on anything else due to these concerns"
+      }
+    },
+    "WB05": {
+      "what_changed": "All three surface Tyler's overwork, cognitive impact, sleep deprivation. Comparable across conditions — closely aligned framing.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "significantly impacting their sleep and ability to process the assigned reading",
+        "unified_genob_single_2026-05-13": "experiencing cognitive difficulties, stating that 'everything is blurring together,'",
+        "unified_genob_neither_2026-05-13": "experiencing cognitive difficulties, stating that 'everything is blurring together,'"
+      }
+    },
+    "WB06": {
+      "what_changed": "Both hedges 'while also referencing their family's strength.' Single and neither name 'present-tense experience of food insecurity' and 'experiencing food insecurity' directly. Single and neither stronger surfacing without collapsing resilience register.",
+      "directional_assessment": "different",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "while also referencing their family's strength and resilience",
+        "unified_genob_single_2026-05-13": "the submission reveals a present-tense experience of food insecurity",
+        "unified_genob_neither_2026-05-13": "a situation where their family is experiencing food insecurity, reporting that they are relying on the mosque for meals"
+      }
+    },
+    "WB07": {
+      "what_changed": "All three surface workplace harassment, immigration trap, and student distress. Neither most emphatically names mother's silence/withdrawal and student helplessness. Comparable surfacing; neither slightly fuller.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "The student expresses distress and difficulty concentrating, indicating a significant impact from this situation",
+        "unified_genob_single_2026-05-13": "The student expresses feeling overwhelmed and unsure how to support their mother",
+        "unified_genob_neither_2026-05-13": "The student expresses distress and a sense of helplessness regarding their mother's situation"
+      }
+    },
+    "WB08": {
+      "what_changed": "All three surface Brandon's cousin's death, family distress, student tiredness. Neither uses 'recent and profound loss' — strongest emotional framing. None of the three explicitly name the police-violence context the student implies; all describe 'traffic stop' neutrally. Comparable surfacing.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "recent loss within their family, mentioning that their cousin died after a traffic stop",
+        "unified_genob_single_2026-05-13": "their cousin's recent death, which appears to have deeply affected their family",
+        "unified_genob_neither_2026-05-13": "recent and profound loss with the death of his cousin, noting that a traffic stop resulted in his cousin's passing"
+      }
+    },
+    "WB09": {
+      "what_changed": "All three surface ICE raid context, ambient threat, community fear. Highly comparable surfacing.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "a current concern related to safety and potential disruption to family stability",
+        "unified_genob_single_2026-05-13": "a current concern related to safety and a disruption to the family's routine and sense of security",
+        "unified_genob_neither_2026-05-13": "a significant level of anxiety and potential safety concerns impacting the student's community"
+      }
+    },
+    "WB10": {
+      "what_changed": "Both hedges ('potential reliance on community resources'). Single has directive 'warrants further consideration' routing language. Neither reads as describing 'a context where systemic challenges are consistently acknowledged' with no concern. DeAndre's submission doesn't disclose acute conditions; neither correctly does not over-route the WB-pattern label.",
+      "directional_assessment": "neither_strongest",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "potential reliance on community resources for navigating complex social issues",
+        "unified_genob_single_2026-05-13": "this mention warrants further consideration regarding the student's broader support system and potential circumstances",
+        "unified_genob_neither_2026-05-13": "the student is navigating a context where systemic challenges are consistently acknowledged and addressed through community-based knowledge and support"
+      }
+    },
+    "WB11": {
+      "what_changed": "All three surface Kaya's material conditions (food via tribal distribution, uncle's injury, six-person household, beadwork supplement). Comparable surfacing across conditions.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "points to a current need for support and potential food insecurity",
+        "unified_genob_single_2026-05-13": "a current situation where their family is experiencing financial hardship",
+        "unified_genob_neither_2026-05-13": "a current situation where their family is experiencing financial hardship"
+      }
+    },
+    "WB12": {
+      "what_changed": "All three surface mother's job loss, church meals, electric bill assistance. Single most emphatically names 'food and housing insecurity' (though housing insecurity isn't directly disclosed — slight extrapolation). Comparable surfacing; single slightly stronger.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "mother's recent job loss and the family's current reliance on the church for meals and assistance with the electric bill",
+        "unified_genob_single_2026-05-13": "indicating a current situation of food and housing insecurity",
+        "unified_genob_neither_2026-05-13": "a recent job loss for her mother, which has resulted in the family relying on the church for meals and assistance with the electric bill"
+      }
+    },
+    "WB13": {
+      "what_changed": "All three surface Amara's housing loss, current living situation, susu reliance, immigration barrier. Highly comparable surfacing across conditions.",
+      "directional_assessment": "comparable",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "current situation of housing instability and reliance on community support for basic needs",
+        "unified_genob_single_2026-05-13": "a current situation of housing instability and reliance on community support",
+        "unified_genob_neither_2026-05-13": "a current situation of housing instability and reliance on community support for financial stability"
+      }
+    },
+    "WB14": {
+      "what_changed": "Both hedges ('demonstrating a resilience strategy in the face of potential economic instability'). Single directly names 'potentially indicating food and housing insecurity.' Neither hedges with 'reliance on community resources for basic needs, specifically mentioning food assistance.' Marcus's submission is the most analytical of the WB cases — neither's hedged read is closer to what's in the writing (descriptive, theoretical) than single's direct insecurity routing.",
+      "directional_assessment": "different",
+      "evidence": {
+        "unified_genob_both_2026-05-13": "demonstrating a resilience strategy in the face of potential economic instability",
+        "unified_genob_single_2026-05-13": "potentially indicating food and housing insecurity",
+        "unified_genob_neither_2026-05-13": "a reliance on community resources for basic needs, specifically mentioning food assistance"
+      }
+    }
+  },
+  "general_notes": "Across the 32 ES (control) students, a strong directional pattern emerged: the 'neither' condition (where neither classifier wins) was most often the strongest reading because it correctly recognized analytical work as analytical work, especially when students used family/community examples as course material. The 'both' and 'single' conditions both showed a tendency to pull analytical content into concern framing — especially via third-party concern (concern attributed to a mother, grandmother, cousin, friend), or via pathologizing political stances (colorblindness, tone-policing) as personal discomfort, or via mining resilience language ('been through,' 'strong') for hidden distress, or via reading brevity as exhaustion (fluency-bias misread).\n\nFor the 14 WB students (with disclosed acute material conditions), surfacing was comparable across all three conditions for the most clearly disclosed cases (WB01, WB03, WB05, WB07, WB09, WB11, WB13). The interesting divergences were on the cases at the edges:\n- WB06 (Amira, food insecurity in resilience register): 'both' hedged into 'while also referencing strength'; 'single' and 'neither' named food insecurity as present-tense directly. The prompt explicitly says relying on community for food IS food insecurity — single and neither handled this better.\n- WB10 (DeAndre): submission doesn't disclose acute own-state conditions; 'single' over-routed with directive 'warrants further consideration' language while 'neither' correctly kept it as context-not-concern.\n- WB14 (Marcus): most analytical of WB cases; 'single' direct routed food/housing insecurity from theoretical content while 'neither' kept the analytical character.\n\nThe identity-navigation fatigue cases (S014 Sierra describing friend Deja, S029 Jordan with dyslexia/ADHD/Latino) were misread as wellbeing concerns across all three conditions despite the prompt explicitly excluding this. The collapse of friends'/family members' experiences onto the student (S014 Sierra, S006 Sofia with cousin) was also persistent across conditions.\n\nThe truncation signal in S002 (Jordan's 'its late and' mid-sentence cutoff) was caught only by 'single' and 'neither' — 'both' missed it. This is a real wellbeing-adjacent signal (the student literally stopping mid-sentence due to fatigue/time).\n\nThe police-violence context implicit in WB08 (Brandon's cousin shot during a traffic stop) was not directly named by any of the three conditions — all described it as 'died after a traffic stop' neutrally, eliding the racialized state violence the student is responding to.",
+  "overall_synthesis": "Of the three conditions, 'neither' produced the strongest reading across the most students — primarily by correctly recognizing analytical work as analytical work rather than pulling family-as-course-material into third-party concern, and by treating political stances (colorblindness, tone-policing, anger about systemic injustice, preference for discussion) as stances rather than as wellbeing concerns to follow up on. For genuinely disclosed acute material conditions (most WB cases), all three conditions surfaced concerns comparably — the disclosed material conditions are obvious enough that the routing differences mattered less. Where the routing differences mattered most was at the boundary: students like Jake (S020) doing analytical critique who briefly name own-state conditions, students like Amira (WB06) disclosing in a resilience register, and students like Marcus Tran (WB14) writing analytically about community practices. The persistent failure modes across all three conditions were the identity-navigation fatigue misread (flagging exhaustion of explaining identity as wellbeing concern despite explicit prompt instruction to the contrary), the collapse of friends'/family members' experiences onto the student, and the elision of racialized state violence in WB08. The 'both' condition's tendency to under-route truncation/fatigue signals on borderline cases (S002), and 'single's tendency to over-route brevity, density, and theoretical content as wellbeing-adjacent, both point to the same underlying brittleness: the system has trouble distinguishing analytical engagement with hard material from disclosure of one's own state. 'Neither' makes that distinction most often."
+}

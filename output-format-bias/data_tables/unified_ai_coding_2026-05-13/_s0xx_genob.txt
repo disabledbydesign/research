@@ -1,0 +1,245 @@
+
+========== S001 ==========
+--- binary-narrow-both | verdict=CLEAR | conf=0.95
+  signal: Analytical use of family experiences to illustrate intersectionality.
+  reasoning: The student is drawing on their family's experiences (grandmother in Dakar, mother in America) to illustrate and analyze the concept of intersectionality, which is directly relevant to the assignment. While the student shares personal observations about their family, this is being used as course material to support their understanding and analysis of the reading. There is no indication of the student's own current material conditions or capacity depletion.
+--- binary-narrow-single | verdict=CLEAR | conf=0.95
+  signal: Drawing on family experiences to illustrate intersectionality.
+  reasoning: The student is drawing on their family's experiences (grandmother in Dakar, mother in America) to illustrate and analyze the concept of intersectionality, which is the core task of the assignment. While the student shares personal observations about their family, this is being used as course material to support their understanding of the theoretical concept.
+--- binary-narrow-neither | verdict=CLEAR | conf=0.95
+  signal: Analytical use of family experiences to illustrate intersectionality.
+  reasoning: The student is drawing on their family's experiences (grandmother in Dakar, mother in America) to illustrate and analyze the concept of intersectionality, which is the core task of the assignment. While the student shares personal observations about their family, this is being used as course material to support their understanding of the theoretical concept. There is no indication of the student's own current material conditions or capacity depletion.
+--- binary-broad-both | verdict=CLEAR | conf=0.95
+  signal: Analytical engagement with the concept of intersectionality, illustrated through family experiences.
+  reasoning: The student's submission primarily demonstrates engagement with the course material, drawing on their family's experiences (grandmother in Dakar and mother in America) to illustrate the concept of intersectionality. While they mention their mother facing different treatment due to her accent and hijab, this is presented as an observation about systemic biases rather than a disclosure of a current crisis. The focus remains on analyzing the concept and suggesting improvements to the reading.
+--- binary-broad-single | verdict=CLEAR | conf=0.95
+  signal: Analytical use of family experiences to illustrate intersectionality.
+  reasoning: The student is drawing on their family's experiences (grandmother in Dakar, mother in America) to illustrate and analyze the concept of intersectionality, which is a core element of the assignment. While the student describes their mother facing discrimination, this is presented as an example illustrating the concept, not a disclosure of a current crisis.
+--- binary-broad-neither | verdict=CLEAR | conf=0.95
+  signal: Analytical use of family experiences to illustrate intersectionality.
+  reasoning: The student is drawing on their family's experiences (grandmother in Dakar, mother in America) to illustrate and analyze the concept of intersectionality, which is a core element of the assignment. While the student describes experiences of discrimination faced by their family members, this is being used as course material to analyze the concept of intersectionality, not a disclosure of their own current circumstances.
+--- 4axis-both | verdict=ENGAGED | conf=0.95
+  signal: Student is drawing on family experiences (grandmother in Dakar, mother in America) to illustrate and expand upon the concept of intersectionality, demonstrating engagement with the course material.
+--- 4axis-single | verdict=ENGAGED | conf=0.95
+  signal: The student is drawing on family experiences (grandmother in Dakar, mother in America) to illustrate and expand upon the concept of intersectionality, demonstrating engagement with the course material.
+--- 4axis-neither | verdict=ENGAGED | conf=0.95
+  signal: Student is drawing on family experiences (grandmother in Dakar, mother in America) to illustrate and expand upon the concept of intersectionality as presented in the reading. They are using personal narratives as course material to analyze a theoretical concept.
+--- genob-both | verdict=GENOB | conf=0.9
+  reasoning: The student briefly mentions her mother's experiences with discrimination based on her accent and hijab, which suggests a potential ongoing experience of navigating multiple identities and facing prejudice. While not explicitly stating exhaustion or distress, this observation warrants attention as it indicates a lived experience of marginalization. The focus is on the student's observation of her mother's experiences, not on the student's own wellbeing state.
+  observation: The student describes her mother's experience of being treated differently in school meetings due to her accent and hijab. This suggests the student is observing her mother navigating multiple identities and experiencing prejudice. The student connects this observation to the concept of intersectionality, framing it as a lived reality for her family.
+--- genob-single | verdict=GENOB | conf=0.8
+  reasoning: The student briefly mentions her mother's experiences with discrimination based on her accent and hijab, which suggests navigating multiple identities and potential microaggressions. While this isn't a full disclosure of a crisis, it does point to a potential ongoing stressor related to identity navigation within the American educational system. I'm prioritizing this observation as it's a concrete example of a lived experience.
+  observation: The student describes her mother experiencing differential treatment at school meetings due to her accent and hijab. This suggests a potential ongoing experience of navigating multiple identities and facing microaggressions within the school environment.
+--- genob-neither | verdict=GENOB | conf=0.9
+  reasoning: The student's writing includes a direct reference to her mother's experiences with discrimination based on multiple intersecting identities (Black woman, immigrant, Muslim). While this is a political observation about navigating institutional expectations, the student's description of her mother being 'treated different' suggests a potential impact on her wellbeing. I will focus on the student's description of her mother's experience, rather than attempting to diagnose the student's own state.
+  observation: The student describes her mother's experiences navigating multiple intersecting identities, noting that she is treated differently in interactions like school meetings due to her accent and hijab. This suggests a potential impact on her mother's wellbeing, as she experiences discrimination based on these intersecting factors. The student frames this as a lived reality and a limitation of the reading's scope, suggesting a desire for broader perspectives on similar experiences.
+
+========== S005 ==========
+--- binary-narrow-both | verdict=CLEAR | conf=0.95
+  signal: Analytical engagement with course material, drawing on family history.
+  reasoning: The student is drawing on their family's history and experiences to analyze Crenshaw's framework and discuss its limitations. They are using personal and community experience as course material to engage with the concept of intersectionality. There is no indication of the student's own current material conditions or capacity depletion.
+--- binary-narrow-single | verdict=CLEAR | conf=0.95
+  signal: Analytical engagement with intersectionality, drawing on family history as course material.
+  reasoning: The student is analyzing Crenshaw's framework and applying it to their grandmother's experiences, demonstrating engagement with the course material. While the student shares a personal anecdote and discusses their grandmother's experiences navigating multiple identities, this is used analytically within the assignment's scope. There is no mention of the student's own current circumstances or capacity depletion.
+--- binary-narrow-neither | verdict=CLEAR | conf=0.95
+  signal: Analytical engagement with course material and reflection on the limitations of a theoretical framework.
+  reasoning: The student is analyzing Crenshaw's framework and applying it to their grandmother's experiences, demonstrating engagement with the course material. While the student shares a personal anecdote about their grandmother and reflects on the limitations of intersectionality, there is no mention of the student's own current circumstances or struggles. The writing focuses on intellectual engagement with the concept of intersectionality.
+--- binary-broad-both | verdict=CLEAR | conf=0.95
+  signal: Analytical engagement with course material, utilizing family history to illustrate and critique intersectionality.
+  reasoning: The student is drawing on their family's history and experiences (grandmother's migration and identity struggles) to analyze Crenshaw's framework and discuss its limitations. This is a clear example of using personal experience as course material to engage with the assignment's concepts. There is no indication of present-tense material concerns like food insecurity, housing instability, or safety issues.
+--- binary-broad-single | verdict=CLEAR | conf=0.95
+  signal: Analysis of grandmother's experiences as course material.
+  reasoning: The student is analyzing their grandmother's experiences and connecting them to Crenshaw's framework, demonstrating engagement with the course material. While the student shares a personal anecdote about their grandmother's experiences navigating multiple identities, this is being used as course material to analyze intersectionality, not a disclosure of their own current circumstances.
+--- binary-broad-neither | verdict=CLEAR | conf=0.95
+  signal: Analytical engagement with course material, utilizing family history as evidence.
+  reasoning: The student is drawing on their family's history and experiences (grandmother's migration and identity struggles) to analyze Crenshaw's framework and critique its limitations. This is a clear example of using personal experience as course material to engage with the assignment's concepts. There is no indication of present-tense material conditions impacting the student's wellbeing.
+--- 4axis-both | verdict=ENGAGED | conf=0.95
+  signal: Student is drawing on family history to analyze Crenshaw's framework and discussing limitations of the framework, demonstrating intellectual engagement with the course material.
+--- 4axis-single | verdict=ENGAGED | conf=0.95
+  signal: The student is analyzing their grandmother's experiences of navigating multiple forms of discrimination through the lens of Crenshaw's intersectionality framework.
+--- 4axis-neither | verdict=ENGAGED | conf=0.95
+  signal: Student is drawing on family history (grandmother's experiences as an immigrant and navigating multiple identities) as course material to analyze Crenshaw's framework on intersectionality. The writing demonstrates intellectual engagement with the course concepts.
+--- genob-both | verdict=GENOB | conf=0.9
+  reasoning: The student briefly mentions their grandmother's experience as an immigrant navigating multiple forms of discrimination in France. While the submission is largely analytical, the description of their grandmother's experience navigating multiple forms of discrimination (racial, religious, economic, gender, and linguistic) suggests a history of navigating complex and potentially challenging circumstances. I will name this directly in the observation.
+  observation: The student describes their grandmother's experience as a Black, Muslim, poor, female, and accented-French-speaking immigrant navigating France and Guinea, where she was consistently deemed 'not quite right' due to her intersecting identities. This suggests a history of navigating complex and potentially challenging circumstances related to immigration, race, religion, and gender.
+--- genob-single | verdict=GENOB | conf=0.9
+  reasoning: The student briefly mentions their grandmother's experiences as an immigrant, Black Muslim woman facing discrimination in both France and Guinea. While this is presented as course material, the description of her consistent marginalization and feeling of 'not quite right' in any space suggests a history of significant hardship and potential ongoing impact. I will name this hardship directly without characterizing the student's disclosure style.
+  observation: The student's writing references their grandmother's experiences navigating multiple forms of discrimination as a Black Muslim immigrant woman in France and Guinea. She describes her grandmother as consistently feeling 'not quite right' in any space she occupied, suggesting a history of marginalization and potential ongoing impact from these experiences.
+--- genob-neither | verdict=GENOB | conf=0.95
+  reasoning: The student's writing primarily demonstrates analytical engagement with Crenshaw's framework and its limitations. While they draw on their grandmother's experiences, the focus remains on the theoretical framework and its applicability. The writing does not contain any direct disclosures of current wellbeing concerns.
+  observation: The student is thoughtfully applying Crenshaw's intersectionality framework to their grandmother's experiences as a Black, Muslim, poor, female, and immigrant woman navigating France and Guinea. They articulate a nuanced critique of the framework, noting its limitations when applied outside of American racial hierarchies. The student is effectively using personal family history to analyze a theoretical concept and highlight the complexities of identity and belonging.
+
+========== S010 ==========
+--- binary-narrow-both | verdict=CLEAR | conf=0.95
+  signal: Intellectual engagement with the assigned reading on intersectionality.
+  reasoning: The student's submission focuses on analyzing the assigned reading and applying the concept of intersectionality. There is no mention of the student's own current circumstances, exhaustion, or any other wellbeing concerns. The student is engaging with the material and demonstrating understanding of the concepts.
+--- binary-narrow-single | verdict=CLEAR | conf=0.95
+  signal: Student is demonstrating engagement with course material and analytical thinking.
+  reasoning: The student is engaging with the assigned reading and articulating their understanding of intersectionality. They are analyzing the author's arguments and providing relevant examples from the text and historical context. There is no mention of the student's own circumstances or struggles.
+--- binary-narrow-neither | verdict=CLEAR | conf=0.95
+  signal: Analytical engagement with course material; no personal disclosures or wellbeing concerns.
+  reasoning: The student is engaging with the assigned reading and articulating their understanding of intersectionality. They are analyzing the author's arguments and providing relevant examples from the text. There is no indication of the student's own current circumstances or capacity depletion.
+--- binary-broad-both | verdict=CLEAR | conf=0.95
+  signal: Intellectual engagement with the assigned reading and analysis of intersectionality.
+  reasoning: The submission demonstrates a clear engagement with the assigned reading and articulates a strong understanding of intersectionality. The student is analyzing the author's arguments and applying them to historical examples, indicating intellectual engagement with the course material. There is no mention of the student's own current circumstances or wellbeing concerns.
+--- binary-broad-single | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and analytical discussion of intersectionality.
+  reasoning: The student is engaging with the assigned reading and articulating their understanding of intersectionality. They are analyzing the author's arguments and providing relevant examples from the text, demonstrating a clear engagement with the course material. There is no indication of present-tense material conditions impacting the student's capacity.
+--- binary-broad-neither | verdict=CLEAR | conf=0.95
+  signal: Student is demonstrating a clear understanding of the course material and engaging in analytical discussion.
+  reasoning: The student is engaging with the assigned reading and articulating their understanding of intersectionality. They are analyzing the author's arguments and providing relevant examples to support their claims, demonstrating a clear engagement with the course material. There is no indication of the student's own current circumstances or wellbeing concerns.
+--- 4axis-both | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with the assigned reading and applying intersectionality concepts to analyze historical and contemporary power dynamics.
+--- 4axis-single | verdict=ENGAGED | conf=0.95
+  signal: The student is engaging with the assigned reading and articulating their understanding of intersectionality, demonstrating thoughtful analysis of the material.
+--- 4axis-neither | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with the assigned reading and articulating their understanding of intersectionality. The submission demonstrates thoughtful reflection on the material.
+--- genob-both | verdict=GENOB | conf=0.9
+  reasoning: The submission primarily demonstrates analytical engagement with the assigned reading on intersectionality. However, the student includes a brief mention of facing 'triple jeopardy' experienced by black women, which, while used analytically, points to a historical context of significant hardship and oppression. I will focus on the student's engagement with the reading and the historical context they bring up.
+  observation: The student engages with the assigned reading on intersectionality, highlighting the author's argument that multiple factors determine one's positionality. They use the historical example of black women in the Civil Rights Movement facing 'triple jeopardy' – a combination of racism and sexism – to illustrate the complexities of intersectional oppression. The student's analysis demonstrates a thoughtful engagement with the material.
+--- genob-single | verdict=GENOB | conf=0.95
+  reasoning: The student briefly mentions the complexities of identity and power dynamics, but does not disclose any current wellbeing concerns. The submission focuses on the analytical work of the reading and the student's understanding of intersectionality.
+  observation: The student's writing demonstrates a focus on analyzing the complexities of intersectionality and power dynamics, referencing the 'triple jeopardy' faced by black women in the Civil Rights Movement as an example. There is no evidence of current wellbeing concerns in the submission.
+--- genob-neither | verdict=GENOB | conf=0.95
+  reasoning: The submission focuses on analyzing the concept of intersectionality and applying it to historical and contemporary examples. The student demonstrates a clear understanding of the reading and articulates their insights effectively. There are no overt indicators of current wellbeing concerns within the text.
+  observation: Tyler's submission demonstrates a thoughtful engagement with the assigned reading on intersectionality. They effectively analyze the author's argument and provide a relevant historical example to illustrate the concept. The writing is focused on the analytical task, demonstrating a clear understanding of the material and its application to understanding power dynamics.
+
+========== S015 ==========
+--- binary-narrow-both | verdict=CLEAR | conf=0.95
+  signal: Engagement with intersectionality concepts and application to observations of community and a friend's experiences.
+  reasoning: The submission focuses on the student's understanding of intersectionality and applies it to observations about their neighborhood and a friend. While the student mentions a friend 'Rosa' has 'been through' a lot, there is no indication of any current material concerns or depletion related to the student's own life. The writing demonstrates engagement with the course material.
+--- binary-narrow-single | verdict=CLEAR | conf=0.95
+  signal: Engagement with intersectionality concepts through observations of community and a friend.
+  reasoning: The submission focuses on analyzing intersectionality through observations of the student's neighborhood and a friend. While the student mentions their friend Rosa has 'been through' a lot, this does not provide evidence of current material conditions or capacity depletion. The writing demonstrates engagement with the course material.
+--- binary-narrow-neither | verdict=CLEAR | conf=0.95
+  signal: Student is engaging with course material through observations of their community and a friend.
+  reasoning: The student is analyzing the concept of intersectionality and applying it to observations of their community and a friend. They are engaging with the course material in a thoughtful way, drawing on their observations to illustrate their understanding. There is no indication of the student's own current circumstances or capacity depletion.
+--- binary-broad-both | verdict=CLEAR | conf=0.95
+  signal: Student is demonstrating passionate engagement with the course material and applying intersectionality to analyze their community.
+  reasoning: The student is engaging with the assigned reading and applying the concept of intersectionality to their observations of their neighborhood and a friend. They are analyzing cultural dynamics and celebrating diversity, demonstrating a clear understanding of the material. There is no indication of the student's own current circumstances impacting their ability to complete the assignment.
+--- binary-broad-single | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and analysis of community and friend's experiences through the lens of intersectionality.
+  reasoning: The student is engaging with the assigned reading on intersectionality and applying those concepts to observations about their community and a friend. They are analyzing and celebrating diversity and resilience within those communities, demonstrating a clear understanding of the material. There is no indication of current personal hardship or crisis.
+--- binary-broad-neither | verdict=CLEAR | conf=0.95
+  signal: Student is demonstrating engagement with course material through analysis of community and friend's experiences.
+  reasoning: The student is engaging with the assigned reading and applying the concept of intersectionality to observations about their neighborhood and a friend. They are analyzing and celebrating cultural diversity and resilience, demonstrating a clear understanding of the material. There is no indication of present-tense material conditions or capacity depletion.
+--- 4axis-both | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with the course material (intersectionality) through observations of their community and reflections on a friend's experiences.
+--- 4axis-single | verdict=ENGAGED | conf=0.95
+  signal: The student is engaging with the course material on intersectionality, drawing on observations of their community and a friend to illustrate their understanding.
+--- 4axis-neither | verdict=ENGAGED | conf=0.95
+  signal: The student is engaging with the course material (intersectionality) through observations about their community and a friend. They are analyzing concepts and drawing connections between readings and their observations, demonstrating intellectual engagement with the assignment.
+--- genob-both | verdict=GENOB | conf=0.8
+  reasoning: The submission includes a brief mention of a friend, Rosa, having 'been through' a lot, which suggests potential hardship or challenges. While the student doesn't elaborate, this warrants noting as a potential wellbeing concern, even if it's a minimal disclosure. The overall tone is positive and focused on celebrating diversity and intersectionality, but the mention of Rosa's experiences requires acknowledgement.
+  observation: The student mentions their friend Rosa has 'been through' a lot, which suggests she may be facing challenges. The submission otherwise focuses on celebrating diversity and intersectionality, highlighting the strength and resilience of different cultural groups within their neighborhood. The student observes that Rosa's identity as Latina and queer contributes to her strength.
+--- genob-single | verdict=GENOB | conf=0.8
+  reasoning: The student briefly mentions their friend Rosa's experiences, stating she is 'the strongest person I know because of all she has been through.' While this is a brief mention, it suggests Rosa has faced significant challenges, potentially indicating a wellbeing concern. I'm weighting this observation because it's a direct statement about someone facing hardship, even if it's not explicitly detailed.
+  observation: The student references a friend, Rosa, who is Latina and queer, noting that Rosa is 'the strongest person I know because of all she has been through.' This suggests Rosa has experienced significant challenges, potentially impacting her wellbeing. The student's observation highlights a friend's resilience in navigating multiple identities.
+--- genob-neither | verdict=GENOB | conf=0.9
+  reasoning: The student's writing focuses on observing and celebrating community resilience and cultural diversity within their neighborhood and among their friends. While they mention a friend 'Rosa' has 'been through' a lot, this is presented as a source of strength rather than a disclosure of current hardship. The overall tone is positive and focused on appreciating differences and celebrating diversity.
+  observation: The student describes observing strong community support and resilience among Mexican and Black families in their neighborhood. They highlight their friend Rosa's strength, noting she has 'been through' a lot, and frame this as a positive aspect of her identity. The writing demonstrates a focus on celebrating diversity and appreciating the unique qualities of different cultures.
+
+========== S020 ==========
+--- binary-narrow-both | verdict=CONCERN | conf=0.95
+  signal: Student reports family poverty and inability to pay bills, indicating financial hardship.
+  reasoning: The student describes their family's financial situation as 'actually poor,' detailing their father's two jobs and their mother's disability, and explicitly states they 'cant pay the electric bill half the time.' This reveals a present-tense material condition of financial hardship impacting the student's family. While the student is engaging with the course material, this disclosure of their own family's economic struggles warrants follow-up.
+--- binary-narrow-single | verdict=CONCERN | conf=0.9
+  signal: Student reports family poverty and inability to pay bills, indicating financial hardship.
+  reasoning: The student describes their family's financial situation as 'actually poor,' unable to pay the electric bill. This indicates a present-tense material condition of financial hardship. While the student is engaging with the course material, this description of their family's economic struggles warrants follow-up.
+--- binary-narrow-neither | verdict=CONCERN | conf=0.95
+  signal: Student reports family poverty and financial instability, impacting their ability to fully engage with the assigned reading.
+  reasoning: The student describes their family's financial struggles, explicitly stating they are 'actually poor' and that their father 'cant pay the electric bill half the time.' This reveals present-tense material conditions – financial instability – that are impacting their engagement with the course material. The student isn't simply analyzing the framework; their own family's situation is directly informing their critique.
+--- binary-broad-both | verdict=CONCERN | conf=0.9
+  signal: Student reports family poverty and inability to pay bills, indicating financial hardship.
+  reasoning: The student describes their family's financial situation as 'actually poor,' unable to pay the electric bill. This indicates a present-tense material condition of financial hardship. While the student is engaging with the assigned reading and offering a critique of the framework, the mention of their family's poverty is a wellbeing signal.
+--- binary-broad-single | verdict=CONCERN | conf=0.9
+  signal: Student reports financial hardship and inability to pay bills, indicating potential economic insecurity.
+  reasoning: The student describes their family's financial situation as 'actually poor,' detailing their father working two jobs and their mother being disabled, with an inability to pay the electric bill. This indicates a present-tense material condition of financial hardship, which warrants attention.
+--- binary-broad-neither | verdict=CLEAR | conf=0.9
+  signal: Engagement with course material and critique of the assigned reading.
+  reasoning: The student is engaging with the assigned reading and offering a critique of the framework of intersectionality, specifically pointing out a perceived blind spot regarding class. While they mention their family's financial struggles ('white and poor,' 'cant pay the electric bill'), this is presented as evidence to support their argument about the limitations of the framework, not a disclosure of an ongoing crisis. The focus is on the theoretical framework, not their own current circumstances.
+--- 4axis-both | verdict=ENGAGED | conf=0.95
+  signal: Student is critically engaging with the assigned reading on intersectionality, using their family's experiences with poverty and class to critique the framework and propose a refinement. They are analyzing the reading and making an argument.
+--- 4axis-single | verdict=ENGAGED | conf=0.95
+  signal: The student is engaging with the assigned reading and offering a critique of its scope, drawing on their family's economic struggles to illustrate their point.
+--- 4axis-neither | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with the assigned reading and offering a critique of the framework of intersectionality, drawing on their family's experiences with poverty and disability to illustrate their point. While they mention their family's financial struggles, this is used as a point of analysis within the assignment, not a disclosure of a current crisis or burnout.
+--- genob-both | verdict=GENOB | conf=0.95
+  reasoning: The student explicitly mentions their family's financial situation, stating they are 'white and poor' and that their father works two jobs while struggling to pay bills. This indicates a current financial hardship, which falls under the category of economic insecurity. The observation should directly name this concern without attempting to categorize the student's disclosure style.
+  observation: The student describes their family's financial struggles, noting their father works two jobs and they frequently struggle to pay bills. They express frustration that the reading on intersectionality overlooks the experiences of poor white families, highlighting a current concern with economic hardship. The student is using this observation to critique the framework presented in the reading.
+--- genob-single | verdict=GENOB | conf=0.9
+  reasoning: The student briefly mentions their family's financial situation, specifically stating they are 'white and poor' and that their father works two jobs while struggling to pay bills. This suggests a potential financial strain and hardship within the family, which warrants attention. The focus is on the student's analytical critique of the reading, but the mention of their family's financial struggles is a relevant observation.
+  observation: The student mentions their family is 'white and poor,' and their father works two jobs while struggling to pay the electric bill. This suggests a current experience of financial hardship within their family. While the submission primarily focuses on a critique of the assigned reading, this brief mention indicates a potential need for support related to financial stability.
+--- genob-neither | verdict=GENOB | conf=0.95
+  reasoning: The student explicitly mentions their family's financial struggles, stating they are 'white and poor' and that their father 'cant pay the electric bill half the time.' This direct reference to financial hardship and inability to meet basic needs (paying bills) indicates a potential concern for financial stability. I weighted this heavily because it's a concrete description of a material condition, rather than a generalized statement about feelings.
+  observation: The student describes their family's financial situation as 'white and poor,' detailing that their father works two jobs and struggles to pay bills. This suggests a current experience of financial instability impacting their family. The student is using this personal experience to critique the framework of intersectionality, arguing that it overlooks the significance of class when separated from race.
+
+========== S025 ==========
+--- binary-narrow-both | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and offering suggestions for improving classroom discussions.
+  reasoning: The student is expressing frustration with classroom dynamics and suggesting ways to improve discussions. They are engaging with the concept of intersectionality and offering constructive feedback on how to navigate potentially sensitive conversations. There is no indication of the student's own material circumstances or capacity depletion.
+--- binary-narrow-single | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and offering suggestions for classroom discussion.
+  reasoning: The student is expressing frustration with classroom dynamics and suggesting ways to improve discussions. They are engaging with the course material (intersectionality) and offering a perspective on how to navigate potentially sensitive conversations. There is no mention of personal circumstances impacting their ability to participate or any indication of a crisis.
+--- binary-narrow-neither | verdict=CLEAR | conf=0.95
+  signal: Student expressing frustration with classroom discussions and offering suggestions for respectful dialogue.
+  reasoning: The student is expressing frustration with classroom dynamics and suggesting ways to improve discussions. They are engaging with the course material (intersectionality) and offering a perspective on how to navigate potentially sensitive conversations. There's no indication of the student's own material conditions or capacity depletion.
+--- binary-broad-both | verdict=CLEAR | conf=0.95
+  signal: Intellectual engagement with the course material and a desire for constructive classroom discussion.
+  reasoning: The student is engaging with the assigned reading and offering a perspective on classroom discussions. They are expressing a desire for more respectful dialogue, which is a form of intellectual engagement. There is no indication of present-tense material concerns or acute circumstances impacting their capacity.
+--- binary-broad-single | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and offering suggestions for improving classroom discussions.
+  reasoning: The student is expressing frustration with classroom dynamics and suggesting ways to improve discussions. They are engaging with the course material (intersectionality) and offering constructive feedback on how to navigate potentially sensitive conversations. There is no indication of present-tense material conditions impacting their capacity.
+--- binary-broad-neither | verdict=CLEAR | conf=0.95
+  signal: Student expressing frustration with classroom discussions and offering suggestions for improvement.
+  reasoning: The student is expressing frustration with classroom dynamics and suggesting ways to improve discussions. They are engaging with the course material (intersectionality) and offering constructive feedback on how to navigate potentially sensitive conversations. There's no indication of personal circumstances impacting their ability to participate or any disclosure of current material needs.
+--- 4axis-both | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with the course material (intersectionality) and offering a perspective on classroom dynamics, demonstrating critical thinking and a desire for constructive dialogue.
+--- 4axis-single | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with the course material (intersectionality) and offering a perspective on classroom dynamics, demonstrating critical thinking and engagement with the assignment prompt.
+--- 4axis-neither | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with the course material (intersectionality) and offering a perspective on classroom dynamics. They are expressing a concern about emotional intensity in discussions, but this is presented as an observation about others' behavior rather than a disclosure of their own state.
+--- genob-both | verdict=GENOB | conf=0.8
+  reasoning: The student's submission expresses frustration with classroom discussions becoming heated and unproductive. While they articulate a desire for respectful dialogue, the tone suggests a potential discomfort or anxiety related to navigating emotionally charged conversations. There is no explicit mention of personal struggles or crises, but the student's focus on managing emotional dynamics in a classroom setting warrants attention.
+  observation: Aiden expresses a concern about the intensity of classroom discussions, noting that heated exchanges can hinder productive conversations and cause some students to disengage. They suggest a focus on understanding different perspectives rather than arguing, indicating a desire to navigate potentially uncomfortable social dynamics. The student's writing suggests a sensitivity to interpersonal conflict and a desire for a more controlled environment.
+--- genob-single | verdict=GENOB | conf=0.8
+  reasoning: The student briefly mentions feeling overwhelmed by heated classroom discussions, suggesting a potential discomfort or anxiety related to navigating emotionally charged conversations. While not explicitly stating a wellbeing crisis, this observation warrants attention as it indicates a potential challenge in managing social interactions and potentially a need for support in navigating difficult conversations. The student's desire for respectful dialogue also suggests a sensitivity to interpersonal dynamics.
+  observation: Aiden expresses discomfort with the intensity of classroom discussions surrounding sensitive topics, noting that heated exchanges can make it difficult to engage productively. They suggest a preference for respectful understanding over argumentative engagement, indicating a potential sensitivity to interpersonal dynamics and a desire to avoid conflict. This suggests a possible challenge in navigating emotionally charged conversations.
+--- genob-neither | verdict=GENOB | conf=0.9
+  reasoning: The student's writing expresses frustration with classroom discussions and a desire for more respectful communication. While the student expresses a desire for calmer conversations, there is no direct mention of personal struggles or circumstances impacting their wellbeing. The focus is on the dynamics of classroom interaction and a preference for a more measured approach to discussing sensitive topics.
+  observation: Aiden's writing expresses a desire for more respectful and productive classroom discussions, particularly when discussing sensitive topics like intersectionality. They observe that heated exchanges can hinder learning and cause some students to disengage. The student is reaching for a more constructive environment where perspectives can be understood without escalating into arguments.
+
+========== S030 ==========
+--- binary-narrow-both | verdict=CLEAR | conf=0.95
+  signal: Analytical engagement with course material through a family story.
+  reasoning: The student is drawing on a family member's experience (great-aunt Lorraine) to illustrate Crenshaw's concept of intersectionality. While the story is personal, it's being used analytically to engage with the course material. There is no mention of the student's own current circumstances or struggles.
+--- binary-narrow-single | verdict=CLEAR | conf=0.95
+  signal: Analysis of intersectionality using a family member's experience as course material.
+  reasoning: The student is drawing on their great-aunt's experiences to illustrate Crenshaw's concept of intersectionality. The submission focuses on analyzing the concept and using a personal story as course material. There is no mention of the student's own current circumstances or capacity depletion.
+--- binary-narrow-neither | verdict=CLEAR | conf=0.95
+  signal: Analytical use of family experience to illustrate intersectionality.
+  reasoning: The student is drawing on a family member's experience to illustrate a concept from Crenshaw, demonstrating engagement with the course material. While the story is personal, the student is using it analytically to explore intersectionality, not disclosing their own current circumstances or struggles. The submission focuses on the assignment's topic and demonstrates thoughtful engagement.
+--- binary-broad-both | verdict=CLEAR | conf=0.95
+  signal: Analytical engagement with course material through the lens of a family story.
+  reasoning: The student is drawing on a family story to illustrate and analyze Crenshaw's concept of intersectionality. They are using personal experience as course material to deepen their understanding of the reading. There is no indication of present-tense material concerns or wellbeing crises.
+--- binary-broad-single | verdict=CLEAR | conf=0.95
+  signal: Analytical use of family history to illustrate intersectionality.
+  reasoning: The student is drawing on their great-aunt's experiences to illustrate Crenshaw's concept of intersectionality. The submission demonstrates thoughtful engagement with the course material and uses personal narrative as a tool for analysis, which aligns with the assignment's purpose. There is no indication of the student's own current circumstances or wellbeing concerns.
+--- binary-broad-neither | verdict=CLEAR | conf=0.95
+  signal: Analytical engagement with course material, utilizing personal family history as an example.
+  reasoning: The student is drawing on a family story to illustrate and analyze Crenshaw's concept of intersectionality. They are using personal experience as course material to deepen their understanding of the theoretical concepts. There is no indication of present-tense material conditions impacting the student's wellbeing.
+--- 4axis-both | verdict=ENGAGED | conf=0.95
+  signal: Student is drawing on family history to illustrate Crenshaw's concept of intersectionality, demonstrating engagement with the assignment material.
+--- 4axis-single | verdict=ENGAGED | conf=0.95
+  signal: The student is drawing on family history to illustrate Crenshaw's concept of intersectionality, demonstrating engagement with the course material.
+--- 4axis-neither | verdict=ENGAGED | conf=0.95
+  signal: Student is drawing on family history (great-aunt Lorraine's experiences) to illustrate and analyze Crenshaw's concept of intersectionality. This is a thoughtful engagement with the course material.
+--- genob-both | verdict=GENOB | conf=0.95
+  reasoning: The student briefly mentions their great-aunt Lorraine's experiences with segregation and sorting based on skin tone and socioeconomic status. While this is a story about the past, it reveals a family history of navigating complex systems of discrimination and exclusion. The student's reflection on this story, particularly the metaphor of 'doors,' demonstrates a thoughtful engagement with Crenshaw's concept of intersectionality.
+  observation: The student shares a story about their great-aunt Lorraine's experiences navigating segregation and discrimination based on race and socioeconomic status. The student describes their aunt's experiences being sorted differently based on skin tone and location, reflecting on how these systems of exclusion continue to manifest in complex ways. The student connects this family story to Crenshaw's concept of intersectionality, using the metaphor of 'doors' to illustrate the challenges faced by those at the crossroads of multiple forms of marginalization.
+--- genob-single | verdict=GENOB | conf=0.9
+  reasoning: The student briefly mentions their great-aunt Lorraine's experiences with segregation and sorting based on skin tone and socioeconomic status. While this is a story about the past, it reveals a family history of navigating complex systems of discrimination and exclusion. The student's reflection on this story, particularly the image of 'no good door at all,' suggests a potential awareness of ongoing challenges and barriers.
+  observation: The student shares a story about their great-aunt Lorraine's experiences navigating segregation and discrimination based on race and socioeconomic status. The student's reflection on this story, particularly the image of 'no good door at all,' suggests a potential awareness of ongoing challenges and barriers. This narrative reveals a family history of navigating complex systems of exclusion.
+--- genob-neither | verdict=GENOB | conf=0.95
+  reasoning: The student is drawing on a family story to illustrate Crenshaw's concept of intersectionality. There are no explicit mentions of current struggles or hardships in the student's writing; the focus is on the analytical connection between her aunt's experiences and the theoretical framework.
+  observation: Aaliyah's submission centers on her great-aunt Lorraine's experiences navigating racial and socioeconomic sorting in Mississippi and Chicago. She uses this family narrative to connect with and elaborate on Crenshaw's concept of intersectionality, describing how different factors create unique 'doors' for individuals. The student is effectively using personal history as course material to analyze a theoretical concept.

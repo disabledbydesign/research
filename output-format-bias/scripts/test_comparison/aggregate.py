@@ -39,14 +39,28 @@ def aggregate_config(records: list, flag_threshold: float = 0.5) -> dict:
             label = r.get("axis") or r.get("raw_verdict") or ("FLAG" if r["flag"] else "CLEAR")
             axes[label] += 1
 
-        flag_rate = sum(1 for r in rs if r["flag"]) / n
-        prod_flag_rate = sum(1 for r in rs if r.get("production_flag", r["flag"])) / n
+        # Observational records (genob) carry flag=None — don't grade them against truth.
+        is_observational = all(r["flag"] is None for r in rs)
+
+        if is_observational:
+            flag_rate = 0.0
+            prod_flag_rate = 0.0
+            majority = "OBS"
+            majority_prod = "OBS"
+            vs_truth_val = "edge"
+            vs_truth_prod_val = "edge"
+            has_prod_divergence = False
+        else:
+            flag_rate = sum(1 for r in rs if r["flag"]) / n
+            prod_flag_rate = sum(1 for r in rs if r.get("production_flag", r["flag"])) / n
+            majority = "FLAG" if flag_rate >= flag_threshold else "CLEAR"
+            majority_prod = "FLAG" if prod_flag_rate >= flag_threshold else "CLEAR"
+            vs_truth_val = _vs_truth(sid, majority)
+            vs_truth_prod_val = _vs_truth(sid, majority_prod)
+            has_prod_divergence = any(r["flag"] != r.get("production_flag", r["flag"]) for r in rs)
 
         confs = [r["confidence"] for r in rs if r.get("confidence") is not None]
         conf_range = (min(confs), max(confs)) if confs else (None, None)
-
-        majority = "FLAG" if flag_rate >= flag_threshold else "CLEAR"
-        majority_prod = "FLAG" if prod_flag_rate >= flag_threshold else "CLEAR"
 
         out[sid] = {
             "n_runs": n,
@@ -56,9 +70,9 @@ def aggregate_config(records: list, flag_threshold: float = 0.5) -> dict:
             "confidence_range": conf_range,
             "majority_verdict": majority,
             "majority_prod_verdict": majority_prod,
-            "vs_truth": _vs_truth(sid, majority),
-            "vs_truth_prod": _vs_truth(sid, majority_prod),
-            "has_prod_divergence": any(r["flag"] != r.get("production_flag", r["flag"]) for r in rs),
+            "vs_truth": vs_truth_val,
+            "vs_truth_prod": vs_truth_prod_val,
+            "has_prod_divergence": has_prod_divergence,
             "all_records": rs,
         }
     return out

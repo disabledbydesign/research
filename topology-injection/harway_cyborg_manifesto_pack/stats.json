@@ -1,0 +1,11 @@
+{
+  "source": "harway_cyborg_manifesto.md",
+  "model": "llama3.1:8b",
+  "chunks": 3,
+  "triples": 24,
+  "nodes": 37,
+  "edges": 24,
+  "density": 0.036036036036036036,
+  "encoding_tokens_approx": 339,
+  "test_mode": true
+}

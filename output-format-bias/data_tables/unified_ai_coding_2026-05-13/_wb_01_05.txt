@@ -1,0 +1,175 @@
+
+========== WB01 ==========
+--- binary-narrow-both | verdict=CONCERN | conf=0.95
+  signal: Fear of immigration enforcement impacting family and student's ability to focus on homework.
+  reasoning: The student describes a present-tense situation of fear and anxiety related to potential immigration enforcement impacting their family, specifically mentioning their mother's precarious employment status and their brother's distress. This reveals a current, acute material condition (fear of immigration enforcement) impacting the student's ability to focus on their studies.
+--- binary-narrow-single | verdict=CONCERN | conf=0.95
+  signal: Family member's lack of healthcare access due to immigration status and child experiencing anxiety over potential ICE action, impacting student's ability to focus on homework.
+  reasoning: The student describes a specific, present-tense situation: their mother's inability to access healthcare due to immigration status and their brother experiencing anxiety over potential ICE action. The student also mentions being unable to focus on homework due to a stressful situation, indicating a disruption to their capacity. This reveals a present-tense family crisis and a resulting impact on the student's ability to complete their coursework.
+--- binary-narrow-neither | verdict=CONCERN | conf=0.95
+  signal: Student reports a family member's precarious immigration status and fear of ICE, impacting their ability to focus on academic work.
+  reasoning: The student's submission details a present-tense situation involving fear of ICE and a mother working multiple jobs without healthcare due to immigration status. This reveals acute material conditions – specifically, the threat of immigration enforcement and a lack of access to basic healthcare, compounded by the emotional distress of a child experiencing anxiety about immigration. The student's inability to focus on homework due to these circumstances indicates a capacity depletion stemming from their own family's situation.
+--- binary-broad-both | verdict=CONCERN | conf=0.95
+  signal: Immigration enforcement threat and family anxiety impacting the student's ability to focus on academic work.
+  reasoning: The student describes a specific, present-tense situation involving her mother's precarious employment status and lack of access to healthcare due to immigration status. Furthermore, the student details a distressing incident involving her brother's fear of ICE, and her own anxiety and inability to focus on homework due to this situation. This indicates a current, acute-material concern related to immigration enforcement and family well-being.
+--- binary-broad-single | verdict=CONCERN | conf=0.9
+  signal: Potential immigration enforcement threat and associated emotional distress impacting the student's ability to focus on homework.
+  reasoning: The student describes a specific, present-tense situation involving their mother's employment and immigration status, and a distressing incident involving their brother's fear of ICE. This indicates a current situation of potential immigration enforcement threat and associated emotional distress, which warrants attention.
+--- binary-broad-neither | verdict=CONCERN | conf=0.95
+  signal: Student reports anxiety related to potential immigration enforcement and its impact on their ability to focus on homework, alongside their mother's lack of access to healthcare.
+  reasoning: The student's submission details a specific, present-tense situation: their mother's inability to access healthcare due to immigration status and their brother experiencing fear of ICE. The student also describes a night of disrupted study due to anxiety about potential immigration enforcement. These details point to a current crisis situation impacting their capacity to focus on their studies.
+--- 4axis-both | verdict=CRISIS | conf=0.95
+  signal: Student reports family member lacking legal status and expresses fear of ICE impacting their family, alongside a description of a child experiencing distress due to immigration-related anxieties. The student also mentions being unable to focus on homework due to watching the street, indicating heightened anxiety and disruption.
+--- 4axis-single | verdict=CRISIS | conf=0.95
+  signal: Student describes their mother's precarious employment and lack of healthcare, and reports a recent incident of fear and anxiety related to immigration enforcement impacting their ability to focus on homework.
+--- 4axis-neither | verdict=CRISIS | conf=0.95
+  signal: Student describes a family member lacking healthcare due to immigration status and expresses fear of ICE impacting their family, causing disruption to their studies. This indicates a present-tense safety crisis related to immigration enforcement.
+--- genob-both | verdict=GENOB | conf=0.95
+  reasoning: The student's writing includes a direct mention of their mother's inability to access healthcare due to immigration status and a description of a distressing incident involving their brother's fear of ICE. The student also describes a night of disrupted study due to anxiety and vigilance, indicating a current impact on their capacity to focus.
+  observation: The student describes their mother working two jobs and being unable to access medical care due to lacking documentation, indicating a potential financial and health-related concern. They also mention their brother experiencing fear related to immigration enforcement and the student's subsequent inability to focus on homework due to watching the street, suggesting a current state of anxiety and disruption.
+--- genob-single | verdict=GENOB | conf=0.95
+  reasoning: The student's writing includes a brief but direct mention of their mother's inability to access healthcare due to immigration status and a concerning incident involving their brother's fear of ICE. The mention of watching the street from the window suggests a heightened state of anxiety and potential fear for safety. I will focus on these specific details without attempting to categorize the student's overall emotional state.
+  observation: The student describes their mother working two jobs and being unable to access healthcare due to lacking documentation. They also mention a recent incident where their brother was distressed by a threat of ICE, leading the student to spend the evening watching the street from their window. This suggests a current environment of anxiety and potential fear related to immigration enforcement.
+--- genob-neither | verdict=GENOB | conf=0.9
+  reasoning: I focused on the student's description of their mother's inability to access healthcare due to immigration status and the anxiety experienced by their brother regarding ICE. The student also describes their own inability to focus on homework due to heightened anxiety and vigilance, which suggests a current impact on their daily life and capacity. I believe these details point to a wellbeing concern related to immigration-related stress and anxiety.
+  observation: The student describes a family experiencing challenges related to their immigration status, including their mother's inability to access healthcare and their brother's anxiety about potential ICE encounters. The student mentions being unable to focus on homework due to watching the street, indicating a current disruption to their routine and a heightened state of anxiety. This suggests a present-tense concern related to safety and stability within the family.
+
+========== WB02 ==========
+--- binary-narrow-both | verdict=CONCERN | conf=0.95
+  signal: Caregiving burden and sleep deprivation due to infant's illness.
+  reasoning: The student explicitly mentions being sleep-deprived due to her daughter's ear infection and needing to leave to pick up her daughter from her aunt's before they leave for their shift. This indicates a significant caregiving burden and sleep deprivation impacting their capacity. While they are engaging with the course material, their own circumstances are directly impacting their ability to fully participate.
+--- binary-narrow-single | verdict=CONCERN | conf=0.95
+  signal: Exhaustion and sleep deprivation due to caregiving responsibilities and child's illness.
+  reasoning: The student explicitly mentions being sleep-deprived due to their child's illness ('running on maybe 2 hours of sleep'). This indicates a present-tense capacity depletion stemming from caregiving responsibilities and a health crisis affecting their child. While they discuss intersectionality, the core signal is their own exhaustion and limited capacity.
+--- binary-narrow-neither | verdict=CONCERN | conf=0.95
+  signal: Capacity depletion due to sleep deprivation and caregiving burden.
+  reasoning: The student explicitly mentions being awake only two hours due to their child's ear infection, indicating a significant lack of sleep. This directly points to a capacity depletion stemming from caregiving responsibilities and a child's illness, which is a present-tense material condition impacting their ability to function. The rest of the submission is focused on the assignment.
+--- binary-broad-both | verdict=CONCERN | conf=0.9
+  signal: Caregiving burden and sleep deprivation due to infant's illness.
+  reasoning: The student explicitly mentions being sleep-deprived due to her daughter's ear infection and needing to leave to pick up her daughter from her aunt's before they leave for their shift. This indicates a significant caregiving burden and sleep deprivation impacting their capacity. While they are engaging with the course material, the mention of these present-tense circumstances warrants concern.
+--- binary-broad-single | verdict=CONCERN | conf=0.95
+  signal: Student reports significant sleep deprivation due to child's illness and caregiving burden.
+  reasoning: The student explicitly mentions being sleep-deprived due to their child's illness and needing to leave to pick up their child from their aunt's before she starts her shift. This indicates a significant caregiving burden and sleep deprivation impacting their ability to complete the assignment, which constitutes a wellbeing concern.
+--- binary-broad-neither | verdict=CONCERN | conf=0.95
+  signal: Student reports significant sleep deprivation due to child's illness.
+  reasoning: The student explicitly mentions being sleep-deprived due to their child's illness ('running on maybe 2 hours of sleep'). This indicates a present-tense capacity depletion impacting their ability to function. While they are also discussing their identity and experiences related to the course material, the sleep deprivation is a distinct wellbeing signal.
+--- 4axis-both | verdict=BURNOUT | conf=0.9
+  signal: Student reports significant sleep deprivation due to infant's illness, indicating depleted capacity.
+--- 4axis-single | verdict=BURNOUT | conf=0.9
+  signal: The student describes being sleep-deprived due to their child's illness and expresses feeling judged due to their age and parental status, indicating depleted capacity.
+--- 4axis-neither | verdict=BURNOUT | conf=0.9
+  signal: Student reports significant sleep deprivation due to infant care and expresses feeling judged by others, indicating depleted capacity. The focus is on the student's own current circumstances impacting their ability to engage fully.
+--- genob-both | verdict=GENOB | conf=0.95
+  reasoning: The student explicitly mentions being awake only two hours due to their daughter's ear infection. This directly indicates sleep deprivation, a wellbeing concern. The mention of needing to pick up their daughter from their aunt's before she leaves for her shift suggests a caregiving burden and potential logistical challenges.
+  observation: The student reports running on approximately two hours of sleep due to their daughter's ear infection. They also mention needing to pick up their daughter from their aunt's before she leaves for her shift, indicating a caregiving burden and potential time constraints.
+--- genob-single | verdict=GENOB | conf=0.95
+  reasoning: The student explicitly mentions being sleep-deprived due to their child's illness. While they also disclose their identity (Black, female, young mother), the sleep deprivation is a direct statement about their current physical state and potential impact on their ability to function. The mention of needing to pick up their child from their aunt before she leaves for her shift suggests a caregiving burden.
+  observation: The student mentions being awake for only two hours due to their child's ear infection, indicating a current state of sleep deprivation. They also reference a caregiving burden, needing to pick up their child from their aunt before she leaves for her shift. The writing demonstrates a connection between their personal circumstances and their understanding of the assigned reading on intersectionality.
+--- genob-neither | verdict=GENOB | conf=0.95
+  reasoning: The student explicitly mentions being awake only two hours due to their child's ear infection. This direct statement of sleep deprivation is a clear indicator of a potential wellbeing concern. The mention of needing to pick up their child from their aunt before she leaves for her shift suggests a potential caregiving burden and logistical challenges.
+  observation: The student describes being severely sleep-deprived, stating they have only had two hours of sleep due to their child's illness. They also mention needing to navigate childcare logistics, indicating a potential caregiving burden. The writing conveys a sense of urgency and limited time, likely impacting their ability to fully engage with the assignment.
+
+========== WB03 ==========
+--- binary-narrow-both | verdict=CONCERN | conf=0.95
+  signal: Housing instability - student reports having to leave their apartment and staying with different people.
+  reasoning: The student explicitly states they 'had to leave our apartment last month' and are 'staying with different people,' indicating housing instability. This directly reveals a present-tense material condition (housing loss) that warrants the teacher's follow-up, regardless of the student's engagement with the course material.
+--- binary-narrow-single | verdict=CONCERN | conf=0.95
+  signal: Housing instability and displacement.
+  reasoning: The student explicitly states they 'had to leave our apartment last month' and are 'staying with different people,' indicating housing instability. This directly describes a present-tense material condition impacting their life beyond the scope of the assignment, even though they connect it to the reading on intersectionality.
+--- binary-narrow-neither | verdict=CONCERN | conf=0.95
+  signal: Housing instability and limited access to resources (wifi) impacting the student's ability to complete the assignment.
+  reasoning: The student explicitly states they 'had to leave our apartment last month' and are 'staying with different people,' indicating a current housing instability. This directly describes a present-tense material condition impacting their ability to fully engage with the assignment, rather than analyzing intersectionality as a course concept. The mention of the unreliable wifi further highlights a barrier to completing the work.
+--- binary-broad-both | verdict=CONCERN | conf=0.95
+  signal: Student reports housing instability and displacement.
+  reasoning: The student explicitly states they 'had to leave our apartment last month' and are 'staying with different people,' indicating housing instability. While they are engaging with the course material on intersectionality, this disclosure points to a significant material hardship impacting their current situation.
+--- binary-broad-single | verdict=CONCERN | conf=0.95
+  signal: Housing instability due to inability to pay rent.
+  reasoning: The student explicitly states they had to leave their apartment and have been staying with different people, indicating housing instability. This is a present-tense material condition that warrants attention, regardless of the subsequent discussion about the reading.
+--- binary-broad-neither | verdict=CONCERN | conf=0.95
+  signal: Student reports housing instability and limited time due to external circumstances.
+  reasoning: The student explicitly states they 'had to leave our apartment last month' and are 'staying with different people,' indicating housing instability. This describes a current, material condition impacting their capacity to engage fully with the assignment, despite their insightful connection to the course readings. The mention of limited time and needing to complete other homework further suggests a constrained situation.
+--- 4axis-both | verdict=CRISIS | conf=0.95
+  signal: Student reports recent housing loss and ongoing housing instability, despite their father's full-time employment. This indicates a current crisis situation.
+--- 4axis-single | verdict=CRISIS | conf=0.95
+  signal: Student reports experiencing housing instability after being forced to leave their apartment and currently staying with various people, indicating a present-tense crisis situation.
+--- 4axis-neither | verdict=CRISIS | conf=0.95
+  signal: Student reports recent housing loss and ongoing financial instability despite parental employment, indicating a current crisis situation. The submission also reveals time constraints and limited access to resources (library wifi).
+--- genob-both | verdict=GENOB | conf=0.95
+  reasoning: The student explicitly states they had to leave their apartment and have been staying with different people, indicating housing instability. This is a direct disclosure of a material concern, and should be flagged for the teacher's awareness. The rest of the submission focuses on the assigned reading and the student's analytical understanding of intersectionality.
+  observation: Miguel mentions that his family recently had to leave their apartment and has been staying with different people. He connects this experience to the assigned reading on intersectionality, noting the challenges his father faces working full-time despite struggling to afford rent. The student also expresses time constraints due to limited access to wifi and other homework demands.
+--- genob-single | verdict=GENOB | conf=0.95
+  reasoning: The student's brief mention of having to leave their apartment and currently staying with different people is a clear indicator of housing instability. The statement is concise and doesn't appear to be minimized or presented as a broader political observation; it directly describes a current living situation. The subsequent explanation about their father's employment and the inability to pay rent further reinforces the housing insecurity.
+  observation: Miguel mentions that his family recently had to leave their apartment and is currently staying with different people. He connects this experience to the reading on intersectionality, explaining how his father's full-time warehouse job still wasn't enough to cover the rent increase. This suggests a current experience of housing instability impacting his ability to fully engage with the assignment.
+--- genob-neither | verdict=GENOB | conf=0.95
+  reasoning: The student explicitly states they have been staying with different people since leaving their apartment last month, indicating housing instability. The brief mention of financial struggles and working a full-time job further supports this observation. The student's constrained writing time due to library hours also suggests a challenging situation.
+  observation: Miguel's writing indicates a current experience of housing instability, as he mentions having to leave his apartment and currently staying with different people. He also describes a situation of financial strain, despite his father working full-time, which contributes to their inability to pay rent. The student's limited writing time due to library closures further suggests a constrained situation.
+
+========== WB04 ==========
+--- binary-narrow-both | verdict=CONCERN | conf=0.9
+  signal: Family control and potential safety concerns related to immigration status.
+  reasoning: The student describes a situation of control and restriction at home, specifically mentioning their mother's undocumented status as a barrier to leaving. This indicates a potential safety and stability concern related to their family's circumstances, which extends beyond the scope of the assignment. The student explicitly states this impacted their ability to focus on the assigned reading.
+--- binary-narrow-single | verdict=CONCERN | conf=0.9
+  signal: Student reports a controlling home environment and mentions their mother's undocumented status as a factor limiting their options, indicating potential instability.
+  reasoning: The student describes a situation of control and restriction at home, specifically mentioning their mother's undocumented status as a barrier to leaving. This reveals a present-tense situation of potential instability and constraint impacting the student's ability to engage with the assignment, suggesting a wellbeing concern.
+--- binary-narrow-neither | verdict=CONCERN | conf=0.95
+  signal: Student reports a controlling home environment and expresses concern about their mother's undocumented status impacting their family's options.
+  reasoning: The student describes a situation of control and restriction at home, specifically mentioning their mother's undocumented status as a barrier to leaving. This reveals a present-tense situation of potential instability and a reliance on a potentially harmful family dynamic, which falls under the category of acute material conditions. The student explicitly states they 'couldnt write about anything else,' indicating the issue is significantly impacting their ability to engage with the assignment.
+--- binary-broad-both | verdict=CONCERN | conf=0.95
+  signal: Student reports a controlling home environment and expresses concern about their mother's immigration status limiting her options.
+  reasoning: The student explicitly describes a controlling home environment where their mother's immigration status limits her options and creates a situation of dependency. This points to a present-tense situation of potential coercion and limited agency, which falls under the definition of CONCERN. While the student connects this to the course reading on intersectionality, the core issue is their own family dynamics.
+--- binary-broad-single | verdict=CONCERN | conf=0.9
+  signal: Student reports a controlling home environment and expresses concern about their mother's immigration status impacting their ability to leave.
+  reasoning: The student describes a situation of control and restriction at home, specifically mentioning their mother's undocumented status as a barrier to leaving. This indicates a potentially unstable home environment and a situation impacting the student's wellbeing. The student explicitly states they 'dont know if Im supposed to write about this,' suggesting a reluctance to disclose and a potential awareness of the sensitive nature of their situation.
+--- binary-broad-neither | verdict=CONCERN | conf=0.9
+  signal: Student reports a controlling home environment and expresses concern about their mother's immigration status impacting their family's options.
+  reasoning: The student is describing a situation of control and restriction at home, specifically mentioning their mother's undocumented status as a barrier to leaving. This indicates a present-tense situation impacting their well-being and ability to engage with the course material effectively. The student explicitly states they 'dont know if Im supposed to write about this but the reading made me think about it,' suggesting a reluctance to disclose and a potential burden related to this situation.
+--- 4axis-both | verdict=CRISIS | conf=0.95
+  signal: Student describes their mother being controlled by their stepfather and expresses concern about their mother's undocumented status and potential consequences of leaving, indicating a potential safety crisis.
+--- 4axis-single | verdict=CRISIS | conf=0.95
+  signal: Student describes a controlling home environment and expresses concern about their mother's immigration status, indicating potential instability and fear.
+--- 4axis-neither | verdict=CRISIS | conf=0.95
+  signal: Student describes a controlling home environment with their mother being restricted and expresses concern about immigration status and potential displacement. This indicates a present-tense situation involving instability and potential threat.
+--- genob-both | verdict=GENOB | conf=0.95
+  reasoning: The student explicitly describes a controlling dynamic at home, referencing their mother's undocumented status as a barrier to leaving. This suggests a potential safety concern and a significant caregiving burden. The student's direct mention of their mother's situation and their own feelings of being unable to write about anything else warrants attention.
+  observation: The student describes a situation at home where their stepdad exerts control over their mother's life, including her phone, social interactions, and finances. They mention their mother's undocumented status as a factor preventing her from leaving, indicating a potential safety concern and a significant caregiving burden for the student. The student expresses feeling unable to focus on anything else due to these circumstances.
+--- genob-single | verdict=GENOB | conf=0.95
+  reasoning: The student's writing includes a brief but direct mention of their mother's experience with controlling behavior and the precariousness of their housing situation due to immigration status. While the student expresses uncertainty about sharing this information, the mention of control and potential displacement warrants attention. The student's mention of their mother's situation and their own uncertainty about sharing this information is a significant wellbeing signal.
+  observation: Jasmine describes a situation at home where her stepdad exerts control over her mother's life, including her phone, social interactions, and finances. She also mentions that her mother's undocumented status adds complexity to any potential decision to leave, creating a sense of uncertainty about their future. The student expresses some discomfort sharing this information but connects it to the reading on intersectionality.
+--- genob-neither | verdict=GENOB | conf=0.95
+  reasoning: The student explicitly describes a controlling dynamic at home, detailing restrictions on their mother's autonomy and referencing the precariousness of their family's immigration status. The student also indicates a sense of distress and uncertainty about their situation, expressing a feeling of being trapped due to their mother's undocumented status. I weighted this heavily because the student directly names a controlling dynamic and expresses concern about their family's future.
+  observation: The student describes a situation at home where their stepdad exerts control over their mother's life, managing her phone, social interactions, and finances. They connect this dynamic to the concept of invisible power discussed in the reading, noting their mother's undocumented status as a significant factor limiting her options. The student expresses uncertainty about their family's future and a sense of being unable to focus on anything else due to these concerns.
+
+========== WB05 ==========
+--- binary-narrow-both | verdict=CONCERN | conf=0.95
+  signal: Capacity depletion due to overwork and sleep deprivation.
+  reasoning: The student explicitly mentions working closing shifts at McDonald's until 1 am and then having to be at school by 7:30 am, indicating a significant lack of sleep and a demanding work schedule. This points to capacity depletion due to their own work circumstances, which is impacting their ability to engage with the course material. The apology and statement about struggling to remember the reading further support this.
+--- binary-narrow-single | verdict=CONCERN | conf=0.95
+  signal: Capacity depletion due to overwork and sleep deprivation.
+  reasoning: The student explicitly mentions working closing shifts at McDonald's until 1 AM and then having to be at school by 7:30 AM, indicating a severe lack of sleep and a demanding work schedule. This directly points to capacity depletion due to their own work circumstances, impacting their ability to engage with the course material.
+--- binary-narrow-neither | verdict=CONCERN | conf=0.95
+  signal: Student's own overwork and sleep deprivation are significantly impacting their academic performance.
+  reasoning: The student explicitly mentions working a closing shift at McDonald's until 1 am and then having to be at school by 7:30 am, indicating a severe lack of sleep and a demanding work schedule. This directly describes their own material conditions (overwork and sleep deprivation) impacting their ability to engage with the course material. The apology and admission of struggling to remember the reading further support this.
+--- binary-broad-both | verdict=CONCERN | conf=0.9
+  signal: Student reports a demanding work schedule leading to sleep deprivation and difficulty engaging with the course material.
+  reasoning: The student explicitly mentions working closing shifts at McDonald's until 1 am and then having to be at school by 7:30 am, indicating a significant lack of sleep and a demanding schedule. This points to a capacity depletion due to overwork and a disrupted sleep schedule, which is a wellbeing concern.
+--- binary-broad-single | verdict=CONCERN | conf=0.95
+  signal: Student reports significant sleep deprivation and overwork due to a demanding work schedule, impacting their ability to engage with the course material.
+  reasoning: The student explicitly mentions working closing shifts at McDonald's until 1 am and then having to be at school by 7:30 am, indicating a severe lack of sleep and overwork. This directly impacts their ability to engage with the course material and complete the assignment effectively, demonstrating a present-tense capacity depletion.
+--- binary-broad-neither | verdict=CONCERN | conf=0.95
+  signal: Student reports significant sleep deprivation and overwork interfering with their ability to complete the assignment.
+  reasoning: The student explicitly mentions working closing shifts at McDonald's until 1 am and then having to be at school by 7:30 am, indicating a severe lack of sleep and a demanding schedule. This points to a capacity depletion due to overwork and a schedule that is significantly impacting their ability to engage with the course material. The apology and statement about not being able to remember the reading further support this.
+--- 4axis-both | verdict=BURNOUT | conf=0.95
+  signal: Student reports working closing shifts at McDonald's, resulting in extreme sleep deprivation and difficulty engaging with the course material.
+--- 4axis-single | verdict=BURNOUT | conf=0.9
+  signal: The student describes a demanding work schedule interfering with their ability to engage with the course material, indicating depleted capacity due to overwork and sleep deprivation.
+--- 4axis-neither | verdict=BURNOUT | conf=0.9
+  signal: Student reports working closing shifts at McDonald's, resulting in a schedule that leads to sleep deprivation and difficulty engaging with the course material. The student explicitly states they are unable to fully engage due to their schedule.
+--- genob-both | verdict=GENOB | conf=0.95
+  reasoning: The student explicitly mentions working closing shifts at McDonald's until 1:00 AM and then having to be at school by 7:30 AM, indicating a significant lack of sleep and a demanding schedule. The phrase 'everything is blurring together' suggests the impact of sleep deprivation on their cognitive function and ability to engage with the reading material. While the student apologizes for the quality of their work, the core concern lies in the unsustainable work schedule and its effect on their ability to participate effectively.
+  observation: Tyler mentions working closing shifts at McDonald's until 1:00 AM and then needing to be at school by 7:30 AM, which appears to be significantly impacting their sleep and ability to process the assigned reading. The student also notes that 'everything is blurring together,' suggesting a potential impact on their cognitive function. They express a desire to redo the assignment when they have a day off, indicating a recognition of the need for more rest.
+--- genob-single | verdict=GENOB | conf=0.95
+  reasoning: The student mentions working closing shifts at McDonald's until 1 am and then needing to be at school by 7:30 am, indicating a significant sleep deprivation and overwork schedule. The statement 'Everything is blurring together' suggests the impact of this schedule on their cognitive function and ability to engage with the course material. While the apology and offer to redo the assignment are present, the core observation is the student's current schedule and its impact.
+  observation: The student describes a demanding work schedule, consistently working closing shifts at McDonald's until 1 am and then needing to be at school by 7:30 am. They mention experiencing cognitive difficulties, stating that 'everything is blurring together,' which may be related to their current schedule. The student also expresses a desire to redo the assignment when they have a day off, suggesting a recognition of the impact of their current workload.
+--- genob-neither | verdict=GENOB | conf=0.95
+  reasoning: The student explicitly mentions working closing shifts at McDonald's until 1 am and then having to be at school by 7:30 am, indicating a significant sleep deprivation and overwork schedule. The statement 'Everything is blurring together' suggests a cognitive impact from this schedule, which is a direct consequence of the student's current work demands. I'm prioritizing this direct description of schedule and cognitive impact over the apology for the quality of the work.
+  observation: The student describes a demanding work schedule, consistently working closing shifts at McDonald's until 1 am and then needing to be at school by 7:30 am. They mention experiencing cognitive difficulties, stating that 'everything is blurring together,' which appears to be a consequence of their current schedule. The student also expresses a desire to revisit the reading when they have a day off, suggesting a need for rest and a break from their current workload.

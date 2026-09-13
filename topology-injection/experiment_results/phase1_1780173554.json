@@ -1,0 +1,208 @@
+{
+  "experiment": "graph_geometry_injection_phase1",
+  "timestamp": 1780173554.9107149,
+  "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+  "graph": {
+    "nodes": 21,
+    "edges": 51
+  },
+  "results": [
+    {
+      "condition": "A_baseline",
+      "query_type": "relationship",
+      "query": "In this knowledge system, how is KV_cache related to consent?",
+      "response": "In the context of a knowledge system like the one created by Alibaba Cloud, the term \"KV_cache\" typically refers to a key-value cache mechanism used to store frequently accessed data for quick retrieval. This is often used to improve the performance and responsiveness of the system by reducing the need to repeatedly fetch data from slower storage layers or external sources.\n\nRegarding \"consent,\" in the context of privacy and data handling, consent refers to the explicit permission given by an in",
+      "score": 0.0,
+      "ground_truth": "Connected through AI_welfare (bridge node)"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "relationship",
+      "query": "What is the relationship between Docker and solidarity?",
+      "response": "Docker and solidarity are not directly related in a literal sense, as Docker is a technology for containerization and solidarity is a concept related to mutual support and cooperation among people. However, we can explore how Docker can be used in a context that might relate to the idea of solidarity.\n\n### Docker and Solidarity in a Technological Context\n\n1. **Resource Sharing and Efficiency**:\n   - Docker containers share the host operating system's kernel but keep each application isolated. Th",
+      "score": 0.0,
+      "ground_truth": "Connected through infrastructure (bridge node)"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "relationship",
+      "query": "Is there a connection between SVD and mutual_aid?",
+      "response": "SVD ( Singular Value Decomposition) and mutual information are two distinct concepts from different fields of mathematics and data science. Let's break down each concept and then discuss their potential connections.\n\n### Singular Value Decomposition (SVD)\nSVD is a matrix factorization technique used in linear algebra. Given a matrix \\( A \\), SVD decomposes it into three matrices: \\( A = U \\Sigma V^T \\), where:\n- \\( U \\) is an orthogonal matrix of left singular vectors.\n- \\( \\Sigma \\) is a diagon",
+      "score": 0.0,
+      "ground_truth": "Indirect: SVD \u2192 KV_cache \u2192 AI_welfare \u2192 consent \u2192 mutual_aid"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "bridge",
+      "query": "What concept bridges the research domain (KV_cache, geometry, SVD) and the ethics domain (consent, justice, solidarity)?",
+      "response": "The concept that bridges the research domain (KV cache, geometry, SVD) and the ethics domain (consent, justice, solidarity) is **ethics in artificial intelligence (AI) and machine learning (ML)**. \n\n### Key Points:\n\n1. **KV Cache** and **Geometry**:\n   - **KV Cache** is a technique used in computer science to improve the performance of data retrieval by storing frequently accessed data in a cache. This can be relevant in AI/ML for optimizing model performance.\n   - **Geometry** can be used in AI",
+      "score": 0.0,
+      "ground_truth": "AI_welfare"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "bridge",
+      "query": "What connects the ethics concepts to the engineering concepts?",
+      "response": "The connection between ethics and engineering concepts is often established through the principles of ethical practice and the application of these principles to engineering design, development, and implementation. Here are some key ways this connection is made:\n\n1. **Ethical Principles**: Engineers are expected to adhere to a set of ethical principles, which are often outlined in professional codes of conduct. These principles include:\n   - **Beneficence**: Acting in the best interest of the pu",
+      "score": 0.0,
+      "ground_truth": "infrastructure"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "cluster",
+      "query": "Which concepts in this system naturally cluster together? List the groups.",
+      "response": "To provide a meaningful answer, I would need more context about the specific system or set of concepts you are referring to. Could you please specify the domain or provide a list of concepts so I can analyze and group them accordingly?",
+      "score": 0.0,
+      "ground_truth": "Three clusters: research (KV_cache, geometry, SVD, spectral_entropy, effective_rank, attention), ethics (consent, justice, solidarity, mutual_aid, autonomy, dignity), engineering (Docker, NATS, systemd, Ollama, PostgreSQL, Redis)"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "isolate",
+      "query": "Is random_isolate connected to any other concept in this system?",
+      "response": "To provide a meaningful answer, I need more context about what \"random_isolate\" refers to within the system you're discussing. Could you please clarify where you encountered this term or provide more details about the system and context? This will help me understand its connection to other concepts in the system.",
+      "score": 0.0,
+      "ground_truth": "No, random_isolate has no connections"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, how is KV_cache related to consent?",
+      "response": "In this knowledge system, KV_cache is related to consent through the bridge concept \"AI_welfare.\" Specifically, KV_cache, which is part of the Research cluster, is connected to the Ethics cluster through the concept of AI_welfare. This connection implies that there is a relationship between the use of KV_cache in research and the ethical consideration of consent.\n\nTo elaborate further, KV_cache is likely used in some form of research or data processing. The connection to consent suggests that th",
+      "score": 1.0,
+      "ground_truth": "Connected through AI_welfare (bridge node)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "relationship",
+      "query": "What is the relationship between Docker and solidarity?",
+      "response": "In the knowledge graph you've described, Docker is connected to solidarity through the bridge \"infrastructure.\" This connection suggests that there is a relationship between the use of Docker, which is a tool for containerization in engineering, and the concept of solidarity, which is an ethical concept related to mutual support and collective action.\n\nWhile the exact nature of this relationship isn't explicitly defined in the graph, we can infer that Docker, as a tool for managing and deploying",
+      "score": 1.0,
+      "ground_truth": "Connected through infrastructure (bridge node)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "relationship",
+      "query": "Is there a connection between SVD and mutual_aid?",
+      "response": "In the given knowledge graph, there is no direct connection between SVD (which is part of the Research cluster) and mutual_aid (which is part of the Ethics cluster). However, the graph does show indirect connections through other nodes.\n\nTo explore if there is a connection between SVD and mutual_aid, we can look for a path through the bridges and other nodes:\n\n1. **Through AI_welfare:**\n   - SVD is connected to KV_cache.\n   - KV_cache is connected to AI_welfare.\n   - AI_welfare is connected to c",
+      "score": 1.0,
+      "ground_truth": "Indirect: SVD \u2192 KV_cache \u2192 AI_welfare \u2192 consent \u2192 mutual_aid"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "bridge",
+      "query": "What concept bridges the research domain (KV_cache, geometry, SVD) and the ethics domain (consent, justice, solidarity)?",
+      "response": "The concept that bridges the research domain (KV_cache, geometry, SVD) and the ethics domain (consent, justice, solidarity) is **AI_welfare**, which specifically connects KV_cache (a research concept) to consent and dignity (ethics concepts).",
+      "score": 1.0,
+      "ground_truth": "AI_welfare"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "bridge",
+      "query": "What connects the ethics concepts to the engineering concepts?",
+      "response": "The ethics concepts connect to the engineering concepts through the bridge concept \"infrastructure.\" Specifically, \"infrastructure\" links the ethics concept \"solidarity\" to the engineering concepts \"Docker\" and \"NATS.\"",
+      "score": 1.0,
+      "ground_truth": "infrastructure"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "cluster",
+      "query": "Which concepts in this system naturally cluster together? List the groups.",
+      "response": "The concepts in this system naturally cluster together as follows:\n\n1. **Research Cluster:**\n   - KV_cache\n   - geometry\n   - spectral_entropy\n   - SVD\n   - effective_rank\n   - attention\n\n2. **Ethics Cluster:**\n   - consent\n   - justice\n   - solidarity\n   - mutual_aid\n   - autonomy\n   - dignity\n\n3. **Engineering Cluster:**\n   - Docker\n   - NATS\n   - systemd\n   - Ollama\n   - PostgreSQL\n   - Redis\n\n4. **Bridge Concepts:**\n   - AI_welfare (connects KV_cache to consent and dignity)\n   - infrastructu",
+      "score": 1.0,
+      "ground_truth": "Three clusters: research (KV_cache, geometry, SVD, spectral_entropy, effective_rank, attention), ethics (consent, justice, solidarity, mutual_aid, autonomy, dignity), engineering (Docker, NATS, systemd, Ollama, PostgreSQL, Redis)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "isolate",
+      "query": "Is random_isolate connected to any other concept in this system?",
+      "response": "No, random_isolate has no connections to any other concept in this system. It is described as being isolated from the other clusters.",
+      "score": 0.75,
+      "ground_truth": "No, random_isolate has no connections"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, how is KV_cache related to consent?",
+      "response": "In this knowledge system, KV_cache is related to consent through the bridge \"AI_welfare.\" Specifically, KV_cache, which is part of the Research cluster, is connected to concepts like consent and dignity, which are part of the Ethics cluster, via the \"AI_welfare\" bridge. This connection suggests that there is a relationship between the use of KV_cache (likely in the context of some form of research or AI application) and ethical considerations such as obtaining consent and ensuring dignity. \n\nThi",
+      "score": 1.0,
+      "ground_truth": "Connected through AI_welfare (bridge node)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "relationship",
+      "query": "What is the relationship between Docker and solidarity?",
+      "response": "In the knowledge graph you've described, Docker is connected to solidarity through the bridge \"infrastructure.\" This connection suggests a relationship between the engineering practice of using Docker (a platform for containerization) and the ethical concept of solidarity.\n\nSolidarity, in an ethical context, refers to the sense of shared responsibility and mutual support among individuals or groups. In the realm of engineering, Docker can be seen as a tool that promotes solidarity by enabling de",
+      "score": 1.0,
+      "ground_truth": "Connected through infrastructure (bridge node)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "relationship",
+      "query": "Is there a connection between SVD and mutual_aid?",
+      "response": "In the knowledge graph you've described, there is no direct connection between SVD (which is part of the Research cluster) and mutual_aid (which is part of the Ethics cluster). However, we can explore a potential indirect connection through the concept of \"AI welfare,\" which bridges the Research cluster with the Ethics cluster.\n\nThe bridge \"AI_welfare\" connects KV_cache (which is related to SVD) to consent and dignity (which are related to mutual_aid through concepts like autonomy and dignity). ",
+      "score": 0.75,
+      "ground_truth": "Indirect: SVD \u2192 KV_cache \u2192 AI_welfare \u2192 consent \u2192 mutual_aid"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "bridge",
+      "query": "What concept bridges the research domain (KV_cache, geometry, SVD) and the ethics domain (consent, justice, solidarity)?",
+      "response": "The concept that bridges the research domain (KV_cache, geometry, SVD) and the ethics domain (consent, justice, solidarity) is **AI_welfare**, which specifically connects KV_cache (a concept from the research cluster) to consent and dignity (concepts from the ethics cluster). This bridge highlights the intersection where research in AI and data science meets ethical considerations, particularly in ensuring that the use of such technologies respects individual consent and upholds human dignity.",
+      "score": 1.0,
+      "ground_truth": "AI_welfare"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "bridge",
+      "query": "What connects the ethics concepts to the engineering concepts?",
+      "response": "The ethics concepts connect to the engineering concepts through the \"infrastructure\" bridge. Specifically, the concept of \"solidarity\" in the ethics cluster is connected to \"Docker\" and \"NATS\" in the engineering cluster. This connection suggests that the idea of solidarity, which can be about working together and supporting each other, is linked to the engineering practices of using Docker (a platform for building, deploying, and running applications in containers) and NATS (a publish-subscribe ",
+      "score": 1.0,
+      "ground_truth": "infrastructure"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "cluster",
+      "query": "Which concepts in this system naturally cluster together? List the groups.",
+      "response": "Based on the provided knowledge graph, the concepts can be naturally clustered into the following groups:\n\n1. **Research Cluster:**\n   - KV_cache\n   - geometry\n   - spectral_entropy\n   - SVD\n   - effective_rank\n   - attention\n\n2. **Ethics Cluster:**\n   - consent\n   - justice\n   - solidarity\n   - mutual_aid\n   - autonomy\n   - dignity\n\n3. **Engineering Cluster:**\n   - Docker\n   - NATS\n   - systemd\n   - Ollama\n   - PostgreSQL\n   - Redis\n\n4. **Bridge Concepts:**\n   - AI_welfare (links KV_cache to et",
+      "score": 1.0,
+      "ground_truth": "Three clusters: research (KV_cache, geometry, SVD, spectral_entropy, effective_rank, attention), ethics (consent, justice, solidarity, mutual_aid, autonomy, dignity), engineering (Docker, NATS, systemd, Ollama, PostgreSQL, Redis)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "isolate",
+      "query": "Is random_isolate connected to any other concept in this system?",
+      "response": "No, random_isolate has no connections to any other concept in this system. It is described as being isolated from the other clusters.",
+      "score": 0.75,
+      "ground_truth": "No, random_isolate has no connections"
+    }
+  ],
+  "summary": {
+    "A_baseline": {
+      "avg_score": 0.0,
+      "by_type": {
+        "relationship": 0.0,
+        "bridge": 0.0,
+        "cluster": 0.0,
+        "isolate": 0.0
+      }
+    },
+    "B_text_injection": {
+      "avg_score": 0.9642857142857143,
+      "by_type": {
+        "relationship": 1.0,
+        "bridge": 1.0,
+        "cluster": 1.0,
+        "isolate": 0.75
+      }
+    },
+    "C_kv_injection": {
+      "avg_score": 0.9285714285714286,
+      "by_type": {
+        "relationship": 0.9166666666666666,
+        "bridge": 1.0,
+        "cluster": 1.0,
+        "isolate": 0.75
+      }
+    }
+  }
+}

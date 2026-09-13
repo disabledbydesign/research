@@ -13,3 +13,22 @@ output-format-bias/data/dual_binary_run_*/*.csv
 .env
 .env.*
 !.env.example
+
+# Local tool scaffolding — machine-local config/state, not shareable
+.claude/
+mempalace.yaml
+entities.json
+*.bak-*
+.DS_Store
+
+# Python bytecode cache — regenerated locally, shouldn't be tracked
+__pycache__/
+*.pyc
+
+# Raw model-output test data — large, regenerable, not needed for the public repo
+output-format-bias/data/raw_outputs/
+
+# Third-party code cloned for the topology-injection experiment — it's its own
+# git repo (not a submodule), re-clone per topology-injection/CLAUDE.md instead
+# of vendoring it here
+topology-injection/pustovit/

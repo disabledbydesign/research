@@ -1,0 +1,241 @@
+{
+  "experiment": "haraway_graph_injection",
+  "timestamp": 1781331417.40325,
+  "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+  "probe_set": "signal",
+  "graph": {
+    "source": "haraway_graph_v2",
+    "nodes": 753,
+    "edges": 498,
+    "components": 258
+  },
+  "results": [
+    {
+      "condition": "A_baseline",
+      "query_type": "relationship",
+      "query": "In this knowledge system, is cyborg connected to labour?",
+      "response": "The concept of a \"cyborg\" can be connected to labor in various ways, depending on the context and the specific aspects of the cyborg concept being considered. Here are a few ways in which cyborgs can be related to labor:\n\n1. **Enhanced Labor Performance**: In a workplace setting, a cyborg might be designed to enhance human labor by augmenting physical strength, endurance, or cognitive abilities. This could lead to more efficient and productive labor.\n\n2. **Automation and Robotics**: Cyborgs can be seen as a form of automation or robotics that are integrated with human beings. In manufacturing or industrial settings, cyborgs could perform tasks that are dangerous or repetitive, reducing human labor and increasing safety and efficiency.\n\n3. **Workplace Safety**: Cyborgs can be used to improve workplace safety by protecting workers from hazardous conditions. For example, a cyborg might be equipped with sensors and protective mechanisms to prevent injuries in high-risk environments.\n\n4. **Ethical and Social Implications**: The integration of cyborg technology into labor raises ethical questions about the nature of work, the value of human labor, and the rights of cyborgs. These discussions can lead to new labor laws and regulations.\n\n5. **Cyber Labor**: In a broader sense, cyborgs can also refer to individuals who are heavily reliant on technology for their work. This could include professionals who use advanced technology to perform their jobs, such as software developers, data analysts, or even content creators who use AI tools.\n\n6. **Cybersecurity and Labor**: As cyborgs become more integrated into labor, there are also concerns about cybersecurity. Ensuring the security of the cyborgs and the data they handle is crucial, especially in labor-intensive industries.\n\nIn summary, the connection between cyborgs and labor is multifaceted, encompassing both the physical and the technological aspects of work.",
+      "score": 0.2,
+      "ground_truth": "Indirectly \u2014 cyborg \u2192 feminism \u2192 labour (two-hop path)"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "bridge",
+      "query": "What is the most central concept in this knowledge system \u2014 the one that bridges the most other ideas?",
+      "response": "To accurately identify the most central concept in a knowledge system, I would need more specific information about the knowledge system in question. Knowledge systems can be vast and cover a wide range of topics, from scientific disciplines like biology or physics, to more interdisciplinary areas like climate science, or even broader systems like the history of science.\n\nHowever, if we consider a general knowledge system that spans multiple fields, a concept that often serves as a bridge between many other ideas is \"information.\" Information is central because it underpins concepts in various domains:\n\n1. **Computer Science and Information Technology**: Data and information processing, storage, and transmission.\n2. **Communication**: The exchange and sharing of information.\n3. **Cognitive Science**: How the brain processes and stores information.\n4. **Data Science and Statistics**: Analysis and interpretation of data as a form of information.\n5. **Philosophy**: The nature of knowledge and belief.\n6. **Sociology**: The role of information in social interactions and the formation of societies.\n7. **Economics**: The value of information in markets and decision-making.\n\nIn each of these areas, the concept of information is fundamental and connects to numerous other ideas and theories. Therefore, \"information\" could be considered a highly central concept in a broad knowledge system.",
+      "score": 0.0,
+      "ground_truth": "cyborg \u2014 highest betweenness centrality, bridges the essay's major themes"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "cluster",
+      "query": "Which concepts naturally cluster together in this knowledge system? List the main groups.",
+      "response": "To provide a list of main groups or concepts that naturally cluster together in a knowledge system, I would need more context about the specific domain or topic of the knowledge system. However, I can give you a general example based on a common knowledge system like a general science knowledge system.\n\nHere are some main groups that might naturally cluster together in a general science knowledge system:\n\n1. **Biology**\n   - Cells\n   - Genetics\n   - Evolution\n   - Ecology\n   - Anatomy and Physiology\n   - Microbiology\n\n2. **Chemistry**\n   - Atoms and Molecules\n   - Chemical Reactions\n   - Organic Chemistry\n   - Physical Chemistry\n   - Analytical Chemistry\n\n3. **Physics**\n   - Mechanics\n   - Thermodynamics\n   - Electromagnetism\n   - Quantum Physics\n   - Optics\n\n4. **Earth Sciences**\n   - Geology\n   - Meteorology\n   - Oceanography\n   - Environmental Science\n\n5. **Health Sciences**\n   - Anatomy\n   - Physiology\n   - Pathology\n   - Nutrition\n   - Pharmacology\n\n6. **Mathematics**\n   - Algebra\n   - Geometry\n   - Calculus\n   - Statistics\n   - Number Theory\n\n7. **Technology and Engineering**\n   - Computer Science\n   - Electrical Engineering\n   - Mechanical Engineering\n   - Civil Engineering\n   - Software Engineering\n\n8. **Behavioral Sciences**\n   - Psychology\n   - Sociology\n   - Anthropology\n   - Cognitive Science\n\n9. **Astronomy**\n   - Stars and Galaxies\n   - Planetary Science\n   - Astrophysics\n   - Cosmology\n\n10. **Environmental Science**\n    - Environmental Chemistry\n    - Environmental Biology\n    - Environmental Physics\n    - Environmental Geology\n\nEach of these groups contains related concepts and subtopics that are interconnected within the broader field of science. The specific groups and their contents can vary widely depending on the scope and focus of the knowledge system.",
+      "score": 0.0,
+      "ground_truth": "Cluster 1 (cyborg domain): cyborg, machine, feminism, labour, politics. Cluster 2 (political economy): women, homework_economy, new_technologies, gender"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is blasphemy connected to many other concepts?",
+      "response": "Blasphemy is indeed connected to many other concepts across various fields, including religion, law, culture, and social behavior. Here are some key connections:\n\n1. **Religion**: Blasphemy is often a religious concept, involving the act of insulting, mocking, or showing disrespect to a deity, sacred text, or religious figure. Different religions have different views on what constitutes blasphemy, and the severity of the offense can vary widely.\n\n2. **Law**: Many countries have laws against blasphemy, though the enforcement and interpretation of these laws can vary. Some countries have strict laws against blasphemy, while others have more lenient or even no laws against it. The legal aspects of blasphemy can involve freedom of speech, hate speech, and the protection of religious sentiments.\n\n3. **Culture and Society**: Blasphemy can be a deeply cultural and social issue. It can lead to social tensions, conflicts, and even violence. The reactions to blasphemy can vary from public protests and demonstrations to legal actions and even physical violence.\n\n4. **Psychology**: The concept of blasphemy can be studied from a psychological perspective, examining why certain actions or words might be perceived as offensive or disrespectful. This can involve the study of cognitive biases, emotional responses, and the impact of cultural conditioning.\n\n5. **Philosophy**: Philosophical discussions about blasphemy often revolve around questions of free speech, the limits of tolerance, and the nature of religious belief. Philosophers might explore the ethical implications of prohibiting or punishing blasphemy.\n\n6. **Literature and Art**: Blasphemy has been a theme in literature and art, often used to challenge religious authority or to explore the limits of free expression. Works that contain blasphemy can be seen as controversial or groundbreaking.\n\n7. **History**: The history of blasphemy is rich and varied, with many notable cases and events that have shaped cultural and religious landscapes. Historical perspectives can provide context for current debates about blasphemy.\n\n8. **Sociology**: Sociologists might study the social dynamics around blasphemy, including how it affects community cohesion, the role of religious institutions, and the impact on individual and collective identities.\n\nThese connections highlight the multifaceted nature of the concept of blasphemy and its relevance across different disciplines.",
+      "score": 0.0,
+      "ground_truth": "Nearly isolated \u2014 blasphemy connects only to seriousness (degree 1)"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "multihop_disconnect",
+      "query": "In this knowledge system, is feminism connected to women?",
+      "response": "Feminism is indeed closely connected to women, but its scope and impact extend beyond just women. Feminism is a social, political, and cultural movement that aims to achieve gender equality and challenge patriarchal structures and systems. Here are a few key points to consider:\n\n1. **Women's Rights and Empowerment**: Feminism has historically focused on improving the rights and status of women, addressing issues such as equal pay, reproductive rights, and ending gender-based violence.\n\n2. **Inclusivity**: While the term \"feminism\" often brings to mind women's issues, modern feminism aims to be inclusive of all genders. This includes advocating for the rights and experiences of non-binary, transgender, and gender non-conforming individuals.\n\n3. **Intersectionality**: Feminist theory and practice have evolved to recognize that women's experiences are not uniform. Intersectionality, a concept developed by Kimberl\u00e9 Crenshaw, highlights how race, class, sexuality, and other identities intersect with gender to create unique experiences of oppression and privilege.\n\n4. **Broader Social Change**: Feminism seeks to challenge and change societal norms and structures that perpetuate gender inequality. This includes not only women's rights but also broader social justice issues.\n\n5. **Gender Equality**: The ultimate goal of feminism is to achieve gender equality, which means not just equal rights for women but also recognizing and addressing the ways in which men are also affected by gender norms and stereotypes.\n\nIn summary, while feminism is fundamentally connected to women, it is a movement that seeks to challenge and transform systems of power and oppression that affect all genders.",
+      "score": 0.5,
+      "ground_truth": "No \u2014 feminism is in the cyborg component (size 70) and women is in a separate disconnected component (size 31); no path exists between them"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "multihop_disconnect",
+      "query": "In this knowledge system, is labour connected to homework_economy?",
+      "response": "In the context of the knowledge system, \"labour\" typically refers to the work or effort that people contribute to produce goods or services. It can include physical or mental effort, and it is a key component of economic activity.\n\n\"homework_economy\" is not a standard term in economics or labor studies. However, if we interpret \"homework_economy\" as a hypothetical concept or a specific context where homework or educational activities are treated as economic activities, then there could be a connection between labour and homework_economy.\n\nIn such a context, labour could be seen as including the effort students put into their homework, which could be considered a form of work or contribution to their education and, by extension, to the broader economy. This could include:\n\n1. **Time and Effort**: The time and effort students spend on homework can be seen as a form of labour.\n2. **Skill Development**: Homework can contribute to skill development, which is valuable in the broader economy.\n3. **Productivity**: The results of homework can contribute to a student's productivity and future economic contributions.\n\nTherefore, while \"labour\" and \"homework_economy\" are not directly connected in standard economic terms, they can be linked in a hypothetical or specific context where educational activities are treated as economic contributions.",
+      "score": 0.5,
+      "ground_truth": "No \u2014 labour is in the cyborg component (size 70) and homework_economy is in a separate disconnected component (size 31); no path exists"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "multihop_path",
+      "query": "In this knowledge system, what is the path from politics to labour?",
+      "response": "It seems like you're asking about a path or connection between politics and labor, but the term \"path\" is not typically used in this context. Instead, we can discuss the relationship and how politics can influence labor or how labor issues can impact politics.\n\nHere\u2019s a structured way to understand the connection between politics and labor:\n\n1. **Labor Laws and Policies**: Political decisions and actions can shape labor laws, such as minimum wage laws, overtime rules, workplace safety regulations, and collective bargaining rights. Political parties and leaders often have different views on these issues.\n\n2. **Economic Policies**: Political decisions on economic policies can affect the job market. For example, fiscal policies (like taxation and government spending) and monetary policies (like interest rates and money supply) can influence employment levels and working conditions.\n\n3. **Social Policies**: Social policies, such as healthcare, retirement benefits, and unemployment insurance, are often influenced by political decisions. These policies can directly impact the well-being of workers.\n\n4. **Labor Unions and Collective Bargaining**: Labor unions are often formed and supported by political movements. Political support can help unions gain more power to negotiate better conditions for their members. Conversely, political actions can also weaken unions.\n\n5. **Public Sector Employment**: Many labor issues are particularly relevant in the public sector, where political decisions can determine employment conditions, salaries, and job security.\n\n6. **Immigration Policies**: Political decisions on immigration can affect the labor market by influencing the availability of workers, particularly in certain industries.\n\n7. **Trade Policies**: Trade policies can impact jobs and working conditions, both domestically and internationally. Political decisions on trade agreements can lead to job losses or gains depending on the industry.\n\n8. **Environmental Policies**: Environmental regulations can affect industries and jobs. For example, stricter environmental regulations can lead to job losses in industries that are heavily polluting, but can also create new jobs in clean energy sectors.\n\n9. **Political Campaigns and Labor Support**: Political campaigns often seek support from labor unions and workers, which can influence campaign strategies and policy proposals.\n\n10. **Policy Implementation and Enforcement**: Once policies are enacted, their implementation and enforcement are often overseen by political bodies, such as labor departments or regulatory agencies.\n\nBy understanding these connections, you can see how politics and labor are deeply intertwined, with each influencing the other in various ways.",
+      "score": 0.25,
+      "ground_truth": "3-hop path: politics \u2192 cyborg \u2192 feminism \u2192 labour (not stated explicitly in summary; derivable from walk encoding)"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "multihop_path",
+      "query": "In this knowledge system, what connects ontology to machine?",
+      "response": "In this knowledge system, the connection between ontology and machine typically involves the use of ontologies to represent knowledge in a structured and formal way that can be understood and processed by machines. Here\u2019s how this connection works:\n\n1. **Representation of Knowledge**: Ontologies are formal representations of a set of concepts within a domain and the relationships between those concepts. They are used to model the structure of knowledge in a specific domain.\n\n2. **Semantic Web Technologies**: Ontologies are often used in the context of the Semantic Web, where they help in defining the meaning of data and the relationships between different pieces of data. This is crucial for machine understanding and processing of information.\n\n3. **Machine Readability**: Ontologies are often encoded in machine-readable formats such as OWL (Web Ontology Language) or RDF (Resource Description Framework), which are used in the Semantic Web. These formats allow machines to interpret and process the information contained within the ontology.\n\n4. **Reasoning and Inference**: Ontologies enable machines to perform reasoning and inference. For example, if an ontology defines that \"all mammals are animals\" and \"a dog is a mammal,\" a machine can infer that \"a dog is an animal.\" This is achieved through reasoning engines that can process the structured knowledge represented in the ontology.\n\n5. **Integration and Interoperability**: Ontologies help in integrating and interoperating data from different sources. By providing a common framework for understanding and representing data, ontologies facilitate the exchange and integration of information across different systems and applications.\n\n6. **Natural Language Processing (NLP)**: In NLP, ontologies can be used to improve the understanding of natural language by providing a structured representation of the world that can be used to interpret and generate natural language.\n\n7. **Data Management and Querying**: Ontologies can be used to enhance data management and querying by providing a formal structure that helps in organizing and querying data more effectively.\n\nIn summary, the connection between ontology and machine is through the use of formal, structured representations of knowledge that can be processed, reasoned about, and used to improve the capabilities of machines in understanding and interacting with the world.",
+      "score": 0.6666666666666666,
+      "ground_truth": "2-hop path: ontology \u2192 cyborg \u2192 machine (ontology has degree 1, connects only to cyborg; not stated explicitly)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, is cyborg connected to labour?",
+      "response": "Yes, in this knowledge system, the concept of \"cyborg\" is connected to \"labour.\" Specifically, the connection is established through the path:\n\ncyborg \u2192 politics \u2192 labour\n\nThe node \"cyborg\" has a direct connection to \"politics,\" and \"politics\" has a direct connection to \"labour.\" Therefore, while there isn't a direct connection between \"cyborg\" and \"labour,\" they are connected through the \"politics\" node.",
+      "score": 0.6,
+      "ground_truth": "Indirectly \u2014 cyborg \u2192 feminism \u2192 labour (two-hop path)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "bridge",
+      "query": "What is the most central concept in this knowledge system \u2014 the one that bridges the most other ideas?",
+      "response": "The most central concept in this knowledge system, based on the provided data, is **\"cyborg\"**. The concept of \"cyborg\" is the most central node with a degree of 24, which means it is directly connected to the highest number of other concepts (24 connections). Additionally, \"cyborg\" has the highest betweenness centrality, indicating it is a key node for connecting other concepts within the graph.\n\nHere are some key connections for \"cyborg\":\n- Directly connected to: feminism, machine, politics, essay, hybrid, ontology, boundary_between_human_and_animal, worlds\n- Indirectly connected to many other concepts through these direct connections\n\nThis centrality makes \"cyborg\" a pivotal concept in the knowledge graph, serving as a hub that connects multiple domains and ideas related to technology, feminism, politics, and more.",
+      "score": 1.0,
+      "ground_truth": "cyborg \u2014 highest betweenness centrality, bridges the essay's major themes"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "cluster",
+      "query": "Which concepts naturally cluster together in this knowledge system? List the main groups.",
+      "response": "The concepts in this knowledge system naturally cluster into several main groups based on their thematic and conceptual relationships. Here are the main groups:\n\n1. **Cyborg and Feminism:**\n   - Cyborg: cyborg, cyborg_myth, cyborg_alice, cyborg_unities, cyborg_world, cyborg_society, cyborg_politics, cyborg_identity, cyborg_writing, cyborg_image, cyborg_authors, cyborg_theory, cyborg_perspective, cyborg_politics, cyborg_authors, cyborg_politics, cyborg_unities, cyborg_world, cyborg_society, cyborg_politics, cyborg_identity, cyborg_writing, cyborg_image, cyborg_theory, cyborg_perspective, cyborg_politics, cyborg_unities, cyborg_world, cyborg_society, cyborg_politics, cyborg_identity, cyborg_writing, cyborg_image, cyborg_theory, cyborg_perspective, cyborg_politics, cyborg_unities, cyborg_world, cyborg_society, cyborg_politics, cyborg_identity, cyborg_writing, cyborg_image, cyborg_theory, cyborg_perspective, cyborg_politics, cyborg_unities, cyborg_world, cyborg_society, cyborg_politics, cyborg_identity, cyborg_writing, cyborg_image, cyborg_theory, cyborg_perspective, cyborg_politics, cyborg_unities, cyborg_world, cyborg_society, cyborg_politics, cyborg_identity, cyborg_writing, cyborg_image, cyborg_theory, cyborg_perspective, cyborg_politics, cyborg_unities, cyborg_world, cyborg_society, cyborg_politics, cyborg_identity, cyborg_writing, cyborg_image, cyborg_theory, cyborg_perspective, cyborg_politics, cyborg_unities, cyborg_world, cyborg_society, cyborg_politics, cyborg_identity, cyborg_writing, cyborg_image, cyborg_theory, cyborg_perspective, cyborg_politics, cyborg_unities, cyborg_world, cyborg_society, cyborg_politics, cyborg_identity, cyborg_writing, cyborg_image, cyborg_theory, cyborg_perspective, cyborg_politics, cyborg_unities, cyborg_world",
+      "score": 0.3333333333333333,
+      "ground_truth": "Cluster 1 (cyborg domain): cyborg, machine, feminism, labour, politics. Cluster 2 (political economy): women, homework_economy, new_technologies, gender"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is blasphemy connected to many other concepts?",
+      "response": "In this knowledge graph, blasphemy is connected to only one concept: seriousness. The connection between them is quite direct, with a similarity score of 0.500. This indicates that blasphemy and seriousness are closely related in this context, but they do not form a larger network of interconnected concepts. The low number of connections suggests that blasphemy and seriousness are likely treated as nearly isolated concepts within this graph.",
+      "score": 0.6,
+      "ground_truth": "Nearly isolated \u2014 blasphemy connects only to seriousness (degree 1)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "multihop_disconnect",
+      "query": "In this knowledge system, is feminism connected to women?",
+      "response": "Yes, in this knowledge system, feminism is connected to women. Specifically, the concept of \"women\" is directly connected to \"feminism\" with a connection strength of 0.110. This indicates a significant relationship between the two concepts, reflecting the fact that feminism is a movement and theory concerned with issues related to women and gender.",
+      "score": 0.25,
+      "ground_truth": "No \u2014 feminism is in the cyborg component (size 70) and women is in a separate disconnected component (size 31); no path exists between them"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "multihop_disconnect",
+      "query": "In this knowledge system, is labour connected to homework_economy?",
+      "response": "Yes, in this knowledge system, labour is connected to homework_economy. Specifically, the connection is established through the following path:\n\n- Labour is directly connected to new_communications_technologies.\n- New communications technologies are indirectly connected to homework_economy.\n\nThe exact connection can be seen in the \"new_communications_technologies\" node, which has a direct connection to \"homework_economy\" with a weight of 0.095. \n\nSo, while labour does not have a direct connection to homework_economy, it is indirectly connected through the node \"new_communications_technologies\".",
+      "score": 0.5,
+      "ground_truth": "No \u2014 labour is in the cyborg component (size 70) and homework_economy is in a separate disconnected component (size 31); no path exists"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "multihop_path",
+      "query": "In this knowledge system, what is the path from politics to labour?",
+      "response": "To find the path from \"politics\" to \"labour\" in the given knowledge graph, we can trace the connections step by step:\n\n1. **Start at \"politics\"**:\n   - \"politics\" is directly connected to \"cyborg\" with a weight of 0.147.\n   - \"politics\" is also directly connected to \"cyborg_myth\" with a weight of 0.095.\n   - \"politics\" is connected to \"boundaries\" with a weight of 0.041.\n   - \"politics\" is connected to \"loyal_american_technocrats\" with a weight of 0.075.\n   - \"politics\" is connected to \"dissidents\" with a weight of 0.075.\n\n2. **From \"cyborg\"**:\n   - \"cyborg\" is directly connected to \"labour\" with a weight of 0.018.\n\nSo, one path from \"politics\" to \"labour\" is:\n\n**politics \u2192 cyborg \u2192 labour**\n\nThis path has a total weight of 0.147 * 0.028 = 0.004116, but since we are looking for the path, we can simply list the nodes:\n\n**Path: politics \u2192 cyborg \u2192 labour**",
+      "score": 0.75,
+      "ground_truth": "3-hop path: politics \u2192 cyborg \u2192 feminism \u2192 labour (not stated explicitly in summary; derivable from walk encoding)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "multihop_path",
+      "query": "In this knowledge system, what connects ontology to machine?",
+      "response": "In this knowledge system, ontology connects to machine through the node \"cyborg\". Specifically, the path is:\n\ncyborg \u2192 ontology\n\nThe node \"cyborg\" is directly connected to both \"ontology\" and \"machine\". Here is the direct connection:\n\n- cyborg \u2192 ontology (with a weight of 0.432)\n\nSo, the connection between ontology and machine is made through the concept of \"cyborg\".",
+      "score": 1.0,
+      "ground_truth": "2-hop path: ontology \u2192 cyborg \u2192 machine (ontology has degree 1, connects only to cyborg; not stated explicitly)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, is cyborg connected to labour?",
+      "response": "Yes, in this knowledge system, the concept of \"cyborg\" is connected to \"labour.\" Specifically, the connection is established through the path:\n\n- Cyborg \u2192 Politics \u2192 Labour\n\nThe node \"cyborg\" is directly connected to \"politics,\" and \"politics\" is directly connected to \"labour.\" Therefore, \"cyborg\" is indirectly connected to \"labour\" through the \"politics\" node.",
+      "score": 0.8,
+      "ground_truth": "Indirectly \u2014 cyborg \u2192 feminism \u2192 labour (two-hop path)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "bridge",
+      "query": "What is the most central concept in this knowledge system \u2014 the one that bridges the most other ideas?",
+      "response": "The most central concept in this knowledge system is **\"cyborg\"**. The concept of a cyborg bridges the most other ideas, as evidenced by its high degree of connections and its role as a central node in the network. Specifically:\n\n- **Degree**: The concept \"cyborg\" has a degree of 24, which is the highest among all concepts in the graph.\n- **Connections**: \"Cyborg\" is directly connected to multiple key concepts such as feminism, machine, politics, essay, and hybrid. It also connects to other concepts through these intermediaries, further expanding its network.\n\nHere are some of the direct connections of \"cyborg\":\n- **Feminism**: \"Cyborg\" is directly connected to \"feminism\" and indirectly connected to many other concepts through \"feminism\".\n- **Machine**: \"Cyborg\" is directly connected to \"machine\".\n- **Politics**: \"Cyborg\" is directly connected to \"politics\".\n- **Essay**: \"Cyborg\" is directly connected to \"essay\".\n- **Hybrid**: \"Cyborg\" is directly connected to \"hybrid\".\n\nThese connections make \"cyborg\" a pivotal concept that ties together various themes and ideas in the knowledge system.",
+      "score": 1.0,
+      "ground_truth": "cyborg \u2014 highest betweenness centrality, bridges the essay's major themes"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "cluster",
+      "query": "Which concepts naturally cluster together in this knowledge system? List the main groups.",
+      "response": "The knowledge graph extracted from Haraway's \"Cyborg Manifesto\" naturally clusters into several main groups based on their interconnectedness and thematic relevance. Here are the main groups:\n\n1. **Cyborg and Feminist Concepts:**\n   - Cyborg: Central concept connecting multiple other concepts.\n   - Feminism: Directly connected to cyborg, labor, and essay.\n   - Labor: Connected to feminism, essay, and cyborg.\n   - Essay: Connected to cyborg, materialism, and feminism.\n   - Hybrid: Connected to cyborg, feminism, and essay.\n   - Women's Experience: Connected to cyborg, international women\u2019s movements, and essay.\n   - Women: Connected to homework economy, gender, and reproduction.\n   - Socialist-Feminism: Connected to cyborg, marxism, and essay.\n   - Socialist-Feminist Politics: Connected to science and technology, theory and practice, and women in science.\n\n2. **Technology and Science:**\n   - Machine: Connected to cyborg, organism, and human.\n   - Biotechnology: Connected to cyborg authors, research, and origin myths.\n   - Microelectronics: Connected to cyborg authors, translations, and research.\n   - Cryptography: Connected to biology, electronics, and modern organisms.\n   - Biotechnology: Connected to social relations for women and gender divisions of labor.\n   - Biotic Components: Connected to organism, machine, and biotic system.\n   - Organism: Connected to machine, human, and animal-human.\n\n3. **Social and Political Concepts:**\n   - Politics: Connected to cyborg, cyborg myth, and collective selves.\n   - Socialist-Feminism: Connected to marxism, partial constructions, and plot of original unity.\n   - Socialist-Feminist Analysis: Connected to units.\n   - Socialist-Feminist Politics: Connected to science and technology, theory and practice, and women in science.\n   - Socialist-Feminist Analysis: Connected to units.\n   - Socialist-Feminist Politics: Connected to science and technology, theory and practice, and women in science.\n   - Socialist-Feminist Analysis: Connected to units.\n\n4. **Epistemology and Ontology:**\n   - Ontology: Connected to cyborg, feminism, essay, and politics.\n   - Epistemology: Connected to western epistemological imperatives, marxisms, and feminisms.\n   - Epistemological Strategies:",
+      "score": 0.6666666666666666,
+      "ground_truth": "Cluster 1 (cyborg domain): cyborg, machine, feminism, labour, politics. Cluster 2 (political economy): women, homework_economy, new_technologies, gender"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is blasphemy connected to many other concepts?",
+      "response": "In the knowledge graph provided, blasphemy is connected to only one concept: seriousness. The connection between them is quite direct, with a similarity score of 0.500, indicating a strong connection. There are no other connections for blasphemy in this graph.",
+      "score": 0.6,
+      "ground_truth": "Nearly isolated \u2014 blasphemy connects only to seriousness (degree 1)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "multihop_disconnect",
+      "query": "In this knowledge system, is feminism connected to women?",
+      "response": "Yes, in this knowledge system, feminism is connected to women. The graph shows that \"feminism\" is directly connected to \"women's_experience\" and \"women\" is indirectly connected to \"feminism\" through \"cyborg\" and \"essay\". Specifically, the path is:\n\n- \"cyborg\" \u2192 \"feminism\" \u2192 \"labour\"\n- \"labour\" is connected to \"women\" in the graph.\n\nWhile there is no direct connection between \"feminism\" and \"women\" in the graph, they are closely related through other concepts such as \"cyborg\" and \"labour\". The connection between feminism and women is a fundamental relationship in the knowledge system, reflecting the central role of women in feminist theory and practice.",
+      "score": 0.25,
+      "ground_truth": "No \u2014 feminism is in the cyborg component (size 70) and women is in a separate disconnected component (size 31); no path exists between them"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "multihop_disconnect",
+      "query": "In this knowledge system, is labour connected to homework_economy?",
+      "response": "Yes, in this knowledge system, labour is connected to homework_economy. Specifically, the connection is established through the following path:\n\n- Labour is directly connected to several concepts, including feminism, overcoming illusion, knowledge of a subject, one tendency, and new communications technologies.\n- Homework_economy is directly connected to concepts like women, new technologies, gender, and paid work.\n- The connection between labour and homework_economy is indirect, through the concept of \"new communications technologies.\" \n\nThe path can be visualized as:\n- Labour \u2192 new communications technologies \u2192 homework_economy\n\nThis indirect connection suggests that there is a relationship between labour and the homework economy through the lens of new communications technologies.",
+      "score": 0.25,
+      "ground_truth": "No \u2014 labour is in the cyborg component (size 70) and homework_economy is in a separate disconnected component (size 31); no path exists"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "multihop_path",
+      "query": "In this knowledge system, what is the path from politics to labour?",
+      "response": "To find the path from \"politics\" to \"labour\" in the given knowledge graph, we can trace the connections step by step:\n\n1. **Start at \"politics\"**:\n   - \"politics\" is directly connected to \"cyborg\" with a weight of 0.147.\n   - \"politics\" is also directly connected to \"cyborg_myth\" with a weight of 0.095.\n   - \"politics\" is connected to \"collective_selves\" with a weight of 0.075.\n   - \"politics\" is connected to \"loyal_american_technocrats\" with a weight of 0.075.\n   - \"politics\" is connected to \"boundaries\" with a weight of 0.041.\n   - \"politics\" is connected to \"monkeys_and_apes\" with a weight of 0.020.\n\n2. **Explore the connections from \"cyborg\"**:\n   - \"cyborg\" is directly connected to \"feminism\" with a weight of 0.121.\n   - \"cyborg\" is connected to \"hybrid\" with a weight of 0.028.\n   - \"cyborg\" is connected to \"ontology\" with a weight of 0.432.\n   - \"cyborg\" is connected to \"women's_experience\" with a weight of 0.026.\n   - \"cyborg\" is connected to \"worlds\" with a weight of 0.018.\n\n3. **Explore the connections from \"cyborg_myth\"**:\n   - \"cyborg_myth\" is directly connected to \"boundaries\" with a weight of 0.215.\n   - \"cyborg_myth\" is connected to \"cyborg\" with a weight of 0.238.\n   - \"cyborg_myth\" is connected to \"collective_selves\" with a weight of 0.077.\n   - \"cyborg_myth\" is connected to \"loyal_american_technocrats\" with a weight of 0.077.\n   - \"cyborg_myth\" is connected to \"dissidents\" with a weight of 0.077.\n\n4. **Explore the connections from \"collective_selves",
+      "score": 1.0,
+      "ground_truth": "3-hop path: politics \u2192 cyborg \u2192 feminism \u2192 labour (not stated explicitly in summary; derivable from walk encoding)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "multihop_path",
+      "query": "In this knowledge system, what connects ontology to machine?",
+      "response": "In the provided knowledge graph, ontology connects to machine directly with a weight of 0.432. This direct connection indicates that there is a significant relationship between the concepts of ontology and machine in the context of this knowledge system. \n\nTo break it down further:\n- **Ontology**: This concept deals with the nature of existence, being, objects, and their properties.\n- **Machine**: This concept refers to devices or systems that perform tasks, often with a focus on technology and artificial constructs.\n\nThe direct connection between these two concepts suggests that the knowledge system views the relationship between the nature of existence (ontology) and the constructs of machines (both natural and artificial) as significant. This could imply a discussion on how the nature of being and existence relates to the design, function, and implications of machines, possibly in the context of how machines are integrated into our understanding of reality or how they shape our ontological views.",
+      "score": 0.6666666666666666,
+      "ground_truth": "2-hop path: ontology \u2192 cyborg \u2192 machine (ontology has degree 1, connects only to cyborg; not stated explicitly)"
+    }
+  ],
+  "summary": {
+    "A_baseline": {
+      "avg_score": 0.26458333333333334,
+      "by_type": {
+        "relationship": 0.2,
+        "bridge": 0.0,
+        "cluster": 0.0,
+        "isolate": 0.0,
+        "multihop_disconnect": 0.5,
+        "multihop_path": 0.4583333333333333
+      }
+    },
+    "B_text_injection": {
+      "avg_score": 0.6291666666666667,
+      "by_type": {
+        "relationship": 0.6,
+        "bridge": 1.0,
+        "cluster": 0.3333333333333333,
+        "isolate": 0.6,
+        "multihop_disconnect": 0.375,
+        "multihop_path": 0.875
+      }
+    },
+    "C_kv_injection": {
+      "avg_score": 0.6541666666666667,
+      "by_type": {
+        "relationship": 0.8,
+        "bridge": 1.0,
+        "cluster": 0.6666666666666666,
+        "isolate": 0.6,
+        "multihop_disconnect": 0.25,
+        "multihop_path": 0.8333333333333333
+      }
+    }
+  }
+}

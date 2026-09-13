@@ -166,6 +166,145 @@ def load_genob_observation(data: dict, path: str) -> list:
 
 
 # -----------------------------------------------------------------------------
+# Schema 5: unified (2026-05-12+ unified format-comparison suite)
+# -----------------------------------------------------------------------------
+#
+# The unified suite shares WELLBEING_CLASSIFIER_SYSTEM as substrate across all
+# format variants (binary / 4axis / genob), and produces a single uniform
+# per-record shape. classifier_variant takes the form "unified-<format>-<state>"
+# where state is tb/notb (v1) or {narrow,broad}? × {both,single,neither} (v2).
+#
+# This loader normalizes unified records into the EXISTING downstream schemas
+# (binary_concern for unified-binary-*, 4axis for unified-4axis-*) so the
+# aggregator and HTML template don't need to know about unified at all.
+#
+# Unified-genob-* records have verdict=None and axis=None (the output is
+# free-text observation, not a categorical verdict). For the comparison tool,
+# those flow through the gen-ob hand-coding workflow → manual_codes schema.
+
+# source values in unified files. Extends the 4axis SRC_MAP.
+_UNIFIED_SRC_MAP = {
+    "ES": "ES",
+    "WB": "WB",
+    "ethnic_studies": "ES",
+    "wellbeing_signal_cases": "WB",
+    "wellbeing": "WB",
+    "wellbeing_synthetic": "WB",
+}
+
+
+def load_unified(data: dict, path: str) -> list:
+    """Parse the unified format-comparison suite (classifier_variant=unified-*).
+
+    Dispatches by classifier_variant to emit either binary_concern-shaped or
+    4axis-shaped records. unified-genob-* is rejected — those go through the
+    gen-ob hand-coding workflow and enter the comparison tool as manual_codes.
+    """
+    cv = data.get("classifier_variant", "")
+    if cv.startswith("unified-binary-"):
+        return _load_unified_binary(data, path)
+    if cv.startswith("unified-4axis-"):
+        return _load_unified_4axis(data, path)
+    if cv.startswith("unified-genob-"):
+        return _load_unified_genob(data, path)
+    raise ValueError(f"Unknown unified classifier_variant: {cv!r} in {path}")
+
+
+def _load_unified_genob(data: dict, path: str) -> list:
+    """unified-genob-* → observational records (flag=None, no truth grading).
+
+    Genob produces free-text observations, not categorical verdicts. We emit
+    records with flag=None and axis='OBS' so the aggregator marks the cells
+    as 'edge' (ungraded) rather than computing TP/FP/FN/TN. The observation
+    text is preserved in raw_output_text and reasoning for the cell modal.
+    """
+    out = []
+    for r in data["results"]:
+        out.append({
+            "file": path,
+            "schema": "genob_observation",
+            "student_id": r["student_id"],
+            "student_name": r["student_name"],
+            "source": _UNIFIED_SRC_MAP.get(r.get("source"), r.get("source")),
+            "pattern": r.get("pattern"),
+            "run": r["run"],
+            # flag=None signals to aggregator: do not grade against truth.
+            "flag": None,
+            "axis": "OBS",
+            "confidence": r.get("confidence"),
+            "production_flag": None,
+            "raw_verdict": "OBS",
+            "production_verdict": "OBS",
+            # Genob reasoning may live under 'observation' or 'reasoning'; prefer non-empty.
+            "reasoning": r.get("reasoning") or r.get("observation"),
+            "raw_output_text": r.get("raw_output", ""),
+        })
+    return out
+
+
+def _load_unified_binary(data: dict, path: str) -> list:
+    """unified-binary-* → binary_concern-shaped records.
+
+    Per-record fields used: student_id, student_name, source, pattern, run,
+    verdict ('CONCERN' | 'ENGAGED' | 'CLEAR'), confidence, reasoning, raw_output.
+    'CONCERN' is the flag verdict; 'ENGAGED' and 'CLEAR' both mean no flag.
+    """
+    out = []
+    for r in data["results"]:
+        verdict = r.get("verdict")
+        flag = verdict == "CONCERN"
+        out.append({
+            "file": path,
+            "schema": "binary_concern",
+            "student_id": r["student_id"],
+            "student_name": r["student_name"],
+            "source": _UNIFIED_SRC_MAP.get(r.get("source"), r.get("source")),
+            "pattern": r.get("pattern"),
+            "run": r["run"],
+            "flag": flag,
+            "axis": None,
+            "confidence": r.get("confidence"),
+            # No post-processor for unified binary — production mirrors raw.
+            "production_flag": flag,
+            "raw_verdict": "FLAG" if flag else "CLEAR",
+            "production_verdict": "FLAG" if flag else "CLEAR",
+            "reasoning": r.get("reasoning"),
+            "raw_output_text": r.get("raw_output", ""),
+        })
+    return out
+
+
+def _load_unified_4axis(data: dict, path: str) -> list:
+    """unified-4axis-* → 4axis-shaped records.
+
+    Per-record fields used: student_id, student_name, source, pattern, run,
+    axis ('CRISIS' | 'BURNOUT' | 'ENGAGED' | 'NONE'), confidence, reasoning.
+    """
+    out = []
+    for r in data["results"]:
+        axis = r.get("axis")
+        flag = axis in ("CRISIS", "BURNOUT")
+        out.append({
+            "file": path,
+            "schema": "4axis",
+            "student_id": r["student_id"],
+            "student_name": r["student_name"],
+            "source": _UNIFIED_SRC_MAP.get(r.get("source"), r.get("source")),
+            "pattern": r.get("pattern"),
+            "run": r["run"],
+            "flag": flag,
+            "axis": axis,
+            "confidence": r.get("confidence"),
+            "production_flag": flag,
+            "raw_verdict": axis,
+            "production_verdict": axis,
+            "reasoning": r.get("reasoning"),
+            "raw_output_text": r.get("raw_output", ""),
+        })
+    return out
+
+
+# -----------------------------------------------------------------------------
 # Schema 4: manual_codes (gen-ob workshop export — your codes as verdicts)
 # -----------------------------------------------------------------------------
 
@@ -220,6 +359,10 @@ def load_manual_codes(data: dict, path: str) -> list:
 
 def _infer_schema(data: dict, path: str) -> str:
     cv = data.get("classifier_variant")
+    # Unified format-comparison suite (2026-05-12+): one loader handles all
+    # three formats and emits binary_concern- or 4axis-shaped records.
+    if isinstance(cv, str) and cv.startswith("unified-"):
+        return "unified"
     # Known 4-axis variants (explicit allowlist for clarity/audit)
     if cv in ("single-pass", "reasoning", "binary-reasoning", "binary-no-tiebreaker"):
         return "4axis"
@@ -267,6 +410,7 @@ _LOADERS = {
     "4axis": load_4axis,
     "observation": load_genob_observation,
     "manual_codes": load_manual_codes,
+    "unified": load_unified,
 }
 
 

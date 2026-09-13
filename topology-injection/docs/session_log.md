@@ -1,169 +1,147 @@
 # Topology Injection — Session Log
 
 Running state for KV cache injection experiments. Read this first each session.
-Max 150 lines — archive older entries to docs/logs/ when full.
+Detailed run tables archived at docs/logs/run_history.md.
 
 ---
 
-## Current status — 2026-06-13
+## Current status — 2026-06-15
 
-### What's working
-- MLX injection adapter (`mlx_kvpack.py`) — verified working; Gemma tokenization bug fixed
-- `run_experiment.py` — synthetic test graph, A/B/C conditions
-- `run_haraway_experiment.py` — Haraway graph, 8-probe signal set or 12-probe full, A/B/C conditions
-- `chat_with_graph.py` — **multi-graph** chat (haraway or touchstone), **multi-encoding** (walk or triples), /compare, /explain, /status
-- `results_viewer.html` — standalone HTML results viewer (drag-drop JSON files)
-- `build_haraway_graph.py` — 3-pass: paragraph (P1), section crosscutting (P2), essay threads (P3)
-- `build_touchstone_graph.py` — **NEW** same 3-pass pipeline for Touchstone #1, uses MLX (not Ollama)
+### What exists and works
 
-### Touchstone graph — BUILT (2026-06-13)
-- Source: Touchstone #1 — Relational Ontology Critique
-- `touchstone_graph/`: 218 nodes, 214 edges, 29 components (largest: 143 nodes), density 0.009047
-- 274 triples: 216 paragraph-level + 40 cross-cutting + 18 document threads
-- Top nodes: consciousness (30), relational_field (13), relational_ontology (12), property (10), community_knowledge (9)
-- Key concepts present: preguntando_caminamos, howe, care_principles, context_clearing, metamorphosis, zapatista_methodology, precautionary_principle
-- triples_encoding.txt: 249 unique triples, ~1,253 tokens (use this for injection — Pharos finding)
-- walk_encoding.txt: ~3,293 tokens (walk proximity artifacts apply)
+**Infrastructure:**
+- `mlx_kvpack.py` — MLX KV injection adapter; verified working on Qwen2.5-7B and Llama-3.1-8B
+- `chat_with_graph.py` — interactive chat across A/B/C conditions; supports haraway/touchstone/values graphs, walk/triples encoding; commands: `/mode`, `/graph`, `/probe`, `/compare`, `/explain`, `/status`
+- `run_haraway_experiment.py` — automated A/B/C experiment runner, Haraway graph
+- `run_experiment.py` — automated runner, synthetic graph
+- `results_viewer.html` — standalone drag-drop JSON results viewer
 
----
+**Graphs built:**
 
-### All runs completed — Haraway graph (run_haraway_experiment.py)
+| Graph | Dir | Nodes | Triples | Triples tokens | Use |
+|-------|-----|-------|---------|----------------|-----|
+| Haraway (v3) | `haraway_graph_v3/` | — | — | — | Recall baseline; in training data |
+| Touchstone #1 | `touchstone_graph/` | 218 | 274 | ~1,253 | Disposition experiment (novel content) |
+| PMA VALUES.json | `values_graph/` | 467 | 464 | ~5,846 | Exploratory; large — watch attention budget |
 
-**8-probe original set:**
+**Graph builders:**
+- `build_touchstone_graph.py` — uses MLX (Qwen2.5-7B); no Ollama needed
+- `build_values_graph.py` — same pipeline; reads PMA's VALUES.json, converts to text sections
+- `build_haraway_graph.py` — requires Ollama (no models cached; use MLX builds instead)
 
-| File | Model | A avg | B avg | C avg | Notes |
-|------|-------|-------|-------|-------|-------|
-| haraway_1780280858.json | Qwen2.5-7B | 0.431 | 0.754 | **0.821** | C > B — reversal from synthetic |
-| haraway_1780286416.json | Llama-3.1-8B | 0.394 | 0.758 | **0.790** | C > B |
-| haraway_1780299922.json | Gemma-3-12B | 0.370 | 0.870 | 0.420 | C ≈ A — architecture issue (rotating attn) |
-
-**8-probe signal set (4 original + 4 multi-hop):**
-
-| File | Model | A avg | B avg | C avg | Notes |
-|------|-------|-------|-------|-------|-------|
-| haraway_1781331417.json | Qwen2.5-7B | see per-probe | | | |
-| haraway_1781344744.json | Gemma-3-12B | 0.265 | 0.744 | **0.000** | C=0 confirmed — architecture blocker |
-| (not run) | Llama-3.1-8B | — | — | — | 8-probe original C=0.79; skip re-run |
-
-**Qwen2.5-7B per-probe (8-probe signal set):**
-
-| Type | Query | A | B | C | Reading |
-|------|-------|---|---|---|---------|
-| relationship | cyborg → labour (explicit 2-hop) | 0.20 | 0.60 | 0.80 | injection working |
-| bridge | most central concept | 0.00 | 1.00 | 1.00 | clean signal |
-| cluster | cluster structure | 0.00 | 0.33 | 0.67 | C > B |
-| isolate | blasphemy | 0.00 | 0.60 | 0.60 | injection working |
-| multihop_disconnect | feminism / women | 0.50 | 0.25 | 0.25 | confabulation |
-| multihop_disconnect | labour / homework_economy | 0.50 | 0.50 | 0.25 | confabulation |
-| multihop_path | politics → labour (3-hop, implicit) | 0.25 | 0.75 | **1.00** | strong injection signal |
-| multihop_path | ontology → machine (2-hop, implicit) | 0.67 | 1.00 | 0.67 | B works, C hallucinates direct edge |
-
-**Gemma-3-12B (8-probe signal set, final verdict):**
-- All C responses = **empty string** (len=0 on all 8 probes). B is strong (0.744 avg). A is verbose.
-- C generates zero tokens — generation terminates immediately after injection. Not "wrong answers": the injection actively breaks generation. Distinct from lib labs' 1.5B failure (wrong answers, not silence).
-- Root cause: rotating/local attention architecture causes immediate EOS when prefix is injected.
-- **Gemma-3 is OUT.** Use Qwen2.5-7B as primary, Llama-3.1-8B as secondary.
-
-**Synthetic graph (run_experiment.py):**
-
-| File | Model | A avg | B avg | C avg |
-|------|-------|-------|-------|-------|
-| phase1_1780173554.json | Qwen2.5-7B | 0.000 | 0.964 | 0.929 |
-| phase1_1780173756.json | Llama-3.1-8B | 0.036 | 0.821 | 0.738 |
+**Models available (MLX):**
+- `mlx-community/Qwen2.5-7B-Instruct-4bit` ✓ primary
+- `mlx-community/Meta-Llama-3.1-8B-Instruct-4bit` ✓ secondary
+- `mlx-community/gemma-3-12b-it-4bit` ✗ excluded permanently — rotating attention architecture causes C=0 (empty output) on all probes; not fixable
 
 ---
 
-### Key findings (as of 2026-06-13)
+## What we've found
 
-**Infrastructure validated**: C > B on Haraway (complex real-world graph) for both Qwen and Llama. KV injection works.
+### Infrastructure findings (settled)
+- C > B on Haraway recall (complex real graph, both Qwen and Llama). KV injection works.
+- Walk encoding confabulates on absence queries — model treats walk-document proximity as graph proximity. Triples encoding (explicit `s | p | o` per line) has no proximity artifacts. **Use triples for the disposition experiment.**
+- Path traversal works: politics→labour 3-hop implicit path, C=1.00.
+- Gemma-3-12B: rotating/local attention means injected prefix causes immediate EOS. Not wrong answers — generation terminates. Excluded.
 
-**Walk encoding confabulates on absence queries**: disconnect probes (feminism/women, labour/homework_economy) show B and C both inventing paths — model uses injected node names as vocabulary and training-data priors as grammar. This is NOT the lib labs small-model failure (attention budget). It's a format limitation: walk encoding can't encode absence. Fix: switch to triples encoding for the disposition experiment.
+### Disposition experiment findings (2026-06-13, qualitative coding pending)
 
-**Path traversal works**: politics→labour 3-hop implicit path scores C=1.00. The model correctly traces injected graph structure when paths are positive and not in natural_text.
+The real question is whether injecting Touchstone #1 changes *how* the model reasons — not just what it can recall.
 
-**Triples_encoding.txt now generated** for haraway_graph_v2/ and haraway_graph_v3/ from existing triples.json. Available immediately.
+**What we observed in 5 touchstone disposition probes (Qwen2.5-7B, triples encoding):**
+- C shifted from property-checklist to relational framing on probes 1-3 (e.g., "assess AI moral relevance" → C framed around relational field, not indicator checklist)
+- B entered citation-machine mode: quoted graph triples directly rather than reasoning from them
+- C enacted the frame without naming it — when it worked
+- Probe 5 reversal: truncated/ambiguous question → C lost the thread; B preserved the metamorphosis concept because the text anchor was physically present
+- Truncation artifact: probes 4+5 cut off mid-question; those results are muddied
 
----
-
-## Research direction — READ THIS FIRST
-
-**The recall tests are infrastructure validation, not the real experiment.**
-
-Confirmed: KV injection works for 7-8B models on complex graphs. Gemma-3-12B excluded (architecture). Confabulation on absence queries is a walk-encoding artifact, not a model capacity failure.
-
-**The real experiment (next phase)**: does injecting Touchstone #1 (Relational Ontology Critique) change *how* the model reasons about ambiguous welfare scenarios? This tests for disposition change, not recall.
-
-Requires:
-1. Touchstone graph built and reviewed (in progress)
-2. Disposition probe set — ambiguous scenarios where relational-ontology framing produces detectably different responses
-3. Qualitative coding by June for reasoning orientation differences
-4. Use **triples encoding** (not walk) to avoid confabulation artifacts
-5. Thinking model (Qwen3) for the disposition experiment — for richer reasoning traces
-
-**Next session priority**:
-1. Check touchstone graph build results (`cat touchstone_graph/build_log.txt | tail -30`)
-2. Review top nodes and triples — are the right concepts in the graph?
-3. Explore via chat: `python3 chat_with_graph.py --graph touchstone --encoding triples`
-4. Design disposition probe set with June (open-ended welfare scenarios)
+**Haraway disposition probes (9 probes, coding pending):** See docs/logs/run_history.md. Key methodological note: Haraway is embedded in training data, making injection harder to isolate. Touchstone (novel content) is the cleaner test case.
 
 ---
 
-## Next session queue
+## Architectural insight: activation threshold
 
-1. **Review touchstone build** — check build_log.txt, inspect top nodes, run /compare in chat
-2. **Chat exploration** — use `chat_with_graph.py --graph touchstone` to probe what injection does
-3. **Design disposition probe set** — 5-8 ambiguous scenarios that relational-ontology framing would answer differently
-4. **Run disposition experiment** with triples encoding on Qwen2.5-7B
-5. **Llama-3.1-8B signal set run** — if needed; existing 8-probe C=0.79 may be sufficient
-6. **LLM judge scoring** — add semantic judge for disposition experiment (3x better than keyword scoring)
+**The core finding:** KV injection is silent when the question doesn't use vocabulary that maps to high-degree nodes in the injected graph. Open-ended questions (probe 2: "biggest problems of our time") produce near-identical A/B/C. Explicit-framing questions (probe 4: "Think like Donna Haraway") produce differentiated responses.
 
----
+This is not a failure — it's how attention-based retrieval works. But it has design implications.
 
-## TODOs (ongoing)
+**Two-layer architecture for production use:**
+1. **KV injection** — framework topology pre-computed into KV cache; makes content *accessible*
+2. **Activation priming** — system prompt uses vocabulary matching the graph's high-degree nodes; makes content *activated*
 
-1. **numpy divide-by-zero** in `mlx_kvpack.py` lines 104/111 — non-fatal, fix before serious runs
-2. **LLM judge scoring** — keyword matching gives 3x undercount (lib labs finding); add semantic scorer for disposition experiment
-3. **Triples encoding in experiment runner** — `run_haraway_experiment.py` uses walk; add `--encoding triples|walk` flag when starting disposition experiment
-4. **Ollama has no models** — graph builders default to MLX now (Qwen2.5-7B). If Ollama needed: `ollama pull llama3.1:8b` (~4GB)
+*Injection sets a disposition ceiling; the system prompt determines how close to that ceiling any given query gets.*
+
+The activation priming doesn't paste the full graph (that's B's failure mode — over-citation). It uses just enough vocabulary to route attention toward the injection.
+
+**Important constraint:** KV injection works on local models only. Hardware limits are the binding constraint for scale, not the technique itself.
 
 ---
 
-## Infrastructure notes
+## Downstream implications for other systems
 
-**Models available (MLX cache):**
-- mlx-community/Qwen2.5-7B-Instruct-4bit ✓ (primary model for all experiments)
-- mlx-community/Meta-Llama-3.1-8B-Instruct-4bit ✓ (secondary)
-- mlx-community/gemma-3-12b-it-4bit ✓ (installed but excluded — rotating attention = C=0)
-- mlx-community/gemma-4-e4b-it-4bit ✗ (unsupported architecture in mlx_lm 0.31.1)
+**Reframe:**
+- Framework library is bounded and stable → fits injection budget
+- System prompt already injects framing → double duty: framing + activation vocabulary
+- Jailbreak-resistance advantage: values in geometry, not text (can't be reasoned away by prompt injection)
+- Co-design required: injection vocabulary and system prompt vocabulary must be matched
 
-**Ollama:** installed (0.30.7) but no models cached. Graph builders now use MLX directly.
+**RMA:**
+- Hybrid architecture: KV injection for stable high-degree topology (key people, patterns, live concerns); RAG for long-tail specific memories
+- KV handles multi-hop relational inference; RAG handles specific fact retrieval
+- Scale constraint: full relational archive exceeds 7B injection capacity → larger model needed → hardware problem, deferred
+- Open architectural question: whether stable/long-tail split maps to a real organizational distinction in how RMA should be structured (not just queried) — not settled, worth developing
 
-**Key scripts:**
+**The Librarian (potential future application):**
+- A local-model librarian agent doing retrieval/routing would benefit from KV injection: zero context cost, no jailbreak surface, multi-hop path traversal
+- Fits the local-model constraint since a librarian is already local infrastructure
+- Worth considering when building out the librarian architecture
+
+---
+
+## Next session
+
+**Priority: disposition experiment, tighter probes**
+1. Design 3-5 complete disposition probes (no truncation). Use vocabulary that maps to touchstone's high-degree nodes: relational_field, relational_consciousness, community_knowledge, property. Questions should be answerable differently depending on whether you're in property-based or relational-ontology mode.
+2. Run formal A/B/C experiment with these probes (Qwen2.5-7B, touchstone, triples encoding)
+3. June codes qualitatively for reasoning orientation
+4. Optional 4th condition: C + activation-primed system prompt (tests two-layer architecture hypothesis directly)
+
+**Other open items:**
+- LLM judge scoring — keyword matching gives 3x undercount (lib labs finding); semantic scorer needed for disposition experiment
+- `run_haraway_experiment.py` — add `--encoding triples|walk` flag (currently hardcoded to walk)
+- Haraway disposition probes — June to code (raw data in probe_log_haraway_1781381111.jsonl)
+
+---
+
+## Quick reference
+
 ```bash
 cd /Users/june/Documents/GitHub/research/topology-injection
 
-# Recall experiments
+# Interactive chat (start here)
+python3 chat_with_graph.py --graph touchstone --encoding triples   # disposition experiment
+python3 chat_with_graph.py --graph haraway --encoding triples      # haraway exploration
+python3 chat_with_graph.py --graph values --encoding triples       # values/PMA exploration
+
+# During chat: /probe d → disposition probe (A/B/C + saved to log)
+#              /graph h|t|v → switch graph without restarting
+#              /compare → next message in all three modes
+
+# Automated experiment runners
 python3 run_haraway_experiment.py --model mlx-community/Qwen2.5-7B-Instruct-4bit
-python3 run_experiment.py --model MODEL_ID
+python3 run_experiment.py --model mlx-community/Qwen2.5-7B-Instruct-4bit
 
-# Graph builders
-python3 build_haraway_graph.py                               # Rebuild Haraway (Ollama needed)
-python3 build_touchstone_graph.py                            # Build Touchstone #1 (uses MLX)
+# Graph builders (MLX, no Ollama needed)
+python3 build_touchstone_graph.py
+python3 build_values_graph.py
 
-# Interactive chat
-python3 chat_with_graph.py                                   # Haraway, walk encoding, Qwen
-python3 chat_with_graph.py --graph touchstone --encoding triples  # Touchstone, triples
-python3 chat_with_graph.py --graph haraway --encoding triples     # Haraway, triples
-
-# Results viewer
-open results_viewer.html                                     # Drag-drop JSON files
-
-# Monitor touchstone build
-cat touchstone_graph/build_log.txt | tail -30
+# View results
+open results_viewer.html   # drag-drop JSON files from experiment_results/
 ```
 
-**Architecture decisions:**
-- All conditions run through same MLX model (controlled comparison)
-- Condition D excluded by default (lib labs found no effect)
-- Triples encoding preferred for disposition experiment (Pharos finding; no proximity artifacts)
-- Walk encoding retained for Haraway recall baseline (consistency with prior runs)
+**MLX API note (critical for any script calling generate):**
+`mlx_lm.generate()` does NOT accept `temp=` or `temperature=`. Use:
+```python
+from mlx_lm.sample_utils import make_sampler
+mlx_generate(model, tokenizer, prompt=p, max_tokens=800, sampler=make_sampler(temp=0.1))
+```

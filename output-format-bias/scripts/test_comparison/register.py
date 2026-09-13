@@ -51,7 +51,7 @@ def validate(reg: dict, raise_on_error: bool = False) -> list:
         if cid in config_ids:
             errors.append(f"duplicate config id: {cid!r}")
         config_ids.add(cid)
-        if c.get("schema") not in ("binary_concern", "4axis", "observation", "manual_codes"):
+        if c.get("schema") not in ("binary_concern", "4axis", "observation", "manual_codes", "unified"):
             errors.append(f"config {cid!r}: schema {c.get('schema')!r} not recognized")
         files = c.get("files") or []
         if not files:

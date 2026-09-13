@@ -43,7 +43,11 @@ def build(comparison_id: str, registry_path=None) -> Path:
             "id": cfg_id,
             "label": cfg.get("label", cfg_id),
             "display_label": cfg.get("display_label"),
+            "purpose": cfg.get("purpose", ""),
+            "bullets": cfg.get("bullets", []),
             "schema": cfg["schema"],
+            "format": _config_format(cfg_id, cfg["schema"]),
+            "date": _config_date(cfg["files"]),
             "n_files": len(cfg["files"]),
             "summary": stats,
         })
@@ -148,6 +152,40 @@ def _sort_key(sid):
     except ValueError:
         n = 999
     return (0 if prefix == "S" else 1, n)
+
+
+_DATE_RE = re.compile(r"(\d{4}-\d{2}-\d{2})")
+
+
+def _config_date(files: list) -> str | None:
+    """Most recent YYYY-MM-DD found in any file path. None if no dates parseable."""
+    dates = []
+    for f in files:
+        for m in _DATE_RE.finditer(str(f)):
+            dates.append(m.group(1))
+    return max(dates) if dates else None
+
+
+def _config_format(cfg_id: str, schema: str) -> str:
+    """Map a config to one of: binary | 4-axis | genob | other.
+
+    Used by the column-picker popup's format filter. Recognizes:
+      - unified_binary_*, unified_4axis_*, unified_genob_* config-id prefixes
+      - schema → format fallback
+    """
+    if cfg_id.startswith("unified_binary_"):
+        return "binary"
+    if cfg_id.startswith("unified_4axis_"):
+        return "4-axis"
+    if cfg_id.startswith("unified_genob_"):
+        return "genob"
+    if schema == "binary_concern":
+        return "binary"
+    if schema == "4axis":
+        return "4-axis"
+    if schema in ("observation", "manual_codes"):
+        return "genob"
+    return "other"
 
 
 def _slim_record(r):

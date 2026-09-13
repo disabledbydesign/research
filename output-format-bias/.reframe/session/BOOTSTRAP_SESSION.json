@@ -1,0 +1,18 @@
+{
+  "session_id": "549c9e9d-71ce-4f69-bbe1-a9a4206dc057",
+  "started_at": "2026-06-01T13:25:55.797666",
+  "source": "startup",
+  "turn_count": 4,
+  "last_drift_check_turn": 0,
+  "last_reinjection_turn": 0,
+  "config_hash": "623c056a48088f01",
+  "recent_framework_statuses": {},
+  "drift_events": [],
+  "protocol_depth": 1,
+  "orchestra": {
+    "agents_dispatched": 0,
+    "agents_completed": 0,
+    "agents_failed": 0,
+    "review_results": []
+  }
+}

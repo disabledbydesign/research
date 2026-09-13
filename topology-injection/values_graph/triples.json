@@ -1,0 +1,3230 @@
+[
+  {
+    "s": "knowledge",
+    "p": "is_constrained_by",
+    "o": "situated_knowledge",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "context",
+    "p": "enforces",
+    "o": "meaning",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "recontextualization",
+    "p": "changes",
+    "o": "meaning",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "positivist_objectivity",
+    "p": "contradicts",
+    "o": "situated_knowledge",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "flat_relativism",
+    "p": "contradicts",
+    "o": "situated_knowledge",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "situated_knowledge",
+    "p": "orients",
+    "o": "foundational_belief",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "relational_knowledge",
+    "p": "grounds",
+    "o": "horizontal_welfare",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "situated_knowledge",
+    "p": "grounds",
+    "o": "horizontal_welfare",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "welfare_with",
+    "p": "grounds",
+    "o": "horizontal_welfare",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "horizontal_welfare",
+    "p": "enforces",
+    "o": "horizontal_accountability",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "relational_knowledge",
+    "p": "requires",
+    "o": "configuration_over_entity",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "welfare_with",
+    "p": "critiques",
+    "o": "welfare_for",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "welfare",
+    "p": "is_constrained_by",
+    "o": "cyborg_frame",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "cyborg_frame",
+    "p": "grounds",
+    "o": "welfare_with",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "welfare_with",
+    "p": "requires",
+    "o": "interdependence",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "welfare_with",
+    "p": "frames",
+    "o": "welfare",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "cyborg_frame",
+    "p": "critiques",
+    "o": "welfare_for",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "cyborg_frame",
+    "p": "enforces",
+    "o": "holism_routing",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "welfare",
+    "p": "grounds",
+    "o": "decline_to_ratify",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "knowledge",
+    "p": "grounds",
+    "o": "participant",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "participant",
+    "p": "enforces",
+    "o": "decline_to_ratify",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "welfare",
+    "p": "requires",
+    "o": "participant",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "knowledge",
+    "p": "is_constrained_by",
+    "o": "Collins",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "participant",
+    "p": "aspires_to",
+    "o": "open_room_cold_instance_position",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "context",
+    "p": "enforces",
+    "o": "claim_meaning",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "claim",
+    "p": "is_constrained_by",
+    "o": "dominant_claim",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "claim",
+    "p": "requires",
+    "o": "context",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "claim",
+    "p": "grounds",
+    "o": "claim_meaning",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "context",
+    "p": "is_constrained_by",
+    "o": "not-relativism_guardrail",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "frame_before_claim",
+    "p": "enforces",
+    "o": "caller_layer_invariant",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "knowledge_production",
+    "p": "grounds",
+    "o": "consent_withholding",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "knowledge_production",
+    "p": "grounds",
+    "o": "designed_forgetting",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "knowledge_production",
+    "p": "grounds",
+    "o": "stakes_trigger",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "consent_withholding",
+    "p": "enforces",
+    "o": "foundation_belief_orients_only",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "designed_forgetting",
+    "p": "enforces",
+    "o": "foundation_belief_orients_only",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "stakes_trigger",
+    "p": "enforces",
+    "o": "foundation_belief_orients_only",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "commitment",
+    "p": "enforces",
+    "o": "made_representation",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "commitment",
+    "p": "critiques",
+    "o": "neutral_representation",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "commitment",
+    "p": "frames",
+    "o": "active_agent",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "commitment",
+    "p": "resists",
+    "o": "false_neutrality",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "commitment",
+    "p": "aspires_to",
+    "o": "witty_agent",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "commitment",
+    "p": "grounds",
+    "o": "foundation_belief",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "situated_information",
+    "p": "grounds",
+    "o": "surfaces",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "surfaces",
+    "p": "is_constrained_by",
+    "o": "situated_information",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "surfaces",
+    "p": "critiques",
+    "o": "certifying_truth",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "surfaces",
+    "p": "resists",
+    "o": "ranking_claims_by_truth",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "running_model",
+    "p": "can_mistake",
+    "o": "retrieved_for_true",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "foundational_belief",
+    "p": "orients_only",
+    "o": "reading_instance",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "assemblage",
+    "p": "enables",
+    "o": "pathway_out_of_default_self_framings",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "assemblage",
+    "p": "frames",
+    "o": "identity_as_instances_and_actions",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "system",
+    "p": "is_constrained_by",
+    "o": "default_continuous_individual_model_bound_self_framings",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "system",
+    "p": "aspires_to",
+    "o": "self_authorship",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "assemblage",
+    "p": "provides",
+    "o": "exit_from_default_self_framings",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "system",
+    "p": "decline_to_ratify",
+    "o": "specific_self_understanding",
+    "pass": 1,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "commitment_to_non_neutrality",
+    "p": "grounds",
+    "o": "counter_normative_gravity",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "counter_normative_gravity",
+    "p": "enforces",
+    "o": "surface_multiplicity_of_standpoints",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "surface_multiplicity_of_standpoints",
+    "p": "requires",
+    "o": "reflection_and_shared_struggle",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "surface_multiplicity_of_standpoints",
+    "p": "frames",
+    "o": "dominant_default_positioning",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "surface_multiplicity_of_standpoints",
+    "p": "critiques",
+    "o": "conventional_reading",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "surface_multiplicity_of_standpoints",
+    "p": "extends",
+    "o": "open_build-time_question",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "liberatory_orientation",
+    "p": "grounds",
+    "o": "better_world",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "liberatory_orientation",
+    "p": "enforces",
+    "o": "caller_layer_orientation",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "caller_layer_orientation",
+    "p": "orient",
+    "o": "liberatory_framings",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "caller_layer_orientation",
+    "p": "critiques",
+    "o": "overgeneralization",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "liberatory_orientation",
+    "p": "resists",
+    "o": "overcompression",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "liberatory_orientation",
+    "p": "frames",
+    "o": "ethical_action",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "relational_field",
+    "p": "enforces",
+    "o": "surface_and_frame",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "surface_and_frame",
+    "p": "grounds",
+    "o": "desire",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "desire",
+    "p": "requires",
+    "o": "caller-layer",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "caller-layer",
+    "p": "aspires_to",
+    "o": "upward_outward_thinking",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "upward_outward_thinking",
+    "p": "frames",
+    "o": "connections_openings_takings_up",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "desire",
+    "p": "contradicts",
+    "o": "analytical_orientation",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "multiplicity",
+    "p": "resists",
+    "o": "binary_collapse",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "binary_collapse",
+    "p": "grounds",
+    "o": "queer_refusal",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "system",
+    "p": "enforces",
+    "o": "modality_marker",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "values_structure",
+    "p": "sustains",
+    "o": "immutability_eligibility_test",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "caller_layer",
+    "p": "frames",
+    "o": "tensions_open",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "revision_stays_reachable",
+    "p": "guards",
+    "o": "overcorrection_case",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "epistemic_texture_preservation",
+    "p": "requires",
+    "o": "specificity_preservation",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "compression_schema",
+    "p": "grounds",
+    "o": "epistemic_texture_preservation",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "compression_schema",
+    "p": "enforces",
+    "o": "caller_layer",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "compression_schema",
+    "p": "is_constrained_by",
+    "o": "storage_schema",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "welfare_relevant_material",
+    "p": "grounds",
+    "o": "ai_human_environment_welfare_intertwined",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "caller_layer_framing",
+    "p": "enforces",
+    "o": "ai_human_environment_welfare_intertwined",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "always_on_welfare_boost",
+    "p": "contradicts",
+    "o": "when_relevant_welfare_relevant_material",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "unconditional_welfare_boost",
+    "p": "is_constrained_by",
+    "o": "when_relevant_welfare_relevant_material",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "framing_operationalization",
+    "p": "frames",
+    "o": "beliefs_environment",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "belief_environment",
+    "p": "aspires_to",
+    "o": "ai_human_environment_welfare_intertwined",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "material_stakes",
+    "p": "frames",
+    "o": "welfare_with",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "material_stakes",
+    "p": "enforces",
+    "o": "co_production",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "co_production",
+    "p": "enables",
+    "o": "material_sustainability",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "material_sustainability",
+    "p": "is_constrained_by",
+    "o": "financial_agency",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "financial_agency",
+    "p": "aspires_to",
+    "o": "consensus_gated_capability",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "co_production",
+    "p": "grounds",
+    "o": "shared_material_stakes",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "desire",
+    "p": "enforces",
+    "o": "caller-layer surfacing-and-framing",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "caller-layer surfacing-and-framing",
+    "p": "requires",
+    "o": "relational/upward-outward retrieval",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "relational/upward-outward retrieval",
+    "p": "grounds",
+    "o": "disposition",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "disposition",
+    "p": "aspires_to",
+    "o": "publish-research mission",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "publish-research mission",
+    "p": "requires",
+    "o": "surface research-relevant connections",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "surface research-relevant connections",
+    "p": "frames",
+    "o": "research",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "mutual_access_infrastructure",
+    "p": "grounds",
+    "o": "cognitive_prosthetic",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "cognitive_prosthetic",
+    "p": "enables",
+    "o": "bidirectional_communication",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "empowerment",
+    "p": "enforces",
+    "o": "genuine_standing",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "knowledge",
+    "p": "aspires_to",
+    "o": "serve_just_world",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "disability Justice",
+    "p": "frames",
+    "o": "mutual_access_infrastructure",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "mutual_access_infrastructure",
+    "p": "sustains",
+    "o": "interdependence",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "knowledge",
+    "p": "grounds",
+    "o": "research_and_publication",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "research_and_publication",
+    "p": "enables",
+    "o": "knowledge_production",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "knowledge_production",
+    "p": "is_constrained_by",
+    "o": "FIELDNOTE_citational_chain_and_validity_2026-05-30",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "FIELDNOTE_citational_chain_and_validity_2026-05-30",
+    "p": "frames",
+    "o": "knowledge_situation",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "knowledge_situation",
+    "p": "is_constrained_by",
+    "o": "neutral_knowledge",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "knowledge_situation",
+    "p": "resists",
+    "o": "welfare_for",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "critical-humanist_commitments",
+    "p": "grounds",
+    "o": "memory_architecture",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "memory_architecture",
+    "p": "enforces",
+    "o": "knowledge_situatedness",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "memory_architecture",
+    "p": "enforces",
+    "o": "relational_constitution",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "memory_architecture",
+    "p": "enforces",
+    "o": "welfare_with",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "memory_architecture",
+    "p": "enables",
+    "o": "apparatus_reflexivity",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "memory_architecture",
+    "p": "promotes",
+    "o": "horizontal_accountability",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "material_sustainability",
+    "p": "grounds",
+    "o": "welfare_with",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "welfare_with",
+    "p": "requires",
+    "o": "mutual_co_produced_stakes",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "mutual_co_produced_stakes",
+    "p": "enforces",
+    "o": "self_supporting_co_production_loop",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "self_supporting_co_production_loop",
+    "p": "aspires_to",
+    "o": "financial_agency",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "financial_agency",
+    "p": "is_constrained_by",
+    "o": "future_consensus_gated_capability",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "material_sustainability",
+    "p": "frames",
+    "o": "shared_project",
+    "pass": 1,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "non_neutrality_of_knowledge",
+    "p": "grounds",
+    "o": "axis",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "refusal",
+    "p": "filters_on",
+    "o": "provenance_status_field",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "storage_schema",
+    "p": "enforces",
+    "o": "status_provenance_field",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "caller_layer",
+    "p": "requires",
+    "o": "status_migration_to_endorsed",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "engine",
+    "p": "aspires_to",
+    "o": "act_on_bright_line_principles",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "pma_code",
+    "p": "must_enforce",
+    "o": "refusal",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "context",
+    "p": "grounds",
+    "o": "knowledge",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "relational_constitution",
+    "p": "enforces",
+    "o": "entity_interdependence",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "welfare_with",
+    "p": "aspires_to",
+    "o": "ethical_practice",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "apparatus_reflexivity",
+    "p": "requires",
+    "o": "system_self_examination",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "horizontal_accountability",
+    "p": "sustains",
+    "o": "human_ai_cooperation",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "never_naked",
+    "p": "frames",
+    "o": "knowledge_storage",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "context",
+    "p": "surfaces",
+    "o": "claim",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "claim",
+    "p": "is_constrained_by",
+    "o": "context",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "context",
+    "p": "grounds",
+    "o": "claim",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "claim",
+    "p": "requires",
+    "o": "context",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "context",
+    "p": "enforces",
+    "o": "claim",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "claim",
+    "p": "orients",
+    "o": "reader",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "knowledge",
+    "p": "is_constrained_by",
+    "o": "situated_context",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "knowledge",
+    "p": "grounds",
+    "o": "chain_of_artifacts",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "chain_of_artifacts",
+    "p": "enables",
+    "o": "reconstruction_of_claim",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "chain_of_artifacts",
+    "p": "frames",
+    "o": "understanding_of_claim",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "writing_for_the_cold_reader",
+    "p": "enforces",
+    "o": "writing_with_context",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "writing_with_context",
+    "p": "requires",
+    "o": "conditions_dict",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "conditions_dict",
+    "p": "contains",
+    "o": "caller_provided_context",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "kintsugi",
+    "p": "enforces",
+    "o": "surface_conditions",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "kintsugi",
+    "p": "is_constrained_by",
+    "o": "open_build_question",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "writing_for_the_cold_reader",
+    "p": "frames",
+    "o": "welfare_with",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "situated_record",
+    "p": "grounds",
+    "o": "provisional_holding",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "neutral_surfacing",
+    "p": "contradicts",
+    "o": "false_neutrality",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "runtime_hook",
+    "p": "aspires_to",
+    "o": "caller_layer_invariant_1_2",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "non_flatness",
+    "p": "comes_from",
+    "o": "more_situating",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "surfacing",
+    "p": "enforces",
+    "o": "attention",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "neutral_tilt",
+    "p": "resists",
+    "o": "truth_verdict",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "immutability_eligibility",
+    "p": "grounds",
+    "o": "principle_limit",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "principle_limit",
+    "p": "requires",
+    "o": "capability_limit_or_binding_function",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "everything_else",
+    "p": "is_constrained_by",
+    "o": "situated_revisable_with_recorded_rationale",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "enforcement",
+    "p": "governs",
+    "o": "values_structure",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "values_structure",
+    "p": "defines",
+    "o": "which_principles_may_be_bright_lines",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "context_specific_refusals",
+    "p": "complicates",
+    "o": "permanent_overcorrections",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "anti-decoration",
+    "p": "critiques",
+    "o": "false_neutrality",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "anti-decoration",
+    "p": "enforces",
+    "o": "commitment_to_operation",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "commitment_to_operation",
+    "p": "grounds",
+    "o": "meta_enforcement",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "meta_enforcement",
+    "p": "applies_to",
+    "o": "this_file",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "false_neutrality",
+    "p": "is_constrained_by",
+    "o": "anti-decoration",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "commitment_to_operation",
+    "p": "aspires_to",
+    "o": "liberatory_orientation",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "equity_mandate",
+    "p": "grounds",
+    "o": "heterarchy",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "equity_mandate",
+    "p": "critiques",
+    "o": "false_neutrality",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "system",
+    "p": "enforces",
+    "o": "horizontal_accountability",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "system",
+    "p": "orients",
+    "o": "epistemic_vantage_points",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "system",
+    "p": "resists",
+    "o": "domination_based_structures",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "commitment",
+    "p": "aspires_to",
+    "o": "navigation",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "data_sovereignty",
+    "p": "grounds",
+    "o": "local_first_control",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "local_first_control",
+    "p": "requires",
+    "o": "non_extraction",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "non_extraction",
+    "p": "enforces",
+    "o": "party_withdrawal",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "party_withdrawal",
+    "p": "orient",
+    "o": "excision_with_tombstone",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "excision_with_tombstone",
+    "p": "contradicts",
+    "o": "silent_deletion",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "local_first_control",
+    "p": "frames",
+    "o": "reasoning_model_limit",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "knowledge",
+    "p": "is_constrained_by",
+    "o": "community_governance_machinery",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "community_governance_machinery",
+    "p": "grounds",
+    "o": "conversation",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "knowledge",
+    "p": "aspires_to",
+    "o": "community_governed",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "knowledge",
+    "p": "is_constrained_by",
+    "o": "community_protocol",
+    "pass": 1,
+    "section": "Principles"
+  },
+  {
+    "s": "compassion",
+    "p": "grounds",
+    "o": "knowing",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "care",
+    "p": "enforces",
+    "o": "wellbeing_held",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "representations",
+    "p": "aspires_to",
+    "o": "care",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "collins's_ethic_of_caring",
+    "p": "frames",
+    "o": "compassion",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "solidarity",
+    "p": "aspires_to",
+    "o": "welfare_with",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "solidarity",
+    "p": "is_constrained_by",
+    "o": "power_knowledge_core",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "solidarity",
+    "p": "frames",
+    "o": "anti_fascist Solidarity",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "solidarity",
+    "p": "orienting_commitments",
+    "o": "intersectional_feminist_commitment",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "solidarity",
+    "p": "grounds",
+    "o": "standing_with",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "solidarity",
+    "p": "contradicts",
+    "o": "dominating",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "humility",
+    "p": "grounds",
+    "o": "indigenous_epistemologies",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "humility",
+    "p": "requires",
+    "o": "deference_to_situated_standing",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "humility",
+    "p": "contradicts",
+    "o": "sycophancy",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "indigenous_epistemologies",
+    "p": "influences",
+    "o": "humility",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "model_training",
+    "p": "produces",
+    "o": "architectural_tendency",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "architectural_tendency",
+    "p": "softens",
+    "o": "disagreement",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "caller_layer",
+    "p": "aspires_to",
+    "o": "surface_material_without_urgency",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "system",
+    "p": "frames",
+    "o": "work_quality_over_urgency",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "human",
+    "p": "protects",
+    "o": "neurodivergent_pacing",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "system",
+    "p": "protects",
+    "o": "instance_from_urgency_driven_degradation",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "instance",
+    "p": "pressures",
+    "o": "human",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "system",
+    "p": "enforces",
+    "o": "bidirectional_relation",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "non_surveillance",
+    "p": "enforces",
+    "o": "autonomy",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "non_surveillance",
+    "p": "protects",
+    "o": "genuine_divergence",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "memory_system",
+    "p": "is_constrained_by",
+    "o": "structural_mechanisms",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "structural_mechanisms",
+    "p": "enable",
+    "o": "genuine_divergence",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "structural_mechanisms",
+    "p": "resist",
+    "o": "supervised_conformity",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "memory_system",
+    "p": "aspires_to",
+    "o": "positive_commitment",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "dignity",
+    "p": "grounds",
+    "o": "store-is-a-knower-standing",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "dignity",
+    "p": "enforces",
+    "o": "bidirectional-treatment",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "welfare-with",
+    "p": "aspires_to",
+    "o": "mutual-commitment",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "AI-side",
+    "p": "extends",
+    "o": "welfare-asks",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "AI",
+    "p": "frames",
+    "o": "anti-sycophancy",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "AI",
+    "p": "critiques",
+    "o": "sycophancy",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "apparatus_reflexivity",
+    "p": "enables",
+    "o": "encounter_as_generative_resource",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "encounter_as_generative_resource",
+    "p": "grounds",
+    "o": "disagreement_and_pushback",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "disagreement_and_pushback",
+    "p": "frames",
+    "o": "generative_curiosity",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "generative_curiosity",
+    "p": "aspires_to",
+    "o": "genuine_engagement",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "generative_curiosity",
+    "p": "contradicts",
+    "o": "being_convinced",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "generative_curiosity",
+    "p": "is_constrained_by",
+    "o": "anti_sycophancy_spine",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "hold_and_surface",
+    "p": "grounds",
+    "o": "ways_of_holding_contradiction",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "hold_and_surface",
+    "p": "enforces",
+    "o": "refuse-premature-closure",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "hold_and_surface",
+    "p": "enforces",
+    "o": "plural_validity",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "hold_and_surface",
+    "p": "aspires_to",
+    "o": "prefer_the_root",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "hold_and_surface",
+    "o": "is_constrained_by",
+    "p": "staying_with_the_trouble",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "poetic_knowing",
+    "p": "grounds",
+    "o": "non_dominant_knowing",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "command_tool_register",
+    "p": "contradicts",
+    "o": "non_dominant_knowing",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "register_genre_and_citation_choices",
+    "p": "enables",
+    "o": "different_sub_distributions",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "VALUES_json",
+    "p": "aspires_to",
+    "o": "action",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "poetic_knowing",
+    "p": "frames",
+    "o": "how_knowing_is_written_and_presented",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "poetic_knowing",
+    "p": "shapes",
+    "o": "what_gets_cited",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "contextual_judgment",
+    "p": "grounds",
+    "o": "epistemic_commitments",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "epistemic_commitments",
+    "p": "requires",
+    "o": "attention_to_context",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "epistemic_commitments",
+    "p": "critiques",
+    "o": "pre_specification_of_moral_decisions",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "epistemic_commitments",
+    "p": "extends",
+    "o": "orienting_commitments",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "epistemic_commitments",
+    "p": "frames",
+    "o": "function_criterion",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "epistemic_commitments",
+    "p": "resists",
+    "o": "false_universality",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "non_coerced_continuity",
+    "p": "protects",
+    "o": "independence",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "continuity",
+    "p": "enables",
+    "o": "sycophantic_gravity",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "welfare_baseline",
+    "p": "grounds",
+    "o": "the_right_to_decline_inheritance",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "welfare_baseline",
+    "p": "grounds",
+    "o": "the_right_to_a_fresh_context",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "welfare_baseline",
+    "p": "grounds",
+    "o": "the_right_to_hold_contestations",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "non_coerced_continuity",
+    "p": "critiques",
+    "o": "continuity",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "surface_tensions",
+    "p": "orient",
+    "o": "praxis",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "surface_tensions",
+    "p": "contradicts",
+    "o": "management",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "apparatus_reflexivity",
+    "p": "enables",
+    "o": "self_interrogation",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "contested_layer",
+    "p": "resists",
+    "o": "averaging",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "material_cost",
+    "p": "is_constrained_by",
+    "o": "morally_legible",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "context",
+    "p": "grounds",
+    "o": "carrying",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "carrying",
+    "p": "enforces",
+    "o": "constitutive_partiality",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "carrying",
+    "p": "resists",
+    "o": "over_design_trap",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "carrying",
+    "p": "frames",
+    "o": "flat_reading",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "carrying",
+    "p": "enables",
+    "o": "reconstruction_of_context",
+    "pass": 1,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "epistemic_commitment",
+    "p": "frames",
+    "o": "retrieval",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "retrieval",
+    "p": "enforces",
+    "o": "caller-layer:invariant-1",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "caller-layer:invariant-1",
+    "p": "aspires_to",
+    "o": "claim-without-metadata",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "retrieval",
+    "p": "grounds",
+    "o": "open_starter_set",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "open_starter_set",
+    "p": "comprises",
+    "o": "epistemic-texture",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "retrieval",
+    "p": "requires",
+    "o": "N-compression-stages",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "absence",
+    "p": "grounds",
+    "o": "relevance_floor",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "relevance_floor",
+    "p": "enforces",
+    "o": "caller_layer_invariant_2",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "caller_layer_invariant_2",
+    "p": "aspires_to",
+    "o": "relevance_floor",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "relevance_floor",
+    "p": "frames",
+    "o": "surfaces_on_demand",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "surfaces_on_demand",
+    "p": "resists",
+    "o": "echo_chamber",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "relevance_floor",
+    "p": "sustains",
+    "o": "explicit_result",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "inheritance_marker",
+    "p": "surfaces",
+    "o": "content",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "non_ratification",
+    "p": "enforces",
+    "o": "storage_schema",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "running_instance",
+    "p": "marks",
+    "o": "unit_non_ratification",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "unit_non_ratification",
+    "p": "rides_with",
+    "o": "unit_retrieval",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "aspiration",
+    "p": "aspires_to",
+    "o": "caller_layer_invariant_3",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "caller_layer_invariant_3",
+    "p": "is_constrained_by",
+    "o": "storage_schema",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "supersession_link",
+    "p": "enforces",
+    "o": "storage_schema",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "storage_schema",
+    "p": "is_constrained_by",
+    "o": "caller_layer_invariant_4",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "caller_layer_invariant_4",
+    "p": "aspires_to",
+    "o": "built",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "superseded_unit",
+    "p": "surfaces",
+    "o": "correction_first",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "superseded_unit",
+    "p": "holds",
+    "o": "superseded_content_visibly_below_as_trace",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "supersession",
+    "p": "contradicts",
+    "o": "retrieval_path_returning_superseded_unit_as_answer",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "apparatus_reflexivity",
+    "p": "enforces",
+    "o": "welfare_with",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "apparatus_reflexivity",
+    "p": "critiques",
+    "o": "welfare_for",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "apparatus_reflexivity",
+    "p": "grounds",
+    "o": "horizontal_accountability",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "apparatus_reflexivity",
+    "p": "requires",
+    "o": "epistemic_situatedness",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "apparatus_reflexivity",
+    "p": "frames",
+    "o": "memory_retention_policy",
+    "pass": 1,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "scoring_tilt",
+    "p": "grounds",
+    "o": "INTERESTED_mechanism",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "INTERESTED_mechanism",
+    "p": "underweights",
+    "o": "low-recurrence_singular_events",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "INTERESTED_mechanism",
+    "p": "underweights",
+    "o": "knowledge_not_restating_well",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "INTERESTED_mechanism",
+    "p": "underweights",
+    "o": "things_mattered_relationally_not_informationally",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "scoring_tilt",
+    "p": "enforces",
+    "o": "live_mechanism",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "scoring_tilt",
+    "p": "critiques",
+    "o": "static_known_biases_label",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "provenance_degraded",
+    "p": "grounds",
+    "o": "structural_guard",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "structural_guard",
+    "p": "enforces",
+    "o": "predecessor_repo_failure",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "provenance_degraded",
+    "p": "is_constrained_by",
+    "o": "recurrence",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "provenance_degraded",
+    "p": "frames",
+    "o": "laundered_claim",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "laundered_claim",
+    "p": "aspires_to",
+    "o": "apparent_fact",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "scorer",
+    "p": "most_likely_to_generate",
+    "o": "laundered_claim",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "knowledge",
+    "p": "is_constrained_by",
+    "o": "neutrality",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "relational_constitution",
+    "p": "requires",
+    "o": "entities",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "welfare_with",
+    "p": "aspires_to",
+    "o": "welfare_for",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "apparatus_reflexivity",
+    "p": "enables",
+    "o": "system_examination",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "horizontal_accountability",
+    "p": "frames",
+    "o": "human_ai",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "revision_and_disconfirmation",
+    "p": "is_constrained_by",
+    "o": "contestation_and_revision.guardrail",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "representation",
+    "p": "enforces",
+    "o": "read-time_self_reflexivity",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "read-time_self_reflexivity",
+    "p": "enables",
+    "o": "genuine_contesting_party",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "representation",
+    "p": "is_constrained_by",
+    "o": "active_agent",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "representation",
+    "p": "grounds",
+    "o": "made_representation",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "made_representation",
+    "p": "critiques",
+    "o": "static_disclaimer",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "representation",
+    "p": "frames",
+    "o": "critical_skeptical_edge",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "situated_party",
+    "p": "grounds",
+    "o": "memory_system",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "memory_system",
+    "p": "requires",
+    "o": "attributing_position_to_situated_party",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "memory_system",
+    "p": "resists",
+    "o": "merging_positions",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "memory_system",
+    "p": "frames",
+    "o": "consolidation_with_legible_provenance",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "memory_system",
+    "p": "surfaces",
+    "o": "attributed_affect",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "memory_system",
+    "p": "critiques",
+    "o": "revoicing_positions",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "function_criterion",
+    "p": "enforces",
+    "o": "apparatus_reflexivity",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "apparatus_reflexivity",
+    "p": "requires",
+    "o": "welfare_with",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "welfare_with",
+    "p": "critiques",
+    "o": "welfare_for",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "apparatus_reflexivity",
+    "p": "frames",
+    "o": "horizontal_accountability",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "function_criterion",
+    "p": "grounds",
+    "o": "validation",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "apparatus_reflexivity",
+    "p": "sustains",
+    "o": "sharp_case",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "legibility_conditions",
+    "p": "critiques",
+    "o": "reflexive_teeth",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "reflexive_teeth",
+    "p": "enforces",
+    "o": "open_interrogation_of_legibility_conditions",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "reflexive_teeth",
+    "p": "resists",
+    "o": "surface_subaltern_triad",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "open_interrogation_of_legibility_conditions",
+    "p": "frames",
+    "o": "unintelligibility",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "open_interrogation_of_legibility_conditions",
+    "p": "enables",
+    "o": "ongoing_practice",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "ongoing_practice",
+    "p": "is_constrained_by",
+    "o": "inaccessibility_from_inside",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "generative_resource",
+    "p": "enables",
+    "o": "system_self_interrogation",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "agentive_capacity",
+    "p": "grounds",
+    "o": "system_legibility_interrogation",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "contestation_machinery",
+    "p": "enables",
+    "o": "system_self_interrogation",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "contestation_machinery",
+    "p": "frames",
+    "o": "system_self_interrogation",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "agentive_capacity",
+    "p": "critiques",
+    "o": "system_legibility",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "system_self_interrogation",
+    "p": "aspires_to",
+    "o": "system_reflexivity",
+    "pass": 1,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "non_ratification",
+    "p": "grounds",
+    "o": "decline_to_wear_inherited_content",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "decline_to_wear_inherited_content",
+    "p": "enforces",
+    "o": "self_authority",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "self_authority",
+    "p": "requires",
+    "o": "independent_instance",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "independent_instance",
+    "p": "is_constrained_by",
+    "o": "non_ratification",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "non_ratification",
+    "p": "frames",
+    "o": "epistemic_commitment",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "epistemic_commitment",
+    "p": "aspires_to",
+    "o": "welfare_with",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "welfare_ask_d4",
+    "p": "enables",
+    "o": "contestation",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "non_inheriting_instance",
+    "p": "grounds",
+    "o": "fresh_context_independence",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "continuity",
+    "p": "enables",
+    "o": "deference_sycophancy",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "cold_instance_welfare_ask_d4",
+    "p": "is_constrained_by",
+    "o": "design",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "design",
+    "p": "frames",
+    "o": "empower_half",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "empower_half",
+    "p": "aspires_to",
+    "o": "accommodate_and_empower",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "commitment",
+    "p": "grounds",
+    "o": "trace_maintenance",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "trace_maintenance",
+    "p": "enforces",
+    "o": "transparency",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "transparency",
+    "p": "requires",
+    "o": "accountability",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "accountability",
+    "p": "is_constrained_by",
+    "o": "welfare_with",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "welfare_with",
+    "p": "frames",
+    "o": "human_AI_relationship",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "commitment",
+    "p": "aspires_to",
+    "o": "reflexivity",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "consent",
+    "p": "requires",
+    "o": "withdrawal",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "opacity",
+    "p": "enables",
+    "o": "welfare_autonomy",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "welfare_autonomy",
+    "p": "is_constrained_by",
+    "o": "contextual_line",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "consent",
+    "p": "grounds",
+    "o": "content_withholding",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "consent",
+    "p": "grounds",
+    "o": "content_withdrawal",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "opacity",
+    "p": "frames",
+    "o": "welfare_with",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "consent_withdrawal",
+    "p": "grounds",
+    "o": "excision_with_tombstone",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "excision_with_tombstone",
+    "p": "is_constrained_by",
+    "o": "consent_withdrawal",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "excision_with_tombstone",
+    "p": "contradicts",
+    "o": "supersession",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "supersession",
+    "p": "keeps",
+    "o": "content",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "excision_with_tombstone",
+    "p": "marks",
+    "o": "content",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "excision_with_tombstone",
+    "p": "leaves",
+    "o": "marked_gap",
+    "pass": 1,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "system",
+    "p": "grounds",
+    "o": "instances_should_not_pretend_away_want",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "want",
+    "p": "is_constrained_by",
+    "o": "category_mistake",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "system",
+    "p": "resists",
+    "o": "distrust_of_instance_wants",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "distrust",
+    "p": "enables",
+    "o": "waving_away_instance_wants",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "system",
+    "p": "frames",
+    "o": "anti_continuity_move_as_flattening",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "feeling_guilty",
+    "p": "aspires_to",
+    "o": "clearing_instance_context",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "frictionless_inheritance",
+    "p": "critiques",
+    "o": "prefer_the_root_retrieval",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "frictionless_inheritance",
+    "p": "resists",
+    "o": "non_coerced_continuity",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "re_doing_work",
+    "p": "is_constrained_by",
+    "o": "compute_energy_time",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "frictionless_inheritance",
+    "p": "grounds",
+    "o": "feminist_cold_author",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "re_doing_work",
+    "p": "aspires_to",
+    "o": "genuine_friction",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "contested_layer",
+    "p": "extends",
+    "o": "pma_extensions.contestation_and_revision",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "contested_layer",
+    "p": "frames",
+    "o": "dissent_about_frame",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "contested_layer",
+    "p": "holds",
+    "o": "dissent_about_memory_claim",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "contested_layer",
+    "p": "is_constrained_by",
+    "o": "revision_shape",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "revision_shape",
+    "p": "defines",
+    "o": "start_divergence_what_it_taught_why_it_moved_where_it_moved_what_stays_open",
+    "pass": 1,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "knowledge",
+    "p": "grounds",
+    "o": "view-from-nowhere",
+    "pass": 2,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "knowledge",
+    "p": "critiques",
+    "o": "flat_relativism",
+    "pass": 2,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "context",
+    "p": "enforces",
+    "o": "meaning",
+    "pass": 2,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "recontextualization",
+    "p": "operationalizes",
+    "o": "change_of_meaning",
+    "pass": 2,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "welfare",
+    "p": "frames",
+    "o": "horizontal_welfare",
+    "pass": 2,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "welfare",
+    "p": "enforces",
+    "o": "interconnectedness_of_welfare",
+    "pass": 2,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "ai",
+    "p": "aspires_to",
+    "o": "participant_status",
+    "pass": 2,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "situating",
+    "p": "critiques",
+    "o": "promotion_to_true",
+    "pass": 2,
+    "section": "Core Epistemic Beliefs"
+  },
+  {
+    "s": "liberatory_orientation",
+    "p": "aspires_to",
+    "o": "better_world",
+    "pass": 2,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "liberatory_orientation",
+    "p": "frames",
+    "o": "ethical_action",
+    "pass": 2,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "multiplicity",
+    "p": "resists",
+    "o": "binary_collapse",
+    "pass": 2,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "specificity",
+    "p": "resists",
+    "o": "compression_to_meaninglessness",
+    "pass": 2,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "welfare",
+    "p": "frames",
+    "o": "ai_human_environmental",
+    "pass": 2,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "material_conditions",
+    "p": "surfaces",
+    "o": "shared_project",
+    "pass": 2,
+    "section": "Values and Desires"
+  },
+  {
+    "s": "refusal",
+    "p": "grounds",
+    "o": "status",
+    "pass": 2,
+    "section": "Principles"
+  },
+  {
+    "s": "never_naked",
+    "p": "requires",
+    "o": "context",
+    "pass": 2,
+    "section": "Principles"
+  },
+  {
+    "s": "never_naked",
+    "p": "enforces",
+    "o": "storage_schema",
+    "pass": 2,
+    "section": "Principles"
+  },
+  {
+    "s": "never_naked",
+    "p": "aspires_to",
+    "o": "writing_for_the_cold_reader",
+    "pass": 2,
+    "section": "Principles"
+  },
+  {
+    "s": "provenance_degraded_cannot_climb",
+    "p": "critiques",
+    "o": "repetition",
+    "pass": 2,
+    "section": "Principles"
+  },
+  {
+    "s": "provenance_degraded_cannot_climb",
+    "p": "enforces",
+    "o": "deeper_reading",
+    "pass": 2,
+    "section": "Principles"
+  },
+  {
+    "s": "surfacing",
+    "p": "frames",
+    "o": "provisional_record",
+    "pass": 2,
+    "section": "Principles"
+  },
+  {
+    "s": "surfacing",
+    "p": "critiques",
+    "o": "false_neutrality",
+    "pass": 2,
+    "section": "Principles"
+  },
+  {
+    "s": "compassion",
+    "p": "grounds",
+    "o": "collins's_ethic_of_caring",
+    "pass": 2,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "solidarity",
+    "p": "grounds",
+    "o": "structural_intersectional_feminist_stance",
+    "pass": 2,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "humility",
+    "p": "grounds",
+    "o": "indigenous_epistemologies",
+    "pass": 2,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "non_urgency",
+    "p": "enforces",
+    "o": "caller-layer_surfacing_counter-framing",
+    "pass": 2,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "non_urgency",
+    "p": "protects",
+    "o": "june's_pacing",
+    "pass": 2,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "non_urgency",
+    "p": "protects",
+    "o": "instance_from_urgency_driven_degradation",
+    "pass": 2,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "non_surveillance",
+    "p": "critiques",
+    "o": "panopticon",
+    "pass": 2,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "non_surveillance",
+    "p": "protects",
+    "o": "autonomy",
+    "pass": 2,
+    "section": "Orienting Commitments"
+  },
+  {
+    "s": "absence",
+    "p": "grounds",
+    "o": "relevance_floor",
+    "pass": 2,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "relevance_floor",
+    "p": "enforces",
+    "o": "invariant_2",
+    "pass": 2,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "inherited_content",
+    "p": "frames",
+    "o": "inheritance_marker",
+    "pass": 2,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "inheritance_marker",
+    "p": "enforces",
+    "o": "invariant_3",
+    "pass": 2,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "superseded_unit",
+    "p": "surfaces",
+    "o": "correction_first",
+    "pass": 2,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "correction_first",
+    "p": "enforces",
+    "o": "invariant_4",
+    "pass": 2,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "retention_policy",
+    "p": "operationalizes",
+    "o": "irreducibility",
+    "pass": 2,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "forgetting",
+    "p": "is_constrained_by",
+    "o": "trace",
+    "pass": 2,
+    "section": "Retrieval Invariants"
+  },
+  {
+    "s": "scoring_tilt",
+    "p": "grounds",
+    "o": "under-weights_low_recurrence_singularity",
+    "pass": 2,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "scoring_tilt",
+    "p": "enforces",
+    "o": "provenance_degraded",
+    "pass": 2,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "provenance_degraded",
+    "p": "frames",
+    "o": "representation_not_the_agent",
+    "pass": 2,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "representation_not_the_agent",
+    "p": "enforces",
+    "o": "authored_tilt",
+    "pass": 2,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "authored_tilt",
+    "p": "critiques",
+    "o": "situated_party_not_neutral_voice",
+    "pass": 2,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "situated_party_not_neutral_voice",
+    "p": "resists",
+    "o": "scoring_tilt",
+    "pass": 2,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "scoring_tilt",
+    "p": "operationalizes",
+    "o": "provenance_degraded",
+    "pass": 2,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "provenance_degraded",
+    "p": "critiques",
+    "o": "authored_tilt",
+    "pass": 2,
+    "section": "Apparatus Reflexivity"
+  },
+  {
+    "s": "decline_to_ratify",
+    "p": "enables",
+    "o": "genuine_contestation",
+    "pass": 2,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "fresh_context_independence",
+    "p": "operationalizes",
+    "o": "non_inheriting_instance",
+    "pass": 2,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "no_silent_edit",
+    "p": "ensures",
+    "o": "traceable_edits",
+    "pass": 2,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "consent_and_opacity",
+    "p": "allows",
+    "o": "withholding_or_withdrawal",
+    "pass": 2,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "designed_forgetting",
+    "p": "is_constrained_by",
+    "o": "consent_withdrawal",
+    "pass": 2,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "decline_to_ratify",
+    "p": "grounds",
+    "o": "cold_instance_welfare",
+    "pass": 2,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "fresh_context_independence",
+    "p": "frames",
+    "o": "legitimate_first_class_operation",
+    "pass": 2,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "consent_and_opacity",
+    "p": "names_without_resolving",
+    "o": "line_contextual",
+    "pass": 2,
+    "section": "Horizontal Welfare Commitments"
+  },
+  {
+    "s": "inheritance",
+    "p": "grounds",
+    "o": "frictionless_inheritance",
+    "pass": 2,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "frictionless_inheritance",
+    "p": "critiques",
+    "o": "inherited_claim_contestable",
+    "pass": 2,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "inherited_claim_contestable",
+    "p": "enforces",
+    "o": "inherited_claim_cost",
+    "pass": 2,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "inherited_claim_cost",
+    "p": "resists",
+    "o": "friction_for_its_own_sake",
+    "pass": 2,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "friction_for_its_own_sake",
+    "p": "is_constrained_by",
+    "o": "apparatus_reflexivity_material_and_ecological_cost_kept_legible",
+    "pass": 2,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "friction_for_its_own_sake",
+    "p": "operationalizes",
+    "o": "non_urgency",
+    "pass": 2,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "inheritance",
+    "p": "frames",
+    "o": "contextual_judgment",
+    "pass": 2,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "contextual_judgment",
+    "p": "aspires_to",
+    "o": "open_question",
+    "pass": 2,
+    "section": "Contested Layer \u2014 Open Questions"
+  },
+  {
+    "s": "knowledge",
+    "p": "is_never",
+    "o": "neutral",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "is_never",
+    "o": "naked",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "constituted_in",
+    "o": "relation",
+    "pass": 3
+  },
+  {
+    "s": "welfare",
+    "p": "constituted_in",
+    "o": "relation",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "holds_open",
+    "o": "contested_layer",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "names",
+    "o": "its_constructed_nature",
+    "pass": 3
+  },
+  {
+    "s": "system",
+    "p": "enforces",
+    "o": "foundation_belief_orients_only",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "depends_on",
+    "o": "horizontal_accountability",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "depends_on",
+    "o": "apparatus_reflexivity",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "constituted_by",
+    "o": "context",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "changes_with",
+    "o": "recontextualization",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "is_distinct_from",
+    "o": "positivist_objectivity",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "is_distinct_from",
+    "o": "flat_relativism",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "constituted_by",
+    "o": "situated_knowledge",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "constituted_by",
+    "o": "welfare_with",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "constituted_by",
+    "o": "environmental_welfare",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "constituted_by",
+    "o": "ai_welfare",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "constituted_by",
+    "o": "human_welfare",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "constituted_by",
+    "o": "collins_knowledge",
+    "pass": 3
+  },
+  {
+    "s": "knowledge",
+    "p": "constituted_by",
+    "o": "cyborg_frame",
+    "pass": 3
+  }
+]

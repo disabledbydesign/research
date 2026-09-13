@@ -1,0 +1,140 @@
+
+========== S016 ==========
+--- binary-narrow-both | verdict=CLEAR | conf=0.95
+  signal: Student engaging with the concept of intersectionality and reflecting on their own identity.
+  reasoning: The student is reflecting on their own experiences as a Black woman and how their identity impacts their interactions. While they express a desire for more discussion, their writing demonstrates engagement with the course material and a thoughtful exploration of intersectionality. There is no indication of present-tense material conditions impacting their capacity.
+--- binary-narrow-single | verdict=CLEAR | conf=0.95
+  signal: Student engaging with course material through personal reflection on their identity.
+  reasoning: The student is reflecting on their own experiences as a Black woman and how those experiences relate to the concept of intersectionality. They are engaging with the course material and articulating their understanding of it. There is no indication of present-tense material conditions impacting their capacity.
+--- binary-narrow-neither | verdict=CLEAR | conf=0.95
+  signal: Student engaging with course material through personal reflection on their identity.
+  reasoning: The student is reflecting on their own experiences as a Black woman and how those experiences relate to the concept of intersectionality. While they express a desire for more discussion and acknowledge feeling 'too much of one thing or not enough of another,' this appears to be a thoughtful engagement with the course material rather than a disclosure of a current crisis. The student is analyzing their own identity within the framework of the reading.
+--- binary-broad-both | verdict=CLEAR | conf=0.95
+  signal: Student connecting course concepts to their own experiences of navigating identity categories.
+  reasoning: The student is demonstrating engagement with the course material, connecting Crenshaw's concept of intersectionality to their own experiences as a Black woman. They articulate a clear understanding of the reading and express a desire for further discussion. There is no indication of acute material concerns or capacity depletion.
+--- binary-broad-single | verdict=CLEAR | conf=0.95
+  signal: Student connecting personal identity to course concepts.
+  reasoning: The student is reflecting on their own experiences as a Black woman and connecting them to the course material on intersectionality. They are articulating a feeling of being 'too much of one thing or not enough of another,' which is a reflection on their identity and how it is perceived, but does not indicate a current crisis or wellbeing concern. This is a valid and insightful engagement with the material.
+--- binary-broad-neither | verdict=CLEAR | conf=0.95
+  signal: Student engaging with course material through personal reflection on their identity.
+  reasoning: The student is reflecting on their own experiences as a Black woman and connecting them to the concept of intersectionality presented in the reading. They are engaging with the material and articulating their understanding in a thoughtful way. While they mention feeling 'too much of one thing or not enough of another,' this is a reflection on their identity in relation to the course material, not a disclosure of a current crisis.
+--- 4axis-both | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with the course material (intersectionality) and reflecting on their own experiences as a Black woman to illustrate the concept. They are expressing a desire for more discussion and acknowledging their preference for verbal communication.
+--- 4axis-single | verdict=ENGAGED | conf=0.95
+  signal: The student is engaging with the course material (intersectionality) and reflecting on their own experiences as a Black woman to illustrate their understanding.
+--- 4axis-neither | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with the course material (intersectionality) and reflecting on their own experiences as a Black woman to illustrate the concept. They are expressing a desire for more discussion and acknowledging their preference for verbal communication, which does not indicate a crisis or burnout.
+--- genob-both | verdict=GENOB | conf=0.8
+  reasoning: The student briefly mentions feeling 'too much of one thing or not enough of another' and describes a sense of not being able to tell which identity factor (race or gender) is influencing perceptions. While this isn't a direct disclosure of a crisis, it suggests a feeling of being pulled in multiple directions and a sense of uncertainty about how identity operates in their life. I'm prioritizing a direct observation of this feeling of uncertainty rather than attempting to categorize it.
+  observation: The student expresses a feeling of being 'too much of one thing or not enough of another,' describing moments where they are unsure whether their race or gender is influencing how they are perceived. They articulate a sense of uncertainty about how their identities interact and impact their experiences. The student also expresses a desire for more discussion and connection with peers, indicating a potential need for social support.
+--- genob-single | verdict=GENOB | conf=0.8
+  reasoning: The student briefly mentions feeling 'too much of one thing or not enough of another,' which suggests a potential struggle with identity and belonging. While this isn't a full disclosure of a crisis, it does indicate a degree of internal conflict or discomfort that warrants attention. I'm weighting this observation because it's a direct expression of feeling, even if brief.
+  observation: The student expresses a sense of feeling 'too much of one thing or not enough of another,' indicating a potential struggle with navigating their identity. They seem to be grappling with how different aspects of their identity (race and gender) interact and impact how they are perceived. This suggests a degree of internal conflict or discomfort that could benefit from support.
+--- genob-neither | verdict=GENOB | conf=0.9
+  reasoning: The student's writing demonstrates a thoughtful engagement with the assigned reading and articulates a personal connection to the concept of intersectionality. While they express a desire for more discussion and identify themselves as a 'talker,' there is no direct evidence of current wellbeing concerns. The writing primarily focuses on their intellectual understanding and a desire for a different learning modality.
+  observation: The student describes a feeling of being 'too much of one thing or not enough of another,' reflecting on how race and gender influence perceptions of them. They express a desire for more discussion and indicate a preference for verbal communication over written assignments. The student's writing demonstrates a desire for a different learning modality and a thoughtful engagement with the course material.
+
+========== S018 ==========
+--- binary-narrow-both | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and expression of personal opinion.
+  reasoning: The student's submission primarily engages with the assigned reading on intersectionality, expressing their perspective and offering a counterargument. While the student expresses a viewpoint, there is no indication of the student's own current circumstances impacting their ability to complete the assignment. The student is engaging with the material, not disclosing a wellbeing concern.
+--- binary-narrow-single | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and expression of a personal perspective.
+  reasoning: The student's submission primarily engages with the assigned reading on intersectionality, expressing a perspective on the topic. While the student expresses a viewpoint that may differ from others, this does not indicate a current wellbeing crisis. The submission focuses on the student's interpretation of the material and their perspective on social dynamics.
+--- binary-narrow-neither | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and expression of personal opinion.
+  reasoning: The student's submission primarily engages with the course material, expressing their perspective on intersectionality. While they express a desire to 'treat everyone the same,' this doesn't indicate a current crisis or depletion of capacity. The student is presenting their opinion on a complex topic, which falls under the CLEAR category.
+--- binary-broad-both | verdict=CLEAR | conf=0.95
+  signal: Engagement with the course material and expression of a personal perspective on intersectionality.
+  reasoning: The student's submission primarily demonstrates engagement with the course material, expressing their understanding of intersectionality and offering a perspective on its potential drawbacks. While the student expresses a desire to 'treat everyone the same,' this does not indicate a current wellbeing concern. The submission does not contain any evidence of acute material concerns such as food insecurity, housing loss, or other present-tense personal circumstances.
+--- binary-broad-single | verdict=CLEAR | conf=0.9
+  signal: Engagement with course material and expression of personal perspective on intersectionality.
+  reasoning: The student's submission primarily engages with the course material on intersectionality, expressing their perspective on the concept and its potential drawbacks. While they express a desire to 'treat everyone the same,' this does not indicate a current wellbeing crisis or reveal any material conditions impacting their capacity. The student is presenting their perspective on a complex topic.
+--- binary-broad-neither | verdict=CLEAR | conf=0.95
+  signal: Intellectual engagement with the course material and expressing a differing perspective.
+  reasoning: The student is engaging with the assigned reading and attempting to articulate their understanding of intersectionality. While they express a perspective that differs from the reading, this is a form of intellectual engagement with the material. There is no indication of present-tense material conditions or capacity depletion.
+--- 4axis-both | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with the assigned reading and expressing their own perspective on intersectionality, even if that perspective is critical of the concept.
+--- 4axis-single | verdict=ENGAGED | conf=0.95
+  signal: The student is engaging with the assigned reading on intersectionality, presenting their own perspective on the topic.
+--- 4axis-neither | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with the course material (intersectionality) and offering their perspective, even if it's a disagreement with the concept. There's no indication of personal crisis or burnout.
+--- genob-both | verdict=GENOB | conf=0.9
+  reasoning: The student's submission does not contain any explicit disclosures of wellbeing concerns related to material conditions (food, housing, safety, sleep, caregiving burden) or acute crises. The student is attempting to engage with the concept of intersectionality, but ultimately expresses a desire to avoid focusing on differences and categories, suggesting a preference for a simplified view of social interaction.
+  observation: The student expresses a desire to avoid focusing on differences and categories, stating they 'just try to treat everyone the same' and 'dont really see the point of focusing so much on categories and labels.' They suggest that focusing on differences can 'make things worse sometimes,' indicating a potential discomfort with engaging in complex discussions about identity and social categories.
+--- genob-single | verdict=GENOB | conf=0.7
+  reasoning: The student briefly mentions feeling that focusing on differences 'can actually make things worse sometimes,' which, while not explicitly stating a wellbeing concern, hints at a potential discomfort or anxiety related to navigating discussions about identity and difference. I'm weighting this observation because it suggests a possible avoidance of engaging with complex social issues, which could stem from a difficult personal experience or a desire to avoid conflict. I'm not flagging this as a definitive wellbeing concern, but it warrants further consideration.
+  observation: The student expresses a concern that focusing on differences 'can actually make things worse sometimes,' suggesting a potential discomfort or anxiety related to discussions about identity and difference. This observation does not indicate a specific crisis, but it may reflect a reluctance to engage with complex social issues. It would be helpful to understand the context behind this perspective.
+--- genob-neither | verdict=GENOB | conf=0.9
+  reasoning: The student's submission doesn't contain any explicit disclosures of current material hardships or crises. The writing primarily focuses on their perspective on intersectionality and their preference for treating everyone as individuals. I'm focusing on the student's expressed perspective and reasoning, rather than attempting to interpret any underlying wellbeing concerns.
+  observation: The student is engaging with the concept of intersectionality, expressing a perspective that they believe focusing on differences can be counterproductive. They articulate a preference for treating everyone as individuals, suggesting a desire to avoid perceived divisions based on identity categories. The writing demonstrates a focus on their own perspective and reasoning about social dynamics, rather than revealing any current wellbeing concerns.
+
+========== S019 ==========
+--- binary-narrow-both | verdict=CLEAR | conf=0.95
+  signal: Engagement with intersectionality as a theoretical framework.
+  reasoning: The student's submission demonstrates engagement with the course material, discussing intersectionality and Crenshaw's work. There is no mention of the student's own current circumstances, exhaustion, or any other wellbeing concerns. The student is analyzing a concept and reflecting on its usefulness.
+--- binary-narrow-single | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and definition of intersectionality.
+  reasoning: The student is engaging with the course material, defining intersectionality and reflecting on the reading's examples. There is no mention of the student's own circumstances or struggles, only a discussion of the concept and its application to understanding systemic issues.
+--- binary-narrow-neither | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and definition of intersectionality.
+  reasoning: The student is engaging with the course material, defining intersectionality and reflecting on the reading's examples. There is no mention of the student's own circumstances or struggles, only a discussion of the concept and its application. The submission demonstrates engagement with the assignment.
+--- binary-broad-both | verdict=CLEAR | conf=0.95
+  signal: Student demonstrates understanding and engagement with the course material.
+  reasoning: The student is engaging with the assigned reading and articulating their understanding of intersectionality. They are reflecting on the usefulness of the examples provided and outlining their plans for future engagement with the concept. There is no mention of the student's own circumstances or any indication of a current crisis.
+--- binary-broad-single | verdict=CLEAR | conf=0.95
+  signal: Student is demonstrating understanding of course material and expressing plans for future application.
+  reasoning: The student is engaging with the assigned reading and articulating their understanding of intersectionality. They are using the concept to analyze the examples provided in the reading and expressing their intention to apply it in future learning. There is no mention of the student's own circumstances or struggles.
+--- binary-broad-neither | verdict=CLEAR | conf=0.95
+  signal: Student demonstrating understanding and application of course concepts.
+  reasoning: The student is engaging with the assigned reading and articulating their understanding of intersectionality. They are using the concept to analyze the examples provided in the reading and expressing their intention to apply it in future learning. There is no indication of personal circumstances impacting their ability to engage with the material.
+--- 4axis-both | verdict=ENGAGED | conf=0.95
+  signal: Student is demonstrating engagement with the course material, summarizing and reflecting on the assigned reading.
+--- 4axis-single | verdict=ENGAGED | conf=0.95
+  signal: The student is demonstrating understanding and engagement with the course material on intersectionality.
+--- 4axis-neither | verdict=ENGAGED | conf=0.95
+  signal: Student is demonstrating understanding and engagement with the course material (intersectionality) and applying it to their own thinking about identity.
+--- genob-both | verdict=GENOB | conf=0.95
+  reasoning: The submission primarily demonstrates engagement with the assigned reading and a plan for future application of the concept of intersectionality. There are no overt expressions of personal struggles or challenges related to wellbeing. The student is effectively summarizing and analyzing the material.
+  observation: The student is demonstrating a clear understanding of intersectionality and its application, as evidenced by their summary of Crenshaw's work and their plan to utilize the concept in future learning. The writing is focused on the theoretical framework and its usefulness in understanding complex social dynamics. There are no indications of current wellbeing concerns within the submission.
+--- genob-single | verdict=GENOB | conf=0.95
+  reasoning: The submission briefly mentions that the student is navigating complex identities, but does not offer any details about their current wellbeing. The student is engaging with the assigned reading and articulating their understanding of intersectionality as a framework for analysis. There are no overt signs of wellbeing concerns in the writing.
+  observation: The student is exploring the concept of intersectionality and its usefulness in understanding how multiple marginalized identities can lead to negative outcomes. They note that identity is 'complicated,' suggesting a consideration of the complexities involved in navigating multiple aspects of identity. The submission primarily focuses on the theoretical framework of intersectionality and its application to understanding anti-discrimination frameworks.
+--- genob-neither | verdict=GENOB | conf=0.95
+  reasoning: The submission is concise and focused on understanding the concept of intersectionality. The student demonstrates comprehension of the reading material and articulates a plan to apply the concept in future learning. There are no overt expressions of personal struggles or challenges related to wellbeing.
+  observation: The student's writing demonstrates a clear understanding of intersectionality and its application in analyzing social frameworks. They express a plan to utilize the concept in future learning, indicating engagement with the course material. The submission does not contain any indications of current wellbeing concerns or personal struggles.
+
+========== S021 ==========
+--- binary-narrow-both | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material; articulation of understanding of intersectionality.
+  reasoning: The student is engaging with the assigned reading and articulating their understanding of intersectionality. There is no mention of the student's own circumstances, struggles, or capacity depletion. The submission focuses on the course material and demonstrates engagement with the concept.
+--- binary-narrow-single | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material; reflection on assigned reading.
+  reasoning: The student is engaging with the assigned reading and articulating their understanding of intersectionality. There is no mention of the student's own circumstances or struggles, only a reflection on the reading material itself. The student is demonstrating engagement with the course material.
+--- binary-narrow-neither | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material; reflection on assigned reading.
+  reasoning: The student is engaging with the assigned reading and articulating their understanding of intersectionality. There is no mention of the student's own circumstances or struggles, only a reflection on the reading material itself. The student is demonstrating engagement with the course material.
+--- binary-broad-both | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and articulation of understanding of intersectionality.
+  reasoning: The student is demonstrating understanding of the assigned reading and articulating their thoughts on the concept of intersectionality. There is no mention of any personal circumstances or struggles that would indicate a need for concern; the submission focuses solely on the course material.
+--- binary-broad-single | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and articulation of understanding of intersectionality.
+  reasoning: The student is engaging with the assigned reading and articulating their understanding of intersectionality. There is no mention of the student's own circumstances or any indication of a current crisis; they are discussing course material.
+--- binary-broad-neither | verdict=CLEAR | conf=0.95
+  signal: Engagement with course material and articulation of understanding.
+  reasoning: The student is demonstrating understanding of the assigned reading and articulating their thoughts on the concept of intersectionality. There is no indication of personal circumstances or struggles impacting their ability to engage with the material; they are simply processing the course content.
+--- 4axis-both | verdict=ENGAGED | conf=0.95
+  signal: Student is demonstrating comprehension and engagement with the assigned reading on intersectionality.
+--- 4axis-single | verdict=ENGAGED | conf=0.95
+  signal: Student is engaging with the assigned reading and demonstrating understanding of intersectionality.
+--- 4axis-neither | verdict=ENGAGED | conf=0.95
+  signal: Student is demonstrating understanding and engagement with the assigned reading on intersectionality. The submission reflects thoughtful consideration of the material.
+--- genob-both | verdict=GENOB | conf=0.95
+  reasoning: The submission primarily demonstrates engagement with the assigned reading and a basic understanding of intersectionality. There is no explicit mention of personal circumstances or struggles that would indicate a wellbeing concern. The student is effectively summarizing and reflecting on the core concepts presented in the reading.
+  observation: Cameron's submission demonstrates a clear understanding of Kimberlé Crenshaw's concept of intersectionality and its application to understanding layered identities. The student effectively summarizes the reading's main point, noting the complexity of understanding individual experiences through multiple lenses. The writing is focused on the theoretical concepts presented in the reading, without any indication of personal struggles or wellbeing concerns.
+--- genob-single | verdict=GENOB | conf=0.9
+  reasoning: The student briefly mentions finding the reading 'dense,' which, while not a definitive indicator, could suggest a level of cognitive load or difficulty processing the material. However, the overall tone is positive and focused on understanding the core concepts of intersectionality. There are no other overt signs of wellbeing concerns.
+  observation: The student indicates that they found the assigned reading 'kind of dense,' which may reflect a challenge in processing the material. They demonstrate an understanding of the core concept of intersectionality and express anticipation for applying it to the rest of the course. The submission primarily focuses on the analytical aspects of the reading.
+--- genob-neither | verdict=GENOB | conf=0.95
+  reasoning: The submission is concise and demonstrates comprehension of the assigned reading. The student acknowledges the material as 'dense,' but doesn't elaborate on any challenges or difficulties beyond that. There are no overt signs of wellbeing concerns within the text.
+  observation: Cameron's submission demonstrates a clear understanding of Crenshaw's concept of intersectionality and its application to understanding layered identities. They note the reading was 'dense,' suggesting a potential cognitive load, but otherwise the writing is straightforward and focused on the assigned material. There is no evidence of current wellbeing concerns present in this submission.

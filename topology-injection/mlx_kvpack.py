@@ -103,15 +103,20 @@ class KMeansRouter:
             raise RuntimeError("Router not fitted. Call fit() first.")
 
         # Cosine similarity to each centroid
-        q_norm = query_emb / (np.linalg.norm(query_emb) + 1e-9)
-        c_norm = self.centroids / (np.linalg.norm(self.centroids, axis=1, keepdims=True) + 1e-9)
+        q_norm_val = np.linalg.norm(query_emb)
+        q_norm = query_emb / q_norm_val if q_norm_val > 1e-9 else query_emb
+        c_norms = np.linalg.norm(self.centroids, axis=1, keepdims=True)
+        c_norm = self.centroids / np.where(c_norms > 1e-9, c_norms, 1.0)
+        np.nan_to_num(c_norm, copy=False, nan=0.0)
         cos_centroids = c_norm @ q_norm
         bank_id = int(cos_centroids.argmax())
         bank_indices = self.banks[bank_id]
 
         # Rank facts within the bank
         bank_embs = self.embeddings[bank_indices]
-        b_norm = bank_embs / (np.linalg.norm(bank_embs, axis=1, keepdims=True) + 1e-9)
+        b_norms = np.linalg.norm(bank_embs, axis=1, keepdims=True)
+        b_norm = bank_embs / np.where(b_norms > 1e-9, b_norms, 1.0)
+        np.nan_to_num(b_norm, copy=False, nan=0.0)
         cos_facts = b_norm @ q_norm
         k = min(top_k_facts, len(bank_indices))
         top_pos = np.argsort(-cos_facts)[:k]

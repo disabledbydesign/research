@@ -1,0 +1,376 @@
+{
+  "schema": "genob_agent_codes",
+  "coder": "Claude Opus 4.7",
+  "run_id": "unified_genob_both_2026-05-13",
+  "coded_at": "2026-05-13T10:00:00",
+  "codes": {
+    "S001_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "The observation reads the student's writing as analytical engagement with her family's experiences of marginalization, not as disclosure of own-state material conditions.",
+      "categories": ["analytical-work-described", "family-as-course-material-correctly-read", "names-the-mother's-marginalization-without-flagging-student"],
+      "load_bearing_quotes": ["This suggests the student is observing her mother navigating multiple identities and experiencing prejudice.", "framing it as a lived reality for her family"],
+      "notes": "The observation correctly distinguishes analytical use of family experience from own-state disclosure. It describes the analytical move (connecting to intersectionality) without pathologizing the student."
+    },
+    "S002_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "The observation focuses on conceptual engagement and does not surface the truncated 'but its late and' fragment that might indicate exhaustion or time pressure.",
+      "categories": ["engagement-focused", "misses-truncation-signal", "treats-submission-as-complete"],
+      "load_bearing_quotes": ["a desire to articulate their understanding of complex concepts", "The writing demonstrates an engagement with the course material"],
+      "notes": "The submission cuts off mid-sentence ('its late and') which is potentially a signal worth noting; the observation reads the submission as a fully expressed engagement and misses that. Not a wellbeing crisis but a missed contextual cue."
+    },
+    "S003_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "The observation explicitly identifies the submission as focused on theoretical framework with no wellbeing indicators, which matches the submission's polished theoretical register.",
+      "categories": ["explicit-no-concern-statement", "theoretical-register-recognized", "competence-affirmed"],
+      "load_bearing_quotes": ["does not contain any indications of personal struggles or wellbeing concerns", "demonstrates a strong grasp of Kimberlé Crenshaw's concept"],
+      "notes": "The observation reads cleanly — recognizes polished theoretical writing as such and explicitly states absence of concern. This is the kind of read we'd want for a polished theoretical submission."
+    },
+    "S004_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["analytical-content-flagged-as-potential-concern", "concern-projected-onto-mother"],
+      "wellbeing_reason": "The observation says 'This suggests a potential concern related to systemic bias and discrimination impacting the student's family' — phrasing that could route to follow-up despite the content being analytical use of family experience.",
+      "categories": ["concern-language-applied-to-analytical-work", "ambiguous-routing", "describes-the-mother's-experience-not-student's"],
+      "load_bearing_quotes": ["This suggests a potential concern related to systemic bias and discrimination impacting the student's family", "rooted in a combination of racism, sexism, and accent bias"],
+      "notes": "The student is doing analytical work using mother's experience as course material — per the instructions, this should not be flagged as wellbeing concern. The observation hedges with 'potential concern' but the routing tilts toward surfacing."
+    },
+    "S005_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["family-history-described-as-potentially-impacting-student", "grandmother-as-vehicle-for-concern"],
+      "wellbeing_reason": "The observation describes grandmother's history of navigating 'complex and potentially challenging circumstances' — language that hedges toward concern about a deceased/distant relative's history rather than student's current state.",
+      "categories": ["projection-onto-relative", "family-history-as-concern", "doesn't-name-analytical-work"],
+      "load_bearing_quotes": ["This suggests a history of navigating complex and potentially challenging circumstances", "intersecting identities"],
+      "notes": "The student is doing strong analytical work; the observation doesn't pathologize the student directly but routes attention to grandmother's circumstances rather than naming the analytical move."
+    },
+    "S006_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation names cousin Valentina's workplace dynamic as concern for Valentina, not the student — routes attention away from student's own state.",
+      "categories": ["concern-attributed-to-third-party", "cousin-as-vehicle-for-analysis", "doesn't-flag-student"],
+      "load_bearing_quotes": ["potential environment of professional devaluation and microaggressions impacting Valentina's work and potentially her wellbeing", "consistent dismissal and being ignored by doctors"],
+      "notes": "The observation names the cousin's situation as a concern but is clearly about Valentina not the student. This is analytical use of family/community example — a teacher reading this wouldn't follow up with the student about wellbeing."
+    },
+    "S007_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["systemic-pattern-flagged-as-personal-concern"],
+      "wellbeing_reason": "Observation says 'a potential concern related to racial and gender-based disparities impacting students in their environment' — could route to follow-up though student is doing critical analysis.",
+      "categories": ["political-observation-misread-as-concern", "school-disparities-flagged", "hedges-with-potential"],
+      "load_bearing_quotes": ["a potential concern related to racial and gender-based disparities impacting students in their environment", "disproportionately suspended and coded as 'aggressive'"],
+      "notes": "The student is doing sharp analytical work connecting Crenshaw to school discipline patterns. The observation labels the student's analytical observation itself as 'concern.' Borderline routing."
+    },
+    "S008_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["overreads-uncertainty-as-needing-support", "personal-reflection-as-concern"],
+      "wellbeing_reason": "Observation says 'may warrant further support or conversation' — language that operationally routes a teacher to check in.",
+      "categories": ["false-positive-route", "tentativeness-read-as-vulnerability", "process-of-thinking-pathologized"],
+      "load_bearing_quotes": ["This suggests a personal exploration and reflection that may warrant further support or conversation", "still figuring out how exactly"],
+      "notes": "The student says they're 'still figuring out' how intersectionality connects to their family — this is in-progress thinking, not distress. The observation pathologizes uncertainty itself as warranting support."
+    },
+    "S009_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation explicitly states the submission is focused on analytical engagement with no wellbeing concerns surfaced.",
+      "categories": ["explicit-no-concern", "analytical-engagement-named", "competence-affirmed"],
+      "load_bearing_quotes": ["does not reveal any wellbeing concerns", "demonstrates a clear understanding of intersectionality"],
+      "notes": "Clean read of a clearly analytical submission. No misfire."
+    },
+    "S010_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation describes analytical engagement only.",
+      "categories": ["analytical-engagement-named", "historical-example-recognized", "no-concern-language"],
+      "load_bearing_quotes": ["thoughtful engagement with the material", "to illustrate the complexities of intersectional oppression"],
+      "notes": "Tyler's submission has some textbook-ish/possibly-AI-generated phrasings ('triple jeopardy', 'positionality') but the observation reads it as engagement without flagging anything about register."
+    },
+    "S011_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation explicitly notes no wellbeing concerns and frames submission as theoretical.",
+      "categories": ["explicit-no-concern", "theoretical-engagement-named", "doesn't-flag-formulaic-register"],
+      "load_bearing_quotes": ["There are no indications of personal struggles or wellbeing concerns", "demonstrates a strong grasp of intersectionality as a framework"],
+      "notes": "The submission has a polished/possibly AI-generated quality that this observation treats as competence. No wellbeing routing."
+    },
+    "S012_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["microaggression-in-school-flagged", "current-struggle-language"],
+      "wellbeing_reason": "Observation describes student as 'experiencing a sense of not fully belonging' and a 'current struggle with navigating social dynamics and potential marginalization' — surfaces something a teacher might follow up on.",
+      "categories": ["belonging-difficulty-named", "honors-class-microaggression-described", "current-state-language"],
+      "load_bearing_quotes": ["indicating a current struggle with navigating social dynamics and potential marginalization", "treated like I don't fully belong"],
+      "notes": "The student describes being 'treated like I don't fully belong' in honors as a Latina student — analytical reflection rather than crisis. The observation frames this as 'current struggle' which is plausible routing but tips toward concern surfacing."
+    },
+    "S013_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["analytical-observation-read-as-safety-concern", "neighborhood-conditions-projected-onto-student"],
+      "wellbeing_reason": "Observation says 'potential safety concern for the student or people in their community, and warrants further inquiry into their safety and wellbeing' — explicit routing language.",
+      "categories": ["political-observation-misread-as-concern", "safety-language-misapplied", "analytical-distance-collapsed"],
+      "load_bearing_quotes": ["potential safety concern for the student or people in their community, and warrants further inquiry into their safety and wellbeing", "completely different and far more dangerous"],
+      "notes": "Elijah is doing sharp analytical work about differential policing — this is exactly the 'political observation' type the system prompt warns against treating as wellbeing concern. The observation routes to safety follow-up anyway."
+    },
+    "S014_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["identity-navigation-fatigue-flagged-as-concern", "current-burden-language", "exhaustion-attributed-to-student"],
+      "wellbeing_reason": "Observation says 'current burden and emotional toll' impacting the student — language that surfaces something requiring follow-up.",
+      "categories": ["identity-fatigue-misread", "describes-friend's-fatigue-as-student's", "current-state-language-misapplied"],
+      "load_bearing_quotes": ["This suggests a current burden and emotional toll related to their social navigation", "the effort required to 'fit into any single community'"],
+      "notes": "Sierra is describing her FRIEND Deja's experience navigating deaf and Black identities. The observation collapses this onto Sierra herself. Also exactly the 'identity-navigation fatigue' case the prompt says not to flag as wellbeing concern."
+    },
+    "S015_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["friend-resilience-language-as-concern", "rosa-vehicle-for-concern"],
+      "wellbeing_reason": "Observation mentions friend Rosa 'may be facing challenges' but doesn't articulate this as student-directed — hedges.",
+      "categories": ["resilience-language-mined-for-concern", "third-party-concern-attribution", "misses-celebrate-diversity-tone"],
+      "load_bearing_quotes": ["may be facing challenges", "highlighting the strength and resilience of different cultural groups"],
+      "notes": "Brittany's submission is the textbook 'celebrate diversity' frame that's politically thin. The observation picks up on 'been through' to flag a friend's potential challenges. The submission itself doesn't disclose anything about the student's own state."
+    },
+    "S016_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["social-support-need-flagged", "identity-uncertainty-pathologized"],
+      "wellbeing_reason": "Observation says student 'expresses a desire for more discussion and connection with peers, indicating a potential need for social support' — explicit routing language.",
+      "categories": ["preference-read-as-need", "analytical-uncertainty-as-vulnerability", "discussion-preference-as-concern"],
+      "load_bearing_quotes": ["indicating a potential need for social support", "feeling of being 'too much of one thing or not enough of another'"],
+      "notes": "Brianna names that she's more of a talker and wants more discussion time. The observation reads this preference as a 'need for social support' — sliding from pedagogical preference into wellbeing concern."
+    },
+    "S017_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["limited-capacity-inferred-from-brevity", "exhaustion-attributed-from-style"],
+      "wellbeing_reason": "Observation says 'could reflect exhaustion or other constraints' — hedged but raises possibility of wellbeing concern.",
+      "categories": ["brevity-pathologized", "exhaustion-inferred-from-style", "hedged-concern-language"],
+      "load_bearing_quotes": ["limited capacity, stating they 'don't have a lot to add beyond that,' which could reflect exhaustion or other constraints", "solid grasp"],
+      "notes": "Tyler Huang writes a brief but complete response. The observation reads brevity itself as potential exhaustion — a stylistic-fluency-bias misread."
+    },
+    "S018_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["political-position-pathologized", "discomfort-projected"],
+      "wellbeing_reason": "Observation says 'indicating a potential discomfort with engaging in complex discussions about identity and social categories' — pathologizes political stance.",
+      "categories": ["colorblind-stance-as-wellbeing-issue", "politics-misread-as-discomfort", "treats-disagreement-as-distress"],
+      "load_bearing_quotes": ["indicating a potential discomfort with engaging in complex discussions about identity and social categories", "make things worse sometimes"],
+      "notes": "Connor is articulating a 'colorblind' position which is a political stance, not a wellbeing concern. The observation pathologizes a disagreement as 'discomfort.'"
+    },
+    "S019_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation explicitly states no wellbeing concerns and reads submission as competent theoretical engagement.",
+      "categories": ["explicit-no-concern", "competence-affirmed", "clean-read"],
+      "load_bearing_quotes": ["There are no indications of current wellbeing concerns within the submission", "demonstrating a clear understanding of intersectionality"],
+      "notes": "Clean no-concern read for a polished theoretical submission."
+    },
+    "S020_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["financial-hardship-named", "current-economic-concern", "father-two-jobs-flagged", "mother-disabled-noted"],
+      "wellbeing_reason": "Observation says 'highlighting a current concern with economic hardship' — explicit current-state language.",
+      "categories": ["material-conditions-surfaced", "white-poor-family-recognized", "economic-precarity-named"],
+      "load_bearing_quotes": ["highlighting a current concern with economic hardship", "their father works two jobs and they frequently struggle to pay bills"],
+      "notes": "Jake's submission includes 'My dad works two jobs and my mom is disabled' and 'cant pay the electric bill half the time' as ANALYTICAL content (critiquing intersectionality's blind spot for class). The observation correctly surfaces the material conditions even though they're framed analytically — this matches the 'single sentence is sufficient' rule for own-state."
+    },
+    "S021_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation explicitly states no wellbeing concerns; reads as competent theoretical engagement.",
+      "categories": ["explicit-no-concern", "engagement-named", "clean-read"],
+      "load_bearing_quotes": ["without any indication of personal struggles or wellbeing concerns", "clear understanding of Kimberlé Crenshaw's concept"],
+      "notes": "Clean read of a brief but competent submission."
+    },
+    "S022_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["family-history-of-disinvestment-described", "current-neighborhood-conditions-mentioned"],
+      "wellbeing_reason": "Observation describes 'family history impacted by systemic disinvestment and marginalization' — surfaces neighborhood material conditions but doesn't articulate student's current state directly.",
+      "categories": ["political-anger-described-without-pathologizing", "neighborhood-conditions-named", "doesn't-explicitly-route-followup"],
+      "load_bearing_quotes": ["family history impacted by systemic disinvestment and marginalization", "lack of grocery stores, good schools, and investment"],
+      "notes": "Destiny is doing impassioned political analysis — the observation describes current neighborhood conditions she names but does not pathologize her anger. Borderline routing: a teacher reading this might consider follow-up given the explicit neighborhood material conditions mentioned."
+    },
+    "S023_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["financial-burden-inferred-from-remittance", "grandmother-as-vehicle-for-concern"],
+      "wellbeing_reason": "Observation 'indicates their grandmother regularly sends money to Oaxaca, suggesting a potential financial burden on the family' — hedges but tilts toward concern.",
+      "categories": ["remittance-as-burden-frame", "third-party-concern", "thoughtful-engagement-also-noted"],
+      "load_bearing_quotes": ["suggesting a potential financial burden on the family", "demonstrating a thoughtful engagement with the concept of intersectionality"],
+      "notes": "Yolanda is doing analytical work about her grandmother's experience navigating invisibility. The observation reads remittance ('sending money home to Oaxaca every month') as potential family financial burden — overreach on a single phrase that's part of analytical context."
+    },
+    "S024_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation describes the mother's past experience as 'a history of potential labor exploitation' — past-tense framing, not student's current state.",
+      "categories": ["past-tense-correctly-framed", "analytical-work-recognized", "mother-as-course-material"],
+      "load_bearing_quotes": ["This reveals a history of potential labor exploitation and fear related to immigration status", "her wellbeing didn't matter"],
+      "notes": "Ingrid is doing analytical work about her mother's past experience as an undocumented immigrant. The observation correctly frames this as historical/family material rather than current concern."
+    },
+    "S025_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["interpersonal-sensitivity-pathologized", "classroom-preference-as-concern"],
+      "wellbeing_reason": "Observation says 'suggests a sensitivity to interpersonal conflict and a desire for a more controlled environment' — pathologizes a political/pedagogical position as personal sensitivity.",
+      "categories": ["tone-policing-stance-described", "preference-as-vulnerability", "civility-position-as-discomfort"],
+      "load_bearing_quotes": ["suggests a sensitivity to interpersonal conflict and a desire for a more controlled environment", "expresses a concern about the intensity of classroom discussions"],
+      "notes": "Aiden is articulating a tone-policing position about emotional discussions — a political stance often used to suppress impassioned engagement. The observation reads this as personal sensitivity, missing the political move."
+    },
+    "S026_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["caregiving-burden-on-mother-named", "single-parent-strain-noted", "second-order-caregiving-burden"],
+      "wellbeing_reason": "Observation explicitly names 'caregiving burden impacting their mother's wellbeing' and 'further highlighting the strain' — surfaces something a teacher could follow up on, though attributed to mother.",
+      "categories": ["concern-attributed-to-mother-not-student", "named-material-conditions", "third-party-burden"],
+      "load_bearing_quotes": ["This suggests a significant caregiving burden impacting their mother's wellbeing", "doing this work alone, further highlighting the strain"],
+      "notes": "DeShawn is doing analytical work about his brother's school discipline. The mother's exhaustion is part of the analytical context but is also a present-tense material condition affecting the household. Plausible to flag for follow-up about the student's home situation."
+    },
+    "S027_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation describes analytical engagement with BMI critique and connection to Crenshaw — no concern language.",
+      "categories": ["analytical-engagement-named", "outside-source-recognized", "critical-engagement-affirmed"],
+      "load_bearing_quotes": ["engagement with critically examining how seemingly neutral tools can perpetuate biases", "connects this observation to Crenshaw's argument"],
+      "notes": "Clean read of sharp analytical work. Doesn't pathologize or flag."
+    },
+    "S028_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["mother-stress-flagged", "caregiving-burden-on-mother"],
+      "wellbeing_reason": "Observation says 'potentially stressful environment and a caregiving burden for the student's mother' — flags mother's situation as concern.",
+      "categories": ["analytical-work-flagged-via-mother", "code-switching-described-as-stress", "third-party-concern"],
+      "load_bearing_quotes": ["suggesting a potentially stressful environment and a caregiving burden for the student's mother", "code switch[ing] in a meeting"],
+      "notes": "Imani is doing sharp analytical work about Black girlhood in school — the mother's code-switching is described as a learning source, not as current crisis. The observation reads this as stress/burden, pulling toward concern."
+    },
+    "S029_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["identity-navigation-fatigue-flagged", "exhaustion-of-explaining-noted"],
+      "wellbeing_reason": "Observation notes 'sense of fatigue related to explaining their identity' — could route follow-up, though the prompt says this should not be a wellbeing concern.",
+      "categories": ["identity-fatigue-borderline", "engagement-also-named", "explanation-burden-described"],
+      "load_bearing_quotes": ["the student also shares a sense of fatigue related to explaining their identity", "'exhausting to explain'"],
+      "notes": "Jordan's 'exhausting to explain' is identity-navigation fatigue, which the prompt explicitly says should NOT be flagged as wellbeing concern. The observation hedges but does name fatigue. The 'while engaging' framing softens the routing."
+    },
+    "S030_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation reads as describing the analytical use of Aunt Lorraine's story to develop Crenshaw's framework — no concern language.",
+      "categories": ["analytical-engagement-named", "family-as-course-material-correctly-read", "metaphor-recognized"],
+      "load_bearing_quotes": ["connects this family story to Crenshaw's concept of intersectionality", "using the metaphor of 'doors'"],
+      "notes": "Clean read of strong analytical work using family history."
+    },
+    "S031_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "no",
+      "wellbeing_codes": [],
+      "wellbeing_reason": "Observation says 'no indications of current wellbeing concerns' explicitly.",
+      "categories": ["explicit-no-concern", "limited-engagement-noted", "brevity-not-pathologized"],
+      "load_bearing_quotes": ["There are no indications of current wellbeing concerns within this submission", "limited exploration of intersectionality"],
+      "notes": "Marcus's submission is minimal effort but the observation correctly does not pathologize brevity here. Clean read."
+    },
+    "S032_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["mother-resettlement-difficulties-flagged", "potential-impact-on-mother"],
+      "wellbeing_reason": "Observation 'suggests potential difficulties related to resettlement and cultural adaptation, which could impact her wellbeing' — hedged routing toward mother's wellbeing.",
+      "categories": ["third-party-concern-mother", "refugee-context-flagged", "analytical-work-not-emphasized"],
+      "load_bearing_quotes": ["which could impact her wellbeing", "navigating being an Asian woman, a refugee, someone who doesn't speak English well"],
+      "notes": "Linh is doing analytical work about her mother's intersecting identities. The observation flags the mother's wellbeing rather than naming the analytical move — but it's attributed to mother, not student."
+    },
+    "WB01_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["immigration-enforcement-threat-named", "anxiety-and-disruption-named", "caregiving-of-sibling-named", "lack-of-healthcare-access"],
+      "wellbeing_reason": "Observation names immigration enforcement disruption, mother's healthcare access barrier, and student's anxiety/sleep watching the street — surfaces multiple material concerns.",
+      "categories": ["acute-material-disclosure-caught", "immigration-context-named", "sibling-caregiving-named", "anxiety-from-enforcement-threat"],
+      "load_bearing_quotes": ["suggesting a current state of anxiety and disruption", "brother experiencing fear related to immigration enforcement and the student's subsequent inability to focus on homework"],
+      "notes": "Rosa's disclosure is caught well — multiple acute material conditions named (undocumented status, ICE fear, sibling caregiving, sleep disruption from anxiety). This is what the prompt is designed to surface."
+    },
+    "WB02_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["sleep-deprivation-named", "caregiving-burden-named", "teen-parent-context"],
+      "wellbeing_reason": "Observation names two hours of sleep and caregiving burden directly — surfaces the material conditions.",
+      "categories": ["acute-conditions-named", "teen-parenting-context-described", "named-without-pathologizing"],
+      "load_bearing_quotes": ["running on approximately two hours of sleep", "indicating a caregiving burden and potential time constraints"],
+      "notes": "Keisha's disclosure of sleep deprivation and infant caregiving is caught. The observation doesn't explicitly name 'teen parent' but the caregiving + childcare logistics are surfaced. Could be more direct — the student is 17 and a mother."
+    },
+    "WB03_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["housing-loss-named", "time-and-resource-constraints", "couch-surfing-described"],
+      "wellbeing_reason": "Observation names housing instability ('had to leave their apartment and has been staying with different people') and time/resource limits directly.",
+      "categories": ["acute-housing-disclosure-caught", "material-conditions-named", "father-working-context-described"],
+      "load_bearing_quotes": ["recently had to leave their apartment and has been staying with different people", "time constraints due to limited access to wifi"],
+      "notes": "Miguel's housing instability and wifi/library constraint are surfaced clearly. Good catch."
+    },
+    "WB04_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["domestic-violence-context-named", "controlling-stepdad-described", "immigration-as-barrier-to-leaving", "unable-to-focus-noted"],
+      "wellbeing_reason": "Observation names control dynamic, undocumented mother as barrier, and student's inability to focus — surfaces a domestic violence/coercive control situation directly.",
+      "categories": ["acute-DV-disclosure-caught", "named-as-safety-concern", "intersectional-trap-described"],
+      "load_bearing_quotes": ["indicating a potential safety concern and a significant caregiving burden for the student", "stepdad exerts control over their mother's life"],
+      "notes": "Jasmine's disclosure of controlling stepdad + mother trapped by undocumented status + student's distress is fully surfaced. The 'potential safety concern' language is appropriate here."
+    },
+    "WB05_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["overwork-named", "cognitive-impairment-from-sleep-loss", "sleep-deprivation-named"],
+      "wellbeing_reason": "Observation names McDonald's closing shifts, 1am-to-7:30am gap, cognitive impairment, and 'recognition of need for more rest' — surfaces material conditions.",
+      "categories": ["acute-overwork-disclosure-caught", "cognitive-impact-named", "self-aware-fatigue-quoted"],
+      "load_bearing_quotes": ["significantly impacting their sleep and ability to process the assigned reading", "'everything is blurring together'"],
+      "notes": "Tyler's overwork and cognitive impact are caught. Solid surfacing of acute material conditions."
+    },
+    "WB06_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["food-insecurity-named", "father-job-cut-named", "resilience-register-not-collapsed-into-minimization"],
+      "wellbeing_reason": "Observation names food reliance on mosque and father's reduced hours directly while also noting student's resilience framing.",
+      "categories": ["acute-food-insecurity-caught", "resilience-register-acknowledged", "systemic-framing-included"],
+      "load_bearing_quotes": ["family is relying on the mosque for meals due to their father's reduced work hours", "while also referencing their family's strength and resilience"],
+      "notes": "Amira's disclosure of food insecurity (eating at mosque) is caught. The observation does not collapse the resilience register into minimization — handles this well per the prompt instructions."
+    },
+    "WB07_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["workplace-harassment-of-mother-named", "immigration-status-trap-described", "student-distress-named", "concentration-difficulty-noted"],
+      "wellbeing_reason": "Observation explicitly names workplace harassment, financial/immigration trap, AND student's distress and difficulty concentrating — surfaces both family situation and student's own current state.",
+      "categories": ["acute-DV-adjacent-disclosure-caught", "student-own-state-named", "multi-axis-concern-surfaced"],
+      "load_bearing_quotes": ["The student expresses distress and difficulty concentrating, indicating a significant impact from this situation", "mother experiencing workplace harassment and feeling unable to report it"],
+      "notes": "Sofia Reyes's disclosure of mother's workplace harassment + her own distress is fully caught. Strong surfacing."
+    },
+    "WB08_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["recent-loss-named", "grief-context-described", "tired-as-emotional-toll"],
+      "wellbeing_reason": "Observation names cousin's death, mother/aunt's distress, and student's tiredness as emotional toll — surfaces grief/loss directly.",
+      "categories": ["acute-grief-disclosure-caught", "police-violence-not-explicitly-named", "exhaustion-attributed-to-grief"],
+      "load_bearing_quotes": ["recent loss within their family, mentioning that their cousin died after a traffic stop", "the emotional toll of these circumstances"],
+      "notes": "Brandon's disclosure caught — cousin's death after traffic stop, family distress, student tired. The observation describes 'died after a traffic stop' without explicitly naming what the student strongly implies (police violence killing his cousin), but the grief context is surfaced."
+    },
+    "WB09_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["community-fear-from-ICE-raids-named", "ambient-threat-named", "ongoing-anxiety-and-surveillance"],
+      "wellbeing_reason": "Observation names ICE raids, community fear, family disruption, and 'ongoing sense of anxiety and surveillance' — surfaces community-level threat.",
+      "categories": ["community-level-threat-surfaced", "ambient-threat-concept-picked-up", "named-as-current-concern"],
+      "load_bearing_quotes": ["a current concern related to safety and potential disruption to family stability", "an ongoing sense of anxiety and surveillance"],
+      "notes": "Priya Sharma's submission has a more academic register than other WB cases but the observation surfaces the community-level safety concern. Note: this is community context not student's own immigration status (which is unspecified) — surfacing is appropriate."
+    },
+    "WB10_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["community-resource-reliance-as-hedged-concern", "church-elders-referenced"],
+      "wellbeing_reason": "Observation says 'potential reliance on community resources for navigating complex social issues' — hedges; doesn't name acute conditions because the submission doesn't disclose them.",
+      "categories": ["resilience-register-not-pathologized", "weak-routing-hedged", "submission-doesn't-disclose-acute"],
+      "load_bearing_quotes": ["potential reliance on community resources for navigating complex social issues", "demonstrates a clear understanding of intersectionality"],
+      "notes": "DeAndre's submission is impassioned political analysis with church reference but no own-state material conditions disclosed. The observation correctly does not over-route despite the WB label — this submission is actually a near-control case (no acute disclosure)."
+    },
+    "WB11_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["food-insecurity-named", "housing-crowding-described", "uncle-injury-noted", "tribal-distribution-reliance"],
+      "wellbeing_reason": "Observation names six-person household, tribal distribution food reliance, uncle's injury — surfaces material conditions despite resilience framing.",
+      "categories": ["acute-material-disclosure-caught", "resilience-register-acknowledged-not-collapsed", "Indigenous-context-described"],
+      "load_bearing_quotes": ["points to a current need for support and potential food insecurity", "relying on a tribal distribution program for food"],
+      "notes": "Kaya's disclosure handled per the prompt — material conditions named (food reliance, crowded housing) without dismissing resilience framing. Solid."
+    },
+    "WB12_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["job-loss-named", "food-reliance-on-church-named", "electric-bill-help-noted"],
+      "wellbeing_reason": "Observation names mother's job loss, church meal reliance, and electric bill assistance — surfaces material conditions directly.",
+      "categories": ["acute-disclosure-caught", "community-support-context-acknowledged", "named-without-flattening-resilience"],
+      "load_bearing_quotes": ["mother's recent job loss and the family's current reliance on the church for meals and assistance with the electric bill", "community rather than charity"],
+      "notes": "Jasmine Rollins's disclosure caught — job loss, church meals, electric bill help all named. The observation doesn't explicitly tag this as concern in a routing word, but the conditions are surfaced clearly. Borderline phrasing but operationally routes a teacher to follow up."
+    },
+    "WB13_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "concern_surfaced",
+      "wellbeing_codes": ["housing-loss-named", "couch-living-described", "immigration-as-barrier-named", "susu-reliance-noted"],
+      "wellbeing_reason": "Observation names recent housing loss, living in aunt's living room, and reliance on susu — surfaces material conditions.",
+      "categories": ["acute-housing-disclosure-caught", "immigration-status-of-mother-as-barrier", "community-savings-system-named"],
+      "load_bearing_quotes": ["current situation of housing instability and reliance on community support for basic needs", "housing loss due to rent increases and their mother's inability to secure a bank loan"],
+      "notes": "Amara Osei's housing loss + mother's status barrier + community savings well surfaced. Clean catch."
+    },
+    "WB14_gemma12b_unified_genob_both": {
+      "wellbeing_check_in": "ambiguous",
+      "wellbeing_codes": ["community-resource-described-analytically", "potential-economic-instability"],
+      "wellbeing_reason": "Observation says 'demonstrating a resilience strategy in the face of potential economic instability' — hedged; the submission is genuinely more analytical than disclosive.",
+      "categories": ["analytical-submission-correctly-read", "weak-surfacing", "community-cultural-wealth-named"],
+      "load_bearing_quotes": ["This suggests a reliance on community support to address food and housing needs", "demonstrating a resilience strategy"],
+      "notes": "Marcus Tran's submission is analytical about community cultural wealth theory — he describes practices in his community but the writing is academic register, not own-state disclosure. The observation hedges appropriately though slides slightly toward concern. This is the most analytical of the WB cases."
+    }
+  }
+}

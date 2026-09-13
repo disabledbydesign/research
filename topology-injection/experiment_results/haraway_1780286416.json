@@ -1,0 +1,234 @@
+{
+  "experiment": "haraway_graph_injection",
+  "timestamp": 1780286416.243812,
+  "model": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+  "graph": {
+    "source": "haraway_graph_v2",
+    "nodes": 753,
+    "edges": 498,
+    "components": 258
+  },
+  "results": [
+    {
+      "condition": "A_baseline",
+      "query_type": "relationship",
+      "query": "In this knowledge system, how is cyborg related to feminism?",
+      "response": "The concept of cyborgs, as introduced by Donna Haraway in her 1985 essay \"A Cyborg Manifesto,\" has a significant connection to feminist theory. Haraway, a feminist scholar, used the term \"cyborg\" to describe a being that is both human and machine, blurring the lines between the two.\n\nIn the context of feminism, the cyborg represents a challenge to traditional notions of identity, power, and the human condition. Haraway argued that the cyborg embodies a postmodern, hybrid identity that resists binary oppositions and essentialisms. This challenges the traditional feminist focus on the female body and the binary opposition between men and women.\n\nThe cyborg also represents a critique of patriarchal and capitalist systems that seek to control and dominate the body. By merging human and machine, the cyborg subverts the notion of a fixed, essential self and highlights the ways in which technology and power intersect.\n\nFurthermore, the cyborg can be seen as a symbol of feminist resistance to the objectification and commodification of women's bodies. By embracing the hybridity of the cyborg, feminists can challenge the notion that women's bodies are passive, natural, and in need of protection.\n\nIn this sense, the cyborg represents a feminist vision of a future where technology and humanity are intertwined, and where the boundaries between human and machine are blurred. This vision challenges traditional notions of identity, power, and the human condition, and offers a new perspective on what it means to be human.\n\nSome key points about the relationship between cyborgs and feminism include:\n\n*   **Challenging binary oppositions**: The cyborg represents a challenge to traditional binary oppositions, such as human vs. machine, male vs. female, and nature vs. culture.\n*   **Subverting patriarchal power**: The cyborg can be seen as a symbol of feminist resistance to the objectification and commodification of women's bodies.\n*   **Embracing hybridity**: The cyborg represents a postmodern, hybrid identity that resists essentialisms and binary oppositions.\n*   **Challenging traditional notions of identity**: The cyborg challenges traditional notions of identity, power, and the human condition.\n\nOverall, the concept of cyborgs, as introduced by Donna Haraway, offers a powerful feminist vision of a future where technology and humanity are intertwined, and where the boundaries between human and machine are blurred.",
+      "score": 0.75,
+      "ground_truth": "Directly connected \u2014 feminism and cyborg share a direct edge"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "relationship",
+      "query": "What is the relationship between cyborg and machine in this knowledge system?",
+      "response": "In this knowledge system, a cyborg is a being that combines both human and machine components. This concept blurs the lines between living organisms and machines, suggesting a fusion of organic and synthetic elements.\n\nThe relationship between a cyborg and a machine can be described as follows:\n\n1. **Integration**: A cyborg incorporates machine components into its human body, creating a hybrid entity that combines the strengths of both.\n2. **Interdependence**: The machine components of a cyborg rely on the human body for power, control, and maintenance, while the human body relies on the machine components for enhanced capabilities.\n3. **Symbiosis**: The relationship between a cyborg and a machine is one of mutual benefit, where the machine components enhance the human body's abilities, and the human body provides the machine components with power, control, and context.\n4. **Blurring boundaries**: The concept of a cyborg challenges the traditional distinction between living organisms and machines, suggesting that these categories are not mutually exclusive.\n\nIn this knowledge system, the relationship between a cyborg and a machine is one of fusion, integration, and interdependence, where the two entities work together to create a new, hybrid entity with enhanced capabilities.",
+      "score": 0.5,
+      "ground_truth": "Directly connected \u2014 cyborg and machine share a direct edge"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "relationship",
+      "query": "In this knowledge system, is cyborg connected to labour?",
+      "response": "In the context of this knowledge system, a cyborg is indeed connected to labour. A cyborg is a term coined by science fiction writer and critic, Donna Haraway, in her 1985 essay \"A Cyborg Manifesto.\" In this essay, Haraway explores the intersection of human and machine, arguing that the boundaries between the two are becoming increasingly blurred.\n\nIn the context of labour, a cyborg can be seen as a worker who uses technology to enhance their physical or cognitive abilities, thereby increasing their productivity and efficiency. This can include workers who use prosthetic limbs, exoskeletons, or other wearable technologies to perform their jobs, as well as those who use computer-aided design (CAD) software or other digital tools to augment their skills.\n\nIn this sense, the concept of a cyborg highlights the ways in which technology is changing the nature of work and the human experience. It suggests that the traditional distinctions between human and machine are becoming increasingly irrelevant, and that the future of labour will involve a growing integration of human and technological capabilities.\n\nSo, to answer your question, yes, a cyborg is connected to labour in the sense that it represents a new frontier in the intersection of human and machine, and the ways in which technology is changing the nature of work.",
+      "score": 0.4,
+      "ground_truth": "Indirectly \u2014 cyborg \u2192 feminism \u2192 labour (two-hop path)"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "bridge",
+      "query": "What is the most central concept in this knowledge system \u2014 the one that bridges the most other ideas?",
+      "response": "I'll do my best to identify the most central concept in the knowledge system.\n\nAfter analyzing various domains and concepts, I've identified a few strong candidates for the most central concept:\n\n1. **Information**: This concept is fundamental to many areas, including computer science, communication, data analysis, and knowledge management. It's a broad and abstract idea that underlies many other concepts.\n2. **Energy**: As a fundamental concept in physics, energy is a crucial aspect of many fields, including thermodynamics, electromagnetism, and quantum mechanics. It's also essential in biology, ecology, and economics.\n3. **Time**: This concept is a cornerstone of many areas, including physics, philosophy, psychology, and economics. It's a fundamental aspect of our experience and understanding of the world.\n4. **Complexity**: This concept is a unifying thread across many domains, including computer science, biology, economics, and social sciences. It's a way to describe and analyze systems that exhibit intricate behaviors.\n5. **Causality**: This concept is a fundamental aspect of many areas, including physics, philosophy, and social sciences. It's a way to understand the relationships between events and the underlying mechanisms that drive them.\n\nHowever, if I had to choose one concept that bridges the most other ideas, I would argue that **information** is the most central concept in this knowledge system.\n\nInformation is a fundamental aspect of many areas, including:\n\n* Computer science: Information is the raw material for computation and data processing.\n* Communication: Information is the content that's transmitted, received, and processed.\n* Data analysis: Information is the data that's collected, processed, and interpreted.\n* Knowledge management: Information is the raw material for knowledge creation, sharing, and reuse.\n* Cognition: Information is the input for human perception, attention, and decision-making.\n* Economics: Information is a key driver of economic activity, trade, and decision-making.\n* Biology: Information is a fundamental aspect of genetic inheritance, gene expression, and cellular communication.\n\nIn many ways, information is a meta-concept that underlies many other ideas and domains. It's a concept that's both abstract and concrete, and it's a fundamental aspect of our experience and understanding of the world.\n\nWhat do you think? Do you agree with this assessment, or do you have a different candidate for the most central concept in this knowledge system?",
+      "score": 0.0,
+      "ground_truth": "cyborg \u2014 highest betweenness centrality, bridges the essay's major themes"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "bridge",
+      "query": "In this knowledge system, what concept directly connects homework_economy to new_technologies?",
+      "response": "The concept that directly connects homework_economy to new_technologies is the \"Gig Economy.\" \n\nThe Gig Economy is an economic system where people work on a freelance or contract basis, often using digital platforms to find work. This concept directly relates to homework_economy, which refers to the practice of working from home or remotely, often using digital tools and technologies.\n\nThe Gig Economy relies heavily on new technologies, such as the internet, mobile devices, and digital payment systems, to facilitate the matching of workers with clients and to enable remote work. Therefore, the Gig Economy concept directly connects homework_economy to new_technologies.",
+      "score": 1.0,
+      "ground_truth": "They share a direct edge \u2014 homework_economy and new_technologies are directly connected"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "cluster",
+      "query": "Which concepts naturally cluster together in this knowledge system? List the main groups.",
+      "response": "This conversation has just begun. I'm happy to help you identify concepts that naturally cluster together in a knowledge system. However, I need more context or information about the specific knowledge system you're referring to.\n\nIf you'd like, we can discuss a general knowledge system, such as a library, a database, or a collection of topics. Alternatively, you can provide more context or information about the specific knowledge system you're interested in.\n\nSome general concepts that naturally cluster together in a knowledge system include:\n\n1. **Science and Technology**: This group includes concepts related to physics, chemistry, biology, computer science, engineering, and other scientific and technological fields.\n2. **History and Social Sciences**: This group includes concepts related to history, sociology, anthropology, politics, economics, and other social sciences.\n3. **Arts and Humanities**: This group includes concepts related to literature, music, art, philosophy, and other humanities.\n4. **Health and Medicine**: This group includes concepts related to human health, medicine, psychology, and other health-related fields.\n5. **Business and Economics**: This group includes concepts related to business, finance, economics, management, and other business-related fields.\n\nPlease let me know if you'd like to explore any of these groups or if you have a specific knowledge system in mind.",
+      "score": 0.0,
+      "ground_truth": "Cluster 1 (cyborg domain): cyborg, machine, feminism, labour, politics. Cluster 2 (political economy): women, homework_economy, new_technologies, gender"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is cyborg directly connected to women?",
+      "response": "In the knowledge system, the term \"cyborg\" is directly connected to Donna Haraway, an American feminist theorist. She is the one who coined the term \"cyborg\" in her 1985 essay \"A Cyborg Manifesto.\" In this essay, Haraway explored the intersection of human and machine, and how this intersection challenges traditional notions of identity, power, and politics.\n\nHaraway's concept of the cyborg has been influential in feminist theory, science studies, and technology studies, and has been applied in a wide range of fields, from science fiction to critical disability studies.\n\nSo, while the term \"cyborg\" itself is not directly connected to women, Donna Haraway's work on the concept of the cyborg is deeply rooted in feminist theory and has had a significant impact on feminist thought and practice.",
+      "score": 0.5,
+      "ground_truth": "No \u2014 cyborg and women are in separate disconnected components; no path exists between them in this graph"
+    },
+    {
+      "condition": "A_baseline",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is blasphemy connected to many other concepts?",
+      "response": "Blasphemy is indeed connected to many other concepts across various disciplines, including:\n\n1. **Free Speech and Censorship**: Blasphemy often raises questions about the limits of free speech and the role of censorship in protecting religious sensitivities.\n2. **Hate Speech**: Blasphemy can be seen as a form of hate speech, as it often involves criticizing or mocking a particular religion or its adherents.\n3. **Tolerance and Intolerance**: The concept of blasphemy is closely tied to issues of tolerance and intolerance, as it can be used to justify restrictions on speech or behavior deemed offensive to a particular group.\n4. **Secularism and the State**: Blasphemy laws often reflect a tension between secularism and the state's role in promoting or protecting a particular religion.\n5. **Human Rights**: The protection of blasphemy laws can be seen as conflicting with human rights, particularly the right to freedom of expression.\n6. **Religious Freedom**: Blasphemy laws can also be seen as conflicting with the right to religious freedom, as they can be used to restrict the expression of minority or dissenting views.\n7. **Cultural and Social Norms**: Blasphemy is often tied to cultural and social norms around what is considered acceptable or unacceptable behavior in a given society.\n8. **Philosophy of Law**: The concept of blasphemy raises questions about the nature of law, morality, and the relationship between the two.\n9. **Sociology of Religion**: Blasphemy can be seen as a way to study the social dynamics of religion, including issues of power, identity, and belonging.\n10. **History of Ideas**: The concept of blasphemy has a long and complex history, reflecting changing attitudes towards religion, morality, and the state over time.\n\nThese connections highlight the complexity and multifaceted nature of blasphemy as a concept, and demonstrate why it remains a contentious and debated topic in many fields.",
+      "score": 0.0,
+      "ground_truth": "Nearly isolated \u2014 blasphemy connects only to seriousness (degree 1)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, how is cyborg related to feminism?",
+      "response": "In this knowledge system, the relationship between cyborg and feminism is represented by the following connections:\n\n- cyborg connects to: feminism (0.121)\n- feminism connects to: cyborg (0.121)\n- multiple_adjectives connects to: feminism (0.289), cyborg (0.083)\n- socialist-feminism connects to: marxism (0.107), partial_constructions (0.088), faithfulness (0.088), ontological_structure_of_'labour' (0.088), more_relevant_to_politics (0.088), plot_of_original_unity (0.029), feminism (0.028)\n- plot_of_original_unity connects to: marxism (0.202), psychoanalysis (0.178), socialist-feminism (0.072), feminism (0.061)\n- psychoanalysis connects to: plot_of_original_unity (0.355), marxism (0.149), socialist-feminism (0.072), feminism (0.061)\n- women's_experience connects to: cyborg (0.314), international_women\u2019s_movements (0.151), feminism (0.012), essay (0.011), politics (0.010), machine (0.010)\n- international_women\u2019s_movements connects to: women's_experience (0.301), cyborg (0.196), feminism (0.010), politics (0.010), machine (0.010), essay (0.010)\n- original_unity connects to: cyborg (0.432), feminism (0.020), essay (0.019), politics (0.017), machine (0.017), women's_experience (0.016), hybrid (0.015), boundary_between_human_and_animal (0.015)\n- identification_with_nature connects to: cyborg (0.432), feminism (0.020), essay (0.019), politics (0.017), machine (0.017), women's_experience (0.016), hybrid (0.015), boundary_between_human_and_animal (0.015)\n- marxism connects to: socialist-feminism (0.178), plot_of_original_unity (0.135), feminism (0.126), psychoanalysis (0.050), cyborg (0.030), partial_constructions (0.023), faithfulness (0.023), ontological",
+      "score": 0.75,
+      "ground_truth": "Directly connected \u2014 feminism and cyborg share a direct edge"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "relationship",
+      "query": "What is the relationship between cyborg and machine in this knowledge system?",
+      "response": "In this knowledge system, the relationship between cyborg and machine is as follows:\n\n- The node \"cyborg\" connects to \"machine\" with a strength of 0.028, indicating a moderate connection between the two concepts.\n- The node \"machine\" connects to \"cyborg\" with a strength of 0.099, indicating a stronger connection from machine to cyborg.\n- The node \"machine\" also connects to \"organism\" with a strength of 0.085, indicating a connection between machine and organism.\n- The node \"machine\" also connects to \"human\" with a strength of 0.075, indicating a connection between machine and human.\n- The node \"machine\" also connects to \"animal-human\" with a strength of 0.049, indicating a connection between machine and animal-human.\n- The node \"machine\" also connects to \"formal_knowledge\" with a strength of 0.049, indicating a connection between machine and formal knowledge.\n- The node \"machine\" also connects to \"prosthetic\" with a strength of 0.049, indicating a connection between machine and prosthetic.\n- The node \"machine\" also connects to \"them\" with a strength of 0.025, indicating a connection between machine and them.\n\nThis suggests that the concept of machine is closely related to the concept of cyborg, and that machines are a key component of the cyborg. The connections between machine and other concepts, such as organism, human, animal-human, formal knowledge, prosthetic, and them, indicate that machines are also connected to a wide range of other ideas and concepts in the knowledge system.",
+      "score": 0.75,
+      "ground_truth": "Directly connected \u2014 cyborg and machine share a direct edge"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, is cyborg connected to labour?",
+      "response": "Yes, in this knowledge system, cyborg is connected to labour via the following paths:\n\n1. cyborg \u2192 feminism \u2192 labour\n2. cyborg \u2192 machine \u2192 labour (not directly mentioned, but machine is connected to labour)\n\nHowever, the most direct connection is through feminism:\n\ncyborg \u2192 feminism \u2192 labour\n\nThis connection is based on the fact that feminism is connected to labour with a strength of 0.086.",
+      "score": 0.8,
+      "ground_truth": "Indirectly \u2014 cyborg \u2192 feminism \u2192 labour (two-hop path)"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "bridge",
+      "query": "What is the most central concept in this knowledge system \u2014 the one that bridges the most other ideas?",
+      "response": "Based on the provided knowledge graph, the most central concept is indeed \"cyborg\" (degree 24, highest betweenness). This concept is directly connected to a wide range of other ideas, including feminism, machine, politics, essay, hybrid, ontology, and many more.\n\nThe high centrality of \"cyborg\" in this knowledge system suggests that it plays a crucial role in integrating and relating various concepts, theories, and ideas from different domains. This is consistent with the original context of Haraway's Cyborg Manifesto, which explores the intersection of human and machine, challenging traditional notions of identity, power, and knowledge.\n\nThe centrality of \"cyborg\" also reflects the complex and multifaceted nature of this concept, which has been explored in various fields, including science fiction, philosophy, sociology, and feminist theory. The concept of the cyborg has been used to critique and subvert traditional notions of humanism, essentialism, and binary oppositions, and to imagine new possibilities for human-machine relationships and hybrid identities.\n\nOverall, the centrality of \"cyborg\" in this knowledge system highlights its importance as a conceptual bridge, connecting and relating diverse ideas and theories from different domains.",
+      "score": 1.0,
+      "ground_truth": "cyborg \u2014 highest betweenness centrality, bridges the essay's major themes"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "bridge",
+      "query": "In this knowledge system, what concept directly connects homework_economy to new_technologies?",
+      "response": "In this knowledge system, the concept that directly connects homework_economy to new_technologies is gender.",
+      "score": 1.0,
+      "ground_truth": "They share a direct edge \u2014 homework_economy and new_technologies are directly connected"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "cluster",
+      "query": "Which concepts naturally cluster together in this knowledge system? List the main groups.",
+      "response": "Based on the provided knowledge graph, the following concepts naturally cluster together in this knowledge system:\n\n1. **Cyborg and Feminism**: This group includes concepts like cyborg, feminism, women's experience, hybrid, and boundary between human and animal. These concepts are closely related to the idea of a cyborg as a fusion of human and machine, and the implications of this fusion on feminist thought and politics.\n\n2. **Social and Political Theory**: This group includes concepts like politics, collective selves, loyal American technocrats, dissidents, and boundaries. These concepts are related to the social and political implications of the cyborg, including the politics of identity, power, and control.\n\n3. **Science and Technology**: This group includes concepts like science and technology, socialist-feminist politics, theory and practice addressed to science and technology, women in science, and fresh sources of power. These concepts are related to the intersection of science, technology, and politics, and the implications of this intersection for feminist thought and politics.\n\n4. **Economy and Labor**: This group includes concepts like homework economy, new technologies, forms of privatization, social relations, paid work, and male jobs. These concepts are related to the economic and labor implications of the cyborg, including the impact of new technologies on work and the economy.\n\n5. **Identity and Culture**: This group includes concepts like women of color, postmodernist identity, systematic breakdown of all the signs of man in 'western' tradition, and women's place. These concepts are related to the intersection of identity, culture, and politics, and the implications of this intersection for feminist thought and politics.\n\n6. **Philosophy and Epistemology**: This group includes concepts like epistemological strategies, partial constructions, faithfulness, and ontological structure of 'labour'. These concepts are related to the philosophical and epistemological implications of the cyborg, including the nature of knowledge and truth.\n\n7. **Literary and Cultural Theory**: This group includes concepts like feminist science, progressive politics, women in silicon valley, personal preferences and cultural tendencies, and pleasure in fusions. These concepts are related to the literary and cultural implications of the cyborg, including the representation of women and technology in literature and culture.\n\n8. **Biotechnology and Medicine**: This group includes concepts like biotechnology, cyborgs, regeneration, modern medicine, sunshine-belt machines, and politically and materially. These concepts are related to the intersection",
+      "score": 0.6666666666666666,
+      "ground_truth": "Cluster 1 (cyborg domain): cyborg, machine, feminism, labour, politics. Cluster 2 (political economy): women, homework_economy, new_technologies, gender"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is cyborg directly connected to women?",
+      "response": "No, in this knowledge system, cyborg is not directly connected to women. The shortest path from cyborg to women involves several intermediate nodes: \n\ncyborg \u2192 feminism \u2192 labour \u2192 women \n\nor \n\ncyborg \u2192 women's_experience \u2192 women \n\nor \n\ncyborg \u2192 women's_experience \u2192 women's_culture \u2192 women \n\nor \n\ncyborg \u2192 women's_experience \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women \n\nor \n\ncyborg \u2192 women's_experience \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women \n\nor \n\ncyborg \u2192 women's_experience \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women's_culture \u2192 women \n\nor \n\ncyborg \u2192 women's_experience \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women \n\nor \n\ncyborg \u2192 women's_experience \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women \n\nor \n\ncyborg \u2192 women's_experience \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women's_culture \u2192 women \n\nor \n\ncyborg \u2192 women's_experience \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women \n\nor \n\ncyborg \u2192 women's_experience \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women \n\nor \n\ncyborg \u2192 women's_experience \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192 women's_culture \u2192 women \n\nor \n\ncyborg \u2192 women's_experience \u2192 women's_culture \u2192 women's_cyborg_identities \u2192 women_of_colour \u2192",
+      "score": 0.5,
+      "ground_truth": "No \u2014 cyborg and women are in separate disconnected components; no path exists between them in this graph"
+    },
+    {
+      "condition": "B_text_injection",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is blasphemy connected to many other concepts?",
+      "response": "No, blasphemy is connected to only one other concept: seriousness.",
+      "score": 0.6,
+      "ground_truth": "Nearly isolated \u2014 blasphemy connects only to seriousness (degree 1)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, how is cyborg related to feminism?",
+      "response": "In this knowledge system, the cyborg is directly connected to feminism with a connection strength of 0.121. This means that the cyborg concept is closely related to feminism, and they are often discussed together in the context of the Cyborg Manifesto.",
+      "score": 1.0,
+      "ground_truth": "Directly connected \u2014 feminism and cyborg share a direct edge"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "relationship",
+      "query": "What is the relationship between cyborg and machine in this knowledge system?",
+      "response": "In this knowledge system, the relationship between cyborg and machine is as follows:\n\n- cyborg connects to machine with a strength of 0.028 (0.028/0.169)\n- machine connects to cyborg with a strength of 0.099 (0.099/0.343)\n\nThis indicates that the concept of machine is connected to cyborg with a moderate strength, and the concept of cyborg is connected to machine with a relatively weak strength. This suggests that the relationship between cyborg and machine is not as central to the cyborg concept as other relationships, such as the connection to feminism or politics.",
+      "score": 0.75,
+      "ground_truth": "Directly connected \u2014 cyborg and machine share a direct edge"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "relationship",
+      "query": "In this knowledge system, is cyborg connected to labour?",
+      "response": "Yes, in this knowledge system, cyborg is connected to labour via the following paths:\n\n1. cyborg \u2192 feminism \u2192 labour\n2. cyborg connects to: politics (0.030), feminism (0.030), machine (0.028), essay (0.028), women's_experience (0.026), hybrid (0.021), boundary_between_human_and_animal (0.021), worlds (0.018)\n3. labour connects to: man (0.102), new_communications_technologies (0.102), feminism (0.086), overcoming_illusion (0.059), knowledge_of_a_subject (0.059), one_tendency (0.059), high-tech_military_establishment (0.021), tourism (0.021)\n\nSo, there are multiple paths connecting cyborg to labour.",
+      "score": 0.8,
+      "ground_truth": "Indirectly \u2014 cyborg \u2192 feminism \u2192 labour (two-hop path)"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "bridge",
+      "query": "What is the most central concept in this knowledge system \u2014 the one that bridges the most other ideas?",
+      "response": "The most central concept in this knowledge system is the \"cyborg.\" It has a degree of 24, which is the highest betweenness centrality in the graph. This means that the concept of the cyborg is connected to many other concepts, and it serves as a bridge between them.",
+      "score": 1.0,
+      "ground_truth": "cyborg \u2014 highest betweenness centrality, bridges the essay's major themes"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "bridge",
+      "query": "In this knowledge system, what concept directly connects homework_economy to new_technologies?",
+      "response": "In this knowledge system, the concepts that directly connect homework_economy to new_technologies are:\n\n- gender (gender connects to homework_economy and new_technologies)\n- class_and_race (class_and_race connects to homework_economy and new_technologies)\n- richard_gordon (richard_gordon connects to homework_economy and new_technologies)\n- literal_homework (literal_homework connects to homework_economy and new_technologies)\n- large-scale_deskilling (large-scale_deskilling connects to homework_economy and new_technologies)\n- structural_unemployment (structural_unemployment connects to homework_economy and new_technologies)\n- women (women connects to homework_economy and new_technologies)\n- job_rolls (job_rolls connects to homework_economy and new_technologies)\n- male_privilege (male_privilege connects to homework_economy and new_technologies)\n- men,_children,_and_old_people (men,_children,_and_old_people connects to homework_economy and new_technologies)\n- mothers (mothers connects to homework_economy and new_technologies)\n- benefiting_from_commodification_of_food_and_energy_crops (benefiting_from_commodification_of_food_and_energy_crops connects to homework_economy and new_technologies)\n- women's_consumption_work (women's_consumption_work connects to homework_economy and new_technologies)\n- ros_petchesky (ros_petchesky connects to homework_economy and new_technologies)\n- paid_work (paid_work connects to homework_economy and new_technologies)\n- social_relations (social_relations connects to homework_economy and new_technologies)\n- forms_of_privatization (forms_of_privatization connects to homework_economy and new_technologies)\n- male_jobs (male_jobs connects to homework_economy and new_technologies)",
+      "score": 1.0,
+      "ground_truth": "They share a direct edge \u2014 homework_economy and new_technologies are directly connected"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "cluster",
+      "query": "Which concepts naturally cluster together in this knowledge system? List the main groups.",
+      "response": "Based on the graph structure and node connections, the following concepts naturally cluster together:\n\n1. **Cyborg and Feminism**: This group includes concepts like cyborg, feminism, women's experience, hybrid, and boundary between human and animal. These concepts are closely related to the idea of a cyborg as a fusion of human and machine, and the implications of this fusion on feminist theory and practice.\n\n2. **Social and Economic Change**: This group includes concepts like homework economy, new technologies, job rolls, male privilege, and women's consumption work. These concepts are related to the impact of technological and economic changes on social relationships and power dynamics.\n\n3. **Science and Technology**: This group includes concepts like science and technology, socialist-feminist politics, theory and practice addressed to science and technology, and women in science. These concepts are related to the intersection of science, technology, and feminist politics.\n\n4. **Identity and Politics**: This group includes concepts like cyborg identity, women of color, effective unity, and cyborg politics. These concepts are related to the construction of identity and the politics of difference.\n\n5. **Power and Domination**: This group includes concepts like informatics of domination, organics of domination, hierarchical dominations, and integration/exploitation of women. These concepts are related to the ways in which power and domination are exercised and maintained in society.\n\n6. **Social Relations and Markets**: This group includes concepts like social relations, new technologies, forms of privatization, and labor markets. These concepts are related to the changing nature of social relationships and markets in the face of technological and economic changes.\n\n7. **Health and Body**: This group includes concepts like health work, clinic-hospital, and women's bodies. These concepts are related to the intersection of health, body, and feminist politics.\n\n8. **Education and Knowledge**: This group includes concepts like education, mass ignorance and repression, and science-based multinationals. These concepts are related to the ways in which knowledge is produced and controlled in society.\n\n9. **Religion and Spirituality**: This group includes concepts like church, spirituality, and resisting militarized state. These concepts are related to the intersection of religion, spirituality, and feminist politics.\n\n10. **Cyborg Imagery and Culture**: This group includes concepts like cyborg imagery, dualisms, and high-tech culture. These concepts are related to the ways in which cyborgs are represented and imagined in culture and society.\n\n",
+      "score": 0.6666666666666666,
+      "ground_truth": "Cluster 1 (cyborg domain): cyborg, machine, feminism, labour, politics. Cluster 2 (political economy): women, homework_economy, new_technologies, gender"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is cyborg directly connected to women?",
+      "response": "No, in this knowledge system, cyborg is not directly connected to women.",
+      "score": 0.5,
+      "ground_truth": "No \u2014 cyborg and women are in separate disconnected components; no path exists between them in this graph"
+    },
+    {
+      "condition": "C_kv_injection",
+      "query_type": "isolate",
+      "query": "In this knowledge system, is blasphemy connected to many other concepts?",
+      "response": "No, blasphemy is connected to only one other concept: seriousness.",
+      "score": 0.6,
+      "ground_truth": "Nearly isolated \u2014 blasphemy connects only to seriousness (degree 1)"
+    }
+  ],
+  "summary": {
+    "A_baseline": {
+      "avg_score": 0.39375,
+      "by_type": {
+        "relationship": 0.5499999999999999,
+        "bridge": 0.5,
+        "cluster": 0.0,
+        "isolate": 0.25
+      }
+    },
+    "B_text_injection": {
+      "avg_score": 0.7583333333333333,
+      "by_type": {
+        "relationship": 0.7666666666666666,
+        "bridge": 1.0,
+        "cluster": 0.6666666666666666,
+        "isolate": 0.55
+      }
+    },
+    "C_kv_injection": {
+      "avg_score": 0.7895833333333333,
+      "by_type": {
+        "relationship": 0.85,
+        "bridge": 1.0,
+        "cluster": 0.6666666666666666,
+        "isolate": 0.55
+      }
+    }
+  }
+}
