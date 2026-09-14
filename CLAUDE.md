@@ -16,7 +16,7 @@ topology-injection/          KV cache topology injection experiment (see below)
 
 ## topology-injection/ — Scholarly Frameworks Experiment
 
-**Status**: directory created, Pustovit code cloned. Waiting on: Thomas re: KG pipeline; source text extraction (script ready).
+**Status (2026-09-13): active experiment, paused since 2026-06-15 — not "just started."** The plan below (Pustovit-based content injection, Collins/Harding/Tuhiwai Smith corpus) was the original design; what actually got built and tested diverged from it. See `topology-injection/README.md` for the current state: KV injection verified working via a custom adapter (`mlx_kvpack.py`, not Pustovit) on two model families, one architecture ruled out, and a disposition-experiment finding still awaiting qualitative coding. Treat the README as the source of truth for status; the rest of this section is kept as the original rationale/plan, not a current description.
 
 ### What it is
 
